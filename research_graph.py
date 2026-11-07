@@ -220,6 +220,51 @@ def links_between(nodes: list[dict]) -> list[dict]:
     return edges
 
 
+def hf_card_declarations(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Read only explicit HF model-card fields; do not guess training lineage."""
+    assets = {(node["type"], node["title"].casefold()): node for node in nodes if node["type"] in ("model", "dataset")}
+    edges, outside = [], []
+    for model in (node for node in nodes if node["type"] == "model"):
+        try:
+            card = json.loads(model.get("description") or "{}")
+        except (ValueError, TypeError):
+            continue
+        if not isinstance(card, dict):
+            continue
+        for field, target_kind in (("base_model", "model"), ("datasets", "dataset")):
+            values = card.get(field) or []
+            if isinstance(values, str):
+                values = [values]
+            if not isinstance(values, list):
+                continue
+            seen = set()
+            for raw_value in values:
+                if not isinstance(raw_value, str):
+                    continue
+                reference = raw_value.strip()
+                # Model-card fields normally contain 'namespace/repo' IDs.
+                if not re.fullmatch(r"[\w.-]+/[\w.-]+", reference) or reference.casefold() in seen:
+                    continue
+                seen.add(reference.casefold())
+                target = assets.get((target_kind, reference.casefold()))
+                if target and target["id"] != model["id"]:
+                    edges.append({
+                        "source": model["id"], "target": target["id"],
+                        "status": "declared_metadata", "evidence_type": field,
+                        "evidence": reference,
+                        "context": f"Hugging Face model-card field {field}: {reference}",
+                        "reason": "Source card declares a resource; independent lineage verification not performed",
+                    })
+                elif not target:
+                    outside.append({
+                        "source": model["id"], "target_type": target_kind,
+                        "declared_id": reference, "evidence_type": field,
+                        "target_url": f"https://huggingface.co/{'datasets/' if target_kind == 'dataset' else ''}{reference}",
+                        "verification": "not_fetched_outside_indexed_org",
+                    })
+    return edges, outside
+
+
 def scholarly_links(nodes: list[dict]) -> list[dict]:
     """Shared scholarly identifiers establish a reference, not scientific validity."""
     products = [node for node in nodes if node["type"] == "research_product"]
@@ -301,6 +346,8 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
     candidates = [edge for edge in links if edge["status"] == "candidate"]
     scholarly = [edge for edge in links if edge["status"] == "identifier_match"]
+    declared = [edge for edge in links if edge["status"] == "declared_metadata"]
+    _, outside_cards = hf_card_declarations(nodes)
     profile = quality_profile(nodes, links)
     coverage = citation_coverage(nodes, links)
     lines = [
@@ -311,10 +358,11 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- OpenAIRE keyword-search total (not project coverage): **{total_openaire if total_openaire is not None else 'unavailable'}**", "",
         f"- GitHub open issues / closed issues: **{profile['github_open_issues']} / {profile['github_closed_issues']}**",
         f"- GitHub open PRs / closed PRs: **{profile['github_open_prs']} / {profile['github_closed_prs']}**", "",
-        "## Cross-platform evidence", "",
+        "## Evidenced relationships", "",
         f"- Explicit URL/ID mentions (not semantic proof): **{len(explicit)}**",
         f"- Name-only candidates, NOT confirmed: **{len(candidates)}**",
-        f"- Shared scholarly identifiers (arXiv/DOI): **{len(scholarly)}**", "",
+        f"- Shared scholarly identifiers (arXiv/DOI): **{len(scholarly)}**",
+        f"- In-org relationships declared in HF cards: **{len(declared)}**", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
     index = {node["id"]: node for node in nodes}
@@ -333,6 +381,16 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         lines.append("| No shared identifiers observed | – | – |")
     if len(scholarly) > 100:
         lines.append(f"\nShowing the first 100 of {len(scholarly)} scholarly edges; all are in snapshot.json.")
+    lines.extend(["", "## Hugging Face card declarations", "",
+        "These are explicit **metadata claims** made by model publishers; model ancestry and dataset usage have not been independently reproduced.", "",
+        f"- Declared links between indexed resources: **{len(declared)}**",
+        f"- Declared references outside the indexed HF organization (targets not fetched): **{len(outside_cards)}**", "",
+        "| HF model | Declared field | Referenced asset |", "| --- | --- | --- |"])
+    for edge in declared[:100]:
+        source, target = index[edge["source"]], index[edge["target"]]
+        lines.append(f"| [{source['title']}]({source['url']}) | `{edge['evidence_type']}` | [{target['title']}]({target['url']}) |")
+    if not declared:
+        lines.append("| No in-org declarations found | – | – |")
     bridges = []
     for paper in (node for node in nodes if node["type"] == "research_product"):
         incoming = [edge for edge in scholarly if edge["target"] == paper["id"]]
@@ -368,7 +426,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     lines.extend(f"- `{name}`: {message}" for name, message in errors.items())
     if not errors:
         lines.append("- No source errors encountered.")
-    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
+    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
     return "\n".join(lines)
 
 
@@ -408,14 +466,18 @@ def main(argv: list[str] | None = None) -> int:
             if product["id"] not in existing:
                 nodes.append(product)
                 existing.add(product["id"])
-    edges = links_between(nodes) + scholarly_links(nodes)
+    internal_card_edges, external_card_refs = hf_card_declarations(nodes)
+    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
-    payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges, "errors": errors, "openaire_search_total": openaire_total, "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
+    payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges,
+               "external_hf_card_references": external_card_refs,
+               "errors": errors, "openaire_search_total": openaire_total,
+               "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total), encoding="utf-8")
-    print(f"Collected {len(nodes)} records, {len(edges)} potential links, {len(errors)} source errors")
+    print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
     return 0 if nodes else 1
 
 

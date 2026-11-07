@@ -1,8 +1,9 @@
+import json
 import unittest
 from unittest.mock import patch
 
 from research_graph import (
-    citation_coverage, enrich_publications, exact_reference, identifiers_in,
+    citation_coverage, enrich_publications, exact_reference, hf_card_declarations, identifiers_in,
     links_between, normalized, openaire_by_arxiv_batch, openaire_node,
     quality_profile, report, scholarly_links,
 )
@@ -163,6 +164,41 @@ class ResearchGraphTests(unittest.TestCase):
         summary = report(nodes, scholarly_links(nodes), {}, "2026-11-07", 1)
         self.assertIn("Three-platform publication bridges", summary)
         self.assertIn("not** proof of direct model/task dependence", summary)
+
+    def test_model_card_declares_exact_base_model_and_dataset(self):
+        model = {"id": "hf:model:openeurollm/child", "type": "model", "title": "openeurollm/child",
+                 "url": "https://huggingface.co/openeurollm/child",
+                 "description": json.dumps({"base_model": ["openeurollm/base", "allenai/base"],
+                                            "datasets": ["openeurollm/train", "other/train"]})}
+        base = {"id": "hf:model:openeurollm/base", "type": "model", "title": "openeurollm/base",
+                "url": "https://huggingface.co/openeurollm/base"}
+        dataset = {"id": "hf:dataset:openeurollm/train", "type": "dataset", "title": "openeurollm/train",
+                   "url": "https://huggingface.co/datasets/openeurollm/train"}
+        edges, outside = hf_card_declarations([model, base, dataset])
+        self.assertEqual(len(edges), 2)
+        self.assertEqual({edge["evidence_type"] for edge in edges}, {"base_model", "datasets"})
+        self.assertEqual({edge["target"] for edge in edges}, {base["id"], dataset["id"]})
+        self.assertTrue(all(edge["status"] == "declared_metadata" for edge in edges))
+        self.assertEqual({item["declared_id"] for item in outside}, {"allenai/base", "other/train"})
+        self.assertTrue(all(item["verification"] == "not_fetched_outside_indexed_org" for item in outside))
+
+    def test_card_does_not_create_fake_prefix_or_self_links(self):
+        model = {"id": "hf:model:openeurollm/base", "type": "model", "title": "openeurollm/base",
+                 "url": "https://huggingface.co/openeurollm/base",
+                 "description": json.dumps({"base_model": ["openeurollm/base", "openeurollm/base-v2", "openeurollm/base-v2"]})}
+        self.assertEqual(hf_card_declarations([model])[0], [])
+        self.assertEqual(len(hf_card_declarations([model])[1]), 1)
+
+    def test_report_separates_card_declarations_from_scholarly_links(self):
+        child = {"id": "hf:model:openeurollm/child", "type": "model", "title": "openeurollm/child",
+                 "url": "https://huggingface.co/openeurollm/child",
+                 "description": json.dumps({"base_model": "openeurollm/base"})}
+        parent = {"id": "hf:model:openeurollm/base", "type": "model", "title": "openeurollm/base",
+                  "url": "https://huggingface.co/openeurollm/base"}
+        edges, _ = hf_card_declarations([child, parent])
+        summary = report([child, parent], edges, {}, "2026-11-08", 0)
+        self.assertIn("In-org relationships declared in HF cards: **1**", summary)
+        self.assertIn("Shared scholarly identifiers (arXiv/DOI): **0**", summary)
 
     def test_report_separates_scholarly_edges(self):
         paper = openaire_node({"id": "abc", "mainTitle": "Paper", "pids": [{"scheme": "arXiv", "value": "2609.24797"}]})

@@ -75,3 +75,24 @@ The third probe replaced individual lookups with OpenAIRE's documented `ids.arxi
 - The five name-only matches remain unconfirmed. Until manually reviewed, they should not be promoted into verified edges.
 
 **Quality conclusion:** The exact-ID join has **100% lookup coverage for the 40 explicitly captured modern arXiv IDs in this bounded source snapshot**, with no observed integrity defects. This is *not* 100% research discovery recall or an estimate of the precision of all graph edges. The next highest-value work is a small manually labeled set of missing relationships and a metadata publishing convention, not a larger central agent or MCP service.
+
+## Structured Hugging Face metadata audit — 8 November 2026
+
+The five unresolved name-only GitHub-to-HF candidates from the first audit were reinspected in their original issue/PR text. The evidence does **not** justify silently promoting any to an exact repository reference:
+
+- **Taskboard #415 and #308:** `Prelude-base` is mentioned as a model/family name, without the full `openeurollm/prelude-base` Hub identifier in the matched context. These remain plausible, not verified.
+- **Taskboard #232 and #186:** `OLMo-3-7B-Instruct-SFT` appears in reproduction/upstream-checkpoint contexts; #186 links to AllenAI open-instruct information. The `openeurollm` model card itself declares an **AllenAI** base model. It would be misleading to assume that an unqualified name refers specifically to the OpenEuroLLM-owned copy.
+- **oellm-eval #101:** `datamix-9b-80-20` is named in a test context, but the full Hugging Face namespace is absent. Keep it as a candidate.
+
+Instead, we inspected the structured `base_model` and `datasets` fields already exposed in public Hugging Face model cards. These are documented as fields containing full Hub repository IDs. For the existing 849-record snapshot:
+
+| Source-backed relationship | Observed count | How it is used |
+| --- | ---: | --- |
+| Exact model-card reference to another indexed OpenEuroLLM asset | **10** | New `declared_metadata` edges; no name guessing |
+| Model-card reference to an asset outside the indexed OpenEuroLLM organization | **65** | Recorded separately, not verified or linked to invented nodes |
+| Previously recorded cross-platform edges | **87** | Remain unchanged and separately labeled |
+| Total edges including exact in-org card declarations | **97** | 54 scholarly IDs, 28 direct GitHub-to-HF references, 10 card declarations, 5 candidates |
+
+Examples: `openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN` declares `openeurollm/OLMo-3-7B-Instruct-SFT` as `base_model` and `openeurollm/Dolci-Instruct-SFT-translated` under `datasets`; `openeurollm/oellm-9b-256k-sft` declares `openeurollm/oellm-9b-256k-theta64m-prelude` as its base model.
+
+**Interpretation:** This exposes a useful additional layer of published metadata without an LLM or guessed semantic links. As with any publisher-supplied description, the declarations themselves have not been experimentally verified. A natural next test is to resolve the 65 out-of-scope references against their actual Hugging Face repository records and investigate their authorship/lineage, while continuing to keep manual name matches separate.
