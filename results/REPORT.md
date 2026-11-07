@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-07T20:30:08.386410+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-07T21:55:47.862502+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
