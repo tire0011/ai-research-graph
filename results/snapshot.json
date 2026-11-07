@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-07T22:41:52.352556+00:00",
+  "timestamp_utc": "2026-11-07T22:52:14.393600+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -11217,34 +11217,189 @@
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::ced44791ea4b1c210cd9dd628dbca643",
+      "id": "openaire:doi_dedup___::06d99b261a6b4ed904bfe9f07be4d468",
       "type": "research_product",
-      "title": "Anatomy of Post-Training: Using Interpretability to Characterize Data and Shape the Learning Signal",
-      "url": "https://arxiv.org/abs/2606.12360",
+      "title": "Learning in Compact Spaces with Approximately Normalized Transformer",
+      "url": "https://arxiv.org/abs/2505.22014",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2606.12360"
+          "2505.22014"
         ],
         "doi": [
-          "10.48550/arxiv.2606.12360"
+          "10.48550/arxiv.2505.22014",
+          "10.52202/085713-2546"
         ]
       },
       "updated_at": null,
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::d04d3a31b1675e9ff38a68836c37daae",
+      "id": "openaire:doi_dedup___::0add776e26fec0e43b2994e5a681cc11",
       "type": "research_product",
-      "title": "What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data",
-      "url": "https://arxiv.org/abs/2510.26202",
+      "title": "LMSYS-Chat-1M: A Large-Scale Real-World LLM Conversation Dataset",
+      "url": "https://arxiv.org/abs/2309.11998",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2510.26202"
+          "2309.11998"
         ],
         "doi": [
-          "10.48550/arxiv.2510.26202"
+          "10.48550/arxiv.2309.11998"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::0c8ec28db5514a197c8305fc85168830",
+      "type": "research_product",
+      "title": "WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training",
+      "url": "https://arxiv.org/abs/2507.17634",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2507.17634"
+        ],
+        "doi": [
+          "10.48550/arxiv.2507.17634"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::0d6dae4a47c8fb7ef80544b0764a8dde",
+      "type": "research_product",
+      "title": "The Curse of Depth in Large Language Models",
+      "url": "https://arxiv.org/abs/2502.05795",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2502.05795"
+        ],
+        "doi": [
+          "10.48550/arxiv.2502.05795",
+          "10.52202/085713-5446"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::1475580d682f05615ee49fc18e6c2d3c",
+      "type": "research_product",
+      "title": "DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation",
+      "url": "https://arxiv.org/abs/2511.06307",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2511.06307"
+        ],
+        "doi": [
+          "10.48550/arxiv.2511.06307"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::14d3cc551d15a5cce43a9522e90d30d7",
+      "type": "research_product",
+      "title": "Multi-IF: Benchmarking LLMs on Multi-Turn and Multilingual Instructions Following",
+      "url": "https://arxiv.org/abs/2410.15553",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2410.15553"
+        ],
+        "doi": [
+          "10.48550/arxiv.2410.15553"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
+      "type": "research_product",
+      "title": "Olmo 3",
+      "url": "https://arxiv.org/abs/2512.13961",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2512.13961"
+        ],
+        "doi": [
+          "10.48550/arxiv.2512.13961"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
+      "type": "research_product",
+      "title": "OpenThoughts: Data Recipes for Reasoning Models",
+      "url": "https://arxiv.org/abs/2506.04178",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2506.04178"
+        ],
+        "doi": [
+          "10.48550/arxiv.2506.04178"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::222d4376aeb10295fc7e2bb33a86c130",
+      "type": "research_product",
+      "title": "FinerWeb-10BT: Refining Web Data with LLM-Based Line-Level Filtering",
+      "url": "https://arxiv.org/abs/2501.07314",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2501.07314"
+        ],
+        "doi": [
+          "10.48550/arxiv.2501.07314"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::2a2ef0ae6ab9c1a824ab4647e3b95ab8",
+      "type": "research_product",
+      "title": "SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model",
+      "url": "https://arxiv.org/abs/2502.02737",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2502.02737"
+        ],
+        "doi": [
+          "10.48550/arxiv.2502.02737"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::2df7e131111266c4a74e743e36546c9b",
+      "type": "research_product",
+      "title": "DeepSeek-V3 Technical Report",
+      "url": "https://arxiv.org/abs/2412.19437",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2412.19437"
+        ],
+        "doi": [
+          "10.48550/arxiv.2412.19437"
         ]
       },
       "updated_at": null,
@@ -11268,6 +11423,57 @@
       "research_type": "publication"
     },
     {
+      "id": "openaire:doi_dedup___::5361da5b1f8725e73125080540d54905",
+      "type": "research_product",
+      "title": "Apertus: Democratizing Open and Compliant LLMs for Global Language Environments",
+      "url": "https://arxiv.org/abs/2509.14233",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2509.14233"
+        ],
+        "doi": [
+          "10.48550/arxiv.2509.14233"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::538eb3ebd74ae74360d745f23a938a30",
+      "type": "research_product",
+      "title": "Fewer Truncations Improve Language Modeling",
+      "url": "https://arxiv.org/abs/2404.10830",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2404.10830"
+        ],
+        "doi": [
+          "10.48550/arxiv.2404.10830"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::53bff1443d14382a2be8c7d14c09f0ae",
+      "type": "research_product",
+      "title": "OpenCodeReasoning: Advancing Data Distillation for Competitive Coding",
+      "url": "https://arxiv.org/abs/2504.01943",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2504.01943"
+        ],
+        "doi": [
+          "10.48550/arxiv.2504.01943"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
       "id": "openaire:doi_dedup___::5e9adf67a0cbeafab3925db4d07ace12",
       "type": "research_product",
       "title": "ATLAS: Adaptive Transfer Scaling Laws for Multilingual Pretraining, Finetuning, and Decoding the Curse of Multilinguality",
@@ -11279,6 +11485,92 @@
         ],
         "doi": [
           "10.48550/arxiv.2510.22037"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::5fe2de4b3c416ebd7948cc1afb8b866d",
+      "type": "research_product",
+      "title": "CogView: Mastering Text-to-Image Generation via Transformers",
+      "url": "https://arxiv.org/abs/2105.13290",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2105.13290"
+        ],
+        "doi": [
+          "10.48550/arxiv.2105.13290"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::64e0e9857ae011161418346b131cedd9",
+      "type": "research_product",
+      "title": "FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models",
+      "url": "https://arxiv.org/abs/2505.20225",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2505.20225"
+        ],
+        "doi": [
+          "10.48550/arxiv.2505.20225"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::682b33c6ed77e764e9fe1420d26aa4df",
+      "type": "research_product",
+      "title": "RegMix: Data Mixture as Regression for Language Model Pre-training",
+      "url": "https://arxiv.org/abs/2407.01492",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2407.01492"
+        ],
+        "doi": [
+          "10.48550/arxiv.2407.01492"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::6e4d02c2f9091dbb0ce3e1dc65db5963",
+      "type": "research_product",
+      "title": "OLMES: A Standard for Language Model Evaluations",
+      "url": "https://arxiv.org/abs/2406.08446",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2406.08446"
+        ],
+        "doi": [
+          "10.18653/v1/2025.findings-naacl.282",
+          "10.48550/arxiv.2406.08446"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::7c085080400ef253146f34ac02cd80eb",
+      "type": "research_product",
+      "title": "Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions",
+      "url": "https://arxiv.org/abs/2102.05379",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2102.05379"
+        ],
+        "doi": [
+          "10.48550/arxiv.2102.05379"
         ]
       },
       "updated_at": null,
@@ -11302,17 +11594,136 @@
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
+      "id": "openaire:doi_dedup___::8725fd0a9cb99f73d1825150756eba30",
       "type": "research_product",
-      "title": "OpenThoughts: Data Recipes for Reasoning Models",
-      "url": "https://arxiv.org/abs/2506.04178",
+      "title": "OLMoE: Open Mixture-of-Experts Language Models",
+      "url": "https://arxiv.org/abs/2409.02060",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2506.04178"
+          "2409.02060"
         ],
         "doi": [
-          "10.48550/arxiv.2506.04178"
+          "10.48550/arxiv.2409.02060"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::8c5a8cc1363fd84209451d5b354a7b75",
+      "type": "research_product",
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+      "url": "https://arxiv.org/abs/2309.00071",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2309.00071"
+        ],
+        "doi": [
+          "10.48550/arxiv.2309.00071"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::963869d4219c04be056e59b80b388391",
+      "type": "research_product",
+      "title": "propella-1: Multi-Property Document Annotation for LLM Data Curation at Scale",
+      "url": "https://arxiv.org/abs/2602.12414",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2602.12414"
+        ],
+        "doi": [
+          "10.48550/arxiv.2602.12414"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::9653fb688a4f2186f43a3caa67bdc497",
+      "type": "research_product",
+      "title": "Scaling up Masked Diffusion Models on Text",
+      "url": "https://arxiv.org/abs/2410.18514",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2410.18514"
+        ],
+        "doi": [
+          "10.48550/arxiv.2410.18514"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::9a0fce293ba46e2c5dc5ac8b19a68892",
+      "type": "research_product",
+      "title": "Scaling Laws for Neural Language Models",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2001.08361"
+        ],
+        "doi": [
+          "10.48550/arxiv.2001.08361"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "type": "research_product",
+      "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+      "url": "https://arxiv.org/abs/2508.14444",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2508.14444"
+        ],
+        "doi": [
+          "10.48550/arxiv.2508.14444"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::a5c10b288e22c71b6fb9d8b7291baed3",
+      "type": "research_product",
+      "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+      "url": "https://arxiv.org/abs/2403.07974",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2403.07974"
+        ],
+        "doi": [
+          "10.48550/arxiv.2403.07974"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::bbdbb97bb36471042ded71edde9caab7",
+      "type": "research_product",
+      "title": "LongRoPE2: Near-Lossless LLM Context Window Scaling",
+      "url": "https://arxiv.org/abs/2502.20082",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2502.20082"
+        ],
+        "doi": [
+          "10.48550/arxiv.2502.20082"
         ]
       },
       "updated_at": null,
@@ -11353,68 +11764,121 @@
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::9653fb688a4f2186f43a3caa67bdc497",
+      "id": "openaire:doi_dedup___::c9d24d5ffb689ad234afb334b91d1ab5",
       "type": "research_product",
-      "title": "Scaling up Masked Diffusion Models on Text",
-      "url": "https://arxiv.org/abs/2410.18514",
+      "title": "The Perfect Blend: Redefining RLHF with Mixture of Judges",
+      "url": "https://arxiv.org/abs/2409.20370",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2410.18514"
+          "2409.20370"
         ],
         "doi": [
-          "10.48550/arxiv.2410.18514"
+          "10.48550/arxiv.2409.20370"
         ]
       },
       "updated_at": null,
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::7c085080400ef253146f34ac02cd80eb",
+      "id": "openaire:doi_dedup___::ced44791ea4b1c210cd9dd628dbca643",
       "type": "research_product",
-      "title": "Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions",
-      "url": "https://arxiv.org/abs/2102.05379",
+      "title": "Anatomy of Post-Training: Using Interpretability to Characterize Data and Shape the Learning Signal",
+      "url": "https://arxiv.org/abs/2606.12360",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2102.05379"
+          "2606.12360"
         ],
         "doi": [
-          "10.48550/arxiv.2102.05379"
+          "10.48550/arxiv.2606.12360"
         ]
       },
       "updated_at": null,
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
+      "id": "openaire:doi_dedup___::d04d3a31b1675e9ff38a68836c37daae",
       "type": "research_product",
-      "title": "Olmo 3",
-      "url": "https://arxiv.org/abs/2512.13961",
+      "title": "What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data",
+      "url": "https://arxiv.org/abs/2510.26202",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2512.13961"
+          "2510.26202"
         ],
         "doi": [
-          "10.48550/arxiv.2512.13961"
+          "10.48550/arxiv.2510.26202"
         ]
       },
       "updated_at": null,
       "research_type": "publication"
     },
     {
-      "id": "openaire:doi_dedup___::5361da5b1f8725e73125080540d54905",
+      "id": "openaire:doi_dedup___::d40948c917ed5a866467b37de2543876",
       "type": "research_product",
-      "title": "Apertus: Democratizing Open and Compliant LLMs for Global Language Environments",
-      "url": "https://arxiv.org/abs/2509.14233",
+      "title": "Stability of Transformers under Layer Normalization",
+      "url": "https://arxiv.org/abs/2510.09904",
       "description": "",
       "identifiers": {
         "arxiv": [
-          "2509.14233"
+          "2510.09904"
         ],
         "doi": [
-          "10.48550/arxiv.2509.14233"
+          "10.2139/ssrn.7537390",
+          "10.48550/arxiv.2510.09904"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::e9116b2ea40775474387531d7b6ccf67",
+      "type": "research_product",
+      "title": "Mix-LN: Unleashing the Power of Deeper Layers by Combining Pre-LN and Post-LN",
+      "url": "https://arxiv.org/abs/2412.13795",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2412.13795"
+        ],
+        "doi": [
+          "10.48550/arxiv.2412.13795"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::ecddb4bce48da190cf7b940f1ab08dbe",
+      "type": "research_product",
+      "title": "Qwen2.5 Technical Report",
+      "url": "https://arxiv.org/abs/2412.15115",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2412.15115"
+        ],
+        "doi": [
+          "10.48550/arxiv.2412.15115"
+        ]
+      },
+      "updated_at": null,
+      "research_type": "publication"
+    },
+    {
+      "id": "openaire:doi_dedup___::f2490e0a311353dc68057c8bc8e5d4f5",
+      "type": "research_product",
+      "title": "Generalizing Verifiable Instruction Following",
+      "url": "https://arxiv.org/abs/2507.02833",
+      "description": "",
+      "identifiers": {
+        "arxiv": [
+          "2507.02833"
+        ],
+        "doi": [
+          "10.48550/arxiv.2507.02833",
+          "10.52202/085713-1645"
         ]
       },
       "updated_at": null,
@@ -11720,6 +12184,33 @@
       "reason": "Source mentions a specific HF resource"
     },
     {
+      "source": "github:OpenEuroLLM/Taskboard#412",
+      "target": "openaire:doi_dedup___::0c8ec28db5514a197c8305fc85168830",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2507.17634",
+      "context": "Both public metadata records contain arxiv:2507.17634",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#406",
+      "target": "openaire:doi_dedup___::0c8ec28db5514a197c8305fc85168830",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2507.17634",
+      "context": "Both public metadata records contain arxiv:2507.17634",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#353",
+      "target": "openaire:doi_dedup___::4f90a67e78a8da9300ba2deaebe0831e",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2412.06410",
+      "context": "Both public metadata records contain arxiv:2412.06410",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "github:OpenEuroLLM/Taskboard#353",
       "target": "openaire:doi_dedup___::ced44791ea4b1c210cd9dd628dbca643",
       "status": "identifier_match",
@@ -11735,15 +12226,6 @@
       "evidence_type": "arxiv",
       "evidence": "2510.26202",
       "context": "Both public metadata records contain arxiv:2510.26202",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#353",
-      "target": "openaire:doi_dedup___::4f90a67e78a8da9300ba2deaebe0831e",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2412.06410",
-      "context": "Both public metadata records contain arxiv:2412.06410",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -11765,6 +12247,24 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "github:OpenEuroLLM/Taskboard#166",
+      "target": "openaire:doi_dedup___::538eb3ebd74ae74360d745f23a938a30",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2404.10830",
+      "context": "Both public metadata records contain arxiv:2404.10830",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#164",
+      "target": "openaire:doi_dedup___::8725fd0a9cb99f73d1825150756eba30",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2409.02060",
+      "context": "Both public metadata records contain arxiv:2409.02060",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "github:OpenEuroLLM/Taskboard#146",
       "target": "openaire:doi_dedup___::7ea85b110e678c3f24b930cba20045a9",
       "status": "identifier_match",
@@ -11780,6 +12280,105 @@
       "evidence_type": "arxiv",
       "evidence": "2304.14780",
       "context": "Both public metadata records contain arxiv:2304.14780",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#124",
+      "target": "openaire:doi_dedup___::9a0fce293ba46e2c5dc5ac8b19a68892",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2001.08361",
+      "context": "Both public metadata records contain arxiv:2001.08361",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#108",
+      "target": "openaire:doi_dedup___::0d6dae4a47c8fb7ef80544b0764a8dde",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2502.05795",
+      "context": "Both public metadata records contain arxiv:2502.05795",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#100",
+      "target": "openaire:doi_dedup___::06d99b261a6b4ed904bfe9f07be4d468",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2505.22014",
+      "context": "Both public metadata records contain arxiv:2505.22014",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#87",
+      "target": "openaire:doi_dedup___::0d6dae4a47c8fb7ef80544b0764a8dde",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2502.05795",
+      "context": "Both public metadata records contain arxiv:2502.05795",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#87",
+      "target": "openaire:doi_dedup___::5fe2de4b3c416ebd7948cc1afb8b866d",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2105.13290",
+      "context": "Both public metadata records contain arxiv:2105.13290",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#87",
+      "target": "openaire:doi_dedup___::d40948c917ed5a866467b37de2543876",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2510.09904",
+      "context": "Both public metadata records contain arxiv:2510.09904",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#87",
+      "target": "openaire:doi_dedup___::e9116b2ea40775474387531d7b6ccf67",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2412.13795",
+      "context": "Both public metadata records contain arxiv:2412.13795",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#84",
+      "target": "openaire:doi_dedup___::64e0e9857ae011161418346b131cedd9",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2505.20225",
+      "context": "Both public metadata records contain arxiv:2505.20225",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#56",
+      "target": "openaire:doi_dedup___::2a2ef0ae6ab9c1a824ab4647e3b95ab8",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2502.02737",
+      "context": "Both public metadata records contain arxiv:2502.02737",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#55",
+      "target": "openaire:doi_dedup___::7c085080400ef253146f34ac02cd80eb",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2102.05379",
+      "context": "Both public metadata records contain arxiv:2102.05379",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#55",
+      "target": "openaire:doi_dedup___::9653fb688a4f2186f43a3caa67bdc497",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2410.18514",
+      "context": "Both public metadata records contain arxiv:2410.18514",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -11801,21 +12400,21 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "github:OpenEuroLLM/Taskboard#55",
-      "target": "openaire:doi_dedup___::9653fb688a4f2186f43a3caa67bdc497",
+      "source": "github:OpenEuroLLM/Taskboard#34",
+      "target": "openaire:doi_dedup___::682b33c6ed77e764e9fe1420d26aa4df",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2410.18514",
-      "context": "Both public metadata records contain arxiv:2410.18514",
+      "evidence": "2407.01492",
+      "context": "Both public metadata records contain arxiv:2407.01492",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "github:OpenEuroLLM/Taskboard#55",
-      "target": "openaire:doi_dedup___::7c085080400ef253146f34ac02cd80eb",
+      "source": "github:OpenEuroLLM/Taskboard#18",
+      "target": "openaire:doi_dedup___::222d4376aeb10295fc7e2bb33a86c130",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2102.05379",
-      "context": "Both public metadata records contain arxiv:2102.05379",
+      "evidence": "2501.07314",
+      "context": "Both public metadata records contain arxiv:2501.07314",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -11829,11 +12428,29 @@
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#156",
+      "target": "openaire:doi_dedup___::2df7e131111266c4a74e743e36546c9b",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2412.19437",
+      "context": "Both public metadata records contain arxiv:2412.19437",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#156",
       "target": "openaire:doi_dedup___::5361da5b1f8725e73125080540d54905",
       "status": "identifier_match",
       "evidence_type": "arxiv",
       "evidence": "2509.14233",
       "context": "Both public metadata records contain arxiv:2509.14233",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#60",
+      "target": "openaire:doi_dedup___::6e4d02c2f9091dbb0ce3e1dc65db5963",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2406.08446",
+      "context": "Both public metadata records contain arxiv:2406.08446",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -11852,6 +12469,33 @@
       "evidence_type": "arxiv",
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k",
+      "target": "openaire:doi_dedup___::8c5a8cc1363fd84209451d5b354a7b75",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2309.00071",
+      "context": "Both public metadata records contain arxiv:2309.00071",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-128k-theta32m-v3",
+      "target": "openaire:doi_dedup___::bbdbb97bb36471042ded71edde9caab7",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2502.20082",
+      "context": "Both public metadata records contain arxiv:2502.20082",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-128k-theta32m-prelude",
+      "target": "openaire:doi_dedup___::bbdbb97bb36471042ded71edde9caab7",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2502.20082",
+      "context": "Both public metadata records contain arxiv:2502.20082",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -11900,6 +12544,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:openeurollm/propella-annotations",
+      "target": "openaire:doi_dedup___::963869d4219c04be056e59b80b388391",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2602.12414",
+      "context": "Both public metadata records contain arxiv:2602.12414",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -11918,6 +12571,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:openeurollm/Dolci-Think-SFT-7B-decontaminated",
+      "target": "openaire:doi_dedup___::f2490e0a311353dc68057c8bc8e5d4f5",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2507.02833",
+      "context": "Both public metadata records contain arxiv:2507.02833",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:openeurollm/Dolci-Think-SFT-32B-decontaminated",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -11925,11 +12587,90 @@
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/Dolci-Think-SFT-32B-decontaminated",
+      "target": "openaire:doi_dedup___::f2490e0a311353dc68057c8bc8e5d4f5",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2507.02833",
+      "context": "Both public metadata records contain arxiv:2507.02833",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/smoltalk2-decontaminated",
+      "target": "openaire:doi_dedup___::14d3cc551d15a5cce43a9522e90d30d7",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2410.15553",
+      "context": "Both public metadata records contain arxiv:2410.15553",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/smoltalk2-decontaminated",
+      "target": "openaire:doi_dedup___::ecddb4bce48da190cf7b940f1ab08dbe",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2412.15115",
+      "context": "Both public metadata records contain arxiv:2412.15115",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/open-perfectblend-decontaminated",
+      "target": "openaire:doi_dedup___::c9d24d5ffb689ad234afb334b91d1ab5",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2409.20370",
+      "context": "Both public metadata records contain arxiv:2409.20370",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/lmsys-chat-1m-decontaminated",
+      "target": "openaire:doi_dedup___::0add776e26fec0e43b2994e5a681cc11",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2309.11998",
+      "context": "Both public metadata records contain arxiv:2309.11998",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/oellm-code-rlvr",
+      "target": "openaire:doi_dedup___::1475580d682f05615ee49fc18e6c2d3c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2511.06307",
+      "context": "Both public metadata records contain arxiv:2511.06307",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/oellm-code-rlvr",
+      "target": "openaire:doi_dedup___::53bff1443d14382a2be8c7d14c09f0ae",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2504.01943",
+      "context": "Both public metadata records contain arxiv:2504.01943",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:openeurollm/oellm-code-rlvr",
+      "target": "openaire:doi_dedup___::a5c10b288e22c71b6fb9d8b7291baed3",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2403.07974",
+      "context": "Both public metadata records contain arxiv:2403.07974",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     }
   ],
-  "errors": {
-    "OpenAIRE citation coverage": "Sampled 12 of 27 unmatched GitHub arXiv IDs (limit 12); not exhaustive"
-  },
+  "errors": {},
   "openaire_search_total": 8,
   "quality": {
     "duplicate_node_ids": 0,
@@ -11939,6 +12680,34 @@
     "github_closed_issues": 270,
     "github_open_prs": 19,
     "github_closed_prs": 173,
-    "missing_update_timestamps": 20
+    "missing_update_timestamps": 47
+  },
+  "citation_coverage": {
+    "referenced_unique_arxiv_ids": 40,
+    "resolved_unique_arxiv_ids": 40,
+    "unresolved_arxiv_ids": [],
+    "by_source_type": {
+      "issue": {
+        "records": 493,
+        "with_identifier": 18,
+        "linked_to_openaire": 18
+      },
+      "pull_request": {
+        "records": 192,
+        "with_identifier": 2,
+        "linked_to_openaire": 2
+      },
+      "model": {
+        "records": 78,
+        "with_identifier": 10,
+        "linked_to_openaire": 10
+      },
+      "dataset": {
+        "records": 39,
+        "with_identifier": 9,
+        "linked_to_openaire": 9
+      }
+    },
+    "publications_bridging_github_and_hf": 1
   }
 }
