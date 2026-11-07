@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-07T21:55:47.862502+00:00",
+  "timestamp_utc": "2026-11-07T22:31:02.643901+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -7865,303 +7865,310 @@
       "source": "github:OpenEuroLLM/Taskboard#415",
       "target": "hf:model:openeurollm/prelude-base",
       "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#412",
-      "target": "hf:model:openeurollm/oellm-32b",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#407",
-      "target": "hf:dataset:openeurollm/mid-train",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "evidence_type": "name_only",
+      "evidence": "prelude-base",
+      "context": "__ proposal for prominent Prelude family members: - prelude-warm (8t), - prelude-base (10t, annealed), - prelude-base-long (context-extended). __Deliverable s",
+      "reason": "Name overlap only; manual confirmation required"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#385",
       "target": "hf:dataset:openeurollm/function-calling-sft-oellm-64k",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#381",
-      "target": "hf:model:openeurollm/oellm-32b",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#377",
-      "target": "hf:model:openeurollm/tokenizer-256k",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#377",
-      "target": "hf:model:openeurollm/tokenizer-128k",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k",
+      "context": "t splits are available in the [openeurollm/function-calling-sft-oellm-64k](https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k). - Distributed packed training: validated loss normalization, gradient ac",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#377",
       "target": "hf:model:openeurollm/tokenizer-256k-v2",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/tokenizer-256k-v2",
+      "context": "ship model training Test custom tokenizers [openeurollm/tokenizer-256k-v2](https://huggingface.co/openeurollm/tokenizer-256k-v2) and [openeurollm/tokenizer-128k-v2](https://huggingface.co/openeurollm/to",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#377",
       "target": "hf:model:openeurollm/tokenizer-128k-v2",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#374",
-      "target": "hf:model:openeurollm/oellm-32b",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/tokenizer-128k-v2",
+      "context": "face.co/openeurollm/tokenizer-256k-v2) and [openeurollm/tokenizer-128k-v2](https://huggingface.co/openeurollm/tokenizer-128k-v2) on downstream tasks for multiple languages.",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#361",
       "target": "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/oellm-9b-256k-theta64m-prelude",
+      "context": "hedule SFT run of currently avialable context length extended [checkpoint](https://huggingface.co/openeurollm/oellm-9b-256k-theta64m-prelude) __Description__ Only 1T model available, we should rerun once we have",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#344",
       "target": "hf:model:openeurollm/datamix-9b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#338",
-      "target": "hf:model:openeurollm/oellm-32b",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#330",
-      "target": "hf:model:openeurollm/OLMo-3-7B-Think-SFT",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/datamix-9b-80-20",
+      "context": "pare them with some baseline models of equivalent size: [datamix 9B-80-20](https://huggingface.co/openeurollm/datamix-9b-80-20), [apertus 8B](https://huggingface.co/swiss-ai/Apertus-8B-2509), [Olmo3 7B",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/Dolci-Instruct-SFT-decontaminated",
+      "context": "instruct-1M-v1-decontaminated - openeurollm/lmsys-chat-1m-decontaminated - openeurollm/Dolci-Instruct-SFT-decontaminated > Note: all of the datasets are decontaminated against all of the evaluat",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated",
+      "context": "lection](https://huggingface.co/collections/openeurollm/data-selection)) - openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated - openeurollm/smoltalk2-decontaminated - openeurollm/open-perfectblend-dec",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/smoltalk2-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/smoltalk2-decontaminated",
+      "context": "lection)) - openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated - openeurollm/smoltalk2-decontaminated - openeurollm/open-perfectblend-decontaminated - openeurollm/orca-agentins",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/open-perfectblend-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/open-perfectblend-decontaminated",
+      "context": "raining-Dataset-v2-decontaminated - openeurollm/smoltalk2-decontaminated - openeurollm/open-perfectblend-decontaminated - openeurollm/orca-agentinstruct-1M-v1-decontaminated - openeurollm/lmsys-",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/orca-agentinstruct-1M-v1-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/orca-agentinstruct-1M-v1-decontaminated",
+      "context": "/smoltalk2-decontaminated - openeurollm/open-perfectblend-decontaminated - openeurollm/orca-agentinstruct-1M-v1-decontaminated - openeurollm/lmsys-chat-1m-decontaminated - openeurollm/Dolci-Instruct-SF",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#330",
       "target": "hf:dataset:openeurollm/lmsys-chat-1m-decontaminated",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/lmsys-chat-1m-decontaminated",
+      "context": "end-decontaminated - openeurollm/orca-agentinstruct-1M-v1-decontaminated - openeurollm/lmsys-chat-1m-decontaminated - openeurollm/Dolci-Instruct-SFT-decontaminated > Note: all of the datase",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#308",
       "target": "hf:model:openeurollm/prelude-base",
       "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#238",
-      "target": "hf:dataset:openeurollm/mid-train",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "evidence_type": "name_only",
+      "evidence": "Prelude-base",
+      "context": "Prelude (baby) run - completion of Prelude-warm and Prelude-base models ### Warmup-Stable Phase: Babysitting calendar [here](https://doc",
+      "reason": "Name overlap only; manual confirmation required"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#232",
       "target": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
       "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#230",
-      "target": "hf:model:openeurollm/OLMo-3-7B-Think-SFT",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#230",
-      "target": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#226",
-      "target": "hf:dataset:openeurollm/propella-annotations",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#220",
-      "target": "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#220",
-      "target": "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude-anneal300b",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "evidence_type": "name_only",
+      "evidence": "Olmo-3-7B-Instruct-SFT",
+      "context": "epo * [ ] Verify that the changes do not break SFT and DPO by reproducing `Olmo-3-7B-Instruct-SFT` and `Olmo-3-7B-Instruct-DPO` (See #230)",
+      "reason": "Name overlap only; manual confirmation required"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#220",
       "target": "hf:dataset:openeurollm/function-calling-sft-oellm-64k",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k",
+      "context": "liverable. Dataset location: [openeurollm/function-calling-sft-oellm-64k](https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k). ## Delivered - Published selection and reproducible export code in [fc",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#186",
       "target": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
       "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#185",
-      "target": "hf:dataset:openeurollm/propella-annotations",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#151",
-      "target": "hf:model:openeurollm/datamix-2b-en",
-      "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "evidence_type": "name_only",
+      "evidence": "OLMo-3-7B-Instruct-SFT",
+      "context": "ribution.png?raw=true) ### Setup | | | |---|---| | **Base checkpoint** | OLMo-3-7B-Instruct-SFT (reproduced, [details](https://github.com/allenai/open-instruct/issues/135",
+      "reason": "Name overlap only; manual confirmation required"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#142",
       "target": "hf:model:openeurollm/datamix-2b-90-10",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/datamix-2b-90-10",
+      "context": "english: https://huggingface.co/openeurollm/datamix-2b-en * 90% english: https://huggingface.co/openeurollm/datamix-2b-90-10 * 80% english: [https://huggingface.co/openeurollm/datamix-2b-80-20](https",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#142",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/datamix-2b-80-20",
+      "context": "glish: https://huggingface.co/openeurollm/datamix-2b-90-10 * 80% english: [https://huggingface.co/openeurollm/datamix-2b-80-20](https://huggingface.co/openeurollm/datamix-2b-80-20) We should also comp",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#142",
       "target": "hf:model:openeurollm/datamix-2b-en",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
-    },
-    {
-      "source": "github:OpenEuroLLM/oellm-eval#163",
-      "target": "hf:model:openeurollm/prelude-base",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/openeurollm/datamix-2b-en",
+      "context": "us proportion for instance, 80%/20% english/multilingual: * 100% english: https://huggingface.co/openeurollm/datamix-2b-en * 90% english: https://huggingface.co/openeurollm/datamix-2b-90-10 * 80%",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#163",
       "target": "hf:dataset:openeurollm/prelude-base-eval-scores",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores",
+      "context": "hanges. ## Evidence Source: [OpenEuroLLM Prelude base evaluation scores](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores), `scores.parquet`. Filter: `model == \"prelude_anneal2t\"`, `task == \"coqa_",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#161",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "stop. ## Results Mean of de, en, es, fr, it, pt over 10 checkpoints of `openeurollm/datamix-2b-80-20` (2B, steps 100k–950k) and `openeurollm/prelude` (9B, steps 100,800–953,31",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#158",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "ver training, its gain relative to noise is 1.2–1.7× BLEU's **Audit:** `openeurollm/datamix-2b-80-20` and `openeurollm/prelude-checkpoints`, 10 checkpoints each, 8 prompt vari",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#156",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "https://arxiv.org/pdf/2412.19437#page=25): 10-shot Evaluation results for openeurollm/datamix-2b-80-20 checkpoints with Gemma 4 for reference, original HellaSwag, `acc_norm`: <",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#153",
       "target": "hf:dataset:openeurollm/evaluation_singularity_images",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/openeurollm/evaluation_singularity_images",
+      "context": "being outdated in our CI pipeline. Done: * new containers shipped [here](https://huggingface.co/datasets/openeurollm/evaluation_singularity_images) * (ideally) CI fixed [code](https://github.com/OpenEuroLLM/oellm-eval/blo",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#151",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "pa tasks? `xcopa-eu` runs lighteval's `xcopa:{lang}` at 0 shots (#66). On `openeurollm/datamix-2b-80-20` it scores close to chance (0.549 over et, it and tr; Estonian 0.52 at the",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#142",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "cc_norm metric (norm is no-op for single-letter answers) Evaluation using openeurollm/datamix-2b-80-20 checkpoints indicates that these changes bring evaluation results and thei",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#137",
       "target": "hf:model:openeurollm/datamix-2b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-2b-80-20",
+      "context": "analysis (figure below: averages over the 36 `sib200-eu` languages across `openeurollm/datamix-2b-80-20` checkpoints): - few-shot examples now come from `train`, still with `firs",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#101",
       "target": "hf:model:openeurollm/datamix-9b-80-20",
       "status": "candidate",
-      "reason": "asset name mentioned; requires review"
+      "evidence_type": "name_only",
+      "evidence": "datamix-9b-80-20",
+      "context": "s reuses lighteval's built-in task verbatim, lighteval is the upstream. On datamix-9b-80-20, `collect` reproduces lighteval's own chrf++ exactly, for both directions",
+      "reason": "Name overlap only; manual confirmation required"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#91",
       "target": "hf:dataset:openeurollm/jeopardy",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/jeopardy",
+      "context": "0c329e/exp_data/evals/evaluation_Qwen_Qwen2-7B.json#L10) (2) **Data**: `openeurollm/jeopardy` - DCLM subset (2117 Qs), sourced from [mosaicml/llm-foundry](https://gith",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#71",
       "target": "hf:model:openeurollm/datamix-9b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-9b-80-20",
+      "context": "orgian | `kat_geor` | Lithuanian | `lit_latn` | ### Baseline results — `openeurollm/datamix-9b-80-20` (0-shot, completions variant) | Task | acc | acc_norm | |------|-----",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#69",
       "target": "hf:model:openeurollm/datamix-9b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-9b-80-20",
+      "context": "isl_Latn` | | Norwegian | `sib200_nob_Latn` | ### Model Performance openeurollm/datamix-9b-80-20 performs 25% (chance level is 14.3%)!",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#68",
       "target": "hf:model:openeurollm/datamix-9b-80-20",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "openeurollm/datamix-9b-80-20",
+      "context": "`LumiOpen/arc_challenge_mt` dataset does not contain an English subset. - openeurollm/datamix-9b-80-20 scores an average of 40.6% acc_norm across the 22 arc-challenge-mt-eu lang",
+      "reason": "Source mentions a specific HF resource"
     },
     {
       "source": "github:OpenEuroLLM/oellm-eval#7",
       "target": "hf:dataset:openeurollm/evaluation_singularity_images",
-      "status": "verified",
-      "reason": "explicit URL or repository ID in source text"
+      "status": "explicit_reference",
+      "evidence_type": "repository_id",
+      "evidence": "OpenEuroLLM/evaluation_singularity_images",
+      "context": "s for training workflow~~ - [x] move container images and workflow to use `OpenEuroLLM/evaluation_singularity_images` - [x] use fine-grained HF_TOKEN in GH secrets for workflow that only has",
+      "reason": "Source mentions a specific HF resource"
     }
   ],
   "errors": {},
-  "openaire_search_total": 8
+  "openaire_search_total": 8,
+  "quality": {
+    "duplicate_node_ids": 0,
+    "duplicate_edge_pairs": 0,
+    "edges_with_missing_endpoints": 0,
+    "github_open_issues": 223,
+    "github_closed_issues": 270,
+    "github_open_prs": 19,
+    "github_closed_prs": 173,
+    "missing_update_timestamps": 8
+  }
 }
