@@ -529,6 +529,13 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     return "\n".join(lines)
 
 
+def incomplete_essential_sources(errors: dict[str, str]) -> list[str]:
+    """Prevent an incomplete API response from replacing the last good CI snapshot."""
+    critical = set(GITHUB_REPOS) | {"Hugging Face models", "Hugging Face datasets",
+                                    "Hugging Face external lookup", "OpenAIRE"}
+    return sorted(name for name in errors if name in critical or name.startswith("OpenAIRE arXiv batch"))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", default="results")
@@ -606,8 +613,11 @@ def main(argv: list[str] | None = None) -> int:
                "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total, external_checks), encoding="utf-8")
+    critical_errors = incomplete_essential_sources(errors)
     print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
-    return 0 if nodes else 1
+    if critical_errors:
+        print(f"Incomplete essential sources: {', '.join(critical_errors)}; refusing to publish this snapshot", file=sys.stderr)
+    return 0 if nodes and not critical_errors else 1
 
 
 if __name__ == "__main__":
