@@ -1,0 +1,42 @@
+name: Research graph probe
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * 1'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'results/**'
+
+permissions:
+  contents: write
+
+jobs:
+  research-graph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Public metadata snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python research_graph.py --output results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-graph-snapshot
+          path: results/
+      - name: Save results in repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/REPORT.md results/snapshot.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: update research graph snapshot'
+          git push
