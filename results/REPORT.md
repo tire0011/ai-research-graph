@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-07T22:31:02.643901+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-07T22:41:52.352556+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -8,7 +8,7 @@ Collected: `2026-11-07T22:31:02.643901+00:00` (UTC). Source: public APIs, read-o
 - pull_request: **192** records
 - model: **78** records
 - dataset: **39** records
-- research_product: **8** records
+- research_product: **20** records
 - OpenAIRE keyword-search total (not project coverage): **8**
 
 - GitHub open issues / closed issues: **223 / 270**
@@ -18,6 +18,7 @@ Collected: `2026-11-07T22:31:02.643901+00:00` (UTC). Source: public APIs, read-o
 
 - Explicit URL/ID mentions (not semantic proof): **28**
 - Name-only candidates, NOT confirmed: **5**
+- Shared scholarly identifiers (arXiv/DOI): **23**
 
 | GitHub task | Hugging Face resource | Evidence | Matched text |
 | --- | --- | --- | --- |
@@ -55,6 +56,34 @@ Collected: `2026-11-07T22:31:02.643901+00:00` (UTC). Source: public APIs, read-o
 | [#186](https://github.com/OpenEuroLLM/Taskboard/issues/186) | [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) | name_only | `OLMo-3-7B-Instruct-SFT` |
 | [#101](https://github.com/OpenEuroLLM/oellm-eval/pull/101) | [openeurollm/datamix-9b-80-20](https://huggingface.co/openeurollm/datamix-9b-80-20) | name_only | `datamix-9b-80-20` |
 
+## Scholarly identifier matches
+
+| Source artifact | OpenAIRE publication | Shared ID |
+| --- | --- | --- |
+| [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353) | [Anatomy of Post-Training: Using Interpretability to Characterize Data and Shape the Learning Signal](https://arxiv.org/abs/2606.12360) | `arxiv:2606.12360` |
+| [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353) | [What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data](https://arxiv.org/abs/2510.26202) | `arxiv:2510.26202` |
+| [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353) | [BatchTopK Sparse Autoencoders](https://arxiv.org/abs/2412.06410) | `arxiv:2412.06410` |
+| [Reproduce OpenThinker3-7B (on 31.6k samples)](https://github.com/OpenEuroLLM/Taskboard/issues/321) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
+| [research idea: multilingual aware scaling laws](https://github.com/OpenEuroLLM/Taskboard/issues/304) | [ATLAS: Adaptive Transfer Scaling Laws for Multilingual Pretraining, Finetuning, and Decoding the Curse of Multilinguality](https://arxiv.org/abs/2510.22037) | `arxiv:2510.22037` |
+| [Tokenizer evaluation](https://github.com/OpenEuroLLM/Taskboard/issues/146) | [Training and Evaluation of a Multilingual Tokenizer for GPT-SW3](https://arxiv.org/abs/2304.14780) | `arxiv:2304.14780` |
+| [SentencePiece and HF setup code etc](https://github.com/OpenEuroLLM/Taskboard/issues/145) | [Training and Evaluation of a Multilingual Tokenizer for GPT-SW3](https://arxiv.org/abs/2304.14780) | `arxiv:2304.14780` |
+| [explore diffusion llm](https://github.com/OpenEuroLLM/Taskboard/issues/55) | [Edit Flows: Flow Matching with Edit Operations](https://arxiv.org/abs/2506.09018) | `arxiv:2506.09018` |
+| [explore diffusion llm](https://github.com/OpenEuroLLM/Taskboard/issues/55) | [Discrete Diffusion in Large Language and Multimodal Models: A Survey](https://arxiv.org/abs/2506.13759) | `arxiv:2506.13759` |
+| [explore diffusion llm](https://github.com/OpenEuroLLM/Taskboard/issues/55) | [Scaling up Masked Diffusion Models on Text](https://arxiv.org/abs/2410.18514) | `arxiv:2410.18514` |
+| [explore diffusion llm](https://github.com/OpenEuroLLM/Taskboard/issues/55) | [Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions](https://arxiv.org/abs/2102.05379) | `arxiv:2102.05379` |
+| [Set n_shots: [10] for multilingual HellaSwag to align with original](https://github.com/OpenEuroLLM/oellm-eval/pull/156) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [Set n_shots: [10] for multilingual HellaSwag to align with original](https://github.com/OpenEuroLLM/oellm-eval/pull/156) | [Apertus: Democratizing Open and Compliant LLMs for Global Language Environments](https://arxiv.org/abs/2509.14233) | `arxiv:2509.14233` |
+| [openeurollm/OLMo-3-7B-Think-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [openeurollm/complex-kda-1.3B-100B](https://huggingface.co/openeurollm/complex-kda-1.3B-100B) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
+| [openeurollm/kda-sigmoid-1.3B-100B](https://huggingface.co/openeurollm/kda-sigmoid-1.3B-100B) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
+| [openeurollm/complex-kda-hybrid-1.3B-100B](https://huggingface.co/openeurollm/complex-kda-hybrid-1.3B-100B) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
+| [openeurollm/kda-sigmoid-hybrid-1.3B-100B](https://huggingface.co/openeurollm/kda-sigmoid-hybrid-1.3B-100B) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
+| [openeurollm/complex-kda-ladder](https://huggingface.co/openeurollm/complex-kda-ladder) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
+| [openeurollm/Dolci-Instruct-SFT-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [openeurollm/Dolci-Think-SFT-7B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-7B-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [openeurollm/Dolci-Think-SFT-32B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-32B-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+
 ## Automated quality checks
 
 - duplicate node ids: **0**
@@ -64,12 +93,12 @@ Collected: `2026-11-07T22:31:02.643901+00:00` (UTC). Source: public APIs, read-o
 - github closed issues: **270**
 - github open prs: **19**
 - github closed prs: **173**
-- missing update timestamps: **8**
+- missing update timestamps: **20**
 
 ## Source errors / incomplete coverage
 
-- No source errors encountered.
+- `OpenAIRE citation coverage`: Sampled 12 of 27 unmatched GitHub arXiv IDs (limit 12); not exhaustive
 
 ## Interpretation
 
-This is a discovery probe, **not** a complete research knowledge graph. An explicit reference proves the artifact was mentioned, not that it was used, validated or scientifically related. Name-only candidates remain unverified. OpenAIRE keyword search is not an exhaustive count of project research products. Missing timestamps mean the source did not provide freshness metadata.
+This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Missing timestamps mean the source did not provide freshness metadata.
