@@ -11,6 +11,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -19,6 +20,7 @@ HF_ORG = "openeurollm"
 UA = "ai-research-graph/0.1 (public metadata research probe)"
 MAX_ARXIV_LOOKUPS = 80
 MAX_ARXIV_BATCH_SIZE = 40  # OpenAIRE permits OR lists (up to 50 values per field).
+MAX_EXTERNAL_HF_LOOKUPS = 40
 ARXIV_PATTERN = re.compile(
     r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
@@ -120,6 +122,32 @@ def huggingface_assets(org: str, kind: str):
     } for item in data]
 
 
+def external_hf_asset(kind: str, repo_id: str) -> dict:
+    """Confirm one publicly reachable Hub repo; the publisher's claims remain unverified."""
+    if kind not in ("model", "dataset") or not re.fullmatch(r"[\w.-]+/[\w.-]+", repo_id):
+        raise ValueError(f"Invalid HF reference: {kind}/{repo_id}")
+    path = "models" if kind == "model" else "datasets"
+    safe_id = "/".join(urllib.parse.quote(part, safe="") for part in repo_id.split("/"))
+    data = fetch_json(f"https://huggingface.co/api/{path}/{safe_id}?full=true&cardData=true", timeout=30)
+    canonical = data.get("id") if isinstance(data, dict) else None
+    if not isinstance(canonical, str) or not re.fullmatch(r"[\w.-]+/[\w.-]+", canonical):
+        raise ValueError(f"Hugging Face returned an invalid repository ID for {repo_id}: {canonical}")
+    if data.get("private"):
+        raise ValueError(f"Private repository was unexpectedly returned for {repo_id}")
+    card = json.dumps(data.get("cardData") or {}, ensure_ascii=False)
+    node = {
+        "id": f"hf:{kind}:{canonical}", "type": kind, "title": canonical,
+        "url": f"https://huggingface.co/{'datasets/' if kind == 'dataset' else ''}{canonical}",
+        "description": card[:20000],
+        "identifiers": identifiers_in(card + " " + " ".join(data.get("tags") or [])),
+        "updated_at": data.get("lastModified"),
+        "is_external": True, "verification": "api_confirmed_public_metadata",
+    }
+    if canonical.casefold() != repo_id.casefold():
+        node["resolved_from_alias"] = repo_id
+    return node
+
+
 def openaire_products(search: str = "OpenEuroLLM"):
     query = urllib.parse.urlencode({"search": search, "page_size": 100})
     data = fetch_json(f"https://api.openaire.eu/graph/v4/research-products?{query}", timeout=25)
@@ -204,7 +232,8 @@ def links_between(nodes: list[dict]) -> list[dict]:
             owner = bare_id.split("/", 1)[0]
             url_match = exact_reference(body, direct_url)
             id_match = exact_reference(body, bare_id)
-            slug_match = name_only_match(body, slug, owner) if len(slug) >= 9 else None
+            # Never create weak name-only matches for newly discovered external repos.
+            slug_match = name_only_match(body, slug, owner) if len(slug) >= 9 and not asset.get("is_external") else None
             match = url_match or id_match or slug_match
             if not match:
                 continue
@@ -220,11 +249,12 @@ def links_between(nodes: list[dict]) -> list[dict]:
     return edges
 
 
-def hf_card_declarations(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
+def hf_card_declarations(nodes: list[dict], aliases: dict[tuple[str, str], str] | None = None) -> tuple[list[dict], list[dict]]:
     """Read only explicit HF model-card fields; do not guess training lineage."""
     assets = {(node["type"], node["title"].casefold()): node for node in nodes if node["type"] in ("model", "dataset")}
     edges, outside = [], []
-    for model in (node for node in nodes if node["type"] == "model"):
+    # Deliberately one hop only: do not recursively crawl the external models.
+    for model in (node for node in nodes if node["type"] == "model" and not node.get("is_external")):
         try:
             card = json.loads(model.get("description") or "{}")
         except (ValueError, TypeError):
@@ -247,22 +277,62 @@ def hf_card_declarations(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
                     continue
                 seen.add(reference.casefold())
                 target = assets.get((target_kind, reference.casefold()))
+                resolved_alias = (aliases or {}).get((target_kind, reference.casefold())) if not target else None
+                if resolved_alias:
+                    target = assets.get((target_kind, resolved_alias.casefold()))
                 if target and target["id"] != model["id"]:
                     edges.append({
                         "source": model["id"], "target": target["id"],
-                        "status": "declared_metadata", "evidence_type": field,
+                        "status": "declared_metadata_redirect" if resolved_alias else "declared_metadata",
+                        "evidence_type": field,
                         "evidence": reference,
                         "context": f"Hugging Face model-card field {field}: {reference}",
-                        "reason": "Source card declares a resource; independent lineage verification not performed",
+                        "reason": "HF API resolves the declared ID to a canonical repository; lineage not independently verified" if resolved_alias else
+                                  "Source card declares a resource; independent lineage verification not performed",
+                        **({"canonical_id": target["title"]} if resolved_alias else {}),
                     })
                 elif not target:
                     outside.append({
                         "source": model["id"], "target_type": target_kind,
                         "declared_id": reference, "evidence_type": field,
                         "target_url": f"https://huggingface.co/{'datasets/' if target_kind == 'dataset' else ''}{reference}",
-                        "verification": "not_fetched_outside_indexed_org",
+                        "verification": "not_fetched_outside_indexed_inventory",
                     })
     return edges, outside
+
+
+def verify_external_hf_references(references: list[dict], limit: int = MAX_EXTERNAL_HF_LOOKUPS) -> tuple[list[dict], list[dict]]:
+    """Resolve only one-hop card references, bounded and without credentials."""
+    unique = {(ref["target_type"], ref["declared_id"].casefold()): ref["declared_id"] for ref in references}
+    ordered = sorted(unique)
+    checks = []
+    confirmed = []
+    for kind, folded_id in ordered[limit:]:
+        checks.append({"target_type": kind, "declared_id": unique[(kind, folded_id)], "status": "not_checked_limit"})
+    selected = ordered[:limit]
+    if not selected:
+        return confirmed, checks
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        jobs = {pool.submit(external_hf_asset, kind, unique[(kind, folded_id)]): (kind, folded_id) for kind, folded_id in selected}
+        for job in as_completed(jobs):
+            kind, folded_id = jobs[job]
+            repo_id = unique[(kind, folded_id)]
+            check = {"target_type": kind, "declared_id": repo_id}
+            try:
+                node = job.result()
+                confirmed.append(node)
+                status = "verified_redirect" if node.get("resolved_from_alias") else "verified_public"
+                check.update({"status": status, "node_id": node["id"]})
+                if status == "verified_redirect":
+                    check["canonical_id"] = node["title"]
+            except urllib.error.HTTPError as exc:
+                check.update({"status": "not_publicly_found" if exc.code == 404 else
+                              "inaccessible" if exc.code in (401, 403) else
+                              "rate_limited" if exc.code == 429 else "http_error", "http_status": exc.code})
+            except (ValueError, urllib.error.URLError, TimeoutError) as exc:
+                check.update({"status": "fetch_failed", "error": str(exc)[:160]})
+            checks.append(check)
+    return confirmed, sorted(checks, key=lambda check: (check["target_type"], check["declared_id"].casefold()))
 
 
 def scholarly_links(nodes: list[dict]) -> list[dict]:
@@ -341,13 +411,22 @@ def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
     }
 
 
-def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapshot: str, total_openaire: int | None):
+def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapshot: str,
+           total_openaire: int | None, external_checks: list[dict] | None = None):
     counts = {kind: sum(node["type"] == kind for node in nodes) for kind in ("issue", "pull_request", "model", "dataset", "research_product")}
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
     candidates = [edge for edge in links if edge["status"] == "candidate"]
     scholarly = [edge for edge in links if edge["status"] == "identifier_match"]
-    declared = [edge for edge in links if edge["status"] == "declared_metadata"]
-    _, outside_cards = hf_card_declarations(nodes)
+    declared = [edge for edge in links if edge["status"] in ("declared_metadata", "declared_metadata_redirect")]
+    resolved_aliases = {
+        (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
+        for check in (external_checks or []) if check["status"] == "verified_redirect"
+    }
+    _, outside_cards = hf_card_declarations(nodes, aliases=resolved_aliases)
+    verified_external = [node for node in nodes if node.get("is_external")]
+    declared_in_org = [edge for edge in declared if edge["status"] != "declared_metadata_redirect" and
+                       not next(node for node in nodes if node["id"] == edge["target"]).get("is_external")]
+    declared_verified = len(declared) - len(declared_in_org)
     profile = quality_profile(nodes, links)
     coverage = citation_coverage(nodes, links)
     lines = [
@@ -355,6 +434,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"Collected: `{snapshot}` (UTC). Source: public APIs, read-only.", "",
         "## Coverage", "",
         *[f"- {key}: **{value}** records" for key, value in counts.items()],
+        f"- Of HF models/datasets, publicly verified one-hop targets outside the initial inventory: **{len(verified_external)}**",
         f"- OpenAIRE keyword-search total (not project coverage): **{total_openaire if total_openaire is not None else 'unavailable'}**", "",
         f"- GitHub open issues / closed issues: **{profile['github_open_issues']} / {profile['github_closed_issues']}**",
         f"- GitHub open PRs / closed PRs: **{profile['github_open_prs']} / {profile['github_closed_prs']}**", "",
@@ -362,7 +442,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- Explicit URL/ID mentions (not semantic proof): **{len(explicit)}**",
         f"- Name-only candidates, NOT confirmed: **{len(candidates)}**",
         f"- Shared scholarly identifiers (arXiv/DOI): **{len(scholarly)}**",
-        f"- In-org relationships declared in HF cards: **{len(declared)}**", "",
+        f"- HF model-card declarations to indexed/verified targets: **{len(declared)}**", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
     index = {node["id"]: node for node in nodes}
@@ -383,14 +463,33 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         lines.append(f"\nShowing the first 100 of {len(scholarly)} scholarly edges; all are in snapshot.json.")
     lines.extend(["", "## Hugging Face card declarations", "",
         "These are explicit **metadata claims** made by model publishers; model ancestry and dataset usage have not been independently reproduced.", "",
-        f"- Declared links between indexed resources: **{len(declared)}**",
-        f"- Declared references outside the indexed HF organization (targets not fetched): **{len(outside_cards)}**", "",
+        f"- Declared links inside initial HF inventory: **{len(declared_in_org)}**",
+        f"- Declared links to API-verified one-hop targets: **{declared_verified}**",
+        f"- Of these, links resolved through verified HF canonical IDs: **{sum(edge['status'] == 'declared_metadata_redirect' for edge in declared)}**",
+        f"- Declared references still unresolved in this graph: **{len(outside_cards)}**", "",
         "| HF model | Declared field | Referenced asset |", "| --- | --- | --- |"])
     for edge in declared[:100]:
         source, target = index[edge["source"]], index[edge["target"]]
         lines.append(f"| [{source['title']}]({source['url']}) | `{edge['evidence_type']}` | [{target['title']}]({target['url']}) |")
     if not declared:
         lines.append("| No in-org declarations found | – | – |")
+    if external_checks is not None:
+        stats = {status: sum(check["status"] == status for check in external_checks)
+                 for status in ("verified_public", "verified_redirect", "not_publicly_found", "inaccessible", "rate_limited", "http_error", "fetch_failed", "not_checked_limit")}
+        lines.extend(["", "### Verification of one-hop Hugging Face targets", "",
+            f"Distinct referenced target IDs checked/recorded: **{len(external_checks)}**",
+            *[f"- {status.replace('_', ' ')}: **{count}**" for status, count in stats.items() if count],
+            "", "Verified means the public HF API returned that repository, **not** that its model-card lineage claim has been independently reproduced. HTTP 404 means *not publicly found*, which may include private or removed repositories."])
+        redirects = [check for check in external_checks if check["status"] == "verified_redirect"]
+        if redirects:
+            lines.extend(["", "| Declared ID | Canonical ID returned by HF API |", "| --- | --- |"])
+            for check in redirects:
+                lines.append(f"| `{check['declared_id']}` | `{check['canonical_id']}` |")
+        unresolved = [check for check in external_checks if check["status"] not in ("verified_public", "verified_redirect")]
+        if unresolved:
+            lines.extend(["", "| Unverified target | Result |", "| --- | --- |"])
+            for check in unresolved[:25]:
+                lines.append(f"| `{check['declared_id']}` ({check['target_type']}) | {check['status']} |")
     bridges = []
     for paper in (node for node in nodes if node["type"] == "research_product"):
         incoming = [edge for edge in scholarly if edge["target"] == paper["id"]]
@@ -430,6 +529,13 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     return "\n".join(lines)
 
 
+def incomplete_essential_sources(errors: dict[str, str]) -> list[str]:
+    """Prevent an incomplete API response from replacing the last good CI snapshot."""
+    critical = set(GITHUB_REPOS) | {"Hugging Face models", "Hugging Face datasets",
+                                    "Hugging Face external lookup", "OpenAIRE"}
+    return sorted(name for name in errors if name in critical or name.startswith("OpenAIRE arXiv batch"))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", default="results")
@@ -439,9 +545,13 @@ def main(argv: list[str] | None = None) -> int:
     errors: dict[str, str] = {}
     nodes: list[dict] = []
     openaire_total = None
+    external_checks: list[dict] | None = None
+    external_card_refs: list[dict] = []
     if args.fixture:
         fixture = json.loads(Path(args.fixture).read_text(encoding="utf-8"))
         nodes = fixture["nodes"]
+        external_checks = fixture.get("external_hf_target_checks")
+        external_card_refs = fixture.get("external_hf_card_references") or hf_card_declarations(nodes)[1]
     else:
         for repo in GITHUB_REPOS:
             try:
@@ -453,6 +563,17 @@ def main(argv: list[str] | None = None) -> int:
                 nodes.extend(huggingface_assets(HF_ORG, kind))
             except (ValueError, urllib.error.URLError, TimeoutError) as exc:
                 errors[f"Hugging Face {kind}"] = str(exc)
+        _, external_card_refs = hf_card_declarations(nodes)
+        verified, external_checks = verify_external_hf_references(external_card_refs)
+        existing_hf = {node["id"].casefold() for node in nodes}
+        for verified_node in verified:
+            if verified_node["id"].casefold() not in existing_hf:
+                nodes.append(verified_node)
+                existing_hf.add(verified_node["id"].casefold())
+        failed_targets = [check for check in external_checks if check["status"] in
+                          ("rate_limited", "http_error", "fetch_failed", "not_checked_limit")]
+        if failed_targets:
+            errors["Hugging Face external lookup"] = f"{len(failed_targets)} target(s) not completely checked; see external_hf_target_checks"
         try:
             products, openaire_total = openaire_products()
             nodes.extend(products)
@@ -466,19 +587,37 @@ def main(argv: list[str] | None = None) -> int:
             if product["id"] not in existing:
                 nodes.append(product)
                 existing.add(product["id"])
-    internal_card_edges, external_card_refs = hf_card_declarations(nodes)
+    aliases = {
+        (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
+        for check in (external_checks or []) if check["status"] == "verified_redirect"
+    }
+    internal_card_edges, _ = hf_card_declarations(nodes, aliases=aliases)
+    if external_checks is not None:
+        by_target = {(check["target_type"], check["declared_id"].casefold()): check for check in external_checks}
+        for reference in external_card_refs:
+            check = by_target.get((reference["target_type"], reference["declared_id"].casefold()))
+            if check:
+                reference["verification"] = check["status"]
+                if check.get("node_id"):
+                    reference["verified_node_id"] = check["node_id"]
+                if check.get("canonical_id"):
+                    reference["canonical_id"] = check["canonical_id"]
     edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges,
                "external_hf_card_references": external_card_refs,
+               "external_hf_target_checks": external_checks,
                "errors": errors, "openaire_search_total": openaire_total,
                "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total), encoding="utf-8")
+    (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total, external_checks), encoding="utf-8")
+    critical_errors = incomplete_essential_sources(errors)
     print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
-    return 0 if nodes else 1
+    if critical_errors:
+        print(f"Incomplete essential sources: {', '.join(critical_errors)}; refusing to publish this snapshot", file=sys.stderr)
+    return 0 if nodes and not critical_errors else 1
 
 
 if __name__ == "__main__":

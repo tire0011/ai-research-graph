@@ -1,11 +1,13 @@
 import json
 import unittest
+import urllib.error
 from unittest.mock import patch
 
 from research_graph import (
-    citation_coverage, enrich_publications, exact_reference, hf_card_declarations, identifiers_in,
+    citation_coverage, enrich_publications, exact_reference, external_hf_asset,
+    hf_card_declarations, identifiers_in, incomplete_essential_sources,
     links_between, normalized, openaire_by_arxiv_batch, openaire_node,
-    quality_profile, report, scholarly_links,
+    quality_profile, report, scholarly_links, verify_external_hf_references,
 )
 
 
@@ -74,6 +76,13 @@ class ResearchGraphTests(unittest.TestCase):
         output = report([], [], {"OpenAIRE": "timeout"}, "2026-11-07", None)
         self.assertIn("OpenAIRE", output)
         self.assertIn("unavailable", output)
+
+    def test_essential_source_failures_block_incomplete_ci_snapshot(self):
+        errors = {"OpenEuroLLM/Taskboard": "HTTP 504", "OpenAIRE citation coverage": "limited"}
+        self.assertEqual(incomplete_essential_sources(errors), ["OpenEuroLLM/Taskboard"])
+        self.assertEqual(incomplete_essential_sources({"Hugging Face external lookup": "HTTP 429"}),
+                         ["Hugging Face external lookup"])
+        self.assertEqual(incomplete_essential_sources({"OpenAIRE citation coverage": "limited"}), [])
 
     def test_scholarly_ids_are_explicit_and_version_normalized(self):
         text = 'See https://arxiv.org/pdf/2609.24797v2 and arxiv:2609.24797; https://doi.org/10.48550/arXiv.2609.24797.'
@@ -180,7 +189,7 @@ class ResearchGraphTests(unittest.TestCase):
         self.assertEqual({edge["target"] for edge in edges}, {base["id"], dataset["id"]})
         self.assertTrue(all(edge["status"] == "declared_metadata" for edge in edges))
         self.assertEqual({item["declared_id"] for item in outside}, {"allenai/base", "other/train"})
-        self.assertTrue(all(item["verification"] == "not_fetched_outside_indexed_org" for item in outside))
+        self.assertTrue(all(item["verification"] == "not_fetched_outside_indexed_inventory" for item in outside))
 
     def test_card_does_not_create_fake_prefix_or_self_links(self):
         model = {"id": "hf:model:openeurollm/base", "type": "model", "title": "openeurollm/base",
@@ -197,8 +206,81 @@ class ResearchGraphTests(unittest.TestCase):
                   "url": "https://huggingface.co/openeurollm/base"}
         edges, _ = hf_card_declarations([child, parent])
         summary = report([child, parent], edges, {}, "2026-11-08", 0)
-        self.assertIn("In-org relationships declared in HF cards: **1**", summary)
+        self.assertIn("HF model-card declarations to indexed/verified targets: **1**", summary)
         self.assertIn("Shared scholarly identifiers (arXiv/DOI): **0**", summary)
+
+    def test_external_asset_must_be_confirmed_by_public_hf_api(self):
+        payload = {"id": "allenai/Model-X", "private": False,
+                   "cardData": {"tags": ["arxiv:2609.24797"]},
+                   "lastModified": "2026-11-08T00:00:00Z"}
+        with patch("research_graph.fetch_json", return_value=payload) as fetched:
+            node = external_hf_asset("model", "allenai/Model-X")
+        self.assertIn("/api/models/allenai/Model-X", fetched.call_args.args[0])
+        self.assertEqual(node["id"], "hf:model:allenai/Model-X")
+        self.assertTrue(node["is_external"])
+        self.assertEqual(node["identifiers"]["arxiv"], ["2609.24797"])
+        with patch("research_graph.fetch_json", return_value={"id": "other/Model-X"}):
+            renamed = external_hf_asset("model", "allenai/Model-X")
+        self.assertEqual(renamed["id"], "hf:model:other/Model-X")
+        self.assertEqual(renamed["resolved_from_alias"], "allenai/Model-X")
+
+    def test_external_resolution_deduplicates_targets_and_handles_404(self):
+        refs = [{"target_type": "dataset", "declared_id": "outside/datasetA"}] * 3 + [
+            {"target_type": "dataset", "declared_id": "outside/datasetB"}]
+        def fake_lookup(kind, repo_id):
+            if repo_id.endswith("datasetB"):
+                raise urllib.error.HTTPError("https://huggingface.co/", 404, "not found", None, None)
+            return {"id": "hf:dataset:outside/datasetA", "type": "dataset", "title": "outside/datasetA"}
+        with patch("research_graph.external_hf_asset", side_effect=fake_lookup) as mocked:
+            found, checked = verify_external_hf_references(refs)
+        self.assertEqual(mocked.call_count, 2)
+        self.assertEqual(len(found), 1)
+        self.assertEqual([x["status"] for x in checked], ["verified_public", "not_publicly_found"])
+
+    def test_external_model_is_one_hop_only_and_no_name_guesses(self):
+        original = {"id": "hf:model:openeurollm/child", "type": "model", "title": "openeurollm/child",
+                    "url": "https://huggingface.co/openeurollm/child",
+                    "description": json.dumps({"base_model": "allenai/Model-X"})}
+        outside = {"id": "hf:model:allenai/Model-X", "type": "model", "title": "allenai/Model-X",
+                   "url": "https://huggingface.co/allenai/Model-X", "is_external": True,
+                   "description": json.dumps({"base_model": "other/grandparent"})}
+        edges, missing = hf_card_declarations([original, outside])
+        self.assertEqual(len(edges), 1)
+        self.assertEqual(missing, [])
+        self.assertEqual(links_between([self.issue("Testing Model-X"), outside]), [])
+
+    def test_verified_canonical_redirect_creates_evidenced_card_link(self):
+        child = {"id": "hf:model:openeurollm/child", "type": "model", "title": "openeurollm/child",
+                 "url": "https://huggingface.co/openeurollm/child",
+                 "description": json.dumps({"base_model": "openeurollm/prelude"})}
+        canonical = {"id": "hf:model:openeurollm/prelude-base", "type": "model",
+                     "title": "openeurollm/prelude-base", "url": "https://huggingface.co/openeurollm/prelude-base"}
+        aliases = {("model", "openeurollm/prelude"): "openeurollm/prelude-base"}
+        edges, unresolved = hf_card_declarations([child, canonical], aliases=aliases)
+        self.assertEqual(unresolved, [])
+        self.assertEqual(len(edges), 1)
+        self.assertEqual(edges[0]["status"], "declared_metadata_redirect")
+        self.assertEqual(edges[0]["evidence"], "openeurollm/prelude")
+        self.assertEqual(edges[0]["canonical_id"], "openeurollm/prelude-base")
+        check = [{"target_type": "model", "declared_id": "openeurollm/prelude",
+                  "status": "verified_redirect", "canonical_id": "openeurollm/prelude-base"}]
+        summary = report([child, canonical], edges, {}, "2026-11-08", 0, check)
+        self.assertIn("verified HF canonical IDs: **1**", summary)
+        self.assertIn("still unresolved in this graph: **0**", summary)
+
+    def test_redirect_and_unauthorized_external_targets_have_distinct_status(self):
+        refs = [{"target_type": "model", "declared_id": "old/model"},
+                {"target_type": "model", "declared_id": "private/model"}]
+        def fake_lookup(kind, repo_id):
+            if repo_id == "private/model":
+                raise urllib.error.HTTPError("https://huggingface.co/", 401, "unauthorized", None, None)
+            return {"id": "hf:model:new/model", "type": "model", "title": "new/model",
+                    "resolved_from_alias": "old/model"}
+        with patch("research_graph.external_hf_asset", side_effect=fake_lookup):
+            found, checks = verify_external_hf_references(refs)
+        self.assertEqual(len(found), 1)
+        self.assertEqual({check["status"] for check in checks}, {"verified_redirect", "inaccessible"})
+        self.assertEqual(next(check["canonical_id"] for check in checks if check["status"] == "verified_redirect"), "new/model")
 
     def test_report_separates_scholarly_edges(self):
         paper = openaire_node({"id": "abc", "mainTitle": "Paper", "pids": [{"scheme": "arXiv", "value": "2609.24797"}]})
