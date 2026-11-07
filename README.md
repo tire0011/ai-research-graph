@@ -15,6 +15,8 @@ The [Research graph probe](.github/workflows/research-graph.yml) runs on the def
 
 It uses only public endpoints and the built-in GitHub Actions token. No local PC or GPU is required. The GitHub token is used only for read access to source issues and committing generated results to this repository.
 
+If an essential API fails (e.g. a GitHub gateway timeout), the run keeps the partial diagnostic report as an Actions artifact but **exits unsuccessfully before committing new results**. This preserves the last complete report in the repository.
+
 ## Local run (optional)
 
 ```powershell
