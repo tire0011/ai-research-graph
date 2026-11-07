@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-07T22:52:14.393600+00:00",
+  "timestamp_utc": "2026-11-07T23:05:22.468787+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -12668,6 +12668,618 @@
       "evidence": "2403.07974",
       "context": "Both public metadata records contain arxiv:2403.07974",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN",
+      "target": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
+      "status": "declared_metadata",
+      "evidence_type": "base_model",
+      "evidence": "openeurollm/OLMo-3-7B-Instruct-SFT",
+      "context": "Hugging Face model-card field base_model: openeurollm/OLMo-3-7B-Instruct-SFT",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN",
+      "target": "hf:dataset:openeurollm/Dolci-Instruct-SFT-translated",
+      "status": "declared_metadata",
+      "evidence_type": "datasets",
+      "evidence": "openeurollm/Dolci-Instruct-SFT-translated",
+      "context": "Hugging Face model-card field datasets: openeurollm/Dolci-Instruct-SFT-translated",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN",
+      "target": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
+      "status": "declared_metadata",
+      "evidence_type": "base_model",
+      "evidence": "openeurollm/OLMo-3-7B-Instruct-SFT",
+      "context": "Hugging Face model-card field base_model: openeurollm/OLMo-3-7B-Instruct-SFT",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN",
+      "target": "hf:dataset:openeurollm/Dolci-Instruct-SFT-translated",
+      "status": "declared_metadata",
+      "evidence_type": "datasets",
+      "evidence": "openeurollm/Dolci-Instruct-SFT-translated",
+      "context": "Hugging Face model-card field datasets: openeurollm/Dolci-Instruct-SFT-translated",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-Dolci-Translated-A-75EN",
+      "target": "hf:model:openeurollm/datamix-9b-80-20",
+      "status": "declared_metadata",
+      "evidence_type": "base_model",
+      "evidence": "openeurollm/datamix-9b-80-20",
+      "context": "Hugging Face model-card field base_model: openeurollm/datamix-9b-80-20",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-Dolci-Translated-A-75EN",
+      "target": "hf:dataset:openeurollm/Dolci-Instruct-SFT-translated",
+      "status": "declared_metadata",
+      "evidence_type": "datasets",
+      "evidence": "openeurollm/Dolci-Instruct-SFT-translated",
+      "context": "Hugging Face model-card field datasets: openeurollm/Dolci-Instruct-SFT-translated",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-256k-sft",
+      "target": "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude",
+      "status": "declared_metadata",
+      "evidence_type": "base_model",
+      "evidence": "openeurollm/oellm-9b-256k-theta64m-prelude",
+      "context": "Hugging Face model-card field base_model: openeurollm/oellm-9b-256k-theta64m-prelude",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "target": "hf:dataset:openeurollm/OpenEuroLLM-Excellent-SFT",
+      "status": "declared_metadata",
+      "evidence_type": "datasets",
+      "evidence": "openeurollm/OpenEuroLLM-Excellent-SFT",
+      "context": "Hugging Face model-card field datasets: openeurollm/OpenEuroLLM-Excellent-SFT",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions",
+      "target": "hf:model:openeurollm/prelude-anneal300b-256k-rope20m-cont",
+      "status": "declared_metadata",
+      "evidence_type": "base_model",
+      "evidence": "openeurollm/prelude-anneal300b-256k-rope20m-cont",
+      "context": "Hugging Face model-card field base_model: openeurollm/prelude-anneal300b-256k-rope20m-cont",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    },
+    {
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions",
+      "target": "hf:dataset:openeurollm/OpenEuroLLM-Excellent-SFT",
+      "status": "declared_metadata",
+      "evidence_type": "datasets",
+      "evidence": "openeurollm/OpenEuroLLM-Excellent-SFT",
+      "context": "Hugging Face model-card field datasets: openeurollm/OpenEuroLLM-Excellent-SFT",
+      "reason": "Source card declares a resource; independent lineage verification not performed"
+    }
+  ],
+  "external_hf_card_references": [
+    {
+      "source": "hf:model:openeurollm/datamix-2b-90-10",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-90-10",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-90-10",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-70-30",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-70-30",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-70-30",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-60-40",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-60-40",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-60-40",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-80-20",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-80-20",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-80-20",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-en",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-CC-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-en",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-en",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-50-50",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-50-50",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-50-50",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-60-40",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-60-40",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-60-40",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-2b-en-80pct-DPO-HelpSteer3-16k",
+      "target_type": "model",
+      "declared_id": "laineyyy/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/laineyyy/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Think-SFT",
+      "target_type": "model",
+      "declared_id": "allenai/Olmo-3-7B-Think-SFT",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/allenai/Olmo-3-7B-Think-SFT",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Instruct-SFT",
+      "target_type": "model",
+      "declared_id": "allenai/Olmo-3-7B-Instruct-SFT",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-80-20",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT2.0_cleaned",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-80-20",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-80-20",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceTB/finemath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceTB/finemath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "bigcode/starcoderdata",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "mlfoundations/dclm-baseline-1.0",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceFW/finepdfs",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceFW/finepdfs-edu",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "allenai/olmo-mix-1124",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-en_baseline-100bt",
+      "target_type": "dataset",
+      "declared_id": "LLM360/MegaMath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/LLM360/MegaMath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-hplt-3.0-eng-100bt",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT3.0",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-hplt-3.0-eng-cc-100bt",
+      "target_type": "dataset",
+      "declared_id": "HPLT/HPLT4.0",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HPLT/HPLT4.0",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN",
+      "target_type": "dataset",
+      "declared_id": "allenai/Dolci-Instruct-SFT",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN",
+      "target_type": "dataset",
+      "declared_id": "allenai/Dolci-Instruct-SFT",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-9b-Dolci-Translated-A-75EN",
+      "target_type": "dataset",
+      "declared_id": "allenai/Dolci-Instruct-SFT",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-finewiki-100bt",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceFW/finewiki",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceFW/finewiki",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-finephrase-100bt",
+      "target_type": "dataset",
+      "declared_id": "HuggingFaceFW/finephrase",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-nemotron_pre_spec_v1.1-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-nemotron_pre_spec_v1-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Pretraining-Specialized-v1",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-dolma3_dolmino_math-100bt",
+      "target_type": "dataset",
+      "declared_id": "allenai/dolma3_dolmino_mix-100B-1125",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-megamath_text_code-100bt",
+      "target_type": "dataset",
+      "declared_id": "LLM360/MegaMath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/LLM360/MegaMath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-megamath_web_pro-100bt",
+      "target_type": "dataset",
+      "declared_id": "LLM360/MegaMath",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/LLM360/MegaMath",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-open_web_math-100bt",
+      "target_type": "dataset",
+      "declared_id": "open-web-math/open-web-math",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-swallow_math_v2_qa-100bt",
+      "target_type": "dataset",
+      "declared_id": "tokyotech-llm/swallow-math-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-swallow_math_v2_textbook-100bt",
+      "target_type": "dataset",
+      "declared_id": "tokyotech-llm/swallow-math-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-stackv2-100bt",
+      "target_type": "dataset",
+      "declared_id": "common-pile/stackv2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/common-pile/stackv2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-stackv2_edu_filtered-100bt",
+      "target_type": "dataset",
+      "declared_id": "common-pile/stackv2_edu_filtered",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/common-pile/stackv2_edu_filtered",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k",
+      "target_type": "model",
+      "declared_id": "AI-Sweden-Models/oellm-9b-base",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/AI-Sweden-Models/oellm-9b-base",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-256k-sft",
+      "target_type": "dataset",
+      "declared_id": "allenai/tulu-3-sft-mixture",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-256k-sft",
+      "target_type": "dataset",
+      "declared_id": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-256k-sft",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Post-Training-Dataset-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-swallow_code_v2-100bt",
+      "target_type": "dataset",
+      "declared_id": "tokyotech-llm/swallow-code-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude-anneal300b",
+      "target_type": "model",
+      "declared_id": "openeurollm/prelude",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/openeurollm/prelude",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-openthoughts_3-100bt",
+      "target_type": "dataset",
+      "declared_id": "open-thoughts/OpenThoughts3-1.2M",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "target_type": "model",
+      "declared_id": "birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
+      "evidence_type": "base_model",
+      "target_url": "https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Nemotron-Math-Proofs-v1-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Math-Proofs-v1",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Nemotron-Math-v2-high-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Math-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Nemotron-Math-v2-high-medium-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Math-v2",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Nemotron-Terminal-Corpus-100bt",
+      "target_type": "dataset",
+      "declared_id": "nvidia/Nemotron-Terminal-Corpus",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Toucan-1.5M-100bt",
+      "target_type": "dataset",
+      "declared_id": "Agent-Ark/Toucan-1.5M",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
+      "verification": "not_fetched_outside_indexed_org"
+    },
+    {
+      "source": "hf:model:openeurollm/datamix-0.7b-Superior-Reasoning-SFT-100bt",
+      "target_type": "dataset",
+      "declared_id": "Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "evidence_type": "datasets",
+      "target_url": "https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "verification": "not_fetched_outside_indexed_org"
     }
   ],
   "errors": {},

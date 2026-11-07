@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-07T22:52:14.393600+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-07T23:05:22.468787+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -14,11 +14,12 @@ Collected: `2026-11-07T22:52:14.393600+00:00` (UTC). Source: public APIs, read-o
 - GitHub open issues / closed issues: **223 / 270**
 - GitHub open PRs / closed PRs: **19 / 173**
 
-## Cross-platform evidence
+## Evidenced relationships
 
 - Explicit URL/ID mentions (not semantic proof): **28**
 - Name-only candidates, NOT confirmed: **5**
 - Shared scholarly identifiers (arXiv/DOI): **54**
+- In-org relationships declared in HF cards: **10**
 
 | GitHub task | Hugging Face resource | Evidence | Matched text |
 | --- | --- | --- | --- |
@@ -115,6 +116,26 @@ Collected: `2026-11-07T22:52:14.393600+00:00` (UTC). Source: public APIs, read-o
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [OpenCodeReasoning: Advancing Data Distillation for Competitive Coding](https://arxiv.org/abs/2504.01943) | `arxiv:2504.01943` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code](https://arxiv.org/abs/2403.07974) | `arxiv:2403.07974` |
 
+## Hugging Face card declarations
+
+These are explicit **metadata claims** made by model publishers; model ancestry and dataset usage have not been independently reproduced.
+
+- Declared links between indexed resources: **10**
+- Declared references outside the indexed HF organization (targets not fetched): **65**
+
+| HF model | Declared field | Referenced asset |
+| --- | --- | --- |
+| [openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN](https://huggingface.co/openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN) | `base_model` | [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) |
+| [openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN](https://huggingface.co/openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN) | `datasets` | [openeurollm/Dolci-Instruct-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated) |
+| [openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN](https://huggingface.co/openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN) | `base_model` | [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) |
+| [openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN](https://huggingface.co/openeurollm/OLMo-3-7B-Dolci-Translated-A-25EN) | `datasets` | [openeurollm/Dolci-Instruct-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated) |
+| [openeurollm/datamix-9b-Dolci-Translated-A-75EN](https://huggingface.co/openeurollm/datamix-9b-Dolci-Translated-A-75EN) | `base_model` | [openeurollm/datamix-9b-80-20](https://huggingface.co/openeurollm/datamix-9b-80-20) |
+| [openeurollm/datamix-9b-Dolci-Translated-A-75EN](https://huggingface.co/openeurollm/datamix-9b-Dolci-Translated-A-75EN) | `datasets` | [openeurollm/Dolci-Instruct-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated) |
+| [openeurollm/oellm-9b-256k-sft](https://huggingface.co/openeurollm/oellm-9b-256k-sft) | `base_model` | [openeurollm/oellm-9b-256k-theta64m-prelude](https://huggingface.co/openeurollm/oellm-9b-256k-theta64m-prelude) |
+| [openeurollm/Prelude-SFT-Excellent-Instructions-Old](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions-Old) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
+| [openeurollm/Prelude-SFT-Excellent-Instructions](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions) | `base_model` | [openeurollm/prelude-anneal300b-256k-rope20m-cont](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) |
+| [openeurollm/Prelude-SFT-Excellent-Instructions](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
+
 ## Three-platform publication bridges
 
 These are shared citations, **not** proof of direct model/task dependence.
@@ -154,4 +175,4 @@ These are shared citations, **not** proof of direct model/task dependence.
 
 ## Interpretation
 
-This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
+This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
