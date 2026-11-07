@@ -96,3 +96,19 @@ Instead, we inspected the structured `base_model` and `datasets` fields already 
 Examples: `openeurollm/OLMo-3-7B-Dolci-Translated-A-75EN` declares `openeurollm/OLMo-3-7B-Instruct-SFT` as `base_model` and `openeurollm/Dolci-Instruct-SFT-translated` under `datasets`; `openeurollm/oellm-9b-256k-sft` declares `openeurollm/oellm-9b-256k-theta64m-prelude` as its base model.
 
 **Interpretation:** This exposes a useful additional layer of published metadata without an LLM or guessed semantic links. As with any publisher-supplied description, the declarations themselves have not been experimentally verified. A natural next test is to resolve the 65 out-of-scope references against their actual Hugging Face repository records and investigate their authorship/lineage, while continuing to keep manual name matches separate.
+
+## One-hop external Hugging Face target audit — 8 November 2026
+
+The next live probe investigated **65 publisher-declared external model/dataset references** representing **37 distinct Hugging Face IDs**. Every target was queried via the public Hugging Face API, without a personal credential and without recursively following external cards.
+
+The first inspection found 32 exact IDs returning public metadata, two references returning HTTP **401** (not publicly accessible to this probe), and three requests whose API responses contained a **different canonical repository ID**. Those three were initially classified as fetch failures by an overly strict exact-name check. We corrected the code to retain the original declaration and the returned canonical identity, with a separate `verified_redirect` status and `declared_metadata_redirect` edge. This is not a guessed string substitution.
+
+| Originally declared target | API-returned canonical target | Kind |
+| --- | --- | --- |
+| `LLM360/MegaMath` | `IFM/MegaMath` | dataset |
+| `laineyyy/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3` | `ezosa/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3` | model |
+| `openeurollm/prelude` | `openeurollm/prelude-base` | model; canonical target already indexed |
+
+The two inaccessible declarations were `HPLT/HPLT4.0` (dataset) and `AI-Sweden-Models/oellm-9b-base` (model). **HTTP 401 does not prove nonexistence** and the graph does not treat those as confirmed public assets. A model-card `base_model` or `datasets` assertion is evidence only that its publisher *declared* a relationship; it is not a validated training lineage.
+
+The code maintains distinct states for direct public matches, canonical-name resolutions, HTTP 401/403, HTTP 404, transient lookup failures and items beyond the lookup limit. It persists the original declared IDs, canonical target IDs and lookup outcomes for subsequent review. The bounded lookup makes no claim to discover every project dependency.
