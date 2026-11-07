@@ -11,16 +11,16 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
 GITHUB_REPOS = ("OpenEuroLLM/Taskboard", "OpenEuroLLM/oellm-eval", "OpenEuroLLM/oellm-autoexp")
 HF_ORG = "openeurollm"
 UA = "ai-research-graph/0.1 (public metadata research probe)"
-MAX_ARXIV_LOOKUPS = 12
+MAX_ARXIV_LOOKUPS = 80
+MAX_ARXIV_BATCH_SIZE = 40  # OpenAIRE permits OR lists (up to 50 values per field).
 ARXIV_PATTERN = re.compile(
-    r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?![\d.])",
+    r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
 )
 DOI_PATTERN = re.compile(r"(?<![a-z0-9])10\.\d{4,9}/[^\s\"<>\[\]{}|]+", re.IGNORECASE)
@@ -34,6 +34,9 @@ def identifiers_in(text: str) -> dict[str, list[str]]:
         value = match.group().rstrip(".,;:!?)}'").casefold()
         if value:
             doi.add(value)
+        mirror = re.fullmatch(r"10\.48550/arxiv\.(\d{4}\.\d{4,5})", value)
+        if mirror:
+            arxiv.add(mirror.group(1))
     return {"arxiv": sorted(arxiv), "doi": sorted(doi)}
 
 
@@ -123,40 +126,36 @@ def openaire_products(search: str = "OpenEuroLLM"):
     return ([openaire_node(item) for item in data.get("results", [])], data.get("header", {}).get("numFound"))
 
 
-def openaire_by_arxiv(arxiv_id: str) -> list[dict]:
-    query = urllib.parse.urlencode({"filter": f"ids.arxiv:{arxiv_id}", "page_size": 5})
-    data = fetch_json(f"https://api.openaire.eu/graph/v4/research-products?{query}", timeout=25)
+def openaire_by_arxiv_batch(arxiv_ids: list[str]) -> list[dict]:
+    """Look up multiple exact IDs in one OpenAIRE OR filter request."""
+    if not arxiv_ids or len(arxiv_ids) > MAX_ARXIV_BATCH_SIZE:
+        raise ValueError("Expected 1–40 arXiv IDs")
+    query = urllib.parse.urlencode({"filter": "ids.arxiv:" + "|".join(arxiv_ids), "page_size": 100})
+    data = fetch_json(f"https://api.openaire.eu/graph/v4/research-products?{query}", timeout=60)
     return [openaire_node(item) for item in data.get("results", [])]
 
 
 def enrich_publications(nodes: list[dict], errors: dict[str, str], limit: int = MAX_ARXIV_LOOKUPS) -> list[dict]:
-    """Resolve a bounded sample of GitHub citations; missing coverage stays explicit."""
+    """Resolve explicit GitHub/HF citations with small, bounded OR-filter batches."""
     current = {value for node in nodes if node["type"] == "research_product" for value in node.get("identifiers", {}).get("arxiv", [])}
-    candidates: dict[str, tuple[int, str]] = {}
+    candidates: set[str] = set()
     for node in nodes:
-        if node["type"] not in ("issue", "pull_request"):
+        if node["type"] not in ("issue", "pull_request", "model", "dataset"):
             continue
         for value in node.get("identifiers", {}).get("arxiv", []):
             if value not in current:
-                # Open issues first; then latest updates. Deterministic selection.
-                key = (1 if node.get("state") == "open" else 0, node.get("updated_at") or "")
-                if value not in candidates or key > candidates[value]:
-                    candidates[value] = key
-    ordered = sorted(candidates, key=lambda value: (candidates[value][0], candidates[value][1], value), reverse=True)
+                candidates.add(value)
+    ordered = sorted(candidates)
     selected = ordered[:limit]
     if len(ordered) > len(selected):
-        errors["OpenAIRE citation coverage"] = f"Sampled {len(selected)} of {len(ordered)} unmatched GitHub arXiv IDs (limit {limit}); not exhaustive"
+        errors["OpenAIRE citation coverage"] = f"Queried {len(selected)} of {len(ordered)} unmatched GitHub/HF arXiv IDs (limit {limit})"
     found = []
-    if not selected:
-        return found
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        jobs = {executor.submit(openaire_by_arxiv, value): value for value in selected}
-        for job in as_completed(jobs):
-            value = jobs[job]
-            try:
-                found.extend(job.result())
-            except (ValueError, urllib.error.URLError, TimeoutError) as exc:
-                errors[f"OpenAIRE arXiv {value}"] = str(exc)
+    for index in range(0, len(selected), MAX_ARXIV_BATCH_SIZE):
+        batch = selected[index:index + MAX_ARXIV_BATCH_SIZE]
+        try:
+            found.extend(openaire_by_arxiv_batch(batch))
+        except (ValueError, urllib.error.URLError, TimeoutError) as exc:
+            errors[f"OpenAIRE arXiv batch {index // MAX_ARXIV_BATCH_SIZE + 1}"] = f"IDs {', '.join(batch)}: {exc}"
     return found
 
 
@@ -248,6 +247,38 @@ def scholarly_links(nodes: list[dict]) -> list[dict]:
     return edges
 
 
+def citation_coverage(nodes: list[dict], edges: list[dict]) -> dict:
+    """Coverage among explicitly cited IDs, not recall against all research."""
+    referenced: set[str] = set()
+    published: set[str] = set()
+    source_types = ("issue", "pull_request", "model", "dataset")
+    by_type = {}
+    linked = {edge["source"] for edge in edges if edge["status"] == "identifier_match"}
+    for kind in source_types:
+        items = [node for node in nodes if node["type"] == kind]
+        cited = [node for node in items if any((node.get("identifiers") or {}).values())]
+        by_type[kind] = {"records": len(items), "with_identifier": len(cited),
+                         "linked_to_openaire": sum(node["id"] in linked for node in cited)}
+        for node in cited:
+            referenced.update((node.get("identifiers") or {}).get("arxiv", []))
+    for node in nodes:
+        if node["type"] == "research_product":
+            published.update((node.get("identifiers") or {}).get("arxiv", []))
+    per_paper: dict[str, set[str]] = {}
+    kind_by_id = {node["id"]: node["type"] for node in nodes}
+    for edge in edges:
+        if edge["status"] == "identifier_match":
+            group = "github" if kind_by_id[edge["source"]] in ("issue", "pull_request") else "hf"
+            per_paper.setdefault(edge["target"], set()).add(group)
+    return {
+        "referenced_unique_arxiv_ids": len(referenced),
+        "resolved_unique_arxiv_ids": len(referenced & published),
+        "unresolved_arxiv_ids": sorted(referenced - published),
+        "by_source_type": by_type,
+        "publications_bridging_github_and_hf": sum(groups == {"github", "hf"} for groups in per_paper.values()),
+    }
+
+
 def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
     ids = [node["id"] for node in nodes]
     unique = set(ids)
@@ -271,6 +302,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     candidates = [edge for edge in links if edge["status"] == "candidate"]
     scholarly = [edge for edge in links if edge["status"] == "identifier_match"]
     profile = quality_profile(nodes, links)
+    coverage = citation_coverage(nodes, links)
     lines = [
         "# OpenEuroLLM research graph – exploratory snapshot", "",
         f"Collected: `{snapshot}` (UTC). Source: public APIs, read-only.", "",
@@ -294,11 +326,41 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         lines.append("| No observed cross-source references | – | – | – |")
     lines.extend(["", "## Scholarly identifier matches", "",
         "| Source artifact | OpenAIRE publication | Shared ID |", "| --- | --- | --- |"])
-    for edge in scholarly[:50]:
+    for edge in scholarly[:100]:
         source, target = index[edge["source"]], index[edge["target"]]
         lines.append(f"| [{source['title'].replace('|', '\\|')}]({source['url']}) | [{target['title'].replace('|', '\\|')}]({target['url']}) | `{edge['evidence_type']}:{edge['evidence']}` |")
     if not scholarly:
         lines.append("| No shared identifiers observed | – | – |")
+    if len(scholarly) > 100:
+        lines.append(f"\nShowing the first 100 of {len(scholarly)} scholarly edges; all are in snapshot.json.")
+    bridges = []
+    for paper in (node for node in nodes if node["type"] == "research_product"):
+        incoming = [edge for edge in scholarly if edge["target"] == paper["id"]]
+        gh = next((index[edge["source"]] for edge in incoming if index[edge["source"]]["type"] in ("issue", "pull_request")), None)
+        hf = next((index[edge["source"]] for edge in incoming if index[edge["source"]]["type"] in ("model", "dataset")), None)
+        if gh and hf:
+            bridges.append((gh, paper, hf))
+    lines.extend(["", "## Three-platform publication bridges", "",
+        "These are shared citations, **not** proof of direct model/task dependence.", "",
+        "| GitHub task | Referenced publication | Hugging Face artifact |", "| --- | --- | --- |"])
+    for gh, paper, hf in bridges[:20]:
+        lines.append(f"| [{gh['title'].replace('|', '\\|')}]({gh['url']}) | [{paper['title'].replace('|', '\\|')}]({paper['url']}) | [{hf['title'].replace('|', '\\|')}]({hf['url']}) |")
+    if not bridges:
+        lines.append("| No shared publication observed | – | – |")
+    lines.extend(["", "## Citation lookup completeness", "",
+        f"- Unique arXiv IDs explicitly cited by GitHub/HF: **{coverage['referenced_unique_arxiv_ids']}**",
+        f"- Resolved to OpenAIRE records: **{coverage['resolved_unique_arxiv_ids']}**",
+        f"- Not resolved by OpenAIRE responses: **{len(coverage['unresolved_arxiv_ids'])}**",
+        f"- Publications cited by both GitHub and Hugging Face: **{coverage['publications_bridging_github_and_hf']}**", "",
+        "| Source type | Records | With DOI/arXiv ID | Linked to OpenAIRE |",
+        "| --- | ---: | ---: | ---: |"])
+    for kind, metrics in coverage["by_source_type"].items():
+        lines.append(f"| {kind} | {metrics['records']} | {metrics['with_identifier']} | {metrics['linked_to_openaire']} |")
+    if coverage["unresolved_arxiv_ids"]:
+        lines.extend(["", "Unresolved cited arXiv IDs (missing from this OpenAIRE response, **not** necessarily unpublished): " +
+            ", ".join(f"[{value}](https://arxiv.org/abs/{value})" for value in coverage["unresolved_arxiv_ids"])])
+    if errors:
+        lines.append("\nCoverage may also be limited by API errors listed below.")
     lines.extend(["", "## Automated quality checks", ""])
     for name, value in profile.items():
         lines.append(f"- {name.replace('_', ' ')}: **{value}**")
@@ -306,7 +368,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     lines.extend(f"- `{name}`: {message}" for name, message in errors.items())
     if not errors:
         lines.append("- No source errors encountered.")
-    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Missing timestamps mean the source did not provide freshness metadata.", ""])
+    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
     return "\n".join(lines)
 
 
@@ -338,8 +400,8 @@ def main(argv: list[str] | None = None) -> int:
             nodes.extend(products)
         except (ValueError, urllib.error.URLError, TimeoutError) as exc:
             errors["OpenAIRE"] = str(exc)
-        # OpenAIRE's keyword index is incomplete; resolve a small sample of explicit
-        # arXiv citations from the GitHub issues using exact persistent identifiers.
+        # OpenAIRE's keyword index is incomplete; batch-resolve cited arXiv IDs
+        # across GitHub and Hugging Face using exact persistent identifiers.
         found = enrich_publications(nodes, errors)
         existing = {node["id"] for node in nodes}
         for product in found:
@@ -350,7 +412,7 @@ def main(argv: list[str] | None = None) -> int:
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
-    payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges, "errors": errors, "openaire_search_total": openaire_total, "quality": profile}
+    payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges, "errors": errors, "openaire_search_total": openaire_total, "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total), encoding="utf-8")
     print(f"Collected {len(nodes)} records, {len(edges)} potential links, {len(errors)} source errors")
