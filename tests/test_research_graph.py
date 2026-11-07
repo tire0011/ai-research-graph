@@ -2,8 +2,9 @@ import unittest
 from unittest.mock import patch
 
 from research_graph import (
-    enrich_publications, exact_reference, identifiers_in, links_between, normalized,
-    openaire_node, quality_profile, report, scholarly_links,
+    citation_coverage, enrich_publications, exact_reference, identifiers_in,
+    links_between, normalized, openaire_by_arxiv_batch, openaire_node,
+    quality_profile, report, scholarly_links,
 )
 
 
@@ -80,6 +81,11 @@ class ResearchGraphTests(unittest.TestCase):
         })
         self.assertEqual(identifiers_in("version 2609.24797 and model 1.3B"), {"arxiv": [], "doi": []})
 
+    def test_arxiv_pdf_and_mirror_doi_only(self):
+        self.assertEqual(identifiers_in("https://arxiv.org/pdf/2510.26202v3.pdf")["arxiv"], ["2510.26202"])
+        self.assertEqual(identifiers_in("doi:10.48550/arXiv.2609.24797")["arxiv"], ["2609.24797"])
+        self.assertEqual(identifiers_in("arxiv:2609.24797wrong")["arxiv"], [])
+
     def test_openaire_pid_is_extracted_with_http_url(self):
         paper = openaire_node({
             "id": "doi_dedup___::abc", "mainTitle": "Complex KDA", "type": "publication",
@@ -120,11 +126,43 @@ class ResearchGraphTests(unittest.TestCase):
             node["state"] = "open"
             issues.append(node)
         errors = {}
-        with patch("research_graph.openaire_by_arxiv", return_value=[openaire_node({"id": "pub"})]) as mocked:
+        with patch("research_graph.openaire_by_arxiv_batch", return_value=[openaire_node({"id": "pub"})]) as mocked:
             products = enrich_publications(issues, errors, limit=2)
-        self.assertEqual(mocked.call_count, 2)
-        self.assertEqual(len(products), 2)
-        self.assertIn("Sampled 2 of 3", errors["OpenAIRE citation coverage"])
+        self.assertEqual(mocked.call_count, 1)
+        self.assertEqual(len(mocked.call_args.args[0]), 2)
+        self.assertEqual(len(products), 1)
+        self.assertIn("Queried 2 of 3", errors["OpenAIRE citation coverage"])
+
+    def test_arxiv_batch_uses_documented_or_filter(self):
+        with patch("research_graph.fetch_json", return_value={"results": []}) as mocked:
+            self.assertEqual(openaire_by_arxiv_batch(["2609.24797", "2510.26202"]), [])
+        requested = mocked.call_args.args[0]
+        self.assertIn("ids.arxiv%3A2609.24797%7C2510.26202", requested)
+        self.assertIn("page_size=100", requested)
+
+    def test_enrichment_includes_hugging_face_citations(self):
+        asset = dict(self.asset, identifiers={"arxiv": ["2609.24797"], "doi": []})
+        errors = {}
+        with patch("research_graph.openaire_by_arxiv_batch", return_value=[]) as mocked:
+            enrich_publications([asset], errors)
+        self.assertEqual(mocked.call_args.args[0], ["2609.24797"])
+        self.assertEqual(errors, {})
+
+    def test_citation_coverage_reveals_three_platform_bridges(self):
+        paper = openaire_node({"id": "paper", "mainTitle": "Paper", "pids": [{"scheme": "arXiv", "value": "2609.24797"}]})
+        issue = self.issue("See arxiv:2609.24797")
+        issue["identifiers"] = identifiers_in(issue["description"])
+        asset = dict(self.asset, identifiers={"arxiv": ["2609.24797", "2510.26202"], "doi": []})
+        nodes = [paper, issue, asset]
+        coverage = citation_coverage(nodes, scholarly_links(nodes))
+        self.assertEqual(coverage["referenced_unique_arxiv_ids"], 2)
+        self.assertEqual(coverage["resolved_unique_arxiv_ids"], 1)
+        self.assertEqual(coverage["unresolved_arxiv_ids"], ["2510.26202"])
+        self.assertEqual(coverage["publications_bridging_github_and_hf"], 1)
+        self.assertEqual(coverage["by_source_type"]["issue"]["linked_to_openaire"], 1)
+        summary = report(nodes, scholarly_links(nodes), {}, "2026-11-07", 1)
+        self.assertIn("Three-platform publication bridges", summary)
+        self.assertIn("not** proof of direct model/task dependence", summary)
 
     def test_report_separates_scholarly_edges(self):
         paper = openaire_node({"id": "abc", "mainTitle": "Paper", "pids": [{"scheme": "arXiv", "value": "2609.24797"}]})
