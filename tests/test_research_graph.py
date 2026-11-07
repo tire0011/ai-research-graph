@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 from research_graph import (
     citation_coverage, enrich_publications, exact_reference, external_hf_asset,
-    hf_card_declarations, identifiers_in,
+    hf_card_declarations, identifiers_in, incomplete_essential_sources,
     links_between, normalized, openaire_by_arxiv_batch, openaire_node,
     quality_profile, report, scholarly_links, verify_external_hf_references,
 )
@@ -76,6 +76,13 @@ class ResearchGraphTests(unittest.TestCase):
         output = report([], [], {"OpenAIRE": "timeout"}, "2026-11-07", None)
         self.assertIn("OpenAIRE", output)
         self.assertIn("unavailable", output)
+
+    def test_essential_source_failures_block_incomplete_ci_snapshot(self):
+        errors = {"OpenEuroLLM/Taskboard": "HTTP 504", "OpenAIRE citation coverage": "limited"}
+        self.assertEqual(incomplete_essential_sources(errors), ["OpenEuroLLM/Taskboard"])
+        self.assertEqual(incomplete_essential_sources({"Hugging Face external lookup": "HTTP 429"}),
+                         ["Hugging Face external lookup"])
+        self.assertEqual(incomplete_essential_sources({"OpenAIRE citation coverage": "limited"}), [])
 
     def test_scholarly_ids_are_explicit_and_version_normalized(self):
         text = 'See https://arxiv.org/pdf/2609.24797v2 and arxiv:2609.24797; https://doi.org/10.48550/arXiv.2609.24797.'
