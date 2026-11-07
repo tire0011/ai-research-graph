@@ -47,3 +47,31 @@ Five name-only candidates remain. All are **unverified**:
 - **Provenance:** each newly generated edge stores the matched string, nearby text, source URL and target URL. A future human-reviewed gold set should evaluate entity resolution before semantic inference or MCP publication.
 
 **Decision:** Continue with source-backed entity resolution and a manually labeled sample. Do not represent name-only candidates as verified research relationships.
+
+## Expanded citation coverage audit — 7 November 2026
+
+The second probe added DOI/arXiv extraction from GitHub and Hugging Face, exact OpenAIRE PID matching, and 12 individual arXiv lookups. It produced **56** cross-platform edges, of which **23** were scholarly identifier matches. Those 12 lookups covered only a subset of the explicitly cited arXiv IDs.
+
+The third probe replaced individual lookups with OpenAIRE's documented `ids.arxiv:ID1|ID2` OR filter, using at most 40 IDs per request and a total limit of 80. The OR behavior was verified against live OpenAIRE results for two known publications before implementation. Both GitHub and Hugging Face are now eligible sources of citation IDs.
+
+| Metric | Before expanded batch lookup | After expanded batch lookup |
+| --- | ---: | ---: |
+| Total records | 822 | **849** |
+| Research products in snapshot | 20 | **47** |
+| Shared scholarly-ID edges | 23 | **54** |
+| All observed cross-source edges | 56 | **87** |
+| Distinct explicit arXiv IDs identified across GitHub/HF | 40 | **40** |
+| Distinct cited arXiv IDs resolved through OpenAIRE | partial sample | **40/40** |
+| Publications cited by both GitHub and HF | not reported | **1** |
+| Duplicate nodes / edges / orphan edges | 0 / 0 / 0 | **0 / 0 / 0** |
+| Source API errors | 0 (one deliberate coverage warning) | **0** |
+
+### Remaining linkage bottleneck
+
+- GitHub issues/PRs: **20/685** source records (2.9%) have an explicit DOI/arXiv identifier. All 20 link to a known OpenAIRE publication in this snapshot.
+- Hugging Face models/datasets: **19/117** records (16.2%) have a DOI/arXiv identifier. All 19 link to a known OpenAIRE publication.
+- The other **763** engineering/model/dataset records are **not proven unconnected**; the metadata probe simply has no persistent scholarly identifier to join on. More relationship data may exist in README files, commit messages, datasets, model cards, publication text or community infrastructure.
+- One publication is cited by records on both GitHub and Hugging Face. This creates a traceable **GitHub → publication ← HF** bridge, but is not evidence that those artifacts share authors, code, data, evaluation results or a direct development dependency.
+- The five name-only matches remain unconfirmed. Until manually reviewed, they should not be promoted into verified edges.
+
+**Quality conclusion:** The exact-ID join has **100% lookup coverage for the 40 explicitly captured modern arXiv IDs in this bounded source snapshot**, with no observed integrity defects. This is *not* 100% research discovery recall or an estimate of the precision of all graph edges. The next highest-value work is a small manually labeled set of missing relationships and a metadata publishing convention, not a larger central agent or MCP service.
