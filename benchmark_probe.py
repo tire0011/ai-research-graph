@@ -34,9 +34,15 @@ def json_url(base: str, **query: str | int) -> str:
 
 def step_number(raw: object) -> int | None:
     """Handle simple numeric or iter_-prefixed checkpoints, not arbitrary revision names."""
+    if isinstance(raw, (int, float)) and not isinstance(raw, bool):
+        if math.isfinite(raw) and raw >= 0 and float(raw).is_integer():
+            return int(raw)
+        return None
     value = str(raw or "").strip()
     if value.startswith("iter_"):
         value = value[5:]
+    if value.endswith(".0") and value[:-2].replace(",", "").isdigit():
+        value = value[:-2]
     if value.isdigit() or (value and all(part.isdigit() for part in value.split(","))):
         return int(value.replace(",", ""))
     return None
@@ -145,6 +151,8 @@ def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
             "path": path, "url": url, "rows": total_rows, "bytes": len(blob),
             "sha256": hashlib.sha256(blob).hexdigest(), "matched_rows": 0,
             "missing_required_columns": sorted(required_selection - cols),
+            "step_type": str(reader.schema_arrow.field("step").type) if "step" in cols else None,
+            "score_type": str(reader.schema_arrow.field("score").type) if "score" in cols else None,
         }
         file_evidence.append(file_details)
         if not required_selection.issubset(cols):
@@ -187,7 +195,7 @@ def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
 
 def assess_scores(raw: dict) -> dict:
     """Block changes when the requested checkpoint series is not comparable."""
-    records, invalid = [], []
+    records, invalid, invalid_samples = [], [], []
     for entry in raw["rows"]:
         data = entry.get("row") or {}
         step = step_number(data.get("step"))
@@ -196,6 +204,14 @@ def assess_scores(raw: dict) -> dict:
                 not isinstance(score, (int, float)) or not math.isfinite(score) or
                 score < 0 or score > 1):
             invalid.append(entry.get("row_idx"))
+            if len(invalid_samples) < 8:
+                invalid_samples.append({
+                    "row_idx": entry.get("row_idx"), "source_file": entry.get("source_file"),
+                    "raw_step": repr(data.get("step"))[:120],
+                    "step_type": type(data.get("step")).__name__,
+                    "raw_score": repr(score)[:120],
+                    "score_type": type(score).__name__,
+                })
             continue
         records.append({
             "step": step, "score": float(score), "row_idx": entry.get("row_idx"),
@@ -250,7 +266,8 @@ def assess_scores(raw: dict) -> dict:
     return {
         "status": "comparable" if comparisons else ("insufficient_rows" if not problems else "quality_blocked"),
         "source_rows": len(raw["rows"]), "valid_rows": len(records),
-        "invalid_row_indices": invalid, "duplicate_steps": duplicate_steps,
+        "invalid_row_indices": invalid, "invalid_samples": invalid_samples,
+        "duplicate_steps": duplicate_steps,
         "task_config_variants": len(task_configs), "fewshot_variants": len(fewshot),
         "eval_suite_variants": len(eval_suites), "sample_count_variants": len(sample_counts),
         "problems": problems, "records": records, "comparisons": comparisons,
