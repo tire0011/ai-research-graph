@@ -18,6 +18,7 @@ The [Research graph probe](.github/workflows/research-graph.yml) runs on the def
 - [`QUALITY_REVIEW.md`](QUALITY_REVIEW.md): inspectable baseline audit, false-positive examples and unresolved relationships.
 - [`results/QA_EVIDENCE.md`](results/QA_EVIDENCE.md): four auditable cross-platform question evidence packets, regenerated from the latest graph.
 - [`results/RETRIEVAL_BENCHMARK.md`](results/RETRIEVAL_BENCHMARK.md): first controlled comparison of graph traversal against plain-text search of the same captured records. Includes positive and abstention questions; it is not a live search or MCP benchmark.
+- [`results/HOLDOUT_EVIDENCE.md`](results/HOLDOUT_EVIDENCE.md): ten additional questions sampled from actual issues before examining their bodies, with fresh GitHub source checks, SHA256 text parity, and a count of genuinely evidenced graph connections.
 - [`QA_AI_REVIEW.md`](QA_AI_REVIEW.md): the first one-time AI answer trial, including evidence limits and cases that require abstention.
 - [`CASE_STUDY_OPENTHINKER3.md`](CASE_STUDY_OPENTHINKER3.md): a deeper end-to-end investigation of a real reproduction objective, including data-processing evidence and missing experimental provenance.
 
@@ -26,6 +27,8 @@ It uses only public endpoints and the built-in GitHub Actions token. No local PC
 If an essential API fails (e.g. a GitHub gateway timeout), the run keeps the partial diagnostic report as an Actions artifact but **exits unsuccessfully before committing new results**. This preserves the last complete report in the repository.
 
 The retrieval comparison is intentionally narrow: both methods see the same snapshot; the graph uses verified provenance edges and the baseline scans source-record text without joins. Target recall@10 and in-memory timings are descriptive engineering measurements, not evidence of researcher productivity or autonomous AI answer quality. The next experiment needs unseen researcher questions and a live GitHub/Hugging Face search baseline.
+
+The separate [ten-issue holdout study](.github/workflows/holdout-study.yml) checks newly sampled original GitHub issue texts against the stored graph after a successful graph run. It measures source coverage, textual evidence fidelity, and whether the graph actually has sourced cross-platform relationships for realistic questions. Sources are read again independently with the built-in GitHub token; API failures **fail this companion job without overwriting the last good study**. This is issue-level evidence verification, not a blind evaluation of an autonomous research agent or a comparison of human research time. Multiple result-writing workflows retry their Git rebase/push to avoid losing valid evidence when they complete concurrently.
 
 ## Separate Prelude benchmark probes
 

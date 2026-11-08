@@ -1,0 +1,71 @@
+{
+  "selection": {
+    "date_utc": "2026-11-08",
+    "seed": "heldout-research-2026-11-08-v1",
+    "frame": "GitHub search: most recently updated issues; Taskboard top 30, oellm-eval top 30, oellm-autoexp top 25",
+    "method": "Exclude existing QA/benchmark cases, then choose lowest unsigned FNV-1a score of seed|owner/repo#number; quotas 4/4/2. Issue bodies were inspected only after IDs were selected.",
+    "limits": "Questions and expected phrases were curated from the selected original issue bodies; this is new-issue coverage testing, NOT blinded question writing or a representative user study."
+  },
+  "cases": [
+    {
+      "id": "pdf_ocr_benchmark", "repo": "OpenEuroLLM/Taskboard", "number": 420,
+      "question": "Which two document categories must the planned PDF benchmark cover, and should computation cost be included?",
+      "answer": "Digitally born and scanned documents, with computational costs considered.",
+      "evidence_level": "planned", "phrases": ["digitally-born documents", "scanned documents", "Computational costs"]
+    },
+    {
+      "id": "dpo_mixture", "repo": "OpenEuroLLM/Taskboard", "number": 435,
+      "question": "What example language mixture is proposed for Prelude DPO? Is it a completed experiment?",
+      "answer": "75% English and 25% multilingual is an illustrative proposal, not a demonstrated optimal mix.",
+      "evidence_level": "proposal", "phrases": ["75% english data", "25% multilingual data"]
+    },
+    {
+      "id": "dpo_checkpoint_merges", "repo": "OpenEuroLLM/Taskboard", "number": 434,
+      "question": "How many checkpoint averages across how many models does this issue report? Are their scores independently reproduced?",
+      "answer": "The issue reports 282 averages across four models; the issue text alone does not independently reproduce their scores.",
+      "evidence_level": "reported_not_reproduced", "phrases": ["282 averages", "across four models"]
+    },
+    {
+      "id": "dpo_variants", "repo": "OpenEuroLLM/Taskboard", "number": 431,
+      "question": "Which DPO variants are planned for the same learning-rate/beta grid?",
+      "answer": "APO, IPO and length-normalized DPO are planned for comparison against vanilla DPO.",
+      "evidence_level": "planned", "phrases": ["APO, IPO", "length-normalized DPO", "#214"]
+    },
+    {
+      "id": "evalchemy_samples", "repo": "OpenEuroLLM/oellm-eval", "number": 165,
+      "question": "Which evaluation backend lacked the sample-logging flag?",
+      "answer": "The issue says Evalchemy lacked native sample-logging support, unlike lm-eval-harness.",
+      "evidence_level": "reported", "phrases": ["Evalchemy", "lm-eval-harness"]
+    },
+    {
+      "id": "pr_container_build", "repo": "OpenEuroLLM/oellm-eval", "number": 45,
+      "question": "What container-build cost reduction was proposed?",
+      "answer": "Avoid building every container for every pull request; cluster-based builds were described as a later step.",
+      "evidence_level": "proposal", "phrases": ["avoid to build all containers", "cluster"]
+    },
+    {
+      "id": "contamination_exclusion", "repo": "OpenEuroLLM/oellm-eval", "number": 166,
+      "question": "Which two settings are needed for code-execution evaluation tasks in this issue?",
+      "answer": "The issue specifies --confirm_run_unsafe_code and HF_ALLOW_CODE_EVAL=1.",
+      "evidence_level": "reported", "phrases": ["--confirm_run_unsafe_code", "HF_ALLOW_CODE_EVAL=1", "#159"]
+    },
+    {
+      "id": "lumi_cpu_fallback", "repo": "OpenEuroLLM/oellm-eval", "number": 96,
+      "question": "What AMD-GPU environment variable was suggested for the LUMI CPU fallback? Was it proven to fix the problem?",
+      "answer": "HIP_VISIBLE_DEVICES was proposed for AMD GPU visibility; the issue presents this as a potential fix, not a proven root cause.",
+      "evidence_level": "hypothesis", "phrases": ["AMD hardware", "HIP_VISIBLE_DEVICES", "Potential Cause"]
+    },
+    {
+      "id": "singularity_binds", "repo": "OpenEuroLLM/oellm-autoexp", "number": 6,
+      "question": "Which configuration directory held bind mounts that were missing at launch?",
+      "answer": "The issue points to config/container and shows a singularity exec command without visible bind arguments.",
+      "evidence_level": "reported", "phrases": ["config/container", "singularity exec"]
+    },
+    {
+      "id": "lumi_setup", "repo": "OpenEuroLLM/oellm-autoexp", "number": 5,
+      "question": "Why did generic setup instructions not cover the LUMI cluster?",
+      "answer": "The issue attributes the gap to differences between LUMI and other clusters.",
+      "evidence_level": "reported", "phrases": ["cluster differences", "Readme.md"]
+    }
+  ]
+}
