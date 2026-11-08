@@ -206,9 +206,10 @@ def markdown(result):
                   "- **Dependency and feasibility**: #391 explicitly lists #432 as an upstream "
                   "task; #433's comment reports a LUMI OOM problem. Neither is evidence of "
                   "a realized speedup.",
-                  f"- **Data gap**: issue comments in {result['comment_dependent_cases']} cases contain essential evidence not "
-                  "stored in the graph's issue-body-only snapshot. An impact query should therefore "
-                  "either include versioned comments or abstain from declaring no known blocker.",
+                  f"- **Comment coverage boundary**: issue comments in {result['comment_dependent_cases']} cases contain "
+                  "essential evidence. The graph now stores source-hashed comments for the ten selected issues "
+                  "only; other tasks have not received a complete comment audit. Queries outside this sample "
+                  "must inspect original comments or abstain from claiming no known blocker.",
                   "- **Selection bias**: these ten items were selected for promising, different "
                   "signals after seeing issue titles. They are not representative of the "
                   "indexed issue population and cannot establish which project should receive resources.",

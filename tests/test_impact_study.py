@@ -43,6 +43,8 @@ class ImpactStudyTests(unittest.TestCase):
         self.assertEqual(result["exact_snapshot_parity"], 10)
         self.assertTrue(result["cases"][3]["declared_dependency"]["graph_contains_literal_reference"])
         self.assertIn("not a speedup ranking", impact.markdown(result).lower())
+        self.assertIn("source-hashed comments for the ten selected issues", impact.markdown(result))
+        self.assertNotIn("issue-body-only snapshot", impact.markdown(result))
 
     def test_missing_comment_phrase_is_source_error_not_negative(self):
         graph, study, issues, comments = fixture()
