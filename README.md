@@ -38,6 +38,14 @@ query block comparison rather than producing misleading numbers. API failure is
 recorded explicitly as source_error, not counted as zero or success. No benchmark
 is rerun, and F1 changes alone do not establish significance or cause.
 
+The companion control analysis compares CoQA generative F1, CoQA multiple-choice
+accuracy and SQuAD generative F1. It first verifies each task's checkpoint-series
+quality independently, then compares changes across **only checkpoint steps
+present in all three tasks**. Results and source evidence are saved as
+results/PRELUDE_CONTROLS.md and results/prelude_controls.json. Different
+benchmark metrics are not combined into a common quality score; these are
+descriptive within-task changes, not evidence of causation or statistical significance.
+
 ```powershell
 python -m unittest discover -s tests -v
 python research_graph.py --output results
