@@ -4,6 +4,10 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Goal:** find demonstrable links between live engineering tasks and open research artifacts; measure gaps before proposing any additional infrastructure. This is independent of the Nexus agent project.
 
+## Feasibility verdict
+
+**A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
+
 ## Workflow
 
 The [Research graph probe](.github/workflows/research-graph.yml) runs on the default branch, manually, and weekly on Monday. It publishes:
@@ -20,22 +24,21 @@ It uses only public endpoints and the built-in GitHub Actions token. No local PC
 
 If an essential API fails (e.g. a GitHub gateway timeout), the run keeps the partial diagnostic report as an Actions artifact but **exits unsuccessfully before committing new results**. This preserves the last complete report in the repository.
 
-## Local run (optional)
+## Separate Prelude benchmark probes
 
-The workflow additionally inspects published Prelude checkpoint scores from the
+The independent [Prelude benchmark workflow](.github/workflows/prelude-benchmarks.yml) starts after a successful graph workflow or manually, without affecting graph collection. It inspects published Prelude checkpoint scores from the
 [OpenEuroLLM Prelude benchmark dataset](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores).
 It writes results/PRELUDE_EVAL.md (interpretable comparison and quality verdict)
 and results/prelude_eval.json (dataset revision, source filter URLs, original row
 indices, raw scores and computed changes). This is an independent companion
 probe, not a modification of the research graph's established evidence edges.
 It compares only one model, task and metric: prelude_anneal2t / coqa_gen / F1.
-If the dataset viewer filter fails with a server error, the probe reads all
-published Parquet files directly at a pinned Hugging Face dataset commit,
-recording their SHA256 checksums. GitHub Actions installs the Parquet reader;
-the original metadata/graph probe remains standard-library-only.
+The probe reads published Parquet files directly at a pinned Hugging Face dataset commit,
+recording their SHA256 checksums. Transient source failures are retried up to three times;
+the benchmark job installs a Parquet reader, while the graph workflow stays standard-library-only.
 Duplicate checkpoints, missing scores, configuration differences, or a truncated
 query block comparison rather than producing misleading numbers. API failure is
-recorded explicitly as source_error, not counted as zero or success. No benchmark
+recorded in separate `*_error.json` and `*_ERROR.md` diagnostics with a nonzero exit code, **not committed over the last successful reports**. Each successful probe may be saved independently even if the other fails. No benchmark
 is rerun, and F1 changes alone do not establish significance or cause.
 
 The companion control analysis compares CoQA generative F1, CoQA multiple-choice
@@ -45,6 +48,8 @@ present in all three tasks**. Results and source evidence are saved as
 results/PRELUDE_CONTROLS.md and results/prelude_controls.json. Different
 benchmark metrics are not combined into a common quality score; these are
 descriptive within-task changes, not evidence of causation or statistical significance.
+
+## Local run (optional)
 
 ```powershell
 python -m unittest discover -s tests -v
