@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T13:03:18.916348+00:00",
+  "timestamp_utc": "2026-11-08T13:36:27.015055+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -11101,22 +11101,6 @@
       "updated_at": "2026-11-06T14:55:45.000Z"
     },
     {
-      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "type": "dataset",
-      "title": "Agent-Ark/Toucan-1.5M",
-      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
-      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2510.01179"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-10-04T00:51:18.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "type": "dataset",
       "title": "allenai/Dolci-Instruct-SFT",
@@ -11146,6 +11130,22 @@
         "doi": []
       },
       "updated_at": "2026-01-31T10:05:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "type": "dataset",
+      "title": "Agent-Ark/Toucan-1.5M",
+      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
+      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2510.01179"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-10-04T00:51:18.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11195,6 +11195,22 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
+      "type": "dataset",
+      "title": "allenai/dolma3_dolmino_mix-100B-1125",
+      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
+      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2512.13961"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-02-23T19:03:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:common-pile/stackv2_edu_filtered",
       "type": "dataset",
       "title": "common-pile/stackv2_edu_filtered",
@@ -11208,36 +11224,6 @@
         "doi": []
       },
       "updated_at": "2025-06-06T04:02:26.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:HPLT/HPLT3.0",
-      "type": "dataset",
-      "title": "HPLT/HPLT3.0",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
-      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-07-08T12:37:21.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
-      "type": "dataset",
-      "title": "allenai/dolma3_dolmino_mix-100B-1125",
-      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
-      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.13961"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-02-23T19:03:37.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11256,18 +11242,30 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "id": "hf:dataset:HPLT/HPLT3.0",
       "type": "dataset",
-      "title": "HPLT/HPLT2.0_cleaned",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
-      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
+      "title": "HPLT/HPLT3.0",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
+      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
       "identifiers": {
-        "arxiv": [
-          "2503.10267"
-        ],
+        "arxiv": [],
         "doi": []
       },
-      "updated_at": "2026-06-11T09:20:44.000Z",
+      "updated_at": "2026-07-08T12:37:21.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finepdfs-edu",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-11-11T18:49:02.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11289,20 +11287,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finepdfs-edu",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-11-11T18:49:02.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:HuggingFaceFW/finewiki",
       "type": "dataset",
       "title": "HuggingFaceFW/finewiki",
@@ -11313,6 +11297,20 @@
         "doi": []
       },
       "updated_at": "2025-10-22T11:02:22.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11335,20 +11333,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-31T06:26:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-CC-v2",
       "type": "dataset",
       "title": "nvidia/Nemotron-CC-v2",
@@ -11363,6 +11347,23 @@
       "updated_at": "2026-07-07T15:21:11.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:IFM/MegaMath",
+      "type": "dataset",
+      "title": "IFM/MegaMath",
+      "url": "https://huggingface.co/datasets/IFM/MegaMath",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\", \"code\", \"pre-training\", \"synthesis\"], \"size_categories\": [\"1B<n<10B\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2504.02807"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-04-09T13:17:50.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata",
+      "resolved_from_alias": "LLM360/MegaMath"
     },
     {
       "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
@@ -11399,23 +11400,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:IFM/MegaMath",
-      "type": "dataset",
-      "title": "IFM/MegaMath",
-      "url": "https://huggingface.co/datasets/IFM/MegaMath",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\", \"code\", \"pre-training\", \"synthesis\"], \"size_categories\": [\"1B<n<10B\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2504.02807"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-04-09T13:17:50.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata",
-      "resolved_from_alias": "LLM360/MegaMath"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Math-v2",
       "type": "dataset",
       "title": "nvidia/Nemotron-Math-v2",
@@ -11447,6 +11431,22 @@
         "doi": []
       },
       "updated_at": "2026-10-28T17:56:57.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "type": "dataset",
+      "title": "HPLT/HPLT2.0_cleaned",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2503.10267"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-06-11T09:20:44.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11497,22 +11497,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
-      "type": "dataset",
-      "title": "open-thoughts/OpenThoughts3-1.2M",
-      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"difficulty\", \"dtype\": \"int64\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 59763369750, \"num_examples\": 1200000}], \"download_size\": 28188197544, \"dataset_size\": 59763369750}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}], \"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"tags\": [\"reasoning\", \"mathematics\", \"code\", \"science\"], \"library_name\": \"datasets\"}",
-      "identifiers": {
-        "arxiv": [
-          "2506.04178"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-06-09T16:14:06.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:open-web-math/open-web-math",
       "type": "dataset",
       "title": "open-web-math/open-web-math",
@@ -11525,20 +11509,6 @@
         "doi": []
       },
       "updated_at": "2023-10-17T20:14:00.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11556,6 +11526,52 @@
         "doi": []
       },
       "updated_at": "2025-11-08T01:27:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
+      "type": "dataset",
+      "title": "open-thoughts/OpenThoughts3-1.2M",
+      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"difficulty\", \"dtype\": \"int64\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 59763369750, \"num_examples\": 1200000}], \"download_size\": 28188197544, \"dataset_size\": 59763369750}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}], \"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"tags\": [\"reasoning\", \"mathematics\", \"code\", \"science\"], \"library_name\": \"datasets\"}",
+      "identifiers": {
+        "arxiv": [
+          "2506.04178"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-06-09T16:14:06.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "type": "dataset",
+      "title": "tokyotech-llm/swallow-math-v2",
+      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
+      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2505.02881"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-11-06T05:11:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11588,22 +11604,6 @@
         "doi": []
       },
       "updated_at": "2026-01-05T16:25:46.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "type": "dataset",
-      "title": "tokyotech-llm/swallow-math-v2",
-      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
-      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2505.02881"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-11-06T05:11:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -13824,15 +13824,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2510.01179",
-      "context": "Both public metadata records contain arxiv:2510.01179",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -13860,6 +13851,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2510.01179",
+      "context": "Both public metadata records contain arxiv:2510.01179",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:common-pile/stackv2",
       "target": "openaire:doi_dedup___::71c317ecfa4a1627fd81a73e7e3fffa8",
       "status": "identifier_match",
@@ -13870,24 +13870,6 @@
     },
     {
       "source": "hf:dataset:common-pile/stackv2",
-      "target": "openaire:doi_dedup___::e20b26d8cf0d73cdf62fe09e3c582b98",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2506.05209",
-      "context": "Both public metadata records contain arxiv:2506.05209",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:common-pile/stackv2_edu_filtered",
-      "target": "openaire:doi_dedup___::71c317ecfa4a1627fd81a73e7e3fffa8",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2402.19173",
-      "context": "Both public metadata records contain arxiv:2402.19173",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:common-pile/stackv2_edu_filtered",
       "target": "openaire:doi_dedup___::e20b26d8cf0d73cdf62fe09e3c582b98",
       "status": "identifier_match",
       "evidence_type": "arxiv",
@@ -13905,12 +13887,21 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
-      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
+      "source": "hf:dataset:common-pile/stackv2_edu_filtered",
+      "target": "openaire:doi_dedup___::71c317ecfa4a1627fd81a73e7e3fffa8",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2503.10267",
-      "context": "Both public metadata records contain arxiv:2503.10267",
+      "evidence": "2402.19173",
+      "context": "Both public metadata records contain arxiv:2402.19173",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:common-pile/stackv2_edu_filtered",
+      "target": "openaire:doi_dedup___::e20b26d8cf0d73cdf62fe09e3c582b98",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2506.05209",
+      "context": "Both public metadata records contain arxiv:2506.05209",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13950,6 +13941,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:IFM/MegaMath",
+      "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2504.02807",
+      "context": "Both public metadata records contain arxiv:2504.02807",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
       "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
       "status": "identifier_match",
@@ -13983,15 +13983,6 @@
       "evidence_type": "arxiv",
       "evidence": "2508.03613",
       "context": "Both public metadata records contain arxiv:2508.03613",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:IFM/MegaMath",
-      "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2504.02807",
-      "context": "Both public metadata records contain arxiv:2504.02807",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14040,6 +14031,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2503.10267",
+      "context": "Both public metadata records contain arxiv:2503.10267",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
       "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
       "status": "identifier_match",
@@ -14055,15 +14055,6 @@
       "evidence_type": "arxiv",
       "evidence": "2602.21193",
       "context": "Both public metadata records contain arxiv:2602.21193",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
-      "target": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2506.04178",
-      "context": "Both public metadata records contain arxiv:2506.04178",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14094,6 +14085,24 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
+      "target": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2506.04178",
+      "context": "Both public metadata records contain arxiv:2506.04178",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2505.02881",
+      "context": "Both public metadata records contain arxiv:2505.02881",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -14109,15 +14118,6 @@
       "evidence_type": "arxiv",
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2505.02881",
-      "context": "Both public metadata records contain arxiv:2505.02881",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
