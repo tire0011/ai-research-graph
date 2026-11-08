@@ -1,4 +1,7 @@
 import unittest
+import io
+import json
+from unittest.mock import patch
 
 import holdout_study as hs
 
@@ -20,6 +23,19 @@ def study(cases=None):
 
 
 class HoldoutTests(unittest.TestCase):
+    def test_null_github_body_is_legitimate_empty_issue(self):
+        body = json.dumps({"number": 7, "body": None, "updated_at": "2026-11-08"}).encode()
+        class Response(io.BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                self.close()
+
+        with patch("holdout_study.urllib.request.urlopen", return_value=Response(body)):
+            result = hs.read_issue("OpenEuroLLM/Taskboard", 7)
+        self.assertEqual(result["body"], "")
+
     def test_exact_source_parity_and_grounded_answer(self):
         result = hs.evaluate(graph(), study(), fetch=lambda repo, num: {
             "body": "scanned documents", "updated_at": "2026-11-08",
