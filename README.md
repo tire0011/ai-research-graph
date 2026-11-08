@@ -14,6 +14,7 @@ The [Research graph probe](.github/workflows/research-graph.yml) runs on the def
 - [`QUALITY_REVIEW.md`](QUALITY_REVIEW.md): inspectable baseline audit, false-positive examples and unresolved relationships.
 - [`results/QA_EVIDENCE.md`](results/QA_EVIDENCE.md): four auditable cross-platform question evidence packets, regenerated from the latest graph.
 - [`QA_AI_REVIEW.md`](QA_AI_REVIEW.md): the first one-time AI answer trial, including evidence limits and cases that require abstention.
+- [`CASE_STUDY_OPENTHINKER3.md`](CASE_STUDY_OPENTHINKER3.md): a deeper end-to-end investigation of a real reproduction objective, including data-processing evidence and missing experimental provenance.
 
 It uses only public endpoints and the built-in GitHub Actions token. No local PC or GPU is required. The GitHub token is used only for read access to source issues and committing generated results to this repository.
 
