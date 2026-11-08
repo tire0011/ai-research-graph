@@ -34,8 +34,11 @@ class ScoreTests(unittest.TestCase):
     def test_checkpoint_step_parser(self):
         self.assertEqual(bp.step_number("iter_1,092,000"), 1092000)
         self.assertEqual(bp.step_number(1094400), 1094400)
+        self.assertEqual(bp.step_number(1094400.0), 1094400)
+        self.assertEqual(bp.step_number("1,094,400.0"), 1094400)
         self.assertIsNone(bp.step_number("main"))
         self.assertIsNone(bp.step_number(None))
+        self.assertIsNone(bp.step_number(10.1))
 
     def test_adjacent_changes_only_within_one_group(self):
         records = [
@@ -96,7 +99,10 @@ class SourceTests(unittest.TestCase):
                 return self.records
 
         class FakeParquet:
-            schema_arrow = SimpleNamespace(names=list(fixture[0]))
+            schema_arrow = SimpleNamespace(
+                names=list(fixture[0]),
+                field=lambda name: SimpleNamespace(type="float64" if name == "score" else "string"),
+            )
             metadata = SimpleNamespace(num_rows=3, row_group=lambda i: SimpleNamespace(num_rows=3))
             num_row_groups = 1
 
