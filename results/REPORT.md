@@ -1,15 +1,17 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
 - issue: **493** records
 - pull_request: **192** records
 - model: **82** records
-- dataset: **69** records
-- research_product: **66** records
-- Of HF models/datasets, publicly verified one-hop targets outside the initial inventory: **34**
+- dataset: **72** records
+- research_product: **68** records
+- source_file: **8** records
+- processing_script: **2** records
+- Of HF models/datasets, publicly verified one-hop targets outside the initial inventory: **37**
 - OpenAIRE keyword-search total (not project coverage): **8**
 
 - GitHub open issues / closed issues: **223 / 270**
@@ -17,10 +19,13 @@ Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-o
 
 ## Evidenced relationships
 
-- Explicit URL/ID mentions (not semantic proof): **33**
+- Explicit URL/ID mentions (not semantic proof): **34**
 - Name-only candidates, NOT confirmed: **5**
-- Shared scholarly identifiers (arXiv/DOI): **87**
+- Shared scholarly identifiers (arXiv/DOI): **89**
 - HF model-card declarations to indexed/verified targets: **73**
+
+- GitHub YAML manifest declarations to indexed/verified datasets: **8**
+- Processing script paths co-located with those manifests: **2**
 
 | GitHub task | Hugging Face resource | Evidence | Matched text |
 | --- | --- | --- | --- |
@@ -38,6 +43,7 @@ Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-o
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | repository_id | `allenai/Olmo-3-7B-Think-SFT` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
+| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | url | `https://huggingface.co/datasets/nvidia/Nemotron-MIND` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Think-SFT` |
 | [#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [openeurollm/function-calling-sft-oellm-64k](https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k) | url | `https://huggingface.co/datasets/openeurollm/function-calling-sft-oellm-64k` |
@@ -109,10 +115,10 @@ Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-o
 | [openeurollm/complex-kda-ladder](https://huggingface.co/openeurollm/complex-kda-ladder) | [Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention](https://arxiv.org/abs/2609.24797) | `arxiv:2609.24797` |
 | [openeurollm/propella-annotations](https://huggingface.co/datasets/openeurollm/propella-annotations) | [propella-1: Multi-Property Document Annotation for LLM Data Curation at Scale](https://arxiv.org/abs/2602.12414) | `arxiv:2602.12414` |
 | [openeurollm/Dolci-Instruct-SFT-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
-| [openeurollm/Dolci-Think-SFT-7B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-7B-decontaminated) | [Generalizing Verifiable Instruction Following](https://arxiv.org/abs/2507.02833) | `arxiv:2507.02833` |
 | [openeurollm/Dolci-Think-SFT-7B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-7B-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
-| [openeurollm/Dolci-Think-SFT-32B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-32B-decontaminated) | [Generalizing Verifiable Instruction Following](https://arxiv.org/abs/2507.02833) | `arxiv:2507.02833` |
+| [openeurollm/Dolci-Think-SFT-7B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-7B-decontaminated) | [Generalizing Verifiable Instruction Following](https://arxiv.org/abs/2507.02833) | `arxiv:2507.02833` |
 | [openeurollm/Dolci-Think-SFT-32B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-32B-decontaminated) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [openeurollm/Dolci-Think-SFT-32B-decontaminated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-32B-decontaminated) | [Generalizing Verifiable Instruction Following](https://arxiv.org/abs/2507.02833) | `arxiv:2507.02833` |
 | [openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated](https://huggingface.co/datasets/openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [openeurollm/smoltalk2-decontaminated](https://huggingface.co/datasets/openeurollm/smoltalk2-decontaminated) | [Multi-IF: Benchmarking LLMs on Multi-Turn and Multilingual Instructions Following](https://arxiv.org/abs/2410.15553) | `arxiv:2410.15553` |
 | [openeurollm/smoltalk2-decontaminated](https://huggingface.co/datasets/openeurollm/smoltalk2-decontaminated) | [Qwen2.5 Technical Report](https://arxiv.org/abs/2412.15115) | `arxiv:2412.15115` |
@@ -125,22 +131,22 @@ Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-o
 | [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
-| [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
-| [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
-| [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
-| [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
-| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
-| [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
+| [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
+| [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
+| [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
+| [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
+| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
+| [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
 | [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
-| [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
@@ -154,6 +160,8 @@ Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-o
 | [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | [Enhancing Multilingual LLM Pretraining with Model-Based Data Selection](https://arxiv.org/abs/2502.10361) | `arxiv:2502.10361` |
+| [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | [MIND: Math Informed syNthetic Dialogues for Pretraining LLMs](https://arxiv.org/abs/2410.12881) | `arxiv:2410.12881` |
 
 ## Hugging Face card declarations
 
@@ -260,6 +268,31 @@ Verified means the public HF API returned that repository, **not** that its mode
 | `HPLT/HPLT4.0` (dataset) | inaccessible |
 | `AI-Sweden-Models/oellm-9b-base` (model) | inaccessible |
 
+## GitHub dataset source declarations
+
+Manifest declarations are version-pinned source-code evidence, **not** proof of actual training, data inclusion or completed evaluation. Co-located script paths are not proof of script execution.
+
+- Scanned repository: [OpenEuroLLM/training-data-collection](https://github.com/OpenEuroLLM/training-data-collection/tree/5e4ce51c390bb3731f14e63012ffff4f1a472da9)
+- Selected manifests: **32** of **36** candidates (bounded sample)
+- Manifests with explicit HF dataset URLs: **8**
+- Manifests skipped due to size limit: **0**
+- Selection was truncated: **true**
+
+| GitHub source manifest | Public HF dataset | Evidence |
+| --- | --- | --- |
+| [flag/openthoughts-3/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/metadata.yaml) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | `declares_dataset` (`indexed`) |
+| [flag/agenttrove-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/agenttrove-0.0/metadata.yaml) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | `declares_dataset` (`verified_public`) |
+| [flag/dolmino-mix-100b-1125-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/dolmino-mix-100b-1125-pure/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
+| [flag/dolmino-mix-100b-1125/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/dolmino-mix-100b-1125/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
+| [flag/fineweb2-hq-1.0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/fineweb2-hq-1.0.0/metadata.yaml) | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | `declares_dataset` (`verified_public`) |
+| [flag/nemotron-mind-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-mind-0.0/metadata.yaml) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | `declares_dataset` (`verified_public`) |
+| [flag/nemotron-pretraining-specialized-1.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-pretraining-specialized-1.0/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | `declares_dataset` (`indexed`) |
+| [flag/nemotron-pretraining-specialized-1.1/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-pretraining-specialized-1.1/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | `declares_dataset` (`indexed`) |
+
+Unverified GitHub manifest dataset targets: **0** (details in `snapshot.json`; missing verification is not evidence of nonexistence).
+
+Adjacent script paths (existence only): [flag/openthoughts-3/etc/textify.py](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.py), [flag/openthoughts-3/etc/textify.slurm](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.slurm)
+
 ## Three-platform publication bridges
 
 These are shared citations, **not** proof of direct model/task dependence.
@@ -272,8 +305,8 @@ These are shared citations, **not** proof of direct model/task dependence.
 
 ## Citation lookup completeness
 
-- Unique arXiv IDs explicitly cited by GitHub/HF: **59**
-- Resolved to OpenAIRE records: **59**
+- Unique arXiv IDs explicitly cited by GitHub/HF: **61**
+- Resolved to OpenAIRE records: **61**
 - Not resolved by OpenAIRE responses: **0**
 - Publications cited by both GitHub and Hugging Face: **3**
 
@@ -282,7 +315,7 @@ These are shared citations, **not** proof of direct model/task dependence.
 | issue | 493 | 18 | 18 |
 | pull_request | 192 | 2 | 2 |
 | model | 82 | 12 | 12 |
-| dataset | 69 | 30 | 30 |
+| dataset | 72 | 32 | 32 |
 
 ## Automated quality checks
 
@@ -293,7 +326,7 @@ These are shared citations, **not** proof of direct model/task dependence.
 - github closed issues: **270**
 - github open prs: **19**
 - github closed prs: **173**
-- missing update timestamps: **66**
+- missing update timestamps: **78**
 
 ## Source errors / incomplete coverage
 
@@ -301,4 +334,4 @@ These are shared citations, **not** proof of direct model/task dependence.
 
 ## Interpretation
 
-This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
+This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
