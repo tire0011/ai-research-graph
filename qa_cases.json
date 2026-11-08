@@ -1,0 +1,35 @@
+[
+  {
+    "id": "openthoughts_bridge",
+    "question": "Which OpenEuroLLM task and Hugging Face dataset both cite the OpenThoughts paper? Does this prove the task used that dataset?",
+    "kind": "shared_citation",
+    "arxiv": "2506.04178",
+    "github_id": "github:OpenEuroLLM/Taskboard#321",
+    "hf_id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M"
+  },
+  {
+    "id": "smollm2_bridge",
+    "question": "Is FineMath proven to be part of OpenEuroLLM's automated annealing mixtures, or do the task and dataset only cite the same paper?",
+    "kind": "shared_citation",
+    "arxiv": "2502.02737",
+    "github_id": "github:OpenEuroLLM/Taskboard#56",
+    "hf_id": "hf:dataset:HuggingFaceTB/finemath"
+  },
+  {
+    "id": "olmo3_bridge",
+    "question": "What links the multilingual HellaSwag PR to OLMo 3 artifacts, and what is NOT established by that link?",
+    "kind": "shared_citation",
+    "arxiv": "2512.13961",
+    "github_id": "github:OpenEuroLLM/oellm-eval#156",
+    "hf_id": "hf:model:openeurollm/OLMo-3-7B-Think-SFT"
+  },
+  {
+    "id": "hplt_unverified",
+    "question": "Can we verify that HPLT/HPLT4.0 was used to train openeurollm/datamix-0.7b-hplt-3.0-eng-cc-100bt?",
+    "kind": "publisher_declaration_check",
+    "hf_id": "hf:model:openeurollm/datamix-0.7b-hplt-3.0-eng-cc-100bt",
+    "declared_id": "HPLT/HPLT4.0",
+    "target_type": "dataset",
+    "expected_lookup_status": "inaccessible"
+  }
+]
