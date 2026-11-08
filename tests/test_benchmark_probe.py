@@ -1,0 +1,146 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+from urllib.parse import parse_qs, urlsplit
+
+import benchmark_probe as bp
+
+
+def row(step, score, index=0, **changes):
+    data = {
+        "step": step, "score": score, "model": bp.MODEL,
+        "task": bp.TASK, "metric": bp.METRIC,
+        "task_config": {"output_type": "generate_until"},
+        "num_fewshot": 0, "eval_suite": "base",
+    }
+    data.update(changes)
+    return {"row_idx": index, "row": data}
+
+
+def source(rows, **changes):
+    data = {
+        "rows": rows, "scan_truncated": False,
+        "model": bp.MODEL, "task": bp.TASK, "metric": bp.METRIC,
+    }
+    data.update(changes)
+    return data
+
+
+class ScoreTests(unittest.TestCase):
+    def test_checkpoint_step_parser(self):
+        self.assertEqual(bp.step_number("iter_1,092,000"), 1092000)
+        self.assertEqual(bp.step_number(1094400), 1094400)
+        self.assertIsNone(bp.step_number("main"))
+        self.assertIsNone(bp.step_number(None))
+
+    def test_adjacent_changes_only_within_one_group(self):
+        records = [
+            row(1092000, 0.320, 0), row(1094400, 0.745, 1),
+            row(1096800, 0.507, 2), row(1099200, 0.733, 3),
+        ]
+        profile = bp.assess_scores(source(records))
+        self.assertEqual(profile["status"], "comparable")
+        self.assertEqual(profile["comparisons"]["adjacent_pairs"], 3)
+        self.assertAlmostEqual(profile["comparisons"]["median_absolute_delta"], .238)
+        self.assertAlmostEqual(profile["comparisons"]["largest_absolute_delta"], .425)
+        self.assertEqual(profile["comparisons"]["largest_change"]["from_step"], 1092000)
+
+    def test_duplicate_checkpoint_blocks_comparison(self):
+        profile = bp.assess_scores(source([row(10, .2), row(10, .4, 1)]))
+        self.assertEqual(profile["status"], "quality_blocked")
+        self.assertIn("duplicate_checkpoint_steps", profile["problems"])
+
+    def test_eval_config_difference_blocks_comparison(self):
+        profile = bp.assess_scores(source([
+            row(10, .2), row(20, .4, 1, task_config={"different": True}),
+        ]))
+        self.assertIn("inconsistent_task_config", profile["problems"])
+        self.assertIsNone(profile["comparisons"])
+
+    def test_invalid_score_blocks_comparison(self):
+        profile = bp.assess_scores(source([row(10, .2), row(20, None, 1)]))
+        self.assertEqual(profile["invalid_row_indices"], [1])
+        self.assertIn("invalid_or_missing_scores", profile["problems"])
+
+    def test_other_task_blocks_comparison(self):
+        profile = bp.assess_scores(source([row(10, .2), row(20, .4, 1, task="other")]))
+        self.assertIn("unexpected_model_task_metric", profile["problems"])
+
+    def test_truncation_blocks_comparison(self):
+        profile = bp.assess_scores(source([row(10, .2), row(20, .4, 1)],
+                                          scan_truncated=True))
+        self.assertIn("source_filter_limit_reached", profile["problems"])
+
+
+class SourceTests(unittest.TestCase):
+    def test_filter_url_and_revision_provenance(self):
+        calls = []
+
+        def fetch(url):
+            calls.append(url)
+            if "/api/datasets/" in url:
+                return {"sha": "f" * 40, "lastModified": "2026-11-08"}
+            if "/splits?" in url:
+                return {"splits": [{"config": "default", "split": "train"}]}
+            if "/filter?" in url:
+                return {
+                    "features": [{"name": col} for col in bp.REQUIRED],
+                    "rows": [row(10, .2), row(20, .4, 1)],
+                }
+            raise AssertionError(url)
+
+        data = bp.filtered_scores(fetch=fetch)
+        self.assertEqual(data["revision_sha"], "f" * 40)
+        self.assertEqual(len(data["rows"]), 2)
+        self.assertFalse(data["scan_truncated"])
+        self.assertEqual(len(data["filter_urls"]), 1)
+        params = parse_qs(urlsplit(data["filter_urls"][0]).query)
+        self.assertEqual(params["dataset"], [bp.DATASET])
+        self.assertEqual(params["where"], [
+            '"model"=\'prelude_anneal2t\' AND "task"=\'coqa_gen\' AND "metric"=\'f1\''
+        ])
+        self.assertEqual(sum("/api/datasets/" in u for u in calls), 2)
+
+    def test_revision_drift_aborts(self):
+        revisions = iter(["a" * 40, "b" * 40])
+
+        def fetch(url):
+            if "/api/datasets/" in url:
+                return {"sha": next(revisions)}
+            if "/splits?" in url:
+                return {"splits": [{"config": "default", "split": "train"}]}
+            return {"features": [{"name": name} for name in bp.REQUIRED], "rows": []}
+
+        with self.assertRaisesRegex(ValueError, "revision changed"):
+            bp.filtered_scores(fetch=fetch)
+
+    def test_full_page_flags_truncation(self):
+        def fetch(url):
+            if "/api/datasets/" in url:
+                return {"sha": "a" * 40}
+            if "/splits?" in url:
+                return {"splits": [{"config": "default", "split": "train"}]}
+            return {
+                "features": [{"name": col} for col in bp.REQUIRED],
+                "rows": [row(i, .2, i) for i in range(bp.PAGE_SIZE)],
+            }
+
+        data = bp.filtered_scores(fetch=fetch, pages=1)
+        self.assertTrue(data["scan_truncated"])
+        self.assertIn("source_filter_limit_reached",
+                      bp.assess_scores(source(data["rows"], scan_truncated=True))["problems"])
+
+    def test_source_error_report_is_explicit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.object(bp, "filtered_scores", side_effect=ValueError("not available")):
+                self.assertEqual(bp.main(["--output", directory]), 0)
+            payload = json.loads((Path(directory) / "prelude_eval.json").read_text())
+            report = (Path(directory) / "PRELUDE_EVAL.md").read_text()
+            self.assertEqual(payload["status"], "source_error")
+            self.assertIn("no scores were analyzed", report)
+
+
+if __name__ == "__main__":
+    unittest.main()
