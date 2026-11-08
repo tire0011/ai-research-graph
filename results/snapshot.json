@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T12:26:48.591174+00:00",
+  "timestamp_utc": "2026-11-08T13:03:18.916348+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -54,7 +54,7 @@
         "doi": []
       },
       "state": "open",
-      "updated_at": "2026-11-08T12:08:17Z",
+      "updated_at": "2026-11-08T12:31:50Z",
       "repository": "OpenEuroLLM/Taskboard"
     },
     {
@@ -11212,20 +11212,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:allenai/olmo-mix-1124",
-      "type": "dataset",
-      "title": "allenai/olmo-mix-1124",
-      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-08-19T18:45:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:HPLT/HPLT3.0",
       "type": "dataset",
       "title": "HPLT/HPLT3.0",
@@ -11256,16 +11242,32 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "id": "hf:dataset:allenai/olmo-mix-1124",
       "type": "dataset",
-      "title": "HuggingFaceFW/finepdfs-edu",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "title": "allenai/olmo-mix-1124",
+      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2025-11-11T18:49:02.000Z",
+      "updated_at": "2025-08-19T18:45:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "type": "dataset",
+      "title": "HPLT/HPLT2.0_cleaned",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2503.10267"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-06-11T09:20:44.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11287,18 +11289,16 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
       "type": "dataset",
-      "title": "HPLT/HPLT2.0_cleaned",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
-      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
+      "title": "HuggingFaceFW/finepdfs-edu",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
       "identifiers": {
-        "arxiv": [
-          "2503.10267"
-        ],
+        "arxiv": [],
         "doi": []
       },
-      "updated_at": "2026-06-11T09:20:44.000Z",
+      "updated_at": "2025-11-11T18:49:02.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11313,20 +11313,6 @@
         "doi": []
       },
       "updated_at": "2025-10-22T11:02:22.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11349,20 +11335,16 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
       "type": "dataset",
-      "title": "nvidia/Nemotron-Math-Proofs-v1",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
-      "description": "{\"language\": [\"en\"], \"license\": \"cc-by-sa-4.0\", \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"lean\", \"path\": \"data/lean.jsonl\"}]}], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"lean4\", \"proof-generation\", \"theorem-proving\", \"synthetic-data\"]}",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
       "identifiers": {
-        "arxiv": [
-          "2508.03613",
-          "2508.10925",
-          "2512.15489"
-        ],
+        "arxiv": [],
         "doi": []
       },
-      "updated_at": "2026-01-05T18:40:31.000Z",
+      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11383,18 +11365,36 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Math-v2",
+      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
       "type": "dataset",
-      "title": "nvidia/Nemotron-Math-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
-      "description": "{\"language\": [\"en\"], \"license\": [\"cc-by-4.0\", \"cc-by-sa-4.0\"], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"tool-use\", \"long-context\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"high_part00\", \"path\": \"data/high_part00.parquet\"}, {\"split\": \"high_part01\", \"path\": \"data/high_part01.parquet\"}, {\"split\": \"high_part02\", \"path\": \"data/high_part02.parquet\"}, {\"split\": \"medium\", \"path\": \"data/medium.parquet\"}, {\"split\": \"low\", \"path\": \"data/low.parquet\"}]}]}",
+      "title": "mlfoundations/dclm-baseline-1.0",
+      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
       "identifiers": {
         "arxiv": [
+          "2406.11794"
+        ],
+        "doi": []
+      },
+      "updated_at": "2024-07-22T15:27:52.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-Math-Proofs-v1",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+      "description": "{\"language\": [\"en\"], \"license\": \"cc-by-sa-4.0\", \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"lean\", \"path\": \"data/lean.jsonl\"}]}], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"lean4\", \"proof-generation\", \"theorem-proving\", \"synthetic-data\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2508.03613",
+          "2508.10925",
           "2512.15489"
         ],
         "doi": []
       },
-      "updated_at": "2026-02-11T22:43:35.000Z",
+      "updated_at": "2026-01-05T18:40:31.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11416,34 +11416,18 @@
       "resolved_from_alias": "LLM360/MegaMath"
     },
     {
-      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "id": "hf:dataset:nvidia/Nemotron-Math-v2",
       "type": "dataset",
-      "title": "mlfoundations/dclm-baseline-1.0",
-      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
-      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "title": "nvidia/Nemotron-Math-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+      "description": "{\"language\": [\"en\"], \"license\": [\"cc-by-4.0\", \"cc-by-sa-4.0\"], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"tool-use\", \"long-context\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"high_part00\", \"path\": \"data/high_part00.parquet\"}, {\"split\": \"high_part01\", \"path\": \"data/high_part01.parquet\"}, {\"split\": \"high_part02\", \"path\": \"data/high_part02.parquet\"}, {\"split\": \"medium\", \"path\": \"data/medium.parquet\"}, {\"split\": \"low\", \"path\": \"data/low.parquet\"}]}]}",
       "identifiers": {
         "arxiv": [
-          "2406.11794"
+          "2512.15489"
         ],
         "doi": []
       },
-      "updated_at": "2024-07-22T15:27:52.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Post-Training-Dataset-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"license\", \"dtype\": \"string\"}, {\"name\": \"generator\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"reasoning\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"role\", \"dtype\": \"string\"}, {\"name\": \"content\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"stem\", \"num_bytes\": 807639463, \"num_examples\": 355000}, {\"name\": \"chat\", \"num_bytes\": 5971361114, \"num_examples\": 627720}, {\"name\": \"math\", \"num_bytes\": 507431890, \"num_examples\": 239467}, {\"name\": \"code\", \"num_bytes\": 980267419, \"num_examples\": 175000}, {\"name\": \"multilingual_ja\", \"num_bytes\": 18014250907, \"num_examples\": 975202}, {\"name\": \"multilingual_de\", \"num_bytes\": 18891078015, \"num_examples\": 1015314}, {\"name\": \"multilingual_it\", \"num_bytes\": 18724137501, \"num_examples\": 1016503}, {\"name\": \"multilingual_es\", \"num_bytes\": 16273052735, \"num_examples\": 935704}, {\"name\": \"multilingual_fr\", \"num_bytes\": 18231554197, \"num_examples\": 1001504}], \"download_size\": 44423886661, \"dataset_size\": 98400773241}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"stem\", \"path\": \"data/stem-*\"}, {\"split\": \"chat\", \"path\": \"data/chat-*\"}, {\"split\": \"math\", \"path\": \"data/math-*\"}, {\"split\": \"code\", \"path\": \"data/code-*\"}, {\"split\": \"multilingual_ja\", \"path\": \"data/multilingual_ja-*\"}, {\"split\": \"multilingual_de\", \"path\": \"data/multilingual_de-*\"}, {\"split\": \"multilingual_it\", \"path\": \"data/multilingual_it-*\"}, {\"split\": \"multilingual_es\", \"path\": \"data/multilingual_es-*\"}, {\"split\": \"multilingual_fr\", \"path\": \"data/multilingual_fr-*\"}]}], \"license\": \"cc-by-4.0\", \"language\": [\"en\", \"de\", \"it\", \"fr\", \"es\", \"ja\"], \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\"}}",
-      "identifiers": {
-        "arxiv": [
-          "2508.14444"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-08-21T04:29:18.000Z",
+      "updated_at": "2026-02-11T22:43:35.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11463,6 +11447,22 @@
         "doi": []
       },
       "updated_at": "2026-10-28T17:56:57.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-Post-Training-Dataset-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"license\", \"dtype\": \"string\"}, {\"name\": \"generator\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"reasoning\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"role\", \"dtype\": \"string\"}, {\"name\": \"content\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"stem\", \"num_bytes\": 807639463, \"num_examples\": 355000}, {\"name\": \"chat\", \"num_bytes\": 5971361114, \"num_examples\": 627720}, {\"name\": \"math\", \"num_bytes\": 507431890, \"num_examples\": 239467}, {\"name\": \"code\", \"num_bytes\": 980267419, \"num_examples\": 175000}, {\"name\": \"multilingual_ja\", \"num_bytes\": 18014250907, \"num_examples\": 975202}, {\"name\": \"multilingual_de\", \"num_bytes\": 18891078015, \"num_examples\": 1015314}, {\"name\": \"multilingual_it\", \"num_bytes\": 18724137501, \"num_examples\": 1016503}, {\"name\": \"multilingual_es\", \"num_bytes\": 16273052735, \"num_examples\": 935704}, {\"name\": \"multilingual_fr\", \"num_bytes\": 18231554197, \"num_examples\": 1001504}], \"download_size\": 44423886661, \"dataset_size\": 98400773241}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"stem\", \"path\": \"data/stem-*\"}, {\"split\": \"chat\", \"path\": \"data/chat-*\"}, {\"split\": \"math\", \"path\": \"data/math-*\"}, {\"split\": \"code\", \"path\": \"data/code-*\"}, {\"split\": \"multilingual_ja\", \"path\": \"data/multilingual_ja-*\"}, {\"split\": \"multilingual_de\", \"path\": \"data/multilingual_de-*\"}, {\"split\": \"multilingual_it\", \"path\": \"data/multilingual_it-*\"}, {\"split\": \"multilingual_es\", \"path\": \"data/multilingual_es-*\"}, {\"split\": \"multilingual_fr\", \"path\": \"data/multilingual_fr-*\"}]}], \"license\": \"cc-by-4.0\", \"language\": [\"en\", \"de\", \"it\", \"fr\", \"es\", \"ja\"], \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\"}}",
+      "identifiers": {
+        "arxiv": [
+          "2508.14444"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-08-21T04:29:18.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11529,6 +11529,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:tokyotech-llm/swallow-code-v2",
       "type": "dataset",
       "title": "tokyotech-llm/swallow-code-v2",
@@ -11542,36 +11556,6 @@
         "doi": []
       },
       "updated_at": "2025-11-08T01:27:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "type": "dataset",
-      "title": "tokyotech-llm/swallow-math-v2",
-      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
-      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2505.02881"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-11-06T05:11:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11604,6 +11588,22 @@
         "doi": []
       },
       "updated_at": "2026-01-05T16:25:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "type": "dataset",
+      "title": "tokyotech-llm/swallow-math-v2",
+      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
+      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2505.02881"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-11-06T05:11:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -13905,6 +13905,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2503.10267",
+      "context": "Both public metadata records contain arxiv:2503.10267",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:HuggingFaceFW/finepdfs",
       "target": "openaire:doi_dedup___::c36ef2cec87a1df55a97c120e04ef51d",
       "status": "identifier_match",
@@ -13923,21 +13932,30 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
-      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2503.10267",
-      "context": "Both public metadata records contain arxiv:2503.10267",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:HuggingFaceTB/finemath",
       "target": "openaire:doi_dedup___::2a2ef0ae6ab9c1a824ab4647e3b95ab8",
       "status": "identifier_match",
       "evidence_type": "arxiv",
       "evidence": "2502.02737",
       "context": "Both public metadata records contain arxiv:2502.02737",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2406.11794",
+      "context": "Both public metadata records contain arxiv:2406.11794",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13968,24 +13986,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:nvidia/Nemotron-Math-v2",
-      "target": "openaire:doi_dedup___::28927c151ce3da8b3ba89fa98fc76d97",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2512.15489",
-      "context": "Both public metadata records contain arxiv:2512.15489",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:IFM/MegaMath",
       "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
       "status": "identifier_match",
@@ -13995,21 +13995,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "source": "hf:dataset:nvidia/Nemotron-Math-v2",
+      "target": "openaire:doi_dedup___::28927c151ce3da8b3ba89fa98fc76d97",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2406.11794",
-      "context": "Both public metadata records contain arxiv:2406.11794",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
+      "evidence": "2512.15489",
+      "context": "Both public metadata records contain arxiv:2512.15489",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14041,6 +14032,15 @@
     },
     {
       "source": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
       "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
       "status": "identifier_match",
       "evidence_type": "arxiv",
@@ -14094,15 +14094,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2505.02881",
-      "context": "Both public metadata records contain arxiv:2505.02881",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -14118,6 +14109,15 @@
       "evidence_type": "arxiv",
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2505.02881",
+      "context": "Both public metadata records contain arxiv:2505.02881",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14935,6 +14935,1516 @@
       "evidence": "https://wandb.ai/openeurollm-project/oellm_32b_dense/runs/tjeg54n7",
       "context": "_32b_dense_prod_dataopt5_gbs4096_lr3e-4` - Last job: `1537344` → [wandb](https://wandb.ai/openeurollm-project/oellm_32b_dense/runs/tjeg54n7), stopped 2026-08-30 22:43 at iteration **75,125** - Training loss: **1.",
       "reason": "GitHub task directly links one W&B run; run accessibility and numeric claims not independently verified"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#439",
+      "target": "github:OpenEuroLLM/Taskboard#54",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#54",
+      "context": "a. At the moment we target early November. - [ ] Optimzer (Muon vs Muown) #54 - [ ] MoE sparsity - [ ] Throughput optimization #438",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#439",
+      "target": "github:OpenEuroLLM/Taskboard#438",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#438",
+      "context": "mzer (Muon vs Muown) #54 - [ ] MoE sparsity - [ ] Throughput optimization #438",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#437",
+      "target": "github:OpenEuroLLM/Taskboard#345",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#345",
+      "context": "y also want to test it on Prelude, Qwen-3 and Apertus. Related to: Issue #345",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#431",
+      "target": "github:OpenEuroLLM/Taskboard#214",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#214",
+      "context": "tested using the same {Learning_rate, Beta} grid that was used for DPO in #214. Direct comparison of these values on the chosen benchmarks will be used t",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#430",
+      "target": "github:OpenEuroLLM/Taskboard#348",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/348",
+      "context": "nd from the `hunted` efforts __Description__ Now that we have [finalized](https://github.com/OpenEuroLLM/Taskboard/issues/348) the audio extraction pipeline, we need to actually extract texts. Let'",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#428",
+      "target": "github:OpenEuroLLM/Taskboard#414",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/414",
+      "context": "benchmarks which are compatible with pretrained models. Related to this: https://github.com/OpenEuroLLM/Taskboard/issues/414 It would be great if we can evaluate the same checkpoints and baselines.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#417",
+      "target": "github:OpenEuroLLM/Taskboard#408",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/408",
+      "context": "ther baselines to Prelude with `eval-framework` __Goal__ Following up from https://github.com/OpenEuroLLM/Taskboard/issues/408, we want to evaluate other baselines to Prelude with `eval-framework`. __",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#416",
+      "target": "github:OpenEuroLLM/Taskboard#330",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#330",
+      "context": "ella. ## Description As a first step, we ran SFT on 6 dataset sources in (#330). The goal was to have a baseline. Next, all of the instructions across al",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#416",
+      "target": "github:OpenEuroLLM/Taskboard#318",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#318",
+      "context": "tructions from the merged pool. Further details about the curation are in (#318).",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#413",
+      "target": "github:OpenEuroLLM/Taskboard#365",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/365",
+      "context": "EDU annealing mixtures Evaluations for the [annealing runs for the BABY9B](https://github.com/OpenEuroLLM/Taskboard/issues/365) have finished (20BT-100BT scale), and more variants of annealing mixtures",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#412",
+      "target": "github:OpenEuroLLM/Taskboard#406",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/406",
+      "context": "v.org/abs/2507.17634). @geoalgo already reproduced this on prelude [here](https://github.com/OpenEuroLLM/Taskboard/issues/406) For simplicity we do annealing on 5 checkpoints uniformly (so averaging",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#411",
+      "target": "github:OpenEuroLLM/Taskboard#406",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/406",
+      "context": "sine / sqrt / linear but I have found Merge Cos. to work best on [prelude](https://github.com/OpenEuroLLM/Taskboard/issues/406).",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#405",
+      "target": "github:OpenEuroLLM/oellm-eval#124",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_pull_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/pull/124",
+      "context": "vals` integration in `oellm-eval` ### `lm-eval` * [x] CrowS-Pairs [(PR)](https://github.com/OpenEuroLLM/oellm-eval/pull/124) * [ ] ToxiGen ### `inspect_evals` * [ ] BBQ * [ ] StereoSet * [ ] WMDP",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#391",
+      "target": "github:OpenEuroLLM/Taskboard#432",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#432",
+      "context": "LlamaFactory is suitable for large-scale training. __Dependencies__ Issue #432, which extends LlamaFactory support to the `post-training` repo.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#385",
+      "target": "github:OpenEuroLLM/Taskboard#220",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#220",
+      "context": "l for separate before/after evaluation. Dataset preparation is tracked in #220.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#384",
+      "target": "github:OpenEuroLLM/Taskboard#385",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#385",
+      "context": "eline comparison tracked here. After the OELLM function-calling SFT run in #385 finishes, we will revisit BFCL evaluation in a separate follow-up comparin",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#370",
+      "target": "github:OpenEuroLLM/Taskboard#362",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/362",
+      "context": "hat is used in the template that we will use during post-training ([Qwen3](https://github.com/OpenEuroLLM/Taskboard/issues/362#issue-5050182726)). __Deliverable scope__ A post-training adapted tokeniz",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#366",
+      "target": "github:OpenEuroLLM/Taskboard#302",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#302",
+      "context": "ve annealed checkpoints of prelude at the moment. To test our predictions (#302), we can fit our N, D parameteric function on stable checkpoints of the mu",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#366",
+      "target": "github:OpenEuroLLM/Taskboard#161",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#161",
+      "context": "parameteric function on stable checkpoints of the multilingual law ladder (#161) and predict for different checkpoints of prelude. Note that, the valida",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#366",
+      "target": "github:OpenEuroLLM/Taskboard#308",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#308",
+      "context": "on loss for all prelude checkpoints. __Dependencies__ Completion of #161 #308",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#364",
+      "target": "github:OpenEuroLLM/oellm-autoexp#54",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_pull_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-autoexp/pull/54",
+      "context": "E. Initial target to support Leonardo and LUMI __Dependencies__ Related: https://github.com/OpenEuroLLM/oellm-autoexp/pull/54",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#359",
+      "target": "github:OpenEuroLLM/Taskboard#354",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/354",
+      "context": "Prelude: document training process and checkpoints Details here https://github.com/OpenEuroLLM/Taskboard/issues/354",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#354",
+      "target": "github:OpenEuroLLM/Taskboard#344",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/344",
+      "context": "Schedule Evaluations English and Multilingual [issue to track evaluation](https://github.com/OpenEuroLLM/Taskboard/issues/344) - [ ] Context length extension - [ ] Instruction tuning Post-training SF",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#354",
+      "target": "github:OpenEuroLLM/Taskboard#361",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/361",
+      "context": "tension - [ ] Instruction tuning Post-training SFT & DPO [tracking issue](https://github.com/OpenEuroLLM/Taskboard/issues/361) - [ ] Instruction tuning evals",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#352",
+      "target": "github:OpenEuroLLM/Taskboard#220",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#220",
+      "context": "Controlled function-calling corpus ablations and mechanism study Parent: #220 ## Goal Determine whether the candidate corpus-processing intervention c",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#351",
+      "target": "github:OpenEuroLLM/Taskboard#220",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#220",
+      "context": "Function-calling RL reproduction and transfer study Parent: #220 ## Goal Reproduce an open verifier-backed agentic RL recipe, establish t",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#345",
+      "target": "github:OpenEuroLLM/Taskboard#186",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#186",
+      "context": "to train OLMo-3-7B. __Description__ This is a complementary issue to the #186. **The Plan**: - We use **Gemma 4 (`gemma-4-31B-it`, bf16)** served locall",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#338",
+      "target": "github:OpenEuroLLM/Taskboard#340",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/340",
+      "context": "ndb.ai/openeurollm-project/... - Automatic W&B sync should happen already: https://github.com/OpenEuroLLM/Taskboard/issues/340 - Monitoring tool: https://github.com/OpenEuroLLM/oellm-monitoring",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#337",
+      "target": "github:OpenEuroLLM/oellm-eval#56",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_pull_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/pull/56",
+      "context": "ible step recommended: - [ ] look at PR which integrated evalchemy backend https://github.com/OpenEuroLLM/oellm-eval/pull/56 - [ ] iterate until a single task work in local mode - [ ] test on LUMI",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#308",
+      "target": "github:OpenEuroLLM/Taskboard#301",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/301",
+      "context": "tps://wandb.ai/openeurollm-project/baby_9b_dense Babysitting instructions: https://github.com/OpenEuroLLM/Taskboard/issues/301 Annealing experiments: https://github.com/OpenEuroLLM/Taskboard/issues/365",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#308",
+      "target": "github:OpenEuroLLM/Taskboard#365",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/365",
+      "context": "https://github.com/OpenEuroLLM/Taskboard/issues/301 Annealing experiments: https://github.com/OpenEuroLLM/Taskboard/issues/365 Checkpoint conversion from Leonardo to HF: https://github.com/OpenEuroLLM",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#301",
+      "target": "github:OpenEuroLLM/Taskboard#340",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/340",
+      "context": "by_9b_dense/wandb/offline-run-*`~~ - W&B sync should happen automatically: https://github.com/OpenEuroLLM/Taskboard/issues/340 - [OPTIONAL] autoexp progress tracker: 1. Checkout to Diana's branch: `",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#300",
+      "target": "github:OpenEuroLLM/Taskboard#301",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/301",
+      "context": "e baby 9B dense model on Leonardo Sub-issues: - Babysitting instructions: https://github.com/OpenEuroLLM/Taskboard/issues/301 The model will be trained on Leonardo. Codebase: https://github.com/Open",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#292",
+      "target": "github:OpenEuroLLM/Taskboard#286",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#286",
+      "context": "sh it to the OELLM lm-eval harness fork after it will have been created in #286.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#291",
+      "target": "github:OpenEuroLLM/Taskboard#286",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#286",
+      "context": "tiality (when are we ready to push it to the main branch (to be created by #286) - types of questions and corresponding metrics (do we need to separate cl",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#290",
+      "target": "github:OpenEuroLLM/Taskboard#286",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#286",
+      "context": "After #286, specify metrics to be used and the layout of sensemaking-2026 data for lm",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#232",
+      "target": "github:OpenEuroLLM/Taskboard#230",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#230",
+      "context": "by reproducing `Olmo-3-7B-Instruct-SFT` and `Olmo-3-7B-Instruct-DPO` (See #230)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#390",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#390",
+      "context": "or publication rights. Source-specific rights decisions remain tracked in #390. ## Current native OELLM accounting | Measure | Training | Holdout | |--",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#385",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#385",
+      "context": "w-up responsibilities | Issue | Status | Responsibility | |---|---|---| | #385 — Train and export the OELLM 9B function-calling SFT checkpoint on LUMI |",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#384",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#384",
+      "context": "d off the usable checkpoint and matching baseline/evaluation protocol. | | #384 — Qwen3.5 BFCL V4 non-Web comparison | Completed | Base and post-trained Q",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#386",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#386",
+      "context": "ive tokenizer/template/parser and explicitly stated category coverage. | | #386 — Agentic RL stack on LUMI | Open | Downstream environment/rollout/reward/",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#387",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#387",
+      "context": "trolled mixture ablations remain separate from preparation completion. | | #387 — Deduplication research | Closed as not planned | Additional seed-family",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#388",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#388",
+      "context": "seed-family selection and weighting research is not currently planned. | | #388 — Scale agentic/RL data generation | Closed as not planned | Dedicated sca",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#220",
+      "target": "github:OpenEuroLLM/Taskboard#389",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#389",
+      "context": "osed as not planned | Dedicated scaling work is not currently planned. | | #389 — Multilingual function-calling data generation | Closed as not planned |",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#216",
+      "target": "github:OpenEuroLLM/Taskboard#202",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#202",
+      "context": "ngual_scaling/sparse_scaling) to run with run_autoexp. Related issues: - #202 (caution: the models trained here show significant degradation in MoE laye",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#216",
+      "target": "github:OpenEuroLLM/Taskboard#165",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#165",
+      "context": "hub.com/OpenEuroLLM/Taskboard/issues/216#issuecomment-4715693324) below) - #165 (small sweep limited to only 10B tokens)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#209",
+      "target": "github:OpenEuroLLM/Taskboard#203",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/203",
+      "context": "89.9% | 30.9% | GH200 on Jupiter are powercapped to 680W (from 900W)! See https://github.com/OpenEuroLLM/Taskboard/issues/203 ### Other findings - TP=1 does not fit even with: - sequence length =",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#207",
+      "target": "github:OpenEuroLLM/Taskboard#203",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#203",
+      "context": "InfiniBand GH200 nodes are **power-capped to 680W** (rated 900W) — see [#203](https://github.com/OpenEuroLLM/Taskboard/issues/203) ### Software ``` de",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#206",
+      "target": "github:OpenEuroLLM/Taskboard#203",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/203",
+      "context": "2,740 | 97.9% | GH200 on Jupiter are powercapped to 680W (from 900W)! See https://github.com/OpenEuroLLM/Taskboard/issues/203 ### Other findings - On 64 node FP8 is around 12 TFLOPs faster compared t",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#197",
+      "target": "github:OpenEuroLLM/Taskboard#193",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#193",
+      "context": ") - French (fra) - Finnish (fin) - Spanish (spa) - Swedish (swe) Related: #193 (same task for Dolci-Think-SFT)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#167",
+      "target": "github:OpenEuroLLM/Taskboard#166",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/166",
+      "context": "nly on assistant responses, not user prompts (as mentioned in this [Issue](https://github.com/OpenEuroLLM/Taskboard/issues/166)). b) **Smart Batching & Auto-Accumulation**: Add a `BatchSizeConfig` uti",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#132",
+      "target": "github:OpenEuroLLM/Taskboard#131",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#131",
+      "context": "I: Fix the bug of not finding GEMM-kernels when using bias Parent issue of #131. We need to have a setup that enables training models with bias. We have",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#131",
+      "target": "github:OpenEuroLLM/Taskboard#132",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#132",
+      "context": "as bias improves performance for model sizes <1B parameters. Subtask of #132 .",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#126",
+      "target": "github:OpenEuroLLM/Taskboard#125",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#125",
+      "context": "ute MoE scaling experiments across clusters Execute experiments planned in #125 - [ ] Juwels: Dalton - [ ] Jupiter: Jenia, (Joerg, Korbinian, Marianna)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#122",
+      "target": "github:OpenEuroLLM/Taskboard#121",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#121",
+      "context": "Create various language versions of Linguistic Skills Test set Depends on #121 This issue was created by Ondrej to get Gema in close connection of what",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#97",
+      "target": "github:OpenEuroLLM/Taskboard#8",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#8",
+      "context": "see the numbers in two languages also you would be able to see Requires: #8 PS: The 9B and Opus-MT needs to be uploaded to HF",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#72",
+      "target": "github:OpenEuroLLM/Taskboard#16",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/16",
+      "context": "h a higher LR on the 1.7B model. We can start by following the setup from https://github.com/OpenEuroLLM/Taskboard/issues/16.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#58",
+      "target": "github:OpenEuroLLM/Taskboard#34",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#34",
+      "context": "ed. This would also prepare the work for automatic strategy for annealing, #34 #56",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#58",
+      "target": "github:OpenEuroLLM/Taskboard#56",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#56",
+      "context": "his would also prepare the work for automatic strategy for annealing, #34 #56",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#50",
+      "target": "github:OpenEuroLLM/Taskboard#49",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#49",
+      "context": "results.json generated by harness for all cases with this format (same as #49): * model/task_hash/std.out * model/task_hash/std.err * model/task_hash/re",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#9",
+      "target": "github:OpenEuroLLM/Taskboard#1",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#1",
+      "context": "Recommend and choose main framework and evaluation strategy with WP4 Use #1 to recommend and choose main framework and evaluation strategy with WP4",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#4",
+      "target": "github:OpenEuroLLM/Taskboard#3",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#3",
+      "context": "trategy together with WP4.6 Probing model refinement capabilities Based on #3 , choose and expose a solution to easily eval instruction-tuned/post-train",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#172",
+      "target": "github:OpenEuroLLM/oellm-eval#169",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#169",
+      "context": "Score lighteval's corpus chrF, chrF++ and TER on every translation Fixes #169. For chrF, chrF++ and TER, `lighteval` hands `sacrebleu` each sentence's",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#171",
+      "target": "github:OpenEuroLLM/oellm-eval#170",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#170",
+      "context": "duces four failed jobs, and `--check` lists them as missing. This fixes #170. #### Changes - `belebele-eu-cf` runs 22 languages instead of 26, wi",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#167",
+      "target": "github:OpenEuroLLM/oellm-eval#159",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#159",
+      "context": "ated samples from more lm-eval benchmarks This builds up on a previous PR (#159) and fixes #166. The `agenttrove-0.0` blocklist flags rows in 9 benchmark",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#167",
+      "target": "github:OpenEuroLLM/oellm-eval#166",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#166",
+      "context": "m more lm-eval benchmarks This builds up on a previous PR (#159) and fixes #166. The `agenttrove-0.0` blocklist flags rows in 9 benchmarks that `lm-eval`",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#166",
+      "target": "github:OpenEuroLLM/oellm-eval#159",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#159",
+      "context": "not part of the decontaminated task-group. **Why these weren't covered in #159** #159 only mapped benchmarks that oellm's task groups run. GSM8K-Platinu",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#164",
+      "target": "github:OpenEuroLLM/oellm-eval#152",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#152",
+      "context": "Add vLLM as lm-eval-harness backendClaude/issue 152 fix vaxo1z Fixes #152 (first part). Adds `--lm_eval_backend` to `oellm-eval schedule`: `hf` (de",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#164",
+      "target": "github:OpenEuroLLM/oellm-eval#123",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#123",
+      "context": "<!-- What does this change, and why? Link the issue it closes, e.g. \"Fixes #123\". --> - [x ] Added a line to `CHANGELOG.md` under `## [Unreleased]` (not",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#162",
+      "target": "github:OpenEuroLLM/oellm-eval#132",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#132",
+      "context": "valuation jobs ## Summary Fixes the Slurm scheduling failure described in #132 when a Hugging Face model descriptor includes a comma, such as `openeuroll",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#159",
+      "target": "github:OpenEuroLLM/oellm-eval#149",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#149",
+      "context": "taminated samples\" and \"Evaluating without contaminated samples\". Fixes #149. - [x] Added a line to `CHANGELOG.md` under `## [Unreleased]` (not needed",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#157",
+      "target": "github:OpenEuroLLM/oellm-eval#147",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#147",
+      "context": "Set n_shots: [8] for GSM8K to align with established practice (#147) (wrong issue # referenced in commit, should be #147, sorry)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#155",
+      "target": "github:OpenEuroLLM/oellm-eval#154",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#154",
+      "context": "Pass --debug to evalchemy when --limit is set Fixes #154. evalchemy forwards `--limit` only to lm-eval tasks. Its own benchmarks,",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#151",
+      "target": "github:OpenEuroLLM/oellm-eval#66",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#66",
+      "context": "eval's xcopa tasks? `xcopa-eu` runs lighteval's `xcopa:{lang}` at 0 shots (#66). On `openeurollm/datamix-2b-80-20` it scores close to chance (0.549 over",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#150",
+      "target": "github:OpenEuroLLM/oellm-eval#142",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#142",
+      "context": "xcsqa-eu: primary metric acc, and changelog entry for #142 #142 removed `acc_norm` from the XCSQA task's `metric_list`, but `xcsqa-eu",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#148",
+      "target": "github:OpenEuroLLM/oellm-eval#117",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#117",
+      "context": "tasks. - A dry run of `bpb-mc-en` pre-downloaded all datasets. Fixes #117 - [x] Added a line to `CHANGELOG.md` under `## [Unreleased]` (not need",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#145",
+      "target": "github:OpenEuroLLM/oellm-eval#144",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#144",
+      "context": "default** to save disk space; as mentioned in the original issue) Fixes #144 - [X] Added a line to `CHANGELOG.md` under `## [Unreleased]` (not nee",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#143",
+      "target": "github:OpenEuroLLM/oellm-eval#135",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#135",
+      "context": "rough --eval_path_tsv. It should complement the CLI specifications from PR #135 This PR extendes the PR #131",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#143",
+      "target": "github:OpenEuroLLM/oellm-eval#131",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#131",
+      "context": "d complement the CLI specifications from PR #135 This PR extendes the PR #131",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#140",
+      "target": "github:OpenEuroLLM/oellm-eval#136",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#136",
+      "context": "Release 0.3.0 First release under the scheme from #136. - `0.3.0b1` → `0.3.0`, and `[Unreleased]` in `CHANGELOG.md` becomes `[0.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#140",
+      "target": "github:OpenEuroLLM/oellm-eval#137",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#137",
+      "context": "ub release, then open the `0.4.0b1` PR (steps 2–4 in `docs/RELEASING.md`). #137 and #130 change results / the LUMI container, so they go into 0.4.0.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#140",
+      "target": "github:OpenEuroLLM/oellm-eval#130",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#130",
+      "context": "e, then open the `0.4.0b1` PR (steps 2–4 in `docs/RELEASING.md`). #137 and #130 change results / the LUMI container, so they go into 0.4.0.",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#135",
+      "target": "github:OpenEuroLLM/oellm-eval#132",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#132",
+      "context": "Fix model args in models, fixes #132. Fixes #132. `--models` split on every comma, so `openeurollm/prelude,rev",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#133",
+      "target": "github:OpenEuroLLM/oellm-eval#96",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#96",
+      "context": "uses the GPU with an image rebuilt from the current `containers/lumi.def` (#96, fixed in #115). The published image is older than that fix. - The next im",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#133",
+      "target": "github:OpenEuroLLM/oellm-eval#115",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#115",
+      "context": "ith an image rebuilt from the current `containers/lumi.def` (#96, fixed in #115). The published image is older than that fix. - The next image rebuild wil",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#130",
+      "target": "github:OpenEuroLLM/oellm-eval#115",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#115",
+      "context": "2, polymath, datasets>=4 Fixes the remaining LUMI container failures after #115. - `lm-eval[api,tasks]` + `word2number`: polymath crashed on `latex2sympy",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#121",
+      "target": "github:OpenEuroLLM/oellm-eval#4",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#4",
+      "context": "d trip the new error and then be sent to a path that cannot work. Related: #4. Three tests — the rejection, the `--local` fallback, and a cluster that",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#120",
+      "target": "github:OpenEuroLLM/oellm-eval#110",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#110",
+      "context": "e passes (140), `ruff check` and `format` clean. Merged `main` to pick up #110; the batching and caching changes touch the same invocation and both survi",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#119",
+      "target": "github:OpenEuroLLM/oellm-eval#107",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#107",
+      "context": "gingFace-backed ones), `ruff check` and `ruff format` clean. ### Overlap #107 makes the same loop change for the same reason. That branch is a much larg",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#115",
+      "target": "github:OpenEuroLLM/oellm-eval#96",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#96",
+      "context": "Fix lighteval running on CPU on LUMI (#96) Closes #96. ## Root cause `containers/lumi.def` installs the two ha",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#110",
+      "target": "github:OpenEuroLLM/oellm-eval#95",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#95",
+      "context": "valuate a model's tasks in one lm_eval call instead of one per task Closes #95. Every row of `jobs.csv` becomes its own `lm_eval` invocation, and `lm_",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#110",
+      "target": "github:OpenEuroLLM/oellm-eval#109",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#109",
+      "context": "y, but I am happy to change the default or make it opt-in. ### It needs #109 first A batched run writes one result JSON containing several tasks, an",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#110",
+      "target": "github:OpenEuroLLM/oellm-eval#88",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#88",
+      "context": "All six fail on `main` and pass with this change. Merging this branch with #88 and with #109 is clean; it does conflict with the #107 draft, which restru",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#110",
+      "target": "github:OpenEuroLLM/oellm-eval#107",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#107",
+      "context": "ing this branch with #88 and with #109 is clean; it does conflict with the #107 draft, which restructures the same read loop into a process substitution,",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#109",
+      "target": "github:OpenEuroLLM/oellm-eval#77",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#77",
+      "context": "ack to its default list, and the row is dropped. That sits in the function #77 replaces, so I kept it out of here rather than have the two collide. Happy",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#108",
+      "target": "github:OpenEuroLLM/oellm-eval#60",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#60",
+      "context": "venv_path`, * and links to the relevant upstream issue and OpenEuroLLM PR #60. Closes #87",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#108",
+      "target": "github:OpenEuroLLM/oellm-eval#87",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#87",
+      "context": "and links to the relevant upstream issue and OpenEuroLLM PR #60. Closes #87",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#106",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "Add PAWS-X EU task group ## Summary One of the evals from #89. Adds PAWS-X ([google-research-datasets/paws-x](https://huggingface.co/dat",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#106",
+      "target": "github:OpenEuroLLM/oellm-eval#105",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#105",
+      "context": "lm/resources/custom_lm_eval_tasks/pawsx/`, same rationale and structure as #105: identical prompt format to the harness's built-in paws-x tasks (localized",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#105",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "Add XNLI EU task group ## Summary One of the evals from #89. Adds XNLI ([facebook/xnli](https://huggingface.co/datasets/facebook/xnli)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#103",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/issues/89",
+      "context": "o this is a custom lm-eval task under `custom_lm_eval_tasks/global_mgsm/` (https://github.com/OpenEuroLLM/oellm-eval/issues/89). It is distinct from the existing `mgsm-eu` (standard MGSM, 4 languages).",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#100",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "Add XCSQA ## Summary One of the Evals from #89. I added XCSQA (X-CSQA, the commonsense QA task of the XCSR benchmark, [IN",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#99",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/issues/89",
+      "context": "set ships: `cs, de, en, es, fr, hu, it, pt, sr, uk`. One of the Evals from https://github.com/OpenEuroLLM/oellm-eval/issues/89 Relies on lm-eval-harness's built-in `mmlu_prox_<lang>` tasks — the 5-s",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#98",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/issues/89",
+      "context": "ships: `de_de`, `es_la`, `fr_fr`, `it_it`, `pt_br`. One of the Evals from https://github.com/OpenEuroLLM/oellm-eval/issues/89 ## Changes - **`task-groups.yaml`** — new `mmmlu-eu` group (5-shot,",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#94",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "h_eval.py`, ruff-excluded to keep it byte-for-byte). One of the Evals from #89. ## Language coverage — EU subset only PolyMath ships 18 languages;",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#70",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#70",
+      "context": "ingface.co/datasets/Helsinki-NLP/OpenSubtitles2024-40-langs-15-movies) - #70 - [x] [FLORES-200](Muennighoff/flores200) - #101 - [ ] [GLOBAL MGSM](h",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#101",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#101",
+      "context": "40-langs-15-movies) - #70 - [x] [FLORES-200](Muennighoff/flores200) - #101 - [ ] [GLOBAL MGSM](https://huggingface.co/datasets/CohereLabs/global-mgs",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#103",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#103",
+      "context": "[GLOBAL MGSM](https://huggingface.co/datasets/CohereLabs/global-mgsm) - #103 - [ ] [XCopa](https://huggingface.co/datasets/cambridgeltl/xcopa) - #66",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#66",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#66",
+      "context": "103 - [ ] [XCopa](https://huggingface.co/datasets/cambridgeltl/xcopa) - #66 - [ ] [Hellaswag](https://huggingface.co/datasets/alexandrainst/m_hellasw",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#102",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#102",
+      "context": "[Hellaswag](https://huggingface.co/datasets/alexandrainst/m_hellaswag) - #102 - [x] [PolyMath](https://huggingface.co/datasets/Qwen/PolyMath) - #94",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#94",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#94",
+      "context": "#102 - [x] [PolyMath](https://huggingface.co/datasets/Qwen/PolyMath) - #94 - [ ] [MMMLU](https://huggingface.co/datasets/openai/MMMLU) - #98 - [x",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#98",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#98",
+      "context": "- #94 - [ ] [MMMLU](https://huggingface.co/datasets/openai/MMMLU) - #98 - [x] [MMLU-ProX](https://huggingface.co/datasets/li-lab/MMLU-ProX) - #",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#99",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#99",
+      "context": "8 - [x] [MMLU-ProX](https://huggingface.co/datasets/li-lab/MMLU-ProX) - #99 - [ ] [MultiBlimp](https://huggingface.co/datasets/jumelet/multiblimp)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#65",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#65",
+      "context": "- [ ] [MultiBlimp](https://huggingface.co/datasets/jumelet/multiblimp) - #65 - [x] [xcsqa]() - #100 - [ ] [MathNet](https://huggingface.co/dataset",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#100",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#100",
+      "context": "/huggingface.co/datasets/jumelet/multiblimp) - #65 - [x] [xcsqa]() - #100 - [ ] [MathNet](https://huggingface.co/datasets/ShadenA/MathNet) - Note",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#105",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#105",
+      "context": "e: Contains Images as part of the prompt - [ ] PolyMath-TUM - [x] XNLI - #105 - [x] PAWS-x - #106 - [ ] Swesat - [ ] WikiAnn NER / PAN-X - [ ] Tatoe",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#89",
+      "target": "github:OpenEuroLLM/oellm-eval#106",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#106",
+      "context": "art of the prompt - [ ] PolyMath-TUM - [x] XNLI - #105 - [x] PAWS-x - #106 - [ ] Swesat - [ ] WikiAnn NER / PAN-X - [ ] Tatoeba challenge - [ ] Taxi",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#87",
+      "target": "github:OpenEuroLLM/oellm-eval#60",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_pull_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/pull/60",
+      "context": "the fix above to the local installation of `lighteval`, as documented in: https://github.com/OpenEuroLLM/oellm-eval/pull/60#:~:text=Known%20Limitations Please make this clear in README.md so that e",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#85",
+      "target": "github:OpenEuroLLM/oellm-eval#51",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#51",
+      "context": "-max_array_len ignored in schedule_evals (hardcoded 128) ### Problem Issue #51 `--max_array_len` controlled two separate things in the SLURM submissi",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#81",
+      "target": "github:OpenEuroLLM/oellm-eval#76",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#76",
+      "context": "anges:** - oellm/task_groups.py: Building on the {lang} template work in #76, each task's language is derived in code from its {lang}/subset value (or",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#77",
+      "target": "github:OpenEuroLLM/oellm-eval#75",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#75",
+      "context": "ollect-results: emit all metrics instead of picking one per task Closes #75 ### Problem - `collect_results` extracted a single metric per task",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#74",
+      "target": "github:OpenEuroLLM/oellm-eval#64",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#64",
+      "context": "lti-dir support + lighteval fixes ### Note There were some issues with #64 and #67 tests. This PR merges both and fixes the tests issue, now they pas",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#74",
+      "target": "github:OpenEuroLLM/oellm-eval#67",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#67",
+      "context": "support + lighteval fixes ### Note There were some issues with #64 and #67 tests. This PR merges both and fixes the tests issue, now they pass! ##",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#73",
+      "target": "github:OpenEuroLLM/oellm-eval#64",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#64",
+      "context": "ct results operation ## Changes ### Note This PR was two separate PRs (#64, #67) fixed some issues and submitting as one. ### `oellm/main.py` - *",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#73",
+      "target": "github:OpenEuroLLM/oellm-eval#67",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#67",
+      "context": "sults operation ## Changes ### Note This PR was two separate PRs (#64, #67) fixed some issues and submitting as one. ### `oellm/main.py` - **Mult",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#72",
+      "target": "github:OpenEuroLLM/oellm-eval#61",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#61",
+      "context": "(re)naming ## (Re)naming: Implementing proposed issue #61 `oellm` → `oellm-eval`, `schedule-eval` → `schedule`, `collect-results`",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#70",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "under `custom_lm_eval_tasks/opensubtitles_multi40/`. One of the Evals from #89. ## Language coverage — EU subset only The dataset ships 40 language",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#66",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#89",
+      "context": "ilt-in **lighteval** `xcopa:{lang}` tasks at 0-shot. One of the Evals from #89. ## Language coverage — EU subset only XCOPA ships only three langua",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#65",
+      "target": "github:OpenEuroLLM/oellm-eval#89",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/oellm-eval/issues/89",
+      "context": "p and added to the `oellm-multilingual` super group. One of the Evals from https://github.com/OpenEuroLLM/oellm-eval/issues/89 ## Language coverage — EU subset only - MultiBLIMP's HF configs are",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#64",
+      "target": "github:OpenEuroLLM/oellm-eval#52",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#52",
+      "context": "sults: recursive multi-dir merge with duplicate override Implemented Issue #52! - Recursively search results_dir for all jobs.csv files instead of req",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#47",
+      "target": "github:OpenEuroLLM/oellm-eval#44",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#44",
+      "context": "Slurm arguments overrides support + some fixes Mainly fix for #44. Also adds some fixes to collate metrics in `collect-results` call. Over",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#37",
+      "target": "github:OpenEuroLLM/oellm-eval#28",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#28",
+      "context": "v instead of a container. CI updated to test both modes. merge after #28 Summary: - Add --venv_path CLI option to schedule-eval for running e",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#31",
+      "target": "github:OpenEuroLLM/oellm-eval#28",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#28",
+      "context": "v instead of a container. CI updated to test both modes. merge after #28 Summary: - Add --venv_path CLI option to schedule-eval for running e",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#18",
+      "target": "github:OpenEuroLLM/oellm-eval#8",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#8",
+      "context": "pre-download all necessary datasets before scheduling the evals closes #8 closes #10",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#18",
+      "target": "github:OpenEuroLLM/oellm-eval#10",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#10",
+      "context": "ad all necessary datasets before scheduling the evals closes #8 closes #10",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#2",
+      "target": "github:OpenEuroLLM/Taskboard#70",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "github_issues_url",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/70",
+      "context": "feat: adding multi-cluster eval functionality see title and https://github.com/OpenEuroLLM/Taskboard/issues/70",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#80",
+      "target": "github:OpenEuroLLM/oellm-autoexp#76",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#76",
+      "context": "ridge container recipe (nvidia-modelopt missing on LUMI) ## Summary Fixes #76: the `megatron_bridge` convert stage on LUMI fails before conversion start",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#79",
+      "target": "github:OpenEuroLLM/oellm-autoexp#64",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#64",
+      "context": "Bridge to https://github.com/... for consistency with Megatron-LM. Closes #64",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#74",
+      "target": "github:OpenEuroLLM/oellm-autoexp#73",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#73",
+      "context": "`install_eval_env.sh --cluster lumi` Fixes the eight problems described in #73, which explains each one (where, what happens, why). In short: | # | Prob",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#74",
+      "target": "github:OpenEuroLLM/oellm-autoexp#72",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#72",
+      "context": "installer's tokenizer download step still fails without `huggingface_hub` (#72); the script reports it and continues. Fixes #73",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#73",
+      "target": "github:OpenEuroLLM/oellm-autoexp#74",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#74",
+      "context": "8715e0393906b6a2/config/slurm/lumi_eval.yaml#L15-L16) ### Fix Proposed in #74, as described per problem above. ### Possibly worth checking (not part of",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#72",
+      "target": "github:OpenEuroLLM/oellm-autoexp#71",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#71",
+      "context": "b` 2.3.0 is installed and the script downloads the tokenizer files. Fixes #71",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#71",
+      "target": "github:OpenEuroLLM/oellm-autoexp#72",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#72",
+      "context": "lm_autoexp/postprocess/converters/mcore_to_hf.py#L23) ### Fix Proposed in #72: declare it. ```diff \"tqdm>=4.65.0\", + \"huggingface_hub>=0.30\", # sc",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#70",
+      "target": "github:OpenEuroLLM/oellm-autoexp#69",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#69",
+      "context": "sion`: passes before and after. `pytest tests/monitor`: 30 passed. Fixes #69",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#69",
+      "target": "github:OpenEuroLLM/oellm-autoexp#70",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#70",
+      "context": "fe858715e0393906b6a2/scripts/monitor_autoexp.py#L106) ### Fix Proposed in #70: check the argument itself, not the `Path`: ```diff - session_dir = Pa",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#68",
+      "target": "github:OpenEuroLLM/oellm-autoexp#67",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#67",
+      "context": "ave the first scale's `--save` path; with the fix each has its own. Fixes #67",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#67",
+      "target": "github:OpenEuroLLM/oellm-autoexp#68",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#68",
+      "context": "fig/cache.py` (`repo_cache`): shares the loaded nodes ### Fix Proposed in #68: resolve into a copy instead of in place. `to_container(..., resolve=True)",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#45",
+      "target": "github:OpenEuroLLM/oellm-autoexp#43",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#43",
+      "context": "gress tracker Updates progress_tracker.py . Addresses the following from #43: - overhead >100% bug — fixed with sanity checks against total GPU-",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#36",
+      "target": "github:OpenEuroLLM/oellm-autoexp#25",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#25",
+      "context": "Vmjkom/issue25 Fixes #25 . I'm thinking whether this fix should include the feature for validating",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#27",
+      "target": "github:OpenEuroLLM/oellm-autoexp#26",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#26",
+      "context": "Vmjkom/issue26 Fixes #26",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#23",
+      "target": "github:OpenEuroLLM/oellm-autoexp#22",
+      "status": "explicit_task_reference",
+      "relationship": "references_task",
+      "evidence_type": "same_repo_issue_number",
+      "evidence": "#22",
+      "context": "Argument parser monitor parameters don't work Fixes #22",
+      "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
     }
   ],
   "external_hf_card_references": [
@@ -15826,6 +17336,176 @@
       "declared_id": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
       "status": "indexed",
       "canonical_id": "nvidia/Nemotron-Pretraining-Specialized-v1.1"
+    }
+  ],
+  "unresolved_github_task_references": [
+    {
+      "source": "github:OpenEuroLLM/Taskboard#408",
+      "reference": "https://github.com/Aleph-Alpha-Research/eval-framework/pull/881",
+      "expected_target": "github:Aleph-Alpha-Research/eval-framework#881",
+      "evidence_type": "github_pull_url",
+      "context": "sults and comparisons to baselines. __Dependencies__ ✅ [BPB variants PR](https://github.com/Aleph-Alpha-Research/eval-framework/pull/881) merged",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#186",
+      "reference": "https://github.com/allenai/open-instruct/issues/1352",
+      "expected_target": "github:allenai/open-instruct#1352",
+      "evidence_type": "github_issues_url",
+      "context": "---| | **Base checkpoint** | OLMo-3-7B-Instruct-SFT (reproduced, [details](https://github.com/allenai/open-instruct/issues/1352#issuecomment-2823953936)) | | **Judge (Elo)** | Qwen3.5-27B (dense, via vl",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#172",
+      "reference": "huggingface/lighteval#1112",
+      "expected_target": "github:huggingface/lighteval#1112",
+      "evidence_type": "repository_issue_number",
+      "context": "m, which `sacrebleu` unintentionally only score the first translation (see huggingface/lighteval#1112). BLEU doesn't have this problem because `lighteval` already reshapes the",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#171",
+      "reference": "huggingface/lighteval#1471",
+      "expected_target": "github:huggingface/lighteval#1471",
+      "evidence_type": "repository_issue_number",
+      "context": "d for Language.LATVIAN ``` Every lighteval release so far is affected (huggingface/lighteval#1471). Until it's fixed, every `belebele-eu-cf` run produces four failed jobs,",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#170",
+      "reference": "huggingface/lighteval#1471",
+      "expected_target": "github:huggingface/lighteval#1471",
+      "evidence_type": "repository_issue_number",
+      "context": "r' is needed for Language.LATVIAN`). Opened an issue for this upstream: [huggingface/lighteval#1471](https://github.com/huggingface/lighteval/issues/1471). Every `lighteval",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#169",
+      "reference": "huggingface/lighteval#1112",
+      "expected_target": "github:huggingface/lighteval#1112",
+      "evidence_type": "repository_issue_number",
+      "context": "ation of a task, against every sentence's reference. This is an open issue huggingface/lighteval#1112, with two unmerged fixes (huggingface/lighteval#1176, huggingface/lighteva",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#169",
+      "reference": "huggingface/lighteval#1176",
+      "expected_target": "github:huggingface/lighteval#1176",
+      "evidence_type": "repository_issue_number",
+      "context": "This is an open issue huggingface/lighteval#1112, with two unmerged fixes (huggingface/lighteval#1176, huggingface/lighteval#1234). It is still unfixed on lighteval `main`. Af",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#169",
+      "reference": "huggingface/lighteval#1234",
+      "expected_target": "github:huggingface/lighteval#1234",
+      "evidence_type": "repository_issue_number",
+      "context": "gface/lighteval#1112, with two unmerged fixes (huggingface/lighteval#1176, huggingface/lighteval#1234). It is still unfixed on lighteval `main`. Affects every `lighteval` rele",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#161",
+      "reference": "haideraltahan/mintlify-docs#1",
+      "expected_target": "github:haideraltahan/mintlify-docs#1",
+      "evidence_type": "repository_issue_number",
+      "context": "ct_465002530/users/haider/ML_Evals/audits/polymath_medium` on LUMI. Docs: [haideraltahan/mintlify-docs#1](https://github.com/haideraltahan/mintlify-docs/pull/1). ## To do - [ ]",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#133",
+      "reference": "huggingface/lighteval#1414",
+      "expected_target": "github:huggingface/lighteval#1414",
+      "evidence_type": "repository_issue_number",
+      "context": "or the whole process, which breaks long generations from reasoning models (huggingface/lighteval#1414, fix proposed in huggingface/lighteval#1415). The images published today a",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#133",
+      "reference": "huggingface/lighteval#1415",
+      "expected_target": "github:huggingface/lighteval#1415",
+      "evidence_type": "repository_issue_number",
+      "context": "rations from reasoning models (huggingface/lighteval#1414, fix proposed in huggingface/lighteval#1415). The images published today aren't affected.",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#108",
+      "reference": "huggingface/lighteval#1171",
+      "expected_target": "github:huggingface/lighteval#1171",
+      "evidence_type": "repository_issue_number",
+      "context": "TokenNorm` issue, * the temporary workaround using the proposed fix from `huggingface/lighteval#1171`, * how to use the patched local environment with `--venv_path`, * and l",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#87",
+      "reference": "https://github.com/huggingface/lighteval/issues/1170",
+      "expected_target": "github:huggingface/lighteval#1170",
+      "evidence_type": "github_issues_url",
+      "context": "happening in `lighteval` when evaluating tasks with `acc_norm` right now: https://github.com/huggingface/lighteval/issues/1170 And a possible fix is not merged yet (maybe will never be merged): https:/",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#87",
+      "reference": "https://github.com/huggingface/lighteval/pull/1171",
+      "expected_target": "github:huggingface/lighteval#1171",
+      "evidence_type": "github_pull_url",
+      "context": "es/1170 And a possible fix is not merged yet (maybe will never be merged): https://github.com/huggingface/lighteval/pull/1171 Right now, a workaround is to manually incorporate the fix above to the l",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#80",
+      "reference": "https://github.com/OpenEuroLLM/oellm-evals/issues/78",
+      "expected_target": "github:OpenEuroLLM/oellm-evals#78",
+      "evidence_type": "github_issues_url",
+      "context": "tagged since it isn't language-split in the registry. [Issue Reference](https://github.com/OpenEuroLLM/oellm-evals/issues/78)",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#60",
+      "reference": "#1170",
+      "expected_target": "github:OpenEuroLLM/oellm-eval#1170",
+      "evidence_type": "same_repo_issue_number",
+      "context": "_cf triggers an LogProbTokenNorm IndexError intrinsic in lighteval (Issue [#1170](https://github.com/huggingface/lighteval/issues/1170)) when choices_token",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#60",
+      "reference": "https://github.com/huggingface/lighteval/issues/1170",
+      "expected_target": "github:huggingface/lighteval#1170",
+      "evidence_type": "github_issues_url",
+      "context": "ggers an LogProbTokenNorm IndexError intrinsic in lighteval (Issue [#1170](https://github.com/huggingface/lighteval/issues/1170)) when choices_tokens is shorter than choices_logprob. To fix this, edit",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#60",
+      "reference": "https://github.com/huggingface/lighteval/pull/1171",
+      "expected_target": "github:huggingface/lighteval#1171",
+      "evidence_type": "github_pull_url",
+      "context": "s_logprob. To fix this, edit [‎src/lighteval/metrics/normalizations.py‎](https://github.com/huggingface/lighteval/pull/1171/changes#diff-888ac06aac67024dd02b0f87e6ac8e95de072e7f5700eb12103cb315ebf7f",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#60",
+      "reference": "#1171",
+      "expected_target": "github:OpenEuroLLM/oellm-eval#1171",
+      "evidence_type": "same_repo_issue_number",
+      "context": "4dd02b0f87e6ac8e95de072e7f5700eb12103cb315ebf7f660) according to their PR [#1171](https://github.com/huggingface/lighteval/pull/1171).",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-eval#36",
+      "reference": "OpenEuroLLM/oellm-cli#31",
+      "expected_target": "github:OpenEuroLLM/oellm-cli#31",
+      "evidence_type": "repository_issue_number",
+      "context": "Revert \"add --venv_path option for running without containers\" Reverts OpenEuroLLM/oellm-cli#31",
+      "reason": "target_not_indexed"
+    },
+    {
+      "source": "github:OpenEuroLLM/oellm-autoexp#30",
+      "reference": "https://github.com/OpenEuroLLM/NVIDIA-Megatron-LM/pull/2",
+      "expected_target": "github:OpenEuroLLM/NVIDIA-Megatron-LM#2",
+      "evidence_type": "github_pull_url",
+      "context": "branch of Megatron-LM now supports saving checkpoints at [specific steps](https://github.com/OpenEuroLLM/NVIDIA-Megatron-LM/pull/2), but it is not supported yet in `oellm-autoexp`. It is useful to start de",
+      "reason": "target_not_indexed"
     }
   ],
   "errors": {},

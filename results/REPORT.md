@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T12:26:48.591174+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T13:03:18.916348+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -29,6 +29,11 @@ Collected: `2026-11-08T12:26:48.591174+00:00` (UTC). Source: public APIs, read-o
 - Processing script paths co-located with those manifests: **2**
 
 - Concrete W&B run URLs in GitHub tasks (source links only): **1**
+
+- Literal GitHub issue/PR cross-references to indexed tasks: **151**
+- GitHub issue/PR references without an indexed target: **21**
+
+GitHub task links are **textual mentions only**; they do not prove a dependency, completed implementation, or validated experiment.
 
 | GitHub task | Hugging Face resource | Evidence | Matched text |
 | --- | --- | --- | --- |
@@ -72,6 +77,85 @@ Collected: `2026-11-08T12:26:48.591174+00:00` (UTC). Source: public APIs, read-o
 | [#232](https://github.com/OpenEuroLLM/Taskboard/issues/232) | [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) | name_only | `Olmo-3-7B-Instruct-SFT` |
 | [#186](https://github.com/OpenEuroLLM/Taskboard/issues/186) | [openeurollm/OLMo-3-7B-Instruct-SFT](https://huggingface.co/openeurollm/OLMo-3-7B-Instruct-SFT) | name_only | `OLMo-3-7B-Instruct-SFT` |
 | [#101](https://github.com/OpenEuroLLM/oellm-eval/pull/101) | [openeurollm/datamix-9b-80-20](https://huggingface.co/openeurollm/datamix-9b-80-20) | name_only | `datamix-9b-80-20` |
+
+## GitHub issue / pull request references
+
+Only exact issue numbers and GitHub task URLs count; every target is present in the indexed snapshot.
+
+| Referencing task | Mentioned task | Literal text |
+| --- | --- | --- |
+| [github:OpenEuroLLM/Taskboard#439](https://github.com/OpenEuroLLM/Taskboard/issues/439) | [github:OpenEuroLLM/Taskboard#54](https://github.com/OpenEuroLLM/Taskboard/issues/54) | `#54` |
+| [github:OpenEuroLLM/Taskboard#439](https://github.com/OpenEuroLLM/Taskboard/issues/439) | [github:OpenEuroLLM/Taskboard#438](https://github.com/OpenEuroLLM/Taskboard/issues/438) | `#438` |
+| [github:OpenEuroLLM/Taskboard#437](https://github.com/OpenEuroLLM/Taskboard/issues/437) | [github:OpenEuroLLM/Taskboard#345](https://github.com/OpenEuroLLM/Taskboard/issues/345) | `#345` |
+| [github:OpenEuroLLM/Taskboard#431](https://github.com/OpenEuroLLM/Taskboard/issues/431) | [github:OpenEuroLLM/Taskboard#214](https://github.com/OpenEuroLLM/Taskboard/issues/214) | `#214` |
+| [github:OpenEuroLLM/Taskboard#430](https://github.com/OpenEuroLLM/Taskboard/issues/430) | [github:OpenEuroLLM/Taskboard#348](https://github.com/OpenEuroLLM/Taskboard/issues/348) | `https://github.com/OpenEuroLLM/Taskboard/issues/348` |
+| [github:OpenEuroLLM/Taskboard#428](https://github.com/OpenEuroLLM/Taskboard/issues/428) | [github:OpenEuroLLM/Taskboard#414](https://github.com/OpenEuroLLM/Taskboard/issues/414) | `https://github.com/OpenEuroLLM/Taskboard/issues/414` |
+| [github:OpenEuroLLM/Taskboard#417](https://github.com/OpenEuroLLM/Taskboard/issues/417) | [github:OpenEuroLLM/Taskboard#408](https://github.com/OpenEuroLLM/Taskboard/issues/408) | `https://github.com/OpenEuroLLM/Taskboard/issues/408` |
+| [github:OpenEuroLLM/Taskboard#416](https://github.com/OpenEuroLLM/Taskboard/issues/416) | [github:OpenEuroLLM/Taskboard#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | `#330` |
+| [github:OpenEuroLLM/Taskboard#416](https://github.com/OpenEuroLLM/Taskboard/issues/416) | [github:OpenEuroLLM/Taskboard#318](https://github.com/OpenEuroLLM/Taskboard/issues/318) | `#318` |
+| [github:OpenEuroLLM/Taskboard#413](https://github.com/OpenEuroLLM/Taskboard/issues/413) | [github:OpenEuroLLM/Taskboard#365](https://github.com/OpenEuroLLM/Taskboard/issues/365) | `https://github.com/OpenEuroLLM/Taskboard/issues/365` |
+| [github:OpenEuroLLM/Taskboard#412](https://github.com/OpenEuroLLM/Taskboard/issues/412) | [github:OpenEuroLLM/Taskboard#406](https://github.com/OpenEuroLLM/Taskboard/issues/406) | `https://github.com/OpenEuroLLM/Taskboard/issues/406` |
+| [github:OpenEuroLLM/Taskboard#411](https://github.com/OpenEuroLLM/Taskboard/issues/411) | [github:OpenEuroLLM/Taskboard#406](https://github.com/OpenEuroLLM/Taskboard/issues/406) | `https://github.com/OpenEuroLLM/Taskboard/issues/406` |
+| [github:OpenEuroLLM/Taskboard#405](https://github.com/OpenEuroLLM/Taskboard/issues/405) | [github:OpenEuroLLM/oellm-eval#124](https://github.com/OpenEuroLLM/oellm-eval/pull/124) | `https://github.com/OpenEuroLLM/oellm-eval/pull/124` |
+| [github:OpenEuroLLM/Taskboard#391](https://github.com/OpenEuroLLM/Taskboard/issues/391) | [github:OpenEuroLLM/Taskboard#432](https://github.com/OpenEuroLLM/Taskboard/issues/432) | `#432` |
+| [github:OpenEuroLLM/Taskboard#385](https://github.com/OpenEuroLLM/Taskboard/issues/385) | [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | `#220` |
+| [github:OpenEuroLLM/Taskboard#384](https://github.com/OpenEuroLLM/Taskboard/issues/384) | [github:OpenEuroLLM/Taskboard#385](https://github.com/OpenEuroLLM/Taskboard/issues/385) | `#385` |
+| [github:OpenEuroLLM/Taskboard#370](https://github.com/OpenEuroLLM/Taskboard/issues/370) | [github:OpenEuroLLM/Taskboard#362](https://github.com/OpenEuroLLM/Taskboard/issues/362) | `https://github.com/OpenEuroLLM/Taskboard/issues/362` |
+| [github:OpenEuroLLM/Taskboard#366](https://github.com/OpenEuroLLM/Taskboard/issues/366) | [github:OpenEuroLLM/Taskboard#302](https://github.com/OpenEuroLLM/Taskboard/issues/302) | `#302` |
+| [github:OpenEuroLLM/Taskboard#366](https://github.com/OpenEuroLLM/Taskboard/issues/366) | [github:OpenEuroLLM/Taskboard#161](https://github.com/OpenEuroLLM/Taskboard/issues/161) | `#161` |
+| [github:OpenEuroLLM/Taskboard#366](https://github.com/OpenEuroLLM/Taskboard/issues/366) | [github:OpenEuroLLM/Taskboard#308](https://github.com/OpenEuroLLM/Taskboard/issues/308) | `#308` |
+| [github:OpenEuroLLM/Taskboard#364](https://github.com/OpenEuroLLM/Taskboard/issues/364) | [github:OpenEuroLLM/oellm-autoexp#54](https://github.com/OpenEuroLLM/oellm-autoexp/pull/54) | `https://github.com/OpenEuroLLM/oellm-autoexp/pull/54` |
+| [github:OpenEuroLLM/Taskboard#359](https://github.com/OpenEuroLLM/Taskboard/issues/359) | [github:OpenEuroLLM/Taskboard#354](https://github.com/OpenEuroLLM/Taskboard/issues/354) | `https://github.com/OpenEuroLLM/Taskboard/issues/354` |
+| [github:OpenEuroLLM/Taskboard#354](https://github.com/OpenEuroLLM/Taskboard/issues/354) | [github:OpenEuroLLM/Taskboard#344](https://github.com/OpenEuroLLM/Taskboard/issues/344) | `https://github.com/OpenEuroLLM/Taskboard/issues/344` |
+| [github:OpenEuroLLM/Taskboard#354](https://github.com/OpenEuroLLM/Taskboard/issues/354) | [github:OpenEuroLLM/Taskboard#361](https://github.com/OpenEuroLLM/Taskboard/issues/361) | `https://github.com/OpenEuroLLM/Taskboard/issues/361` |
+| [github:OpenEuroLLM/Taskboard#352](https://github.com/OpenEuroLLM/Taskboard/issues/352) | [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | `#220` |
+| [github:OpenEuroLLM/Taskboard#351](https://github.com/OpenEuroLLM/Taskboard/issues/351) | [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | `#220` |
+| [github:OpenEuroLLM/Taskboard#345](https://github.com/OpenEuroLLM/Taskboard/issues/345) | [github:OpenEuroLLM/Taskboard#186](https://github.com/OpenEuroLLM/Taskboard/issues/186) | `#186` |
+| [github:OpenEuroLLM/Taskboard#338](https://github.com/OpenEuroLLM/Taskboard/issues/338) | [github:OpenEuroLLM/Taskboard#340](https://github.com/OpenEuroLLM/Taskboard/issues/340) | `https://github.com/OpenEuroLLM/Taskboard/issues/340` |
+| [github:OpenEuroLLM/Taskboard#337](https://github.com/OpenEuroLLM/Taskboard/issues/337) | [github:OpenEuroLLM/oellm-eval#56](https://github.com/OpenEuroLLM/oellm-eval/pull/56) | `https://github.com/OpenEuroLLM/oellm-eval/pull/56` |
+| [github:OpenEuroLLM/Taskboard#308](https://github.com/OpenEuroLLM/Taskboard/issues/308) | [github:OpenEuroLLM/Taskboard#301](https://github.com/OpenEuroLLM/Taskboard/issues/301) | `https://github.com/OpenEuroLLM/Taskboard/issues/301` |
+| [github:OpenEuroLLM/Taskboard#308](https://github.com/OpenEuroLLM/Taskboard/issues/308) | [github:OpenEuroLLM/Taskboard#365](https://github.com/OpenEuroLLM/Taskboard/issues/365) | `https://github.com/OpenEuroLLM/Taskboard/issues/365` |
+| [github:OpenEuroLLM/Taskboard#301](https://github.com/OpenEuroLLM/Taskboard/issues/301) | [github:OpenEuroLLM/Taskboard#340](https://github.com/OpenEuroLLM/Taskboard/issues/340) | `https://github.com/OpenEuroLLM/Taskboard/issues/340` |
+| [github:OpenEuroLLM/Taskboard#300](https://github.com/OpenEuroLLM/Taskboard/issues/300) | [github:OpenEuroLLM/Taskboard#301](https://github.com/OpenEuroLLM/Taskboard/issues/301) | `https://github.com/OpenEuroLLM/Taskboard/issues/301` |
+| [github:OpenEuroLLM/Taskboard#292](https://github.com/OpenEuroLLM/Taskboard/issues/292) | [github:OpenEuroLLM/Taskboard#286](https://github.com/OpenEuroLLM/Taskboard/issues/286) | `#286` |
+| [github:OpenEuroLLM/Taskboard#291](https://github.com/OpenEuroLLM/Taskboard/issues/291) | [github:OpenEuroLLM/Taskboard#286](https://github.com/OpenEuroLLM/Taskboard/issues/286) | `#286` |
+| [github:OpenEuroLLM/Taskboard#290](https://github.com/OpenEuroLLM/Taskboard/issues/290) | [github:OpenEuroLLM/Taskboard#286](https://github.com/OpenEuroLLM/Taskboard/issues/286) | `#286` |
+| [github:OpenEuroLLM/Taskboard#232](https://github.com/OpenEuroLLM/Taskboard/issues/232) | [github:OpenEuroLLM/Taskboard#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | `#230` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#390](https://github.com/OpenEuroLLM/Taskboard/issues/390) | `#390` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#385](https://github.com/OpenEuroLLM/Taskboard/issues/385) | `#385` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#384](https://github.com/OpenEuroLLM/Taskboard/issues/384) | `#384` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#386](https://github.com/OpenEuroLLM/Taskboard/issues/386) | `#386` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#387](https://github.com/OpenEuroLLM/Taskboard/issues/387) | `#387` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#388](https://github.com/OpenEuroLLM/Taskboard/issues/388) | `#388` |
+| [github:OpenEuroLLM/Taskboard#220](https://github.com/OpenEuroLLM/Taskboard/issues/220) | [github:OpenEuroLLM/Taskboard#389](https://github.com/OpenEuroLLM/Taskboard/issues/389) | `#389` |
+| [github:OpenEuroLLM/Taskboard#216](https://github.com/OpenEuroLLM/Taskboard/issues/216) | [github:OpenEuroLLM/Taskboard#202](https://github.com/OpenEuroLLM/Taskboard/issues/202) | `#202` |
+| [github:OpenEuroLLM/Taskboard#216](https://github.com/OpenEuroLLM/Taskboard/issues/216) | [github:OpenEuroLLM/Taskboard#165](https://github.com/OpenEuroLLM/Taskboard/issues/165) | `#165` |
+| [github:OpenEuroLLM/Taskboard#209](https://github.com/OpenEuroLLM/Taskboard/issues/209) | [github:OpenEuroLLM/Taskboard#203](https://github.com/OpenEuroLLM/Taskboard/issues/203) | `https://github.com/OpenEuroLLM/Taskboard/issues/203` |
+| [github:OpenEuroLLM/Taskboard#207](https://github.com/OpenEuroLLM/Taskboard/issues/207) | [github:OpenEuroLLM/Taskboard#203](https://github.com/OpenEuroLLM/Taskboard/issues/203) | `#203` |
+| [github:OpenEuroLLM/Taskboard#206](https://github.com/OpenEuroLLM/Taskboard/issues/206) | [github:OpenEuroLLM/Taskboard#203](https://github.com/OpenEuroLLM/Taskboard/issues/203) | `https://github.com/OpenEuroLLM/Taskboard/issues/203` |
+| [github:OpenEuroLLM/Taskboard#197](https://github.com/OpenEuroLLM/Taskboard/issues/197) | [github:OpenEuroLLM/Taskboard#193](https://github.com/OpenEuroLLM/Taskboard/issues/193) | `#193` |
+| [github:OpenEuroLLM/Taskboard#167](https://github.com/OpenEuroLLM/Taskboard/issues/167) | [github:OpenEuroLLM/Taskboard#166](https://github.com/OpenEuroLLM/Taskboard/issues/166) | `https://github.com/OpenEuroLLM/Taskboard/issues/166` |
+| [github:OpenEuroLLM/Taskboard#132](https://github.com/OpenEuroLLM/Taskboard/issues/132) | [github:OpenEuroLLM/Taskboard#131](https://github.com/OpenEuroLLM/Taskboard/issues/131) | `#131` |
+| [github:OpenEuroLLM/Taskboard#131](https://github.com/OpenEuroLLM/Taskboard/issues/131) | [github:OpenEuroLLM/Taskboard#132](https://github.com/OpenEuroLLM/Taskboard/issues/132) | `#132` |
+| [github:OpenEuroLLM/Taskboard#126](https://github.com/OpenEuroLLM/Taskboard/issues/126) | [github:OpenEuroLLM/Taskboard#125](https://github.com/OpenEuroLLM/Taskboard/issues/125) | `#125` |
+| [github:OpenEuroLLM/Taskboard#122](https://github.com/OpenEuroLLM/Taskboard/issues/122) | [github:OpenEuroLLM/Taskboard#121](https://github.com/OpenEuroLLM/Taskboard/issues/121) | `#121` |
+| [github:OpenEuroLLM/Taskboard#97](https://github.com/OpenEuroLLM/Taskboard/issues/97) | [github:OpenEuroLLM/Taskboard#8](https://github.com/OpenEuroLLM/Taskboard/issues/8) | `#8` |
+| [github:OpenEuroLLM/Taskboard#72](https://github.com/OpenEuroLLM/Taskboard/issues/72) | [github:OpenEuroLLM/Taskboard#16](https://github.com/OpenEuroLLM/Taskboard/issues/16) | `https://github.com/OpenEuroLLM/Taskboard/issues/16` |
+| [github:OpenEuroLLM/Taskboard#58](https://github.com/OpenEuroLLM/Taskboard/issues/58) | [github:OpenEuroLLM/Taskboard#34](https://github.com/OpenEuroLLM/Taskboard/issues/34) | `#34` |
+| [github:OpenEuroLLM/Taskboard#58](https://github.com/OpenEuroLLM/Taskboard/issues/58) | [github:OpenEuroLLM/Taskboard#56](https://github.com/OpenEuroLLM/Taskboard/issues/56) | `#56` |
+| [github:OpenEuroLLM/Taskboard#50](https://github.com/OpenEuroLLM/Taskboard/issues/50) | [github:OpenEuroLLM/Taskboard#49](https://github.com/OpenEuroLLM/Taskboard/issues/49) | `#49` |
+| [github:OpenEuroLLM/Taskboard#9](https://github.com/OpenEuroLLM/Taskboard/issues/9) | [github:OpenEuroLLM/Taskboard#1](https://github.com/OpenEuroLLM/Taskboard/issues/1) | `#1` |
+| [github:OpenEuroLLM/Taskboard#4](https://github.com/OpenEuroLLM/Taskboard/issues/4) | [github:OpenEuroLLM/Taskboard#3](https://github.com/OpenEuroLLM/Taskboard/issues/3) | `#3` |
+| [github:OpenEuroLLM/oellm-eval#172](https://github.com/OpenEuroLLM/oellm-eval/pull/172) | [github:OpenEuroLLM/oellm-eval#169](https://github.com/OpenEuroLLM/oellm-eval/issues/169) | `#169` |
+| [github:OpenEuroLLM/oellm-eval#171](https://github.com/OpenEuroLLM/oellm-eval/pull/171) | [github:OpenEuroLLM/oellm-eval#170](https://github.com/OpenEuroLLM/oellm-eval/issues/170) | `#170` |
+| [github:OpenEuroLLM/oellm-eval#167](https://github.com/OpenEuroLLM/oellm-eval/pull/167) | [github:OpenEuroLLM/oellm-eval#159](https://github.com/OpenEuroLLM/oellm-eval/pull/159) | `#159` |
+| [github:OpenEuroLLM/oellm-eval#167](https://github.com/OpenEuroLLM/oellm-eval/pull/167) | [github:OpenEuroLLM/oellm-eval#166](https://github.com/OpenEuroLLM/oellm-eval/issues/166) | `#166` |
+| [github:OpenEuroLLM/oellm-eval#166](https://github.com/OpenEuroLLM/oellm-eval/issues/166) | [github:OpenEuroLLM/oellm-eval#159](https://github.com/OpenEuroLLM/oellm-eval/pull/159) | `#159` |
+| [github:OpenEuroLLM/oellm-eval#164](https://github.com/OpenEuroLLM/oellm-eval/pull/164) | [github:OpenEuroLLM/oellm-eval#152](https://github.com/OpenEuroLLM/oellm-eval/issues/152) | `#152` |
+| [github:OpenEuroLLM/oellm-eval#164](https://github.com/OpenEuroLLM/oellm-eval/pull/164) | [github:OpenEuroLLM/oellm-eval#123](https://github.com/OpenEuroLLM/oellm-eval/pull/123) | `#123` |
+| [github:OpenEuroLLM/oellm-eval#162](https://github.com/OpenEuroLLM/oellm-eval/pull/162) | [github:OpenEuroLLM/oellm-eval#132](https://github.com/OpenEuroLLM/oellm-eval/issues/132) | `#132` |
+
+Showing the first 70 of 151 task links; all are in snapshot.json.
 
 ## Scholarly identifier matches
 
@@ -140,30 +224,30 @@ Collected: `2026-11-08T12:26:48.591174+00:00` (UTC). Source: public APIs, read-o
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
-| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
-| [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
-| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
-| [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
 | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
 | [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Seed-Coder: Let the Code Model Curate Data for Itself](https://arxiv.org/abs/2506.03524) | `arxiv:2506.03524` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
-| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | [Enhancing Multilingual LLM Pretraining with Model-Based Data Selection](https://arxiv.org/abs/2502.10361) | `arxiv:2502.10361` |
 | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | [MIND: Math Informed syNthetic Dialogues for Pretraining LLMs](https://arxiv.org/abs/2410.12881) | `arxiv:2410.12881` |
 
