@@ -753,7 +753,7 @@ def main(argv: list[str] | None = None) -> int:
             nodes.extend(more_nodes)
             code_edges = declared_edges + adjacent
             unresolved = [check for check in code_checks if check["status"] in
-                          ("rate_limited", "http_error", "fetch_failed", "not_checked_limit")]
+                          ("rate_limited", "http_error", "fetch_failed")]
             if unresolved:
                 errors["GitHub source dataset lookup"] = f"{len(unresolved)} target(s) not completely checked; see github_code_target_checks"
         except (KeyError, ValueError, UnicodeError, urllib.error.URLError, TimeoutError) as exc:
