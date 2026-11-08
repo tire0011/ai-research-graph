@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "evaluated_utc": "2026-11-08T16:58:05.591916+00:00",
-  "snapshot_utc": "2026-11-08T16:56:14.582914+00:00",
+  "evaluated_utc": "2026-11-08T21:33:28.762210+00:00",
+  "snapshot_utc": "2026-11-08T21:30:14.918186+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
@@ -16,6 +16,10 @@
   "source_phrases_verified": 21,
   "exact_snapshot_parity": 10,
   "comment_dependent_cases": 3,
+  "graph_comments_exact": 4,
+  "graph_comments_selected": 4,
+  "graph_author_dependencies_confirmed": 1,
+  "graph_oom_reports_linked": 1,
   "class_counts": {
     "reported_speedup_pending_validation": 1,
     "cross_hardware_performance_gap": 1,
@@ -69,6 +73,8 @@
           "meaning": "Production validation is explicitly outstanding."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -111,6 +117,10 @@
           "meaning": "A participant proposes a parallelism direction, without an independently verified gain."
         }
       ],
+      "graph_comment_evidence": {
+        "github_comment:OpenEuroLLM/Taskboard#4276947736": "exact_parity"
+      },
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -161,6 +171,11 @@
           "meaning": "A later comment says the same-base training control is still in progress."
         }
       ],
+      "graph_comment_evidence": {
+        "github_comment:OpenEuroLLM/Taskboard#6635516812": "exact_parity",
+        "github_comment:OpenEuroLLM/Taskboard#6721237269": "exact_parity"
+      },
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -195,13 +210,16 @@
           "meaning": "The Dependencies section explicitly names the upstream task."
         }
       ],
+      "graph_comment_evidence": {},
       "declared_dependency": {
         "task_id": "github:OpenEuroLLM/Taskboard#432",
         "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432",
         "live_state": "open",
         "graph_contains_literal_reference": true,
+        "graph_contains_author_declared_dependency": true,
         "evidence_scope": "literal Dependencies section in the issue body"
       },
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -236,6 +254,8 @@
           "meaning": "Comparable performance is an acceptance target, not an observed result."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -270,6 +290,12 @@
           "meaning": "An issue comment reports a concrete memory blocker, absent from the issue-body-only graph."
         }
       ],
+      "graph_comment_evidence": {
+        "github_comment:OpenEuroLLM/Taskboard#6121054773": "exact_parity"
+      },
+      "graph_reported_blockers": [
+        "github_comment:OpenEuroLLM/Taskboard#6121054773"
+      ],
       "status": "evidence_verified"
     },
     {
@@ -296,6 +322,8 @@
           "meaning": "A specific automation step remains unchecked in the issue."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -322,6 +350,8 @@
           "meaning": "The task defines a concrete automation goal but reports no saved time."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -356,6 +386,8 @@
           "meaning": "A baseline is described, but not a measured speed gain."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     },
     {
@@ -382,6 +414,8 @@
           "meaning": "Benchmark integration work is explicitly tracked."
         }
       ],
+      "graph_comment_evidence": {},
+      "graph_reported_blockers": [],
       "status": "evidence_verified"
     }
   ]

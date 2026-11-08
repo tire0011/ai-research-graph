@@ -1,6 +1,8 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-08T16:56:14.582914+00:00`. Evaluated: `2026-11-08T16:58:05.591916+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-08T21:30:14.918186+00:00`. Evaluated: `2026-11-08T21:33:28.762210+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+
+Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
 **This is not a speedup ranking.** The ten open issues were purposefully selected for varied engineering signals. A reported result has not been independently reproduced; an issue reference does not prove a blocker. Do not sum unlike speed, accuracy and automation claims.
 
@@ -36,6 +38,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/207): `170–175` — The issue reports a current Jupiter throughput range in TFLOPs/s/GPU.
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/207): `power cap` — Reference hardware and power limits differ, confounding the gap.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4276947736): `Scaling EP instead of PP or TP seems to be the way to go` — A participant proposes a parallelism direction, without an independently verified gain.
+- Source-hashed comment nodes in graph: `github_comment:OpenEuroLLM/Taskboard#4276947736` (`exact_parity`)
 
 ### github:OpenEuroLLM/Taskboard#442 — Investigate performance gap between current and Marianna's pipeline
 
@@ -45,6 +48,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812): `84.6%` — The comment reports forced-thinking MATH500 accuracy.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812): `34.8%` — The default-thinking MATH500 accuracy is reported separately.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6721237269): `same base model as SFT-Excellent-v0.1` — A later comment says the same-base training control is still in progress.
+- Source-hashed comment nodes in graph: `github_comment:OpenEuroLLM/Taskboard#6635516812` (`exact_parity`), `github_comment:OpenEuroLLM/Taskboard#6721237269` (`exact_parity`)
 
 ### github:OpenEuroLLM/Taskboard#391 — Ensuring post-training pipeline works
 
@@ -53,7 +57,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/391): `Compare throughput against the existing TRL implementation` — A throughput comparison is planned; no result is asserted.
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/391): `__Dependencies__
 Issue #432` — The Dependencies section explicitly names the upstream task.
-- [Explicitly named upstream task](https://github.com/OpenEuroLLM/Taskboard/issues/432): `github:OpenEuroLLM/Taskboard#432` (live state `open`, literal graph reference: `True`).
+- [Explicitly named upstream task](https://github.com/OpenEuroLLM/Taskboard/issues/432): `github:OpenEuroLLM/Taskboard#432` (live state `open`, literal graph reference: `True`, declared-dependency edge: `True`).
 
 ### github:OpenEuroLLM/Taskboard#432 — Extend LLMFactory support to the post-training repo
 
@@ -68,6 +72,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433): `Add support for Fully Sharded Data Parallel` — FSDP support is the work item.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773): `fails due to OOM issues on LUMI` — An issue comment reports a concrete memory blocker, absent from the issue-body-only graph.
+- Source-hashed comment nodes in graph: `github_comment:OpenEuroLLM/Taskboard#6121054773` (`exact_parity`)
 
 ### github:OpenEuroLLM/Taskboard#340 — Set up monitoring and automatic tools for model training
 
