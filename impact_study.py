@@ -1,0 +1,210 @@
+"""Evidence audit of ten candidate changes in OpenEuroLLM research workflows.
+
+This is a purposefully selected case study, not an autonomous priority ranking.
+Source text supports a candidate or a reported result, never an inferred speedup.
+"""
+
+import argparse
+import datetime as dt
+import json
+import os
+import sys
+import time
+import urllib.error
+import urllib.request
+from collections import Counter
+from pathlib import Path
+
+from holdout_study import digest, read_issue
+
+
+def read_comment(repo, comment_id, *, timeout=20):
+    """Fetch an individual public comment by immutable GitHub comment ID."""
+    url = f"https://api.github.com/repos/{repo}/issues/comments/{comment_id}"
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "ai-research-graph-impact"}
+    if os.getenv("GITHUB_TOKEN"):
+        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=timeout) as response:
+                data = json.load(response)
+            if data.get("id") != comment_id or not isinstance(data.get("body"), str):
+                raise ValueError(f"Comment {comment_id}: invalid body or ID")
+            return {"body": data["body"], "updated_at": data.get("updated_at"),
+                    "url": data.get("html_url", url)}
+        except (urllib.error.URLError, TimeoutError) as exc:
+            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
+                raise
+            if attempt == 2:
+                raise
+            time.sleep(2 ** attempt)
+
+
+def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment):
+    """Check literal phrases against live bodies/comments and graph parity separately."""
+    cases = study["cases"]
+    if len(cases) != 10 or len({(case["repo"], case["number"]) for case in cases}) != 10:
+        raise ValueError("Expected exactly ten distinct, preselected issues")
+    index = {node["id"].casefold(): node for node in graph["nodes"]}
+    refs = {(edge["source"].casefold(), edge["target"].casefold()) for edge in graph["edges"]
+            if edge["status"] == "explicit_task_reference"}
+    issues, comments = {}, {}
+
+    def issue(repo, number):
+        key = (repo, number)
+        if key not in issues:
+            issues[key] = fetch_issue(repo, number)
+        return issues[key]
+
+    def comment(repo, comment_id):
+        key = (repo, comment_id)
+        if key not in comments:
+            comments[key] = fetch_comment(repo, comment_id)
+        return comments[key]
+
+    rows = []
+    for case in cases:
+        anchor = f"github:{case['repo']}#{case['number']}"
+        row = {"id": case["id"], "anchor_id": anchor,
+               "impact_type": case["impact_type"], "evidence_class": case["evidence_class"],
+               "candidate": case["candidate"], "next_check": case["next_check"]}
+        try:
+            src = issue(case["repo"], case["number"])
+            row.update({"source_url": src["url"], "source_updated_at": src.get("updated_at"),
+                        "source_sha256": digest(src["body"]), "live_state": src.get("state"),
+                        "title": src.get("title")})
+            node = index.get(anchor.casefold())
+            row["graph_status"] = ("not_indexed" if node is None else
+                                   "exact_parity" if node.get("updated_at") == src.get("updated_at")
+                                   and (node.get("description") or "") == src["body"] else "stale_or_changed")
+            row["graph_reference_count"] = sum(source == anchor.casefold() for source, _ in refs)
+            row["evidence"] = []
+            for claim in case["evidence"]:
+                if claim["source"] == "body":
+                    proof = src
+                elif claim["source"] == "comment":
+                    proof = comment(case["repo"], claim["comment_id"])
+                else:
+                    raise ValueError(f"Unsupported evidence origin: {claim['source']}")
+                if claim["needle"].casefold() not in proof["body"].casefold():
+                    raise ValueError(f"Supporting phrase missing in {claim['source']}: {claim['needle']!r}")
+                row["evidence"].append({"source": claim["source"], "url": proof["url"],
+                                        "updated_at": proof.get("updated_at"),
+                                        "sha256": digest(proof["body"]),
+                                        "matched_text": claim["needle"], "meaning": claim["meaning"]})
+            dependency = case.get("dependency")
+            if dependency:
+                upstream_id = f"github:{dependency['repo']}#{dependency['number']}"
+                upstream = issue(dependency["repo"], dependency["number"])
+                # Only a literal dependency annotation establishes this relation;
+                # a generic #432 cross-reference is never re-labelled as 'blocks'.
+                row["declared_dependency"] = {
+                    "task_id": upstream_id, "url": upstream["url"],
+                    "live_state": upstream.get("state"),
+                    "graph_contains_literal_reference": (anchor.casefold(), upstream_id.casefold()) in refs,
+                    "evidence_scope": "literal Dependencies section in the issue body",
+                }
+            row["status"] = "evidence_verified"
+        except (KeyError, ValueError, OSError, TimeoutError) as exc:
+            row.update({"status": "source_error", "error": f"{type(exc).__name__}: {exc}"})
+        rows.append(row)
+
+    valid = [row for row in rows if row["status"] == "evidence_verified"]
+    return {
+        "status": "completed" if len(valid) == 10 else "source_error",
+        "evaluated_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "snapshot_utc": graph.get("timestamp_utc"), "selection": study["selection"],
+        "selected": len(rows), "verified": len(valid), "live_issues_fetched": len(issues),
+        "comments_verified": len(comments),
+        "source_phrases_verified": sum(len(row["evidence"]) for row in valid),
+        "exact_snapshot_parity": sum(row["graph_status"] == "exact_parity" for row in valid),
+        "comment_dependent_cases": sum(any(e["source"] == "comment" for e in row["evidence"]) for row in valid),
+        "class_counts": dict(Counter(row["evidence_class"] for row in valid)),
+        "cases": rows,
+    }
+
+
+def markdown(result):
+    lines = ["# OpenEuroLLM change-impact candidates: ten original-source audits", "",
+             f"Graph snapshot: `{result['snapshot_utc']}`. Evaluated: `{result['evaluated_utc']}`. "
+             f"Evidence verified: **{result['verified']}/{result['selected']}** cases, "
+             f"**{result['source_phrases_verified']}** literal phrases, "
+             f"**{result['comments_verified']}** separately fetched comments. "
+             f"Status: `{result['status']}`.", "",
+             "**This is not a speedup ranking.** The ten open issues were purposefully selected "
+             "for varied engineering signals. A reported result has not been independently reproduced; "
+             "an issue reference does not prove a blocker. Do not sum unlike speed, accuracy and automation claims.", "",
+             "## Candidate changes and validation needed", "",
+             "| Issue | Source evidence class | Proposed change | Missing proof before impact claim |",
+             "| --- | --- | --- | --- |"]
+    for row in result["cases"]:
+        if row["status"] == "evidence_verified":
+            label = f"[{row['anchor_id']}]({row['source_url']})"
+        else:
+            label = f"`{row['anchor_id']}` (source error: {row['error']})"
+        lines.append(f"| {label} | `{row['evidence_class']}` | {row['candidate']} | {row['next_check']} |")
+    lines.extend(["", "## Inspectable original-source evidence", ""])
+    for row in result["cases"]:
+        lines.append(f"### {row['anchor_id']} — {row.get('title', 'unavailable')}")
+        lines.append("")
+        if row["status"] != "evidence_verified":
+            lines.extend([f"Source error: `{row['error']}`.", ""])
+            continue
+        lines.append(f"Live issue state: `{row.get('live_state')}`. Body versus graph: "
+                     f"`{row['graph_status']}`. GitHub task-reference edges from this issue: "
+                     f"**{row['graph_reference_count']}**. Issue-body SHA256: `{row['source_sha256']}`.")
+        lines.append("")
+        for claim in row["evidence"]:
+            excerpt = claim["matched_text"].replace("`", "'")
+            lines.append(f"- [{claim['source']} evidence]({claim['url']}): `{excerpt}` — {claim['meaning']}")
+        dependency = row.get("declared_dependency")
+        if dependency:
+            lines.append(f"- [Explicitly named upstream task]({dependency['url']}): "
+                         f"`{dependency['task_id']}` (live state `{dependency['live_state']}`, "
+                         f"literal graph reference: `{dependency['graph_contains_literal_reference']}`).")
+        lines.append("")
+    lines.extend(["## Research validity and next step", "",
+                  "- **Measured training throughput**: #385 reports an approximately 9.5% uplift "
+                  "for a revised worker assignment, with production acceptance still outstanding. "
+                  "The report verifies that the authors made this claim, not its reproducibility.",
+                  "- **Evaluation quality, not speed**: #442's comments document a thinking-mode "
+                  "accuracy difference; a same-base control is noted as pending. Increased generated "
+                  "tokens could make the stronger quality result slower to compute.",
+                  "- **Dependency and feasibility**: #391 explicitly lists #432 as an upstream "
+                  "task; #433's comment reports a LUMI OOM problem. Neither is evidence of "
+                  "a realized speedup.",
+                  "- **Data gap**: issue comments in three cases contain essential evidence not "
+                  "stored in the graph's issue-body-only snapshot. An impact query should therefore "
+                  "either include versioned comments or abstain from declaring no known blocker.",
+                  "- **Selection bias**: these ten items were selected for promising, different "
+                  "signals after seeing issue titles. They are not representative of all 493 "
+                  "indexed issues and cannot establish which project should receive resources.",
+                  "- **Impact estimation**: a credible next experiment needs a causal dependency "
+                  "relationship, a baseline, a same-configuration intervention, adoption/rollout "
+                  "status and an outcome measurement. A graph-edge count alone is not impact.", ""])
+    return "\n".join(lines)
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--snapshot", default="results/snapshot.json")
+    p.add_argument("--cases", default="impact_cases.json")
+    p.add_argument("--output", default="results")
+    args = p.parse_args(argv)
+    graph = json.loads(Path(args.snapshot).read_text(encoding="utf-8"))
+    study = json.loads(Path(args.cases).read_text(encoding="utf-8"))
+    result = evaluate(graph, study)
+    out = Path(args.output)
+    out.mkdir(parents=True, exist_ok=True)
+    failed = result["status"] != "completed"
+    (out / ("impact_error.json" if failed else "impact_evidence.json")).write_text(
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (out / ("IMPACT_ERROR.md" if failed else "IMPACT_EVIDENCE.md")).write_text(
+        markdown(result), encoding="utf-8")
+    print(f"Impact audit: {result['verified']}/{result['selected']}, "
+          f"comments={result['comments_verified']}, status={result['status']}")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
