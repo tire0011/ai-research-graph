@@ -51,8 +51,11 @@ def evidence_summary(edges, anchor):
     proven_mentions = [edge for edge in links if edge.get("status") in {
         "explicit_reference", "identifier_match", "declared_source_file", "explicit_run_reference"}]
     candidates = [edge for edge in links if edge.get("status") == "candidate"]
+    task_refs = [edge for edge in links if edge.get("status") == "explicit_task_reference"]
     return {"sourced_link_count": len(proven_mentions), "candidate_count": len(candidates),
-            "sourced_targets": [edge["target"] for edge in proven_mentions]}
+            "sourced_targets": [edge["target"] for edge in proven_mentions],
+            "task_reference_count": len(task_refs),
+            "task_reference_targets": [edge["target"] for edge in task_refs]}
 
 
 def evaluate(graph, study, *, fetch=read_issue):
@@ -105,6 +108,8 @@ def evaluate(graph, study, *, fetch=read_issue):
         "missing_graph_node": sum(row["status"] == "missing_graph_node" for row in rows),
         "stale_graph_node": sum(row["status"] == "stale_graph_node" for row in rows),
         "linked_issues": sum(row.get("sourced_link_count", 0) > 0 for row in rows),
+        "task_linked_issues": sum(row.get("task_reference_count", 0) > 0 for row in rows),
+        "task_reference_edges": sum(row.get("task_reference_count", 0) for row in rows),
         "issue_crossrefs": sum(bool(row.get("issue_crossrefs")) for row in rows),
         "latency_median_ms": round(statistics.median(
             [row["source_latency_ms"] for row in rows if row.get("source_latency_ms") is not None]), 1)
@@ -123,21 +128,26 @@ def markdown(result):
         f"Questions supported by the graph's retained source phrases: "
         f"**{result['graph_fact_support']}/{result['selected']}**.",
         f"Issues with any cross-platform evidence edge: **{result['linked_issues']}/{result['selected']}**; "
-        f"issues with internal `#issue` references: **{result['issue_crossrefs']}/{result['selected']}**.", "",
-        "| Original issue and question | Source body vs graph | Sourced external links |",
-        "| --- | --- | ---: |",
+        f"issues with internal `#issue` references in text: **{result['issue_crossrefs']}/{result['selected']}**.",
+        f"Issues with resolved, in-snapshot GitHub task-reference edges: "
+        f"**{result['task_linked_issues']}/{result['selected']}** "
+        f"({result['task_reference_edges']} distinct edges).", "",
+        "| Original issue and question | Source body vs graph | Sourced external links | Internal task links |",
+        "| --- | --- | ---: | ---: |",
     ]
     for case in result["cases"]:
         label = f"[{case['anchor'].split(':', 1)[1]}]({case.get('source_url', '')})" if case.get("source_url") else case["anchor"]
-        lines.append(f"| {label}: {case['question']} | `{case['status']}` | {case.get('sourced_link_count', 'n/a')} |")
+        lines.append(f"| {label}: {case['question']} | `{case['status']}` | {case.get('sourced_link_count', 'n/a')} | {case.get('task_reference_count', 'n/a')} |")
     lines.extend(["", "## Short, original-source-grounded answers", ""])
     for case in result["cases"]:
         if "answer" not in case:
             lines.extend([f"- **{case['id']}**: source unavailable ({case.get('error', 'unknown')}).", ""])
             continue
         links = ", ".join(case.get("issue_crossrefs", [])) or "none"
+        targets = ", ".join(case.get("task_reference_targets", [])) or "none"
         lines.extend([f"- **{case['id']}** (`{case['evidence_level']}`): {case['answer']} "
-                      f"[Original issue]({case['source_url']}). Internal issue numbers in its body: {links}."])
+                      f"[Original issue]({case['source_url']}). Internal issue numbers in its body: {links}. "
+                      f"Resolved graph task targets: {targets}."])
     lines.extend(["", "## Meaning and limitations", "",
         "The ten issue IDs were sampled with a fixed deterministic rule **before** inspecting their bodies. "
         "Questions and short answers were annotated afterward and are not blinded or independently judged.",
@@ -147,6 +157,8 @@ def markdown(result):
         "network latency is not comparable to in-memory lookup latency.",
         "A missing cross-platform edge is a graph coverage gap, not evidence that no real-world "
         "relationship exists. Hypotheses and proposed training mixes are not established results.",
+        "An internal GitHub issue/PR cross-reference proves only that its source text mentions an indexed task. "
+        "It does not prove a dependency, that a PR was merged, or that a finding was reproduced.",
         "Source-body SHA256, update times, question annotations and graph link targets are retained in the JSON evidence.", ""])
     return "\n".join(lines)
 
