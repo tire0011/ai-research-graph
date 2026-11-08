@@ -22,6 +22,18 @@ If an essential API fails (e.g. a GitHub gateway timeout), the run keeps the par
 
 ## Local run (optional)
 
+The workflow additionally inspects published Prelude checkpoint scores from the
+[OpenEuroLLM Prelude benchmark dataset](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores).
+It writes results/PRELUDE_EVAL.md (interpretable comparison and quality verdict)
+and results/prelude_eval.json (dataset revision, source filter URLs, original row
+indices, raw scores and computed changes). This is an independent companion
+probe, not a modification of the research graph's established evidence edges.
+It compares only one model, task and metric: prelude_anneal2t / coqa_gen / F1.
+Duplicate checkpoints, missing scores, configuration differences, or a truncated
+query block comparison rather than producing misleading numbers. API failure is
+recorded explicitly as source_error, not counted as zero or success. No benchmark
+is rerun, and F1 changes alone do not establish significance or cause.
+
 ```powershell
 python -m unittest discover -s tests -v
 python research_graph.py --output results
@@ -47,5 +59,8 @@ The report separates **open vs closed** GitHub issues and PRs, and measures dupl
 OpenAIRE results are a keyword-search sample plus the bounded citation lookup, not an exhaustive count of OpenEuroLLM research products. The report preserves source errors rather than silently treating missing responses as zero matches. GitHub retrieval has a `max_pages=10` safeguard per repository, so very large projects may need pagination adjustments.
 
 ### Next validation step
+
+To run the companion probe locally (optional): python benchmark_probe.py --output results.
+GitHub Actions executes this command automatically without the user's PC.
 
 Run an independent LLM over the fixed evidence packets using a supported inference provider, then score answers against sourced citations and unsupported-claim avoidance. The GitHub Actions evidence check does **not** make an LLM call and therefore makes no claim of autonomous AI answer accuracy. Manually annotate name-only candidates and measure recall before considering a common graph service or MCP interface. A reference to an artifact does not establish a causal dependency on it.
