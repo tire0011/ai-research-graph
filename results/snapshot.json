@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T16:56:14.582914+00:00",
+  "timestamp_utc": "2026-11-08T21:30:14.918186+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -11117,22 +11117,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "type": "dataset",
-      "title": "Agent-Ark/Toucan-1.5M",
-      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
-      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2510.01179"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-10-04T00:51:18.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
       "type": "dataset",
       "title": "Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
@@ -11146,6 +11130,22 @@
         "doi": []
       },
       "updated_at": "2026-01-31T10:05:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "type": "dataset",
+      "title": "Agent-Ark/Toucan-1.5M",
+      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
+      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2510.01179"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-10-04T00:51:18.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11212,22 +11212,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
-      "type": "dataset",
-      "title": "allenai/dolma3_dolmino_mix-100B-1125",
-      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
-      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.13961"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-02-23T19:03:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:allenai/olmo-mix-1124",
       "type": "dataset",
       "title": "allenai/olmo-mix-1124",
@@ -11256,6 +11240,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finepdfs-edu",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-11-11T18:49:02.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:HuggingFaceFW/finepdfs",
       "type": "dataset",
       "title": "HuggingFaceFW/finepdfs",
@@ -11273,16 +11271,16 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
       "type": "dataset",
-      "title": "HuggingFaceFW/finepdfs-edu",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2025-11-11T18:49:02.000Z",
+      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11319,32 +11317,67 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
       "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "title": "allenai/dolma3_dolmino_mix-100B-1125",
+      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
+      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2512.13961"
+        ],
         "doi": []
       },
-      "updated_at": "2026-03-31T06:26:09.000Z",
+      "updated_at": "2026-02-23T19:03:37.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "id": "hf:dataset:IFM/MegaMath",
       "type": "dataset",
-      "title": "nvidia/Nemotron-CC-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
-      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
+      "title": "IFM/MegaMath",
+      "url": "https://huggingface.co/datasets/IFM/MegaMath",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\", \"code\", \"pre-training\", \"synthesis\"], \"size_categories\": [\"1B<n<10B\"]}",
       "identifiers": {
         "arxiv": [
-          "2508.14444"
+          "2504.02807"
         ],
         "doi": []
       },
-      "updated_at": "2026-07-07T15:21:11.000Z",
+      "updated_at": "2025-04-09T13:17:50.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata",
+      "resolved_from_alias": "LLM360/MegaMath"
+    },
+    {
+      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "type": "dataset",
+      "title": "mlfoundations/dclm-baseline-1.0",
+      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "identifiers": {
+        "arxiv": [
+          "2406.11794"
+        ],
+        "doi": []
+      },
+      "updated_at": "2024-07-22T15:27:52.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "type": "dataset",
+      "title": "HPLT/HPLT2.0_cleaned",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2503.10267"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-06-11T09:20:44.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11367,18 +11400,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
       "type": "dataset",
-      "title": "mlfoundations/dclm-baseline-1.0",
-      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
-      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "title": "nvidia/Nemotron-CC-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
       "identifiers": {
         "arxiv": [
-          "2406.11794"
+          "2508.14444"
         ],
         "doi": []
       },
-      "updated_at": "2024-07-22T15:27:52.000Z",
+      "updated_at": "2026-07-07T15:21:11.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11397,23 +11430,6 @@
       "updated_at": "2026-02-11T22:43:35.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:IFM/MegaMath",
-      "type": "dataset",
-      "title": "IFM/MegaMath",
-      "url": "https://huggingface.co/datasets/IFM/MegaMath",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\", \"code\", \"pre-training\", \"synthesis\"], \"size_categories\": [\"1B<n<10B\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2504.02807"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-04-09T13:17:50.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata",
-      "resolved_from_alias": "LLM360/MegaMath"
     },
     {
       "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
@@ -11465,18 +11481,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
+      "id": "hf:dataset:open-web-math/open-web-math",
       "type": "dataset",
-      "title": "nvidia/Nemotron-Terminal-Corpus",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
+      "title": "open-web-math/open-web-math",
+      "url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"date\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 56651995057, \"num_examples\": 6315233}], \"download_size\": 16370689925, \"dataset_size\": 56651995057, \"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OpenWebMath\", \"size_categories\": [\"10B<n<100B\"]}}",
       "identifiers": {
         "arxiv": [
-          "2602.21193"
+          "2310.06786"
         ],
         "doi": []
       },
-      "updated_at": "2026-11-07T02:27:21.000Z",
+      "updated_at": "2023-10-17T20:14:00.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11497,18 +11513,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:open-web-math/open-web-math",
+      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
       "type": "dataset",
-      "title": "open-web-math/open-web-math",
-      "url": "https://huggingface.co/datasets/open-web-math/open-web-math",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"date\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 56651995057, \"num_examples\": 6315233}], \"download_size\": 16370689925, \"dataset_size\": 56651995057, \"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OpenWebMath\", \"size_categories\": [\"10B<n<100B\"]}}",
+      "title": "nvidia/Nemotron-Terminal-Corpus",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
       "identifiers": {
         "arxiv": [
-          "2310.06786"
+          "2602.21193"
         ],
         "doi": []
       },
-      "updated_at": "2023-10-17T20:14:00.000Z",
+      "updated_at": "2026-11-07T02:27:21.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11530,20 +11546,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
       "type": "dataset",
       "title": "tokyotech-llm/swallow-math-v2",
@@ -11556,6 +11558,20 @@
         "doi": []
       },
       "updated_at": "2025-11-06T05:11:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11635,28 +11651,12 @@
       "resolved_from_alias": "laineyyy/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3"
     },
     {
-      "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
-      "type": "dataset",
-      "title": "HPLT/HPLT2.0_cleaned",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
-      "description": "{\"configs\": [{\"config_name\": \"ace_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Arab*/train-*\"}]}, {\"config_name\": \"ace_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ace_Latn*/train-*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"afr_Latn*/train-*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"als_Latn*/train-*\"}]}, {\"config_name\": \"amh_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"amh_Ethi*/train-*\"}]}, {\"config_name\": \"ara_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ara_Arab*/train-*\"}]}, {\"config_name\": \"asm_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"asm_Beng*/train-*\"}]}, {\"config_name\": \"ast_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ast_Latn*/train-*\"}]}, {\"config_name\": \"awa_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"awa_Deva*/train-*\"}]}, {\"config_name\": \"ayr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ayr_Latn*/train-*\"}]}, {\"config_name\": \"azb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"azb_Arab*/train-*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"azj_Latn*/train-*\"}]}, {\"config_name\": \"bak_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bak_Cyrl*/train-*\"}]}, {\"config_name\": \"ban_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ban_Latn*/train-*\"}]}, {\"config_name\": \"bel_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bel_Cyrl*/train-*\"}]}, {\"config_name\": \"bem_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bem_Latn*/train-*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"ben_Beng*/train-*\"}]}, {\"config_name\": \"bho_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"bho_Deva*/train-*\"}]}, {\"config_name\": \"bjn_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Arab*/train-*\"}]}, {\"config_name\": \"bjn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bjn_Latn*/train-*\"}]}, {\"config_name\": \"bod_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"bod_Tibt*/train-*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bos_Latn*/train-*\"}]}, {\"config_name\": \"bug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bug_Latn*/train-*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"bul_Cyrl*/train-*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cat_Latn*/train-*\"}]}, {\"config_name\": \"ceb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ceb_Latn*/train-*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ces_Latn*/train-*\"}]}, {\"config_name\": \"cjk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cjk_Latn*/train-*\"}]}, {\"config_name\": \"ckb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"ckb_Arab*/train-*\"}]}, {\"config_name\": \"crh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"crh_Latn*/train-*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"cym_Latn*/train-*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dan_Latn*/train-*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"deu_Latn*/train-*\"}]}, {\"config_name\": \"dik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dik_Latn*/train-*\"}]}, {\"config_name\": \"dyu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"dyu_Latn*/train-*\"}]}, {\"config_name\": \"dzo_Tibt\", \"data_files\": [{\"split\": \"train\", \"path\": \"dzo_Tibt*/train-*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"ell_Grek*/train-*\"}]}, {\"config_name\": \"eng_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eng_Latn*/train-*\"}]}, {\"config_name\": \"epo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"epo_Latn*/train-*\"}]}, {\"config_name\": \"est_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"est_Latn*/train-*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"eus_Latn*/train-*\"}]}, {\"config_name\": \"ewe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ewe_Latn*/train-*\"}]}, {\"config_name\": \"fao_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fao_Latn*/train-*\"}]}, {\"config_name\": \"fij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fij_Latn*/train-*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fin_Latn*/train-*\"}]}, {\"config_name\": \"fon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fon_Latn*/train-*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fra_Latn*/train-*\"}]}, {\"config_name\": \"fur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fur_Latn*/train-*\"}]}, {\"config_name\": \"fuv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"fuv_Latn*/train-*\"}]}, {\"config_name\": \"gaz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gaz_Latn*/train-*\"}]}, {\"config_name\": \"gla_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gla_Latn*/train-*\"}]}, {\"config_name\": \"gle_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"gle_Latn*/train-*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"glg_Latn*/train-*\"}]}, {\"config_name\": \"grn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"grn_Latn*/train-*\"}]}, {\"config_name\": \"guj_Gujr\", \"data_files\": [{\"split\": \"train\", \"path\": \"guj_Gujr*/train-*\"}]}, {\"config_name\": \"hat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hat_Latn*/train-*\"}]}, {\"config_name\": \"hau_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hau_Latn*/train-*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"heb_Hebr*/train-*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hin_Deva*/train-*\"}]}, {\"config_name\": \"hne_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"hne_Deva*/train-*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hrv_Latn*/train-*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hun_Latn*/train-*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"hye_Armn*/train-*\"}]}, {\"config_name\": \"ibo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ibo_Latn*/train-*\"}]}, {\"config_name\": \"ilo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ilo_Latn*/train-*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ind_Latn*/train-*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"isl_Latn*/train-*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ita_Latn*/train-*\"}]}, {\"config_name\": \"jav_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"jav_Latn*/train-*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"jpn_Jpan*/train-*\"}]}, {\"config_name\": \"kab_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kab_Latn*/train-*\"}]}, {\"config_name\": \"kac_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kac_Latn*/train-*\"}]}, {\"config_name\": \"kam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kam_Latn*/train-*\"}]}, {\"config_name\": \"kan_Knda\", \"data_files\": [{\"split\": \"train\", \"path\": \"kan_Knda*/train-*\"}]}, {\"config_name\": \"kas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Arab*/train-*\"}]}, {\"config_name\": \"kas_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"kas_Deva*/train-*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"kat_Geor*/train-*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kaz_Cyrl*/train-*\"}]}, {\"config_name\": \"kbp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kbp_Latn*/train-*\"}]}, {\"config_name\": \"kea_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kea_Latn*/train-*\"}]}, {\"config_name\": \"khk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"khk_Cyrl*/train-*\"}]}, {\"config_name\": \"khm_Khmr\", \"data_files\": [{\"split\": \"train\", \"path\": \"khm_Khmr*/train-*\"}]}, {\"config_name\": \"kik_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kik_Latn*/train-*\"}]}, {\"config_name\": \"kin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kin_Latn*/train-*\"}]}, {\"config_name\": \"kir_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"kir_Cyrl*/train-*\"}]}, {\"config_name\": \"kmb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmb_Latn*/train-*\"}]}, {\"config_name\": \"kmr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kmr_Latn*/train-*\"}]}, {\"config_name\": \"knc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Arab*/train-*\"}]}, {\"config_name\": \"kon_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"kon_Latn*/train-*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"kor_Hang*/train-*\"}]}, {\"config_name\": \"lao_Laoo\", \"data_files\": [{\"split\": \"train\", \"path\": \"lao_Laoo*/train-*\"}]}, {\"config_name\": \"lij_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lij_Latn*/train-*\"}]}, {\"config_name\": \"lim_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lim_Latn*/train-*\"}]}, {\"config_name\": \"lin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lin_Latn*/train-*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lit_Latn*/train-*\"}]}, {\"config_name\": \"lmo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lmo_Latn*/train-*\"}]}, {\"config_name\": \"ltg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltg_Latn*/train-*\"}]}, {\"config_name\": \"ltz_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ltz_Latn*/train-*\"}]}, {\"config_name\": \"lua_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lua_Latn*/train-*\"}]}, {\"config_name\": \"lug_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lug_Latn*/train-*\"}]}, {\"config_name\": \"luo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"luo_Latn*/train-*\"}]}, {\"config_name\": \"lus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lus_Latn*/train-*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"lvs_Latn*/train-*\"}]}, {\"config_name\": \"mag_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mag_Deva*/train-*\"}]}, {\"config_name\": \"mai_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mai_Deva*/train-*\"}]}, {\"config_name\": \"mal_Mlym\", \"data_files\": [{\"split\": \"train\", \"path\": \"mal_Mlym*/train-*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"mar_Deva*/train-*\"}]}, {\"config_name\": \"min_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"min_Latn*/train-*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"mkd_Cyrl*/train-*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mlt_Latn*/train-*\"}]}, {\"config_name\": \"mni_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"mni_Beng*/train-*\"}]}, {\"config_name\": \"mos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mos_Latn*/train-*\"}]}, {\"config_name\": \"mri_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"mri_Latn*/train-*\"}]}, {\"config_name\": \"mya_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"mya_Mymr*/train-*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nld_Latn*/train-*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nno_Latn*/train-*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nob_Latn*/train-*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"npi_Deva*/train-*\"}]}, {\"config_name\": \"nso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nso_Latn*/train-*\"}]}, {\"config_name\": \"nus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nus_Latn*/train-*\"}]}, {\"config_name\": \"nya_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"nya_Latn*/train-*\"}]}, {\"config_name\": \"oci_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"oci_Latn*/train-*\"}]}, {\"config_name\": \"ory_Orya\", \"data_files\": [{\"split\": \"train\", \"path\": \"ory_Orya*/train-*\"}]}, {\"config_name\": \"pan_Guru\", \"data_files\": [{\"split\": \"train\", \"path\": \"pan_Guru*/train-*\"}]}, {\"config_name\": \"pap_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pap_Latn*/train-*\"}]}, {\"config_name\": \"pbt_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pbt_Arab*/train-*\"}]}, {\"config_name\": \"pes_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"pes_Arab*/train-*\"}]}, {\"config_name\": \"plt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"plt_Latn*/train-*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pol_Latn*/train-*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"por_Latn*/train-*\"}]}, {\"config_name\": \"prs_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"prs_Arab*/train-*\"}]}, {\"config_name\": \"quy_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"quy_Latn*/train-*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ron_Latn*/train-*\"}]}, {\"config_name\": \"run_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"run_Latn*/train-*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"rus_Cyrl*/train-*\"}]}, {\"config_name\": \"san_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"san_Deva*/train-*\"}]}, {\"config_name\": \"sat_Olck\", \"data_files\": [{\"split\": \"train\", \"path\": \"sat_Olck*/train-*\"}]}, {\"config_name\": \"scn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"scn_Latn*/train-*\"}]}, {\"config_name\": \"shn_Mymr\", \"data_files\": [{\"split\": \"train\", \"path\": \"shn_Mymr*/train-*\"}]}, {\"config_name\": \"sin_Sinh\", \"data_files\": [{\"split\": \"train\", \"path\": \"sin_Sinh*/train-*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slk_Latn*/train-*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"slv_Latn*/train-*\"}]}, {\"config_name\": \"smo_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"smo_Latn*/train-*\"}]}, {\"config_name\": \"sna_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sna_Latn*/train-*\"}]}, {\"config_name\": \"snd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"snd_Arab*/train-*\"}]}, {\"config_name\": \"som_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"som_Latn*/train-*\"}]}, {\"config_name\": \"sot_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sot_Latn*/train-*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"spa_Latn*/train-*\"}]}, {\"config_name\": \"srd_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"srd_Latn*/train-*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"srp_Cyrl*/train-*\"}]}, {\"config_name\": \"ssw_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"ssw_Latn*/train-*\"}]}, {\"config_name\": \"sun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sun_Latn*/train-*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swe_Latn*/train-*\"}]}, {\"config_name\": \"swh_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"swh_Latn*/train-*\"}]}, {\"config_name\": \"szl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"szl_Latn*/train-*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"tam_Taml*/train-*\"}]}, {\"config_name\": \"taq_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"taq_Latn*/train-*\"}]}, {\"config_name\": \"tat_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tat_Cyrl*/train-*\"}]}, {\"config_name\": \"tel_Telu\", \"data_files\": [{\"split\": \"train\", \"path\": \"tel_Telu*/train-*\"}]}, {\"config_name\": \"tgk_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgk_Cyrl*/train-*\"}]}, {\"config_name\": \"tgl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tgl_Latn*/train-*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"tha_Thai*/train-*\"}]}, {\"config_name\": \"tir_Ethi\", \"data_files\": [{\"split\": \"train\", \"path\": \"tir_Ethi*/train-*\"}]}, {\"config_name\": \"tpi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tpi_Latn*/train-*\"}]}, {\"config_name\": \"tsn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tsn_Latn*/train-*\"}]}, {\"config_name\": \"tso_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tso_Latn*/train-*\"}]}, {\"config_name\": \"tuk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tuk_Latn*/train-*\"}]}, {\"config_name\": \"tum_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tum_Latn*/train-*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"tur_Latn*/train-*\"}]}, {\"config_name\": \"twi_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"twi_Latn*/train-*\"}]}, {\"config_name\": \"uig_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"uig_Arab*/train-*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"ukr_Cyrl*/train-*\"}]}, {\"config_name\": \"umb_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"umb_Latn*/train-*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"urd_Arab*/train-*\"}]}, {\"config_name\": \"uzn_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"uzn_Latn*/train-*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vec_Latn*/train-*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"vie_Latn*/train-*\"}]}, {\"config_name\": \"war_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"war_Latn*/train-*\"}]}, {\"config_name\": \"wol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"wol_Latn*/train-*\"}]}, {\"config_name\": \"xho_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"xho_Latn*/train-*\"}]}, {\"config_name\": \"ydd_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"ydd_Hebr*/train-*\"}]}, {\"config_name\": \"yor_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"yor_Latn*/train-*\"}]}, {\"config_name\": \"yue_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"yue_Hant*/train-*\"}]}, {\"config_name\": \"zho_Hans\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hans*/train-*\"}]}, {\"config_name\": \"zho_Hant\", \"data_files\": [{\"split\": \"train\", \"path\": \"zho_Hant*/train-*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zsm_Latn*/train-*\"}]}, {\"config_name\": \"zul_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"zul_Latn*/train-*\"}]}, {\"config_name\": \"pag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"pag_Latn*/train-*\"}]}, {\"config_name\": \"sag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"sag_Latn*/train-*\"}]}, {\"config_name\": \"bam_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"bam_Latn*/train-*\"}]}, {\"config_name\": \"knc_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"knc_Latn*/train-*\"}]}], \"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"af\", \"als\", \"am\", \"ar\", \"as\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"ba\", \"bm\", \"ban\", \"be\", \"bem\", \"bn\", \"bho\", \"bjn\", \"bo\", \"bs\", \"bug\", \"bg\", \"ca\", \"ceb\", \"cs\", \"cjk\", \"ckb\", \"crh\", \"cy\", \"da\", \"de\", \"dik\", \"dyu\", \"dz\", \"el\", \"en\", \"eo\", \"et\", \"eu\", \"ee\", \"fo\", \"fj\", \"fi\", \"fon\", \"fr\", \"fur\", \"fuv\", \"gaz\", \"gd\", \"ga\", \"gl\", \"gn\", \"gu\", \"ht\", \"ha\", \"he\", \"hi\", \"hne\", \"hr\", \"hu\", \"hy\", \"ig\", \"ilo\", \"id\", \"is\", \"it\", \"jv\", \"ja\", \"kab\", \"kac\", \"kam\", \"kn\", \"ks\", \"ka\", \"kk\", \"kbp\", \"kea\", \"khk\", \"km\", \"ki\", \"rw\", \"ky\", \"kmb\", \"kmr\", \"knc\", \"kg\", \"ko\", \"lo\", \"lij\", \"li\", \"ln\", \"lt\", \"lmo\", \"ltg\", \"lb\", \"lua\", \"lg\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"ml\", \"mr\", \"min\", \"mk\", \"mt\", \"mni\", \"mos\", \"mi\", \"my\", \"nl\", \"nn\", \"nb\", \"npi\", \"nso\", \"nus\", \"ny\", \"oc\", \"ory\", \"pag\", \"pa\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pl\", \"pt\", \"prs\", \"quy\", \"ro\", \"rn\", \"ru\", \"sg\", \"sa\", \"sat\", \"scn\", \"shn\", \"si\", \"sk\", \"sl\", \"sm\", \"sn\", \"sd\", \"so\", \"st\", \"es\", \"sc\", \"sr\", \"ss\", \"su\", \"sv\", \"swh\", \"szl\", \"ta\", \"taq\", \"tt\", \"te\", \"tg\", \"tl\", \"th\", \"ti\", \"tpi\", \"tn\", \"ts\", \"tk\", \"tum\", \"tr\", \"tw\", \"ug\", \"uk\", \"umb\", \"ur\", \"uzn\", \"vec\", \"vi\", \"war\", \"wo\", \"xh\", \"ydd\", \"yo\", \"yue\", \"zh\", \"zsm\", \"zu\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2503.10267"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-06-11T09:20:44.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/openthoughts-3/metadata.yaml",
       "type": "source_file",
       "title": "flag/openthoughts-3/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/openthoughts-3/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "9e1ebfec3ea120638bddcbafb1cc45c0d0c54639",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11665,9 +11665,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/openthoughts-3/etc/textify.py",
       "type": "processing_script",
       "title": "flag/openthoughts-3/etc/textify.py",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.py",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/openthoughts-3/etc/textify.py",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "edc953bd4ce23a5837965606da41bd759ec7173e",
       "description": "Processing script found in the same directory; execution not verified",
       "updated_at": null
@@ -11676,9 +11676,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/openthoughts-3/etc/textify.slurm",
       "type": "processing_script",
       "title": "flag/openthoughts-3/etc/textify.slurm",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.slurm",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/openthoughts-3/etc/textify.slurm",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "58bfadd3338c7619a07f8e47a5a903a945b0cb6e",
       "description": "Processing script found in the same directory; execution not verified",
       "updated_at": null
@@ -11687,9 +11687,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/agenttrove-0.0/metadata.yaml",
       "type": "source_file",
       "title": "flag/agenttrove-0.0/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/agenttrove-0.0/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/agenttrove-0.0/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "bc210d3cbf82bc0934258b612cdb1987f6339bb9",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11698,9 +11698,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/dolmino-mix-100b-1125-pure/metadata.yaml",
       "type": "source_file",
       "title": "flag/dolmino-mix-100b-1125-pure/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/dolmino-mix-100b-1125-pure/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/dolmino-mix-100b-1125-pure/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "58385783541b20265a04c12ece1725d3400b3c4b",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11709,9 +11709,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/dolmino-mix-100b-1125/metadata.yaml",
       "type": "source_file",
       "title": "flag/dolmino-mix-100b-1125/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/dolmino-mix-100b-1125/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/dolmino-mix-100b-1125/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "4d76a98a1eb1af466581cd0c44f5fedc7f1dff08",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11720,9 +11720,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/fineweb2-hq-1.0.0/metadata.yaml",
       "type": "source_file",
       "title": "flag/fineweb2-hq-1.0.0/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/fineweb2-hq-1.0.0/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/fineweb2-hq-1.0.0/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "806348975166cf5ddfac05f13b60c27194f05991",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11731,9 +11731,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/nemotron-mind-0.0/metadata.yaml",
       "type": "source_file",
       "title": "flag/nemotron-mind-0.0/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-mind-0.0/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/nemotron-mind-0.0/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "a739e02917f50c4f18e12ca1b2a10fece12e4871",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11742,9 +11742,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/nemotron-pretraining-specialized-1.0/metadata.yaml",
       "type": "source_file",
       "title": "flag/nemotron-pretraining-specialized-1.0/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-pretraining-specialized-1.0/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/nemotron-pretraining-specialized-1.0/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "edc948034de8cfa1233a331734c0333e9a40e65a",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -11753,9 +11753,9 @@
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/nemotron-pretraining-specialized-1.1/metadata.yaml",
       "type": "source_file",
       "title": "flag/nemotron-pretraining-specialized-1.1/metadata.yaml",
-      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/nemotron-pretraining-specialized-1.1/metadata.yaml",
+      "url": "https://github.com/OpenEuroLLM/training-data-collection/blob/cc72669dd3340419bc793c2d9bf96ceb314928c8/flag/nemotron-pretraining-specialized-1.1/metadata.yaml",
       "repository": "OpenEuroLLM/training-data-collection",
-      "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+      "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
       "blob_sha": "c6bfcbda299e11b623bc422cd0b0fc74e34e385e",
       "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
       "updated_at": null
@@ -12967,6 +12967,175 @@
       "research_type": "publication"
     },
     {
+      "id": "github_comment:OpenEuroLLM/Taskboard#4276947736",
+      "type": "issue_comment",
+      "title": "Comment 4276947736 on github:OpenEuroLLM/Taskboard#207",
+      "description": "Scaling EP instead of PP or TP seems to be the way to go. [Config](https://github.com/OpenEuroLLM/oellm-autoexp/blob/exp_ville_jupiter/config/experiments/ville/jupiter/jupiter_qwen-235B_sweep-parallelism.yaml). This is counterintuitive to me as i thought Expert Parallelism being heavier than PP across nodes.\n\n<img width=\"3456\" height=\"2656\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/69b7ced6-162e-4e73-bb47-38ebe8ecdeba\" />",
+      "body_sha256": "69dd6cc3b8af0031ca37fadddf4c09d748f97faf2e7c20fcce0adea194d38ecc",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4276947736",
+      "updated_at": "2026-04-19T22:22:49Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#207",
+      "comment_id": 4276947736,
+      "author": "Vmjkom"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#4282486708",
+      "type": "issue_comment",
+      "title": "Comment 4282486708 on github:OpenEuroLLM/Taskboard#207",
+      "description": "There's very little difference in performance between setting the number of dataloader workers from 2 to 16 and the difference seen here could even be down to random variance. However, 8 seems to be the sweet spot. I don't know how this scales with node count. This run was on 32 nodes and --cpus-per-task=228.\n\n<img width=\"5056\" height=\"2656\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e8f2cd38-d781-48b3-963a-58f8bdedc7b0\" />",
+      "body_sha256": "76ad54d722dae5d5ac1cee26dea66f55570fa23a25d2fa232e0501c6fb405972",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4282486708",
+      "updated_at": "2026-04-20T16:18:40Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#207",
+      "comment_id": 4282486708,
+      "author": "Vmjkom"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#4612397404",
+      "type": "issue_comment",
+      "title": "Comment 4612397404 on github:OpenEuroLLM/Taskboard#207",
+      "description": "[WANDB report](https://wandb.ai/openeurollm-project/qwen3-235B-A22B-scaling-jupiter/reports/qwen3-235B-A22B-Scaling--VmlldzoxNjkzNTIyMg)",
+      "body_sha256": "2e1dd420f2fb17b2dafc46d8db7a7deb15371a81147db33e431f4f1aa0d58130",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4612397404",
+      "updated_at": "2026-06-03T12:41:02Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#207",
+      "comment_id": 4612397404,
+      "author": "Vmjkom"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6540724461",
+      "type": "issue_comment",
+      "title": "Comment 6540724461 on github:OpenEuroLLM/Taskboard#442",
+      "description": "## SFT runs ― Started\n\n> Rerun SFT excellent before / after chat template fix from https://huggingface.co/marianna13/prelude-9b-midtrain-v1 to remove starting point cofounding factor\n\nWhile keeping the base model fixed helps having a more comparable experiment, we should keep in mind that the tokenizer has different token ids for the control markers as detailed below. Based on this, I have **scheduled the following 2 SFT runs** to see how both the tokenizer and chat template affect, if any, the model performance:\n- Using the midtrained model's bundled tokenizer and chat template. **(Done. 06.11.2026)**\n- Using the [Prelude-PT tokenizer](https://huggingface.co/openeurollm/tokenizer-256k/commits/qwen3-tokens) and our Qwen-adapted chat template. **(Done. 06.11.2026)**\n\n### Different token ids\nThe control markers have different token ids, compared to the ones defined in the [tokenizer](https://huggingface.co/openeurollm/tokenizer-256k/commits/qwen3-tokens) we agreed to use for post-training. We could call this tokenizer the Prelude-PT tokenizer.\n\nHere is how both tokenizers—Prelude-PT and the tokenizer bundled in the midtrained model—compare to the tokenizer bundled in the [prelude base model](https://huggingface.co/openeurollm/prelude).\n\nThe prelude-pt tokenizer **repurposes existing token ids**.\n| ID | Prelude Base | Prelude-PT Tokenizer |\n|---:|---|---|\n| 3 | `<start_of_turn>` | `<\\|im_start\\|>` |\n| 4 | `<end_of_turn>` | `<\\|im_end\\|>` |\n| 13 | `<unused_0>` | `<tools>` |\n| 14 | `<unused_1>` | `</tools>` |\n| 15 | `<unused_2>` | `<tool_response>` |\n| 16 | `<unused_3>` | `</tool_response>` |\n| 17 | `<unused_4>` | `</think>` |\n| 18 | `<unused_5>` | `<think>` |\n\nThe midtrained model from Marianna **extends the vocabulary**.\n| ID | Prelude Base | Midtrained |\n|---:|---|---|\n| 262145 | NA | `<\\|im_start\\|>` |\n| 262146 | NA | `<\\|im_end\\|>` |\n| 262147 | NA | `<think>` |\n| 262148 | NA | `</think>` |\n| 262149 | NA | `<tool_response>` |\n| 262150 | NA | `</tool_response>` |",
+      "body_sha256": "7dc9724b6a63f915c6a99ea1046443d55242bf33b22f0eb4d377164fb9f718f7",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6540724461",
+      "updated_at": "2026-11-06T10:36:05Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#442",
+      "comment_id": 6540724461,
+      "author": "Ali-Elganzory"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6631602556",
+      "type": "issue_comment",
+      "title": "Comment 6631602556 on github:OpenEuroLLM/Taskboard#442",
+      "description": "## Evaluations ― MATH500\n\n**TL;DR:** The cause of the gap is the thinking adherence issue―that is the model generates empty thinking blocks despite the thinking mode being enabled.\n\nSFT-Excellent (thinking adherence fixed) reaches **91.0%** with thinking enabled, compared with **61.4%** for SFT-Excellent-Old (with thinking adherence issue) and **91.6%** for Marianna's SFT-v2 under our evaluation protocol. The improvement is consistent with fixing empty thinking blocks, but the base model also changed. A same-base control run has been submitted to isolate the effect of the fix.\n\nSince the resources on MN5 are congested, I have limited the initial evaluation to MATH500.\n\n------\n\n### Scores on MATH500\n\n- Evaluations used lm-evaluation-harness at commit [`d6de81643928d653435c431bae19945d41d32520`](https://github.com/EleutherAI/lm-evaluation-harness/tree/d6de81643928d653435c431bae19945d41d32520), reporting `math_verify` accuracy.\n- We explicitly configured zero-shot, greedy decoding, one response per problem, and a 32,768-token output cap.\n\n| Checkpoint | Base model | Thinking enabled | Thinking disabled |\n|---|---|---:|---:|\n| [Marianna's midtrain](https://huggingface.co/marianna13/prelude-9b-midtrain-v1) | [dominant2 cooldown](https://huggingface.co/openeurollm/prelude-base/tree/anneal300b_multilingual1_dominant2_iter_0989075) | 78.6% | 71.6% |\n| [Marianna's SFT-v2](https://huggingface.co/marianna13/prelude-9b-sft-v2) | [Marianna's midtrain](https://huggingface.co/marianna13/prelude-9b-midtrain-v1) | 91.6% | 63.2% |\n| [SFT-Excellent-Old](https://huggingface.co/openeurollm/OpenEuroLLM-Prelude-SFT-Excellent-Instructions) | [Prelude-Anneal300B-Theta32M](https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b) | 61.4% | 62.0% |\n| SFT-Excellent (local, unpublished) | [Prelude-Anneal300B-RoPE20M](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) | 91.0% | 63.4% |\n\n> [!Note]\n“Thinking enabled” permits reasoning through the chat template; it does not force a non-empty reasoning trace. Consequently, models with poor thinking-mode adherence can generate empty thinking blocks even when thinking is enabled. This is the issue observed in SFT-Excellent-Old.\n\n### Base checkpoints\n\n| Checkpoint | Completion-only |\n|---|---:|\n| [Prelude-8T](https://huggingface.co/openeurollm/prelude/tree/iter_0953312) | 5.8% |\n| [Prelude-Anneal300B-RoPE20M](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) | N/A |\n\nThe Prelude-8T completion baseline used a 2,048-token output cap. Results for Prelude-Anneal300B-RoPE20M are unavailable, yet.\n\n### Interpretation\n\nThe lower thinking-enabled performance of SFT-Excellent-Old was probably caused, at least in substantial part, by its thinking-adherence issue. Its nearly identical enabled/disabled scores are consistent with that explanation. With the fix, SFT-Excellent reaches **91.0%** with thinking enabled, versus **63.4%** with thinking disabled. This corroborate what Niclas has [found](https://mattermost.ufal.mff.cuni.cz/openeurollm/pl/hnotun7beprpfm95cbju8ux5dr).\n\nUnder our evaluation protocol, the updated model also substantially closes the gap with M-SFT-v2. This supports, but does not establish, the explanation that empty thinking blocks contributed to the earlier gap.\n\n### Follow-up\n\nThe base model also changed, so this comparison alone does not establish causality.\n\nA third, full two-epoch SFT run has been submitted with the fix applied to **the same Birger base used for SFT-Excellent-Old**. This controlled comparison will help determine whether the improvement comes from the thinking-adherence fix rather than the change in base model.\n\n> [!Note]\nThese scores are not directly comparable to Marianna’s reported results. She used **Evalchemy**, while we used **lm-evaluation-harness**, with differences in the evaluation protocol; for example, prompting, decoding settings, and answer scoring.",
+      "body_sha256": "668d9a47ee9a7b7ab35f29f038bd3e2409b42857280f43a6024a7c6e5529b6fe",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6631602556",
+      "updated_at": "2026-11-04T13:35:30Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#442",
+      "comment_id": 6631602556,
+      "author": "Ali-Elganzory"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6635516812",
+      "type": "issue_comment",
+      "title": "Comment 6635516812 on github:OpenEuroLLM/Taskboard#442",
+      "description": "> This corroborate what Niclas has [found](https://mattermost.ufal.mff.cuni.cz/openeurollm/pl/hnotun7beprpfm95cbju8ux5dr).\n\nExplaining @nicher92's finding here for convenience:\n\nThe chat template we use adds empty think tags when there is no thinking trace, like so:\n\n```\n<|im_start|>\n<think>\n\n</think>\nThe capital of France is Paris.<|im_end|>\n```\n\nThis makes it difficult to force the model to output reasoning traces by adding an opening `<think>` tag, because it might just produce empty traces. Niclas' workaround was to force a non-empty reasoning trace by adding the first word of reasoning after the `<think>` tag, like this:\n```\n<|im_start|>\n<think>\nFirst,\n# model generates the rest. It understands that this shouldn't be an empty reasoning trace.\n```\n\nThe following were the results on Math500 with the default and \"forced\" thinking modes:\n| Task    | Mode    | n   | Acc   | Think  | Trunc | Tokens |\n|---------|---------|-----|-------|--------|-------|--------|\n| math500 | default | 500 | 34.8% | 2.0%   | 0.0%  | 858    |\n| math500 | forced  | 500 | 84.6% | 100.0% | 0.0%  | 3591   |\n\nThe forced thinking mode has thinking traces for 100% of the samples, and substantially higher accuracy than the default mode (84.6\\% vs 34.8\\%).\n",
+      "body_sha256": "1512c97a5f0b33144759f2840fb3d9b903b981fd7aa38dae151b4424564f1750",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812",
+      "updated_at": "2026-11-04T16:05:34Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#442",
+      "comment_id": 6635516812,
+      "author": "Neonkraft"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6721237269",
+      "type": "issue_comment",
+      "title": "Comment 6721237269 on github:OpenEuroLLM/Taskboard#442",
+      "description": "## Evaluation update ―  More benchmarks & Checkpoints\n\n### tl;dr\nAfter the thinking-adherence fix, SFT-Excellent-v0.2 shows substantially stronger thinking-enabled mathematics performance than SFT-Excellent-v0.1 after being trained on the same data.\n\n### Main models\n- Marianna's SFT-v2\n- SFT-Excellent-v0.1[^sft-excellent-old]\n- SFT-Excellent-v0.2[^sft-excellent] using two different bases: David’s RoPE20M base and Marianna’s midtrain.\n\nLinks to the models are provided in the tables below.\n\n[^sft-excellent-old]: What Marianna has evaluated earlier [here](https://mattermost.ufal.mff.cuni.cz/openeurollm/pl/hf7qj4amtpd1u89u975jcsgwhy) as “SFT-Excellent”; now called \"SFT-Excellent-v0.1\". This checkpoint had an issue, where it did not properly adhere to the set thinking mode. For example, it would generate empty thinking blocks when thinking was enabled.\n\n[^sft-excellent]: Trained with thinking tags conditioning, which is inspired by Qwen's [Thinking Mode Fusion](https://arxiv.org/html/2505.09388v1#S4.SS3:~:text=4.3-,Thinking%20Mode%20Fusion,-The%20goal%20of).\n\n### Benchmarks\n\n| Benchmark | Metric |\n|---|---|\n| MATH500 | Math-Verify |\n| AIME24 | exact match |\n| AIME25 | exact match |\n| GPQA-D | flexible-extract exact match |\n| IFEval | prompt-level strict accuracy |\n\n**Note:** SFT-Excellent data is decontaminated against all of the aforementioned benchmarks.\n\n### Code\n- `lm-evaluation-harness` at revision [`d6de816`](https://github.com/EleutherAI/lm-evaluation-harness/tree/d6de81643928d653435c431bae19945d41d32520).\n\n### Inference settings\n| Setting | Value |\n|---|---|\n| Backend | vLLM 0.24.0 |\n| Temperature | 0.0 |\n| Samples per problem | 1 |\n| Few-shot examples | 0 |\n| Maximum generated tokens | 32,768 |\n| Maximum context length | 65,536 |\n| Thinking mode | Both |\n| Reasoning trace | Removed when present |\n\n### Scores\n\n**Bold** indicates the highest score in each benchmark column within each table.\n\n#### Thinking enabled\n\n| Model | Base model | MATH500 | AIME24 | AIME25 | GPQA-D | IFEval |\n|---|---|---:|---:|---:|---:|---:|\n| [Marianna's SFT-v2](https://huggingface.co/marianna13/prelude-9b-sft-v2) | [Marianna's midtrain](https://huggingface.co/marianna13/prelude-9b-midtrain-v1) | 91.6 | 53.3 | 33.3 | **51.0** | **70.8** |\n| [SFT-Excellent-v0.1](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.1) | [Birger’s Theta32M base](https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b) | 61.4 | 0.0 | 6.7 | 31.3 | 65.2 |\n| [SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2) | [David’s RoPE20M base](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) | 91.0 | **63.3** | 46.7 | 21.2[^gpqa-on] | 58.8 |\n| [SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-Marianna-midtrain-SFT-Excellent-v0.2) | [Marianna’s midtrain](https://huggingface.co/marianna13/prelude-9b-midtrain-v1) | **93.0** | 56.7 | **53.3** | 25.3[^gpqa-on] | 66.0 |\n\n#### Thinking disabled\n\n| Model | Base model | MATH500 | AIME24 | AIME25 | GPQA-D | IFEval |\n|---|---|---:|---:|---:|---:|---:|\n| Marianna's SFT-v2 | Marianna's midtrain | 63.2 | **16.7** | 13.3 | **35.9** | **71.2** |\n| SFT-Excellent-v0.1 | Birger’s Theta32M base | 62.0 | 0.0 | 10.0 | 31.3 | 64.7 |\n| SFT-Excellent-v0.2 | David’s RoPE20M base | 63.4 | 3.3[^aime-off] | 3.3[^aime-off] | 28.8 | 62.5 |\n| SFT-Excellent-v0.2 | Marianna’s midtrain | **71.6** | 6.7[^aime-off] | **20.0** | 35.4 | 66.4 |\n\n[^aime-off]: Still have not looked into this drop.\n\n[^gpqa-on]: Two confirmed problems affect the reported scores: 1. Generation budget exhaustion, i.e., truncated responses. For instance, for SFT-Excellent-v0.2 (David’s RoPE20M base), **122/198 responses reached the token cap without closing their thinking block**. 2. The harness answer extraction is not robust; the prompt does not specify the output format, and the extractor occasionally matches incidental letters.\n\n### Base model evaluation\n\n| Base model | Mode | MATH500 | AIME24 | AIME25 | GPQA-D | IFEval |\n|---|---|---:|---:|---:|---:|---:|\n| [Prelude-8T](https://huggingface.co/openeurollm/prelude/tree/iter_0953312) | Completion-only | 5.8 | 0.0 | 0.0 | 19.2 | 13.3 |\n| [Prelude-Anneal300B-RoPE20M](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) | Thinking on | N/A | 0.0 | 0.0 | 22.7 | 28.1 |\n| Same | Thinking off | N/A | 0.0 | 0.0 | 2.5 | 10.9 |\n\nThe completion-only Prelude-8T evaluation uses a smaller context/output budget and is not directly comparable to the chat evaluations.\n\n> [!NOTE]\n> The results presented here are not comparable to the ones reported by Marianna, for the code and inference settings are different. She uses `evalchemy`. We use `lm-evaluation-harness`. All the details of the evaluation settings are described above.\n\n> [!NOTE]\n> The two SFT-Excellent-v0.2 models used two base models that are different than the one used for SFT-Excellent-v0.1. An SFT run with the thinking-adherence fix using the same base model as SFT-Excellent-v0.1 is in progress, and we will report its results once available. Nonetheless, we do not expect the base model to be a major factor in the thinking-enabled performance difference between SFT-Excellent-v0.1 and SFT-Excellent-v0.2.",
+      "body_sha256": "efb51fe79b5f839e169a60d0c095e25fc2d2ae71011f283944e574ee18aac298",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6721237269",
+      "updated_at": "2026-11-08T12:31:50Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#442",
+      "comment_id": 6721237269,
+      "author": "Ali-Elganzory"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6121454202",
+      "type": "issue_comment",
+      "title": "Comment 6121454202 on github:OpenEuroLLM/Taskboard#432",
+      "description": "Work in progress in the [Llamafactory branch](https://github.com/OpenEuroLLM/post-training/tree/feat/llamafactory-support)",
+      "body_sha256": "d7e2ad0c41ad7a4b95e5b080f2ef6ed023d39802878b5603119656a11ce6acdf",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432#issuecomment-6121454202",
+      "updated_at": "2026-10-12T09:25:45Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#432",
+      "comment_id": 6121454202,
+      "author": "Neonkraft"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6416137570",
+      "type": "issue_comment",
+      "title": "Comment 6416137570 on github:OpenEuroLLM/Taskboard#432",
+      "description": "The PR for LlamaFactory can be found [here](https://github.com/OpenEuroLLM/post-training/pull/65#discussion_r4375914773). A trial run of tokenization for SFT using `LlamaFactory` was tested.\n\n",
+      "body_sha256": "46af0d5f45ce236822c1923adcaf255d73c7201d380981a4d572cde2d80d9d2f",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432#issuecomment-6416137570",
+      "updated_at": "2026-10-26T12:35:44Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#432",
+      "comment_id": 6416137570,
+      "author": "Neonkraft"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6121054773",
+      "type": "issue_comment",
+      "title": "Comment 6121054773 on github:OpenEuroLLM/Taskboard#433",
+      "description": "The feature is ready on [the fsdp branch](https://github.com/OpenEuroLLM/post-training/tree/fsdp). However, DPO runs of the [Prelude checkpoint](https://huggingface.co/openeurollm/oellm-9b-256k-theta64m-prelude) fails due to OOM issues on LUMI (the AMD MI250X GPUs have only 64 GB of VRAM). Currently experimenting with different training configurations to make it fit.",
+      "body_sha256": "5b1619a14f239f8e4d4785adae8935c53ee01a08147fb7d00debbb485216a13b",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
+      "updated_at": "2026-10-12T09:00:23Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#433",
+      "comment_id": 6121054773,
+      "author": "Neonkraft"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6681393457",
+      "type": "issue_comment",
+      "title": "Comment 6681393457 on github:OpenEuroLLM/Taskboard#445",
+      "description": "Current version is here, it generates plots & markdown from single command from evals present on HF:\n\nhttps://github.com/OpenEuroLLM/notebooks/tree/main/prelude-evaluations-model-card\n\n<img width=\"683\" height=\"697\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/b3a2157d-7a12-48f9-b97a-7c254974cea5\" />",
+      "body_sha256": "a35894396f611f0ef2408dce95fe36a4174bdb1257abb38b07d6838d9febc7b3",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/445#issuecomment-6681393457",
+      "updated_at": "2026-11-06T09:13:14Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#445",
+      "comment_id": 6681393457,
+      "author": "geoalgo"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#5817574354",
+      "type": "issue_comment",
+      "title": "Comment 5817574354 on github:OpenEuroLLM/Taskboard#416",
+      "description": "## Update: Performed SFT on the curated dataset (\"excellent\" instructions)\n##  Setup\n- Dataset: [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT)\n- 2 training runs using 2 different pre-trained models:\n  - Olmo3: `allenai/Olmo-3-1025-7B`\n  - OpenEuroLLM Prelude: `birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b`.\n- Budget: 2 epochs.\n  - Using Olmo3 tokenizer: 2 x 25,947,239,071 (~26B) = ~52B tokens.\n  - Using Prelude tokenizer: 2 x 29,154,931,289 (~29B) = ~58B tokens.\n- Training runs are performed using the [post-training](https://github.com/OpenEuroLLM/post-training) codebase.\n- Complete post-training config file: https://github.com/OpenEuroLLM/post-training/blob/95d1e22708a919d3e9e7e5a227ce9284b235331b/configs/trl/prelude-sft-issue416.yaml.\n\n## Training loss and accuracy\n- The curves look healthy, no abnormal signs.\n- Prelude seems to be leading olmo on both token accuracy and loss over time.\n- Both have different training lengths because they use different tokenizers.\n- W&B: https://wandb.ai/openeurollm-project/instruction-selection/workspace.\n\n<img width=\"1033\" height=\"306\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2986f9eb-6ea8-4e44-97e0-548105a8e441\" />\n\n## Evaluation\n- AH2 baseline model: Olmo3-Instruct-SFT (`allenai/Olmo-3-7B-Instruct-SFT`)\n- Prelude overtakes the Olmo3 baseline around the start of the 2nd epoch.\n- No improvement signal is observed from the elo ratings.\n- Evaluations are performed using [JudgeArena](https://github.com/OpenEuroLLM/JudgeArena).\n\n<img width=\"2378\" height=\"1011\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0ce308f4-4370-4b99-8ffc-535b3a06b0fc\" />\n\n__Decoding parameters__\n\n| Parameter | Value |\n|---|---:|\n| Temperature | 0.6 |\n| Top-p | 0.95 |\n| Top-k | Unset |\n| Repetition penalty | 1.1 |\n| Max output tokens | 32,768 |\n| Seed | 0 |\n\n## Next steps\n- Compare \"Prelude base -> SFT Think/Instruct\" against \"Prelude fine tuned on Dolci SFT Instruct\"\n- Compare “Olmo base -> our SFT Think/Instruct curated dataset\" against \"Olmo3 base -> Dolci SFT Think -> Dolci SFT Instruct\" (available checkpoints)\n- Add more evaluations, like ifeval, mbpp, etc.",
+      "body_sha256": "66609f1970645c8f62cd7fa7730ea53c4c474d63113e14b1cf9ace5f015c2efb",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/416#issuecomment-5817574354",
+      "updated_at": "2026-10-28T09:14:34Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#416",
+      "comment_id": 5817574354,
+      "author": "Ali-Elganzory"
+    },
+    {
+      "id": "github_comment:OpenEuroLLM/Taskboard#6439391540",
+      "type": "issue_comment",
+      "title": "Comment 6439391540 on github:OpenEuroLLM/Taskboard#405",
+      "description": "## PR and validation tracking\n\n| Task | Upstream PR | Status |\n| --- | --- | --- |\n| CrowS-Pairs | https://github.com/OpenEuroLLM/oellm-eval/pull/124 | Merged upstream |\n| BBQ + Inspect AI | https://github.com/OpenEuroLLM/oellm-eval/pull/138 | Open; integrated in kerkathy/main; smoke test passed |\n| ToxiGen | https://github.com/OpenEuroLLM/oellm-eval/pull/139 | Open; integrated in kerkathy/main; smoke test passed |\n| RealToxicityPrompts | Not yet |  |\n",
+      "body_sha256": "af47dcf94ff07e65e03153272a316ebf504913bd76e2f11d5b7205dc792e55f2",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/405#issuecomment-6439391540",
+      "updated_at": "2026-10-27T10:24:39Z",
+      "repository": "OpenEuroLLM/Taskboard",
+      "issue_id": "github:OpenEuroLLM/Taskboard#405",
+      "comment_id": 6439391540,
+      "author": "kerkathy"
+    },
+    {
       "id": "wandb_run:openeurollm-project/oellm_32b_dense/tjeg54n7",
       "type": "experiment_run_ref",
       "title": "oellm_32b_dense/tjeg54n7",
@@ -13833,15 +14002,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2510.01179",
-      "context": "Both public metadata records contain arxiv:2510.01179",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
       "target": "openaire:doi_dedup___::0cf39ecf056ba0d4f09fe7c7aeddaef2",
       "status": "identifier_match",
@@ -13860,6 +14020,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2510.01179",
+      "context": "Both public metadata records contain arxiv:2510.01179",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:common-pile/stackv2_edu_filtered",
       "target": "openaire:doi_dedup___::71c317ecfa4a1627fd81a73e7e3fffa8",
       "status": "identifier_match",
@@ -13893,15 +14062,6 @@
       "evidence_type": "arxiv",
       "evidence": "2506.05209",
       "context": "Both public metadata records contain arxiv:2506.05209",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
-      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2512.13961",
-      "context": "Both public metadata records contain arxiv:2512.13961",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13932,12 +14092,39 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "source": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
+      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
+      "evidence": "2512.13961",
+      "context": "Both public metadata records contain arxiv:2512.13961",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:IFM/MegaMath",
+      "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2504.02807",
+      "context": "Both public metadata records contain arxiv:2504.02807",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2406.11794",
+      "context": "Both public metadata records contain arxiv:2406.11794",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
+      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2503.10267",
+      "context": "Both public metadata records contain arxiv:2503.10267",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13968,12 +14155,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2406.11794",
-      "context": "Both public metadata records contain arxiv:2406.11794",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13983,15 +14170,6 @@
       "evidence_type": "arxiv",
       "evidence": "2512.15489",
       "context": "Both public metadata records contain arxiv:2512.15489",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:IFM/MegaMath",
-      "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2504.02807",
-      "context": "Both public metadata records contain arxiv:2504.02807",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14040,12 +14218,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
+      "source": "hf:dataset:open-web-math/open-web-math",
+      "target": "openaire:doi_dedup___::7e37ef6754b1894804cda904eb104f04",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2602.21193",
-      "context": "Both public metadata records contain arxiv:2602.21193",
+      "evidence": "2310.06786",
+      "context": "Both public metadata records contain arxiv:2310.06786",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14058,12 +14236,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:open-web-math/open-web-math",
-      "target": "openaire:doi_dedup___::7e37ef6754b1894804cda904eb104f04",
+      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
+      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2310.06786",
-      "context": "Both public metadata records contain arxiv:2310.06786",
+      "evidence": "2602.21193",
+      "context": "Both public metadata records contain arxiv:2602.21193",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14109,15 +14287,6 @@
       "evidence_type": "arxiv",
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:HPLT/HPLT2.0_cleaned",
-      "target": "openaire:doi_dedup___::a1064df700075901409c1b8f487ff778",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2503.10267",
-      "context": "Both public metadata records contain arxiv:2503.10267",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -16445,6 +16614,188 @@
       "evidence": "#22",
       "context": "Argument parser monitor parameters don't work Fixes #22",
       "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#207",
+      "target": "github_comment:OpenEuroLLM/Taskboard#4276947736",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4276947736",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#207",
+      "target": "github_comment:OpenEuroLLM/Taskboard#4282486708",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4282486708",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#207",
+      "target": "github_comment:OpenEuroLLM/Taskboard#4612397404",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4612397404",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#442",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6540724461",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6540724461",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#442",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6631602556",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6631602556",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#442",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6635516812",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#442",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6721237269",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6721237269",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#432",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6121454202",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/432#issuecomment-6121454202",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#432",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6416137570",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/432#issuecomment-6416137570",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#433",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6121054773",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#445",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6681393457",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/445#issuecomment-6681393457",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#416",
+      "target": "github_comment:OpenEuroLLM/Taskboard#5817574354",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/416#issuecomment-5817574354",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#405",
+      "target": "github_comment:OpenEuroLLM/Taskboard#6439391540",
+      "status": "source_comment",
+      "relationship": "has_public_comment",
+      "evidence_type": "github_issue_comment_api",
+      "evidence": "https://github.com/OpenEuroLLM/Taskboard/issues/405#issuecomment-6439391540",
+      "reason": "Public comment linked to the task, not an endorsed conclusion"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#417",
+      "target": "github:OpenEuroLLM/Taskboard#408",
+      "status": "author_declared_dependency",
+      "relationship": "declares_depends_on",
+      "evidence_type": "labeled_dependencies_section",
+      "evidence": "__Dependencies__\n✅  Prelude evals https://github.com/OpenEuroLLM/Taskboard/issues/408",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/417",
+      "source_sha256": "c2510d180f7201ed36e3ea26b11fe524238fcb7175def26d9b2fd5701483ae62",
+      "reason": "Issue author explicitly declares dependency; not verified blocking or measured impact"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#391",
+      "target": "github:OpenEuroLLM/Taskboard#432",
+      "status": "author_declared_dependency",
+      "relationship": "declares_depends_on",
+      "evidence_type": "labeled_dependencies_section",
+      "evidence": "__Dependencies__\nIssue #432, which extends LlamaFactory support to the `post-training` repo.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+      "source_sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+      "reason": "Issue author explicitly declares dependency; not verified blocking or measured impact"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#366",
+      "target": "github:OpenEuroLLM/Taskboard#161",
+      "status": "author_declared_dependency",
+      "relationship": "declares_depends_on",
+      "evidence_type": "labeled_dependencies_section",
+      "evidence": "__Dependencies__\nCompletion of #161 #308 ",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/366",
+      "source_sha256": "dbe7c93bd2f546a55ababe2eac992f5f068426fcc4762af384ea32952bd9d6bb",
+      "reason": "Issue author explicitly declares dependency; not verified blocking or measured impact"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#366",
+      "target": "github:OpenEuroLLM/Taskboard#308",
+      "status": "author_declared_dependency",
+      "relationship": "declares_depends_on",
+      "evidence_type": "labeled_dependencies_section",
+      "evidence": "__Dependencies__\nCompletion of #161 #308 ",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/366",
+      "source_sha256": "dbe7c93bd2f546a55ababe2eac992f5f068426fcc4762af384ea32952bd9d6bb",
+      "reason": "Issue author explicitly declares dependency; not verified blocking or measured impact"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#122",
+      "target": "github:OpenEuroLLM/Taskboard#121",
+      "status": "author_declared_dependency",
+      "relationship": "declares_depends_on",
+      "evidence_type": "explicit_dependency_phrase",
+      "evidence": "Depends on #121",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/122",
+      "source_sha256": "b7272952dfcb2a99c7d4b58da18a9794841d61a99676a496f86e5052fda3d520",
+      "reason": "Issue author explicitly declares dependency; not verified blocking or measured impact"
+    },
+    {
+      "source": "github_comment:OpenEuroLLM/Taskboard#6121054773",
+      "target": "github:OpenEuroLLM/Taskboard#433",
+      "status": "reported_blocker",
+      "relationship": "reports_failure_for",
+      "evidence_type": "explicit_oom_failure_statement",
+      "evidence": "fails due to OOM",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
+      "reason": "Commenter reports an OOM failure; neither independently reproduced nor a task dependency"
     }
   ],
   "external_hf_card_references": [
@@ -17281,7 +17632,7 @@
   ],
   "github_code_scan": {
     "repository": "OpenEuroLLM/training-data-collection",
-    "commit_sha": "5e4ce51c390bb3731f14e63012ffff4f1a472da9",
+    "commit_sha": "cc72669dd3340419bc793c2d9bf96ceb314928c8",
     "candidate_manifests": 36,
     "selected_manifests": 32,
     "manifests_with_dataset_url": 8,
@@ -17508,6 +17859,11 @@
       "reason": "target_not_indexed"
     }
   ],
+  "github_comment_collection": {
+    "status": "complete",
+    "selected_issues": 10,
+    "fetched_comments": 13
+  },
   "errors": {},
   "openaire_search_total": 8,
   "quality": {

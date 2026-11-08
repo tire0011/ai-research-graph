@@ -1,6 +1,6 @@
 # Cross-platform research retrieval: controlled comparison
 
-Snapshot: `2026-11-08T16:56:14.582914+00:00` UTC, **920 nodes**, **366 edges**.
+Snapshot: `2026-11-08T21:30:14.918186+00:00` UTC, **933 nodes**, **385 edges**.
 Scored 6 curated target artifacts in a top-10 shortlist.
 
 | Method | Found curated artifacts |
@@ -12,15 +12,15 @@ Both methods use the **same captured source records** and receive the question a
 
 **Important:** This is a small, intentionally curated *retrieval* check, not a held-out scientific benchmark, live GitHub/HF search, end-to-end human timing, proof of model training, or evidence that an MCP service is beneficial.
 
-Graph index construction: 0.1712 ms. Each query timing is the median of 31 in-memory runs (no network).
+Graph index construction: 0.3015 ms. Each query timing is the median of 31 in-memory runs (no network).
 
 | Question | Graph targets | Text targets | Graph ms | Text ms |
 | --- | ---: | ---: | ---: | ---: |
-| prelude_eval_dataset | 1/1 | 1/1 | 0.0045 | 1.1558 |
-| tokenizer_v2 | 2/2 | 2/2 | 0.0047 | 0.1833 |
-| openthoughts_shared_paper | 1/1 | 1/1 | 0.0046 | 1.1577 |
-| finemath_shared_paper | 1/1 | 1/1 | 0.0079 | 1.1106 |
-| olmo3_shared_paper | 1/1 | 1/1 | 0.0088 | 0.2140 |
+| prelude_eval_dataset | 1/1 | 1/1 | 0.0083 | 1.8573 |
+| tokenizer_v2 | 2/2 | 2/2 | 0.0087 | 0.3485 |
+| openthoughts_shared_paper | 1/1 | 1/1 | 0.0088 | 1.8374 |
+| finemath_shared_paper | 1/1 | 1/1 | 0.0133 | 1.8088 |
+| olmo3_shared_paper | 1/1 | 1/1 | 0.0166 | 0.4276 |
 
 - **hplt_unverified**: abstained (inaccessible); no positive retrieval score.
 
