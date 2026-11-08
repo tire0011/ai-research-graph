@@ -1,3 +1,4 @@
+import base64
 import json
 import unittest
 import urllib.error
@@ -5,6 +6,7 @@ from unittest.mock import patch
 
 from research_graph import (
     citation_coverage, enrich_publications, exact_reference, external_hf_asset,
+    github_metadata_inventory, dataset_urls_in_source, resolve_github_dataset_declarations,
     hf_card_declarations, identifiers_in, incomplete_essential_sources,
     links_between, normalized, openaire_by_arxiv_batch, openaire_node,
     quality_profile, report, scholarly_links, verify_external_hf_references,
@@ -83,6 +85,87 @@ class ResearchGraphTests(unittest.TestCase):
         self.assertEqual(incomplete_essential_sources({"Hugging Face external lookup": "HTTP 429"}),
                          ["Hugging Face external lookup"])
         self.assertEqual(incomplete_essential_sources({"OpenAIRE citation coverage": "limited"}), [])
+        self.assertEqual(incomplete_essential_sources({"GitHub source manifests": "truncated"}),
+                         ["GitHub source manifests"])
+
+    def test_extract_source_dataset_urls_only_exact_namespaced_hf_urls(self):
+        content = ('data: https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M\n'
+                   'repeat: https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M\n'
+                   'not_a_dataset: https://huggingface.co/other/model\n'
+                   'suffix: https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M-extra\n')
+        hits = dataset_urls_in_source(content)
+        self.assertEqual([hit["declared_id"] for hit in hits],
+                         ["open-thoughts/OpenThoughts3-1.2M", "open-thoughts/OpenThoughts3-1.2M-extra"])
+        self.assertEqual(hits[0]["context"], "data: https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M")
+
+    def test_github_manifests_use_pinned_commit_and_link_adjacent_scripts(self):
+        repo = "OpenEuroLLM/training-data-collection"
+        path = "flag/openthoughts-3/metadata.yaml"
+        script = "flag/openthoughts-3/etc/textify.py"
+        text = 'source: "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M"\n'
+        payload = base64.b64encode(text.encode()).decode()
+        def responder(url, token=None):
+            if url == f"https://api.github.com/repos/{repo}":
+                return {"default_branch": "main"}
+            if url.endswith("/commits/main"):
+                return {"sha": "a" * 40, "commit": {"tree": {"sha": "b" * 40}}}
+            if "/git/trees/" in url:
+                return {"truncated": False, "tree": [
+                    {"type": "blob", "path": path, "size": 120, "sha": "c" * 40},
+                    {"type": "blob", "path": script, "size": 800, "sha": "d" * 40},
+                    {"type": "blob", "path": "flag/empty/metadata.yaml", "size": 20, "sha": "e" * 40},
+                ]}
+            if path in url:
+                self.assertIn(f"ref={'a' * 40}", url)
+                return {"encoding": "base64", "content": payload}
+            return {"encoding": "base64", "content": base64.b64encode(b'license: none').decode()}
+        with patch("research_graph.fetch_json", side_effect=responder):
+            nodes, refs, adjacent, stats = github_metadata_inventory(repo, max_files=2)
+        self.assertEqual([node["type"] for node in nodes], ["source_file", "processing_script"])
+        self.assertEqual(refs[0]["declared_id"], "open-thoughts/OpenThoughts3-1.2M")
+        self.assertEqual(adjacent[0]["relationship"], "located_in_dataset_directory")
+        self.assertEqual(stats["manifests_with_dataset_url"], 1)
+        self.assertIn("/blob/" + "a" * 40, nodes[0]["url"])
+
+    def test_github_manifest_tree_truncation_is_not_silent(self):
+        def responder(url, token=None):
+            if url.endswith("training-data-collection"):
+                return {"default_branch": "main"}
+            if "/commits/" in url:
+                return {"sha": "a", "commit": {"tree": {"sha": "b"}}}
+            return {"truncated": True, "tree": []}
+        with patch("research_graph.fetch_json", side_effect=responder):
+            with self.assertRaisesRegex(ValueError, "truncated"):
+                github_metadata_inventory("OpenEuroLLM/training-data-collection")
+
+    def test_verified_github_source_declaration_is_not_training_proof(self):
+        source_id = "github_file:OpenEuroLLM/training-data-collection/flag/openthoughts-3/metadata.yaml"
+        ref = {"source": source_id, "declared_id": "open-thoughts/OpenThoughts3-1.2M",
+               "evidence": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+               "context": "source: https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M"}
+        verified = {"id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M", "type": "dataset",
+                    "title": "open-thoughts/OpenThoughts3-1.2M", "url": ref["evidence"], "is_external": True}
+        with patch("research_graph.external_hf_asset", return_value=verified):
+            additions, checks, edges = resolve_github_dataset_declarations([], [ref])
+        self.assertEqual(additions, [verified])
+        self.assertEqual(checks[0]["status"], "verified_public")
+        self.assertEqual(edges[0]["status"], "declared_source_file")
+        self.assertEqual(edges[0]["relationship"], "declares_dataset")
+        self.assertEqual(quality_profile([{"id": source_id, "type": "source_file"}, verified], edges)["edges_with_missing_endpoints"], 0)
+        text = report([{"id": source_id, "type": "source_file", "title": "metadata.yaml", "url": "https://github.com/example"}, verified],
+                      edges, {}, "2026-11-08", 0)
+        self.assertIn("GitHub YAML manifest declarations to indexed/verified datasets: **1**", text)
+        self.assertIn("not** proof of actual training", text)
+
+    def test_unverified_github_source_url_is_recorded_but_not_linked(self):
+        ref = {"source": "github_file:repo/config.yaml", "declared_id": "outside/missing",
+               "evidence": "https://huggingface.co/datasets/outside/missing", "context": "dataset: outside/missing"}
+        with patch("research_graph.external_hf_asset", side_effect=urllib.error.HTTPError(
+                ref["evidence"], 404, "not found", None, None)):
+            added, checks, edges = resolve_github_dataset_declarations([], [ref])
+        self.assertEqual(added, [])
+        self.assertEqual(edges, [])
+        self.assertEqual(checks[0]["status"], "not_publicly_found")
 
     def test_scholarly_ids_are_explicit_and_version_normalized(self):
         text = 'See https://arxiv.org/pdf/2609.24797v2 and arxiv:2609.24797; https://doi.org/10.48550/arXiv.2609.24797.'

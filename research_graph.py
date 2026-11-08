@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import datetime as dt
 import json
 import os
@@ -16,11 +17,19 @@ from pathlib import Path
 
 
 GITHUB_REPOS = ("OpenEuroLLM/Taskboard", "OpenEuroLLM/oellm-eval", "OpenEuroLLM/oellm-autoexp")
+GITHUB_DATA_REPO = "OpenEuroLLM/training-data-collection"
 HF_ORG = "openeurollm"
 UA = "ai-research-graph/0.1 (public metadata research probe)"
 MAX_ARXIV_LOOKUPS = 80
 MAX_ARXIV_BATCH_SIZE = 40  # OpenAIRE permits OR lists (up to 50 values per field).
 MAX_EXTERNAL_HF_LOOKUPS = 40
+MAX_GITHUB_METADATA_FILES = 32  # Bounded pilot, not a full code search.
+MAX_GITHUB_DATASET_CHECKS = 12
+MAX_GITHUB_METADATA_BYTES = 100_000
+HF_DATASET_URL_PATTERN = re.compile(
+    r"https://huggingface\.co/datasets/([\w.-]+/[\w.-]+)(?=$|[/?#\s\"'<>])",
+    re.IGNORECASE,
+)
 ARXIV_PATTERN = re.compile(
     r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
@@ -101,6 +110,133 @@ def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
         if len(batch) < 100:
             break
     return issues
+
+
+def dataset_urls_in_source(content: str) -> list[dict]:
+    """Exact public HF dataset URLs only; no slug or implied training inference."""
+    matches = []
+    seen = set()
+    for match in HF_DATASET_URL_PATTERN.finditer(content):
+        repo_id = match.group(1)
+        if repo_id.casefold() in seen:
+            continue
+        seen.add(repo_id.casefold())
+        matches.append({
+            "declared_id": repo_id, "evidence": match.group(0),
+            "context": content[content.rfind("\n", 0, match.start()) + 1:
+                               content.find("\n", match.end()) if "\n" in content[match.end():] else len(content)].strip()[:300],
+        })
+    return matches
+
+
+def github_metadata_inventory(repo: str, *, token: str | None = None,
+                              max_files: int = MAX_GITHUB_METADATA_FILES) -> tuple[list[dict], list[dict], list[dict], dict]:
+    """Inspect a bounded set of version-pinned YAML manifests and adjacent script paths."""
+    details = fetch_json(f"https://api.github.com/repos/{repo}", token=token)
+    branch = details["default_branch"]
+    commit = fetch_json(f"https://api.github.com/repos/{repo}/commits/{urllib.parse.quote(branch, safe='')}", token=token)
+    commit_sha = commit["sha"]
+    tree_sha = commit["commit"]["tree"]["sha"]
+    tree_data = fetch_json(f"https://api.github.com/repos/{repo}/git/trees/{tree_sha}?recursive=1", token=token)
+    if tree_data.get("truncated"):
+        raise ValueError(f"Git tree for {repo} was truncated: cannot safely select metadata files")
+    entries = {item["path"]: item for item in tree_data["tree"] if item.get("type") == "blob"}
+    candidates = [path for path in entries if re.fullmatch(r"flag/[^/]+/metadata\.ya?ml", path)]
+    # Keep the running case visible while sampling other manifests deterministically.
+    ordered = sorted(candidates, key=lambda path: ("/openthoughts-3/" not in path, path))
+    selected = ordered[:max_files]
+    nodes, references, colocated = [], [], []
+    seen_scripts = set()
+    for path in selected:
+        if entries[path].get("size", MAX_GITHUB_METADATA_BYTES + 1) > MAX_GITHUB_METADATA_BYTES:
+            continue
+        url = f"https://api.github.com/repos/{repo}/contents/{urllib.parse.quote(path, safe='/')}?ref={commit_sha}"
+        data = fetch_json(url, token=token)
+        if data.get("encoding") != "base64" or not isinstance(data.get("content"), str):
+            raise ValueError(f"Unexpected GitHub contents response for {repo}/{path}")
+        source = base64.b64decode(data["content"], validate=False).decode("utf-8")
+        hits = dataset_urls_in_source(source)
+        if not hits:
+            continue
+        source_id = f"github_file:{repo}/{path}"
+        nodes.append({
+            "id": source_id, "type": "source_file", "title": path,
+            "url": f"https://github.com/{repo}/blob/{commit_sha}/{path}",
+            "repository": repo, "commit_sha": commit_sha, "blob_sha": entries[path]["sha"],
+            "description": "GitHub YAML manifest with explicit dataset URL; not proof of training use",
+            "updated_at": None,
+        })
+        for hit in hits:
+            references.append({"source": source_id, "target_type": "dataset", **hit})
+        directory = path.rsplit("/", 1)[0]
+        for suffix in ("etc/textify.py", "etc/textify.slurm"):
+            script_path = f"{directory}/{suffix}"
+            if script_path not in entries:
+                continue
+            script_id = f"github_file:{repo}/{script_path}"
+            if script_id in seen_scripts:
+                continue
+            seen_scripts.add(script_id)
+            nodes.append({
+                "id": script_id, "type": "processing_script", "title": script_path,
+                "url": f"https://github.com/{repo}/blob/{commit_sha}/{script_path}",
+                "repository": repo, "commit_sha": commit_sha, "blob_sha": entries[script_path]["sha"],
+                "description": "Processing script found in the same directory; execution not verified",
+                "updated_at": None,
+            })
+            colocated.append({
+                "source": script_id, "target": source_id,
+                "status": "co_located_source_code", "relationship": "located_in_dataset_directory",
+                "evidence_type": "repository_path", "evidence": script_path,
+                "context": f"Version-pinned path alongside {path}",
+                "reason": "Co-location only; no claim this script executed or produced a training artifact",
+            })
+    statistics = {"repository": repo, "commit_sha": commit_sha, "candidate_manifests": len(candidates),
+                  "selected_manifests": len(selected), "manifests_with_dataset_url":
+                  sum(node["type"] == "source_file" for node in nodes),
+                  "sample_limited": len(candidates) > len(selected),
+                  "skipped_oversized": sum(entries[path].get("size", MAX_GITHUB_METADATA_BYTES + 1) > MAX_GITHUB_METADATA_BYTES for path in selected)}
+    return nodes, references, colocated, statistics
+
+
+def resolve_github_dataset_declarations(nodes: list[dict], references: list[dict],
+                                        limit: int = MAX_GITHUB_DATASET_CHECKS) -> tuple[list[dict], list[dict], list[dict]]:
+    """Verify external dataset identities; keep unverified declarations distinct."""
+    known = {node["title"].casefold(): node for node in nodes if node["type"] == "dataset"}
+    additions, checks, edges = [], [], []
+    checked = {}
+    for ref in references:
+        repo_id = ref["declared_id"]
+        key = repo_id.casefold()
+        if key not in known and key not in checked:
+            if len(checked) >= limit:
+                checked[key] = {"status": "not_checked_limit"}
+            else:
+                try:
+                    verified = external_hf_asset("dataset", repo_id)
+                    if verified["title"].casefold() not in known:
+                        additions.append(verified)
+                        known[verified["title"].casefold()] = verified
+                    checked[key] = {"status": "verified_public", "canonical_id": verified["title"]}
+                except urllib.error.HTTPError as exc:
+                    checked[key] = {"status": "not_publicly_found" if exc.code == 404 else
+                                    "inaccessible" if exc.code in (401, 403) else
+                                    "rate_limited" if exc.code == 429 else "http_error", "http_status": exc.code}
+                except (ValueError, urllib.error.URLError, TimeoutError) as exc:
+                    checked[key] = {"status": "fetch_failed", "error": str(exc)[:160]}
+        check = checked[key] if key in checked else {"status": "indexed", "canonical_id": known[key]["title"]}
+        checks.append({"source": ref["source"], "declared_id": repo_id, **check})
+        resolved_id = check.get("canonical_id", repo_id).casefold()
+        target = known.get(resolved_id)
+        if target:
+            edges.append({
+                "source": ref["source"], "target": target["id"],
+                "status": "declared_source_file", "relationship": "declares_dataset",
+                "evidence_type": "dataset_url", "evidence": ref["evidence"],
+                "context": ref["context"], "reason": "Dataset URL declared in versioned source code; not proof of model training",
+                "target_verification": check["status"],
+            })
+    return additions, checks, edges
 
 
 def huggingface_assets(org: str, kind: str):
@@ -412,12 +548,16 @@ def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
 
 
 def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapshot: str,
-           total_openaire: int | None, external_checks: list[dict] | None = None):
-    counts = {kind: sum(node["type"] == kind for node in nodes) for kind in ("issue", "pull_request", "model", "dataset", "research_product")}
+           total_openaire: int | None, external_checks: list[dict] | None = None,
+           code_scan: dict | None = None, code_checks: list[dict] | None = None):
+    counts = {kind: sum(node["type"] == kind for node in nodes) for kind in
+              ("issue", "pull_request", "model", "dataset", "research_product", "source_file", "processing_script")}
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
     candidates = [edge for edge in links if edge["status"] == "candidate"]
     scholarly = [edge for edge in links if edge["status"] == "identifier_match"]
     declared = [edge for edge in links if edge["status"] in ("declared_metadata", "declared_metadata_redirect")]
+    source_declarations = [edge for edge in links if edge["status"] == "declared_source_file"]
+    colocated_scripts = [edge for edge in links if edge["status"] == "co_located_source_code"]
     resolved_aliases = {
         (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
         for check in (external_checks or []) if check["status"] == "verified_redirect"
@@ -443,6 +583,8 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- Name-only candidates, NOT confirmed: **{len(candidates)}**",
         f"- Shared scholarly identifiers (arXiv/DOI): **{len(scholarly)}**",
         f"- HF model-card declarations to indexed/verified targets: **{len(declared)}**", "",
+        f"- GitHub YAML manifest declarations to indexed/verified datasets: **{len(source_declarations)}**",
+        f"- Processing script paths co-located with those manifests: **{len(colocated_scripts)}**", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
     index = {node["id"]: node for node in nodes}
@@ -490,6 +632,28 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
             lines.extend(["", "| Unverified target | Result |", "| --- | --- |"])
             for check in unresolved[:25]:
                 lines.append(f"| `{check['declared_id']}` ({check['target_type']}) | {check['status']} |")
+    lines.extend(["", "## GitHub dataset source declarations", "",
+                  "Manifest declarations are version-pinned source-code evidence, **not** proof of actual training, data inclusion or completed evaluation. Co-located script paths are not proof of script execution.", ""])
+    if code_scan:
+        lines.extend([
+            f"- Scanned repository: [{code_scan['repository']}](https://github.com/{code_scan['repository']}/tree/{code_scan['commit_sha']})",
+            f"- Selected manifests: **{code_scan['selected_manifests']}** of **{code_scan['candidate_manifests']}** candidates (bounded sample)",
+            f"- Manifests with explicit HF dataset URLs: **{code_scan['manifests_with_dataset_url']}**",
+            f"- Manifests skipped due to size limit: **{code_scan['skipped_oversized']}**",
+            f"- Selection was truncated: **{str(code_scan['sample_limited']).lower()}**", "",
+        ])
+    lines.extend(["| GitHub source manifest | Public HF dataset | Evidence |", "| --- | --- | --- |"])
+    for edge in source_declarations[:40]:
+        source, target = index[edge["source"]], index[edge["target"]]
+        lines.append(f"| [{source['title']}]({source['url']}) | [{target['title']}]({target['url']}) | `{edge['relationship']}` (`{edge['target_verification']}`) |")
+    if not source_declarations:
+        lines.append("| No verified dataset link observed in scanned manifests | – | – |")
+    if code_checks is not None:
+        unresolved_source = [check for check in code_checks if check["status"] not in ("verified_public", "indexed")]
+        lines.append(f"\nUnverified GitHub manifest dataset targets: **{len(unresolved_source)}** (details in `snapshot.json`; missing verification is not evidence of nonexistence).")
+    if colocated_scripts:
+        lines.extend(["", "Adjacent script paths (existence only): " + ", ".join(
+            f"[{index[edge['source']]['title']}]({index[edge['source']]['url']})" for edge in colocated_scripts[:15])])
     bridges = []
     for paper in (node for node in nodes if node["type"] == "research_product"):
         incoming = [edge for edge in scholarly if edge["target"] == paper["id"]]
@@ -525,14 +689,15 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     lines.extend(f"- `{name}`: {message}" for name, message in errors.items())
     if not errors:
         lines.append("- No source errors encountered.")
-    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
+    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
     return "\n".join(lines)
 
 
 def incomplete_essential_sources(errors: dict[str, str]) -> list[str]:
     """Prevent an incomplete API response from replacing the last good CI snapshot."""
     critical = set(GITHUB_REPOS) | {"Hugging Face models", "Hugging Face datasets",
-                                    "Hugging Face external lookup", "OpenAIRE"}
+                                    "Hugging Face external lookup", "OpenAIRE", "GitHub source manifests",
+                                    "GitHub source dataset lookup"}
     return sorted(name for name in errors if name in critical or name.startswith("OpenAIRE arXiv batch"))
 
 
@@ -547,11 +712,17 @@ def main(argv: list[str] | None = None) -> int:
     openaire_total = None
     external_checks: list[dict] | None = None
     external_card_refs: list[dict] = []
+    code_scan: dict | None = None
+    code_checks: list[dict] | None = None
+    code_edges: list[dict] = []
     if args.fixture:
         fixture = json.loads(Path(args.fixture).read_text(encoding="utf-8"))
         nodes = fixture["nodes"]
         external_checks = fixture.get("external_hf_target_checks")
         external_card_refs = fixture.get("external_hf_card_references") or hf_card_declarations(nodes)[1]
+        code_scan = fixture.get("github_code_scan")
+        code_checks = fixture.get("github_code_target_checks")
+        code_edges = fixture.get("github_code_edges", [])
     else:
         for repo in GITHUB_REPOS:
             try:
@@ -574,6 +745,19 @@ def main(argv: list[str] | None = None) -> int:
                           ("rate_limited", "http_error", "fetch_failed", "not_checked_limit")]
         if failed_targets:
             errors["Hugging Face external lookup"] = f"{len(failed_targets)} target(s) not completely checked; see external_hf_target_checks"
+        try:
+            source_nodes, source_refs, adjacent, code_scan = github_metadata_inventory(
+                GITHUB_DATA_REPO, token=os.getenv("GITHUB_TOKEN"))
+            nodes.extend(source_nodes)
+            more_nodes, code_checks, declared_edges = resolve_github_dataset_declarations(nodes, source_refs)
+            nodes.extend(more_nodes)
+            code_edges = declared_edges + adjacent
+            unresolved = [check for check in code_checks if check["status"] in
+                          ("rate_limited", "http_error", "fetch_failed", "not_checked_limit")]
+            if unresolved:
+                errors["GitHub source dataset lookup"] = f"{len(unresolved)} target(s) not completely checked; see github_code_target_checks"
+        except (KeyError, ValueError, UnicodeError, urllib.error.URLError, TimeoutError) as exc:
+            errors["GitHub source manifests"] = str(exc)
         try:
             products, openaire_total = openaire_products()
             nodes.extend(products)
@@ -602,17 +786,19 @@ def main(argv: list[str] | None = None) -> int:
                     reference["verified_node_id"] = check["node_id"]
                 if check.get("canonical_id"):
                     reference["canonical_id"] = check["canonical_id"]
-    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges
+    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     payload = {"timestamp_utc": snapshot, "nodes": nodes, "edges": edges,
                "external_hf_card_references": external_card_refs,
                "external_hf_target_checks": external_checks,
+               "github_code_scan": code_scan, "github_code_target_checks": code_checks,
                "errors": errors, "openaire_search_total": openaire_total,
                "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total, external_checks), encoding="utf-8")
+    (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total,
+                                              external_checks, code_scan, code_checks), encoding="utf-8")
     critical_errors = incomplete_essential_sources(errors)
     print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
     if critical_errors:
