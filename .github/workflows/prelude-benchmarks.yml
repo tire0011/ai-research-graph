@@ -58,7 +58,12 @@ jobs:
           fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: update successful Prelude benchmark evidence'
-          git push
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1
       - name: Fail when a source is unavailable
         if: steps.eval.outcome != 'success' || steps.controls.outcome != 'success'
         run: exit 1
