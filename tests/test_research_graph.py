@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 from research_graph import (
     citation_coverage, enrich_publications, exact_reference, external_hf_asset,
-    github_metadata_inventory, dataset_urls_in_source, resolve_github_dataset_declarations,
+    github_metadata_inventory, github_task_references, dataset_urls_in_source, resolve_github_dataset_declarations,
     hf_card_declarations, identifiers_in, incomplete_essential_sources,
     linked_experiment_runs, links_between, normalized, openaire_by_arxiv_batch, openaire_node,
     quality_profile, report, scholarly_links, verify_external_hf_references,
@@ -45,6 +45,54 @@ class ResearchGraphTests(unittest.TestCase):
 
     def test_cross_source_only(self):
         self.assertEqual(links_between([self.issue("See another issue")]), [])
+
+    def test_same_repo_task_reference_requires_indexed_target(self):
+        origin = self.issue("Follow up to #214, repeated #214.")
+        target = {**self.issue("target"), "id": "github:OpenEuroLLM/Taskboard#214",
+                  "url": "https://github.com/OpenEuroLLM/Taskboard/issues/214"}
+        edges, missing = github_task_references([origin, target])
+        self.assertEqual(len(edges), 1)
+        self.assertEqual(missing, [])
+        self.assertEqual(edges[0]["target"], target["id"])
+        self.assertEqual(edges[0]["status"], "explicit_task_reference")
+        self.assertEqual(edges[0]["relationship"], "references_task")
+        self.assertEqual(edges[0]["evidence_type"], "same_repo_issue_number")
+        self.assertEqual(quality_profile([origin, target], edges)["edges_with_missing_endpoints"], 0)
+
+    def test_explicit_cross_repo_and_github_urls(self):
+        origin = self.issue("See OpenEuroLLM/oellm-eval#159, and "
+                            "https://github.com/OpenEuroLLM/oellm-autoexp/pull/80")
+        other = {**self.issue(""), "id": "github:OpenEuroLLM/oellm-eval#159",
+                 "type": "pull_request", "url": "https://github.com/OpenEuroLLM/oellm-eval/pull/159"}
+        third = {**self.issue(""), "id": "github:OpenEuroLLM/oellm-autoexp#80",
+                 "type": "pull_request", "url": "https://github.com/OpenEuroLLM/oellm-autoexp/pull/80"}
+        edges, missing = github_task_references([origin, other, third])
+        self.assertEqual({edge["target"] for edge in edges}, {other["id"], third["id"]})
+        self.assertEqual({edge["evidence_type"] for edge in edges},
+                         {"repository_issue_number", "github_pull_url"})
+        self.assertEqual(missing, [])
+
+    def test_unindexed_references_are_diagnostics_not_edges(self):
+        origin = self.issue("See #777, https://github.com/Other/Project/issues/9")
+        edges, missing = github_task_references([origin])
+        self.assertEqual(edges, [])
+        self.assertEqual(len(missing), 2)
+        self.assertTrue(all(x["reason"] == "target_not_indexed" for x in missing))
+
+    def test_task_reference_self_link_and_false_numbers_rejected(self):
+        origin = self.issue("Self #445; not #4450, code foo#12, /#13, heading # 14; cross issue #001")
+        target = {**self.issue(""), "id": "github:OpenEuroLLM/Taskboard#14"}
+        edges, missing = github_task_references([origin, target])
+        self.assertEqual(edges, [])
+        self.assertEqual([x["expected_target"] for x in missing], ["github:OpenEuroLLM/Taskboard#4450"])
+
+    def test_task_identifiers_do_not_match_suffixes(self):
+        origin = self.issue("Bad #214-extra and OpenEuroLLM/Taskboard#214suffix; "
+                            "https://github.com/OpenEuroLLM/Taskboard/issues/214fake")
+        target = {**self.issue(""), "id": "github:OpenEuroLLM/Taskboard#214"}
+        edges, missing = github_task_references([origin, target])
+        self.assertEqual(edges, [])
+        self.assertEqual(missing, [])
 
     def test_rejects_tokenizer_prefix_false_positive(self):
         older = {"id": "hf:model:openeurollm/tokenizer-256k", "type": "model", "title": "openeurollm/tokenizer-256k", "url": "https://huggingface.co/openeurollm/tokenizer-256k"}

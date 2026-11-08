@@ -35,6 +35,14 @@ WANDB_RUN_URL_PATTERN = re.compile(
     r"(?=$|[/?#\s\"'<>\]\),;])",
     re.IGNORECASE,
 )
+GITHUB_TASK_URL_PATTERN = re.compile(
+    r"https://github\.com/([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)/(issues|pull)/([1-9]\d*)"
+    r"(?=$|[/?#\s\"'<>,;:.\]\)])", re.IGNORECASE,
+)
+GITHUB_QUALIFIED_TASK_PATTERN = re.compile(
+    r"(?<![\w./-])([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)#([1-9]\d*)(?![\w-])"
+)
+GITHUB_LOCAL_TASK_PATTERN = re.compile(r"(?<![\w/#])#([1-9]\d*)(?![\w-])")
 ARXIV_PATTERN = re.compile(
     r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
@@ -390,6 +398,60 @@ def links_between(nodes: list[dict]) -> list[dict]:
     return edges
 
 
+def github_task_references(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Resolve literal GitHub task references within the indexed task inventory.
+
+    A reference is evidence of a *mention*, not a dependency or completed work.
+    Unindexed targets remain diagnostics, never dangling graph edges.
+    """
+    tasks = {node["id"].casefold(): node for node in nodes
+             if node.get("type") in ("issue", "pull_request") and node["id"].startswith("github:")}
+    edges, unresolved = [], []
+    seen = set()
+    for source in tasks.values():
+        repository = source.get("repository") or source["id"][len("github:"):].rsplit("#", 1)[0]
+        body = source.get("title", "") + "\n" + (source.get("description") or "")
+        claims = []
+        occupied = []
+        for match in GITHUB_TASK_URL_PATTERN.finditer(body):
+            owner, repo, kind, number = match.groups()
+            claims.append((match, f"{owner}/{repo}", number, f"github_{kind}_url"))
+            occupied.append(match.span())
+        for match in GITHUB_QUALIFIED_TASK_PATTERN.finditer(body):
+            if any(start <= match.start() < end for start, end in occupied):
+                continue
+            owner, repo, number = match.groups()
+            claims.append((match, f"{owner}/{repo}", number, "repository_issue_number"))
+            occupied.append(match.span())
+        for match in GITHUB_LOCAL_TASK_PATTERN.finditer(body):
+            if any(start <= match.start() < end for start, end in occupied):
+                continue
+            claims.append((match, repository, match.group(1), "same_repo_issue_number"))
+        for match, target_repo, number, evidence_type in sorted(claims, key=lambda row: row[0].start()):
+            target_id = f"github:{target_repo}#{number}"
+            pair = (source["id"].casefold(), target_id.casefold())
+            if pair in seen or pair[0] == pair[1]:
+                continue
+            seen.add(pair)
+            reference = {
+                "source": source["id"], "reference": match.group(),
+                "expected_target": target_id, "evidence_type": evidence_type,
+                "context": matching_context(body, match),
+            }
+            target = tasks.get(target_id.casefold())
+            if target is None:
+                unresolved.append({**reference, "reason": "target_not_indexed"})
+                continue
+            edges.append({
+                "source": source["id"], "target": target["id"],
+                "status": "explicit_task_reference", "relationship": "references_task",
+                "evidence_type": evidence_type, "evidence": match.group(),
+                "context": reference["context"],
+                "reason": "Literal GitHub task mention; not a dependency, implementation, or validation claim",
+            })
+    return edges, unresolved
+
+
 def linked_experiment_runs(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
     """Extract concrete W&B run links; do not treat project dashboards as runs."""
     known = {node["id"] for node in nodes}
@@ -587,7 +649,8 @@ def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
 
 def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapshot: str,
            total_openaire: int | None, external_checks: list[dict] | None = None,
-           code_scan: dict | None = None, code_checks: list[dict] | None = None):
+           code_scan: dict | None = None, code_checks: list[dict] | None = None,
+           unresolved_task_references: list[dict] | None = None):
     counts = {kind: sum(node["type"] == kind for node in nodes) for kind in
               ("issue", "pull_request", "model", "dataset", "research_product", "source_file", "processing_script", "experiment_run_ref")}
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
@@ -597,6 +660,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     source_declarations = [edge for edge in links if edge["status"] == "declared_source_file"]
     colocated_scripts = [edge for edge in links if edge["status"] == "co_located_source_code"]
     run_references = [edge for edge in links if edge["status"] == "explicit_run_reference"]
+    task_references = [edge for edge in links if edge["status"] == "explicit_task_reference"]
     resolved_aliases = {
         (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
         for check in (external_checks or []) if check["status"] == "verified_redirect"
@@ -625,6 +689,9 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- GitHub YAML manifest declarations to indexed/verified datasets: **{len(source_declarations)}**",
         f"- Processing script paths co-located with those manifests: **{len(colocated_scripts)}**", "",
         f"- Concrete W&B run URLs in GitHub tasks (source links only): **{len(run_references)}**", "",
+        f"- Literal GitHub issue/PR cross-references to indexed tasks: **{len(task_references)}**",
+        f"- GitHub issue/PR references without an indexed target: **{len(unresolved_task_references or [])}**", "",
+        "GitHub task links are **textual mentions only**; they do not prove a dependency, completed implementation, or validated experiment.", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
     index = {node["id"]: node for node in nodes}
@@ -634,6 +701,17 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         lines.append(f"| [#{source['id'].rsplit('#', 1)[-1]}]({source['url']}) | [{target['title']}]({target['url']}) | {edge['evidence_type']} | `{evidence}` |")
     if not explicit and not candidates:
         lines.append("| No observed cross-source references | – | – | – |")
+    lines.extend(["", "## GitHub issue / pull request references", "",
+                  "Only exact issue numbers and GitHub task URLs count; every target is present in the indexed snapshot.", "",
+                  "| Referencing task | Mentioned task | Literal text |", "| --- | --- | --- |"])
+    for edge in task_references[:70]:
+        source, target = index[edge["source"]], index[edge["target"]]
+        evidence = edge["evidence"].replace("|", "\\|").replace("`", "'")
+        lines.append(f"| [{source['id']}]({source['url']}) | [{target['id']}]({target['url']}) | `{evidence}` |")
+    if not task_references:
+        lines.append("| No in-snapshot references observed | – | – |")
+    if len(task_references) > 70:
+        lines.append(f"\nShowing the first 70 of {len(task_references)} task links; all are in snapshot.json.")
     lines.extend(["", "## Scholarly identifier matches", "",
         "| Source artifact | OpenAIRE publication | Shared ID |", "| --- | --- | --- |"])
     for edge in scholarly[:100]:
@@ -836,7 +914,8 @@ def main(argv: list[str] | None = None) -> int:
                     reference["canonical_id"] = check["canonical_id"]
     run_nodes, run_edges = linked_experiment_runs(nodes)
     nodes.extend(run_nodes)
-    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges + run_edges
+    task_edges, unresolved_tasks = github_task_references(nodes)
+    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges + run_edges + task_edges
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
@@ -844,11 +923,12 @@ def main(argv: list[str] | None = None) -> int:
                "external_hf_card_references": external_card_refs,
                "external_hf_target_checks": external_checks,
                "github_code_scan": code_scan, "github_code_target_checks": code_checks,
+               "unresolved_github_task_references": unresolved_tasks,
                "errors": errors, "openaire_search_total": openaire_total,
                "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total,
-                                              external_checks, code_scan, code_checks), encoding="utf-8")
+                                              external_checks, code_scan, code_checks, unresolved_tasks), encoding="utf-8")
     critical_errors = incomplete_essential_sources(errors)
     print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
     if critical_errors:
