@@ -173,12 +173,12 @@ def markdown(result):
                   "- **Dependency and feasibility**: #391 explicitly lists #432 as an upstream "
                   "task; #433's comment reports a LUMI OOM problem. Neither is evidence of "
                   "a realized speedup.",
-                  "- **Data gap**: issue comments in three cases contain essential evidence not "
+                  f"- **Data gap**: issue comments in {result['comment_dependent_cases']} cases contain essential evidence not "
                   "stored in the graph's issue-body-only snapshot. An impact query should therefore "
                   "either include versioned comments or abstain from declaring no known blocker.",
                   "- **Selection bias**: these ten items were selected for promising, different "
-                  "signals after seeing issue titles. They are not representative of all 493 "
-                  "indexed issues and cannot establish which project should receive resources.",
+                  "signals after seeing issue titles. They are not representative of the "
+                  "indexed issue population and cannot establish which project should receive resources.",
                   "- **Impact estimation**: a credible next experiment needs a causal dependency "
                   "relationship, a baseline, a same-configuration intervention, adoption/rollout "
                   "status and an outcome measurement. A graph-edge count alone is not impact.", ""])
