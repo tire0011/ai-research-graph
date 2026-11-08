@@ -1,0 +1,692 @@
+{
+  "status": "completed",
+  "snapshot_utc": "2026-11-08T14:18:13.469974+00:00",
+  "evaluated_utc": "2026-11-08T14:20:13.644067+00:00",
+  "source_bodies_verified": 40,
+  "source_sha256": {
+    "github:OpenEuroLLM/Taskboard#220": "7dbf26df6d3a8d5b575ff697251efe2f955e38d87826278b47ecd979965ec2ad",
+    "github:OpenEuroLLM/Taskboard#384": "468efd5ba9099e69e156731f87e56d6679ada5226a5c8baa4bdce6970895b6c6",
+    "github:OpenEuroLLM/Taskboard#385": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+    "github:OpenEuroLLM/Taskboard#386": "be07a77f8be6dbcbbdfc8c723fafd749599df44bcbefd563a736577ef3df344e",
+    "github:OpenEuroLLM/Taskboard#387": "1850ceb7cf7cde1e73d69ebef0e4ca7f7960a4a82732f93237f876829bd0ca07",
+    "github:OpenEuroLLM/Taskboard#388": "3133133b0431f933ae296ed53c77c5053915edd2b1c32fa7a5c816a67c03f056",
+    "github:OpenEuroLLM/Taskboard#389": "1e84ab5af659a71cb5f416bb2293be5e43a48c3616e3856badd855f65badd34f",
+    "github:OpenEuroLLM/Taskboard#390": "b6427bd2f0a637569a8bcdb1315c6c400b0ab64bd064e9f5ca86b381f544a597",
+    "github:OpenEuroLLM/Taskboard#351": "9cfbed45c77a282cbbc9cbbe885e5ac566af74d6868f9faf1fe4620c55a6d1f8",
+    "github:OpenEuroLLM/Taskboard#352": "0a7f80d34c5c0455e25b6d1f8ecf8411ca0ce40895c868d03f200790a93ec8fc",
+    "github:OpenEuroLLM/Taskboard#354": "6d376e7de514c11dc6efdffee45724386edae4fa0422f5e24ac0f869341d43c7",
+    "github:OpenEuroLLM/Taskboard#344": "2cdb54ff86c6999cd91105d814a42725d305faa3ec9fd6558caf9e66e1e0ada3",
+    "github:OpenEuroLLM/Taskboard#361": "687c866115e0264ce0b29547e7cb49a4d5a0a79324e2cf3727446726baa28847",
+    "github:OpenEuroLLM/Taskboard#416": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
+    "github:OpenEuroLLM/Taskboard#318": "481c9e250649611fb7f4593172a30df4e76ffb47c652bcc66bfe730f82cb0f04",
+    "github:OpenEuroLLM/Taskboard#330": "ab6d3e99d7eebb44cf6559c8324c447359b0357d789117c53e8c7b2a1dad5f7b",
+    "github:OpenEuroLLM/oellm-eval#140": "8995c266cc9cec8b2456035b2347a7566ec1e5e4e6c3c84c3425817b488d382c",
+    "github:OpenEuroLLM/oellm-eval#130": "d60b02a201429ae980f7dfbebeb4cee706d58f68ab06f50ab4fb3f48798c3bda",
+    "github:OpenEuroLLM/oellm-eval#136": "064d69b5cede5a7302c3a76971d6b4540d223b490f6c4c6ea92c6e3c52632793",
+    "github:OpenEuroLLM/oellm-eval#137": "d459d5577abb8a7e0ea38a7da5e8f6812a338d144799f1cc0fdb744a67f2b048",
+    "github:OpenEuroLLM/oellm-eval#150": "b4d2469f2664595b5cbad230f026960689618a4d9a3a879bb44917b646d6903b",
+    "github:OpenEuroLLM/oellm-eval#142": "deee5b9a4d1826e7c7431e841298c0c2d5c8a134793a73d0104e142c7124cb2c",
+    "github:OpenEuroLLM/Taskboard#431": "a2c878d7905ddf9d273d990ccef62120f14aab28ba44ee0c7ed6beac6bf814b2",
+    "github:OpenEuroLLM/Taskboard#214": "2fba4aefd827fa781a818091786a79ee7d83d4831b31668e92fa9abb635b686d",
+    "github:OpenEuroLLM/oellm-eval#166": "4f075bd87207c0a586e6fc4162aa7cb932e91651af6a0072e421c91877f10017",
+    "github:OpenEuroLLM/oellm-eval#159": "8fcb31e54c96001af8797667dc8e2e134a5639d05e8e00b8d08dcedd2942927e",
+    "github:OpenEuroLLM/Taskboard#405": "8b8a346753980d87e89f8483baca7e952fb9b4532479610d34814fea86fe39f2",
+    "github:OpenEuroLLM/oellm-eval#124": "42a163e5d26b7552693c359d7d8018d5e0c6aa112c7170199ed6865877056fc1",
+    "github:OpenEuroLLM/Taskboard#364": "d84d511193811ceecd090cc7a59c95f41e2f6e4a825859bee047c8bf984734bc",
+    "github:OpenEuroLLM/oellm-autoexp#54": "3207c07fd13567579687256c15b5e2bb5ee9838ce06707e8c9bc5752fedf0ef1",
+    "github:OpenEuroLLM/Taskboard#337": "9768c2e87e3d41e409668afc791b9ab4790c89384727e33ed2e119ef691b1436",
+    "github:OpenEuroLLM/oellm-eval#56": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "github:OpenEuroLLM/oellm-eval#2": "f804fbad66e0dabbd110fc37df2ca784888eb1873d72c2ffcfcd1fe29285e327",
+    "github:OpenEuroLLM/Taskboard#70": "24c5985355bd958c95514651ed159414aa831f13c4c7c9286807793f4304e58e",
+    "github:OpenEuroLLM/oellm-autoexp#69": "75dbf9a50f47fd32d131c212740a846a93c32e59fed9c9c0045414787ff97349",
+    "github:OpenEuroLLM/oellm-autoexp#70": "06f3c2ebf603c227b8cad99e4beb45c458d6dc43e770714b5394916851e6ff33",
+    "github:OpenEuroLLM/Taskboard#320": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "github:OpenEuroLLM/Taskboard#130": "98346ed0198412b569dc2408bd2a3230a972a71ef60b6dda69c53a690d17fc85",
+    "github:OpenEuroLLM/oellm-eval#152": "eec5059a12ec96a399bb95fede7261e266d71e2cac9ad7248caa21ae2795a6b7",
+    "github:OpenEuroLLM/oellm-autoexp#10": "f8a2e02d5a37a7faaeb5d842c5b954314f1478136a467dabf88238829a0d83fc"
+  },
+  "selection": {
+    "date_utc": "2026-11-08",
+    "population": "Selected indexed OpenEuroLLM GitHub issue/PR sources; explicit task links followed by explicit Hugging Face URL/ID mentions only",
+    "positive_cohort": "Nine issue/PR sources with at least one two-hop task-to-task-to-HF path in the initial locally available source inventory; exhaustive for that restricted path pattern in that snapshot, not a random sample",
+    "negative_cohort": "Eleven deliberately selected control tasks, including seven first-hop GitHub task mentions without the required second-hop HF evidence and four without task mentions",
+    "answer_scope": "Find HF models or datasets mentioned by an indexed GitHub task that the source task directly references. A URL/ID mention is not scientific usage or experiment validation.",
+    "gold_policy": "Source-cited expected intermediate tasks and HF target IDs frozen before evaluating retrieval. The original GitHub issue bodies are re-fetched and the literal two-hop evidence independently scanned; a source mismatch or changed inventory is a diagnostic failure, not a zero. The Taskboard #416 -> #330 case was re-baselined when the 2026-11-08 refreshed HF inventory also resolved the explicitly named external allenai/Olmo-3-7B-Think-SFT model; this is an additional text mention, not evidence of use.",
+    "limitations": "Link-rich stratified sample, not blinded or representative. Compare precomputed graph traversal with actual two-hop source-following of the same captured texts. In-memory lookup latency excludes ingestion/index costs; GitHub API re-fetches audit freshness, not comparable human time."
+  },
+  "selected": 20,
+  "evaluated": 20,
+  "repetitions": 11,
+  "summary": {
+    "all": {
+      "cases": 20,
+      "graph_exact": 20,
+      "source_follow_exact": 20,
+      "correct_graph_abstentions": 11,
+      "reference_paths": 16,
+      "graph_median_ms": 0.029,
+      "source_follow_median_ms": 12.7243
+    },
+    "positive": {
+      "cases": 9,
+      "graph_exact": 9,
+      "source_follow_exact": 9,
+      "correct_graph_abstentions": 0,
+      "reference_paths": 16,
+      "graph_median_ms": 0.0366,
+      "source_follow_median_ms": 33.7069
+    },
+    "negative": {
+      "cases": 11,
+      "graph_exact": 11,
+      "source_follow_exact": 11,
+      "correct_graph_abstentions": 11,
+      "reference_paths": 0,
+      "graph_median_ms": 0.0289,
+      "source_follow_median_ms": 4.2921
+    }
+  },
+  "cases": [
+    {
+      "id": "function_corpus_parent",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#220",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/220",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Preliminary English function-calling SFT dataset for OpenEuroLLM'?",
+      "source_sha256": "7dbf26df6d3a8d5b575ff697251efe2f955e38d87826278b47ecd979965ec2ad",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#384",
+        "github:openeurollm/taskboard#385",
+        "github:openeurollm/taskboard#386",
+        "github:openeurollm/taskboard#387",
+        "github:openeurollm/taskboard#388",
+        "github:openeurollm/taskboard#389",
+        "github:openeurollm/taskboard#390"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.1203,
+      "source_follow_lookup_ms": 77.0208,
+      "status": "evaluated"
+    },
+    {
+      "id": "function_rl",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#351",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/351",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Function-calling RL reproduction and transfer study'?",
+      "source_sha256": "9cfbed45c77a282cbbc9cbbe885e5ac566af74d6868f9faf1fe4620c55a6d1f8",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#220"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0274,
+      "source_follow_lookup_ms": 68.1215,
+      "status": "evaluated"
+    },
+    {
+      "id": "function_ablation",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#352",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/352",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Controlled function-calling corpus ablations and mechanism study'?",
+      "source_sha256": "0a7f80d34c5c0455e25b6d1f8ecf8411ca0ce40895c868d03f200790a93ec8fc",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#220"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0273,
+      "source_follow_lookup_ms": 68.2555,
+      "status": "evaluated"
+    },
+    {
+      "id": "datamix_model_links",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#354",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#344",
+          "hf:model:openeurollm/datamix-9b-80-20"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#361",
+          "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/354",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Prelude: document training process and checkpoints'?",
+      "source_sha256": "6d376e7de514c11dc6efdffee45724386edae4fa0422f5e24ac0f869341d43c7",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#344",
+        "github:openeurollm/taskboard#361"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#344",
+          "hf:model:openeurollm/datamix-9b-80-20"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#361",
+          "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#344",
+          "hf:model:openeurollm/datamix-9b-80-20"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#361",
+          "hf:model:openeurollm/oellm-9b-256k-theta64m-prelude"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0454,
+      "source_follow_lookup_ms": 18.4621,
+      "status": "evaluated"
+    },
+    {
+      "id": "bfcl_benchmark",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#384",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/384",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Benchmark Qwen3.5-9B Base and post-trained Qwen3.5-9B on BFCL V4 non-Web'?",
+      "source_sha256": "468efd5ba9099e69e156731f87e56d6679ada5226a5c8baa4bdce6970895b6c6",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#385"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#385",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0268,
+      "source_follow_lookup_ms": 31.3252,
+      "status": "evaluated"
+    },
+    {
+      "id": "function_benchmark_parent",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#385",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Train and export the OELLM 9B function-calling SFT checkpoint on LUMI'?",
+      "source_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#220"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#220",
+          "hf:dataset:openeurollm/function-calling-sft-oellm-64k"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0274,
+      "source_follow_lookup_ms": 71.7775,
+      "status": "evaluated"
+    },
+    {
+      "id": "decontamination_datasets",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#416",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/lmsys-chat-1m-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/open-perfectblend-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/orca-agentinstruct-1M-v1-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/smoltalk2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:model:allenai/Olmo-3-7B-Think-SFT"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/416",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Post-training dataset curation using instruction-level selection'?",
+      "source_sha256": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#318",
+        "github:openeurollm/taskboard#330"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/lmsys-chat-1m-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/open-perfectblend-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/orca-agentinstruct-1M-v1-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/smoltalk2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:model:allenai/Olmo-3-7B-Think-SFT"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/lmsys-chat-1m-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/open-perfectblend-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/orca-agentinstruct-1M-v1-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:dataset:openeurollm/smoltalk2-decontaminated"
+        ],
+        [
+          "github:OpenEuroLLM/Taskboard#330",
+          "hf:model:allenai/Olmo-3-7B-Think-SFT"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.047,
+      "source_follow_lookup_ms": 25.5456,
+      "status": "evaluated"
+    },
+    {
+      "id": "eval_change_one",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/oellm-eval#140",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#137",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/pull/140",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Release 0.3.0'?",
+      "source_sha256": "8995c266cc9cec8b2456035b2347a7566ec1e5e4e6c3c84c3425817b488d382c",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-eval#130",
+        "github:openeurollm/oellm-eval#136",
+        "github:openeurollm/oellm-eval#137"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#137",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#137",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0588,
+      "source_follow_lookup_ms": 33.7069,
+      "status": "evaluated"
+    },
+    {
+      "id": "eval_change_two",
+      "cohort": "positive",
+      "anchor_id": "github:OpenEuroLLM/oellm-eval#150",
+      "expected_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#142",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/pull/150",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'xcsqa-eu: primary metric acc, and changelog entry for #142'?",
+      "source_sha256": "b4d2469f2664595b5cbad230f026960689618a4d9a3a879bb44917b646d6903b",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-eval#142"
+      ],
+      "graph_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#142",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "source_follow_paths": [
+        [
+          "github:OpenEuroLLM/oellm-eval#142",
+          "hf:model:openeurollm/datamix-2b-80-20"
+        ]
+      ],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0366,
+      "source_follow_lookup_ms": 12.6663,
+      "status": "evaluated"
+    },
+    {
+      "id": "dpo_variants_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#431",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/431",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Exploring DPO-variants for Preference Alignment'?",
+      "source_sha256": "a2c878d7905ddf9d273d990ccef62120f14aab28ba44ee0c7ed6beac6bf814b2",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#214"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0333,
+      "source_follow_lookup_ms": 4.2921,
+      "status": "evaluated"
+    },
+    {
+      "id": "contamination_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/oellm-eval#166",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/166",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Exclusion of contaminated samples from benchmarks'?",
+      "source_sha256": "4f075bd87207c0a586e6fc4162aa7cb932e91651af6a0072e421c91877f10017",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-eval#159"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0276,
+      "source_follow_lookup_ms": 26.4656,
+      "status": "evaluated"
+    },
+    {
+      "id": "safety_pr_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#405",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/405",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Add safety and fairness benchmarks'?",
+      "source_sha256": "8b8a346753980d87e89f8483baca7e952fb9b4532479610d34814fea86fe39f2",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-eval#124"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0365,
+      "source_follow_lookup_ms": 6.1637,
+      "status": "evaluated"
+    },
+    {
+      "id": "qwen_conversion_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#364",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/364",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Integrate Qwen3 MoE conversion to oellm-autoexp'?",
+      "source_sha256": "d84d511193811ceecd090cc7a59c95f41e2f6e4a825859bee047c8bf984734bc",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-autoexp#54"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.029,
+      "source_follow_lookup_ms": 7.2526,
+      "status": "evaluated"
+    },
+    {
+      "id": "judge_pr_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#337",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/337",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Integrate JudgeArena into oellm-eval'?",
+      "source_sha256": "9768c2e87e3d41e409668afc791b9ab4790c89384727e33ed2e119ef691b1436",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-eval#56"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0296,
+      "source_follow_lookup_ms": 2.9068,
+      "status": "evaluated"
+    },
+    {
+      "id": "multicluster_pr_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/oellm-eval#2",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/pull/2",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'feat: adding multi-cluster eval functionality'?",
+      "source_sha256": "f804fbad66e0dabbd110fc37df2ca784888eb1873d72c2ffcfcd1fe29285e327",
+      "first_hop_tasks": [
+        "github:openeurollm/taskboard#70"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0289,
+      "source_follow_lookup_ms": 12.7823,
+      "status": "evaluated"
+    },
+    {
+      "id": "monitor_session_no_hf",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/oellm-autoexp#69",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-autoexp/issues/69",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in '`monitor_autoexp.py --session <id>` crashes with `TypeError` when `--session-dir` isn't given'?",
+      "source_sha256": "75dbf9a50f47fd32d131c212740a846a93c32e59fed9c9c0045414787ff97349",
+      "first_hop_tasks": [
+        "github:openeurollm/oellm-autoexp#70"
+      ],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0339,
+      "source_follow_lookup_ms": 12.2117,
+      "status": "evaluated"
+    },
+    {
+      "id": "lumi_pipeline_no_refs",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#320",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/320",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Add support for LUMI for our post-training pipeline'?",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "first_hop_tasks": [],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0137,
+      "source_follow_lookup_ms": 0.3923,
+      "status": "evaluated"
+    },
+    {
+      "id": "cuni_people_no_refs",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#130",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/130",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Add CUNI people to github'?",
+      "source_sha256": "98346ed0198412b569dc2408bd2a3230a972a71ef60b6dda69c53a690d17fc85",
+      "first_hop_tasks": [],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0137,
+      "source_follow_lookup_ms": 0.4029,
+      "status": "evaluated"
+    },
+    {
+      "id": "vllm_backend_no_refs",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/oellm-eval#152",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/152",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Integrate vLLM as a backend'?",
+      "source_sha256": "eec5059a12ec96a399bb95fede7261e266d71e2cac9ad7248caa21ae2795a6b7",
+      "first_hop_tasks": [],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0136,
+      "source_follow_lookup_ms": 0.408,
+      "status": "evaluated"
+    },
+    {
+      "id": "autoexp_config_no_refs",
+      "cohort": "negative",
+      "anchor_id": "github:OpenEuroLLM/oellm-autoexp#10",
+      "expected_paths": [],
+      "source_url": "https://github.com/OpenEuroLLM/oellm-autoexp/issues/10",
+      "question": "Which indexed HF artifacts are explicitly mentioned by GitHub tasks cited in 'Make a proper error message when path to config file is wrong'?",
+      "source_sha256": "f8a2e02d5a37a7faaeb5d842c5b954314f1478136a467dabf88238829a0d83fc",
+      "first_hop_tasks": [],
+      "graph_paths": [],
+      "source_follow_paths": [],
+      "graph_exact": true,
+      "source_follow_exact": true,
+      "graph_lookup_ms": 0.0133,
+      "source_follow_lookup_ms": 0.4354,
+      "status": "evaluated"
+    }
+  ]
+}
