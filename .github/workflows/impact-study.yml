@@ -1,0 +1,55 @@
+name: Research change-impact evidence audit
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Research graph probe"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-impact-audit
+  cancel-in-progress: false
+
+jobs:
+  impact:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify ten live issue bodies and decisive original comments
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python impact_study.py --snapshot results/snapshot.json --output results
+      - name: Upload result and source-error diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-impact-audit
+          path: |
+            results/IMPACT*.md
+            results/impact*.json
+      - name: Commit only complete source-grounded impact audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/IMPACT_EVIDENCE.md results/impact_evidence.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: audit ten research impact candidates'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1

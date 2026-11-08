@@ -35,7 +35,8 @@ def read_issue(repo, number, *, timeout=20):
             # GitHub uses JSON null for an issue with no description. The graph
             # inventory already normalizes that exact value to an empty string.
             return {"body": data["body"] or "", "updated_at": data.get("updated_at"),
-                    "url": data.get("html_url", url),
+                    "url": data.get("html_url", url), "state": data.get("state"),
+                    "title": data.get("title"),
                     "latency_ms": round(1000 * (time.perf_counter() - begin), 1)}
         except (urllib.error.URLError, TimeoutError) as exc:
             if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
