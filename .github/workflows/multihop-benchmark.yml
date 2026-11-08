@@ -1,0 +1,55 @@
+name: Two-hop research evidence benchmark
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Research graph probe"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-multihop-evidence
+  cancel-in-progress: false
+
+jobs:
+  two-hop:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify original GitHub task bodies and follow two-hop evidence
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python multihop_benchmark.py --snapshot results/snapshot.json --output results
+      - name: Upload results and source-error diagnostics
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-multihop-evidence
+          path: |
+            results/MULTIHOP*.md
+            results/multihop*.json
+      - name: Commit only complete source-grounded comparison
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/MULTIHOP_EVIDENCE.md results/multihop_evidence.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: verify two-hop research evidence'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1
