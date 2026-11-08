@@ -1,0 +1,34 @@
+{
+  "selection": {
+    "date_utc": "2026-11-08",
+    "seed": "research-benchmark20-2026-11-08-v1",
+    "population": "Public OpenEuroLLM Taskboard, oellm-eval, and oellm-autoexp issues/PRs in the first snapshot; excludes the previous 10-issue holdout",
+    "random_cohort": "10 issue IDs: first five Taskboard, three oellm-eval, and two oellm-autoexp IDs ordered by SHA256(seed|ID), without looking at body text",
+    "reference_cohort": "10 deliberately link-rich issues/PRs, including cross-repository links; this cohort is NOT a random or blind test",
+    "gold_policy": "Expected target IDs curated once from original source text and frozen here before method comparison; a separate source-body audit and fresh GitHub source check validate support, not semantic dependency",
+    "question_template": "Which indexed GitHub issues or PRs does the source task described by this search phrase explicitly reference? Return none if no indexed task is cited.",
+    "limitations": "This assesses literal task cross-reference retrieval, not free-form scientific questions, model answers, human efficiency or production MCP value. Stratified sample is not representative."
+  },
+  "cases": [
+    {"id":"random_fn_rl","cohort":"random","anchor_id":"github:OpenEuroLLM/Taskboard#351","search_query":"Function-calling RL reproduction transfer","expected_ids":["github:OpenEuroLLM/Taskboard#220"]},
+    {"id":"random_lumi_pipeline","cohort":"random","anchor_id":"github:OpenEuroLLM/Taskboard#320","search_query":"support LUMI post-training pipeline","expected_ids":[]},
+    {"id":"random_qwen_moe","cohort":"random","anchor_id":"github:OpenEuroLLM/Taskboard#364","search_query":"Qwen3 MoE conversion oellm-autoexp","expected_ids":["github:OpenEuroLLM/oellm-autoexp#54"]},
+    {"id":"random_cuni_people","cohort":"random","anchor_id":"github:OpenEuroLLM/Taskboard#130","search_query":"CUNI people github","expected_ids":[]},
+    {"id":"random_llm_judges","cohort":"random","anchor_id":"github:OpenEuroLLM/Taskboard#184","search_query":"Better LLM judges instruction-tuned","expected_ids":[]},
+    {"id":"random_vllm_backend","cohort":"random","anchor_id":"github:OpenEuroLLM/oellm-eval#152","search_query":"Integrate vLLM backend","expected_ids":[]},
+    {"id":"random_bashrc_instructions","cohort":"random","anchor_id":"github:OpenEuroLLM/oellm-eval#5","search_query":"instructions add automatically bashrc","expected_ids":[]},
+    {"id":"random_judge_arena","cohort":"random","anchor_id":"github:OpenEuroLLM/oellm-eval#126","search_query":"Integrate packaged JudgeArena tasks","expected_ids":[]},
+    {"id":"random_bad_config_path","cohort":"random","anchor_id":"github:OpenEuroLLM/oellm-autoexp#10","search_query":"error message path config file wrong","expected_ids":[]},
+    {"id":"random_progress_tracker","cohort":"random","anchor_id":"github:OpenEuroLLM/oellm-autoexp#43","search_query":"Progress tracker tool","expected_ids":[]},
+    {"id":"linked_safety_fairness","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/Taskboard#405","search_query":"safety fairness benchmarks","expected_ids":["github:OpenEuroLLM/oellm-eval#124"]},
+    {"id":"linked_judgearena","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/Taskboard#337","search_query":"Integrate JudgeArena oellm-eval","expected_ids":["github:OpenEuroLLM/oellm-eval#56"]},
+    {"id":"linked_lumi_kernels","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/Taskboard#131","search_query":"LUMI container working kernels bias","expected_ids":["github:OpenEuroLLM/Taskboard#132"]},
+    {"id":"linked_evaluate_models","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/Taskboard#50","search_query":"Evaluate new models","expected_ids":["github:OpenEuroLLM/Taskboard#49"]},
+    {"id":"linked_bfcl_benchmark","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/Taskboard#384","search_query":"Benchmark Qwen3.5-9B BFCL V4","expected_ids":["github:OpenEuroLLM/Taskboard#385"]},
+    {"id":"linked_multicluster_eval","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/oellm-eval#2","search_query":"adding multi-cluster eval functionality","expected_ids":["github:OpenEuroLLM/Taskboard#70"]},
+    {"id":"linked_venv_path","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/oellm-eval#37","search_query":"venv_path option running without containers","expected_ids":["github:OpenEuroLLM/oellm-eval#28"]},
+    {"id":"linked_model_args","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/oellm-eval#135","search_query":"Fix model args in models","expected_ids":["github:OpenEuroLLM/oellm-eval#132"]},
+    {"id":"linked_csv_tsv","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/oellm-eval#143","search_query":"Replace CSV file format TSV","expected_ids":["github:OpenEuroLLM/oellm-eval#135","github:OpenEuroLLM/oellm-eval#131"]},
+    {"id":"linked_monitor_session","cohort":"reference_rich","anchor_id":"github:OpenEuroLLM/oellm-autoexp#69","search_query":"monitor_autoexp session crashes TypeError","expected_ids":["github:OpenEuroLLM/oellm-autoexp#70"]}
+  ]
+}
