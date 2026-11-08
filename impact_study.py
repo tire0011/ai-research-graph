@@ -48,6 +48,10 @@ def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment
     index = {node["id"].casefold(): node for node in graph["nodes"]}
     refs = {(edge["source"].casefold(), edge["target"].casefold()) for edge in graph["edges"]
             if edge["status"] == "explicit_task_reference"}
+    declared_dependencies = {(edge["source"].casefold(), edge["target"].casefold())
+                             for edge in graph["edges"] if edge["status"] == "author_declared_dependency"}
+    reported_blockers = {(edge["source"].casefold(), edge["target"].casefold())
+                         for edge in graph["edges"] if edge["status"] == "reported_blocker"}
     issues, comments = {}, {}
 
     def issue(repo, number):
@@ -79,11 +83,20 @@ def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment
                                    and (node.get("description") or "") == src["body"] else "stale_or_changed")
             row["graph_reference_count"] = sum(source == anchor.casefold() for source, _ in refs)
             row["evidence"] = []
+            row["graph_comment_evidence"] = {}
             for claim in case["evidence"]:
                 if claim["source"] == "body":
                     proof = src
                 elif claim["source"] == "comment":
                     proof = comment(case["repo"], claim["comment_id"])
+                    graph_id = f"github_comment:{case['repo']}#{claim['comment_id']}"
+                    stored = index.get(graph_id.casefold())
+                    graph_status = ("not_indexed" if stored is None else
+                                    "exact_parity" if stored.get("description") == proof["body"]
+                                    and stored.get("updated_at") == proof.get("updated_at")
+                                    and stored.get("body_sha256") == digest(proof["body"])
+                                    else "stale_or_changed")
+                    row["graph_comment_evidence"][graph_id] = graph_status
                 else:
                     raise ValueError(f"Unsupported evidence origin: {claim['source']}")
                 if claim["needle"].casefold() not in proof["body"].casefold():
@@ -102,8 +115,12 @@ def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment
                     "task_id": upstream_id, "url": upstream["url"],
                     "live_state": upstream.get("state"),
                     "graph_contains_literal_reference": (anchor.casefold(), upstream_id.casefold()) in refs,
+                    "graph_contains_author_declared_dependency": (anchor.casefold(), upstream_id.casefold()) in declared_dependencies,
                     "evidence_scope": "literal Dependencies section in the issue body",
                 }
+            row["graph_reported_blockers"] = [
+                comment_id for comment_id in row["graph_comment_evidence"]
+                if (comment_id.casefold(), anchor.casefold()) in reported_blockers]
             row["status"] = "evidence_verified"
         except (KeyError, ValueError, OSError, TimeoutError) as exc:
             row.update({"status": "source_error", "error": f"{type(exc).__name__}: {exc}"})
@@ -119,6 +136,13 @@ def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment
         "source_phrases_verified": sum(len(row["evidence"]) for row in valid),
         "exact_snapshot_parity": sum(row["graph_status"] == "exact_parity" for row in valid),
         "comment_dependent_cases": sum(any(e["source"] == "comment" for e in row["evidence"]) for row in valid),
+        "graph_comments_exact": sum(status == "exact_parity" for row in valid
+                                    for status in row["graph_comment_evidence"].values()),
+        "graph_comments_selected": sum(len(row["graph_comment_evidence"]) for row in valid),
+        "graph_author_dependencies_confirmed": sum(
+            row.get("declared_dependency", {}).get("graph_contains_author_declared_dependency", False)
+            for row in valid),
+        "graph_oom_reports_linked": sum(len(row.get("graph_reported_blockers", [])) for row in valid),
         "class_counts": dict(Counter(row["evidence_class"] for row in valid)),
         "cases": rows,
     }
@@ -131,6 +155,11 @@ def markdown(result):
              f"**{result['source_phrases_verified']}** literal phrases, "
              f"**{result['comments_verified']}** separately fetched comments. "
              f"Status: `{result['status']}`.", "",
+             f"Graph source parity for selected comments: **{result['graph_comments_exact']}/"
+             f"{result['graph_comments_selected']}**. Author-declared upstream links in the graph: "
+             f"**{result['graph_author_dependencies_confirmed']}**; commenter-reported OOM links: "
+             f"**{result['graph_oom_reports_linked']}**. These are evidence classifications, "
+             f"not independent validation of the asserted dependency or failure.", "",
              "**This is not a speedup ranking.** The ten open issues were purposefully selected "
              "for varied engineering signals. A reported result has not been independently reproduced; "
              "an issue reference does not prove a blocker. Do not sum unlike speed, accuracy and automation claims.", "",
@@ -157,11 +186,15 @@ def markdown(result):
         for claim in row["evidence"]:
             excerpt = claim["matched_text"].replace("`", "'")
             lines.append(f"- [{claim['source']} evidence]({claim['url']}): `{excerpt}` — {claim['meaning']}")
+        if row["graph_comment_evidence"]:
+            lines.append("- Source-hashed comment nodes in graph: " + ", ".join(
+                f"`{comment_id}` (`{status}`)" for comment_id, status in row["graph_comment_evidence"].items()))
         dependency = row.get("declared_dependency")
         if dependency:
             lines.append(f"- [Explicitly named upstream task]({dependency['url']}): "
                          f"`{dependency['task_id']}` (live state `{dependency['live_state']}`, "
-                         f"literal graph reference: `{dependency['graph_contains_literal_reference']}`).")
+                         f"literal graph reference: `{dependency['graph_contains_literal_reference']}`, "
+                         f"declared-dependency edge: `{dependency['graph_contains_author_declared_dependency']}`).")
         lines.append("")
     lines.extend(["## Research validity and next step", "",
                   "- **Measured training throughput**: #385 reports an approximately 9.5% uplift "

@@ -15,6 +15,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from impact_enrichment import github_comments_for_selected, selected_issue_ids, source_claim_edges
+
 
 GITHUB_REPOS = ("OpenEuroLLM/Taskboard", "OpenEuroLLM/oellm-eval", "OpenEuroLLM/oellm-autoexp")
 GITHUB_DATA_REPO = "OpenEuroLLM/training-data-collection"
@@ -633,7 +635,9 @@ def citation_coverage(nodes: list[dict], edges: list[dict]) -> dict:
 def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
     ids = [node["id"] for node in nodes]
     unique = set(ids)
-    pairs = [(edge["source"], edge["target"]) for edge in edges]
+    # A task may legitimately both mention another task and explicitly declare
+    # a dependency on it. Deduplicate typed relationships, not bare endpoints.
+    pairs = [(edge["source"], edge["target"], edge.get("status")) for edge in edges]
     github = [node for node in nodes if node["id"].startswith("github:")]
     return {
         "duplicate_node_ids": len(ids) - len(unique),
@@ -650,7 +654,8 @@ def quality_profile(nodes: list[dict], edges: list[dict]) -> dict:
 def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapshot: str,
            total_openaire: int | None, external_checks: list[dict] | None = None,
            code_scan: dict | None = None, code_checks: list[dict] | None = None,
-           unresolved_task_references: list[dict] | None = None):
+           unresolved_task_references: list[dict] | None = None,
+           comment_collection: dict | None = None):
     counts = {kind: sum(node["type"] == kind for node in nodes) for kind in
               ("issue", "pull_request", "model", "dataset", "research_product", "source_file", "processing_script", "experiment_run_ref")}
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
@@ -661,6 +666,9 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     colocated_scripts = [edge for edge in links if edge["status"] == "co_located_source_code"]
     run_references = [edge for edge in links if edge["status"] == "explicit_run_reference"]
     task_references = [edge for edge in links if edge["status"] == "explicit_task_reference"]
+    declared_dependencies = [edge for edge in links if edge["status"] == "author_declared_dependency"]
+    reported_blockers = [edge for edge in links if edge["status"] == "reported_blocker"]
+    comment_records = [node for node in nodes if node["type"] == "issue_comment"]
     resolved_aliases = {
         (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
         for check in (external_checks or []) if check["status"] == "verified_redirect"
@@ -691,6 +699,9 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- Concrete W&B run URLs in GitHub tasks (source links only): **{len(run_references)}**", "",
         f"- Literal GitHub issue/PR cross-references to indexed tasks: **{len(task_references)}**",
         f"- GitHub issue/PR references without an indexed target: **{len(unresolved_task_references or [])}**", "",
+        f"- Public comments on selected issues, individually source-hashed: **{len(comment_records)}**",
+        f"- Explicitly author-declared task dependencies: **{len(declared_dependencies)}**",
+        f"- Commenter-reported OOM failure statements: **{len(reported_blockers)}**", "",
         "GitHub task links are **textual mentions only**; they do not prove a dependency, completed implementation, or validated experiment.", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
@@ -712,6 +723,24 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         lines.append("| No in-snapshot references observed | – | – |")
     if len(task_references) > 70:
         lines.append(f"\nShowing the first 70 of {len(task_references)} task links; all are in snapshot.json.")
+    lines.extend(["", "## Scoped GitHub comment and dependency evidence", "",
+                  "Comments are collected only for the ten preselected change-impact issues, not all GitHub tasks. "
+                  "Each comment is a separate node with a public URL, original text, update timestamp and SHA256. "
+                  "A labeled Dependencies section is an **author declaration**, not verified causal blocking. "
+                  "An OOM comment is a **report of failure**, not a reproduced failure or a quantified speedup.", ""])
+    if comment_collection:
+        lines.append(f"- Comment collection: `{comment_collection.get('status', 'unknown')}`; "
+                     f"selected issues: **{comment_collection.get('selected_issues', 'unavailable')}**.\n")
+    for edge in declared_dependencies[:20]:
+        lines.append(f"- Declared dependency: [{edge['source']}]({edge['source_url']}) → "
+                     f"[{edge['target']}]({index[edge['target']]['url']}) "
+                     f"(`{edge['evidence_type']}`).")
+    for edge in reported_blockers[:20]:
+        lines.append(f"- Reported failure: [original comment]({edge['source_url']}) on "
+                     f"[{edge['target']}]({index[edge['target']]['url']}) "
+                     f"(`{edge['evidence']}`).")
+    if not declared_dependencies and not reported_blockers:
+        lines.append("- No supported dependency or OOM claim in the bounded source inventory.")
     lines.extend(["", "## Scholarly identifier matches", "",
         "| Source artifact | OpenAIRE publication | Shared ID |", "| --- | --- | --- |"])
     for edge in scholarly[:100]:
@@ -823,7 +852,7 @@ def incomplete_essential_sources(errors: dict[str, str]) -> list[str]:
     """Prevent an incomplete API response from replacing the last good CI snapshot."""
     critical = set(GITHUB_REPOS) | {"Hugging Face models", "Hugging Face datasets",
                                     "Hugging Face external lookup", "OpenAIRE", "GitHub source manifests",
-                                    "GitHub source dataset lookup"}
+                                    "GitHub source dataset lookup", "GitHub selected issue comments"}
     return sorted(name for name in errors if name in critical or name.startswith("OpenAIRE arXiv batch"))
 
 
@@ -841,6 +870,9 @@ def main(argv: list[str] | None = None) -> int:
     code_scan: dict | None = None
     code_checks: list[dict] | None = None
     code_edges: list[dict] = []
+    comment_nodes: list[dict] = []
+    comment_edges: list[dict] = []
+    comment_collection: dict | None = None
     if args.fixture:
         fixture = json.loads(Path(args.fixture).read_text(encoding="utf-8"))
         nodes = fixture["nodes"]
@@ -849,6 +881,8 @@ def main(argv: list[str] | None = None) -> int:
         code_scan = fixture.get("github_code_scan")
         code_checks = fixture.get("github_code_target_checks")
         code_edges = fixture.get("github_code_edges", [])
+        comment_nodes = [node for node in nodes if node.get("type") == "issue_comment"]
+        comment_collection = fixture.get("github_comment_collection")
     else:
         for repo in GITHUB_REPOS:
             try:
@@ -897,6 +931,17 @@ def main(argv: list[str] | None = None) -> int:
             if product["id"] not in existing:
                 nodes.append(product)
                 existing.add(product["id"])
+        try:
+            selected = selected_issue_ids(Path(__file__).with_name("impact_cases.json"))
+            comment_nodes, comment_edges = github_comments_for_selected(
+                nodes, selected, fetch_json, token=os.getenv("GITHUB_TOKEN"))
+            nodes.extend(comment_nodes)
+            comment_collection = {"status": "complete", "selected_issues": len(selected),
+                                  "fetched_comments": len(comment_nodes)}
+        except (KeyError, ValueError, OSError, TimeoutError) as exc:
+            errors["GitHub selected issue comments"] = str(exc)
+            comment_collection = {"status": "source_error", "selected_issues": "unavailable",
+                                  "fetched_comments": None}
     aliases = {
         (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
         for check in (external_checks or []) if check["status"] == "verified_redirect"
@@ -915,7 +960,9 @@ def main(argv: list[str] | None = None) -> int:
     run_nodes, run_edges = linked_experiment_runs(nodes)
     nodes.extend(run_nodes)
     task_edges, unresolved_tasks = github_task_references(nodes)
-    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges + run_edges + task_edges
+    claim_edges = source_claim_edges(nodes, comment_nodes, task_edges)
+    edges = (links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges +
+             run_edges + task_edges + comment_edges + claim_edges)
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
@@ -924,11 +971,13 @@ def main(argv: list[str] | None = None) -> int:
                "external_hf_target_checks": external_checks,
                "github_code_scan": code_scan, "github_code_target_checks": code_checks,
                "unresolved_github_task_references": unresolved_tasks,
+               "github_comment_collection": comment_collection,
                "errors": errors, "openaire_search_total": openaire_total,
                "quality": profile, "citation_coverage": citation_coverage(nodes, edges)}
     (output / "snapshot.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "REPORT.md").write_text(report(nodes, edges, errors, snapshot, openaire_total,
-                                              external_checks, code_scan, code_checks, unresolved_tasks), encoding="utf-8")
+                                              external_checks, code_scan, code_checks, unresolved_tasks,
+                                              comment_collection), encoding="utf-8")
     critical_errors = incomplete_essential_sources(errors)
     print(f"Collected {len(nodes)} records, {len(edges)} evidenced/candidate edges, {len(errors)} source errors")
     if critical_errors:
