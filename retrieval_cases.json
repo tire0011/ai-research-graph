@@ -1,0 +1,53 @@
+[
+  {
+    "id": "prelude_eval_dataset",
+    "question": "Which Hugging Face dataset does the Prelude evaluation issue explicitly reference?",
+    "anchor_id": "github:OpenEuroLLM/oellm-eval#163",
+    "kind": "explicit",
+    "target_type": "dataset",
+    "expected_ids": ["hf:dataset:openeurollm/prelude-base-eval-scores"]
+  },
+  {
+    "id": "tokenizer_v2",
+    "question": "Which tokenizer v2 models are linked from the tokenizer discussion?",
+    "anchor_id": "github:OpenEuroLLM/Taskboard#377",
+    "kind": "explicit",
+    "target_type": "model",
+    "expected_ids": [
+      "hf:model:openeurollm/tokenizer-256k-v2",
+      "hf:model:openeurollm/tokenizer-128k-v2"
+    ]
+  },
+  {
+    "id": "openthoughts_shared_paper",
+    "question": "Which OpenThoughts dataset shares a paper citation with the OpenThinker3 reproduction task?",
+    "anchor_id": "github:OpenEuroLLM/Taskboard#321",
+    "kind": "shared_citation",
+    "target_type": "dataset",
+    "expected_ids": ["hf:dataset:open-thoughts/OpenThoughts3-1.2M"]
+  },
+  {
+    "id": "finemath_shared_paper",
+    "question": "Does the automated annealing mixture task cite the same paper as FineMath?",
+    "anchor_id": "github:OpenEuroLLM/Taskboard#56",
+    "kind": "shared_citation",
+    "target_type": "dataset",
+    "expected_ids": ["hf:dataset:HuggingFaceTB/finemath"]
+  },
+  {
+    "id": "olmo3_shared_paper",
+    "question": "Which OLMo 3 model shares a publication with the multilingual HellaSwag change?",
+    "anchor_id": "github:OpenEuroLLM/oellm-eval#156",
+    "kind": "shared_citation",
+    "target_type": "model",
+    "expected_ids": ["hf:model:openeurollm/OLMo-3-7B-Think-SFT"]
+  },
+  {
+    "id": "hplt_unverified",
+    "question": "Can we independently verify the HPLT4.0 dataset declared by this model card?",
+    "anchor_id": "hf:model:openeurollm/datamix-0.7b-hplt-3.0-eng-cc-100bt",
+    "kind": "unverified_declaration",
+    "target_type": "dataset",
+    "declared_id": "HPLT/HPLT4.0"
+  }
+]
