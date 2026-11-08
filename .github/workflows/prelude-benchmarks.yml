@@ -1,0 +1,64 @@
+name: Prelude benchmark probes
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Research graph probe"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prelude-benchmarks
+  cancel-in-progress: false
+
+jobs:
+  prelude:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Parquet reader
+        run: python -m pip install --disable-pip-version-check pyarrow
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Inspect published Prelude checkpoint scores
+        id: eval
+        continue-on-error: true
+        run: python benchmark_probe.py --output results
+      - name: Compare checkpoint-matched control tasks
+        id: controls
+        continue-on-error: true
+        run: python control_probe.py --output results
+      - name: Publish reports and source-error diagnostics
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: prelude-probe-evidence
+          path: |
+            results/PRELUDE_*.md
+            results/prelude_*.json
+      - name: Commit only successful probe outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if [ '${{ steps.eval.outcome }}' = 'success' ]; then
+            git add results/PRELUDE_EVAL.md results/prelude_eval.json
+          fi
+          if [ '${{ steps.controls.outcome }}' = 'success' ]; then
+            git add results/PRELUDE_CONTROLS.md results/prelude_controls.json
+          fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: update successful Prelude benchmark evidence'
+          git push
+      - name: Fail when a source is unavailable
+        if: steps.eval.outcome != 'success' || steps.controls.outcome != 'success'
+        run: exit 1
