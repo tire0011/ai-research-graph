@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T10:04:56.042385+00:00",
+  "timestamp_utc": "2026-11-08T11:42:31.360723+00:00",
   "status": "comparable",
   "source": {
     "dataset": "openeurollm/prelude-base-eval-scores",
@@ -73,6 +73,13 @@
       }
     ],
     "source_method": "pinned_source_parquet",
+    "selected_groups": [
+      [
+        "prelude_anneal2t",
+        "coqa_gen",
+        "f1"
+      ]
+    ],
     "scan_truncated": false,
     "feature_names": [
       "category",
@@ -112,8 +119,7 @@
       "train_batch_size",
       "wandb_run"
     ],
-    "parquet_reader": "pyarrow 26.0.1",
-    "viewer_filter_error": "HTTP 500 at https://datasets-server.huggingface.co/filter?dataset=openeurollm%2Fprelude-base-eval-scores&config=default&split=train&where=%22model%22%3D%27prelude_anneal2t%27+AND+%22task%22%3D%27coqa_gen%27+AND+%22metric%22%3D%27f1%27&offset=0&length=100"
+    "parquet_reader": "pyarrow 26.0.1"
   },
   "profile": {
     "status": "comparable",
