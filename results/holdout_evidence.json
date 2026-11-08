@@ -1,0 +1,261 @@
+{
+  "status": "completed",
+  "evaluated_utc": "2026-11-08T12:28:27.234488+00:00",
+  "snapshot_utc": "2026-11-08T12:26:48.591174+00:00",
+  "selection": {
+    "date_utc": "2026-11-08",
+    "seed": "heldout-research-2026-11-08-v1",
+    "frame": "GitHub search: most recently updated issues; Taskboard top 30, oellm-eval top 30, oellm-autoexp top 25",
+    "method": "Exclude existing QA/benchmark cases, then choose lowest unsigned FNV-1a score of seed|owner/repo#number; quotas 4/4/2. Issue bodies were inspected only after IDs were selected.",
+    "limits": "Questions and expected phrases were curated from the selected original issue bodies; this is new-issue coverage testing, NOT blinded question writing or a representative user study."
+  },
+  "selected": 10,
+  "sources_available": 10,
+  "exact_source_parity": 10,
+  "graph_fact_support": 10,
+  "missing_graph_node": 0,
+  "stale_graph_node": 0,
+  "linked_issues": 0,
+  "issue_crossrefs": 2,
+  "latency_median_ms": 372.1,
+  "cases": [
+    {
+      "id": "pdf_ocr_benchmark",
+      "anchor": "github:OpenEuroLLM/Taskboard#420",
+      "question": "Which two document categories must the planned PDF benchmark cover, and should computation cost be included?",
+      "answer": "Digitally born and scanned documents, with computational costs considered.",
+      "evidence_level": "planned",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/420",
+      "source_updated_at": "2026-11-04T22:57:49Z",
+      "source_sha256": "d704e4f9272a16c75515dd45fd7c043fa03a508a6ed5827ff6a3842df97cf99d",
+      "source_latency_ms": 443.0,
+      "gold_phrases": [
+        "digitally-born documents",
+        "scanned documents",
+        "Computational costs"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "d704e4f9272a16c75515dd45fd7c043fa03a508a6ed5827ff6a3842df97cf99d",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "dpo_mixture",
+      "anchor": "github:OpenEuroLLM/Taskboard#435",
+      "question": "What example language mixture is proposed for Prelude DPO? Is it a completed experiment?",
+      "answer": "75% English and 25% multilingual is an illustrative proposal, not a demonstrated optimal mix.",
+      "evidence_level": "proposal",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/435",
+      "source_updated_at": "2026-11-04T13:06:23Z",
+      "source_sha256": "1a4f4a3982a266ff150a97de8f713afd3bf991f71abcb0e3a3b6a255cd49b767",
+      "source_latency_ms": 418.9,
+      "gold_phrases": [
+        "75% english data",
+        "25% multilingual data"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "1a4f4a3982a266ff150a97de8f713afd3bf991f71abcb0e3a3b6a255cd49b767",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "dpo_checkpoint_merges",
+      "anchor": "github:OpenEuroLLM/Taskboard#434",
+      "question": "How many checkpoint averages across how many models does this issue report? Are their scores independently reproduced?",
+      "answer": "The issue reports 282 averages across four models; the issue text alone does not independently reproduce their scores.",
+      "evidence_level": "reported_not_reproduced",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/434",
+      "source_updated_at": "2026-11-04T13:06:58Z",
+      "source_sha256": "9985a3cd2bd18961cf201cb455229570a8bb824d7c89f04e363efbd32bb371c5",
+      "source_latency_ms": 425.8,
+      "gold_phrases": [
+        "282 averages",
+        "across four models"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "9985a3cd2bd18961cf201cb455229570a8bb824d7c89f04e363efbd32bb371c5",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "dpo_variants",
+      "anchor": "github:OpenEuroLLM/Taskboard#431",
+      "question": "Which DPO variants are planned for the same learning-rate/beta grid?",
+      "answer": "APO, IPO and length-normalized DPO are planned for comparison against vanilla DPO.",
+      "evidence_level": "planned",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/431",
+      "source_updated_at": "2026-11-04T13:10:48Z",
+      "source_sha256": "a2c878d7905ddf9d273d990ccef62120f14aab28ba44ee0c7ed6beac6bf814b2",
+      "source_latency_ms": 378.4,
+      "gold_phrases": [
+        "APO, IPO",
+        "length-normalized DPO",
+        "#214"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [
+        "214"
+      ],
+      "graph_sha256": "a2c878d7905ddf9d273d990ccef62120f14aab28ba44ee0c7ed6beac6bf814b2",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "evalchemy_samples",
+      "anchor": "github:OpenEuroLLM/oellm-eval#165",
+      "question": "Which evaluation backend lacked the sample-logging flag?",
+      "answer": "The issue says Evalchemy lacked native sample-logging support, unlike lm-eval-harness.",
+      "evidence_level": "reported",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/165",
+      "source_updated_at": "2026-11-02T16:33:09Z",
+      "source_sha256": "f66eacc4319bf2967245c8a3e3deced5a2c14a22af889ee287dd6d13c7b17ca2",
+      "source_latency_ms": 307.1,
+      "gold_phrases": [
+        "Evalchemy",
+        "lm-eval-harness"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "f66eacc4319bf2967245c8a3e3deced5a2c14a22af889ee287dd6d13c7b17ca2",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "pr_container_build",
+      "anchor": "github:OpenEuroLLM/oellm-eval#45",
+      "question": "What container-build cost reduction was proposed?",
+      "answer": "Avoid building every container for every pull request; cluster-based builds were described as a later step.",
+      "evidence_level": "proposal",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/45",
+      "source_updated_at": "2026-02-25T08:10:10Z",
+      "source_sha256": "0c4cb6317c4f956e7d3d341d9ca2a009fb8644aa99d11485bd58088ead015b34",
+      "source_latency_ms": 331.0,
+      "gold_phrases": [
+        "avoid to build all containers",
+        "cluster"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "0c4cb6317c4f956e7d3d341d9ca2a009fb8644aa99d11485bd58088ead015b34",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "contamination_exclusion",
+      "anchor": "github:OpenEuroLLM/oellm-eval#166",
+      "question": "Which two settings are needed for code-execution evaluation tasks in this issue?",
+      "answer": "The issue specifies --confirm_run_unsafe_code and HF_ALLOW_CODE_EVAL=1.",
+      "evidence_level": "reported",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/166",
+      "source_updated_at": "2026-11-04T13:24:02Z",
+      "source_sha256": "4f075bd87207c0a586e6fc4162aa7cb932e91651af6a0072e421c91877f10017",
+      "source_latency_ms": 365.8,
+      "gold_phrases": [
+        "--confirm_run_unsafe_code",
+        "HF_ALLOW_CODE_EVAL=1",
+        "#159"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [
+        "159"
+      ],
+      "graph_sha256": "4f075bd87207c0a586e6fc4162aa7cb932e91651af6a0072e421c91877f10017",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "lumi_cpu_fallback",
+      "anchor": "github:OpenEuroLLM/oellm-eval#96",
+      "question": "What AMD-GPU environment variable was suggested for the LUMI CPU fallback? Was it proven to fix the problem?",
+      "answer": "HIP_VISIBLE_DEVICES was proposed for AMD GPU visibility; the issue presents this as a potential fix, not a proven root cause.",
+      "evidence_level": "hypothesis",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/96",
+      "source_updated_at": "2026-10-04T12:52:51Z",
+      "source_sha256": "23c7be9d4473e8867d47a806fb1e3f367b0cd8ccf23dcddb9b2759b3367a7bf6",
+      "source_latency_ms": 305.3,
+      "gold_phrases": [
+        "AMD hardware",
+        "HIP_VISIBLE_DEVICES",
+        "Potential Cause"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "23c7be9d4473e8867d47a806fb1e3f367b0cd8ccf23dcddb9b2759b3367a7bf6",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "singularity_binds",
+      "anchor": "github:OpenEuroLLM/oellm-autoexp#6",
+      "question": "Which configuration directory held bind mounts that were missing at launch?",
+      "answer": "The issue points to config/container and shows a singularity exec command without visible bind arguments.",
+      "evidence_level": "reported",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-autoexp/issues/6",
+      "source_updated_at": "2025-11-20T14:02:28Z",
+      "source_sha256": "e0b91e8dd539340b8531790e7ef648d23153b0ed36dc09002ccc69115c9cc482",
+      "source_latency_ms": 317.8,
+      "gold_phrases": [
+        "config/container",
+        "singularity exec"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "e0b91e8dd539340b8531790e7ef648d23153b0ed36dc09002ccc69115c9cc482",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    },
+    {
+      "id": "lumi_setup",
+      "anchor": "github:OpenEuroLLM/oellm-autoexp#5",
+      "question": "Why did generic setup instructions not cover the LUMI cluster?",
+      "answer": "The issue attributes the gap to differences between LUMI and other clusters.",
+      "evidence_level": "reported",
+      "source_url": "https://github.com/OpenEuroLLM/oellm-autoexp/issues/5",
+      "source_updated_at": "2025-11-20T14:02:18Z",
+      "source_sha256": "b9a3c49ef23323b27dfbd40ad964756a6bffd4d533c920abfa57330bfaf1f27f",
+      "source_latency_ms": 384.7,
+      "gold_phrases": [
+        "cluster differences",
+        "Readme.md"
+      ],
+      "missing_source_phrases": [],
+      "issue_crossrefs": [],
+      "graph_sha256": "b9a3c49ef23323b27dfbd40ad964756a6bffd4d533c920abfa57330bfaf1f27f",
+      "graph_fact_support": true,
+      "status": "exact_source_parity",
+      "sourced_link_count": 0,
+      "candidate_count": 0,
+      "sourced_targets": []
+    }
+  ]
+}
