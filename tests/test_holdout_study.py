@@ -55,10 +55,24 @@ class HoldoutTests(unittest.TestCase):
         links = hs.evidence_summary([
             {"source": "a", "target": "b", "status": "candidate"},
             {"source": "a", "target": "c", "status": "identifier_match"},
+            {"source": "a", "target": "github:OpenEuroLLM/Taskboard#214", "status": "explicit_task_reference"},
         ], "a")
         self.assertEqual(links["sourced_link_count"], 1)
         self.assertEqual(links["candidate_count"], 1)
         self.assertEqual(links["sourced_targets"], ["c"])
+        self.assertEqual(links["task_reference_count"], 1)
+
+    def test_internal_task_edges_remain_separate_from_external_links(self):
+        specimen = graph("scanned documents; see #214")
+        specimen["edges"] = [{"source": "github:OpenEuroLLM/Taskboard#420",
+                              "target": "github:OpenEuroLLM/Taskboard#214",
+                              "status": "explicit_task_reference"}]
+        result = hs.evaluate(specimen, study(), fetch=lambda repo, num: {
+            "body": "scanned documents; see #214", "updated_at": "2026-11-08",
+            "url": "https://github.com/OpenEuroLLM/Taskboard/issues/420"})
+        self.assertEqual(result["linked_issues"], 0)
+        self.assertEqual(result["task_linked_issues"], 1)
+        self.assertIn("Resolved graph task targets: github:OpenEuroLLM/Taskboard#214", hs.markdown(result))
 
 
 if __name__ == "__main__":
