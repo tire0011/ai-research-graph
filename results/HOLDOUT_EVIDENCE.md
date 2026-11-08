@@ -1,6 +1,6 @@
 # Ten new OpenEuroLLM research questions: source-grounded holdout
 
-Snapshot: `2026-11-08T16:56:14.582914+00:00` UTC. Live original issues fetched: **10/10**.
+Snapshot: `2026-11-08T21:30:14.918186+00:00` UTC. Live original issues fetched: **10/10**.
 Issue bodies identical to the snapshot, at the **same update timestamp**: **10/10**.
 Questions supported by the graph's retained source phrases: **10/10**.
 Issues with any cross-platform evidence edge: **0/10**; issues with internal `#issue` references in text: **2/10**.
