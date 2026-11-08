@@ -33,6 +33,8 @@ jobs:
         run: python qa_probe.py --snapshot results/snapshot.json --output results/QA_EVIDENCE.md
       - name: Inspect published Prelude benchmark scores
         run: python benchmark_probe.py --output results
+      - name: Compare checkpoint-matched Prelude control tasks
+        run: python control_probe.py --output results
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -42,7 +44,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results/REPORT.md results/snapshot.json results/QA_EVIDENCE.md results/PRELUDE_EVAL.md results/prelude_eval.json
+          git add results/REPORT.md results/snapshot.json results/QA_EVIDENCE.md results/PRELUDE_EVAL.md results/prelude_eval.json results/PRELUDE_CONTROLS.md results/prelude_controls.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: update research graph snapshot'
           git push
