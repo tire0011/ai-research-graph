@@ -1,20 +1,20 @@
 # Twenty source-grounded GitHub research questions
 
-Snapshot: `2026-11-08T14:18:13.469974+00:00`. Verified: **20/20**. Status: `completed`.
+Snapshot: `2026-11-08T16:56:14.582914+00:00`. Verified: **20/20**. Status: `completed`.
 
 ## Exact target-set correctness and correct abstentions
 
 | Cohort | Method | Exact answers | Correct no-link answers | Source top-1 | Median lookup (ms) |
 | --- | --- | ---: | ---: | ---: | ---: |
-| all | Precomputed evidence graph | 18/20 | 8 | 18/20 | 2.1983 |
-| all | Source text (same snapshot) | 18/20 | 8 | 18/20 | 2.2274 |
-| all | Live GitHub issue/PR search | 18/20 | 8 | 18/20 | 306.1 |
-| random | Precomputed evidence graph | 10/10 | 8 | 10/10 | 1.4869 |
-| random | Source text (same snapshot) | 10/10 | 8 | 10/10 | 1.5126 |
-| random | Live GitHub issue/PR search | 10/10 | 8 | 10/10 | 306.1 |
-| reference_rich | Precomputed evidence graph | 8/10 | 0 | 8/10 | 2.1983 |
-| reference_rich | Source text (same snapshot) | 8/10 | 0 | 8/10 | 2.2274 |
-| reference_rich | Live GitHub issue/PR search | 8/10 | 0 | 8/10 | 312.45 |
+| all | Precomputed evidence graph | 18/20 | 8 | 18/20 | 2.7615 |
+| all | Source text (same snapshot) | 18/20 | 8 | 18/20 | 2.8192 |
+| all | Live GitHub issue/PR search | 18/20 | 8 | 18/20 | 315.65 |
+| random | Precomputed evidence graph | 10/10 | 8 | 10/10 | 1.9385 |
+| random | Source text (same snapshot) | 10/10 | 8 | 10/10 | 1.9727 |
+| random | Live GitHub issue/PR search | 10/10 | 8 | 10/10 | 315.2 |
+| reference_rich | Precomputed evidence graph | 8/10 | 0 | 8/10 | 2.7615 |
+| reference_rich | Source text (same snapshot) | 8/10 | 0 | 8/10 | 2.8192 |
+| reference_rich | Live GitHub issue/PR search | 8/10 | 0 | 8/10 | 315.65 |
 
 **Do not compare snapshot milliseconds with live GitHub search milliseconds as a speedup.** The former has already paid data-collection and graph-indexing costs; the latter includes network latency. GitHub search indexing and rate limits may also affect results.
 
