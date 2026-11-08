@@ -5,13 +5,14 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import sys
 import statistics
 import urllib.error
 from pathlib import Path
 
 from benchmark_probe import (
     DATASET, MODEL, SOURCE_DATASET, SOURCE_ISSUE,
-    assess_scores, parquet_scores,
+    assess_scores, parquet_scores, retry_transient,
 )
 
 
@@ -165,8 +166,9 @@ def main(argv: list[str] | None = None) -> int:
     output.mkdir(parents=True, exist_ok=True)
     result = {"timestamp_utc": dt.datetime.now(dt.timezone.utc).isoformat()}
     try:
-        raw = parquet_scores(
-            groups=tuple((MODEL, task, metric) for _, task, metric in GROUPS),
+        raw = retry_transient(
+            lambda: parquet_scores(groups=tuple(
+                (MODEL, task, metric) for _, task, metric in GROUPS)),
         )
         assessment = compare_controls(raw)
         result.update({
@@ -177,12 +179,16 @@ def main(argv: list[str] | None = None) -> int:
     except (ValueError, KeyError, ImportError, urllib.error.URLError, TimeoutError) as exc:
         result.update({"status": "source_error",
                        "error": f"{type(exc).__name__}: {exc}"})
+    if result["status"] == "source_error":
+        (output / "prelude_controls_error.json").write_text(
+            json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        (output / "PRELUDE_CONTROLS_ERROR.md").write_text(report(result), encoding="utf-8")
+        print(f"Prelude controls: source_error ({result['error']})", file=sys.stderr)
+        return 1
     (output / "prelude_controls.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "PRELUDE_CONTROLS.md").write_text(report(result), encoding="utf-8")
     print(f"Prelude controls: {result['status']}")
-    # Source-side failure is recorded as unavailability and does not invalidate
-    # the separately audited research graph or the original CoQA probe.
     return 0
 
 

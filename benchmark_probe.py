@@ -8,7 +8,9 @@ import hashlib
 import io
 import json
 import math
+import sys
 import statistics
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -26,6 +28,19 @@ SOURCE_ISSUE = "https://github.com/OpenEuroLLM/oellm-eval/issues/163"
 SOURCE_DATASET = f"https://huggingface.co/datasets/{DATASET}"
 REQUIRED = {"model", "step", "task", "metric", "score", "task_config"}
 MAX_PARQUET_FILES, MAX_PARQUET_BYTES = 16, 32 * 1024 * 1024
+
+
+def retry_transient(source, *, attempts: int = 3, sleep=time.sleep):
+    """Retry temporary source outages, but never hide bad requests or bad data."""
+    for attempt in range(attempts):
+        try:
+            return source()
+        except (urllib.error.URLError, TimeoutError) as exc:
+            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500:
+                raise
+            if attempt + 1 == attempts:
+                raise
+            sleep(2 ** attempt)
 
 
 def json_url(base: str, **query: str | int) -> str:
@@ -346,16 +361,9 @@ def main(argv: list[str] | None = None) -> int:
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     try:
-        try:
-            raw = filtered_scores()
-        except urllib.error.HTTPError as primary_error:
-            # HF dataset-viewer occasionally returns HTTP 500. Use the
-            # source repository's pinned, small Parquet files instead.
-            if primary_error.code < 500:
-                raise
-            raw = parquet_scores()
-            raw["viewer_filter_error"] = (f"HTTP {primary_error.code} at "
-                                          f"{primary_error.geturl()}")
+        # The dataset-viewer filter is intermittently unavailable. Read the
+        # original Parquet files at one pinned revision, as the controls do.
+        raw = retry_transient(parquet_scores)
         profile = assess_scores(raw)
         result = {"timestamp_utc": timestamp, "status": profile["status"],
                   "source": {k: v for k, v in raw.items() if k != "rows"}, "profile": profile}
@@ -364,11 +372,17 @@ def main(argv: list[str] | None = None) -> int:
         result = {"timestamp_utc": timestamp, "status": "source_error",
                   "error": f"{type(exc).__name__}: {exc}",
                   "failed_url": failed_url, "source": None, "profile": None}
-    (output / "prelude_eval.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if result["status"] == "source_error":
+        # Keep the last good tracked report intact, including for local runs.
+        (output / "prelude_eval_error.json").write_text(
+            json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        (output / "PRELUDE_EVAL_ERROR.md").write_text(markdown(result), encoding="utf-8")
+        print(f"Prelude eval probe: source_error ({result['error']})", file=sys.stderr)
+        return 1
+    (output / "prelude_eval.json").write_text(
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "PRELUDE_EVAL.md").write_text(markdown(result), encoding="utf-8")
     print(f"Prelude eval probe: {result['status']}")
-    # Optional companion data source: errors are explicit and do not overwrite
-    # independently collected research graph results.
     return 0
 
 

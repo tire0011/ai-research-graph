@@ -2,6 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 from types import ModuleType, SimpleNamespace
 from unittest.mock import patch
@@ -192,12 +193,47 @@ class SourceTests(unittest.TestCase):
 
     def test_source_error_report_is_explicit(self):
         with tempfile.TemporaryDirectory() as directory:
-            with patch.object(bp, "filtered_scores", side_effect=ValueError("not available")):
-                self.assertEqual(bp.main(["--output", directory]), 0)
-            payload = json.loads((Path(directory) / "prelude_eval.json").read_text())
-            report = (Path(directory) / "PRELUDE_EVAL.md").read_text()
+            previous = Path(directory) / "PRELUDE_EVAL.md"
+            previous.write_text("last known good\n")
+            with patch.object(bp, "parquet_scores", side_effect=ValueError("not available")):
+                self.assertEqual(bp.main(["--output", directory]), 1)
+            payload = json.loads((Path(directory) / "prelude_eval_error.json").read_text())
+            report = (Path(directory) / "PRELUDE_EVAL_ERROR.md").read_text()
             self.assertEqual(payload["status"], "source_error")
             self.assertIn("no scores were analyzed", report)
+            self.assertEqual(previous.read_text(), "last known good\n")
+            self.assertFalse((Path(directory) / "prelude_eval.json").exists())
+
+    def test_retry_transient_timeout_then_success(self):
+        calls, delays = [], []
+
+        def source():
+            calls.append(True)
+            if len(calls) < 3:
+                raise TimeoutError("temporary")
+            return {"status": "recovered"}
+
+        self.assertEqual(bp.retry_transient(source, sleep=delays.append),
+                         {"status": "recovered"})
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(delays, [1, 2])
+
+    def test_retry_transient_exhausted_and_permanent_http_error(self):
+        calls, delays = [], []
+
+        def unavailable():
+            calls.append(True)
+            raise urllib.error.URLError("offline")
+
+        with self.assertRaises(urllib.error.URLError):
+            bp.retry_transient(unavailable, sleep=delays.append)
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(delays, [1, 2])
+
+        bad_request = urllib.error.HTTPError("https://example.org", 404, "missing", {}, None)
+        with self.assertRaises(urllib.error.HTTPError):
+            bp.retry_transient(lambda: (_ for _ in ()).throw(bad_request), sleep=delays.append)
+        self.assertEqual(delays, [1, 2])
 
 
 if __name__ == "__main__":

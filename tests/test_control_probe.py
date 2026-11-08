@@ -84,11 +84,15 @@ class ControlTests(unittest.TestCase):
 
     def test_source_failure_explicit(self):
         with tempfile.TemporaryDirectory() as folder:
+            last_good = Path(folder) / "PRELUDE_CONTROLS.md"
+            last_good.write_text("last known good\n")
             with patch.object(cp, "parquet_scores", side_effect=ValueError("offline")):
-                self.assertEqual(cp.main(["--output", folder]), 0)
-            payload = json.loads((Path(folder) / "prelude_controls.json").read_text())
+                self.assertEqual(cp.main(["--output", folder]), 1)
+            payload = json.loads((Path(folder) / "prelude_controls_error.json").read_text())
             self.assertEqual(payload["status"], "source_error")
-            self.assertIn("No scientific comparison", (Path(folder) / "PRELUDE_CONTROLS.md").read_text())
+            self.assertIn("No scientific comparison", (Path(folder) / "PRELUDE_CONTROLS_ERROR.md").read_text())
+            self.assertEqual(last_good.read_text(), "last known good\n")
+            self.assertFalse((Path(folder) / "prelude_controls.json").exists())
 
 
 if __name__ == "__main__":
