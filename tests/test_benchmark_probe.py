@@ -1,7 +1,9 @@
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import ModuleType, SimpleNamespace
 from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
@@ -75,6 +77,56 @@ class ScoreTests(unittest.TestCase):
 
 
 class SourceTests(unittest.TestCase):
+    def test_pinned_parquet_source_records_file_provenance(self):
+        fixture = [
+            row(10, .2)["row"],
+            row(15, .5, model="unrelated")["row"],
+            row(20, .4)["row"],
+        ]
+
+        class Table:
+            def __init__(self, records):
+                self.records = records
+
+            def to_pydict(self):
+                return {name: [r.get(name) for r in self.records]
+                        for name in ("model", "task", "metric")}
+
+            def to_pylist(self):
+                return self.records
+
+        class FakeParquet:
+            schema_arrow = SimpleNamespace(names=list(fixture[0]))
+            metadata = SimpleNamespace(num_rows=3, row_group=lambda i: SimpleNamespace(num_rows=3))
+            num_row_groups = 1
+
+            def __init__(self, _):
+                pass
+
+            def read_row_group(self, index, columns):
+                return Table([{name: r[name] for name in columns} for r in fixture])
+
+        def fetch(url):
+            if "/tree/" in url:
+                return [{"type": "file", "path": "scores.parquet"}]
+            return {"sha": "a" * 40, "lastModified": "today"}
+
+        arrow_module = ModuleType("pyarrow")
+        arrow_module.__path__ = []
+        arrow_module.__version__ = "test"
+        parquet_module = ModuleType("pyarrow.parquet")
+        parquet_module.ParquetFile = FakeParquet
+        arrow_module.parquet = parquet_module
+        modules = {"pyarrow": arrow_module, "pyarrow.parquet": parquet_module}
+        with patch.dict(sys.modules, modules):
+            data = bp.parquet_scores(fetch=fetch, download=lambda url: b"fake parquet")
+        self.assertEqual(data["source_method"], "pinned_source_parquet")
+        self.assertEqual(len(data["rows"]), 2)
+        self.assertEqual([r["source_file_row_idx"] for r in data["rows"]], [0, 2])
+        self.assertEqual(data["source_files"][0]["matched_rows"], 2)
+        self.assertEqual(data["parquet_reader"], "pyarrow test")
+        self.assertEqual(bp.assess_scores(data)["status"], "comparable")
+
     def test_filter_url_and_revision_provenance(self):
         calls = []
 

@@ -29,6 +29,10 @@ and results/prelude_eval.json (dataset revision, source filter URLs, original ro
 indices, raw scores and computed changes). This is an independent companion
 probe, not a modification of the research graph's established evidence edges.
 It compares only one model, task and metric: prelude_anneal2t / coqa_gen / F1.
+If the dataset viewer filter fails with a server error, the probe reads all
+published Parquet files directly at a pinned Hugging Face dataset commit,
+recording their SHA256 checksums. GitHub Actions installs the Parquet reader;
+the original metadata/graph probe remains standard-library-only.
 Duplicate checkpoints, missing scores, configuration differences, or a truncated
 query block comparison rather than producing misleading numbers. API failure is
 recorded explicitly as source_error, not counted as zero or success. No benchmark
