@@ -167,6 +167,20 @@ class ResearchGraphTests(unittest.TestCase):
         self.assertEqual(edges, [])
         self.assertEqual(checks[0]["status"], "not_publicly_found")
 
+    def test_github_dataset_lookup_cap_records_skipped_references(self):
+        refs = [{"source": f"github_file:config{i}.yaml", "declared_id": f"outside/dataset{i}",
+                 "evidence": f"https://huggingface.co/datasets/outside/dataset{i}", "context": "declared"}
+                for i in range(3)]
+        def verify(kind, repo_id):
+            return {"id": f"hf:{kind}:{repo_id}", "type": kind, "title": repo_id}
+        with patch("research_graph.external_hf_asset", side_effect=verify) as mocked:
+            nodes, checks, edges = resolve_github_dataset_declarations([], refs, limit=1)
+        self.assertEqual(mocked.call_count, 1)
+        self.assertEqual(len(nodes), 1)
+        self.assertEqual(len(edges), 1)
+        self.assertEqual([check["status"] for check in checks],
+                         ["verified_public", "not_checked_limit", "not_checked_limit"])
+
     def test_scholarly_ids_are_explicit_and_version_normalized(self):
         text = 'See https://arxiv.org/pdf/2609.24797v2 and arxiv:2609.24797; https://doi.org/10.48550/arXiv.2609.24797.'
         self.assertEqual(identifiers_in(text), {
