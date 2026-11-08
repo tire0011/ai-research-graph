@@ -1,4 +1,5 @@
 import json
+import hashlib
 import unittest
 from pathlib import Path
 
@@ -74,6 +75,34 @@ class ImpactStudyTests(unittest.TestCase):
         study["cases"][1]["number"] = study["cases"][0]["number"]
         with self.assertRaisesRegex(ValueError, "ten distinct"):
             impact.evaluate(graph, study)
+
+    def test_new_comment_and_dependency_edges_match_original_sources(self):
+        graph, study, issues, comments = fixture()
+        for case in study["cases"]:
+            for claim in case["evidence"]:
+                if claim["source"] != "comment":
+                    continue
+                comment_id = claim["comment_id"]
+                node_id = f"github_comment:{case['repo']}#{comment_id}"
+                if any(n["id"] == node_id for n in graph["nodes"]):
+                    continue
+                original = comments[(case["repo"], comment_id)]
+                graph["nodes"].append({"id": node_id, "type": "issue_comment",
+                                       "description": original["body"], "updated_at": original["updated_at"],
+                                       "body_sha256": hashlib.sha256(original["body"].encode()).hexdigest()})
+                if comment_id == 6121054773:
+                    graph["edges"].append({"source": node_id,
+                                           "target": f"github:{case['repo']}#{case['number']}",
+                                           "status": "reported_blocker"})
+        graph["edges"].append({"source": "github:OpenEuroLLM/Taskboard#391",
+                               "target": "github:OpenEuroLLM/Taskboard#432",
+                               "status": "author_declared_dependency"})
+        result = impact.evaluate(graph, study, fetch_issue=lambda repo, num: issues[(repo, num)],
+                                 fetch_comment=lambda repo, num: comments[(repo, num)])
+        self.assertEqual(result["graph_comments_exact"], 4)
+        self.assertEqual(result["graph_comments_selected"], 4)
+        self.assertEqual(result["graph_author_dependencies_confirmed"], 1)
+        self.assertEqual(result["graph_oom_reports_linked"], 1)
 
 
 if __name__ == "__main__":
