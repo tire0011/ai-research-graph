@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T10:37:07.611916+00:00",
+  "timestamp_utc": "2026-11-08T11:39:55.585386+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -6244,7 +6244,7 @@
         "doi": []
       },
       "state": "open",
-      "updated_at": "2026-11-02T08:14:10Z",
+      "updated_at": "2026-11-08T11:16:20Z",
       "repository": "OpenEuroLLM/oellm-eval"
     },
     {
@@ -11150,20 +11150,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:allenai/tulu-3-sft-mixture",
-      "type": "dataset",
-      "title": "allenai/tulu-3-sft-mixture",
-      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture",
-      "description": "{\"annotations_creators\": [\"crowdsourced\", \"expert-generated\", \"machine-generated\"], \"language\": [\"amh\", \"arb\", \"ary\", \"ars\", \"acq\", \"arz\", \"apc\", \"ben\", \"ceb\", \"dan\", \"deu\", \"ell\", \"eng\", \"eus\", \"fil\", \"fin\", \"fra\", \"gle\", \"guj\", \"hat\", \"hau\", \"hin\", \"hun\", \"ibo\", \"ind\", \"ita\", \"jav\", \"jpn\", \"kan\", \"kir\", \"kor\", \"kur\", \"lit\", \"mal\", \"mar\", \"mlg\", \"msa\", \"mya\", \"nep\", \"nld\", \"nso\", \"nya\", \"pan\", \"pes\", \"pol\", \"por\", \"pus\", \"rus\", \"sin\", \"sna\", \"snd\", \"som\", \"spa\", \"sqi\", \"srp\", \"sun\", \"swa\", \"swe\", \"tam\", \"tel\", \"tha\", \"tur\", \"ukr\", \"urd\", \"vie\", \"wol\", \"xho\", \"yor\", \"zho\", \"zul\"], \"license\": \"odc-by\", \"multilinguality\": [\"multilingual\"], \"size_categories\": [\"100K<n<1M\"], \"source_datasets\": [\"allenai/coconot\", \"ai2-adapt-dev/flan_v2_converted\", \"HuggingFaceH4/no_robots\", \"OpenAssistant/oasst1\", \"allenai/tulu-3-personas-math\", \"allenai/tulu-3-sft-personas-math-grade\", \"allenai/tulu-3-sft-personas-code\", \"allenai/tulu-3-personas-algebra\", \"allenai/tulu-3-sft-personas-instruction-following\", \"AI-MO/NuminaMath-TIR\", \"allenai/wildguardmix\", \"allenai/wildjailbreak\", \"allenai/tulu-3-hard-coded\", \"CohereForAI/aya_dataset\", \"allenai/WildChat-1M\", \"LipengCS/Table-GPT\", \"allenai/SciRIFF\", \"theblackcat102/evol-codealpaca-v1\"], \"task_categories\": [\"other\"], \"dataset_info\": {\"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"content\", \"dtype\": \"string\"}, {\"name\": \"role\", \"dtype\": \"string\"}]}, {\"name\": \"source\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 2914250826.5647593, \"num_examples\": 939343}], \"download_size\": 1412954868, \"dataset_size\": 2914250826.5647593}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2024-12-02T19:48:33.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:bigcode/starcoderdata",
       "type": "dataset",
       "title": "bigcode/starcoderdata",
@@ -11174,6 +11160,20 @@
         "doi": []
       },
       "updated_at": "2023-05-16T10:05:48.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:allenai/tulu-3-sft-mixture",
+      "type": "dataset",
+      "title": "allenai/tulu-3-sft-mixture",
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture",
+      "description": "{\"annotations_creators\": [\"crowdsourced\", \"expert-generated\", \"machine-generated\"], \"language\": [\"amh\", \"arb\", \"ary\", \"ars\", \"acq\", \"arz\", \"apc\", \"ben\", \"ceb\", \"dan\", \"deu\", \"ell\", \"eng\", \"eus\", \"fil\", \"fin\", \"fra\", \"gle\", \"guj\", \"hat\", \"hau\", \"hin\", \"hun\", \"ibo\", \"ind\", \"ita\", \"jav\", \"jpn\", \"kan\", \"kir\", \"kor\", \"kur\", \"lit\", \"mal\", \"mar\", \"mlg\", \"msa\", \"mya\", \"nep\", \"nld\", \"nso\", \"nya\", \"pan\", \"pes\", \"pol\", \"por\", \"pus\", \"rus\", \"sin\", \"sna\", \"snd\", \"som\", \"spa\", \"sqi\", \"srp\", \"sun\", \"swa\", \"swe\", \"tam\", \"tel\", \"tha\", \"tur\", \"ukr\", \"urd\", \"vie\", \"wol\", \"xho\", \"yor\", \"zho\", \"zul\"], \"license\": \"odc-by\", \"multilinguality\": [\"multilingual\"], \"size_categories\": [\"100K<n<1M\"], \"source_datasets\": [\"allenai/coconot\", \"ai2-adapt-dev/flan_v2_converted\", \"HuggingFaceH4/no_robots\", \"OpenAssistant/oasst1\", \"allenai/tulu-3-personas-math\", \"allenai/tulu-3-sft-personas-math-grade\", \"allenai/tulu-3-sft-personas-code\", \"allenai/tulu-3-personas-algebra\", \"allenai/tulu-3-sft-personas-instruction-following\", \"AI-MO/NuminaMath-TIR\", \"allenai/wildguardmix\", \"allenai/wildjailbreak\", \"allenai/tulu-3-hard-coded\", \"CohereForAI/aya_dataset\", \"allenai/WildChat-1M\", \"LipengCS/Table-GPT\", \"allenai/SciRIFF\", \"theblackcat102/evol-codealpaca-v1\"], \"task_categories\": [\"other\"], \"dataset_info\": {\"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"content\", \"dtype\": \"string\"}, {\"name\": \"role\", \"dtype\": \"string\"}]}, {\"name\": \"source\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 2914250826.5647593, \"num_examples\": 939343}], \"download_size\": 1412954868, \"dataset_size\": 2914250826.5647593}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2024-12-02T19:48:33.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11303,6 +11303,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-31T06:26:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:HuggingFaceFW/finewiki",
       "type": "dataset",
       "title": "HuggingFaceFW/finewiki",
@@ -11335,20 +11349,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-31T06:26:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
       "type": "dataset",
       "title": "nvidia/Nemotron-Math-Proofs-v1",
@@ -11367,18 +11367,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
       "type": "dataset",
-      "title": "mlfoundations/dclm-baseline-1.0",
-      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
-      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "title": "nvidia/Nemotron-CC-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
       "identifiers": {
         "arxiv": [
-          "2406.11794"
+          "2508.14444"
         ],
         "doi": []
       },
-      "updated_at": "2024-07-22T15:27:52.000Z",
+      "updated_at": "2026-07-07T15:21:11.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11416,16 +11416,34 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "id": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
       "type": "dataset",
-      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
+      "title": "nvidia/Nemotron-Post-Training-Dataset-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"license\", \"dtype\": \"string\"}, {\"name\": \"generator\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"reasoning\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"role\", \"dtype\": \"string\"}, {\"name\": \"content\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"stem\", \"num_bytes\": 807639463, \"num_examples\": 355000}, {\"name\": \"chat\", \"num_bytes\": 5971361114, \"num_examples\": 627720}, {\"name\": \"math\", \"num_bytes\": 507431890, \"num_examples\": 239467}, {\"name\": \"code\", \"num_bytes\": 980267419, \"num_examples\": 175000}, {\"name\": \"multilingual_ja\", \"num_bytes\": 18014250907, \"num_examples\": 975202}, {\"name\": \"multilingual_de\", \"num_bytes\": 18891078015, \"num_examples\": 1015314}, {\"name\": \"multilingual_it\", \"num_bytes\": 18724137501, \"num_examples\": 1016503}, {\"name\": \"multilingual_es\", \"num_bytes\": 16273052735, \"num_examples\": 935704}, {\"name\": \"multilingual_fr\", \"num_bytes\": 18231554197, \"num_examples\": 1001504}], \"download_size\": 44423886661, \"dataset_size\": 98400773241}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"stem\", \"path\": \"data/stem-*\"}, {\"split\": \"chat\", \"path\": \"data/chat-*\"}, {\"split\": \"math\", \"path\": \"data/math-*\"}, {\"split\": \"code\", \"path\": \"data/code-*\"}, {\"split\": \"multilingual_ja\", \"path\": \"data/multilingual_ja-*\"}, {\"split\": \"multilingual_de\", \"path\": \"data/multilingual_de-*\"}, {\"split\": \"multilingual_it\", \"path\": \"data/multilingual_it-*\"}, {\"split\": \"multilingual_es\", \"path\": \"data/multilingual_es-*\"}, {\"split\": \"multilingual_fr\", \"path\": \"data/multilingual_fr-*\"}]}], \"license\": \"cc-by-4.0\", \"language\": [\"en\", \"de\", \"it\", \"fr\", \"es\", \"ja\"], \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\"}}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2508.14444"
+        ],
         "doi": []
       },
-      "updated_at": "2026-03-11T14:43:59.000Z",
+      "updated_at": "2025-08-21T04:29:18.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "type": "dataset",
+      "title": "mlfoundations/dclm-baseline-1.0",
+      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "identifiers": {
+        "arxiv": [
+          "2406.11794"
+        ],
+        "doi": []
+      },
+      "updated_at": "2024-07-22T15:27:52.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11449,34 +11467,32 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
+      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
       "type": "dataset",
-      "title": "nvidia/Nemotron-Post-Training-Dataset-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"license\", \"dtype\": \"string\"}, {\"name\": \"generator\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"reasoning\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"role\", \"dtype\": \"string\"}, {\"name\": \"content\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"stem\", \"num_bytes\": 807639463, \"num_examples\": 355000}, {\"name\": \"chat\", \"num_bytes\": 5971361114, \"num_examples\": 627720}, {\"name\": \"math\", \"num_bytes\": 507431890, \"num_examples\": 239467}, {\"name\": \"code\", \"num_bytes\": 980267419, \"num_examples\": 175000}, {\"name\": \"multilingual_ja\", \"num_bytes\": 18014250907, \"num_examples\": 975202}, {\"name\": \"multilingual_de\", \"num_bytes\": 18891078015, \"num_examples\": 1015314}, {\"name\": \"multilingual_it\", \"num_bytes\": 18724137501, \"num_examples\": 1016503}, {\"name\": \"multilingual_es\", \"num_bytes\": 16273052735, \"num_examples\": 935704}, {\"name\": \"multilingual_fr\", \"num_bytes\": 18231554197, \"num_examples\": 1001504}], \"download_size\": 44423886661, \"dataset_size\": 98400773241}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"stem\", \"path\": \"data/stem-*\"}, {\"split\": \"chat\", \"path\": \"data/chat-*\"}, {\"split\": \"math\", \"path\": \"data/math-*\"}, {\"split\": \"code\", \"path\": \"data/code-*\"}, {\"split\": \"multilingual_ja\", \"path\": \"data/multilingual_ja-*\"}, {\"split\": \"multilingual_de\", \"path\": \"data/multilingual_de-*\"}, {\"split\": \"multilingual_it\", \"path\": \"data/multilingual_it-*\"}, {\"split\": \"multilingual_es\", \"path\": \"data/multilingual_es-*\"}, {\"split\": \"multilingual_fr\", \"path\": \"data/multilingual_fr-*\"}]}], \"license\": \"cc-by-4.0\", \"language\": [\"en\", \"de\", \"it\", \"fr\", \"es\", \"ja\"], \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\"}}",
+      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
       "identifiers": {
-        "arxiv": [
-          "2508.14444"
-        ],
+        "arxiv": [],
         "doi": []
       },
-      "updated_at": "2025-08-21T04:29:18.000Z",
+      "updated_at": "2026-03-11T14:43:59.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
       "type": "dataset",
-      "title": "nvidia/Nemotron-CC-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
-      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
+      "title": "nvidia/Nemotron-Terminal-Corpus",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
       "identifiers": {
         "arxiv": [
-          "2508.14444"
+          "2602.21193"
         ],
         "doi": []
       },
-      "updated_at": "2026-07-07T15:21:11.000Z",
+      "updated_at": "2026-11-07T02:27:21.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11513,22 +11529,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Terminal-Corpus",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2602.21193"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-11-07T02:27:21.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:tokyotech-llm/swallow-code-v2",
       "type": "dataset",
       "title": "tokyotech-llm/swallow-code-v2",
@@ -11542,20 +11542,6 @@
         "doi": []
       },
       "updated_at": "2025-11-08T01:27:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11576,6 +11562,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
       "type": "model",
       "title": "allenai/Olmo-3-7B-Instruct-SFT",
@@ -11592,20 +11592,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:model:birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
-      "type": "model",
-      "title": "birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
-      "url": "https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
-      "description": "{\"license\": \"apache-2.0\", \"language\": [\"en\", \"sv\", \"de\", \"fr\", \"es\", \"it\", \"nl\", \"pl\", \"pt\", \"cs\", \"fi\", \"da\", \"el\", \"bg\", \"hr\", \"hu\", \"ro\", \"sk\", \"sl\", \"et\", \"lt\", \"lv\", \"ga\", \"mt\", \"eu\", \"gl\", \"is\", \"nb\", \"nn\", \"sr\", \"uk\", \"ca\", \"mk\", \"sq\", \"oc\", \"lb\", \"bs\"], \"tags\": [\"long-context\", \"rope\", \"qwen3\", \"openeurollm\", \"base-model\", \"128k\", \"continued-pretraining\"], \"pipeline_tag\": \"text-generation\", \"library_name\": \"transformers\", \"base_model\": \"openeurollm/prelude\"}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-09-07T08:47:50.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:model:allenai/Olmo-3-7B-Think-SFT",
       "type": "model",
       "title": "allenai/Olmo-3-7B-Think-SFT",
@@ -11618,6 +11604,20 @@
         "doi": []
       },
       "updated_at": "2026-01-05T16:25:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:model:birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
+      "type": "model",
+      "title": "birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
+      "url": "https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
+      "description": "{\"license\": \"apache-2.0\", \"language\": [\"en\", \"sv\", \"de\", \"fr\", \"es\", \"it\", \"nl\", \"pl\", \"pt\", \"cs\", \"fi\", \"da\", \"el\", \"bg\", \"hr\", \"hu\", \"ro\", \"sk\", \"sl\", \"et\", \"lt\", \"lv\", \"ga\", \"mt\", \"eu\", \"gl\", \"is\", \"nb\", \"nn\", \"sr\", \"uk\", \"ca\", \"mk\", \"sq\", \"oc\", \"lb\", \"bs\"], \"tags\": [\"long-context\", \"rope\", \"qwen3\", \"openeurollm\", \"base-model\", \"128k\", \"continued-pretraining\"], \"pipeline_tag\": \"text-generation\", \"library_name\": \"transformers\", \"base_model\": \"openeurollm/prelude\"}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-09-07T08:47:50.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -13114,20 +13114,20 @@
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#297",
-      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "status": "explicit_reference",
-      "evidence_type": "url",
-      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "context": "ttps://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1 ) 300B Overall: ca. 1T (2T ? do we manage that much? eg via rephrasing?",
-      "reason": "Source mentions a specific HF resource"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#297",
       "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
       "status": "explicit_reference",
       "evidence_type": "url",
       "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
       "context": "~~; UPDATE: Nemotron-MIND too old, exclude. Nemotron specialied pretrain (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v",
+      "reason": "Source mentions a specific HF resource"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#297",
+      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "context": "ttps://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1 ) 300B Overall: ca. 1T (2T ? do we manage that much? eg via rephrasing?",
       "reason": "Source mentions a specific HF resource"
     },
     {
@@ -13968,12 +13968,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2406.11794",
-      "context": "Both public metadata records contain arxiv:2406.11794",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13992,6 +13992,24 @@
       "evidence_type": "arxiv",
       "evidence": "2512.15489",
       "context": "Both public metadata records contain arxiv:2512.15489",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2406.11794",
+      "context": "Both public metadata records contain arxiv:2406.11794",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14031,21 +14049,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
+      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
+      "evidence": "2602.21193",
+      "context": "Both public metadata records contain arxiv:2602.21193",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14064,15 +14073,6 @@
       "evidence_type": "arxiv",
       "evidence": "2506.04178",
       "context": "Both public metadata records contain arxiv:2506.04178",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2602.21193",
-      "context": "Both public metadata records contain arxiv:2602.21193",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {

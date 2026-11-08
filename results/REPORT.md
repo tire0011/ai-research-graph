@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T10:37:07.611916+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T11:39:55.585386+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -45,8 +45,8 @@ Collected: `2026-11-08T10:37:07.611916+00:00` (UTC). Source: public APIs, read-o
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/orca-agentinstruct-1M-v1-decontaminated](https://huggingface.co/datasets/openeurollm/orca-agentinstruct-1M-v1-decontaminated) | repository_id | `openeurollm/orca-agentinstruct-1M-v1-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/lmsys-chat-1m-decontaminated](https://huggingface.co/datasets/openeurollm/lmsys-chat-1m-decontaminated) | repository_id | `openeurollm/lmsys-chat-1m-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | repository_id | `allenai/Olmo-3-7B-Think-SFT` |
-| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1` |
+| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | url | `https://huggingface.co/datasets/nvidia/Nemotron-MIND` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Think-SFT` |
@@ -147,18 +147,18 @@ Collected: `2026-11-08T10:37:07.611916+00:00` (UTC). Source: public APIs, read-o
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
-| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
+| [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
-| [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
 | [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
 | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
-| [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Seed-Coder: Let the Code Model Curate Data for Itself](https://arxiv.org/abs/2506.03524) | `arxiv:2506.03524` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
