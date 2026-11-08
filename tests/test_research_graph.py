@@ -8,7 +8,7 @@ from research_graph import (
     citation_coverage, enrich_publications, exact_reference, external_hf_asset,
     github_metadata_inventory, dataset_urls_in_source, resolve_github_dataset_declarations,
     hf_card_declarations, identifiers_in, incomplete_essential_sources,
-    links_between, normalized, openaire_by_arxiv_batch, openaire_node,
+    linked_experiment_runs, links_between, normalized, openaire_by_arxiv_batch, openaire_node,
     quality_profile, report, scholarly_links, verify_external_hf_references,
 )
 
@@ -166,6 +166,34 @@ class ResearchGraphTests(unittest.TestCase):
         self.assertEqual(added, [])
         self.assertEqual(edges, [])
         self.assertEqual(checks[0]["status"], "not_publicly_found")
+
+    def test_real_run_link_is_deduplicated_and_not_claimed_as_verified(self):
+        link = "https://wandb.ai/openeurollm-project/oellm_32b_dense/runs/tjeg54n7"
+        issue = self.issue(f"Loss increased. [Run]({link}), repeated: {link}.")
+        run_nodes, edges = linked_experiment_runs([issue])
+        self.assertEqual(len(run_nodes), 1)
+        self.assertEqual(len(edges), 1)
+        self.assertEqual(run_nodes[0]["verification"], "source_link_only")
+        self.assertEqual(edges[0]["evidence"], link)
+        self.assertEqual(edges[0]["relationship"], "links_experiment_run")
+        self.assertEqual(quality_profile([issue, *run_nodes], edges)["edges_with_missing_endpoints"], 0)
+        summary = report([issue, *run_nodes], edges, {}, "2026-11-08", 0)
+        self.assertIn("Concrete W&B run URLs in GitHub tasks (source links only): **1**", summary)
+        self.assertIn("source_link_only", summary)
+
+    def test_project_dashboard_does_not_become_experiment_run(self):
+        issue = self.issue("Project https://wandb.ai/openeurollm-project/baby_9b_dense")
+        self.assertEqual(linked_experiment_runs([issue]), ([], []))
+        issue = self.issue("Placeholder https://wandb.ai/openeurollm-project/foo/runs/... instead of a run")
+        self.assertEqual(linked_experiment_runs([issue]), ([], []))
+
+    def test_multiple_issues_can_reference_same_run_with_distinct_edges(self):
+        url = "https://wandb.ai/openeurollm-project/oellm_32b_dense/runs/tjeg54n7"
+        a, b = self.issue(url), self.issue(url)
+        b["id"] = "github:OpenEuroLLM/Taskboard#381"
+        nodes, edges = linked_experiment_runs([a, b])
+        self.assertEqual(len(nodes), 1)
+        self.assertEqual(len(edges), 2)
 
     def test_github_dataset_lookup_cap_records_skipped_references(self):
         refs = [{"source": f"github_file:config{i}.yaml", "declared_id": f"outside/dataset{i}",

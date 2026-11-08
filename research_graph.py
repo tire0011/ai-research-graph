@@ -30,6 +30,11 @@ HF_DATASET_URL_PATTERN = re.compile(
     r"https://huggingface\.co/datasets/([\w.-]+/[\w.-]+)(?=$|[/?#\s\"'<>])",
     re.IGNORECASE,
 )
+WANDB_RUN_URL_PATTERN = re.compile(
+    r"https://wandb\.ai/([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)/runs/([a-zA-Z0-9_-]{6,32})"
+    r"(?=$|[/?#\s\"'<>\]\),;])",
+    re.IGNORECASE,
+)
 ARXIV_PATTERN = re.compile(
     r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
@@ -385,6 +390,39 @@ def links_between(nodes: list[dict]) -> list[dict]:
     return edges
 
 
+def linked_experiment_runs(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Extract concrete W&B run links; do not treat project dashboards as runs."""
+    known = {node["id"] for node in nodes}
+    added, edges = [], []
+    seen_edges = set()
+    for source in nodes:
+        if source["type"] not in ("issue", "pull_request"):
+            continue
+        body = source.get("title", "") + "\n" + source.get("description", "")
+        for match in WANDB_RUN_URL_PATTERN.finditer(body):
+            entity, project, run_id = match.groups()
+            uri = f"https://wandb.ai/{entity}/{project}/runs/{run_id}"
+            target_id = f"wandb_run:{entity.casefold()}/{project.casefold()}/{run_id.casefold()}"
+            pair = (source["id"], target_id)
+            if pair in seen_edges:
+                continue
+            seen_edges.add(pair)
+            if target_id not in known:
+                added.append({
+                    "id": target_id, "type": "experiment_run_ref", "title": f"{project}/{run_id}",
+                    "url": uri, "description": "Run URL asserted by GitHub issue; public access and metrics not independently verified",
+                    "verification": "source_link_only", "updated_at": None,
+                })
+                known.add(target_id)
+            edges.append({
+                "source": source["id"], "target": target_id, "status": "explicit_run_reference",
+                "relationship": "links_experiment_run", "evidence_type": "wandb_run_url",
+                "evidence": uri, "context": matching_context(body, match),
+                "reason": "GitHub task directly links one W&B run; run accessibility and numeric claims not independently verified",
+            })
+    return added, edges
+
+
 def hf_card_declarations(nodes: list[dict], aliases: dict[tuple[str, str], str] | None = None) -> tuple[list[dict], list[dict]]:
     """Read only explicit HF model-card fields; do not guess training lineage."""
     assets = {(node["type"], node["title"].casefold()): node for node in nodes if node["type"] in ("model", "dataset")}
@@ -551,13 +589,14 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
            total_openaire: int | None, external_checks: list[dict] | None = None,
            code_scan: dict | None = None, code_checks: list[dict] | None = None):
     counts = {kind: sum(node["type"] == kind for node in nodes) for kind in
-              ("issue", "pull_request", "model", "dataset", "research_product", "source_file", "processing_script")}
+              ("issue", "pull_request", "model", "dataset", "research_product", "source_file", "processing_script", "experiment_run_ref")}
     explicit = [edge for edge in links if edge["status"] == "explicit_reference"]
     candidates = [edge for edge in links if edge["status"] == "candidate"]
     scholarly = [edge for edge in links if edge["status"] == "identifier_match"]
     declared = [edge for edge in links if edge["status"] in ("declared_metadata", "declared_metadata_redirect")]
     source_declarations = [edge for edge in links if edge["status"] == "declared_source_file"]
     colocated_scripts = [edge for edge in links if edge["status"] == "co_located_source_code"]
+    run_references = [edge for edge in links if edge["status"] == "explicit_run_reference"]
     resolved_aliases = {
         (check["target_type"], check["declared_id"].casefold()): check["canonical_id"]
         for check in (external_checks or []) if check["status"] == "verified_redirect"
@@ -585,6 +624,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
         f"- HF model-card declarations to indexed/verified targets: **{len(declared)}**", "",
         f"- GitHub YAML manifest declarations to indexed/verified datasets: **{len(source_declarations)}**",
         f"- Processing script paths co-located with those manifests: **{len(colocated_scripts)}**", "",
+        f"- Concrete W&B run URLs in GitHub tasks (source links only): **{len(run_references)}**", "",
         "| GitHub task | Hugging Face resource | Evidence | Matched text |", "| --- | --- | --- | --- |",
     ]
     index = {node["id"]: node for node in nodes}
@@ -654,6 +694,14 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     if colocated_scripts:
         lines.extend(["", "Adjacent script paths (existence only): " + ", ".join(
             f"[{index[edge['source']]['title']}]({index[edge['source']]['url']})" for edge in colocated_scripts[:15])])
+    lines.extend(["", "## Experiment run links from GitHub tasks", "",
+                  "Only concrete W&B `/runs/<id>` URLs qualify. A project dashboard, a code config or a loss value in an issue does **not** by itself establish a completed run or independently verified measurements.", "",
+                  "| GitHub task | Linked W&B run | Verification |", "| --- | --- | --- |"])
+    for edge in run_references[:25]:
+        source, target = index[edge["source"]], index[edge["target"]]
+        lines.append(f"| [{source['title'].replace('|', '\\|')}]({source['url']}) | [{target['title']}]({target['url']}) | `{target['verification']}` |")
+    if not run_references:
+        lines.append("| No concrete run URL found in indexed tasks | – | – |")
     bridges = []
     for paper in (node for node in nodes if node["type"] == "research_product"):
         incoming = [edge for edge in scholarly if edge["target"] == paper["id"]]
@@ -689,7 +737,7 @@ def report(nodes: list[dict], links: list[dict], errors: dict[str, str], snapsho
     lines.extend(f"- `{name}`: {message}" for name, message in errors.items())
     if not errors:
         lines.append("- No source errors encountered.")
-    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
+    lines.extend(["", "## Interpretation", "", "This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. W&B run URLs are source-declared links, not independently inspected run logs or validated metrics. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.", ""])
     return "\n".join(lines)
 
 
@@ -786,7 +834,9 @@ def main(argv: list[str] | None = None) -> int:
                     reference["verified_node_id"] = check["node_id"]
                 if check.get("canonical_id"):
                     reference["canonical_id"] = check["canonical_id"]
-    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges
+    run_nodes, run_edges = linked_experiment_runs(nodes)
+    nodes.extend(run_nodes)
+    edges = links_between(nodes) + scholarly_links(nodes) + internal_card_edges + code_edges + run_edges
     profile = quality_profile(nodes, edges)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
