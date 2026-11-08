@@ -1,12 +1,12 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T08:27:22.836091+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T09:50:47.811975+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
 - issue: **493** records
 - pull_request: **192** records
-- model: **82** records
+- model: **83** records
 - dataset: **72** records
 - research_product: **68** records
 - source_file: **8** records
@@ -44,8 +44,8 @@ Collected: `2026-11-08T08:27:22.836091+00:00` (UTC). Source: public APIs, read-o
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/orca-agentinstruct-1M-v1-decontaminated](https://huggingface.co/datasets/openeurollm/orca-agentinstruct-1M-v1-decontaminated) | repository_id | `openeurollm/orca-agentinstruct-1M-v1-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/lmsys-chat-1m-decontaminated](https://huggingface.co/datasets/openeurollm/lmsys-chat-1m-decontaminated) | repository_id | `openeurollm/lmsys-chat-1m-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | repository_id | `allenai/Olmo-3-7B-Think-SFT` |
-| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
+| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | url | `https://huggingface.co/datasets/nvidia/Nemotron-MIND` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Think-SFT` |
@@ -130,10 +130,10 @@ Collected: `2026-11-08T08:27:22.836091+00:00` (UTC). Source: public APIs, read-o
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [OpenCodeReasoning: Advancing Data Distillation for Competitive Coding](https://arxiv.org/abs/2504.01943) | `arxiv:2504.01943` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code](https://arxiv.org/abs/2403.07974) | `arxiv:2403.07974` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation](https://arxiv.org/abs/2511.06307) | `arxiv:2511.06307` |
-| [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
 | [allenai/Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
+| [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
@@ -143,26 +143,26 @@ Collected: `2026-11-08T08:27:22.836091+00:00` (UTC). Source: public APIs, read-o
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
 | [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
 | [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
 | [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
-| [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
 | [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
 | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
-| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Seed-Coder: Let the Code Model Curate Data for Itself](https://arxiv.org/abs/2506.03524) | `arxiv:2506.03524` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | [Enhancing Multilingual LLM Pretraining with Model-Based Data Selection](https://arxiv.org/abs/2502.10361) | `arxiv:2502.10361` |
 | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | [MIND: Math Informed syNthetic Dialogues for Pretraining LLMs](https://arxiv.org/abs/2410.12881) | `arxiv:2410.12881` |
 
@@ -240,16 +240,16 @@ These are explicit **metadata claims** made by model publishers; model ancestry 
 | [openeurollm/datamix-0.7b-swallow_code_v2-100bt](https://huggingface.co/openeurollm/datamix-0.7b-swallow_code_v2-100bt) | `datasets` | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) |
 | [openeurollm/oellm-9b-256k-theta64m-prelude-anneal300b](https://huggingface.co/openeurollm/oellm-9b-256k-theta64m-prelude-anneal300b) | `base_model` | [openeurollm/prelude-base](https://huggingface.co/openeurollm/prelude-base) |
 | [openeurollm/datamix-0.7b-openthoughts_3-100bt](https://huggingface.co/openeurollm/datamix-0.7b-openthoughts_3-100bt) | `datasets` | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) |
-| [openeurollm/Prelude-SFT-Excellent-Instructions-Old](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions-Old) | `base_model` | [birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b](https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b) |
-| [openeurollm/Prelude-SFT-Excellent-Instructions-Old](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions-Old) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
+| [openeurollm/Prelude-SFT-Excellent-v0.1](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.1) | `base_model` | [birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b](https://huggingface.co/birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b) |
+| [openeurollm/Prelude-SFT-Excellent-v0.1](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.1) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
 | [openeurollm/datamix-0.7b-Nemotron-Math-Proofs-v1-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Nemotron-Math-Proofs-v1-100bt) | `datasets` | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) |
 | [openeurollm/datamix-0.7b-Nemotron-Math-v2-high-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Nemotron-Math-v2-high-100bt) | `datasets` | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) |
 | [openeurollm/datamix-0.7b-Nemotron-Math-v2-high-medium-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Nemotron-Math-v2-high-medium-100bt) | `datasets` | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) |
 | [openeurollm/datamix-0.7b-Nemotron-Terminal-Corpus-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Nemotron-Terminal-Corpus-100bt) | `datasets` | [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) |
 | [openeurollm/datamix-0.7b-Toucan-1.5M-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Toucan-1.5M-100bt) | `datasets` | [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) |
 | [openeurollm/datamix-0.7b-Superior-Reasoning-SFT-100bt](https://huggingface.co/openeurollm/datamix-0.7b-Superior-Reasoning-SFT-100bt) | `datasets` | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) |
-| [openeurollm/Prelude-SFT-Excellent-Instructions](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions) | `base_model` | [openeurollm/prelude-anneal300b-256k-rope20m-cont](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) |
-| [openeurollm/Prelude-SFT-Excellent-Instructions](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
+| [openeurollm/Prelude-SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2) | `base_model` | [openeurollm/prelude-anneal300b-256k-rope20m-cont](https://huggingface.co/openeurollm/prelude-anneal300b-256k-rope20m-cont) |
+| [openeurollm/Prelude-SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2) | `datasets` | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) |
 
 ### Verification of one-hop Hugging Face targets
 
@@ -325,7 +325,7 @@ These are shared citations, **not** proof of direct model/task dependence.
 | --- | ---: | ---: | ---: |
 | issue | 493 | 18 | 18 |
 | pull_request | 192 | 2 | 2 |
-| model | 82 | 12 | 12 |
+| model | 83 | 12 | 12 |
 | dataset | 72 | 32 | 32 |
 
 ## Automated quality checks

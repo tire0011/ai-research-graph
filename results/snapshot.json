@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-08T08:27:22.836091+00:00",
+  "timestamp_utc": "2026-11-08T09:50:47.811975+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#445",
@@ -10380,10 +10380,10 @@
       "updated_at": "2026-10-16T09:59:04.000Z"
     },
     {
-      "id": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "id": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.1",
       "type": "model",
-      "title": "openeurollm/Prelude-SFT-Excellent-Instructions-Old",
-      "url": "https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "title": "openeurollm/Prelude-SFT-Excellent-v0.1",
+      "url": "https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.1",
       "description": "{\"pipeline_tag\": \"text-generation\", \"base_model\": \"birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b\", \"datasets\": [\"openeurollm/OpenEuroLLM-Excellent-SFT\"], \"tags\": [\"instruction-tuning\", \"sft\", \"qwen3\"]}",
       "identifiers": {
         "arxiv": [],
@@ -10586,16 +10586,28 @@
       "updated_at": "2026-11-02T10:53:36.000Z"
     },
     {
-      "id": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions",
+      "id": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.2",
       "type": "model",
-      "title": "openeurollm/Prelude-SFT-Excellent-Instructions",
-      "url": "https://huggingface.co/openeurollm/Prelude-SFT-Excellent-Instructions",
+      "title": "openeurollm/Prelude-SFT-Excellent-v0.2",
+      "url": "https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2",
       "description": "{\"pipeline_tag\": \"text-generation\", \"library_name\": \"transformers\", \"base_model\": \"openeurollm/prelude-anneal300b-256k-rope20m-cont\", \"datasets\": [\"openeurollm/OpenEuroLLM-Excellent-SFT\"], \"tags\": [\"instruction-tuning\", \"sft\", \"qwen3\"]}",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
       "updated_at": "2026-11-07T14:11:31.000Z"
+    },
+    {
+      "id": "hf:model:openeurollm/Prelude-Marianna-midtrain-SFT-Excellent",
+      "type": "model",
+      "title": "openeurollm/Prelude-Marianna-midtrain-SFT-Excellent",
+      "url": "https://huggingface.co/openeurollm/Prelude-Marianna-midtrain-SFT-Excellent",
+      "description": "{}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-11-08T09:11:51.000Z"
     },
     {
       "id": "hf:dataset:openeurollm/EuroMultiSynth-Instruct",
@@ -11089,22 +11101,6 @@
       "updated_at": "2026-11-06T14:55:45.000Z"
     },
     {
-      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "type": "dataset",
-      "title": "Agent-Ark/Toucan-1.5M",
-      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
-      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2510.01179"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-10-04T00:51:18.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "type": "dataset",
       "title": "allenai/Dolci-Instruct-SFT",
@@ -11134,6 +11130,22 @@
         "doi": []
       },
       "updated_at": "2026-01-31T10:05:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "type": "dataset",
+      "title": "Agent-Ark/Toucan-1.5M",
+      "url": "https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M",
+      "description": "{\"dataset_info\": [{\"config_name\": \"Kimi-K2\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 19540301213, \"num_examples\": 518516}], \"download_size\": 6392602476, \"dataset_size\": 19540301213}, {\"config_name\": \"OSS\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 23321900170, \"num_examples\": 457130}], \"download_size\": 8158074700, \"dataset_size\": 23321900170}, {\"config_name\": \"Qwen3\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"available_tools\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"question_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"response_quality_assessment\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 21763561944, \"num_examples\": 551613}], \"download_size\": 6837495729, \"dataset_size\": 21763561944}, {\"config_name\": \"SFT\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"subset_name\", \"dtype\": \"string\"}, {\"name\": \"question\", \"dtype\": \"string\"}, {\"name\": \"target_tools\", \"dtype\": \"string\"}, {\"name\": \"tools\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 1346302110, \"num_examples\": 119287}], \"download_size\": 425496735, \"dataset_size\": 1346302110}], \"configs\": [{\"config_name\": \"Kimi-K2\", \"data_files\": [{\"split\": \"train\", \"path\": \"Kimi-K2/train-*\"}]}, {\"config_name\": \"OSS\", \"data_files\": [{\"split\": \"train\", \"path\": \"OSS/train-*\"}]}, {\"config_name\": \"Qwen3\", \"data_files\": [{\"split\": \"train\", \"path\": \"Qwen3/train-*\"}]}, {\"config_name\": \"SFT\", \"data_files\": [{\"split\": \"train\", \"path\": \"SFT/train-*\"}]}], \"license\": \"apache-2.0\", \"size_categories\": [\"1M<n<10M\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2510.01179"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-10-04T00:51:18.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11200,6 +11212,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:HPLT/HPLT3.0",
+      "type": "dataset",
+      "title": "HPLT/HPLT3.0",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
+      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-07-08T12:37:21.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
       "type": "dataset",
       "title": "allenai/dolma3_dolmino_mix-100B-1125",
@@ -11212,20 +11238,6 @@
         "doi": []
       },
       "updated_at": "2026-02-23T19:03:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:HPLT/HPLT3.0",
-      "type": "dataset",
-      "title": "HPLT/HPLT3.0",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
-      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-07-08T12:37:21.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11275,20 +11287,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-31T06:26:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:HuggingFaceTB/finemath",
       "type": "dataset",
       "title": "HuggingFaceTB/finemath",
@@ -11307,6 +11305,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-31T06:26:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
       "type": "dataset",
       "title": "mlfoundations/dclm-baseline-1.0",
@@ -11319,6 +11331,36 @@
         "doi": []
       },
       "updated_at": "2024-07-22T15:27:52.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:allenai/olmo-mix-1124",
+      "type": "dataset",
+      "title": "allenai/olmo-mix-1124",
+      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-08-19T18:45:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-CC-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
+      "identifiers": {
+        "arxiv": [
+          "2508.14444"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-07-07T15:21:11.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11358,22 +11400,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-CC-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
-      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
-      "identifiers": {
-        "arxiv": [
-          "2508.14444"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-07-07T15:21:11.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Math-v2",
       "type": "dataset",
       "title": "nvidia/Nemotron-Math-v2",
@@ -11406,6 +11432,36 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-Terminal-Corpus",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2602.21193"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-11-07T02:27:21.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-11T14:43:59.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:HPLT/HPLT2.0_cleaned",
       "type": "dataset",
       "title": "HPLT/HPLT2.0_cleaned",
@@ -11418,20 +11474,6 @@
         "doi": []
       },
       "updated_at": "2026-06-11T09:20:44.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:allenai/olmo-mix-1124",
-      "type": "dataset",
-      "title": "allenai/olmo-mix-1124",
-      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-08-19T18:45:37.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11451,36 +11493,6 @@
         "doi": []
       },
       "updated_at": "2026-10-28T17:56:57.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-11T14:43:59.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Terminal-Corpus",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2602.21193"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-11-07T02:27:21.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11517,22 +11529,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "type": "dataset",
-      "title": "tokyotech-llm/swallow-math-v2",
-      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
-      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2505.02881"
-        ],
-        "doi": []
-      },
-      "updated_at": "2025-11-06T05:11:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:tokyotech-llm/swallow-code-v2",
       "type": "dataset",
       "title": "tokyotech-llm/swallow-code-v2",
@@ -11546,20 +11542,6 @@
         "doi": []
       },
       "updated_at": "2025-11-08T01:27:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11623,6 +11605,36 @@
       "is_external": true,
       "verification": "api_confirmed_public_metadata",
       "resolved_from_alias": "laineyyy/openeurollm-datamix-2b-en-80pct-DPO-HelpSteer3"
+    },
+    {
+      "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "type": "dataset",
+      "title": "tokyotech-llm/swallow-math-v2",
+      "url": "https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2",
+      "description": "{\"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"math\"], \"pretty_name\": \"swallowmath2\", \"size_categories\": [\"10M<n<100M\"], \"modalities\": [\"Text\"], \"formats\": [\"json\"], \"configs\": [{\"config_name\": \"swallow-math-v2-qa\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-qa/train*\"}]}, {\"config_name\": \"swallow-math-v2-textbook\", \"data_files\": [{\"split\": \"train\", \"path\": \"stage3-textbook/train*\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2505.02881"
+        ],
+        "doi": []
+      },
+      "updated_at": "2025-11-06T05:11:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
     },
     {
       "id": "github_file:OpenEuroLLM/training-data-collection/flag/openthoughts-3/metadata.yaml",
@@ -13079,20 +13091,20 @@
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#297",
-      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
-      "status": "explicit_reference",
-      "evidence_type": "url",
-      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
-      "context": "~~; UPDATE: Nemotron-MIND too old, exclude. Nemotron specialied pretrain (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v",
-      "reason": "Source mentions a specific HF resource"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#297",
       "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
       "status": "explicit_reference",
       "evidence_type": "url",
       "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
       "context": "ttps://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1 ) 300B Overall: ca. 1T (2T ? do we manage that much? eg via rephrasing?",
+      "reason": "Source mentions a specific HF resource"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#297",
+      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
+      "context": "~~; UPDATE: Nemotron-MIND too old, exclude. Nemotron specialied pretrain (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v",
       "reason": "Source mentions a specific HF resource"
     },
     {
@@ -13789,15 +13801,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
-      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2510.01179",
-      "context": "Both public metadata records contain arxiv:2510.01179",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -13822,6 +13825,15 @@
       "evidence_type": "arxiv",
       "evidence": "2601.09088",
       "context": "Both public metadata records contain arxiv:2601.09088",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:Agent-Ark/Toucan-1.5M",
+      "target": "openaire:doi_dedup___::ed703a76b888369199f017a5bb7d469f",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2510.01179",
+      "context": "Both public metadata records contain arxiv:2510.01179",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -13906,6 +13918,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:IFM/MegaMath",
       "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
       "status": "identifier_match",
@@ -13942,15 +13963,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:nvidia/Nemotron-Math-v2",
       "target": "openaire:doi_dedup___::28927c151ce3da8b3ba89fa98fc76d97",
       "status": "identifier_match",
@@ -13966,6 +13978,15 @@
       "evidence_type": "arxiv",
       "evidence": "2508.14444",
       "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
+      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2602.21193",
+      "context": "Both public metadata records contain arxiv:2602.21193",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14014,15 +14035,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "target": "openaire:doi_dedup___::b99668b101b196b1e7502835245735ef",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2602.21193",
-      "context": "Both public metadata records contain arxiv:2602.21193",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:open-web-math/open-web-math",
       "target": "openaire:doi_dedup___::7e37ef6754b1894804cda904eb104f04",
       "status": "identifier_match",
@@ -14038,15 +14050,6 @@
       "evidence_type": "arxiv",
       "evidence": "2506.04178",
       "context": "Both public metadata records contain arxiv:2506.04178",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
-      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2505.02881",
-      "context": "Both public metadata records contain arxiv:2505.02881",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14083,6 +14086,15 @@
       "evidence_type": "arxiv",
       "evidence": "2512.13961",
       "context": "Both public metadata records contain arxiv:2512.13961",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:tokyotech-llm/swallow-math-v2",
+      "target": "openaire:doi_dedup___::68973b60f637bc921d90c268ddcfbb35",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2505.02881",
+      "context": "Both public metadata records contain arxiv:2505.02881",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14676,7 +14688,7 @@
       "reason": "Source card declares a resource; independent lineage verification not performed"
     },
     {
-      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.1",
       "target": "hf:model:birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
       "status": "declared_metadata",
       "evidence_type": "base_model",
@@ -14685,7 +14697,7 @@
       "reason": "Source card declares a resource; independent lineage verification not performed"
     },
     {
-      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.1",
       "target": "hf:dataset:openeurollm/OpenEuroLLM-Excellent-SFT",
       "status": "declared_metadata",
       "evidence_type": "datasets",
@@ -14748,7 +14760,7 @@
       "reason": "Source card declares a resource; independent lineage verification not performed"
     },
     {
-      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions",
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.2",
       "target": "hf:model:openeurollm/prelude-anneal300b-256k-rope20m-cont",
       "status": "declared_metadata",
       "evidence_type": "base_model",
@@ -14757,7 +14769,7 @@
       "reason": "Source card declares a resource; independent lineage verification not performed"
     },
     {
-      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions",
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.2",
       "target": "hf:dataset:openeurollm/OpenEuroLLM-Excellent-SFT",
       "status": "declared_metadata",
       "evidence_type": "datasets",
@@ -15411,7 +15423,7 @@
       "verified_node_id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M"
     },
     {
-      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-Instructions-Old",
+      "source": "hf:model:openeurollm/Prelude-SFT-Excellent-v0.1",
       "target_type": "model",
       "declared_id": "birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b",
       "evidence_type": "base_model",
@@ -15788,7 +15800,7 @@
         "linked_to_openaire": 2
       },
       "model": {
-        "records": 82,
+        "records": 83,
         "with_identifier": 12,
         "linked_to_openaire": 12
       },
