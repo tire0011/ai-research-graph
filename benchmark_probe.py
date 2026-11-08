@@ -102,7 +102,8 @@ def filtered_scores(*, fetch=fetch_json, pages: int = MAX_PAGES) -> dict:
     }
 
 
-def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
+def parquet_scores(*, fetch=fetch_json, download=None,
+                   groups: tuple[tuple[str, str, str], ...] | None = None) -> dict:
     """Inspect source Parquet files at an unchanged dataset commit.
 
     Files are small in this dataset; reading Parquet needs pyarrow installed
@@ -117,6 +118,10 @@ def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
             return response.read(MAX_PARQUET_BYTES + 1)
 
     download = download or default_download
+    selected_groups = groups or ((MODEL, TASK, METRIC),)
+    if not selected_groups or len(set(selected_groups)) != len(selected_groups):
+        raise ValueError("Select at least one unique model/task/metric group")
+    selected_set = set(selected_groups)
     api = f"https://huggingface.co/api/datasets/{DATASET}"
     before = fetch(api)
     sha = before.get("sha")
@@ -164,7 +169,7 @@ def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
             selected = reader.read_row_group(group, columns=["model", "task", "metric"]).to_pydict()
             indices = [i for i, (model, task, metric) in enumerate(
                 zip(selected["model"], selected["task"], selected["metric"]))
-                if model == MODEL and task == TASK and metric == METRIC]
+                if (model, task, metric) in selected_set]
             if indices:
                 full = reader.read_row_group(
                     group, columns=sorted(cols & possible_selection)).to_pylist()
@@ -188,6 +193,7 @@ def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
         "config": "original_files", "split": "all", "model": MODEL, "task": TASK, "metric": METRIC,
         "source_issue": SOURCE_ISSUE, "source_dataset": SOURCE_DATASET,
         "filter_urls": [], "source_files": file_evidence, "source_method": "pinned_source_parquet",
+        "selected_groups": [list(group) for group in selected_groups],
         "rows": rows, "scan_truncated": False, "feature_names": sorted(all_features),
         "parquet_reader": f"pyarrow {pa.__version__}",
     }
