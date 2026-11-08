@@ -1,0 +1,388 @@
+{
+  "status": "completed",
+  "evaluated_utc": "2026-11-08T16:58:05.591916+00:00",
+  "snapshot_utc": "2026-11-08T16:56:14.582914+00:00",
+  "selection": {
+    "date_utc": "2026-11-08",
+    "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
+    "sampling": "Purposeful case study selected before measuring graph impact coverage. Not random, exhaustive, or a ranking of all OpenEuroLLM work.",
+    "question": "Which changes could plausibly remove a documented bottleneck or speed up work, and what evidence would be required to establish an actual improvement?",
+    "claim_policy": "An issue title, a GitHub link, an author-reported result and a controlled speedup are different levels of evidence. The report verifies literal source phrases but does not validate experimental measurements or claim causal impact. Issue comments may contain decisive evidence absent from the graph snapshot."
+  },
+  "selected": 10,
+  "verified": 10,
+  "live_issues_fetched": 10,
+  "comments_verified": 4,
+  "source_phrases_verified": 21,
+  "exact_snapshot_parity": 10,
+  "comment_dependent_cases": 3,
+  "class_counts": {
+    "reported_speedup_pending_validation": 1,
+    "cross_hardware_performance_gap": 1,
+    "reported_quality_gain_not_speedup": 1,
+    "explicit_upstream_dependency": 1,
+    "proposed_enabler": 1,
+    "reported_memory_blocker": 1,
+    "incomplete_automation": 1,
+    "proposed_automation": 1,
+    "quality_hypothesis": 1,
+    "planned_coverage": 1
+  },
+  "cases": [
+    {
+      "id": "lumi_training_assignment",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#385",
+      "impact_type": "training_throughput",
+      "evidence_class": "reported_speedup_pending_validation",
+      "candidate": "Validate the revised sequence-to-worker assignment before production adoption.",
+      "next_check": "Reproduce throughput and complete the pending memory, save and resume acceptance checks.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+      "source_updated_at": "2026-10-12T11:21:36Z",
+      "source_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+      "live_state": "open",
+      "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 1,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "updated_at": "2026-10-12T11:21:36Z",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "matched_text": "106–107k tokens/s",
+          "meaning": "A revised assignment was timed above the earlier 94–99k-token/s production range."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "updated_at": "2026-10-12T11:21:36Z",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "matched_text": "about 9.5% faster",
+          "meaning": "Issue authors report a controlled comparison, not independently reproduced here."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "updated_at": "2026-10-12T11:21:36Z",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "matched_text": "remain required before adoption",
+          "meaning": "Production validation is explicitly outstanding."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "jupiter_weak_scaling",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#207",
+      "impact_type": "training_throughput",
+      "evidence_class": "cross_hardware_performance_gap",
+      "candidate": "Investigate expert-parallelism configuration and measure matched Jupiter runs.",
+      "next_check": "Compare configurations on the same hardware and power envelope; do not treat reference H100 numbers as a demonstrated speedup.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/207",
+      "source_updated_at": "2026-06-03T12:41:02Z",
+      "source_sha256": "190208fb084fd5d2d4832bcd457dafbdb6b406b37efc160b28682ec94b54d837",
+      "live_state": "open",
+      "title": "Qwen3 235B-A22B weak scaling optimization",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 1,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207",
+          "updated_at": "2026-06-03T12:41:02Z",
+          "sha256": "190208fb084fd5d2d4832bcd457dafbdb6b406b37efc160b28682ec94b54d837",
+          "matched_text": "170–175",
+          "meaning": "The issue reports a current Jupiter throughput range in TFLOPs/s/GPU."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207",
+          "updated_at": "2026-06-03T12:41:02Z",
+          "sha256": "190208fb084fd5d2d4832bcd457dafbdb6b406b37efc160b28682ec94b54d837",
+          "matched_text": "power cap",
+          "meaning": "Reference hardware and power limits differ, confounding the gap."
+        },
+        {
+          "source": "comment",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/207#issuecomment-4276947736",
+          "updated_at": "2026-04-19T22:22:49Z",
+          "sha256": "69dd6cc3b8af0031ca37fadddf4c09d748f97faf2e7c20fcce0adea194d38ecc",
+          "matched_text": "Scaling EP instead of PP or TP seems to be the way to go",
+          "meaning": "A participant proposes a parallelism direction, without an independently verified gain."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "thinking_adherence_regression",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#442",
+      "impact_type": "evaluation_quality",
+      "evidence_class": "reported_quality_gain_not_speedup",
+      "candidate": "Isolate the chat-template/thinking-adherence effect with a same-base control.",
+      "next_check": "Report same-base accuracy and generated-token costs; quality gains are not throughput gains.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
+      "source_updated_at": "2026-11-08T12:31:50Z",
+      "source_sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
+      "live_state": "open",
+      "title": "Investigate performance gap between current and Marianna's pipeline",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 0,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
+          "updated_at": "2026-11-08T12:31:50Z",
+          "sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
+          "matched_text": "before / after chat template fix",
+          "meaning": "The issue requests a controlled comparison to address a confounding factor."
+        },
+        {
+          "source": "comment",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812",
+          "updated_at": "2026-11-04T16:05:34Z",
+          "sha256": "1512c97a5f0b33144759f2840fb3d9b903b981fd7aa38dae151b4424564f1750",
+          "matched_text": "84.6%",
+          "meaning": "The comment reports forced-thinking MATH500 accuracy."
+        },
+        {
+          "source": "comment",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812",
+          "updated_at": "2026-11-04T16:05:34Z",
+          "sha256": "1512c97a5f0b33144759f2840fb3d9b903b981fd7aa38dae151b4424564f1750",
+          "matched_text": "34.8%",
+          "meaning": "The default-thinking MATH500 accuracy is reported separately."
+        },
+        {
+          "source": "comment",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6721237269",
+          "updated_at": "2026-11-08T12:31:50Z",
+          "sha256": "efb51fe79b5f839e169a60d0c095e25fc2d2ae71011f283944e574ee18aac298",
+          "matched_text": "same base model as SFT-Excellent-v0.1",
+          "meaning": "A later comment says the same-base training control is still in progress."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "llamafactory_comparison",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#391",
+      "impact_type": "training_throughput",
+      "evidence_class": "explicit_upstream_dependency",
+      "candidate": "Complete LlamaFactory support so a same-configuration TRL throughput comparison can be run.",
+      "next_check": "Verify Taskboard #432 completion, then benchmark comparable SFT/DPO configurations on LUMI.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+      "source_updated_at": "2026-10-12T11:14:59Z",
+      "source_sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+      "live_state": "open",
+      "title": "Ensuring post-training pipeline works",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 1,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+          "updated_at": "2026-10-12T11:14:59Z",
+          "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+          "matched_text": "Compare throughput against the existing TRL implementation",
+          "meaning": "A throughput comparison is planned; no result is asserted."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+          "updated_at": "2026-10-12T11:14:59Z",
+          "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+          "matched_text": "__Dependencies__\nIssue #432",
+          "meaning": "The Dependencies section explicitly names the upstream task."
+        }
+      ],
+      "declared_dependency": {
+        "task_id": "github:OpenEuroLLM/Taskboard#432",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432",
+        "live_state": "open",
+        "graph_contains_literal_reference": true,
+        "evidence_scope": "literal Dependencies section in the issue body"
+      },
+      "status": "evidence_verified"
+    },
+    {
+      "id": "llamafactory_support",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#432",
+      "impact_type": "tooling_prerequisite",
+      "evidence_class": "proposed_enabler",
+      "candidate": "Add and verify LlamaFactory in the post-training repository.",
+      "next_check": "Validate an equivalent checkpoint before treating the backend as a credible TRL alternative.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/432",
+      "source_updated_at": "2026-10-26T12:35:44Z",
+      "source_sha256": "cc9dbde87ac631bbe255cf1b164301cc2ceedbef5648128b31d06b99b6d23393",
+      "live_state": "open",
+      "title": "Extend LLMFactory support to the post-training repo",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 0,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432",
+          "updated_at": "2026-10-26T12:35:44Z",
+          "sha256": "cc9dbde87ac631bbe255cf1b164301cc2ceedbef5648128b31d06b99b6d23393",
+          "matched_text": "Support LlamaFactory",
+          "meaning": "The issue is a planned implementation, not a measured improvement."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/432",
+          "updated_at": "2026-10-26T12:35:44Z",
+          "sha256": "cc9dbde87ac631bbe255cf1b164301cc2ceedbef5648128b31d06b99b6d23393",
+          "matched_text": "performance comparable",
+          "meaning": "Comparable performance is an acceptance target, not an observed result."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "fsdp_oom",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#433",
+      "impact_type": "training_feasibility",
+      "evidence_class": "reported_memory_blocker",
+      "candidate": "Find a feasible LUMI DPO configuration for the FSDP branch.",
+      "next_check": "Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
+      "source_updated_at": "2026-10-12T09:04:26Z",
+      "source_sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
+      "live_state": "open",
+      "title": "Add support for FSDP to TRL in the post-training repo",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 0,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
+          "updated_at": "2026-10-12T09:04:26Z",
+          "sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
+          "matched_text": "Add support for Fully Sharded Data Parallel",
+          "meaning": "FSDP support is the work item."
+        },
+        {
+          "source": "comment",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
+          "updated_at": "2026-10-12T09:00:23Z",
+          "sha256": "5b1619a14f239f8e4d4785adae8935c53ee01a08147fb7d00debbb485216a13b",
+          "matched_text": "fails due to OOM issues on LUMI",
+          "meaning": "An issue comment reports a concrete memory blocker, absent from the issue-body-only graph."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "checkpoint_automation",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#340",
+      "impact_type": "research_automation",
+      "evidence_class": "incomplete_automation",
+      "candidate": "Complete automatic checkpoint conversion within existing monitoring tooling.",
+      "next_check": "Measure manual conversion time, error rate and end-to-end checkpoint availability before claiming saved researcher time.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/340",
+      "source_updated_at": "2026-07-03T10:42:34Z",
+      "source_sha256": "662fc8ca2fa727ff03a6cbce755802544cbb3894880cb5092226e27688300d27",
+      "live_state": "open",
+      "title": "Set up monitoring and automatic tools for model training",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 0,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/340",
+          "updated_at": "2026-07-03T10:42:34Z",
+          "sha256": "662fc8ca2fa727ff03a6cbce755802544cbb3894880cb5092226e27688300d27",
+          "matched_text": "- [ ] Automatic checkpoint conversion",
+          "meaning": "A specific automation step remains unchecked in the issue."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "model_card_reporting",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#445",
+      "impact_type": "research_automation",
+      "evidence_class": "proposed_automation",
+      "candidate": "Generate model-card tables and plots automatically from the evaluation dataset.",
+      "next_check": "Compare time-to-publish and correction rates before and after automation.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+      "source_updated_at": "2026-11-06T16:57:02Z",
+      "source_sha256": "05a981a03488774b06a6995f3d8120ee921d441da1c175c80e9c516bc1f97a6c",
+      "live_state": "open",
+      "title": "Automatic evaluation reporting for model card",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 0,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+          "updated_at": "2026-11-06T16:57:02Z",
+          "sha256": "05a981a03488774b06a6995f3d8120ee921d441da1c175c80e9c516bc1f97a6c",
+          "matched_text": "a single script which generates model card table",
+          "meaning": "The task defines a concrete automation goal but reports no saved time."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "instruction_selection",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#416",
+      "impact_type": "data_quality",
+      "evidence_class": "quality_hypothesis",
+      "candidate": "Evaluate instruction-level dataset selection against the recorded baseline.",
+      "next_check": "Compare model quality and data-processing cost on consistent training/evaluation setups; do not infer faster training from a link to a dataset.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/416",
+      "source_updated_at": "2026-10-28T09:14:34Z",
+      "source_sha256": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
+      "live_state": "open",
+      "title": "Post-training dataset curation using instruction-level selection",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 2,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/416",
+          "updated_at": "2026-10-28T09:14:34Z",
+          "sha256": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
+          "matched_text": "instruction-level selection",
+          "meaning": "The issue proposes a data-quality experiment."
+        },
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/416",
+          "updated_at": "2026-10-28T09:14:34Z",
+          "sha256": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
+          "matched_text": "The goal was to have a baseline",
+          "meaning": "A baseline is described, but not a measured speed gain."
+        }
+      ],
+      "status": "evidence_verified"
+    },
+    {
+      "id": "safety_benchmark_coverage",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#405",
+      "impact_type": "evaluation_coverage",
+      "evidence_class": "planned_coverage",
+      "candidate": "Complete missing safety and fairness evaluation integrations.",
+      "next_check": "Measure evaluation completeness and execution cost separately; coverage itself is not a throughput speedup.",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/405",
+      "source_updated_at": "2026-10-27T10:24:39Z",
+      "source_sha256": "8b8a346753980d87e89f8483baca7e952fb9b4532479610d34814fea86fe39f2",
+      "live_state": "open",
+      "title": "Add safety and fairness benchmarks",
+      "graph_status": "exact_parity",
+      "graph_reference_count": 1,
+      "evidence": [
+        {
+          "source": "body",
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/405",
+          "updated_at": "2026-10-27T10:24:39Z",
+          "sha256": "8b8a346753980d87e89f8483baca7e952fb9b4532479610d34814fea86fe39f2",
+          "matched_text": "Add and verify `inspect_evals` integration",
+          "meaning": "Benchmark integration work is explicitly tracked."
+        }
+      ],
+      "status": "evidence_verified"
+    }
+  ]
+}
