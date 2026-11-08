@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T07:22:11.895401+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T07:59:29.305910+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -129,16 +129,17 @@ Collected: `2026-11-08T07:22:11.895401+00:00` (UTC). Source: public APIs, read-o
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
-| [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
+| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
-| [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
-| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
+| [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
+| [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
@@ -153,7 +154,6 @@ Collected: `2026-11-08T07:22:11.895401+00:00` (UTC). Source: public APIs, read-o
 | [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
-| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 
 ## Hugging Face card declarations
 
