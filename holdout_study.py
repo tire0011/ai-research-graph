@@ -29,9 +29,12 @@ def read_issue(repo, number, *, timeout=20):
             begin = time.perf_counter()
             with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=timeout) as response:
                 data = json.load(response)
-            if data.get("number") != number or not isinstance(data.get("body"), str):
+            if (data.get("number") != number or "body" not in data or
+                    (data["body"] is not None and not isinstance(data["body"], str))):
                 raise ValueError("GitHub issue response has missing/mismatched body or number")
-            return {"body": data["body"], "updated_at": data.get("updated_at"),
+            # GitHub uses JSON null for an issue with no description. The graph
+            # inventory already normalizes that exact value to an empty string.
+            return {"body": data["body"] or "", "updated_at": data.get("updated_at"),
                     "url": data.get("html_url", url),
                     "latency_ms": round(1000 * (time.perf_counter() - begin), 1)}
         except (urllib.error.URLError, TimeoutError) as exc:

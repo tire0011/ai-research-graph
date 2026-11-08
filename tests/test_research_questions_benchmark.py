@@ -52,6 +52,19 @@ class ResearchQuestionsBenchmarkTests(unittest.TestCase):
         self.assertEqual(result["evaluated"], 0)
         self.assertIn("source_error", benchmark.markdown(result))
 
+    def test_live_search_accepts_issues_with_null_body(self):
+        graph, study = fixture()
+        graph["nodes"][0]["description"] = ""
+        graph["edges"] = []
+        study["cases"][0]["expected_ids"] = []
+        result = benchmark.evaluate(graph, study, repeats=1, delay=0,
+            fetch=lambda repo, num: {"body": "", "updated_at": "fixed"},
+            search=lambda repo, kind, phrase: {"items": [{"number": 10,
+                "title": "Explore safety benchmarks", "body": None}],
+                "total_count": 1, "latency_ms": 8, "query": "fixture"})
+        self.assertEqual(result["status"], "completed")
+        self.assertEqual(result["summary"]["all"]["github_search"]["correct_abstentions"], 1)
+
     def test_stale_source_refuses_comparison(self):
         graph, study = fixture()
         result = benchmark.evaluate(graph, study, repeats=1, delay=0,

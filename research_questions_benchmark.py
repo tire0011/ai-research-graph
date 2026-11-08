@@ -187,9 +187,10 @@ def evaluate(graph: dict, study: dict, *, fetch=read_issue, search=github_title_
             search_ids = [f"github:{repo}#{item['number']}" for item in items]
             first = items[0] if items else None
             search_id = search_ids[0] if search_ids else None
-            if first is not None and not isinstance(first.get("body"), str):
+            if first is not None and ("body" not in first or
+                                      (first["body"] is not None and not isinstance(first["body"], str))):
                 raise ValueError("Search hit omitted issue text; cannot verify answer")
-            search_targets = source_references((first.get("title") or "") + "\n" + first["body"],
+            search_targets = source_references((first.get("title") or "") + "\n" + (first["body"] or ""),
                                                repo, indexed) if first else []
             row["github_search"] = {**score(anchor, [x.casefold() for x in expected], search_id,
                                                search_targets), "targets": search_targets,
