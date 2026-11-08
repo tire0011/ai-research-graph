@@ -1,6 +1,6 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-08T21:30:14.918186+00:00`. Evaluated: `2026-11-08T21:33:28.762210+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-08T21:35:02.740730+00:00`. Evaluated: `2026-11-08T21:38:05.566158+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
 
 Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
@@ -104,6 +104,6 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 - **Measured training throughput**: #385 reports an approximately 9.5% uplift for a revised worker assignment, with production acceptance still outstanding. The report verifies that the authors made this claim, not its reproducibility.
 - **Evaluation quality, not speed**: #442's comments document a thinking-mode accuracy difference; a same-base control is noted as pending. Increased generated tokens could make the stronger quality result slower to compute.
 - **Dependency and feasibility**: #391 explicitly lists #432 as an upstream task; #433's comment reports a LUMI OOM problem. Neither is evidence of a realized speedup.
-- **Data gap**: issue comments in 3 cases contain essential evidence not stored in the graph's issue-body-only snapshot. An impact query should therefore either include versioned comments or abstain from declaring no known blocker.
+- **Comment coverage boundary**: issue comments in 3 cases contain essential evidence. The graph now stores source-hashed comments for the ten selected issues only; other tasks have not received a complete comment audit. Queries outside this sample must inspect original comments or abstain from claiming no known blocker.
 - **Selection bias**: these ten items were selected for promising, different signals after seeing issue titles. They are not representative of the indexed issue population and cannot establish which project should receive resources.
 - **Impact estimation**: a credible next experiment needs a causal dependency relationship, a baseline, a same-configuration intervention, adoption/rollout status and an outcome measurement. A graph-edge count alone is not impact.
