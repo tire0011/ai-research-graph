@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-08T08:27:22.836091+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -11,6 +11,7 @@ Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-o
 - research_product: **68** records
 - source_file: **8** records
 - processing_script: **2** records
+- experiment_run_ref: **1** records
 - Of HF models/datasets, publicly verified one-hop targets outside the initial inventory: **37**
 - OpenAIRE keyword-search total (not project coverage): **8**
 
@@ -26,6 +27,8 @@ Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-o
 
 - GitHub YAML manifest declarations to indexed/verified datasets: **8**
 - Processing script paths co-located with those manifests: **2**
+
+- Concrete W&B run URLs in GitHub tasks (source links only): **1**
 
 | GitHub task | Hugging Face resource | Evidence | Matched text |
 | --- | --- | --- | --- |
@@ -127,8 +130,8 @@ Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-o
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [OpenCodeReasoning: Advancing Data Distillation for Competitive Coding](https://arxiv.org/abs/2504.01943) | `arxiv:2504.01943` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code](https://arxiv.org/abs/2403.07974) | `arxiv:2403.07974` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation](https://arxiv.org/abs/2511.06307) | `arxiv:2511.06307` |
-| [allenai/Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
+| [allenai/Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
@@ -139,25 +142,25 @@ Collected: `2026-11-08T08:13:48.094207+00:00` (UTC). Source: public APIs, read-o
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
 | [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
-| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
+| [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
-| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
-| [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
-| [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
 | [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
+| [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
+| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Seed-Coder: Let the Code Model Curate Data for Itself](https://arxiv.org/abs/2506.03524) | `arxiv:2506.03524` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
-| [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | [Enhancing Multilingual LLM Pretraining with Model-Based Data Selection](https://arxiv.org/abs/2502.10361) | `arxiv:2502.10361` |
@@ -293,6 +296,14 @@ Unverified GitHub manifest dataset targets: **0** (details in `snapshot.json`; m
 
 Adjacent script paths (existence only): [flag/openthoughts-3/etc/textify.py](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.py), [flag/openthoughts-3/etc/textify.slurm](https://github.com/OpenEuroLLM/training-data-collection/blob/5e4ce51c390bb3731f14e63012ffff4f1a472da9/flag/openthoughts-3/etc/textify.slurm)
 
+## Experiment run links from GitHub tasks
+
+Only concrete W&B `/runs/<id>` URLs qualify. A project dashboard, a code config or a loss value in an issue does **not** by itself establish a completed run or independently verified measurements.
+
+| GitHub task | Linked W&B run | Verification |
+| --- | --- | --- |
+| [[32B Dense] Debug 64k increasing loss](https://github.com/OpenEuroLLM/Taskboard/issues/381) | [oellm_32b_dense/tjeg54n7](https://wandb.ai/openeurollm-project/oellm_32b_dense/runs/tjeg54n7) | `source_link_only` |
+
 ## Three-platform publication bridges
 
 These are shared citations, **not** proof of direct model/task dependence.
@@ -326,7 +337,7 @@ These are shared citations, **not** proof of direct model/task dependence.
 - github closed issues: **270**
 - github open prs: **19**
 - github closed prs: **173**
-- missing update timestamps: **78**
+- missing update timestamps: **79**
 
 ## Source errors / incomplete coverage
 
@@ -334,4 +345,4 @@ These are shared citations, **not** proof of direct model/task dependence.
 
 ## Interpretation
 
-This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
+This is a discovery probe, **not** a complete research knowledge graph. A shared persistent identifier connects metadata records to the same publication; it does not establish that an implementation is correct or scientifically dependent on that publication. Hugging Face `base_model` and `datasets` fields are publisher-declared metadata, not independently reproduced lineage. GitHub source-code dataset declarations and co-located scripts prove neither training nor successful execution. W&B run URLs are source-declared links, not independently inspected run logs or validated metrics. Explicit mentions are references only; name-only candidates remain unverified. OpenAIRE keyword search and bounded arXiv citation lookups are not an exhaustive count of project research. Unresolved citation IDs are not evidence that a publication does not exist. Missing timestamps mean the source did not provide freshness metadata.
