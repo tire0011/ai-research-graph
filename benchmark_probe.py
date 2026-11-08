@@ -5,15 +5,17 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import io
 import json
 import math
 import statistics
 import urllib.error
 import urllib.parse
+import urllib.request
 from collections import Counter
 from pathlib import Path
 
-from research_graph import fetch_json
+from research_graph import UA, fetch_json
 
 
 DATASET = "openeurollm/prelude-base-eval-scores"
@@ -23,6 +25,7 @@ PAGE_SIZE, MAX_PAGES = 100, 5
 SOURCE_ISSUE = "https://github.com/OpenEuroLLM/oellm-eval/issues/163"
 SOURCE_DATASET = f"https://huggingface.co/datasets/{DATASET}"
 REQUIRED = {"model", "step", "task", "metric", "score", "task_config"}
+MAX_PARQUET_FILES, MAX_PARQUET_BYTES = 16, 32 * 1024 * 1024
 
 
 def json_url(base: str, **query: str | int) -> str:
@@ -89,6 +92,96 @@ def filtered_scores(*, fetch=fetch_json, pages: int = MAX_PAGES) -> dict:
         "source_issue": SOURCE_ISSUE, "source_dataset": SOURCE_DATASET,
         "filter_urls": queries, "rows": extracted, "scan_truncated": full_last_page,
         "feature_names": sorted(features),
+        "source_method": "filtered_viewer_api",
+    }
+
+
+def parquet_scores(*, fetch=fetch_json, download=None) -> dict:
+    """Inspect source Parquet files at an unchanged dataset commit.
+
+    Files are small in this dataset; reading Parquet needs pyarrow installed
+    only in the GitHub Actions job. Dataset-viewer /filter is not a dependency.
+    """
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    def default_download(url):
+        request = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(request, timeout=60) as response:
+            return response.read(MAX_PARQUET_BYTES + 1)
+
+    download = download or default_download
+    api = f"https://huggingface.co/api/datasets/{DATASET}"
+    before = fetch(api)
+    sha = before.get("sha")
+    if not sha:
+        raise ValueError("Dataset API did not provide a commit SHA")
+    tree_url = f"{api}/tree/{sha}?recursive=true"
+    tree = fetch(tree_url)
+    if not isinstance(tree, list):
+        raise ValueError("Pinned dataset tree is not a list")
+    parquet_paths = sorted(item["path"] for item in tree
+                           if item.get("type") == "file" and
+                           item.get("path", "").lower().endswith(".parquet"))
+    if not 1 <= len(parquet_paths) <= MAX_PARQUET_FILES:
+        raise ValueError(f"Unexpected Parquet file count: {len(parquet_paths)}")
+
+    required_selection = {"model", "step", "task", "metric", "score", "task_config"}
+    possible_selection = required_selection | {
+        "num_fewshot", "eval_suite", "n_samples", "revision", "is_checkpoint",
+    }
+    rows, file_evidence, all_features = [], [], set()
+    global_offset = 0
+    for path in parquet_paths:
+        url = f"https://huggingface.co/datasets/{DATASET}/resolve/{sha}/{urllib.parse.quote(path)}"
+        blob = download(url)
+        if len(blob) > MAX_PARQUET_BYTES:
+            raise ValueError(f"Parquet file exceeds bounded size limit: {path}")
+        reader = pq.ParquetFile(io.BytesIO(blob))
+        cols = set(reader.schema_arrow.names)
+        all_features.update(cols)
+        total_rows = reader.metadata.num_rows
+        file_details = {
+            "path": path, "url": url, "rows": total_rows, "bytes": len(blob),
+            "sha256": hashlib.sha256(blob).hexdigest(), "matched_rows": 0,
+            "missing_required_columns": sorted(required_selection - cols),
+        }
+        file_evidence.append(file_details)
+        if not required_selection.issubset(cols):
+            global_offset += total_rows
+            continue
+        file_row_offset = 0
+        for group in range(reader.num_row_groups):
+            rg_rows = reader.metadata.row_group(group).num_rows
+            selected = reader.read_row_group(group, columns=["model", "task", "metric"]).to_pydict()
+            indices = [i for i, (model, task, metric) in enumerate(
+                zip(selected["model"], selected["task"], selected["metric"]))
+                if model == MODEL and task == TASK and metric == METRIC]
+            if indices:
+                full = reader.read_row_group(
+                    group, columns=sorted(cols & possible_selection)).to_pylist()
+                for index in indices:
+                    rows.append({
+                        "row_idx": global_offset + file_row_offset + index,
+                        "source_file": path,
+                        "source_file_row_idx": file_row_offset + index,
+                        "row": full[index],
+                    })
+                file_details["matched_rows"] += len(indices)
+            file_row_offset += rg_rows
+        global_offset += total_rows
+    after = fetch(api)
+    if after.get("sha") != sha:
+        raise ValueError("Dataset revision changed during Parquet inspection")
+    if not required_selection.issubset(all_features):
+        raise ValueError("Parquet files lack required columns")
+    return {
+        "dataset": DATASET, "revision_sha": sha, "last_modified": after.get("lastModified"),
+        "config": "original_files", "split": "all", "model": MODEL, "task": TASK, "metric": METRIC,
+        "source_issue": SOURCE_ISSUE, "source_dataset": SOURCE_DATASET,
+        "filter_urls": [], "source_files": file_evidence, "source_method": "pinned_source_parquet",
+        "rows": rows, "scan_truncated": False, "feature_names": sorted(all_features),
+        "parquet_reader": f"pyarrow {pa.__version__}",
     }
 
 
@@ -106,6 +199,8 @@ def assess_scores(raw: dict) -> dict:
             continue
         records.append({
             "step": step, "score": float(score), "row_idx": entry.get("row_idx"),
+            "source_file": entry.get("source_file"),
+            "source_file_row_idx": entry.get("source_file_row_idx"),
             "model": data.get("model"), "task": data.get("task"), "metric": data.get("metric"),
             "num_fewshot": data.get("num_fewshot"), "eval_suite": data.get("eval_suite"),
             "task_config_hash": stable_digest(data.get("task_config")),
@@ -169,7 +264,7 @@ def markdown(data: dict) -> str:
         "# Prelude checkpoint evaluation – bounded source inspection", "",
         f"Collected: {data['timestamp_utc']} UTC.", "",
         f"Dataset: [{DATASET}]({SOURCE_DATASET}). Research question: [oellm-eval #163]({SOURCE_ISSUE}).",
-        f"Filter: {MODEL} / {TASK} / {METRIC} in {CONFIG}/{SPLIT}.", "",
+        f"Filter: {MODEL} / {TASK} / {METRIC}; source method: {source.get('source_method', 'unavailable')}.", "",
         "Scope: one model + task + metric; not a cross-benchmark comparison or independent evaluation rerun.", "",
     ]
     if data["status"] == "source_error":
@@ -192,6 +287,13 @@ def markdown(data: dict) -> str:
     ])
     if profile["problems"]:
         lines.extend(["Comparisons blocked because: " + ", ".join(profile["problems"]), ""])
+    if source.get("source_files"):
+        lines.extend([
+            f"Source Parquet files inspected: **{len(source['source_files'])}**; "
+            f"reader: {source.get('parquet_reader')}.",
+            "Each file's original SHA256, URL, row count and matching row indices "
+            "are retained in the JSON evidence.", "",
+        ])
     if profile["comparisons"]:
         c = profile["comparisons"]
         peak = c["largest_change"]
@@ -208,7 +310,7 @@ def markdown(data: dict) -> str:
         "## Provenance", "",
         f"- [Published dataset]({SOURCE_DATASET}) (revision listed above).",
         f"- [Original issue]({SOURCE_ISSUE}).",
-        "- Filter URLs, checkpoint scores and original row indices are recorded in results/prelude_eval.json.", "",
+        "- Exact source-file URLs or filter URLs, checkpoint scores and row indices are recorded in results/prelude_eval.json.", "",
     ])
     return "\n".join(lines)
 
@@ -221,13 +323,24 @@ def main(argv: list[str] | None = None) -> int:
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     try:
-        raw = filtered_scores()
+        try:
+            raw = filtered_scores()
+        except urllib.error.HTTPError as primary_error:
+            # HF dataset-viewer occasionally returns HTTP 500. Use the
+            # source repository's pinned, small Parquet files instead.
+            if primary_error.code < 500:
+                raise
+            raw = parquet_scores()
+            raw["viewer_filter_error"] = (f"HTTP {primary_error.code} at "
+                                          f"{primary_error.geturl()}")
         profile = assess_scores(raw)
         result = {"timestamp_utc": timestamp, "status": profile["status"],
                   "source": {k: v for k, v in raw.items() if k != "rows"}, "profile": profile}
     except (ValueError, KeyError, urllib.error.URLError, TimeoutError) as exc:
+        failed_url = exc.geturl() if isinstance(exc, urllib.error.HTTPError) else None
         result = {"timestamp_utc": timestamp, "status": "source_error",
-                  "error": f"{type(exc).__name__}: {exc}", "source": None, "profile": None}
+                  "error": f"{type(exc).__name__}: {exc}",
+                  "failed_url": failed_url, "source": None, "profile": None}
     (output / "prelude_eval.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (output / "PRELUDE_EVAL.md").write_text(markdown(result), encoding="utf-8")
     print(f"Prelude eval probe: {result['status']}")
