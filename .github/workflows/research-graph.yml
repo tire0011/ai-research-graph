@@ -29,6 +29,8 @@ jobs:
         run: python research_graph.py --output results
       - name: Verify research question evidence
         run: python qa_probe.py --snapshot results/snapshot.json --output results/QA_EVIDENCE.md
+      - name: Compare evidence-graph retrieval with source-text scan
+        run: python retrieval_benchmark.py --snapshot results/snapshot.json --output results
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -38,7 +40,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results/REPORT.md results/snapshot.json results/QA_EVIDENCE.md
+          git add results/REPORT.md results/snapshot.json results/QA_EVIDENCE.md results/RETRIEVAL_BENCHMARK.md results/retrieval_benchmark.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: update research graph snapshot'
           git push
