@@ -12,6 +12,8 @@ The [Research graph probe](.github/workflows/research-graph.yml) runs on the def
 - [`results/snapshot.json`](results/snapshot.json): source nodes, edges, provenance URLs, and errors.
 - GitHub Actions artifact containing both files.
 - [`QUALITY_REVIEW.md`](QUALITY_REVIEW.md): inspectable baseline audit, false-positive examples and unresolved relationships.
+- [`results/QA_EVIDENCE.md`](results/QA_EVIDENCE.md): four auditable cross-platform question evidence packets, regenerated from the latest graph.
+- [`QA_AI_REVIEW.md`](QA_AI_REVIEW.md): the first one-time AI answer trial, including evidence limits and cases that require abstention.
 
 It uses only public endpoints and the built-in GitHub Actions token. No local PC or GPU is required. The GitHub token is used only for read access to source issues and committing generated results to this repository.
 
@@ -22,6 +24,7 @@ If an essential API fails (e.g. a GitHub gateway timeout), the run keeps the par
 ```powershell
 python -m unittest discover -s tests -v
 python research_graph.py --output results
+python qa_probe.py --snapshot results/snapshot.json --output results/QA_EVIDENCE.md
 ```
 
 ## Evidence and limits
@@ -40,4 +43,4 @@ OpenAIRE results are a keyword-search sample plus the bounded citation lookup, n
 
 ### Next validation step
 
-Manually annotate name-only candidates against their source links; measure precision, missed relations and data freshness. Only then consider a common graph service or MCP interface. A reference to an artifact does not establish a causal dependency on it.
+Run an independent LLM over the fixed evidence packets using a supported inference provider, then score answers against sourced citations and unsupported-claim avoidance. The GitHub Actions evidence check does **not** make an LLM call and therefore makes no claim of autonomous AI answer accuracy. Manually annotate name-only candidates and measure recall before considering a common graph service or MCP interface. A reference to an artifact does not establish a causal dependency on it.
