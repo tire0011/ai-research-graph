@@ -1,0 +1,33 @@
+{
+  "selection": {
+    "date_utc": "2026-11-08",
+    "population": "Selected indexed OpenEuroLLM GitHub issue/PR sources; explicit task links followed by explicit Hugging Face URL/ID mentions only",
+    "positive_cohort": "Nine issue/PR sources with at least one two-hop task-to-task-to-HF path in the initial locally available source inventory; exhaustive for that restricted path pattern in that snapshot, not a random sample",
+    "negative_cohort": "Eleven deliberately selected control tasks, including seven first-hop GitHub task mentions without the required second-hop HF evidence and four without task mentions",
+    "answer_scope": "Find HF models or datasets mentioned by an indexed GitHub task that the source task directly references. A URL/ID mention is not scientific usage or experiment validation.",
+    "gold_policy": "Source-cited expected intermediate tasks and HF target IDs frozen before evaluating retrieval. The original GitHub issue bodies are re-fetched and the literal two-hop evidence independently scanned; a source mismatch or changed inventory is a diagnostic failure, not a zero.",
+    "limitations": "Link-rich stratified sample, not blinded or representative. Compare precomputed graph traversal with actual two-hop source-following of the same captured texts. In-memory lookup latency excludes ingestion/index costs; GitHub API re-fetches audit freshness, not comparable human time."
+  },
+  "cases": [
+    {"id":"function_corpus_parent","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#220","expected_paths":[["github:OpenEuroLLM/Taskboard#385","hf:dataset:openeurollm/function-calling-sft-oellm-64k"]]},
+    {"id":"function_rl","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#351","expected_paths":[["github:OpenEuroLLM/Taskboard#220","hf:dataset:openeurollm/function-calling-sft-oellm-64k"]]},
+    {"id":"function_ablation","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#352","expected_paths":[["github:OpenEuroLLM/Taskboard#220","hf:dataset:openeurollm/function-calling-sft-oellm-64k"]]},
+    {"id":"datamix_model_links","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#354","expected_paths":[["github:OpenEuroLLM/Taskboard#344","hf:model:openeurollm/datamix-9b-80-20"],["github:OpenEuroLLM/Taskboard#361","hf:model:openeurollm/oellm-9b-256k-theta64m-prelude"]]},
+    {"id":"bfcl_benchmark","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#384","expected_paths":[["github:OpenEuroLLM/Taskboard#385","hf:dataset:openeurollm/function-calling-sft-oellm-64k"]]},
+    {"id":"function_benchmark_parent","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#385","expected_paths":[["github:OpenEuroLLM/Taskboard#220","hf:dataset:openeurollm/function-calling-sft-oellm-64k"]]},
+    {"id":"decontamination_datasets","cohort":"positive","anchor_id":"github:OpenEuroLLM/Taskboard#416","expected_paths":[["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/Dolci-Instruct-SFT-decontaminated"],["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated"],["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/lmsys-chat-1m-decontaminated"],["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/open-perfectblend-decontaminated"],["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/orca-agentinstruct-1M-v1-decontaminated"],["github:OpenEuroLLM/Taskboard#330","hf:dataset:openeurollm/smoltalk2-decontaminated"]]},
+    {"id":"eval_change_one","cohort":"positive","anchor_id":"github:OpenEuroLLM/oellm-eval#140","expected_paths":[["github:OpenEuroLLM/oellm-eval#137","hf:model:openeurollm/datamix-2b-80-20"]]},
+    {"id":"eval_change_two","cohort":"positive","anchor_id":"github:OpenEuroLLM/oellm-eval#150","expected_paths":[["github:OpenEuroLLM/oellm-eval#142","hf:model:openeurollm/datamix-2b-80-20"]]},
+    {"id":"dpo_variants_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#431","expected_paths":[]},
+    {"id":"contamination_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/oellm-eval#166","expected_paths":[]},
+    {"id":"safety_pr_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#405","expected_paths":[]},
+    {"id":"qwen_conversion_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#364","expected_paths":[]},
+    {"id":"judge_pr_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#337","expected_paths":[]},
+    {"id":"multicluster_pr_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/oellm-eval#2","expected_paths":[]},
+    {"id":"monitor_session_no_hf","cohort":"negative","anchor_id":"github:OpenEuroLLM/oellm-autoexp#69","expected_paths":[]},
+    {"id":"lumi_pipeline_no_refs","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#320","expected_paths":[]},
+    {"id":"cuni_people_no_refs","cohort":"negative","anchor_id":"github:OpenEuroLLM/Taskboard#130","expected_paths":[]},
+    {"id":"vllm_backend_no_refs","cohort":"negative","anchor_id":"github:OpenEuroLLM/oellm-eval#152","expected_paths":[]},
+    {"id":"autoexp_config_no_refs","cohort":"negative","anchor_id":"github:OpenEuroLLM/oellm-autoexp#10","expected_paths":[]}
+  ]
+}
