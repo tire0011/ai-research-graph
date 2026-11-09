@@ -10,13 +10,12 @@ import base64
 import datetime as dt
 import hashlib
 import json
-import os
 import re
 import sys
-import time
 import urllib.error
-import urllib.request
 from pathlib import Path
+
+from http_util import get_json as fetch_json
 
 API = "https://api.github.com/repos"
 REPO_RE = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
@@ -28,19 +27,7 @@ def sha256(text):
 
 
 def get_json(url):
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "ai-research-graph-cross-project"}
-    if os.environ.get("GITHUB_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(3):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=25) as res:
-                return json.load(res)
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
-                raise
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    return fetch_json(url, user_agent="ai-research-graph-cross-project")[0]
 
 
 def validate_registry(registry):

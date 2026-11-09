@@ -32,7 +32,7 @@ class HoldoutTests(unittest.TestCase):
             def __exit__(self, *_args):
                 self.close()
 
-        with patch("holdout_study.urllib.request.urlopen", return_value=Response(body)):
+        with patch("http_util.urllib.request.urlopen", return_value=Response(body)):
             result = hs.read_issue("OpenEuroLLM/Taskboard", 7)
         self.assertEqual(result["body"], "")
 

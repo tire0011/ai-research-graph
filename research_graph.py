@@ -124,6 +124,8 @@ def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
             })
         if len(batch) < 100:
             break
+    else:
+        raise ValueError(f"{repo} issue listing exceeds {max_pages} pages; refusing silent truncation")
     return issues
 
 

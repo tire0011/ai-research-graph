@@ -8,12 +8,14 @@ on:
     branches: [main]
     paths:
       - cross_project_audit.py
+      - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
       - .github/workflows/cross-project-audit.yml
   pull_request:
     paths:
       - cross_project_audit.py
+      - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
       - .github/workflows/cross-project-audit.yml

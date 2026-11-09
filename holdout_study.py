@@ -8,45 +8,31 @@ import argparse
 import datetime as dt
 import hashlib
 import json
-import os
 import re
 import statistics
 import sys
-import time
 import urllib.error
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+from http_util import get_json
 
 
 def read_issue(repo, number, *, timeout=20):
     url = f"https://api.github.com/repos/{repo}/issues/{number}"
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "ai-research-graph-holdout"}
-    if os.getenv("GITHUB_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(3):
-        try:
-            begin = time.perf_counter()
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=timeout) as response:
-                data = json.load(response)
-            if (data.get("number") != number or "body" not in data or
-                    (data["body"] is not None and not isinstance(data["body"], str))):
-                raise ValueError("GitHub issue response has missing/mismatched body or number")
-            # GitHub uses JSON null for an issue with no description. The graph
-            # inventory already normalizes that exact value to an empty string.
-            return {"body": data["body"] or "", "updated_at": data.get("updated_at"),
-                    "url": data.get("html_url", url), "state": data.get("state"),
-                    "title": data.get("title"),
-                    "issue_author": (data.get("user") or {}).get("login"),
-                    "assignees": [person["login"] for person in data.get("assignees") or []
-                                  if isinstance(person, dict) and isinstance(person.get("login"), str)],
-                    "latency_ms": round(1000 * (time.perf_counter() - begin), 1)}
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
-                raise
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    data, latency_ms = get_json(url, user_agent="ai-research-graph-holdout", timeout=timeout)
+    if (data.get("number") != number or "body" not in data or
+            (data["body"] is not None and not isinstance(data["body"], str))):
+        raise ValueError("GitHub issue response has missing/mismatched body or number")
+    # GitHub uses JSON null for an issue with no description. The graph
+    # inventory already normalizes that exact value to an empty string.
+    return {"body": data["body"] or "", "updated_at": data.get("updated_at"),
+            "url": data.get("html_url", url), "state": data.get("state"),
+            "title": data.get("title"),
+            "issue_author": (data.get("user") or {}).get("login"),
+            "assignees": [person["login"] for person in data.get("assignees") or []
+                          if isinstance(person, dict) and isinstance(person.get("login"), str)],
+            "latency_ms": latency_ms}
 
 
 def digest(body):

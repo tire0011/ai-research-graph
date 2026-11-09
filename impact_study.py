@@ -7,37 +7,22 @@ Source text supports a candidate or a reported result, never an inferred speedup
 import argparse
 import datetime as dt
 import json
-import os
 import sys
-import time
-import urllib.error
-import urllib.request
 from collections import Counter
 from pathlib import Path
 
 from holdout_study import digest, read_issue
+from http_util import get_json
 
 
 def read_comment(repo, comment_id, *, timeout=20):
     """Fetch an individual public comment by immutable GitHub comment ID."""
     url = f"https://api.github.com/repos/{repo}/issues/comments/{comment_id}"
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "ai-research-graph-impact"}
-    if os.getenv("GITHUB_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(3):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=timeout) as response:
-                data = json.load(response)
-            if data.get("id") != comment_id or not isinstance(data.get("body"), str):
-                raise ValueError(f"Comment {comment_id}: invalid body or ID")
-            return {"body": data["body"], "updated_at": data.get("updated_at"),
-                    "url": data.get("html_url", url)}
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
-                raise
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    data, _ = get_json(url, user_agent="ai-research-graph-impact", timeout=timeout)
+    if data.get("id") != comment_id or not isinstance(data.get("body"), str):
+        raise ValueError(f"Comment {comment_id}: invalid body or ID")
+    return {"body": data["body"], "updated_at": data.get("updated_at"),
+            "url": data.get("html_url", url)}
 
 
 def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment):
