@@ -1,13 +1,13 @@
 {
   "status": "completed",
-  "evaluated_utc": "2026-11-08T21:38:05.566158+00:00",
-  "snapshot_utc": "2026-11-08T21:35:02.740730+00:00",
+  "evaluated_utc": "2026-11-09T12:43:59.123680+00:00",
+  "snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
     "sampling": "Purposeful case study selected before measuring graph impact coverage. Not random, exhaustive, or a ranking of all OpenEuroLLM work.",
     "question": "Which changes could plausibly remove a documented bottleneck or speed up work, and what evidence would be required to establish an actual improvement?",
-    "claim_policy": "An issue title, a GitHub link, an author-reported result and a controlled speedup are different levels of evidence. The report verifies literal source phrases but does not validate experimental measurements or claim causal impact. Issue comments may contain decisive evidence absent from the graph snapshot."
+    "claim_policy": "An issue title, a GitHub link, an author-reported result and a controlled speedup are different levels of evidence. The report verifies literal source phrases but does not validate experimental measurements or claim causal impact. Comments are source-hashed for the ten selected issues only."
   },
   "selected": 10,
   "verified": 10,
@@ -45,6 +45,10 @@
       "source_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
       "live_state": "open",
       "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
+      "issue_author": "ReinforcedKnowledge",
+      "assignees": [
+        "ReinforcedKnowledge"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 1,
       "evidence": [
@@ -89,6 +93,13 @@
       "source_sha256": "190208fb084fd5d2d4832bcd457dafbdb6b406b37efc160b28682ec94b54d837",
       "live_state": "open",
       "title": "Qwen3 235B-A22B weak scaling optimization",
+      "issue_author": "tvosch",
+      "assignees": [
+        "kpoeppel",
+        "dharmsen",
+        "Vmjkom",
+        "tvosch"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 1,
       "evidence": [
@@ -131,17 +142,22 @@
       "candidate": "Isolate the chat-template/thinking-adherence effect with a same-base control.",
       "next_check": "Report same-base accuracy and generated-token costs; quality gains are not throughput gains.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
-      "source_updated_at": "2026-11-08T12:31:50Z",
+      "source_updated_at": "2026-11-09T11:04:17Z",
       "source_sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
       "live_state": "open",
       "title": "Investigate performance gap between current and Marianna's pipeline",
+      "issue_author": "geoalgo",
+      "assignees": [
+        "Neonkraft",
+        "Ali-Elganzory"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 0,
       "evidence": [
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
-          "updated_at": "2026-11-08T12:31:50Z",
+          "updated_at": "2026-11-09T11:04:17Z",
           "sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
           "matched_text": "before / after chat template fix",
           "meaning": "The issue requests a controlled comparison to address a confounding factor."
@@ -165,8 +181,8 @@
         {
           "source": "comment",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6721237269",
-          "updated_at": "2026-11-08T12:31:50Z",
-          "sha256": "efb51fe79b5f839e169a60d0c095e25fc2d2ae71011f283944e574ee18aac298",
+          "updated_at": "2026-11-09T11:04:17Z",
+          "sha256": "d3fc74842429b60182d1d627c4833e7c653dd68a0a49cc852a832a5e4596a8a3",
           "matched_text": "same base model as SFT-Excellent-v0.1",
           "meaning": "A later comment says the same-base training control is still in progress."
         }
@@ -190,6 +206,10 @@
       "source_sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
       "live_state": "open",
       "title": "Ensuring post-training pipeline works",
+      "issue_author": "zeppelinche-cmd",
+      "assignees": [
+        "Neonkraft"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 1,
       "evidence": [
@@ -234,6 +254,10 @@
       "source_sha256": "cc9dbde87ac631bbe255cf1b164301cc2ceedbef5648128b31d06b99b6d23393",
       "live_state": "open",
       "title": "Extend LLMFactory support to the post-training repo",
+      "issue_author": "Neonkraft",
+      "assignees": [
+        "Neonkraft"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 0,
       "evidence": [
@@ -270,6 +294,10 @@
       "source_sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
       "live_state": "open",
       "title": "Add support for FSDP to TRL in the post-training repo",
+      "issue_author": "Neonkraft",
+      "assignees": [
+        "Neonkraft"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 0,
       "evidence": [
@@ -287,7 +315,7 @@
           "updated_at": "2026-10-12T09:00:23Z",
           "sha256": "5b1619a14f239f8e4d4785adae8935c53ee01a08147fb7d00debbb485216a13b",
           "matched_text": "fails due to OOM issues on LUMI",
-          "meaning": "An issue comment reports a concrete memory blocker, absent from the issue-body-only graph."
+          "meaning": "An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph."
         }
       ],
       "graph_comment_evidence": {
@@ -310,6 +338,10 @@
       "source_sha256": "662fc8ca2fa727ff03a6cbce755802544cbb3894880cb5092226e27688300d27",
       "live_state": "open",
       "title": "Set up monitoring and automatic tools for model training",
+      "issue_author": "tvosch",
+      "assignees": [
+        "tvosch"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 0,
       "evidence": [
@@ -338,6 +370,11 @@
       "source_sha256": "05a981a03488774b06a6995f3d8120ee921d441da1c175c80e9c516bc1f97a6c",
       "live_state": "open",
       "title": "Automatic evaluation reporting for model card",
+      "issue_author": "geoalgo",
+      "assignees": [
+        "spyysalo",
+        "geoalgo"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 0,
       "evidence": [
@@ -366,6 +403,10 @@
       "source_sha256": "91d6419829bd9fdf51ccb72a81ee9053a4c6d78bb3d5fe67806da46766bcc8fd",
       "live_state": "open",
       "title": "Post-training dataset curation using instruction-level selection",
+      "issue_author": "Ali-Elganzory",
+      "assignees": [
+        "Ali-Elganzory"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 2,
       "evidence": [
@@ -402,6 +443,10 @@
       "source_sha256": "8b8a346753980d87e89f8483baca7e952fb9b4532479610d34814fea86fe39f2",
       "live_state": "open",
       "title": "Add safety and fairness benchmarks",
+      "issue_author": "kerkathy",
+      "assignees": [
+        "kerkathy"
+      ],
       "graph_status": "exact_parity",
       "graph_reference_count": 1,
       "evidence": [

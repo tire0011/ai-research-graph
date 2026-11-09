@@ -1,0 +1,118 @@
+{
+  "status": "review_only",
+  "generated_at_utc": "2026-11-09T12:43:59.170515+00:00",
+  "evidence_snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
+  "scope": "Three explicit evidence categories within ten purposefully selected Taskboard issues",
+  "examined": 10,
+  "opportunities": [
+    {
+      "issue_id": "github:OpenEuroLLM/Taskboard#385",
+      "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+      "source_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+      "evidence_class": "reported_speedup_pending_validation",
+      "opportunity_type": "validate_reported_speedup",
+      "claim_scope": "reported, not reproduced",
+      "candidate": "Validate the revised sequence-to-worker assignment before production adoption.",
+      "validation_needed": "Reproduce throughput and complete the pending memory, save and resume acceptance checks.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "quoted_phrase": "106–107k tokens/s",
+          "meaning": "A revised assignment was timed above the earlier 94–99k-token/s production range."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "quoted_phrase": "about 9.5% faster",
+          "meaning": "Issue authors report a controlled comparison, not independently reproduced here."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
+          "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
+          "quoted_phrase": "remain required before adoption",
+          "meaning": "Production validation is explicitly outstanding."
+        }
+      ],
+      "related_dependency": null,
+      "contacts": [
+        "ReinforcedKnowledge"
+      ],
+      "contact_basis": "github_issue_assignee",
+      "suggested_channel": "existing_github_issue_comment",
+      "suggested_question": "Would a reproducible check help? Reproduce throughput and complete the pending memory, save and resume acceptance checks.",
+      "communication_status": "human_review_required",
+      "sent": false
+    },
+    {
+      "issue_id": "github:OpenEuroLLM/Taskboard#391",
+      "title": "Ensuring post-training pipeline works",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+      "source_sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+      "evidence_class": "explicit_upstream_dependency",
+      "opportunity_type": "unblock_declared_dependency",
+      "claim_scope": "author-declared, not proven blocking",
+      "candidate": "Complete LlamaFactory support so a same-configuration TRL throughput comparison can be run.",
+      "validation_needed": "Verify Taskboard #432 completion, then benchmark comparable SFT/DPO configurations on LUMI.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+          "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+          "quoted_phrase": "Compare throughput against the existing TRL implementation",
+          "meaning": "A throughput comparison is planned; no result is asserted."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+          "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
+          "quoted_phrase": "__Dependencies__\nIssue #432",
+          "meaning": "The Dependencies section explicitly names the upstream task."
+        }
+      ],
+      "related_dependency": "github:OpenEuroLLM/Taskboard#432",
+      "contacts": [
+        "Neonkraft"
+      ],
+      "contact_basis": "github_issue_assignee",
+      "suggested_channel": "existing_github_issue_comment",
+      "suggested_question": "Would a reproducible check help? Verify Taskboard #432 completion, then benchmark comparable SFT/DPO configurations on LUMI.",
+      "communication_status": "human_review_required",
+      "sent": false
+    },
+    {
+      "issue_id": "github:OpenEuroLLM/Taskboard#433",
+      "title": "Add support for FSDP to TRL in the post-training repo",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
+      "source_sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
+      "evidence_class": "reported_memory_blocker",
+      "opportunity_type": "verify_reported_failure",
+      "claim_scope": "commenter-reported, not reproduced",
+      "candidate": "Find a feasible LUMI DPO configuration for the FSDP branch.",
+      "validation_needed": "Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
+          "sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
+          "quoted_phrase": "Add support for Fully Sharded Data Parallel",
+          "meaning": "FSDP support is the work item."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
+          "sha256": "5b1619a14f239f8e4d4785adae8935c53ee01a08147fb7d00debbb485216a13b",
+          "quoted_phrase": "fails due to OOM issues on LUMI",
+          "meaning": "An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph."
+        }
+      ],
+      "related_dependency": null,
+      "contacts": [
+        "Neonkraft"
+      ],
+      "contact_basis": "github_issue_assignee",
+      "suggested_channel": "existing_github_issue_comment",
+      "suggested_question": "Would a reproducible check help? Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
+      "communication_status": "human_review_required",
+      "sent": false
+    }
+  ],
+  "limitations": "Not project-wide, not independently measured speedups; no automated outreach"
+}

@@ -1,6 +1,6 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-08T21:35:02.740730+00:00`. Evaluated: `2026-11-08T21:38:05.566158+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-09T12:40:46.440433+00:00`. Evaluated: `2026-11-09T12:43:59.123680+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
 
 Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
@@ -71,7 +71,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-reference edges from this issue: **0**. Issue-body SHA256: `1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a`.
 
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433): `Add support for Fully Sharded Data Parallel` — FSDP support is the work item.
-- [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773): `fails due to OOM issues on LUMI` — An issue comment reports a concrete memory blocker, absent from the issue-body-only graph.
+- [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773): `fails due to OOM issues on LUMI` — An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph.
 - Source-hashed comment nodes in graph: `github_comment:OpenEuroLLM/Taskboard#6121054773` (`exact_parity`)
 
 ### github:OpenEuroLLM/Taskboard#340 — Set up monitoring and automatic tools for model training
