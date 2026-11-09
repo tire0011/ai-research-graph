@@ -32,6 +32,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python impact_study.py --snapshot results/snapshot.json --output results
+      - name: Produce review-only collaboration proposals from verified evidence
+        run: python opportunity_detector.py --impact results/impact_evidence.json --output results
       - name: Upload result and source-error diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -40,11 +42,13 @@ jobs:
           path: |
             results/IMPACT*.md
             results/impact*.json
+            results/OPPORTUNITIES.md
+            results/opportunities.json
       - name: Commit only complete source-grounded impact audit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results/IMPACT_EVIDENCE.md results/impact_evidence.json
+          git add results/IMPACT_EVIDENCE.md results/impact_evidence.json results/OPPORTUNITIES.md results/opportunities.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: audit ten research impact candidates'
           for attempt in 1 2 3; do
