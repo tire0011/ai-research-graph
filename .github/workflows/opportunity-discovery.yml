@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '41 5 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - opportunity_discovery.py
+      - opportunity_feedback.py
+      - tests/test_opportunity_discovery.py
+      - .github/workflows/opportunity-discovery.yml
   pull_request:
     paths:
       - opportunity_discovery.py
