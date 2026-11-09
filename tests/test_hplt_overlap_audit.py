@@ -41,7 +41,7 @@ class FakeGitHub:
                     "html_url": f"https://github.com/{item['repo']}/issues/{item['number']}",
                 })
                 # An issue can appear in multiple curated pairs with different phrases.
-                self.issues[key]["body"] += " " + item["phrase"]
+                self.issues[(item["repo"], item["number"])]["body"] += " " + item["phrase"]
 
     def __call__(self, url):
         self.calls.append(url)
