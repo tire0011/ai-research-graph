@@ -37,6 +37,9 @@ def read_issue(repo, number, *, timeout=20):
             return {"body": data["body"] or "", "updated_at": data.get("updated_at"),
                     "url": data.get("html_url", url), "state": data.get("state"),
                     "title": data.get("title"),
+                    "issue_author": (data.get("user") or {}).get("login"),
+                    "assignees": [person["login"] for person in data.get("assignees") or []
+                                  if isinstance(person, dict) and isinstance(person.get("login"), str)],
                     "latency_ms": round(1000 * (time.perf_counter() - begin), 1)}
         except (urllib.error.URLError, TimeoutError) as exc:
             if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
