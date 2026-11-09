@@ -13,18 +13,17 @@ import argparse
 import datetime as dt
 import hashlib
 import json
-import os
 import re
 import statistics
 import sys
 import time
 import urllib.error
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
 from holdout_study import read_issue
+from http_util import get_json
 from retrieval_benchmark import rank
 
 
@@ -73,26 +72,11 @@ def github_title_search(repo: str, kind: str, phrase: str, *, timeout=20) -> dic
     terms = re.findall(r"[\w.-]+", phrase)
     query = f"repo:{repo} {qualifier} in:title " + " ".join(terms)
     url = "https://api.github.com/search/issues?" + urllib.parse.urlencode({"q": query, "per_page": 10})
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": UA}
-    if os.getenv("GITHUB_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(3):
-        started = time.perf_counter()
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=timeout) as response:
-                result = json.load(response)
-            if not isinstance(result.get("items"), list):
-                raise ValueError("Search API returned no items array")
-            return {"items": result["items"], "total_count": result.get("total_count"),
-                    "latency_ms": round((time.perf_counter() - started) * 1000, 1),
-                    "query": query}
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if isinstance(exc, urllib.error.HTTPError) and exc.code not in (408, 429) and exc.code < 500:
-                raise
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    result, latency_ms = get_json(url, user_agent=UA, timeout=timeout)
+    if not isinstance(result.get("items"), list):
+        raise ValueError("Search API returned no items array")
+    return {"items": result["items"], "total_count": result.get("total_count"),
+            "latency_ms": latency_ms, "query": query}
 
 
 def sampled_ms(func, repeats=21):

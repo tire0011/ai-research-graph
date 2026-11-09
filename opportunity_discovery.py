@@ -9,16 +9,14 @@ import argparse
 import datetime as dt
 import hashlib
 import json
-import os
 import re
 import sys
-import time
 import urllib.error
 import urllib.parse
-import urllib.request
 from collections import Counter
 from pathlib import Path
 
+from http_util import get_json as fetch_json
 from opportunity_feedback import read_feedback
 
 REPO = "OpenEuroLLM/Taskboard"
@@ -48,19 +46,7 @@ def digest(body: str) -> str:
 
 
 def get_json(url: str):
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "ai-research-graph-discovery"}
-    if os.environ.get("GITHUB_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(3):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=25) as response:
-                return json.load(response)
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code not in (408, 429):
-                raise
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    return fetch_json(url, user_agent="ai-research-graph-discovery")[0]
 
 
 def list_population(fetch=get_json):
