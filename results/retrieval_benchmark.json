@@ -1,9 +1,9 @@
 {
-  "snapshot_utc": "2026-11-08T21:35:02.740730+00:00",
-  "evaluated_utc": "2026-11-08T21:37:47.986216+00:00",
-  "nodes": 933,
-  "edges": 385,
-  "index_build_ms": 0.3009,
+  "snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
+  "evaluated_utc": "2026-11-09T12:43:39.659702+00:00",
+  "nodes": 938,
+  "edges": 387,
+  "index_build_ms": 0.2746,
   "repetitions": 31,
   "top_k": 10,
   "targets": 6,
@@ -38,8 +38,8 @@
         "hf:dataset:openeurollm/smoltalk2-decontaminated",
         "hf:dataset:allenai/tulu-3-sft-mixture"
       ],
-      "graph_median_ms": 0.0085,
-      "text_median_ms": 1.8722
+      "graph_median_ms": 0.0082,
+      "text_median_ms": 1.8457
     },
     {
       "id": "tokenizer_v2",
@@ -69,8 +69,8 @@
         "hf:model:openeurollm/tokenizer-256k-v2",
         "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k"
       ],
-      "graph_median_ms": 0.0088,
-      "text_median_ms": 0.3479
+      "graph_median_ms": 0.0086,
+      "text_median_ms": 0.4168
     },
     {
       "id": "openthoughts_shared_paper",
@@ -100,8 +100,8 @@
         "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
         "hf:dataset:open-web-math/open-web-math"
       ],
-      "graph_median_ms": 0.0089,
-      "text_median_ms": 1.849
+      "graph_median_ms": 0.0087,
+      "text_median_ms": 1.839
     },
     {
       "id": "finemath_shared_paper",
@@ -131,8 +131,8 @@
         "hf:dataset:HuggingFaceFW/finephrase",
         "hf:dataset:HuggingFaceFW/finewiki"
       ],
-      "graph_median_ms": 0.0132,
-      "text_median_ms": 1.8189
+      "graph_median_ms": 0.0131,
+      "text_median_ms": 1.8128
     },
     {
       "id": "olmo3_shared_paper",
@@ -163,10 +163,10 @@
         "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k",
         "hf:model:openeurollm/datamix-9b-Dolci-Translated-A-75EN",
         "hf:model:openeurollm/oellm-9b-256k-sft",
-        "hf:model:birgermoell/oellm-9b-128k-theta32m-prelude-anneal300b"
+        "hf:model:Snowflake/snowflake-arctic-embed-l-v2.0"
       ],
-      "graph_median_ms": 0.0168,
-      "text_median_ms": 0.4318
+      "graph_median_ms": 0.0166,
+      "text_median_ms": 0.5627
     },
     {
       "id": "hplt_unverified",
