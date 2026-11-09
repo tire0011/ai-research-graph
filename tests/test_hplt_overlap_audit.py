@@ -23,12 +23,11 @@ class FakeGitHub:
             for side in ("a", "b"):
                 item = pair[side]
                 self.blobs.setdefault(item["repo"], {})
-                if not self.blobs[item["repo"]]:
-                    self.blobs[item["repo"]][item["prefix"] + "common.sh"] = ("b" * 40, 128)
-                    self.blobs[item["repo"]][item["prefix"] + "different.py"] = (
-                        ("c" if side == "a" else "d") * 40, 100
-                    )
-                    self.blobs[item["repo"]][item["prefix"] + "__init__.py"] = ("e" * 40, 0)
+                self.blobs[item["repo"]][item["prefix"] + "common.sh"] = ("b" * 40, 128)
+                self.blobs[item["repo"]][item["prefix"] + "different.py"] = (
+                    ("c" if side == "a" else "d") * 40, 100
+                )
+                self.blobs[item["repo"]][item["prefix"] + "__init__.py"] = ("e" * 40, 0)
         for pair in config["issue_pairs"]:
             for side in ("a", "b"):
                 item = pair[side]
@@ -41,6 +40,8 @@ class FakeGitHub:
                     "comments": 3,
                     "html_url": f"https://github.com/{item['repo']}/issues/{item['number']}",
                 })
+                # An issue can appear in multiple curated pairs with different phrases.
+                self.issues[key]["body"] += " " + item["phrase"]
 
     def __call__(self, url):
         self.calls.append(url)
