@@ -1,0 +1,419 @@
+{
+  "status": "read_only_human_review",
+  "generated_at_utc": "2026-11-09T16:08:15.539830+00:00",
+  "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
+  "repositories_checked": 9,
+  "pairs_checked": 6,
+  "comparisons": [
+    {
+      "id": "evaluation-eurollm",
+      "theme": "LLM evaluation",
+      "question": "Do they share benchmark implementations, datasets or scripts? Different scale and HPC requirements may justify both.",
+      "repository_a": "OpenEuroLLM/oellm-eval",
+      "repository_b": "utter-project/eurollm-evaluation",
+      "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+      "source_b": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
+      "repo_pushed_a": "2026-11-04T13:24:00Z",
+      "repo_pushed_b": "2025-03-17T20:49:57Z",
+      "shared_terms": [
+        {
+          "term": "evaluation",
+          "a": {
+            "term": "evaluation",
+            "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HPC clusters using SLURM job arrays and Singularity",
+            "origin": "README"
+          },
+          "b": {
+            "term": "evaluation",
+            "source_url": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
+            "sha256": "07d621a528c7eab8664f0440d16ad8dcb863cce0239e22ae79e9703176084bf1",
+            "excerpt": "# EuroLLM Evaluation ## European LLM Leaderboard Leaderboard details: https://huggingfa",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "lm-eval",
+          "a": {
+            "term": "lm-eval",
+            "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HP",
+            "origin": "README"
+          },
+          "b": {
+            "term": "lm-eval",
+            "source_url": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
+            "sha256": "07d621a528c7eab8664f0440d16ad8dcb863cce0239e22ae79e9703176084bf1",
+            "excerpt": "board ### Installation ```bash git clone https://github.com/OpenGPTX/lm-evaluation-harness.git cd lm-evaluation-harness git checkout 43468b998f0cc",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    },
+    {
+      "id": "warc-hplt-v4",
+      "theme": "WARC text extraction",
+      "question": "Are data cleaning, text extraction stages or intermediate formats reusable across both pipelines?",
+      "repository_a": "OpenEuroLLM/web-data-processing",
+      "repository_b": "hplt-project/HPLT-textpipes",
+      "source_a": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+      "source_b": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+      "repo_pushed_a": "2026-11-09T13:57:56Z",
+      "repo_pushed_b": "2026-10-06T15:53:03Z",
+      "shared_terms": [
+        {
+          "term": "metadata extraction",
+          "a": {
+            "term": "metadata extraction",
+            "source_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+            "sha256": "58ff077370c15c428764455b928361d6e99769d54fc078881696084e8005bdeb",
+            "excerpt": "# web-data-processing Pipeline for text and metadata extraction from different web data archives ## Source crawls - [Helper scripts",
+            "origin": "README"
+          },
+          "b": {
+            "term": "metadata extraction",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "tPipes This repository contains code and description of how text and metadata extraction for [HPLT v4 datasets](https://hplt-project.org/datasets/v4.0) was do",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "text and metadata extraction",
+          "a": {
+            "term": "text and metadata extraction",
+            "source_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+            "sha256": "58ff077370c15c428764455b928361d6e99769d54fc078881696084e8005bdeb",
+            "excerpt": "# web-data-processing Pipeline for text and metadata extraction from different web data archives ## Source crawls - [Helper scripts",
+            "origin": "README"
+          },
+          "b": {
+            "term": "text and metadata extraction",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "HPLT TextPipes This repository contains code and description of how text and metadata extraction for [HPLT v4 datasets](https://hplt-project.org/datasets/v4.0) was do",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "pipeline",
+          "a": {
+            "term": "pipeline",
+            "source_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+            "sha256": "58ff077370c15c428764455b928361d6e99769d54fc078881696084e8005bdeb",
+            "excerpt": "# web-data-processing Pipeline for text and metadata extraction from different web data archives ##",
+            "origin": "README"
+          },
+          "b": {
+            "term": "pipeline",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "logged. Text is extracted from such resources by the text extraction pipeline described below. Two sources of web crawls are employed: Common Craw",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    },
+    {
+      "id": "warc-hplt-runner",
+      "theme": "Web-archive processing",
+      "question": "Compare parallel WARC ingestion and extraction before building similar tools.",
+      "repository_a": "OpenEuroLLM/web-data-processing",
+      "repository_b": "hplt-project/warc2text-runner",
+      "source_a": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+      "source_b": "https://github.com/hplt-project/warc2text-runner/blob/main/README.md",
+      "repo_pushed_a": "2026-11-09T13:57:56Z",
+      "repo_pushed_b": "2026-01-31T00:07:41Z",
+      "shared_terms": [
+        {
+          "term": "extraction",
+          "a": {
+            "term": "extraction",
+            "source_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+            "sha256": "58ff077370c15c428764455b928361d6e99769d54fc078881696084e8005bdeb",
+            "excerpt": "# web-data-processing Pipeline for text and metadata extraction from different web data archives ## Source crawls - [Helper scripts",
+            "origin": "README"
+          },
+          "b": {
+            "term": "extraction",
+            "source_url": "https://github.com/hplt-project/warc2text-runner/blob/main/README.md",
+            "sha256": "f200179a4c67b2198e3ac0d707b8a3c852a18250871ba83e82c7568fdab218bf",
+            "excerpt": "# warc2text-runner NB! For the latest version of the HPLT text extraction pipelines used for HPLT v4 please refer to the [HPLT-textpipes repos",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "text",
+          "a": {
+            "term": "text",
+            "source_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
+            "sha256": "58ff077370c15c428764455b928361d6e99769d54fc078881696084e8005bdeb",
+            "excerpt": "# web-data-processing Pipeline for text and metadata extraction from different web data archives ## Source c",
+            "origin": "README"
+          },
+          "b": {
+            "term": "text",
+            "source_url": "https://github.com/hplt-project/warc2text-runner/blob/main/README.md",
+            "sha256": "f200179a4c67b2198e3ac0d707b8a3c852a18250871ba83e82c7568fdab218bf",
+            "excerpt": "# warc2text-runner NB! For the latest version of the HPLT text extraction pipelin",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    },
+    {
+      "id": "scaling-baselines-laion",
+      "theme": "LLM scaling baselines",
+      "question": "Can published reference checkpoints and loss curves be reused rather than reproduced?",
+      "repository_a": "OpenEuroLLM/dense_english_scaling_laws",
+      "repository_b": "LAION-AI/open-sci-ref-0.01",
+      "source_a": "https://github.com/OpenEuroLLM/dense_english_scaling_laws/blob/main/README.md",
+      "source_b": "https://github.com/LAION-AI/open-sci-ref-0.01/blob/main/README.md",
+      "repo_pushed_a": "2026-08-28T13:08:55Z",
+      "repo_pushed_b": "2026-02-13T13:06:34Z",
+      "shared_terms": [
+        {
+          "term": "scaling",
+          "a": {
+            "term": "scaling",
+            "source_url": "https://github.com/OpenEuroLLM/dense_english_scaling_laws/blob/main/README.md",
+            "sha256": "b07fbd810d9e5eb4f1aa9c0cd0bf8dfc379cc2309687d77137e464a91bf30e8e",
+            "excerpt": "# OELLM Dense English Scaling Laws 🇪🇺🤖📈 This project contains the **data and analysis scripts** us",
+            "origin": "README"
+          },
+          "b": {
+            "term": "scaling",
+            "source_url": "https://github.com/LAION-AI/open-sci-ref-0.01/blob/main/README.md",
+            "sha256": "bafd88a1ed4d10f8b9e352e94c27c1797fd966fa1a9d963bf940b59d2288142a",
+            "excerpt": "are released under permissive Apache 2.0 licence. <img src=\"figures/ScalingCompute.svg\" alt=\"ScalingCompute\" width=\"700\" /> See the [Open-sci-re",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "model",
+          "a": {
+            "term": "model",
+            "source_url": "https://github.com/OpenEuroLLM/dense_english_scaling_laws/blob/main/README.md",
+            "sha256": "b07fbd810d9e5eb4f1aa9c0cd0bf8dfc379cc2309687d77137e464a91bf30e8e",
+            "excerpt": "s** used to study scaling laws for dense English-language transformer models. The corresponding collection of checkpoints is available in the 🤗",
+            "origin": "README"
+          },
+          "b": {
+            "term": "model",
+            "source_url": "https://github.com/LAION-AI/open-sci-ref-0.01/blob/main/README.md",
+            "sha256": "bafd88a1ed4d10f8b9e352e94c27c1797fd966fa1a9d963bf940b59d2288142a",
+            "excerpt": "509.09009</a></h4> Open-sci-ref 0.01 is a research dense transformer model family that includes all the intermediate checkpoints trained on 8 di",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "dataset",
+          "a": {
+            "term": "dataset",
+            "source_url": "https://github.com/OpenEuroLLM/dense_english_scaling_laws/blob/main/README.md",
+            "sha256": "b07fbd810d9e5eb4f1aa9c0cd0bf8dfc379cc2309687d77137e464a91bf30e8e",
+            "excerpt": "how **hyperparameters and model performance scale** with model size, dataset size, and compute, with a particular focus on learning rate and batch",
+            "origin": "README"
+          },
+          "b": {
+            "term": "dataset",
+            "source_url": "https://github.com/LAION-AI/open-sci-ref-0.01/blob/main/README.md",
+            "sha256": "bafd88a1ed4d10f8b9e352e94c27c1797fd966fa1a9d963bf940b59d2288142a",
+            "excerpt": "ll the intermediate checkpoints trained on 8 different reference open datasets (C4, Pile, SlimPajama, FineWeb-Edu-1.4T (v1.0.0), DCLM-baseline, Nem",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    },
+    {
+      "id": "eval-vision-negative-control",
+      "theme": "Evaluation tools across modalities",
+      "question": "Check modality and task differences before comparing implementations; shared generic terms do not establish duplicate work.",
+      "repository_a": "OpenEuroLLM/oellm-eval",
+      "repository_b": "LAION-AI/CLIP_benchmark",
+      "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+      "source_b": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
+      "repo_pushed_a": "2026-11-04T13:24:00Z",
+      "repo_pushed_b": "2026-11-05T15:23:52Z",
+      "shared_terms": [
+        {
+          "term": "benchmark",
+          "a": {
+            "term": "benchmark",
+            "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "excerpt": "gs. Available task groups: - `crows-pairs` - CrowS-Pairs social bias benchmark (English, 0-shot, `pct_stereotype`) - `bpb-corpus` - Bits-per-byte on",
+            "origin": "README"
+          },
+          "b": {
+            "term": "benchmark",
+            "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
+            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
+            "excerpt": "# CLIP Benchmark [![pypi](https://img.shields.io/pypi/v/clip_benchmark.svg)](https://p",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "evaluation",
+          "a": {
+            "term": "evaluation",
+            "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HPC clusters using SLURM job arrays and Singularity",
+            "origin": "README"
+          },
+          "b": {
+            "term": "evaluation",
+            "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
+            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
+            "excerpt": "del to use, the dataset and the task to evaluate on. Once it is done, evaluation is performed and the results are written into a JSON file. ### Using",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "model",
+          "a": {
+            "term": "model",
+            "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
+            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "excerpt": "rity containers. ## Features - **Schedule evaluations** on multiple models and tasks: `oellm-eval schedule` - **Collect results** and check for",
+            "origin": "README"
+          },
+          "b": {
+            "term": "model",
+            "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
+            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
+            "excerpt": "/pypi/clip_benchmark) The goal of this repo is to evaluate CLIP-like models on a standard set of datasets on different tasks such as zero-shot c",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    },
+    {
+      "id": "catalogue-vs-pipeline",
+      "theme": "Dataset processing vs cataloguing",
+      "question": "Is there interoperable metadata or a useful reference link, even though a catalogue and extraction pipeline serve different purposes?",
+      "repository_a": "OpenEuroLLM/training-data-catalogue",
+      "repository_b": "hplt-project/HPLT-textpipes",
+      "source_a": "https://github.com/OpenEuroLLM/training-data-catalogue/blob/main/README.md",
+      "source_b": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+      "repo_pushed_a": "2026-10-25T14:45:46Z",
+      "repo_pushed_b": "2026-10-06T15:53:03Z",
+      "shared_terms": [
+        {
+          "term": "dataset",
+          "a": {
+            "term": "dataset",
+            "source_url": "https://github.com/OpenEuroLLM/training-data-catalogue/blob/main/README.md",
+            "sha256": "34d3d2d756c42691be20af5e1b9884034b5b2a977b29eb8ee34f2306ae4faaf5",
+            "excerpt": "for LLM development. This page aims to offer navigational help in the dataset landscape, essentially providing a structured ‘catalogue’ of availabl",
+            "origin": "README"
+          },
+          "b": {
+            "term": "dataset",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "code and description of how text and metadata extraction for [HPLT v4 datasets](https://hplt-project.org/datasets/v4.0) was done. ## Install on L",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "metadata",
+          "a": {
+            "term": "metadata",
+            "source_url": "https://github.com/OpenEuroLLM/training-data-catalogue/blob/main/README.md",
+            "sha256": "34d3d2d756c42691be20af5e1b9884034b5b2a977b29eb8ee34f2306ae4faaf5",
+            "excerpt": "s encoded as a JSON object comprising the document text and available metadata (as defined by each distinct resource), and each JSON object is seria",
+            "origin": "README"
+          },
+          "b": {
+            "term": "metadata",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "tPipes This repository contains code and description of how text and metadata extraction for [HPLT v4 datasets](https://hplt-project.org/datasets/v",
+            "origin": "README"
+          }
+        },
+        {
+          "term": "data",
+          "a": {
+            "term": "data",
+            "source_url": "https://github.com/OpenEuroLLM/training-data-catalogue/blob/main/README.md",
+            "sha256": "34d3d2d756c42691be20af5e1b9884034b5b2a977b29eb8ee34f2306ae4faaf5",
+            "excerpt": "# OpenEuroLLM Catalogue of LLM Training Data ## Background There is a bit of a growth industry in (pre-)trainin",
+            "origin": "README"
+          },
+          "b": {
+            "term": "data",
+            "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+            "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+            "excerpt": "es This repository contains code and description of how text and metadata extraction for [HPLT v4 datasets](https://hplt-project.org/datasets/v",
+            "origin": "README"
+          }
+        }
+      ],
+      "direct_references": [],
+      "classification": "shared_topic_terms",
+      "duplicate_work": "not_established",
+      "next_step": "Human must inspect current issues, code paths, licences and already shared dependencies before claiming redundancy.",
+      "outreach": "none"
+    }
+  ],
+  "documented_relationships": [
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "LAION"
+      ],
+      "summary": "MixtureVitae training-data co-development, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    },
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "HPLT"
+      ],
+      "summary": "Shared multilingual reference-model work, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    },
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "EuroLLM"
+      ],
+      "summary": "Collaboration on multilingual synthetic data, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    }
+  ],
+  "limitations": "Manually curated bounded pair sample, original README/metadata evidence only. Shared terms, cross-links and editorially documented collaboration are distinct. No code similarity test, no issue-level duplicate verification, no outreach."
+}
