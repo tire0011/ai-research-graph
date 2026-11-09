@@ -126,3 +126,12 @@ git commit -m "review: record human feedback"
 
 Only record real human actions; never mark a comment published unless it was actually posted and has an original link. Review and commit such events manually. If an issue disappears from the rotating sample, this **does not** mean it is fixed or closed.
 
+
+## European cross-project overlap pilot
+
+The [cross-project audit](.github/workflows/cross-project-audit.yml) now compares a **small, manually selected, read-only sample of nine public GitHub repositories** across **OpenEuroLLM, LAION-AI, hplt-project and utter-project (EuroLLM)**. The [source registry](cross_project_sources.json) contains six explicit repo-to-repo hypotheses and separately labeled links to existing collaborations reported by OpenEuroLLM.
+
+The job independently loads and re-loads every repository README, checks source stability and SHA256 hashes, and records linked original README excerpts for matching **literal technical terms** and any direct GitHub repo hyperlinks. Results: [results/CROSS_PROJECT.md](results/CROSS_PROJECT.md) and [results/cross_project.json](results/cross_project.json). It runs weekly on Tuesday, on manual dispatch and once on merge; pull requests run offline tests only.
+
+**Strict evidence distinctions:** an official blog describing collaboration is a curated external source, not checked automatically by this GitHub-only audit. A literal shared term is a *topic overlap*, not identical implementation. An explicit GitHub URL in a README proves a mention, **not cooperation or reuse**. None of these are sufficient to claim duplicate code, redundant effort or measured savings; such claims require manual review of current tasks, code, provenance, licenses, existing dependencies and use cases. No automated outreach, labels or GitHub comments. This bounded pilot is not exhaustive, does not yet search cross-project issues, and does not change the existing ten-issue or 50-issue discovery workflows.
+

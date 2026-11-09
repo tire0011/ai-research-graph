@@ -1,0 +1,78 @@
+name: European AI cross-project overlap audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 6 * * 2'
+  push:
+    branches: [main]
+    paths:
+      - cross_project_audit.py
+      - cross_project_sources.json
+      - tests/test_cross_project_audit.py
+      - .github/workflows/cross-project-audit.yml
+  pull_request:
+    paths:
+      - cross_project_audit.py
+      - cross_project_sources.json
+      - tests/test_cross_project_audit.py
+      - .github/workflows/cross-project-audit.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eu-cross-project-pilot
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run all repository unit tests (offline)
+        run: python -m unittest discover -s tests -v
+
+  audit:
+    if: github.event_name != 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare nine original GitHub repository sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python cross_project_audit.py --registry cross_project_sources.json --output results
+      - name: Upload evidence and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-cross-project-overlap
+          path: |
+            results/cross_project.json
+            results/CROSS_PROJECT.md
+      - name: Commit only successfully verified comparison
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/cross_project.json results/CROSS_PROJECT.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: refresh EU cross-project comparison'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1

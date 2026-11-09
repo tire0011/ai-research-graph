@@ -1,0 +1,120 @@
+{
+  "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
+  "repositories": [
+    "OpenEuroLLM/oellm-eval",
+    "utter-project/eurollm-evaluation",
+    "OpenEuroLLM/web-data-processing",
+    "hplt-project/HPLT-textpipes",
+    "hplt-project/warc2text-runner",
+    "OpenEuroLLM/dense_english_scaling_laws",
+    "LAION-AI/open-sci-ref-0.01",
+    "LAION-AI/CLIP_benchmark",
+    "OpenEuroLLM/training-data-catalogue"
+  ],
+  "pairs": [
+    {
+      "id": "evaluation-eurollm",
+      "a": "OpenEuroLLM/oellm-eval",
+      "b": "utter-project/eurollm-evaluation",
+      "theme": "LLM evaluation",
+      "terms": [
+        "evaluation",
+        "benchmark",
+        "lm-eval"
+      ],
+      "question": "Do they share benchmark implementations, datasets or scripts? Different scale and HPC requirements may justify both."
+    },
+    {
+      "id": "warc-hplt-v4",
+      "a": "OpenEuroLLM/web-data-processing",
+      "b": "hplt-project/HPLT-textpipes",
+      "theme": "WARC text extraction",
+      "terms": [
+        "metadata extraction",
+        "text and metadata extraction",
+        "warc",
+        "pipeline"
+      ],
+      "question": "Are data cleaning, text extraction stages or intermediate formats reusable across both pipelines?"
+    },
+    {
+      "id": "warc-hplt-runner",
+      "a": "OpenEuroLLM/web-data-processing",
+      "b": "hplt-project/warc2text-runner",
+      "theme": "Web-archive processing",
+      "terms": [
+        "warc",
+        "archive",
+        "extraction",
+        "text"
+      ],
+      "question": "Compare parallel WARC ingestion and extraction before building similar tools."
+    },
+    {
+      "id": "scaling-baselines-laion",
+      "a": "OpenEuroLLM/dense_english_scaling_laws",
+      "b": "LAION-AI/open-sci-ref-0.01",
+      "theme": "LLM scaling baselines",
+      "terms": [
+        "scaling",
+        "training",
+        "model",
+        "dataset"
+      ],
+      "question": "Can published reference checkpoints and loss curves be reused rather than reproduced?"
+    },
+    {
+      "id": "eval-vision-negative-control",
+      "a": "OpenEuroLLM/oellm-eval",
+      "b": "LAION-AI/CLIP_benchmark",
+      "theme": "Evaluation tools across modalities",
+      "terms": [
+        "benchmark",
+        "evaluation",
+        "model"
+      ],
+      "question": "Check modality and task differences before comparing implementations; shared generic terms do not establish duplicate work."
+    },
+    {
+      "id": "catalogue-vs-pipeline",
+      "a": "OpenEuroLLM/training-data-catalogue",
+      "b": "hplt-project/HPLT-textpipes",
+      "theme": "Dataset processing vs cataloguing",
+      "terms": [
+        "dataset",
+        "metadata",
+        "data"
+      ],
+      "question": "Is there interoperable metadata or a useful reference link, even though a catalogue and extraction pipeline serve different purposes?"
+    }
+  ],
+  "documented_relationships": [
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "LAION"
+      ],
+      "summary": "MixtureVitae training-data co-development, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    },
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "HPLT"
+      ],
+      "summary": "Shared multilingual reference-model work, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    },
+    {
+      "projects": [
+        "OpenEuroLLM",
+        "EuroLLM"
+      ],
+      "summary": "Collaboration on multilingual synthetic data, reported by OpenEuroLLM.",
+      "source_url": "https://openeurollm.eu/blog/first-year-progress-and-next-steps",
+      "verification": "editorial_official_source_not_rechecked_by_audit"
+    }
+  ]
+}
