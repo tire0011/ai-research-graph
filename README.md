@@ -135,3 +135,17 @@ The job independently loads and re-loads every repository README, checks source 
 
 **Strict evidence distinctions:** an official blog describing collaboration is a curated external source, not checked automatically by this GitHub-only audit. A literal shared term is a *topic overlap*, not identical implementation. An explicit GitHub URL in a README proves a mention, **not cooperation or reuse**. None of these are sufficient to claim duplicate code, redundant effort or measured savings; such claims require manual review of current tasks, code, provenance, licenses, existing dependencies and use cases. No automated outreach, labels or GitHub comments. This bounded pilot is not exhaustive, does not yet search cross-project issues, and does not change the existing ten-issue or 50-issue discovery workflows.
 
+
+## HPLT–OpenEuroLLM code and issue handoff (bounded audit)
+
+The [HPLT code/issue workflow](.github/workflows/hplt-overlap-audit.yml) extends the preceding README-only EU overlap pilot with a **narrow, original-source comparison** of the Common Crawl download components and HPLT Stage-2 version lineage. The [case registry](hplt_overlap_cases.json) deliberately scopes two code pairs and five issue pairs; selection is manual, **not a project-wide duplicate detector**.
+
+The audit pins each repository tree to a commit SHA before comparing Git blob hashes. It distinguishes:
+- **Byte-identical nontrivial files** (same blob SHA, at least 64 bytes): verified reuse of file *content*, not evidence of shared authorship or unnecessary duplication.
+- **Byte-identical trivial files** (such as zero-length module markers): excluded from meaningful reuse counts.
+- **Same relative file path, different blob SHA**: a candidate for reviewing version divergence, without claiming the changes are compatible.
+
+For issues, the audit reads the original bodies and current open/closed status twice, checks literal preselected phrases and hashes each body. The five human-review links cover **Common Crawl transfers, robots.txt handling, OpenLID, GlotLID and XML-to-Markdown**. A closed HPLT issue and an open OpenEuroLLM issue suggest potential prior knowledge, **not proof of a solution or of duplicate work**. Comments, historical discussions, code semantics, licenses, acceptance tests and actual reuse are outside the automated evidence level.
+
+The job runs weekly on Wednesday, manually and after merging source changes. It produces [results/HPLT_OVERLAP.md](results/HPLT_OVERLAP.md) and [results/hplt_overlap.json](results/hplt_overlap.json) only after a complete successful audit; a source error prevents replacing last-known-good reports. Unit tests run on pull requests without external API access. No automated outreach or changes to external repositories.
+
