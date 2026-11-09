@@ -1,0 +1,78 @@
+name: HPLT OpenEuroLLM source-overlap audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 7 * * 3'
+  push:
+    branches: [main]
+    paths:
+      - hplt_overlap_audit.py
+      - hplt_overlap_cases.json
+      - tests/test_hplt_overlap_audit.py
+      - .github/workflows/hplt-overlap-audit.yml
+  pull_request:
+    paths:
+      - hplt_overlap_audit.py
+      - hplt_overlap_cases.json
+      - tests/test_hplt_overlap_audit.py
+      - .github/workflows/hplt-overlap-audit.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hplt-overlap-audit
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline repository tests
+        run: python -m unittest discover -s tests -v
+
+  audit:
+    if: github.event_name != 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pin and compare code and issue sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python hplt_overlap_audit.py --cases hplt_overlap_cases.json --output results
+      - name: Upload report and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hplt-code-issue-audit
+          path: |
+            results/hplt_overlap.json
+            results/HPLT_OVERLAP.md
+      - name: Commit only complete verified report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/hplt_overlap.json results/HPLT_OVERLAP.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: refresh HPLT code and issue overlap evidence'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1
