@@ -1,7 +1,7 @@
 {
   "status": "review_only",
-  "generated_at_utc": "2026-11-09T12:43:59.170515+00:00",
-  "evidence_snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
+  "generated_at_utc": "2026-11-09T16:17:28.212638+00:00",
+  "evidence_snapshot_utc": "2026-11-09T16:13:45.497642+00:00",
   "scope": "Three explicit evidence categories within ten purposefully selected Taskboard issues",
   "examined": 10,
   "opportunities": [
@@ -76,40 +76,6 @@
       "contact_basis": "github_issue_assignee",
       "suggested_channel": "existing_github_issue_comment",
       "suggested_question": "Would a reproducible check help? Verify Taskboard #432 completion, then benchmark comparable SFT/DPO configurations on LUMI.",
-      "communication_status": "human_review_required",
-      "sent": false
-    },
-    {
-      "issue_id": "github:OpenEuroLLM/Taskboard#433",
-      "title": "Add support for FSDP to TRL in the post-training repo",
-      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
-      "source_sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
-      "evidence_class": "reported_memory_blocker",
-      "opportunity_type": "verify_reported_failure",
-      "claim_scope": "commenter-reported, not reproduced",
-      "candidate": "Find a feasible LUMI DPO configuration for the FSDP branch.",
-      "validation_needed": "Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
-      "evidence": [
-        {
-          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
-          "sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
-          "quoted_phrase": "Add support for Fully Sharded Data Parallel",
-          "meaning": "FSDP support is the work item."
-        },
-        {
-          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773",
-          "sha256": "5b1619a14f239f8e4d4785adae8935c53ee01a08147fb7d00debbb485216a13b",
-          "quoted_phrase": "fails due to OOM issues on LUMI",
-          "meaning": "An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph."
-        }
-      ],
-      "related_dependency": null,
-      "contacts": [
-        "Neonkraft"
-      ],
-      "contact_basis": "github_issue_assignee",
-      "suggested_channel": "existing_github_issue_comment",
-      "suggested_question": "Would a reproducible check help? Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
       "communication_status": "human_review_required",
       "sent": false
     }

@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "evaluated_utc": "2026-11-09T12:43:59.123680+00:00",
-  "snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
+  "evaluated_utc": "2026-11-09T16:17:28.157273+00:00",
+  "snapshot_utc": "2026-11-09T16:13:45.497642+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
@@ -41,7 +41,7 @@
       "candidate": "Validate the revised sequence-to-worker assignment before production adoption.",
       "next_check": "Reproduce throughput and complete the pending memory, save and resume acceptance checks.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-      "source_updated_at": "2026-10-12T11:21:36Z",
+      "source_updated_at": "2026-11-09T12:58:08Z",
       "source_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
       "live_state": "open",
       "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
@@ -55,7 +55,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-          "updated_at": "2026-10-12T11:21:36Z",
+          "updated_at": "2026-11-09T12:58:08Z",
           "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
           "matched_text": "106–107k tokens/s",
           "meaning": "A revised assignment was timed above the earlier 94–99k-token/s production range."
@@ -63,7 +63,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-          "updated_at": "2026-10-12T11:21:36Z",
+          "updated_at": "2026-11-09T12:58:08Z",
           "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
           "matched_text": "about 9.5% faster",
           "meaning": "Issue authors report a controlled comparison, not independently reproduced here."
@@ -71,7 +71,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-          "updated_at": "2026-10-12T11:21:36Z",
+          "updated_at": "2026-11-09T12:58:08Z",
           "sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
           "matched_text": "remain required before adoption",
           "meaning": "Production validation is explicitly outstanding."
@@ -202,7 +202,7 @@
       "candidate": "Complete LlamaFactory support so a same-configuration TRL throughput comparison can be run.",
       "next_check": "Verify Taskboard #432 completion, then benchmark comparable SFT/DPO configurations on LUMI.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
-      "source_updated_at": "2026-10-12T11:14:59Z",
+      "source_updated_at": "2026-11-09T13:26:20Z",
       "source_sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
       "live_state": "open",
       "title": "Ensuring post-training pipeline works",
@@ -216,7 +216,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
-          "updated_at": "2026-10-12T11:14:59Z",
+          "updated_at": "2026-11-09T13:26:20Z",
           "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
           "matched_text": "Compare throughput against the existing TRL implementation",
           "meaning": "A throughput comparison is planned; no result is asserted."
@@ -224,7 +224,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/391",
-          "updated_at": "2026-10-12T11:14:59Z",
+          "updated_at": "2026-11-09T13:26:20Z",
           "sha256": "3a88d7745a1405179ae3646bdb738d356f40a27cc7a55bb01974b366af19879f",
           "matched_text": "__Dependencies__\nIssue #432",
           "meaning": "The Dependencies section explicitly names the upstream task."
@@ -290,9 +290,9 @@
       "candidate": "Find a feasible LUMI DPO configuration for the FSDP branch.",
       "next_check": "Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
-      "source_updated_at": "2026-10-12T09:04:26Z",
+      "source_updated_at": "2026-11-09T14:03:37Z",
       "source_sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
-      "live_state": "open",
+      "live_state": "closed",
       "title": "Add support for FSDP to TRL in the post-training repo",
       "issue_author": "Neonkraft",
       "assignees": [
@@ -304,7 +304,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/433",
-          "updated_at": "2026-10-12T09:04:26Z",
+          "updated_at": "2026-11-09T14:03:37Z",
           "sha256": "1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a",
           "matched_text": "Add support for Fully Sharded Data Parallel",
           "meaning": "FSDP support is the work item."

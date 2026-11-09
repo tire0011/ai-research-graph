@@ -1,6 +1,6 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-09T12:40:46.440433+00:00`. Evaluated: `2026-11-09T12:43:59.123680+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-09T16:13:45.497642+00:00`. Evaluated: `2026-11-09T16:17:28.157273+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
 
 Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
@@ -68,7 +68,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 
 ### github:OpenEuroLLM/Taskboard#433 — Add support for FSDP to TRL in the post-training repo
 
-Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-reference edges from this issue: **0**. Issue-body SHA256: `1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a`.
+Live issue state: `closed`. Body versus graph: `exact_parity`. GitHub task-reference edges from this issue: **0**. Issue-body SHA256: `1f43adea95275eb9448196b61d1de53bf44fd8ebccd21686f35d24cf8ce81a9a`.
 
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433): `Add support for Fully Sharded Data Parallel` — FSDP support is the work item.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/433#issuecomment-6121054773): `fails due to OOM issues on LUMI` — An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph.
