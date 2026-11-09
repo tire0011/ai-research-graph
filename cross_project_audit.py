@@ -203,15 +203,15 @@ def markdown(result):
         for link in row["direct_references"]:
             lines.append(f"- [Explicit repository link]({link['source_url']}): "
                          f"{link['source']} references {link['mentioned_repo_url']} "
-                         f"(source SHA256 \`{link['sha256']}\`).")
+                         f"(source SHA256 `{link['sha256']}`).")
         for term in row["shared_terms"]:
-            lines.append(f"- Shared text \`{term['term']}\`: "
+            lines.append(f"- Shared text `{term['term']}`: "
                          f"[A]({term['a']['source_url']}) "
-                         f"(\`{term['a']['excerpt'].replace(chr(96), chr(39))}\`, "
-                         f"SHA256 \`{term['a']['sha256']}\`); "
+                         f"(`{term['a']['excerpt'].replace(chr(96), chr(39))}`, "
+                         f"SHA256 `{term['a']['sha256']}`); "
                          f"[B]({term['b']['source_url']}) "
-                         f"(\`{term['b']['excerpt'].replace(chr(96), chr(39))}\`, "
-                         f"SHA256 \`{term['b']['sha256']}\`).")
+                         f"(`{term['b']['excerpt'].replace(chr(96), chr(39))}`, "
+                         f"SHA256 `{term['b']['sha256']}`).")
         lines.extend([f"- Required next check: {row['next_step']}", ""])
     lines.extend(["## Boundaries", "", result["limitations"], "",
                   "No code was compared automatically; even an explicit cross-repo URL only proves "

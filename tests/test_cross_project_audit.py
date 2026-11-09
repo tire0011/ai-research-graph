@@ -103,6 +103,7 @@ class CrossProjectTests(unittest.TestCase):
             p.write_text(cp.markdown(out))
             self.assertTrue(p.read_text().startswith("# European AI cross-project overlap"))
             self.assertNotIn("confirmed duplicated work", p.read_text().lower())
+            self.assertNotIn("\\`", p.read_text(), "Do not escape Markdown code spans")
 
 
 if __name__ == "__main__":
