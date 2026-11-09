@@ -1,13 +1,13 @@
 # Prelude checkpoint evaluation – bounded source inspection
 
-Collected: 2026-11-09T12:43:57.993816+00:00 UTC.
+Collected: 2026-11-09T16:17:24.961918+00:00 UTC.
 
 Dataset: [openeurollm/prelude-base-eval-scores](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores). Research question: [oellm-eval #163](https://github.com/OpenEuroLLM/oellm-eval/issues/163).
 Filter: prelude_anneal2t / coqa_gen / f1; source method: pinned_source_parquet.
 
 Scope: one model + task + metric; not a cross-benchmark comparison or independent evaluation rerun.
 
-Dataset revision: cf5f9d05ee6e2485273e7ebea7320645c7f6d778; modified: 2026-11-06T10:04:28.000Z.
+Dataset revision: 88f335f943f34bbf1fbba681719b2750f02340f7; modified: 2026-11-09T14:42:16.000Z.
 Filtered rows: **107**; valid scored rows: **107**.
 Result: **comparable**.
 Scanned all matching rows within cap: **true**.
