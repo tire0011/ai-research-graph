@@ -1,0 +1,78 @@
+name: Rotating read-only opportunity discovery
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 5 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - opportunity_discovery.py
+      - opportunity_feedback.py
+      - tests/test_opportunity_discovery.py
+      - .github/workflows/opportunity-discovery.yml
+  pull_request:
+    paths:
+      - opportunity_discovery.py
+      - opportunity_feedback.py
+      - tests/test_opportunity_discovery.py
+      - .github/workflows/opportunity-discovery.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rotating-opportunity-discovery
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: All repository unit tests (offline)
+        run: python -m unittest discover -s tests -v
+
+  discovery:
+    if: github.event_name != 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sample and independently verify 50 live open issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python opportunity_discovery.py --impact-cases impact_cases.json --feedback results/opportunity_feedback.jsonl --output results
+      - name: Upload results and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rotating-opportunity-discovery
+          path: |
+            results/discovery.json
+            results/DISCOVERY.md
+      - name: Commit only completed human-review evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/discovery.json results/DISCOVERY.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data: refresh rotating opportunity review'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1
