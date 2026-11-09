@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "snapshot_utc": "2026-11-09T12:40:46.440433+00:00",
-  "evaluated_utc": "2026-11-09T12:44:12.646704+00:00",
+  "snapshot_utc": "2026-11-09T16:13:45.497642+00:00",
+  "evaluated_utc": "2026-11-09T16:17:45.212011+00:00",
   "source_bodies_verified": 40,
   "source_sha256": {
     "github:OpenEuroLLM/Taskboard#220": "7dbf26df6d3a8d5b575ff697251efe2f955e38d87826278b47ecd979965ec2ad",
@@ -64,8 +64,8 @@
       "source_follow_exact": 20,
       "correct_graph_abstentions": 11,
       "reference_paths": 16,
-      "graph_median_ms": 0.0278,
-      "source_follow_median_ms": 11.0297
+      "graph_median_ms": 0.0273,
+      "source_follow_median_ms": 13.6458
     },
     "positive": {
       "cases": 9,
@@ -73,8 +73,8 @@
       "source_follow_exact": 9,
       "correct_graph_abstentions": 0,
       "reference_paths": 16,
-      "graph_median_ms": 0.0283,
-      "source_follow_median_ms": 30.2864
+      "graph_median_ms": 0.0341,
+      "source_follow_median_ms": 36.1534
     },
     "negative": {
       "cases": 11,
@@ -82,8 +82,8 @@
       "source_follow_exact": 11,
       "correct_graph_abstentions": 11,
       "reference_paths": 0,
-      "graph_median_ms": 0.0277,
-      "source_follow_median_ms": 4.0223
+      "graph_median_ms": 0.0273,
+      "source_follow_median_ms": 4.6495
     }
   },
   "cases": [
@@ -123,8 +123,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.1128,
-      "source_follow_lookup_ms": 68.2976,
+      "graph_lookup_ms": 0.1178,
+      "source_follow_lookup_ms": 83.6384,
       "status": "evaluated"
     },
     {
@@ -157,8 +157,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0235,
-      "source_follow_lookup_ms": 61.8985,
+      "graph_lookup_ms": 0.0237,
+      "source_follow_lookup_ms": 75.4508,
       "status": "evaluated"
     },
     {
@@ -191,8 +191,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0236,
-      "source_follow_lookup_ms": 61.7009,
+      "graph_lookup_ms": 0.0239,
+      "source_follow_lookup_ms": 75.1162,
       "status": "evaluated"
     },
     {
@@ -238,8 +238,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0434,
-      "source_follow_lookup_ms": 15.8715,
+      "graph_lookup_ms": 0.0452,
+      "source_follow_lookup_ms": 19.8929,
       "status": "evaluated"
     },
     {
@@ -272,8 +272,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0232,
-      "source_follow_lookup_ms": 28.268,
+      "graph_lookup_ms": 0.0238,
+      "source_follow_lookup_ms": 34.2437,
       "status": "evaluated"
     },
     {
@@ -306,8 +306,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0235,
-      "source_follow_lookup_ms": 61.65,
+      "graph_lookup_ms": 0.0241,
+      "source_follow_lookup_ms": 78.9103,
       "status": "evaluated"
     },
     {
@@ -413,8 +413,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0455,
-      "source_follow_lookup_ms": 23.2785,
+      "graph_lookup_ms": 0.0467,
+      "source_follow_lookup_ms": 27.9204,
       "status": "evaluated"
     },
     {
@@ -449,8 +449,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.1135,
-      "source_follow_lookup_ms": 30.2864,
+      "graph_lookup_ms": 0.0578,
+      "source_follow_lookup_ms": 36.1534,
       "status": "evaluated"
     },
     {
@@ -483,8 +483,8 @@
       ],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0283,
-      "source_follow_lookup_ms": 11.2551,
+      "graph_lookup_ms": 0.0341,
+      "source_follow_lookup_ms": 13.5117,
       "status": "evaluated"
     },
     {
@@ -502,8 +502,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0289,
-      "source_follow_lookup_ms": 4.0223,
+      "graph_lookup_ms": 0.0273,
+      "source_follow_lookup_ms": 4.6495,
       "status": "evaluated"
     },
     {
@@ -521,8 +521,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.028,
-      "source_follow_lookup_ms": 23.8628,
+      "graph_lookup_ms": 0.0366,
+      "source_follow_lookup_ms": 29.0865,
       "status": "evaluated"
     },
     {
@@ -540,8 +540,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0284,
-      "source_follow_lookup_ms": 5.4245,
+      "graph_lookup_ms": 0.0274,
+      "source_follow_lookup_ms": 6.6658,
       "status": "evaluated"
     },
     {
@@ -559,8 +559,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0281,
-      "source_follow_lookup_ms": 6.292,
+      "graph_lookup_ms": 0.0313,
+      "source_follow_lookup_ms": 7.7911,
       "status": "evaluated"
     },
     {
@@ -578,8 +578,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0289,
-      "source_follow_lookup_ms": 2.813,
+      "graph_lookup_ms": 0.0346,
+      "source_follow_lookup_ms": 3.1931,
       "status": "evaluated"
     },
     {
@@ -597,8 +597,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0277,
-      "source_follow_lookup_ms": 10.8042,
+      "graph_lookup_ms": 0.0333,
+      "source_follow_lookup_ms": 13.7799,
       "status": "evaluated"
     },
     {
@@ -616,8 +616,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0274,
-      "source_follow_lookup_ms": 10.6346,
+      "graph_lookup_ms": 0.0244,
+      "source_follow_lookup_ms": 12.8248,
       "status": "evaluated"
     },
     {
@@ -633,8 +633,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0151,
-      "source_follow_lookup_ms": 0.4151,
+      "graph_lookup_ms": 0.0149,
+      "source_follow_lookup_ms": 0.4294,
       "status": "evaluated"
     },
     {
@@ -650,8 +650,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.0149,
-      "source_follow_lookup_ms": 0.4243,
+      "graph_lookup_ms": 0.014,
+      "source_follow_lookup_ms": 0.4316,
       "status": "evaluated"
     },
     {
@@ -668,7 +668,7 @@
       "graph_exact": true,
       "source_follow_exact": true,
       "graph_lookup_ms": 0.0146,
-      "source_follow_lookup_ms": 0.4519,
+      "source_follow_lookup_ms": 0.4266,
       "status": "evaluated"
     },
     {
@@ -684,8 +684,8 @@
       "source_follow_paths": [],
       "graph_exact": true,
       "source_follow_exact": true,
-      "graph_lookup_ms": 0.027,
-      "source_follow_lookup_ms": 0.4658,
+      "graph_lookup_ms": 0.0143,
+      "source_follow_lookup_ms": 0.4626,
       "status": "evaluated"
     }
   ]
