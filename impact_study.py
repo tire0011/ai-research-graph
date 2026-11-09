@@ -76,7 +76,9 @@ def evaluate(graph, study, *, fetch_issue=read_issue, fetch_comment=read_comment
             src = issue(case["repo"], case["number"])
             row.update({"source_url": src["url"], "source_updated_at": src.get("updated_at"),
                         "source_sha256": digest(src["body"]), "live_state": src.get("state"),
-                        "title": src.get("title")})
+                        "title": src.get("title"),
+                        "issue_author": src.get("issue_author"),
+                        "assignees": src.get("assignees", [])})
             node = index.get(anchor.casefold())
             row["graph_status"] = ("not_indexed" if node is None else
                                    "exact_parity" if node.get("updated_at") == src.get("updated_at")
