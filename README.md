@@ -107,3 +107,22 @@ To run the companion probe locally (optional): python benchmark_probe.py --outpu
 GitHub Actions executes this command automatically without the user's PC.
 
 Run an independent LLM over the fixed evidence packets using a supported inference provider, then score answers against sourced citations and unsupported-claim avoidance. The GitHub Actions evidence check does **not** make an LLM call and therefore makes no claim of autonomous AI answer accuracy. Manually annotate name-only candidates and measure recall before considering a common graph service or MCP interface. A reference to an artifact does not establish a causal dependency on it.
+
+## Rotating issue discovery and human feedback (separate pilot)
+
+The [rotating discovery workflow](.github/workflows/opportunity-discovery.yml) independently samples **50 currently open Taskboard issues**, excluding the original ten purposefully selected impact-study cases. Selection is by reproducible SHA256 ID order with a weekly ISO-week seed, without using the issue descriptions for selection. This is an exploratory sample, not a statistically representative estimate, a project-wide ranking, or an exhaustive search.
+
+The detector re-reads every selected issue and the original supporting comments. It rejects source drift and incomplete comment pagination before writing [results/discovery.json](results/discovery.json) and [results/DISCOVERY.md](results/DISCOVERY.md). Rules currently surface **literal memory/OOM reports, performance phrases, and explicit Dependencies-section references**. A phrase match is **not** independent validation of a speedup, blocker, or researcher availability. Evidence includes exact original excerpts, source links and SHA256 checksums. Suggested contacts are public issue assignees or clearly labeled author fallbacks, **never notified automatically**.
+
+The report is generated weekly on Monday or via manual GitHub Actions dispatch, separate from the existing ten-issue impact workflow. PR checks run unit tests without querying live APIs or committing results. On a failed live audit, previous successful reports remain unchanged.
+
+Human decisions can optionally be saved using the append-only [opportunity_feedback.py](opportunity_feedback.py) log. The log uses a stable issue-and-signal key, so feedback survives weekly sampling rotations; it records `reviewed`, `proposal_prepared`, `published`, `response_received`, `resolved`, or `dismissed` with validated transitions. It **does not send, verify, or infer real GitHub comments**. Published, response, and resolved events require a human-provided GitHub issue or PR link. These are self-reported review statuses, not live platform assertions. To mark an observed card reviewed, for example (PowerShell):
+
+```powershell
+python opportunity_feedback.py --issue-id "github:OpenEuroLLM/Taskboard#123:reported_memory_issue" --status reviewed --actor tire0011 --note "Checked original source"
+git add results/opportunity_feedback.jsonl
+git commit -m "review: record human feedback"
+```
+
+Only record real human actions; never mark a comment published unless it was actually posted and has an original link. Review and commit such events manually. If an issue disappears from the rotating sample, this **does not** mean it is fixed or closed.
+
