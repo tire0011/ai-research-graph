@@ -1,0 +1,511 @@
+{
+  "status": "read_only_human_review",
+  "generated_at_utc": "2026-11-09T16:44:12.997778+00:00",
+  "scope": "Narrow source-audited comparison of HPLT and OpenEuroLLM data-processing code and issues. Curated pairs are hypotheses, not automatically discovered duplicates.",
+  "pinned_trees": 3,
+  "unique_issues_checked": 8,
+  "code_pairs": [
+    {
+      "id": "common-crawl-download",
+      "question": "Which Common Crawl acquisition scripts are byte-identical, and which have diverged?",
+      "a_repo": "OpenEuroLLM/web-data-processing",
+      "b_repo": "hplt-project/HPLT-textpipes",
+      "a_head": "0765a2c413e46d3e106751bc7d8de4cb29df4053",
+      "b_head": "4bbfb80ed0c4b83c47860872904b75cfffacbd2f",
+      "a_files_in_scope": 5,
+      "b_files_in_scope": 5,
+      "shared_paths": 4,
+      "identical_nontrivial": 1,
+      "identical_trivial": 0,
+      "different_blobs": 3,
+      "files": [
+        {
+          "relative_path": "cc_list_latest.txt",
+          "a_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/0765a2c413e46d3e106751bc7d8de4cb29df4053/download/cc/cc_list_latest.txt",
+          "b_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/download/cc/cc_list_latest.txt",
+          "a_blob_sha": "2c2df80e26281a85f2586a6614407ebd0f942494",
+          "b_blob_sha": "a2d89d001a25b948944b00b386eda783cefcf8f0",
+          "a_size": 208,
+          "b_size": 96,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "cc_list_latest_download.sh",
+          "a_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/0765a2c413e46d3e106751bc7d8de4cb29df4053/download/cc/cc_list_latest_download.sh",
+          "b_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/download/cc/cc_list_latest_download.sh",
+          "a_blob_sha": "f63d600de54e20da846883c1f40ccca27e114a69",
+          "b_blob_sha": "3a07b3eb02d0baf3e6b2b2448874fe8ce2522e07",
+          "a_size": 1378,
+          "b_size": 636,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "download_crawl_rclone.sh",
+          "a_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/0765a2c413e46d3e106751bc7d8de4cb29df4053/download/cc/download_crawl_rclone.sh",
+          "b_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/download/cc/download_crawl_rclone.sh",
+          "a_blob_sha": "33f9885bd66f0bb47667e02e6ae04261bd119984",
+          "b_blob_sha": "83144eda8b01b97beeb39f33bb848bf25cfbc1b8",
+          "a_size": 1018,
+          "b_size": 998,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "get_url_lists.sh",
+          "a_url": "https://github.com/OpenEuroLLM/web-data-processing/blob/0765a2c413e46d3e106751bc7d8de4cb29df4053/download/cc/get_url_lists.sh",
+          "b_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/download/cc/get_url_lists.sh",
+          "a_blob_sha": "a9116bbc7859168a75104a3c5c3710fdd965a61c",
+          "b_blob_sha": "a9116bbc7859168a75104a3c5c3710fdd965a61c",
+          "a_size": 332,
+          "b_size": 332,
+          "status": "identical_nontrivial_file"
+        }
+      ],
+      "duplicate_work": "not_established"
+    },
+    {
+      "id": "hplt-stage2-lineage",
+      "question": "Which Stage-2 pipeline utilities were carried forward unchanged, and which differ across HPLT releases?",
+      "a_repo": "hplt-project/HPLT-textpipes",
+      "b_repo": "hplt-project/warc2text-runner",
+      "a_head": "4bbfb80ed0c4b83c47860872904b75cfffacbd2f",
+      "b_head": "0b88ccc8f439d4375d880ff2ca2b385b903c00ff",
+      "a_files_in_scope": 29,
+      "b_files_in_scope": 38,
+      "shared_paths": 27,
+      "identical_nontrivial": 12,
+      "identical_trivial": 5,
+      "different_blobs": 10,
+      "files": [
+        {
+          "relative_path": "__init__.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/__init__.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/__init__.py",
+          "a_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "b_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "a_size": 0,
+          "b_size": 0,
+          "status": "identical_trivial_file"
+        },
+        {
+          "relative_path": "batch_htmls.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/batch_htmls.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/batch_htmls.py",
+          "a_blob_sha": "86d1b57188ee8157fbd36c15d5349690d6ea6dbe",
+          "b_blob_sha": "86d1b57188ee8157fbd36c15d5349690d6ea6dbe",
+          "a_size": 352,
+          "b_size": 352,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "batch_htmls_prtpy.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/batch_htmls_prtpy.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/batch_htmls_prtpy.py",
+          "a_blob_sha": "78d458194fd005bc5569b82d254806f21052781e",
+          "b_blob_sha": "78d458194fd005bc5569b82d254806f21052781e",
+          "a_size": 564,
+          "b_size": 564,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "fastertext_lid/__init__.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/fastertext_lid/__init__.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/fastertext_lid/__init__.py",
+          "a_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "b_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "a_size": 0,
+          "b_size": 0,
+          "status": "identical_trivial_file"
+        },
+        {
+          "relative_path": "fastertext_lid/basic_log.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/fastertext_lid/basic_log.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/fastertext_lid/basic_log.py",
+          "a_blob_sha": "ca0fbd55553a13ad1686db98040ca53166c181b8",
+          "b_blob_sha": "ca0fbd55553a13ad1686db98040ca53166c181b8",
+          "a_size": 652,
+          "b_size": 652,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "fastertext_lid/patterns.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/fastertext_lid/patterns.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/fastertext_lid/patterns.py",
+          "a_blob_sha": "3580e0e7795d886f35831eddf813102afa07f1c6",
+          "b_blob_sha": "3580e0e7795d886f35831eddf813102afa07f1c6",
+          "a_size": 522,
+          "b_size": 522,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "fastertext_lid/proto_langid.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/fastertext_lid/proto_langid.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/fastertext_lid/proto_langid.py",
+          "a_blob_sha": "43fcb399e128470284ff13217af4e1c3e7ef494a",
+          "b_blob_sha": "88e90d15b7debd570c5e437ce3cf692d9d41bf32",
+          "a_size": 5049,
+          "b_size": 6014,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "qualitycontrol/__init__.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/qualitycontrol/__init__.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/qualitycontrol/__init__.py",
+          "a_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "b_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "a_size": 0,
+          "b_size": 0,
+          "status": "identical_trivial_file"
+        },
+        {
+          "relative_path": "qualitycontrol/check_linecnt.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/qualitycontrol/check_linecnt.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/qualitycontrol/check_linecnt.sh",
+          "a_blob_sha": "688a0ff1383a135adbc8e89a1e54949d8abb86a2",
+          "b_blob_sha": "989359775acd61e3c3b2d023f9c107129b992d92",
+          "a_size": 495,
+          "b_size": 496,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "qualitycontrol/check_text_lang_linecnts.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/qualitycontrol/check_text_lang_linecnts.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/qualitycontrol/check_text_lang_linecnts.py",
+          "a_blob_sha": "93295c9b82feeee1d39ec784a0d137bfd58016eb",
+          "b_blob_sha": "93295c9b82feeee1d39ec784a0d137bfd58016eb",
+          "a_size": 440,
+          "b_size": 440,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "qualitycontrol/traferrstats.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/qualitycontrol/traferrstats.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/qualitycontrol/traferrstats.py",
+          "a_blob_sha": "6853188f3a29a433eae51c5272d46f31d371ead2",
+          "b_blob_sha": "1debdd71816877d4e45eb9b963324673de007adc",
+          "a_size": 2394,
+          "b_size": 2396,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "stage2download.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2download.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2download.sh",
+          "a_blob_sha": "a0ff7c3e7498d88783a204de8447bb02ba23daa0",
+          "b_blob_sha": "a0ff7c3e7498d88783a204de8447bb02ba23daa0",
+          "a_size": 113,
+          "b_size": 113,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "stage2local.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2local.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2local.sh",
+          "a_blob_sha": "3450b9a8e5236aae4adf14a368d424bf45262798",
+          "b_blob_sha": "61ce3a733b9b8a14db1ba22f81fdb7475098ee10",
+          "a_size": 3109,
+          "b_size": 3113,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "stage2local_batch.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2local_batch.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2local_batch.sh",
+          "a_blob_sha": "002902cd30867fa937601722bb9ba1ecbe05e910",
+          "b_blob_sha": "002902cd30867fa937601722bb9ba1ecbe05e910",
+          "a_size": 2420,
+          "b_size": 2420,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "stage2nodeparallel.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2nodeparallel.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2nodeparallel.sh",
+          "a_blob_sha": "2fc3a597a139ca1917bc35e81b4636c882df842e",
+          "b_blob_sha": "64842d53ea7749c557f04ae5895c0677f3054063",
+          "a_size": 889,
+          "b_size": 639,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "stage2nodeparallel_batched.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2nodeparallel_batched.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2nodeparallel_batched.sh",
+          "a_blob_sha": "c8ebf0ba19d7d7223573d200f539fc8fffb00b9d",
+          "b_blob_sha": "542fa79f83d68fd387c68bae8a307f7adb212b9d",
+          "a_size": 764,
+          "b_size": 766,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "stage2stage.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2stage.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2stage.sh",
+          "a_blob_sha": "503089d353d098bb1172a86256ff950c835a7bae",
+          "b_blob_sha": "503089d353d098bb1172a86256ff950c835a7bae",
+          "a_size": 473,
+          "b_size": 473,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "stage2stagelumio.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2stagelumio.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2stagelumio.sh",
+          "a_blob_sha": "91b43d5029512e569d1d47bebeb1e53431f069cc",
+          "b_blob_sha": "390e31c0a2ec0d4e48a9d354b34b3cb96cca77e9",
+          "a_size": 1132,
+          "b_size": 901,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "stage2traf.sh",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/stage2traf.sh",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/stage2traf.sh",
+          "a_blob_sha": "897e5a9918f681c005370b1aac4b2f0d736e125b",
+          "b_blob_sha": "1437d3c07bbe0439953a5af1839b0cf7fdc3ad2f",
+          "a_size": 85,
+          "b_size": 87,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "tagfilter/__init__.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/tagfilter/__init__.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/tagfilter/__init__.py",
+          "a_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "b_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "a_size": 0,
+          "b_size": 0,
+          "status": "identical_trivial_file"
+        },
+        {
+          "relative_path": "tagfilter/mt-filter-list.annotated",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/tagfilter/mt-filter-list.annotated",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/tagfilter/mt-filter-list.annotated",
+          "a_blob_sha": "fe76a77a7b11b9bf9ab8c16d0ba16a11bc5e0d1e",
+          "b_blob_sha": "fe76a77a7b11b9bf9ab8c16d0ba16a11bc5e0d1e",
+          "a_size": 3142,
+          "b_size": 3142,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "tagfilter/tagextractor.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/tagfilter/tagextractor.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/tagfilter/tagextractor.py",
+          "a_blob_sha": "a3af9edc8357189c863a49dc2c7ef36155e2c3d9",
+          "b_blob_sha": "a3af9edc8357189c863a49dc2c7ef36155e2c3d9",
+          "a_size": 763,
+          "b_size": 763,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "tagfilter/tagfilter1.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/tagfilter/tagfilter1.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/tagfilter/tagfilter1.py",
+          "a_blob_sha": "32026211bcc22344c0c2905a1a7bcde2b117b377",
+          "b_blob_sha": "05c2c072d430cfe725ece763cbc1266db97bc7d4",
+          "a_size": 1626,
+          "b_size": 1628,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "trafilatura/__init__.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/trafilatura/__init__.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/trafilatura/__init__.py",
+          "a_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "b_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "a_size": 0,
+          "b_size": 0,
+          "status": "identical_trivial_file"
+        },
+        {
+          "relative_path": "trafilatura/measure_time.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/trafilatura/measure_time.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/trafilatura/measure_time.py",
+          "a_blob_sha": "4bded155cde808518369c5c48a872ae5596b69ba",
+          "b_blob_sha": "4bded155cde808518369c5c48a872ae5596b69ba",
+          "a_size": 2056,
+          "b_size": 2056,
+          "status": "identical_nontrivial_file"
+        },
+        {
+          "relative_path": "trafilatura/traf.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/trafilatura/traf.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/trafilatura/traf.py",
+          "a_blob_sha": "e9b034305471746ecbe7693a9aaadf8315deac14",
+          "b_blob_sha": "13cbe19e3214f313c04b0df3d8841d8265a6e9ad",
+          "a_size": 4607,
+          "b_size": 4611,
+          "status": "same_relative_path_different_blobs"
+        },
+        {
+          "relative_path": "trafilatura/traf_from_html.py",
+          "a_url": "https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage2/trafilatura/traf_from_html.py",
+          "b_url": "https://github.com/hplt-project/warc2text-runner/blob/0b88ccc8f439d4375d880ff2ca2b385b903c00ff/src/warc2text_runner/stage2/trafilatura/traf_from_html.py",
+          "a_blob_sha": "e1461e1da87d806d0a1da961d5e692b3a17c1cd3",
+          "b_blob_sha": "e1461e1da87d806d0a1da961d5e692b3a17c1cd3",
+          "a_size": 2584,
+          "b_size": 2584,
+          "status": "identical_nontrivial_file"
+        }
+      ],
+      "duplicate_work": "not_established"
+    }
+  ],
+  "issue_pairs": [
+    {
+      "id": "common-crawl-lumio",
+      "hypothesis": "Review the older HPLT LUMI-O Common Crawl workflow before duplicating download tooling.",
+      "a": {
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+        "title": "download recent CC crawls to LUMIO",
+        "state": "open",
+        "updated_at": "2026-10-27T18:18:46Z",
+        "body_sha256": "ecb0d2f70fdee40a8970c59dabbf96f8f6a351fd0dce31163ce64d4bc23363cd",
+        "evidence_field": "body",
+        "evidence_sha256": "ecb0d2f70fdee40a8970c59dabbf96f8f6a351fd0dce31163ce64d4bc23363cd",
+        "phrase": "crawl",
+        "excerpt": "Download the latest crawls to LUMIO. Due to insufficient free space on LUMIO for all crawl",
+        "comments_count_unreviewed": 7
+      },
+      "b": {
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+        "title": "downloading 2025 CC crawls to LUMI-O",
+        "state": "closed",
+        "updated_at": "2025-11-18T14:55:26Z",
+        "body_sha256": "46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f",
+        "evidence_field": "body",
+        "evidence_sha256": "46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f",
+        "phrase": "crawl",
+        "excerpt": "and others have suggested we include the latest and greatest CC crawls in our raw data collection. i notice that also Hugging Face co",
+        "comments_count_unreviewed": 6
+      },
+      "review_priority": "inspect_prior_work",
+      "duplicate_work": "not_established",
+      "outreach": "none"
+    },
+    {
+      "id": "robots-txt",
+      "hypothesis": "Compare previously coordinated robots.txt filtering with the new planned interpretation of allow/deny rules.",
+      "a": {
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
+        "title": "robots.txt",
+        "state": "open",
+        "updated_at": "2026-10-15T14:20:29Z",
+        "body_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
+        "evidence_field": "body",
+        "evidence_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
+        "phrase": "robots.txt",
+        "excerpt": "apt the intermediate step by jaume, interpreting the totality of robots.txt captures (now probably more conservatively then we used to) and",
+        "comments_count_unreviewed": 0
+      },
+      "b": {
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/17",
+        "title": "coordinate between uio and prompsit about robots.txt filtering",
+        "state": "closed",
+        "updated_at": "2025-11-18T14:54:37Z",
+        "body_sha256": "c536125202804a56c61942837bb338fcc6d5cb13beab404621d93179a9a5677d",
+        "evidence_field": "body",
+        "evidence_sha256": "c536125202804a56c61942837bb338fcc6d5cb13beab404621d93179a9a5677d",
+        "phrase": "robots.txt",
+        "excerpt": "nd AB (ArchiveBot) will need to be filtered against the compiled robots.txt index. @nvanva and @ZJaume will need to be involved.",
+        "comments_count_unreviewed": 0
+      },
+      "review_priority": "inspect_prior_work",
+      "duplicate_work": "not_established",
+      "outreach": "none"
+    },
+    {
+      "id": "openlid-upgrade",
+      "hypothesis": "Check whether HPLT OpenLID v3 integration can be reused for the OpenEuroLLM pipeline update.",
+      "a": {
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+        "title": "S2-S4 updates",
+        "state": "open",
+        "updated_at": "2026-10-16T08:51:17Z",
+        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "evidence_field": "body",
+        "evidence_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "phrase": "openlid",
+        "excerpt": "ements from Mattermost: \"the latest trafilatura release, current openlid (v3) and glotlid versions, xml and md into one file, standard zs",
+        "comments_count_unreviewed": 3
+      },
+      "b": {
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/19",
+        "title": "OpenLID 3 run",
+        "state": "closed",
+        "updated_at": "2025-11-14T20:26:31Z",
+        "body_sha256": "187c6d12083f5e2433794eeec7c4262587923c5c1b12eda01eb54ecbe8e01a90",
+        "evidence_field": "title",
+        "evidence_sha256": "cb2336f514662b00bd46f8fe74dd17da59fd2a3e6ed6eeeaa3e2adb9b2c28ad2",
+        "phrase": "OpenLID",
+        "excerpt": "OpenLID 3 run",
+        "comments_count_unreviewed": 15
+      },
+      "review_priority": "inspect_prior_work",
+      "duplicate_work": "not_established",
+      "outreach": "none"
+    },
+    {
+      "id": "glotlid-upgrade",
+      "hypothesis": "Check the earlier GlotLID v3 runner and interface before implementing an alternative.",
+      "a": {
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+        "title": "S2-S4 updates",
+        "state": "open",
+        "updated_at": "2026-10-16T08:51:17Z",
+        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "evidence_field": "body",
+        "evidence_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "phrase": "glotlid",
+        "excerpt": "rmost: \"the latest trafilatura release, current openlid (v3) and glotlid versions, xml and md into one file, standard zstd output, id ing",
+        "comments_count_unreviewed": 3
+      },
+      "b": {
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/21",
+        "title": "GlotLID v3 run",
+        "state": "closed",
+        "updated_at": "2025-11-12T17:19:46Z",
+        "body_sha256": "d0159e6614e5e6a6fb30d82d6c0866eb525466b81b8531500ce43b72ad8866d0",
+        "evidence_field": "body",
+        "evidence_sha256": "d0159e6614e5e6a6fb30d82d6c0866eb525466b81b8531500ce43b72ad8866d0",
+        "phrase": "GlotLID",
+        "excerpt": "stage3 or a subfolder. @jindrahelcl Since you experimented with GlotLID v3 before, would you agree to create such a script with the hype",
+        "comments_count_unreviewed": 11
+      },
+      "review_priority": "inspect_prior_work",
+      "duplicate_work": "not_established",
+      "outreach": "none"
+    },
+    {
+      "id": "xml-to-markdown",
+      "hypothesis": "Inspect existing HPLT XML-to-Markdown script and I/O contract before combining outputs.",
+      "a": {
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+        "title": "S2-S4 updates",
+        "state": "open",
+        "updated_at": "2026-10-16T08:51:17Z",
+        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "evidence_field": "body",
+        "evidence_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "phrase": "xml",
+        "excerpt": "trafilatura release, current openlid (v3) and glotlid versions, xml and md into one file, standard zstd output, id ingestion , and p",
+        "comments_count_unreviewed": 3
+      },
+      "b": {
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/20",
+        "title": "XML-to-MD run",
+        "state": "closed",
+        "updated_at": "2025-11-14T19:41:51Z",
+        "body_sha256": "bf60c5b914728325a5707e79ce7ac51e8c403c7fc84ad60bacabd67335a18d35",
+        "evidence_field": "body",
+        "evidence_sha256": "bf60c5b914728325a5707e79ce7ac51e8c403c7fc84ad60bacabd67335a18d35",
+        "phrase": "XML",
+        "excerpt": "proto_langid.py, i.e. reading from stdin json lines containing 'xml' field and printing to stdout parallel json lines containing the",
+        "comments_count_unreviewed": 7
+      },
+      "review_priority": "inspect_prior_work",
+      "duplicate_work": "not_established",
+      "outreach": "none"
+    }
+  ],
+  "limitations": "Curated pair selection. Git blob hashes establish only byte identity. Shared paths with different hashes indicate code differences, not necessarily historical provenance. Original issue descriptions and state re-read; comments, code semantics, licenses and resolution are NOT validated. No automatic outreach."
+}
