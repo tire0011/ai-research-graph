@@ -105,6 +105,17 @@ class HpltOverlapTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Required phrase absent"):
             audit.build(self.cases, FakeGitHub(self.cases, missing_phrase=True))
 
+    def test_title_only_evidence_is_attributed_to_title(self):
+        fake = FakeGitHub(self.cases)
+        key = ("hplt-project/HPLT-textpipes", 19)
+        fake.issues[key]["body"] = "Technical implementation notes with no named model."
+        fake.issues[key]["title"] = "OpenLID 3 run"
+        result = audit.build(self.cases, fake)
+        row = next(x for x in result["issue_pairs"] if x["id"] == "openlid-upgrade")
+        self.assertEqual(row["b"]["evidence_field"], "title")
+        self.assertEqual(row["b"]["evidence_sha256"], audit.digest("OpenLID 3 run"))
+        self.assertEqual(row["b"]["body_sha256"], audit.digest("Technical implementation notes with no named model."))
+
     def test_issue_changed_between_reads_refuses_to_report(self):
         with self.assertRaisesRegex(ValueError, "Issue changed"):
             audit.build(self.cases, FakeGitHub(self.cases, drift_issue=True))
