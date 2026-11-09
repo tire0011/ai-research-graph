@@ -152,13 +152,21 @@ def read_issue(repo, number, fetch=get_json):
 
 
 def issue_proof(issue, phrase):
-    match = re.search(re.escape(phrase), issue["body"], flags=re.I)
+    # A task can describe a concept in its title, body, or both. Keep the
+    # matched field explicit so the excerpt and hash refer to the same source.
+    matched_field = "body"
+    source = issue["body"]
+    match = re.search(re.escape(phrase), source, flags=re.I)
+    if not match:
+        matched_field, source = "title", issue["title"]
+        match = re.search(re.escape(phrase), source, flags=re.I)
     if not match:
         raise ValueError(f"Required phrase absent from {issue['repo']}#{issue['number']}: {phrase}")
-    snippet = " ".join(issue["body"][max(0, match.start() - 65):
-                                    min(len(issue["body"]), match.end() + 65)].split())
+    snippet = " ".join(source[max(0, match.start() - 65):
+                              min(len(source), match.end() + 65)].split())
     return {"url": issue["url"], "title": issue["title"], "state": issue["state"],
             "updated_at": issue["updated_at"], "body_sha256": issue["sha256"],
+            "evidence_field": matched_field, "evidence_sha256": digest(source),
             "phrase": phrase, "excerpt": snippet[:170],
             "comments_count_unreviewed": issue["comments_count_unreviewed"]}
 
@@ -230,8 +238,9 @@ def markdown(result):
         for key in ("a", "b"):
             p = i[key]
             lines.append(f"- [{key.upper()}: {p['title']}]({p['url']}) — "
-                         f"{p['state']}; phrase '{p['phrase']}': "
-                         f"'{p['excerpt']}' (body SHA256 {p['body_sha256']}).")
+                         f"{p['state']}; phrase '{p['phrase']}' in {p['evidence_field']}: "
+                         f"'{p['excerpt']}' (matched SHA256 {p['evidence_sha256']}; "
+                         f"body SHA256 {p['body_sha256']}).")
         lines.extend(["- Duplicate implementation: **not established**. "
                       "Issue comments and acceptance criteria require manual verification.", ""])
     lines.extend(["## Method boundaries", "", result["limitations"]])
