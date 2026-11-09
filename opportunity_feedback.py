@@ -10,9 +10,9 @@ import sys
 from pathlib import Path
 
 STATES = ("reviewed", "proposal_prepared", "published", "response_received", "resolved", "dismissed")
-URL = re.compile(r"^https://github\\.com/[\\w.-]+/[\\w.-]+/(?:issues|pull)/\\d+(?:#\\S+)?$")
-ID = re.compile(r"^github:OpenEuroLLM/Taskboard#\\d+:(?:reported_memory_issue|performance_mention|declared_dependency)$")
-LOGIN = re.compile(r"^[A-Za-z\\d](?:[A-Za-z\\d-]{0,37}[A-Za-z\\d])?$")
+URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/(?:issues|pull)/\d+(?:#\S+)?$")
+ID = re.compile(r"^github:OpenEuroLLM/Taskboard#\d+:(?:reported_memory_issue|performance_mention|declared_dependency)$")
+LOGIN = re.compile(r"^[A-Za-z\d](?:[A-Za-z\d-]{0,37}[A-Za-z\d])?$")
 ALLOWED = {
     "new": {"reviewed", "dismissed"},
     "reviewed": {"proposal_prepared", "dismissed"},
