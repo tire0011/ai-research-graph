@@ -4,7 +4,7 @@
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
     "sampling": "Purposeful case study selected before measuring graph impact coverage. Not random, exhaustive, or a ranking of all OpenEuroLLM work.",
     "question": "Which changes could plausibly remove a documented bottleneck or speed up work, and what evidence would be required to establish an actual improvement?",
-    "claim_policy": "An issue title, a GitHub link, an author-reported result and a controlled speedup are different levels of evidence. The report verifies literal source phrases but does not validate experimental measurements or claim causal impact. Issue comments may contain decisive evidence absent from the graph snapshot."
+    "claim_policy": "An issue title, a GitHub link, an author-reported result and a controlled speedup are different levels of evidence. The report verifies literal source phrases but does not validate experimental measurements or claim causal impact. Comments are source-hashed for the ten selected issues only."
   },
   "cases": [
     {
@@ -69,7 +69,7 @@
       "next_check": "Confirm reproducible OOM and a successfully completed equivalent DPO run; measure throughput only afterward.",
       "evidence": [
         {"source": "body", "needle": "Add support for Fully Sharded Data Parallel", "meaning": "FSDP support is the work item."},
-        {"source": "comment", "comment_id": 6121054773, "needle": "fails due to OOM issues on LUMI", "meaning": "An issue comment reports a concrete memory blocker, absent from the issue-body-only graph."}
+        {"source": "comment", "comment_id": 6121054773, "needle": "fails due to OOM issues on LUMI", "meaning": "An issue comment reports a concrete memory blocker, now stored as separately hashed evidence in the selected-issue graph."}
       ]
     },
     {
