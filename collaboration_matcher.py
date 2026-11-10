@@ -215,7 +215,7 @@ def rank_pairs(items, config, now):
             raw_score = sum(idf[t] for t in shared)
             baseline_rank = (raw_score, target["id"])
             baseline_rankings.setdefault(source["id"], []).append((baseline_rank, target["id"]))
-            salient = sorted((t for t in shared if idf[t] >= 2.0
+            salient = sorted((t for t in shared if idf[t] >= 1.5
                               and (t in src["title"] or t in tgt["title"])),
                              key=lambda t: (-idf[t], t))
             if not salient:
