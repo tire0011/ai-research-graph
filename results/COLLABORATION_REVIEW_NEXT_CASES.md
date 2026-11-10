@@ -30,6 +30,11 @@ scan be reproduced without changing production matching.
   the team already runs equivalent state-tracking tests. The Taskboard issue
   itself mentions Needle-In-A-Haystack but not StateBench; this is not proof
   the team has never discussed it elsewhere.
+- **Public coordination sampled:** authors, assignees and issue commenters in
+  the two linked threads show no shared GitHub login; their displayed issue
+  bodies and issue comments contain no direct reference to the other repo.
+  Other PR review discussions, private channels and offline collaboration
+  were **not** checked.
 
 **Review label:** `complementary` **hypothesis**; strongest concrete second
 candidate so far, not an established transfer.
@@ -51,6 +56,9 @@ candidate so far, not an established transfer.
 - [Arena-Hard-Auto](https://github.com/lmarena/arena-hard-auto) is an existing
   external benchmark used by the AllenAI implementation. Its existence does
   not mean that the two maintainer teams are already collaborating.
+- **Public coordination sampled:** there are no shared issue authors or
+  issue commenters, and no direct cross-repo reference in the inspected issue
+  bodies/comments. This does not establish that no private coordination exists.
 
 **Review label:** `shared_problem` until an explicit reusable artifact and
 receiver requirement are verified; **do not reach out** on this evidence alone.
