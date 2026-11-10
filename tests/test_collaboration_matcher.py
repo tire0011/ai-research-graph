@@ -106,9 +106,11 @@ class MatcherTests(unittest.TestCase):
 
     def test_body_to_title_signal_is_not_lost(self):
         result = cm.build(self.config, fetch=FakeGitHub(self.config), now=NOW)
-        pair = next(c for c in result["suggestions"]
-                    if c["source"]["number"] == 6
-                    and c["target"]["number"] == 19)
+        pair = next((c for c in result["suggestions"]
+                     if c["source"]["number"] == 6
+                     and c["target"]["number"] == 19), None)
+        self.assertIsNotNone(pair, [(x["source"]["number"], x["target"]["number"],
+                                     x["matched_terms"]) for x in result["suggestions"]])
         token = next(t for t in pair["matched_terms"] if t["term"] == "openlid")
         self.assertEqual(token["source"]["field"], "body")
         self.assertEqual(token["target"]["field"], "title")
