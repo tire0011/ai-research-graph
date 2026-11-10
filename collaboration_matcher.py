@@ -71,6 +71,9 @@ def tokens(value: str) -> set[str]:
     found = set(WORDS.findall(text))
     result = set()
     for word in found:
+        # The lexical regex accepts dots/hyphens inside technical identifiers,
+        # but sentence-ending punctuation must not become part of a token.
+        word = word.strip("._+-")
         if word.endswith("s") and len(word) > 5 and not word.endswith(("ss", "us")):
             word = word[:-1]
         if word not in STOP and len(word) >= 3 and not word.isnumeric():
