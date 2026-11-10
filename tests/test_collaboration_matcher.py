@@ -140,6 +140,44 @@ class MatcherTests(unittest.TestCase):
                             for c in pairs))
         self.assertIn("not necessarily merged", result["limitations"])
 
+    def test_generic_words_cannot_match_dependency_bump_to_model_work(self):
+        fake = FakeGitHub(self.config)
+        fake.items["OpenEuroLLM/Taskboard"].append(issue(
+            "OpenEuroLLM/Taskboard", 385,
+            "Train and export an OELLM checkpoint on LUMI",
+            "Stage two optional tasks; organize outputs and features."
+        ))
+        fake.items["hplt-project/warc2text-runner"].append(issue(
+            "hplt-project/warc2text-runner", 17,
+            "Bump setuptools from 65.5.0 to 70.0.0 in /two",
+            "Stage two optional tasks; organize outputs and features.",
+            state="closed", created="2025-01-01T00:00:00Z", pr=True
+        ))
+        result = cm.build(self.config, fetch=fake, now=NOW)
+        self.assertFalse(any(
+            row["source"]["number"] == 385 and row["target"]["number"] == 17
+            for row in result["suggestions"]
+        ))
+
+    def test_xml_and_markdown_are_two_verifiable_component_signals(self):
+        fake = FakeGitHub(self.config)
+        fake.items["OpenEuroLLM/web-data-processing"].append(issue(
+            "OpenEuroLLM/web-data-processing", 11, "Stage 3 changes",
+            "Combine xml and md into one artifact."
+        ))
+        fake.items["hplt-project/HPLT-textpipes"].append(issue(
+            "hplt-project/HPLT-textpipes", 20, "XML-to-MD run",
+            "Transform XML and markdown with a stage 3 runner.",
+            state="closed", created="2025-10-20T00:00:00Z"
+        ))
+        result = cm.build(self.config, fetch=fake, now=NOW)
+        pair = next(row for row in result["suggestions"]
+                    if row["source"]["number"] == 11
+                    and row["target"]["number"] == 20)
+        self.assertTrue({"xml", "markdown"}.issubset(
+            {t["term"] for t in pair["matched_terms"]}
+        ))
+
     def test_original_issue_changed_before_recheck_aborts(self):
         with self.assertRaisesRegex(ValueError, "changed during audit"):
             cm.build(self.config, fetch=FakeGitHub(self.config, drift=True), now=NOW)
