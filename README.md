@@ -186,3 +186,23 @@ The technical vocabulary gate misses some cross-project work-product relationshi
 
 The [first non-blinded case review](results/CONCEPT_BRIDGE_FIRST_REVIEW.md) documents an OpenEuroLLM model-card reporting task and an earlier, unanswered proposal in LAION's benchmark issue tracker. This hypothesis **was identified manually before the phrase probe was implemented**. Recovering it is a replay check, not an independent discovery or measured accuracy gain. The first two-repository probe also surfaced generic or misleading pairs; an independent reviewer and a frozen future holdout are needed before any wider rollout.
 
+### Requirement-level collaboration triage (manual experiment)
+
+The next question is whether tasks are **potentially duplicative**, have a
+**specific complementary handoff**, or could benefit from an **independent
+third-party artifact**. Shared terms and benchmark names are not enough.
+The [expanded source registry](collaboration_expanded_sources.json) adds
+OpenEuroLLM's eval work, HPLT-WP4 and AllenAI's `olmo-eval`, without changing
+the production source registry or scheduled matcher.
+
+The [second case review](results/COLLABORATION_REVIEW_NEXT_CASES.md) examines
+long-context training vs. already-implemented state-tracking evaluations, and
+different Arena-Hard scoring/contamination tasks. The optional
+[evidence review CLI](collaboration_review.py) first re-fetches the full
+original issue/PR bodies, can inspect public coordination, and checks an
+independent reviewer or local LLM's **exact source quotations** and proposed
+technical handoff. See the [review protocol](COLLABORATION_REVIEW_PROTOCOL.md)
+for local commands and JSON schema. Model judgments of maturity and practical
+compatibility are *not* certified by exact-quote validation. No automatic
+contact, no novelty claim and no measured ranking improvement.
+
