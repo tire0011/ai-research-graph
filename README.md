@@ -165,6 +165,10 @@ This analysis is **read-only** and does not claim a new implementation, verified
 
 The current research question is **whether separate EU research teams can reuse earlier work and find useful collaborators**, not whether precomputed graph traversal is faster than an equivalent snapshot text scan.
 
+
+
+**Pilot precision gate:** after the first live run, general shared words (e.g. `two`, `optional`, `stage`) produced unhelpful suggestions involving dependency-update PRs. The matcher now requires a specific shared technical component (such as `robots.txt` or `OpenLID`) or multiple technical terms and caps score contributions to four signals. This curated technical vocabulary was refined from observed live results: **it is not independent test evidence or a model of all possible research collaboration**, particularly policy/governance topics. The next evaluation must use unseen questions and independent human labels.
+
 The [collaboration matcher](collaboration_matcher.py) is a **rule-based, auditable baseline** (not an LLM): a bounded registry of [eight public GitHub repositories](collaboration_sources.json) is scanned for all visible issues and pull requests. Recently created *open* tasks are matched to earlier related work in **other GitHub organizations**. Matching issue numbers are **not** hand-picked. Original titles, body hashes, matched phrases, source links, states, assignees and a separate full-text baseline are kept for each suggestion. Only shortlisted sources are re-fetched and checked for source changes before writing the report.
 
 - [Collaboration matches (human-review queue)](results/COLLABORATION_MATCHES.md)
