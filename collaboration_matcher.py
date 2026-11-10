@@ -40,6 +40,26 @@ STOP = {
     "version", "versions", "source", "sources", "text", "evaluation",
     "benchmark", "benchmarks", "performance", "extraction",
 }
+# A deliberately bounded vocabulary of concrete components, formats and algorithms.
+# This is a precision-oriented pilot, NOT a model of every kind of research cooperation.
+TECH_TERMS = {
+    "robotstxt", "openlid", "glotlid", "lumio", "commoncrawl",
+    "warc", "crawl", "rclone", "warc2text", "trafilatura", "langid",
+    "tokenizer", "dpo", "fsdp", "lora", "tdm-reservation", "optout",
+    "xml", "markdown", "metadata", "jsonl", "zstd", "parquet",
+    "sft", "ocr", "pdf", "cuda", "rocm", "slurm", "minhash",
+    "deduplication", "vllm", "sglang", "checkpoint", "checkpointing",
+    "quantization", "transformers", "rust", "docker", "kubernetes",
+}
+# Some terms identify a specific technology on their own. For broader terms
+# such as WARC, metadata, XML or checkpoint, require a second shared component.
+SPECIFIC_TERMS = {
+    "robotstxt", "openlid", "glotlid", "lumio", "commoncrawl",
+    "rclone", "warc2text", "trafilatura", "tokenizer", "dpo",
+    "fsdp", "lora", "tdm-reservation", "minhash", "vllm", "sglang",
+    "ocr", "rocm",
+}
+
 REWRITES = (
     (re.compile(r"\brobots[\s._-]*txt\b"), "robotstxt"),
     (re.compile(r"\bcommon[\s_-]*crawl\b"), "commoncrawl"),
@@ -47,6 +67,7 @@ REWRITES = (
     (re.compile(r"\bopen[\s_-]*lid\b"), "openlid"),
     (re.compile(r"\bglot[\s_-]*lid\b"), "glotlid"),
     (re.compile(r"\bmark[\s_-]*down\b"), "markdown"),
+    (re.compile(r"\bmd\b"), "markdown"),
 )
 MAX_REREADS = 90
 
@@ -70,14 +91,16 @@ def tokens(value: str) -> set[str]:
         text = pattern.sub(replacement, text)
     found = set(WORDS.findall(text))
     result = set()
-    for word in found:
-        # The lexical regex accepts dots/hyphens inside technical identifiers,
-        # but sentence-ending punctuation must not become part of a token.
-        word = word.strip("._+-")
-        if word.endswith("s") and len(word) > 5 and not word.endswith(("ss", "us")):
-            word = word[:-1]
-        if word not in STOP and len(word) >= 3 and not word.isnumeric():
-            result.add(word)
+    for raw in found:
+        # Retain compound identifiers, but also expose their components:
+        # XML-to-MD must share "xml" and "markdown" with "xml and md".
+        # Strip sentence punctuation before either form is considered.
+        raw = raw.strip("._+-")
+        for word in (raw, *re.split(r"[._+-]", raw)):
+            if word.endswith("s") and len(word) > 5 and not word.endswith(("ss", "us")):
+                word = word[:-1]
+            if word not in STOP and len(word) >= 3 and not word.isnumeric():
+                result.add(word)
     return result
 
 
@@ -218,19 +241,28 @@ def rank_pairs(items, config, now):
             raw_score = sum(idf[t] for t in shared)
             baseline_rank = (raw_score, target["id"])
             baseline_rankings.setdefault(source["id"], []).append((baseline_rank, target["id"]))
-            salient = sorted((t for t in shared if idf[t] >= 1.5
-                              and (t in src["title"] or t in tgt["title"])),
-                             key=lambda t: (-idf[t], t))
-            if not salient:
+            # Do not let a huge body with dozens of generic shared words
+            # outrank a concrete component match (the first live run exposed
+            # spurious setuptools-PR suggestions with scores >80).
+            technical = sorted(t for t in shared if t in TECH_TERMS)
+            title_technical = {t for t in technical
+                               if t in src["title"] or t in tgt["title"]}
+            if not title_technical:
                 continue
-            evidence_score = sum(
-                idf[t] * (1.0 + (1.1 if t in src["title"] else 0.0)
-                          + (1.1 if t in tgt["title"] else 0.0))
-                for t in shared
+            if not (title_technical & SPECIFIC_TERMS or len(technical) >= 2):
+                continue
+            weighted = sorted(
+                ((idf[t] * (1.0 + (1.1 if t in src["title"] else 0.0)
+                            + (1.1 if t in tgt["title"] else 0.0)), t)
+                 for t in technical),
+                key=lambda item: (-item[0], item[1]),
             )
+            weighted = weighted[:4]  # explicit cap: verbosity cannot inflate score
+            evidence_score = sum(weight for weight, term in weighted)
             if evidence_score < config["min_score"]:
                 continue
-            pool.append((evidence_score, raw_score, target, salient[:4],
+            pool.append((evidence_score, raw_score, target,
+                         [term for weight, term in weighted],
                          processed[source["id"]]["body_truncated"],
                          tgt["body_truncated"]))
         pool.sort(key=lambda pair: (-pair[0], -pair[1], pair[2]["id"]))
@@ -312,14 +344,15 @@ def build(config, fetch=get_json, now=None):
         "inventory_counts": {key: len(rows) for key, rows in inventories.items()},
         "items_indexed": len(items), "source_candidates": stats["active_open_issues_or_prs"],
         "shortlisted_sources_rechecked": rechecked,
-        "matcher": "lexical technical-term evidence gate, IDF and title-context ranking (NOT LLM/AI reasoning)",
+        "matcher": "bounded technical-vocabulary gate with max four IDF/title-weighted terms (NOT an LLM)",
         "baseline": stats["baseline"], "baseline_top1_sources": stats["fulltext_baseline_top1_per_active_issue"],
         "suggestions": candidates, "suggestions_count": len(candidates),
         "suggestions_matching_same_input_baseline_top1": sum(x["same_as_fulltext_baseline_top1"] for x in candidates),
         "human_quality_labels_collected": 0,
         "evidence_levels": "Phrase overlap is a review candidate, not collaboration, identical code or verified prior solution.",
         "limitations": "Bounded repo registry and source age, English-oriented tokens, GitHub-only pilot; "
-                       "issue/PR body and title verified for shortlisted cards, not issue comments or merge status. "
+                       "The technical vocabulary is curated and tuned on this observed cohort, NOT a held-out validation. "
+                       "Issue/PR body and title verified for shortlisted cards, not issue comments or merge status. "
                        "Closed pull requests are not necessarily merged. No claim of better quality than full-text search, "
                        "no labels, no automated outreach. Source bodies longer than the configured limit are truncated for ranking.",
     }
