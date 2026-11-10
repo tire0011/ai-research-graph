@@ -180,3 +180,9 @@ The matcher runs inside the existing cross-project audit workflow on a weekly/ma
 
 **The measurement that matters next:** ask a reviewer who did not prepare the candidates to label both matcher suggestions *and* same-input full-text search results as actionable reuse, already-coordinated related work or irrelevant. Record precision and useful unique discoveries; compare against the baseline before investing in a graph service, MCP endpoint or LLM ranking. Current benchmark ties are real and do **not** justify a permanent service by themselves.
 
+### Exploratory concept-phrase bridge (separate experiment)
+
+The technical vocabulary gate misses some cross-project work-product relationships. The optional [concept-phrase probe](concept_bridge_probe.py) explores **rare, adjacent two-word phrases anchored in an active issue title**, including simple singular/plural normalization. It rechecks the selected original source bodies, carries a same-input lexical baseline, and leaves existing technical matches untouched. Run it manually with `python concept_bridge_probe.py`; it has no scheduled workflow and does not contact anyone.
+
+The [first non-blinded case review](results/CONCEPT_BRIDGE_FIRST_REVIEW.md) documents an OpenEuroLLM model-card reporting task and an earlier, unanswered proposal in LAION's benchmark issue tracker. This hypothesis **was identified manually before the phrase probe was implemented**. Recovering it is a replay check, not an independent discovery or measured accuracy gain. The first two-repository probe also surfaced generic or misleading pairs; an independent reviewer and a frozen future holdout are needed before any wider rollout.
+
