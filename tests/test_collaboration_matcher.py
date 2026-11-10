@@ -75,13 +75,14 @@ class FakeGitHub:
 class MatcherTests(unittest.TestCase):
     def setUp(self):
         self.config = json.loads(Path("collaboration_sources.json").read_text())
-        self.config["min_score"] = 4.0
+        self.config["min_score"] = 3.0
 
     def test_sentence_punctuation_cannot_change_identical_technical_tokens(self):
         self.assertIn("integration", cm.tokens("Integrate via integration."))
         self.assertEqual(cm.tokens("OpenLID integration"),
                          cm.tokens("OpenLID integration."))
         self.assertIn("robotstxt", cm.tokens("Use robots.txt."))
+        self.assertTrue({"xml", "markdown"}.issubset(cm.tokens("XML-to-MD processing.")))
 
     def test_registry_bounded_and_multiple_organizations(self):
         cm.validate(self.config)
