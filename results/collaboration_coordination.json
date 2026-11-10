@@ -1,0 +1,754 @@
+{
+  "schema": 1,
+  "status": "public_evidence_only",
+  "generated_at_utc": "2026-11-10T11:18:16.457210+00:00",
+  "source_matcher_run": "2026-11-10T11:17:20.567601+00:00",
+  "source_items_rechecked": 30,
+  "pairs_checked": 25,
+  "comments_read": 132,
+  "counts": {
+    "direct_task_link": 0,
+    "shared_public_participants": 10,
+    "same_repository_mentioned": 2,
+    "no_direct_public_link_observed": 13
+  },
+  "pairs": [
+    {
+      "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/monotextor-slurm#9",
+      "source": "https://github.com/OpenEuroLLM/warc2text/issues/1",
+      "target": "https://github.com/hplt-project/monotextor-slurm/issues/9",
+      "technical_terms": [
+        "warc",
+        "metadata",
+        "crawl"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "oepen",
+          "source_roles": [
+            "commenter"
+          ],
+          "target_roles": [
+            "author"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6186769627",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6187058780"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/monotextor-slurm/issues/9"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 19,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#2->github:hplt-project/HPLT-textpipes#9",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+      "technical_terms": [
+        "lumio",
+        "crawl"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173294917",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173413279",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173502882",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6449495010",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6450124659"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3049430965",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3078553512",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3083318203",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3145663933"
+          ]
+        },
+        {
+          "login": "oepen",
+          "source_roles": [
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173459751",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6186177575"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3082735581",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3145330495"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 7,
+      "comments_target": 6,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/HPLT-textpipes#18",
+      "source": "https://github.com/OpenEuroLLM/warc2text/issues/1",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
+      "technical_terms": [
+        "warc",
+        "metadata",
+        "crawl"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/warc2text/issues/1",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007112",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007213",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007342",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007430",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007554",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007663",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007764",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007845",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938007930",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938008024",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938008104",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938008221",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-4938008296",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6128148845",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6133545813",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6178957117",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6193796361"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3512775114",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3512975534",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3513910975",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3516929694",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3517092999",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3518205841",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3534723304",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3534773604"
+          ]
+        },
+        {
+          "login": "oepen",
+          "source_roles": [
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6186769627",
+            "https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6187058780"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3506614767",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3513254361",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3513428695",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3514177120",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3517039484",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3534348220",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/18#issuecomment-3534594892"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 19,
+      "comments_target": 22,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#2->github:hplt-project/HPLT-textpipes#15",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/pull/15",
+      "technical_terms": [
+        "lumio",
+        "crawl"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173294917",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173413279",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6173502882",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6449495010",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/2#issuecomment-6450124659"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/pull/15#issuecomment-3267773870",
+            "https://github.com/hplt-project/HPLT-textpipes/pull/15#issuecomment-3267851092",
+            "https://github.com/hplt-project/HPLT-textpipes/pull/15#issuecomment-3267902532"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 7,
+      "comments_target": 5,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#6->github:hplt-project/HPLT-textpipes#10",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/pull/10",
+      "technical_terms": [
+        "xml",
+        "markdown",
+        "trafilatura"
+      ],
+      "public_coordination_signal": "same_repository_mentioned",
+      "shared_people": [],
+      "references": [
+        {
+          "source_url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6#issuecomment-6211779656",
+          "target_url": "https://github.com/hplt-project/HPLT-textpipes",
+          "type": "repository_link",
+          "text_sha256": "b547fa746f7801fc10cfa8b68e0442286da69c3ec1cc7e1efa689fe6da45680d"
+        }
+      ],
+      "comments_source": 3,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#6->github:hplt-project/warc2text-runner#2",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+      "target": "https://github.com/hplt-project/warc2text-runner/issues/2",
+      "technical_terms": [
+        "trafilatura",
+        "xml"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 3,
+      "comments_target": 1,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#7->github:hplt-project/HPLT-textpipes#17",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/17",
+      "technical_terms": [
+        "robotstxt"
+      ],
+      "public_coordination_signal": "same_repository_mentioned",
+      "shared_people": [],
+      "references": [
+        {
+          "source_url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7#issuecomment-6762529555",
+          "target_url": "https://github.com/hplt-project/HPLT-textpipes",
+          "type": "repository_link",
+          "text_sha256": "6f761f07fc87a800888b8723106e48bfcd74501b1c094f5127bf775208f05891"
+        }
+      ],
+      "comments_source": 1,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#7->github:hplt-project/HPLT-textpipes#28",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/28",
+      "technical_terms": [
+        "robotstxt"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author"
+          ],
+          "target_roles": [
+            "author"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/7"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/28"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "source_url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7#issuecomment-6762529555",
+          "target_url": "https://github.com/hplt-project/HPLT-textpipes",
+          "type": "repository_link",
+          "text_sha256": "6f761f07fc87a800888b8723106e48bfcd74501b1c094f5127bf775208f05891"
+        }
+      ],
+      "comments_source": 1,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#339->github:hplt-project/monotextor-slurm#9",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
+      "target": "https://github.com/hplt-project/monotextor-slurm/issues/9",
+      "technical_terms": [
+        "crawl",
+        "metadata"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 0,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#146->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/146",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 8,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#188->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/188",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 5,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#377->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/377",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 2,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#188->github:LAION-AI/CLIP_benchmark#148",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/188",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
+      "technical_terms": [
+        "tokenizer",
+        "markdown"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 5,
+      "comments_target": 6,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#29",
+      "source": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
+      "target": "https://github.com/OpenEuroLLM/Taskboard/issues/29",
+      "technical_terms": [
+        "checkpoint",
+        "markdown"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 6,
+      "comments_target": 1,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#7",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/7",
+      "technical_terms": [
+        "lumio"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "akutuzov",
+          "source_roles": [
+            "commenter"
+          ],
+          "target_roles": [
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1#issuecomment-6403256840"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3033226897",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3136296250",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3138068520",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3179893359"
+          ]
+        },
+        {
+          "login": "oepen",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1#issuecomment-6399316137",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1#issuecomment-6403492664"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3044496085",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/7#issuecomment-3155763584"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 4,
+      "comments_target": 11,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#9",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
+      "target": "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+      "technical_terms": [
+        "lumio"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "oepen",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1#issuecomment-6399316137",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/1#issuecomment-6403492664"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3082735581",
+            "https://github.com/hplt-project/HPLT-textpipes/issues/9#issuecomment-3145330495"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 4,
+      "comments_target": 6,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#66",
+      "source": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
+      "target": "https://github.com/OpenEuroLLM/Taskboard/issues/66",
+      "technical_terms": [
+        "checkpoint",
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 6,
+      "comments_target": 4,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#3->github:hplt-project/warc2text-runner#22",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+      "target": "https://github.com/hplt-project/warc2text-runner/issues/22",
+      "technical_terms": [
+        "warc2text"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133103534",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133207263",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133246012"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/warc2text-runner/issues/22"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 3,
+      "comments_target": 1,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#3->github:hplt-project/warc2text-runner#3",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+      "target": "https://github.com/hplt-project/warc2text-runner/pull/3",
+      "technical_terms": [
+        "warc2text"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 3,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#8->github:hplt-project/warc2text-runner#22",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+      "target": "https://github.com/hplt-project/warc2text-runner/issues/22",
+      "technical_terms": [
+        "warc2text"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "akutuzov",
+          "source_roles": [
+            "assignee",
+            "commenter"
+          ],
+          "target_roles": [
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6196681212",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6764049782"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/warc2text-runner/issues/22",
+            "https://github.com/hplt-project/warc2text-runner/issues/22#issuecomment-3372346716"
+          ]
+        },
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6752656401",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753339224",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/warc2text-runner/issues/22"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 7,
+      "comments_target": 1,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#8->github:hplt-project/warc2text-runner#6",
+      "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+      "target": "https://github.com/hplt-project/warc2text-runner/issues/6",
+      "technical_terms": [
+        "warc2text"
+      ],
+      "public_coordination_signal": "shared_public_participants",
+      "shared_people": [
+        {
+          "login": "nvanva",
+          "source_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "target_roles": [
+            "assignee",
+            "author",
+            "commenter"
+          ],
+          "source_urls": [
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6752656401",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753339224",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162"
+          ],
+          "target_urls": [
+            "https://github.com/hplt-project/warc2text-runner/issues/6",
+            "https://github.com/hplt-project/warc2text-runner/issues/6#issuecomment-2085185801",
+            "https://github.com/hplt-project/warc2text-runner/issues/6#issuecomment-2094394929"
+          ]
+        }
+      ],
+      "references": [],
+      "comments_source": 7,
+      "comments_target": 4,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#119->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/119",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 3,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#146->github:LAION-AI/CLIP_benchmark#113",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/146",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/113",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 8,
+      "comments_target": 9,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#148->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/148",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 0,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#339->github:LAION-AI/CLIP_benchmark#19",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 0,
+      "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    }
+  ],
+  "limitations": "Inspects only public GitHub authors, assignees, issue comments and direct links. No PR code review comments, private channels, Mattermost, team memberships, offline discussions or actual task reuse verification. Shared people and links are evidence of context, not proof of successful collaboration. No public link is not evidence of a new collaboration. No external posts."
+}
