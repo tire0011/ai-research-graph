@@ -2,7 +2,7 @@
 
 **No outreach. No automatic assertion of new collaboration.**
 
-25 shortlisted pairs, 30 original tasks rechecked, 132 comments inspected.
+25 shortlisted pairs, 30 original tasks rechecked, 133 comments inspected.
 
 Direct task links: 0; shared participants: 10; broader repo links: 2; no directly visible link: 13.
 
@@ -168,7 +168,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @akutuzov, @nvanva
-- Issue comments inspected: 7 / 1
+- Issue comments inspected: 8 / 1
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 21. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/6)
@@ -176,7 +176,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @nvanva
-- Issue comments inspected: 7 / 4
+- Issue comments inspected: 8 / 4
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 22. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/119) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)

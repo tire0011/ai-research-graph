@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "status": "public_evidence_only",
-  "generated_at_utc": "2026-11-10T11:18:16.457210+00:00",
-  "source_matcher_run": "2026-11-10T11:17:20.567601+00:00",
+  "generated_at_utc": "2026-11-10T15:05:33.830279+00:00",
+  "source_matcher_run": "2026-11-10T15:04:37.988714+00:00",
   "source_items_rechecked": 30,
   "pairs_checked": 25,
-  "comments_read": 132,
+  "comments_read": 133,
   "counts": {
     "direct_task_link": 0,
     "shared_public_participants": 10,
@@ -636,7 +636,8 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6752656401",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753339224",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6768687793"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22"
@@ -644,7 +645,7 @@
         }
       ],
       "references": [],
-      "comments_source": 7,
+      "comments_source": 8,
       "comments_target": 1,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -674,7 +675,8 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6752656401",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753339224",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753390162",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6768687793"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/6",
@@ -684,7 +686,7 @@
         }
       ],
       "references": [],
-      "comments_source": 7,
+      "comments_source": 8,
       "comments_target": 4,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
