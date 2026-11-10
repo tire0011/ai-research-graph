@@ -104,6 +104,8 @@ def fetch_json(url: str, *, token: str | None = None, timeout: int = 20):
 
 
 def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
+    if max_pages < 1:
+        raise ValueError("max_pages must be positive")
     issues = []
     for page in range(1, max_pages + 1):
         query = urllib.parse.urlencode({"state": "all", "per_page": 100, "page": page})
@@ -124,6 +126,8 @@ def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
             })
         if len(batch) < 100:
             break
+    else:
+        raise ValueError(f"GitHub issues for {repo} hit the {max_pages}-page cap; refusing incomplete inventory")
     return issues
 
 
