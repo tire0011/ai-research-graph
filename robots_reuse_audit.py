@@ -110,11 +110,11 @@ def source_proof(source, record):
 
 def build(cases, fetch=get_json):
     validate(cases)
-    trees = {(s["repo"], s["branch"]): read_tree(s["repo"], s["branch"], fetch=fetch)
-             for s in cases["sources"] if s["kind"] == "file"}
-    # Fetch each distinct issue once and repeat inside read_issue to reject moving sources.
-    issues = {(s["repo"], s["number"]): read_issue(s["repo"], s["number"], fetch=fetch)
-              for s in cases["sources"] if s["kind"] == "issue"}
+    tree_keys = sorted({(s["repo"], s["branch"]) for s in cases["sources"] if s["kind"] == "file"})
+    issue_keys = sorted({(s["repo"], s["number"]) for s in cases["sources"] if s["kind"] == "issue"})
+    trees = {key: read_tree(*key, fetch=fetch) for key in tree_keys}
+    # Each distinct original issue is fetched twice to reject moving sources.
+    issues = {key: read_issue(*key, fetch=fetch) for key in issue_keys}
     evidence = []
     for s in cases["sources"]:
         if s["kind"] == "file":
