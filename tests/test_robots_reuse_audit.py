@@ -106,7 +106,7 @@ class RobotsReuseTests(unittest.TestCase):
             audit.build(self.cases, FakeGitHub(self.cases, alter_blob=True))
 
     def test_missing_original_phrase_fails_closed(self):
-        with self.assertRaisesRegex(ValueError, "Required literal source evidence absent"):
+        with self.assertRaisesRegex(ValueError, "Required phrase absent"):
             audit.build(self.cases, FakeGitHub(self.cases, drop_phrase=True))
 
     def test_changed_issue_body_fails_closed(self):
