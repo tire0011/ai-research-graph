@@ -77,6 +77,12 @@ class MatcherTests(unittest.TestCase):
         self.config = json.loads(Path("collaboration_sources.json").read_text())
         self.config["min_score"] = 4.0
 
+    def test_sentence_punctuation_cannot_change_identical_technical_tokens(self):
+        self.assertIn("integration", cm.tokens("Integrate via integration."))
+        self.assertEqual(cm.tokens("OpenLID integration"),
+                         cm.tokens("OpenLID integration."))
+        self.assertIn("robotstxt", cm.tokens("Use robots.txt."))
+
     def test_registry_bounded_and_multiple_organizations(self):
         cm.validate(self.config)
         self.assertEqual(len(self.config["repositories"]), 8)
