@@ -161,26 +161,26 @@ def candidate_documents(all_items, config, now):
     return sorted(eligible, key=lambda x: (x["repo"], x["number"]))
 
 
+TERM_FORMS = {
+    "robotstxt": r"robots[\s._-]*txt",
+    "commoncrawl": r"common[\s_-]*crawl",
+    "lumio": r"lumi[\s_-]*o",
+    "openlid": r"open[\s_-]*lid",
+    "glotlid": r"glot[\s_-]*lid",
+    "markdown": r"(?:mark[\s_-]*down|md)",
+}
+
+
 def term_context(issue, term):
-    """A small original-text excerpt; never a fabricated paraphrase."""
-    candidates = [("title", issue["title"]), ("body", issue["body"])]
-    for field, original in candidates:
-        normalized = original.casefold()
-        for pattern, replacement in REWRITES:
-            normalized = pattern.sub(replacement, normalized)
-        pos = normalized.find(term)
-        if pos >= 0:
-            # Preserve the actual original source if normalization changed length.
-            literal = re.search(re.escape(term), original, re.I)
-            if literal:
-                pos = literal.start()
-            elif field == "title":
-                return {"field": field, "excerpt": original[:160]}
-            else:
-                return {"field": field, "excerpt": original[:160]}
+    """A literal original-text excerpt with a verifiable source field."""
+    expression = TERM_FORMS.get(term, re.escape(term) + r"s?")
+    pattern = re.compile(r"(?<![a-z0-9])(?:" + expression + r")(?![a-z0-9])", re.I)
+    for field, original in (("title", issue["title"]), ("body", issue["body"])):
+        hit = pattern.search(original)
+        if hit:
             return {"field": field, "excerpt": " ".join(
-                original[max(0, pos - 55):pos + len(term) + 55].split())[:160]}
-    return {"field": "unknown", "excerpt": ""}
+                original[max(0, hit.start() - 55):hit.end() + 55].split())[:160]}
+    raise ValueError(f"No original phrase supports normalized token '{term}'")
 
 
 def rank_pairs(items, config, now):
@@ -349,8 +349,7 @@ def markdown(report):
             f"- Category: {c['classification']} — **not a verified solution or collaboration**.",
             f"- Ranking score: {c['score']}; baseline top-1 agrees: "
             f"{'yes' if c['same_as_fulltext_baseline_top1'] else 'no'} "
-            f"([{c['baseline_fulltext_top1_id']}](https://github.com/{c['baseline_fulltext_top1_id'].split(':', 1)[1].replace('#', '/issues/')}) "
-            f"may be an issue or pull request; see structured report for exact type).",
+            f"(baseline target ID: {c['baseline_fulltext_top1_id']}).",
             f"- Suggested assignees (not contacted): "
             f"{', '.join('@' + p for p in b['assignees']) or 'not specified'}",
             f"- Ranking text truncated: {'yes' if c['ranking_text_truncated'] else 'no'}",
