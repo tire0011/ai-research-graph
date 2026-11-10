@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "review_only",
-  "generated_at_utc": "2026-11-10T08:43:45.633759+00:00",
+  "generated_at_utc": "2026-11-10T08:52:26.204135+00:00",
   "repositories": [
     "OpenEuroLLM/web-data-processing",
     "OpenEuroLLM/warc2text",
@@ -24,1137 +24,11 @@
   },
   "items_indexed": 665,
   "source_candidates": 202,
-  "shortlisted_sources_rechecked": 25,
-  "matcher": "lexical technical-term evidence gate, IDF and title-context ranking (NOT LLM/AI reasoning)",
+  "shortlisted_sources_rechecked": 30,
+  "matcher": "bounded technical-vocabulary gate with max four IDF/title-weighted terms (NOT an LLM)",
   "baseline": "unweighted IDF overlap on the exact same title+body snapshot; not a restricted title-only or one-hop control",
-  "baseline_top1_sources": 191,
+  "baseline_top1_sources": 193,
   "suggestions": [
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#360->github:LAION-AI/CLIP_benchmark#149",
-      "source_id": "github:OpenEuroLLM/Taskboard#360",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#360",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 360,
-        "kind": "issue",
-        "state": "open",
-        "title": "Define Data Compliance Governance Strategy",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/360",
-        "created_at": "2026-07-30T09:14:19Z",
-        "updated_at": "2026-10-29T14:03:31Z",
-        "title_sha256": "0203a2da650a25757c4be984df97a608dec7de0b3dceb19cac26564676430e22",
-        "body_sha256": "c87e0ff1dfe49efbaec80c08479b16bba6b3d6d75ea6f569a1c21ccb66fbb2dd",
-        "assignees": [
-          "DanilaPetrelli",
-          "gramirez-prompsit",
-          "oepen"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#149",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#149",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 149,
-        "kind": "issue",
-        "state": "closed",
-        "title": "AI Act Compliance Gaps and Security Governance Issues Identified in Model Evaluation Framework",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/149",
-        "created_at": "2026-02-24T19:48:59Z",
-        "updated_at": "2026-03-19T12:15:16Z",
-        "title_sha256": "edba3ba5e8693b443452e346f35daa48c1c047e5de257995e446bd93fc0f98fd",
-        "body_sha256": "3ba86627be99974687400577dcefbd9dbeb2d236e79edb056033572054307e8c",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 134.031,
-      "fulltext_baseline_score": 89.446,
-      "matched_terms": [
-        {
-          "term": "gaps",
-          "source": {
-            "field": "body",
-            "excerpt": "olicies, assumptions, and justifications. * Identified gaps between the current implementation and the agreed gove"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "AI Act Compliance Gaps and Security Governance Issues Identified in Model Eva"
-          },
-          "idf": 6.403
-        },
-        {
-          "term": "governance",
-          "source": {
-            "field": "title",
-            "excerpt": "Define Data Compliance Governance Strategy"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "AI Act Compliance Gaps and Security Governance Issues Identified in Model Evaluation Framework"
-          },
-          "idf": 6.115
-        },
-        {
-          "term": "identified",
-          "source": {
-            "field": "body",
-            "excerpt": "f current policies, assumptions, and justifications. * Identified gaps between the current implementation and the agreed"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "AI Act Compliance Gaps and Security Governance Issues Identified in Model Evaluation Framework"
-          },
-          "idf": 6.115
-        },
-        {
-          "term": "compliance",
-          "source": {
-            "field": "title",
-            "excerpt": "Define Data Compliance Governance Strategy"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "AI Act Compliance Gaps and Security Governance Issues Identified in Mode"
-          },
-          "idf": 5.71
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#149",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#353->github:LAION-AI/CLIP_benchmark#153",
-      "source_id": "github:OpenEuroLLM/Taskboard#353",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#353",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 353,
-        "kind": "issue",
-        "state": "open",
-        "title": "Discover and Verify Concepts in Preference and Instruction-tuning Datasets",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/353",
-        "created_at": "2026-07-20T14:54:18Z",
-        "updated_at": "2026-07-20T15:03:55Z",
-        "title_sha256": "6cdaff34724b41bb55d0cd5bca7f0f3b0f62e0a79d3a0bb2569c6c1e584e95ac",
-        "body_sha256": "9d4524739d6a69b5dddd2d9e59e239c003a333050c64303682444318a32e089d",
-        "assignees": [
-          "kargibora"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#153",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#153",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 153,
-        "kind": "issue",
-        "state": "open",
-        "title": "Proposal: optional audit manifest for benchmark result provenance",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/153",
-        "created_at": "2026-05-10T22:19:24Z",
-        "updated_at": "2026-05-10T22:19:24Z",
-        "title_sha256": "406ab8c11dd23b5b74eb05b7b4260b8d02efc113754a6b1a97911a5c17902bb5",
-        "body_sha256": "7ff165505ad9f26126c61508ac39b1703bc1b581980e32fb6fa3595afd4ae676",
-        "assignees": []
-      },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 114.38,
-      "fulltext_baseline_score": 108.416,
-      "matched_terms": [
-        {
-          "term": "optional",
-          "source": {
-            "field": "body",
-            "excerpt": "teria. The minimum input is a prompt, a response, and optional metadata: $$ \\mathcal{D}_{\\mathrm{single}} = \\{(x_i,y"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Proposal: optional audit manifest for benchmark result provenance"
-          },
-          "idf": 5.422
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#153",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#385->github:hplt-project/warc2text-runner#17",
-      "source_id": "github:OpenEuroLLM/Taskboard#385",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#385",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 385,
-        "kind": "issue",
-        "state": "open",
-        "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-        "created_at": "2026-09-14T11:42:46Z",
-        "updated_at": "2026-11-09T12:58:08Z",
-        "title_sha256": "73b061fd663fd3248efa375314a2fe599d4a7943f1f329f7a753d1cab80fc395",
-        "body_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
-        "assignees": [
-          "ReinforcedKnowledge"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#17",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#17",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 17,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Bump setuptools from 65.5.0 to 70.0.0 in /two",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/17",
-        "created_at": "2024-11-05T00:30:35Z",
-        "updated_at": "2024-11-05T00:32:18Z",
-        "title_sha256": "34d83fc3ef9e086c894a575dbac9e1e5729d6aa56f55cee73078646dff1325bc",
-        "body_sha256": "e941f334b8ad33a1d682174a2c4b884398dc3884534e13ecab2296cd436d70a1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 81.772,
-      "fulltext_baseline_score": 77.262,
-      "matched_terms": [
-        {
-          "term": "two",
-          "source": {
-            "field": "body",
-            "excerpt": "ce packing | | Batch | 2,048 prepared rows per update; two accumulation microsteps in measured windows | | Memory"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Bump setuptools from 65.5.0 to 70.0.0 in /two"
-          },
-          "idf": 4.1
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#148",
-      "source_id": "github:LAION-AI/CLIP_benchmark#148",
-      "source": {
-        "id": "github:LAION-AI/CLIP_benchmark#148",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 148,
-        "kind": "pull_request",
-        "state": "open",
-        "title": "Add audio modality support for CLAP evaluation",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-        "created_at": "2026-02-19T04:01:55Z",
-        "updated_at": "2026-06-11T19:39:57Z",
-        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
-        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
-        "assignees": []
-      },
-      "target_id": "github:OpenEuroLLM/Taskboard#148",
-      "target": {
-        "id": "github:OpenEuroLLM/Taskboard#148",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 148,
-        "kind": "issue",
-        "state": "open",
-        "title": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/148",
-        "created_at": "2025-11-13T10:51:14Z",
-        "updated_at": "2025-11-13T10:51:42Z",
-        "title_sha256": "b3632bd91471f741acf649745cbcd0b228baeeb8f951e273018e4cda96eb597f",
-        "body_sha256": "d4a367cadaa3aa00bc144ea65a63bb4842aadaf912d5f7b5e2928f61ee0c4c8a",
-        "assignees": [
-          "flxst"
-        ]
-      },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 80.92,
-      "fulltext_baseline_score": 62.468,
-      "matched_terms": [
-        {
-          "term": "fallback",
-          "source": {
-            "field": "body",
-            "excerpt": "p` and `clap_v2` model types with graceful ImportError fallback | | `clip_benchmark/cli.py` | Adds `--modality` flag ("
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "cial Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc"
-          },
-          "idf": 6.115
-        },
-        {
-          "term": "key",
-          "source": {
-            "field": "body",
-            "excerpt": "lfoundations/open_clip) CLAP implementation (v2). ### Key features - **Audio modality in all evaluation tasks**"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Key Features decisions:Special Tokens (BOS), Whitespace, R"
-          },
-          "idf": 5.555
-        },
-        {
-          "term": "feature",
-          "source": {
-            "field": "body",
-            "excerpt": "ndations/open_clip) CLAP implementation (v2). ### Key features - **Audio modality in all evaluation tasks**: zero-sh"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibil"
-          },
-          "idf": 5.103
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#29",
-      "source_id": "github:OpenEuroLLM/web-data-processing#1",
-      "source": {
-        "id": "github:OpenEuroLLM/web-data-processing#1",
-        "repo": "OpenEuroLLM/web-data-processing",
-        "number": 1,
-        "kind": "issue",
-        "state": "open",
-        "title": "finalize HPLT 4.0 public release",
-        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
-        "created_at": "2026-08-06T13:28:37Z",
-        "updated_at": "2026-10-25T21:23:58Z",
-        "title_sha256": "cd765120778ed7168047ad9f02c84e8a908a9d1dc7a3aa57bcdee54056e29a10",
-        "body_sha256": "00efe157f2cb1cb2ba128461e0a8744dc9b8bb4bbc2cb89936deb847ebfb7e35",
-        "assignees": [
-          "oepen"
-        ]
-      },
-      "target_id": "github:hplt-project/HPLT-textpipes#29",
-      "target": {
-        "id": "github:hplt-project/HPLT-textpipes#29",
-        "repo": "hplt-project/HPLT-textpipes",
-        "number": 29,
-        "kind": "issue",
-        "state": "closed",
-        "title": "moving the pool to nird",
-        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/29",
-        "created_at": "2025-11-19T11:24:29Z",
-        "updated_at": "2025-12-17T13:29:25Z",
-        "title_sha256": "fc12809a36537a8e721c301e7b616a3e62c3f89e5f0702608a0444e4b9009044",
-        "body_sha256": "ec6423123f6696a9024f1f190e4d3211dd18887b512840a61541af937353e15d",
-        "assignees": [
-          "akutuzov"
-        ]
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 77.622,
-      "fulltext_baseline_score": 54.747,
-      "matched_terms": [
-        {
-          "term": "pool",
-          "source": {
-            "field": "body",
-            "excerpt": "rom the HPLT pipeline, (b) 450 or so terabytes of the `pool`, and 44 + 12 + 15 terabytes of final `clean`, `noisy`"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "moving the pool to nird"
-          },
-          "idf": 5.892
-        },
-        {
-          "term": "nird",
-          "source": {
-            "field": "body",
-            "excerpt": "(a) resides on LUMI-O (with an interim manifesto in `/nird/datalake/NS8112K/public/four/pool/lumio.jsonl`), while"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "moving the pool to nird"
-          },
-          "idf": 5.71
-        },
-        {
-          "term": "public",
-          "source": {
-            "field": "title",
-            "excerpt": "finalize HPLT 4.0 public release"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "e download directory should be `/nird/datalake/NS8112K/public/four/pool/`, with sub-directories for each of the 75 c"
-          },
-          "idf": 5.304
-        },
-        {
-          "term": "release",
-          "source": {
-            "field": "title",
-            "excerpt": "finalize HPLT 4.0 public release"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "we will want to move the `pool` release (sans the html files) to the nird download site as qui"
-          },
-          "idf": 3.89
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#148->github:hplt-project/warc2text-runner#17",
-      "source_id": "github:OpenEuroLLM/Taskboard#148",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#148",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 148,
-        "kind": "issue",
-        "state": "open",
-        "title": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/148",
-        "created_at": "2025-11-13T10:51:14Z",
-        "updated_at": "2025-11-13T10:51:42Z",
-        "title_sha256": "b3632bd91471f741acf649745cbcd0b228baeeb8f951e273018e4cda96eb597f",
-        "body_sha256": "d4a367cadaa3aa00bc144ea65a63bb4842aadaf912d5f7b5e2928f61ee0c4c8a",
-        "assignees": [
-          "flxst"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#17",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#17",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 17,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Bump setuptools from 65.5.0 to 70.0.0 in /two",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/17",
-        "created_at": "2024-11-05T00:30:35Z",
-        "updated_at": "2024-11-05T00:32:18Z",
-        "title_sha256": "34d83fc3ef9e086c894a575dbac9e1e5729d6aa56f55cee73078646dff1325bc",
-        "body_sha256": "e941f334b8ad33a1d682174a2c4b884398dc3884534e13ecab2296cd436d70a1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 77.039,
-      "fulltext_baseline_score": 60.188,
-      "matched_terms": [
-        {
-          "term": "fallback",
-          "source": {
-            "field": "title",
-            "excerpt": "cial Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "urces</code> when trying to read files in UTF-8 with a fallback -- by :user:<code>Avasam</code> (<a href=\"https://redi"
-          },
-          "idf": 6.115
-        },
-        {
-          "term": "feature",
-          "source": {
-            "field": "title",
-            "excerpt": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibil"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "ngelog</a>.</em></p> <blockquote> <h1>v70.0.0</h1> <h2>Features</h2> <ul> <li>Emit a warning when <code>[tools.setupto"
-          },
-          "idf": 5.103
-        },
-        {
-          "term": "etc",
-          "source": {
-            "field": "title",
-            "excerpt": "ns (BOS), Whitespace, Reversibility, and Byte Fallback etc"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": ", script wrappers, automatically updated config files, etc..) Although precautions were taken to minimize disrupt"
-          },
-          "idf": 4.1
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#353->github:LAION-AI/CLIP_benchmark#149",
-      "source_id": "github:OpenEuroLLM/Taskboard#353",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#353",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 353,
-        "kind": "issue",
-        "state": "open",
-        "title": "Discover and Verify Concepts in Preference and Instruction-tuning Datasets",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/353",
-        "created_at": "2026-07-20T14:54:18Z",
-        "updated_at": "2026-07-20T15:03:55Z",
-        "title_sha256": "6cdaff34724b41bb55d0cd5bca7f0f3b0f62e0a79d3a0bb2569c6c1e584e95ac",
-        "body_sha256": "9d4524739d6a69b5dddd2d9e59e239c003a333050c64303682444318a32e089d",
-        "assignees": [
-          "kargibora"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#149",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#149",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 149,
-        "kind": "issue",
-        "state": "closed",
-        "title": "AI Act Compliance Gaps and Security Governance Issues Identified in Model Evaluation Framework",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/149",
-        "created_at": "2026-02-24T19:48:59Z",
-        "updated_at": "2026-03-19T12:15:16Z",
-        "title_sha256": "edba3ba5e8693b443452e346f35daa48c1c047e5de257995e446bd93fc0f98fd",
-        "body_sha256": "3ba86627be99974687400577dcefbd9dbeb2d236e79edb056033572054307e8c",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 75.853,
-      "fulltext_baseline_score": 64.77,
-      "matched_terms": [
-        {
-          "term": "compliance",
-          "source": {
-            "field": "body",
-            "excerpt": "cepts and training examples in Dolci that teach unsafe compliance and other undesirable behaviors. The authors then show"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "AI Act Compliance Gaps and Security Governance Issues Identified in Mode"
-          },
-          "idf": 5.71
-        },
-        {
-          "term": "framework",
-          "source": {
-            "field": "body",
-            "excerpt": "I have been developing a framework for analyzing Post-Training datas for a while, inspire"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "urity Governance Issues Identified in Model Evaluation Framework"
-          },
-          "idf": 4.366
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#153",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:hplt-project/warc2text-runner#17",
-      "source_id": "github:LAION-AI/CLIP_benchmark#148",
-      "source": {
-        "id": "github:LAION-AI/CLIP_benchmark#148",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 148,
-        "kind": "pull_request",
-        "state": "open",
-        "title": "Add audio modality support for CLAP evaluation",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-        "created_at": "2026-02-19T04:01:55Z",
-        "updated_at": "2026-06-11T19:39:57Z",
-        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
-        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
-        "assignees": []
-      },
-      "target_id": "github:hplt-project/warc2text-runner#17",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#17",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 17,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Bump setuptools from 65.5.0 to 70.0.0 in /two",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/17",
-        "created_at": "2024-11-05T00:30:35Z",
-        "updated_at": "2024-11-05T00:32:18Z",
-        "title_sha256": "34d83fc3ef9e086c894a575dbac9e1e5729d6aa56f55cee73078646dff1325bc",
-        "body_sha256": "e941f334b8ad33a1d682174a2c4b884398dc3884534e13ecab2296cd436d70a1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 72.486,
-      "fulltext_baseline_score": 67.976,
-      "matched_terms": [
-        {
-          "term": "two",
-          "source": {
-            "field": "body",
-            "excerpt": "ated into the existing CLI and evaluation pipeline - **Two CLAP model loaders**: - `clap` — loads old LAION-CLA"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Bump setuptools from 65.5.0 to 70.0.0 in /two"
-          },
-          "idf": 4.1
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#437->github:hplt-project/HPLT-textpipes#18",
-      "source_id": "github:OpenEuroLLM/Taskboard#437",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#437",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 437,
-        "kind": "issue",
-        "state": "open",
-        "title": "Synthetic Generation for Multilingual Instruction Tuning",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/437",
-        "created_at": "2026-10-12T13:49:09Z",
-        "updated_at": "2026-10-12T13:49:46Z",
-        "title_sha256": "14f8f06d7b92ea2bf7d12ffe2ac20a719b28d2b2600d3adb2368831a348153c8",
-        "body_sha256": "60340bc07b4f7dab33d9146825280eb7e5b3f048aed32032c989c468b128ca26",
-        "assignees": [
-          "abhash-er"
-        ]
-      },
-      "target_id": "github:hplt-project/HPLT-textpipes#18",
-      "target": {
-        "id": "github:hplt-project/HPLT-textpipes#18",
-        "repo": "hplt-project/HPLT-textpipes",
-        "number": 18,
-        "kind": "issue",
-        "state": "closed",
-        "title": "(storage) management around 3.1 release",
-        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
-        "created_at": "2025-11-04T14:56:22Z",
-        "updated_at": "2025-12-17T13:12:45Z",
-        "title_sha256": "99b26c700b92deb2ac324a890381db5aebd671ab7872ff9d806b5c32c6e84575",
-        "body_sha256": "aab15a7df6112e6a2be4fd4de1abba903d75bbfc6ccda59c1e84dc47d3908b80",
-        "assignees": [
-          "nvanva",
-          "oepen"
-        ]
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 69.733,
-      "fulltext_baseline_score": 64.977,
-      "matched_terms": [
-        {
-          "term": "instruction",
-          "source": {
-            "field": "title",
-            "excerpt": "Synthetic Generation for Multilingual Instruction Tuning"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "ZJaume) + ~~maybe perform WDS annotation (code and instructions from prompsit)~~ + drop documents flagged for `rob"
-          },
-          "idf": 4.323
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#148",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#437->github:LAION-AI/CLIP_benchmark#153",
-      "source_id": "github:OpenEuroLLM/Taskboard#437",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#437",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 437,
-        "kind": "issue",
-        "state": "open",
-        "title": "Synthetic Generation for Multilingual Instruction Tuning",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/437",
-        "created_at": "2026-10-12T13:49:09Z",
-        "updated_at": "2026-10-12T13:49:46Z",
-        "title_sha256": "14f8f06d7b92ea2bf7d12ffe2ac20a719b28d2b2600d3adb2368831a348153c8",
-        "body_sha256": "60340bc07b4f7dab33d9146825280eb7e5b3f048aed32032c989c468b128ca26",
-        "assignees": [
-          "abhash-er"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#153",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#153",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 153,
-        "kind": "issue",
-        "state": "open",
-        "title": "Proposal: optional audit manifest for benchmark result provenance",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/153",
-        "created_at": "2026-05-10T22:19:24Z",
-        "updated_at": "2026-05-10T22:19:24Z",
-        "title_sha256": "406ab8c11dd23b5b74eb05b7b4260b8d02efc113754a6b1a97911a5c17902bb5",
-        "body_sha256": "7ff165505ad9f26126c61508ac39b1703bc1b581980e32fb6fa3595afd4ae676",
-        "assignees": []
-      },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 69.091,
-      "fulltext_baseline_score": 63.127,
-      "matched_terms": [
-        {
-          "term": "optional",
-          "source": {
-            "field": "body",
-            "excerpt": "------------------+ | dedupe (exact-hash, optional embedding) | +------------------------"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Proposal: optional audit manifest for benchmark result provenance"
-          },
-          "idf": 5.422
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#148",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#339->github:hplt-project/warc2text-runner#17",
-      "source_id": "github:OpenEuroLLM/Taskboard#339",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#339",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 339,
-        "kind": "issue",
-        "state": "open",
-        "title": "Long-Context Data Generation",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
-        "created_at": "2026-07-01T13:57:57Z",
-        "updated_at": "2026-07-01T13:58:00Z",
-        "title_sha256": "d1f03efb897a25aab3abc89ad24f279114d6dfc5391836df41e3a0e31f95698d",
-        "body_sha256": "99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba",
-        "assignees": [
-          "abhash-er"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#17",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#17",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 17,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Bump setuptools from 65.5.0 to 70.0.0 in /two",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/17",
-        "created_at": "2024-11-05T00:30:35Z",
-        "updated_at": "2024-11-05T00:32:18Z",
-        "title_sha256": "34d83fc3ef9e086c894a575dbac9e1e5729d6aa56f55cee73078646dff1325bc",
-        "body_sha256": "e941f334b8ad33a1d682174a2c4b884398dc3884534e13ecab2296cd436d70a1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 68.788,
-      "fulltext_baseline_score": 64.277,
-      "matched_terms": [
-        {
-          "term": "two",
-          "source": {
-            "field": "body",
-            "excerpt": "l has to be synthesized deliberately. ## Description Two candidate generation paths were scoped (writeup §5):"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Bump setuptools from 65.5.0 to 70.0.0 in /two"
-          },
-          "idf": 4.1
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/HPLT-textpipes#9",
-      "source_id": "github:OpenEuroLLM/warc2text#1",
-      "source": {
-        "id": "github:OpenEuroLLM/warc2text#1",
-        "repo": "OpenEuroLLM/warc2text",
-        "number": 1,
-        "kind": "issue",
-        "state": "open",
-        "title": "extract additional WARC metadata",
-        "url": "https://github.com/OpenEuroLLM/warc2text/issues/1",
-        "created_at": "2026-07-10T17:40:37Z",
-        "updated_at": "2026-10-15T13:55:20Z",
-        "title_sha256": "693e38565ee29aa8a2b8a99c1df94422df51025759d7ea162bf9c6d0a92387d3",
-        "body_sha256": "d0efd4d10dc3ec879537c86212cdd10e121a3d0e1d2280118ea7cb2cc68c5436",
-        "assignees": []
-      },
-      "target_id": "github:hplt-project/HPLT-textpipes#9",
-      "target": {
-        "id": "github:hplt-project/HPLT-textpipes#9",
-        "repo": "hplt-project/HPLT-textpipes",
-        "number": 9,
-        "kind": "issue",
-        "state": "closed",
-        "title": "downloading 2025 CC crawls to LUMI-O",
-        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/9",
-        "created_at": "2025-07-07T11:09:35Z",
-        "updated_at": "2025-11-18T14:55:26Z",
-        "title_sha256": "cc4b51c8ef8a6efccc2a5991bbad1ea5dcd9cd3302538b8f99a112c135a7acaf",
-        "body_sha256": "46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f",
-        "assignees": [
-          "nvanva",
-          "oepen"
-        ]
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 66.217,
-      "fulltext_baseline_score": 54.588,
-      "matched_terms": [
-        {
-          "term": "warc",
-          "source": {
-            "field": "title",
-            "excerpt": "extract additional WARC metadata"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "crawls to LUMI. @nvanva, seeing as you are central in WARC data management currently and have extensive experienc"
-          },
-          "idf": 5.71
-        },
-        {
-          "term": "crawl",
-          "source": {
-            "field": "body",
-            "excerpt": "new invention, so presumably will hardly be present in crawls before 2024. but for newer data, it would be interest"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "downloading 2025 CC crawls to LUMI-O"
-          },
-          "idf": 4.862
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#385->github:hplt-project/warc2text-runner#4",
-      "source_id": "github:OpenEuroLLM/Taskboard#385",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#385",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 385,
-        "kind": "issue",
-        "state": "open",
-        "title": "Train and export the OELLM 9B function-calling SFT checkpoint on LUMI",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/385",
-        "created_at": "2026-09-14T11:42:46Z",
-        "updated_at": "2026-11-09T12:58:08Z",
-        "title_sha256": "73b061fd663fd3248efa375314a2fe599d4a7943f1f329f7a753d1cab80fc395",
-        "body_sha256": "4a7887b689cbdc129280936e03a9a1684aaabf7c5b42deaf375b4f6039151ffc",
-        "assignees": [
-          "ReinforcedKnowledge"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#4",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#4",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 4,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Upload lang split scripts",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/4",
-        "created_at": "2024-03-25T14:42:29Z",
-        "updated_at": "2024-05-28T10:24:46Z",
-        "title_sha256": "c08e20709f78a480b27df2cd8a5be2c3c0387c475e6273b294180d5b1682d881",
-        "body_sha256": "670bb20dfafbe226a2dc3b694218549ec67618d43e24bda14f8ffcad4d9f087e",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 65.761,
-      "fulltext_baseline_score": 56.695,
-      "matched_terms": [
-        {
-          "term": "split",
-          "source": {
-            "field": "body",
-            "excerpt": "ldout accounting. The exact prepared train and holdout splits are available in the [openeurollm/function-calling-sft"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Upload lang split scripts"
-          },
-          "idf": 4.323
-        },
-        {
-          "term": "lumi",
-          "source": {
-            "field": "title",
-            "excerpt": "export the OELLM 9B function-calling SFT checkpoint on LUMI"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "*/docs.zst ``` reaching 90MB/s (on my machine, maybe LUMI could be more). It's not a super fast speed but, given"
-          },
-          "idf": 3.918
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#148->github:hplt-project/warc2text-runner#14",
-      "source_id": "github:OpenEuroLLM/Taskboard#148",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#148",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 148,
-        "kind": "issue",
-        "state": "open",
-        "title": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/148",
-        "created_at": "2025-11-13T10:51:14Z",
-        "updated_at": "2025-11-13T10:51:42Z",
-        "title_sha256": "b3632bd91471f741acf649745cbcd0b228baeeb8f951e273018e4cda96eb597f",
-        "body_sha256": "d4a367cadaa3aa00bc144ea65a63bb4842aadaf912d5f7b5e2928f61ee0c4c8a",
-        "assignees": [
-          "flxst"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#14",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#14",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 14,
-        "kind": "issue",
-        "state": "closed",
-        "title": "stage1 does not correctly handle WARC paths containing special characters",
-        "url": "https://github.com/hplt-project/warc2text-runner/issues/14",
-        "created_at": "2024-06-03T10:31:57Z",
-        "updated_at": "2025-03-19T23:36:25Z",
-        "title_sha256": "39b72f2e1045bda05933e9eaaccf56f939df28a7bac8a3a6da1513b60ad9d926",
-        "body_sha256": "bdd9ed64c799b971193460d7cc88d72f23efdfb19c472d8090fa313e9174cda1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 63.099,
-      "fulltext_baseline_score": 32.321,
-      "matched_terms": [
-        {
-          "term": "character",
-          "source": {
-            "field": "body",
-            "excerpt": "n ([UNK]): Establish the designated token for handling characters or subwords that are not present in the tokenizer's le"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "oes not correctly handle WARC paths containing special characters"
-          },
-          "idf": 5.892
-        },
-        {
-          "term": "handle",
-          "source": {
-            "field": "body",
-            "excerpt": "of Joiners: Ensure that the decoding process correctly handles the joining of subwords, particularly in models that r"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "stage1 does not correctly handle WARC paths containing special characters"
-          },
-          "idf": 5.555
-        },
-        {
-          "term": "special",
-          "source": {
-            "field": "title",
-            "excerpt": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fall"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "stage1 does not correctly handle WARC paths containing special characters"
-          },
-          "idf": 5.555
-        },
-        {
-          "term": "correctly",
-          "source": {
-            "field": "body",
-            "excerpt": "Handling of Joiners: Ensure that the decoding process correctly handles the joining of subwords, particularly in model"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "stage1 does not correctly handle WARC paths containing special characters"
-          },
-          "idf": 5.422
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#434->github:LAION-AI/CLIP_benchmark#66",
-      "source_id": "github:OpenEuroLLM/Taskboard#434",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#434",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 434,
-        "kind": "issue",
-        "state": "open",
-        "title": "DPO checkpoint merging",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/434",
-        "created_at": "2026-10-12T09:47:00Z",
-        "updated_at": "2026-11-04T13:06:58Z",
-        "title_sha256": "df195f0cd7b24232785425c5bc63ff78845351d4a71ad1bbe2751f60272b1abf",
-        "body_sha256": "9985a3cd2bd18961cf201cb455229570a8bb824d7c89f04e363efbd32bb371c5",
-        "assignees": [
-          "HannanJaved"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#66",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#66",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 66,
-        "kind": "issue",
-        "state": "open",
-        "title": "Organize CLI arguments into groups",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/66",
-        "created_at": "2023-01-13T18:41:12Z",
-        "updated_at": "2023-02-03T23:44:51Z",
-        "title_sha256": "071d8cd86c26e81312d73aaf323c6058096c945d79a4652918fb69fe4cde8896",
-        "body_sha256": "d118a2d13791b6d3728b2fd1cf3cc5ae675a7e327638a1d893ee9da12463aa57",
-        "assignees": []
-      },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 58.97,
-      "fulltext_baseline_score": 55.482,
-      "matched_terms": [
-        {
-          "term": "checkpoint",
-          "source": {
-            "field": "title",
-            "excerpt": "DPO checkpoint merging"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "--pretrained PRETRAINED Model checkpoint name to use from OpenCLIP --task {zeroshot_classifi"
-          },
-          "idf": 3.171
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#66",
-      "same_as_fulltext_baseline_top1": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#434->github:hplt-project/warc2text-runner#4",
-      "source_id": "github:OpenEuroLLM/Taskboard#434",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#434",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 434,
-        "kind": "issue",
-        "state": "open",
-        "title": "DPO checkpoint merging",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/434",
-        "created_at": "2026-10-12T09:47:00Z",
-        "updated_at": "2026-11-04T13:06:58Z",
-        "title_sha256": "df195f0cd7b24232785425c5bc63ff78845351d4a71ad1bbe2751f60272b1abf",
-        "body_sha256": "9985a3cd2bd18961cf201cb455229570a8bb824d7c89f04e363efbd32bb371c5",
-        "assignees": [
-          "HannanJaved"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#4",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#4",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 4,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Upload lang split scripts",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/4",
-        "created_at": "2024-03-25T14:42:29Z",
-        "updated_at": "2024-05-28T10:24:46Z",
-        "title_sha256": "c08e20709f78a480b27df2cd8a5be2c3c0387c475e6273b294180d5b1682d881",
-        "body_sha256": "670bb20dfafbe226a2dc3b694218549ec67618d43e24bda14f8ffcad4d9f087e",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 58.286,
-      "fulltext_baseline_score": 53.53,
-      "matched_terms": [
-        {
-          "term": "split",
-          "source": {
-            "field": "body",
-            "excerpt": "the one with the highest ELO. - **Honest selection.** Split the held-out benchmarks into two halves. Use one half"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Upload lang split scripts"
-          },
-          "idf": 4.323
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#66",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
     {
       "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/monotextor-slurm#9",
       "source_id": "github:OpenEuroLLM/warc2text#1",
@@ -1191,21 +65,9 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 58.228,
-      "fulltext_baseline_score": 34.504,
+      "score": 32.567,
+      "fulltext_baseline_score": 34.318,
       "matched_terms": [
-        {
-          "term": "identifier",
-          "source": {
-            "field": "body",
-            "excerpt": "ns to be seen whether e.g. FineWeb has preserved these identifiers, but in principle we should in the HPLT data). anothe"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "pick up crawl identifier in repackaging"
-          },
-          "idf": 5.892
-        },
         {
           "term": "warc",
           "source": {
@@ -1228,7 +90,7 @@
             "field": "body",
             "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
           },
-          "idf": 5.103
+          "idf": 4.936
         },
         {
           "term": "crawl",
@@ -1243,128 +105,7 @@
           "idf": 4.862
         }
       ],
-      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#407->github:hplt-project/warc2text-runner#17",
-      "source_id": "github:OpenEuroLLM/Taskboard#407",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#407",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 407,
-        "kind": "issue",
-        "state": "open",
-        "title": "[32B Dense] Mid-training downstream evals",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/407",
-        "created_at": "2026-09-16T13:26:52Z",
-        "updated_at": "2026-10-27T14:17:28Z",
-        "title_sha256": "02deeba0861c671d2e3b211c5890e525cdab7f255c0348d152abd4400b07d5b2",
-        "body_sha256": "f6dfb8a222749af2be2ed0a2ed722a3f1d9f8942bae220aec5ab05f86df724b4",
-        "assignees": [
-          "JeniaJitsev",
-          "joaquinvanschoren",
-          "kpoeppel",
-          "tvosch"
-        ]
-      },
-      "target_id": "github:hplt-project/warc2text-runner#17",
-      "target": {
-        "id": "github:hplt-project/warc2text-runner#17",
-        "repo": "hplt-project/warc2text-runner",
-        "number": 17,
-        "kind": "pull_request",
-        "state": "closed",
-        "title": "Bump setuptools from 65.5.0 to 70.0.0 in /two",
-        "url": "https://github.com/hplt-project/warc2text-runner/pull/17",
-        "created_at": "2024-11-05T00:30:35Z",
-        "updated_at": "2024-11-05T00:32:18Z",
-        "title_sha256": "34d83fc3ef9e086c894a575dbac9e1e5729d6aa56f55cee73078646dff1325bc",
-        "body_sha256": "e941f334b8ad33a1d682174a2c4b884398dc3884534e13ecab2296cd436d70a1",
-        "assignees": []
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 54.628,
-      "fulltext_baseline_score": 50.118,
-      "matched_terms": [
-        {
-          "term": "two",
-          "source": {
-            "field": "body",
-            "excerpt": "xport PATH=$UV_TOOL_BIN_DIR:$PATH # add these two export lines to ~/.bashrc uv tool install -p 3.12 \"gi"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Bump setuptools from 65.5.0 to 70.0.0 in /two"
-          },
-          "idf": 4.1
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#148",
-      "same_as_fulltext_baseline_top1": false,
-      "ranking_text_truncated": true,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:OpenEuroLLM/Taskboard#360->github:LAION-AI/CLIP_benchmark#153",
-      "source_id": "github:OpenEuroLLM/Taskboard#360",
-      "source": {
-        "id": "github:OpenEuroLLM/Taskboard#360",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 360,
-        "kind": "issue",
-        "state": "open",
-        "title": "Define Data Compliance Governance Strategy",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/360",
-        "created_at": "2026-07-30T09:14:19Z",
-        "updated_at": "2026-10-29T14:03:31Z",
-        "title_sha256": "0203a2da650a25757c4be984df97a608dec7de0b3dceb19cac26564676430e22",
-        "body_sha256": "c87e0ff1dfe49efbaec80c08479b16bba6b3d6d75ea6f569a1c21ccb66fbb2dd",
-        "assignees": [
-          "DanilaPetrelli",
-          "gramirez-prompsit",
-          "oepen"
-        ]
-      },
-      "target_id": "github:LAION-AI/CLIP_benchmark#153",
-      "target": {
-        "id": "github:LAION-AI/CLIP_benchmark#153",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 153,
-        "kind": "issue",
-        "state": "open",
-        "title": "Proposal: optional audit manifest for benchmark result provenance",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/issues/153",
-        "created_at": "2026-05-10T22:19:24Z",
-        "updated_at": "2026-05-10T22:19:24Z",
-        "title_sha256": "406ab8c11dd23b5b74eb05b7b4260b8d02efc113754a6b1a97911a5c17902bb5",
-        "body_sha256": "7ff165505ad9f26126c61508ac39b1703bc1b581980e32fb6fa3595afd4ae676",
-        "assignees": []
-      },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 54.548,
-      "fulltext_baseline_score": 47.505,
-      "matched_terms": [
-        {
-          "term": "provenance",
-          "source": {
-            "field": "body",
-            "excerpt": "cence types. * Dataset inclusion/exclusion criteria. * Provenance requirements. * Any other collection constraints. 2."
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Proposal: optional audit manifest for benchmark result provenance"
-          },
-          "idf": 6.403
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#149",
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
@@ -1409,8 +150,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 54.367,
-      "fulltext_baseline_score": 27.241,
+      "score": 31.89,
+      "fulltext_baseline_score": 27.184,
       "matched_terms": [
         {
           "term": "lumio",
@@ -1435,18 +176,6 @@
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
           "idf": 4.862
-        },
-        {
-          "term": "download",
-          "source": {
-            "field": "title",
-            "excerpt": "download recent CC crawls to LUMIO"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "lf a day (using a single \"small\" node and 128 parallel download threads). i am guessing a CC crawl is about ten times"
-          },
-          "idf": 4.729
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
@@ -1456,24 +185,21 @@
       "outreach": "none"
     },
     {
-      "id": "match:github:OpenEuroLLM/web-data-processing#6->github:hplt-project/HPLT-textpipes#18",
-      "source_id": "github:OpenEuroLLM/web-data-processing#6",
+      "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/HPLT-textpipes#18",
+      "source_id": "github:OpenEuroLLM/warc2text#1",
       "source": {
-        "id": "github:OpenEuroLLM/web-data-processing#6",
-        "repo": "OpenEuroLLM/web-data-processing",
-        "number": 6,
+        "id": "github:OpenEuroLLM/warc2text#1",
+        "repo": "OpenEuroLLM/warc2text",
+        "number": 1,
         "kind": "issue",
         "state": "open",
-        "title": "S2-S4 updates",
-        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
-        "created_at": "2026-10-14T18:18:58Z",
-        "updated_at": "2026-10-16T08:51:17Z",
-        "title_sha256": "074aab50f11df1837f25b1ca9a667d187e9cde4c6406e18a95bce90c412cb9f1",
-        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
-        "assignees": [
-          "nvanva",
-          "oepen"
-        ]
+        "title": "extract additional WARC metadata",
+        "url": "https://github.com/OpenEuroLLM/warc2text/issues/1",
+        "created_at": "2026-07-10T17:40:37Z",
+        "updated_at": "2026-10-15T13:55:20Z",
+        "title_sha256": "693e38565ee29aa8a2b8a99c1df94422df51025759d7ea162bf9c6d0a92387d3",
+        "body_sha256": "d0efd4d10dc3ec879537c86212cdd10e121a3d0e1d2280118ea7cb2cc68c5436",
+        "assignees": []
       },
       "target_id": "github:hplt-project/HPLT-textpipes#18",
       "target": {
@@ -1495,20 +221,44 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 53.592,
-      "fulltext_baseline_score": 49.313,
+      "score": 27.219,
+      "fulltext_baseline_score": 58.053,
       "matched_terms": [
         {
-          "term": "release",
+          "term": "warc",
           "source": {
-            "field": "body",
-            "excerpt": "requirements from Mattermost: \"the latest trafilatura release, current openlid (v3) and glotlid versions, xml and md"
+            "field": "title",
+            "excerpt": "extract additional WARC metadata"
           },
           "target": {
-            "field": "title",
-            "excerpt": "(storage) management around 3.1 release"
+            "field": "body",
+            "excerpt": "ctories for different stages (S1 + S2 combined), e.g. `warc`, `html`, `pool`, `clean`, `noise` + `robots.txt` pl"
           },
-          "idf": 3.89
+          "idf": 5.71
+        },
+        {
+          "term": "metadata",
+          "source": {
+            "field": "title",
+            "excerpt": "extract additional WARC metadata"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "Ls, if these were to occur~~ + output format: all `metadata.zst` in one file; XML, MD, and TEXT each in separate f"
+          },
+          "idf": 4.936
+        },
+        {
+          "term": "crawl",
+          "source": {
+            "field": "body",
+            "excerpt": "new invention, so presumably will hardly be present in crawls before 2024. but for newer data, it would be interest"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "to decide whether to preserve or not) + eight 2025 CC crawls on LUMI-O: 800 tib, each a separate bucket + S1 comple"
+          },
+          "idf": 4.862
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1518,22 +268,22 @@
       "outreach": "none"
     },
     {
-      "id": "match:github:OpenEuroLLM/Taskboard#339->github:hplt-project/HPLT-textpipes#15",
-      "source_id": "github:OpenEuroLLM/Taskboard#339",
+      "id": "match:github:OpenEuroLLM/web-data-processing#2->github:hplt-project/HPLT-textpipes#15",
+      "source_id": "github:OpenEuroLLM/web-data-processing#2",
       "source": {
-        "id": "github:OpenEuroLLM/Taskboard#339",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 339,
+        "id": "github:OpenEuroLLM/web-data-processing#2",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 2,
         "kind": "issue",
         "state": "open",
-        "title": "Long-Context Data Generation",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
-        "created_at": "2026-07-01T13:57:57Z",
-        "updated_at": "2026-07-01T13:58:00Z",
-        "title_sha256": "d1f03efb897a25aab3abc89ad24f279114d6dfc5391836df41e3a0e31f95698d",
-        "body_sha256": "99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba",
+        "title": "download recent CC crawls to LUMIO",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/2",
+        "created_at": "2026-10-08T19:44:15Z",
+        "updated_at": "2026-10-27T18:18:46Z",
+        "title_sha256": "2168348e7c30f21b6a31320b0038e2890af37ca8816f945d2ae67168abcd5c00",
+        "body_sha256": "ecb0d2f70fdee40a8970c59dabbf96f8f6a351fd0dce31163ce64d4bc23363cd",
         "assignees": [
-          "abhash-er"
+          "nvanva"
         ]
       },
       "target_id": "github:hplt-project/HPLT-textpipes#15",
@@ -1553,20 +303,115 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 50.405,
-      "fulltext_baseline_score": 45.333,
+      "score": 26.542,
+      "fulltext_baseline_score": 18.035,
       "matched_terms": [
         {
-          "term": "stage",
+          "term": "lumio",
           "source": {
-            "field": "body",
-            "excerpt": "e **task/answer layer** for our long-context extension stage, turning sourced long documents into training examples"
+            "field": "title",
+            "excerpt": "download recent CC crawls to LUMIO"
           },
           "target": {
             "field": "title",
             "excerpt": "Stage 1 preprocessing for LUMI with streaming from/to LUMI-O"
           },
-          "idf": 4.611
+          "idf": 5.103
+        },
+        {
+          "term": "crawl",
+          "source": {
+            "field": "title",
+            "excerpt": "download recent CC crawls to LUMIO"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "kept, including: * shuffling of WARCs within a single crawl before dividing them to batches, and shuffling batches"
+          },
+          "idf": 4.862
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#6->github:hplt-project/HPLT-textpipes#10",
+      "source_id": "github:OpenEuroLLM/web-data-processing#6",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#6",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 6,
+        "kind": "issue",
+        "state": "open",
+        "title": "S2-S4 updates",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+        "created_at": "2026-10-14T18:18:58Z",
+        "updated_at": "2026-10-16T08:51:17Z",
+        "title_sha256": "074aab50f11df1837f25b1ca9a667d187e9cde4c6406e18a95bce90c412cb9f1",
+        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
+        "assignees": [
+          "nvanva",
+          "oepen"
+        ]
+      },
+      "target_id": "github:hplt-project/HPLT-textpipes#10",
+      "target": {
+        "id": "github:hplt-project/HPLT-textpipes#10",
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 10,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "XML to markdown conversion",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/pull/10",
+        "created_at": "2025-07-21T14:41:20Z",
+        "updated_at": "2025-07-21T14:44:41Z",
+        "title_sha256": "069b6e5d488c6c7c59a07d6bfe25c936b1031048331c6392301568cc936de12b",
+        "body_sha256": "16701edb91eb2ee2a6c20abf8f63821252ac27b73f0c105173b8ecf8a603fee4",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 25.704,
+      "fulltext_baseline_score": 18.568,
+      "matched_terms": [
+        {
+          "term": "xml",
+          "source": {
+            "field": "body",
+            "excerpt": "ra release, current openlid (v3) and glotlid versions, xml and md into one file, standard zstd output, id ingesti"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "XML to markdown conversion"
+          },
+          "idf": 5.304
+        },
+        {
+          "term": "markdown",
+          "source": {
+            "field": "body",
+            "excerpt": "se, current openlid (v3) and glotlid versions, xml and md into one file, standard zstd output, id ingestion , an"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "XML to markdown conversion"
+          },
+          "idf": 4.41
+        },
+        {
+          "term": "trafilatura",
+          "source": {
+            "field": "body",
+            "excerpt": "The requirements from Mattermost: \"the latest trafilatura release, current openlid (v3) and glotlid versions, xm"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "res: - jsonlines stdin->stdout processing - converts trafilatura's output XML to markdown, adding `md` field to *some*"
+          },
+          "idf": 5.304
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1576,22 +421,462 @@
       "outreach": "none"
     },
     {
-      "id": "match:github:OpenEuroLLM/Taskboard#423->github:LAION-AI/CLIP_benchmark#148",
-      "source_id": "github:OpenEuroLLM/Taskboard#423",
+      "id": "match:github:OpenEuroLLM/web-data-processing#6->github:hplt-project/warc2text-runner#2",
+      "source_id": "github:OpenEuroLLM/web-data-processing#6",
       "source": {
-        "id": "github:OpenEuroLLM/Taskboard#423",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 423,
+        "id": "github:OpenEuroLLM/web-data-processing#6",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 6,
         "kind": "issue",
         "state": "open",
-        "title": "add text summarization tasks",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/423",
-        "created_at": "2026-09-25T14:02:30Z",
-        "updated_at": "2026-09-25T14:02:32Z",
-        "title_sha256": "aba1fbeeef3a9e4a358db11076f6286373d18ee61f53ade1df02106d1cb83be6",
-        "body_sha256": "26d6b59478169f3c96b8a7ad09aeff1c3e5df2b78d3042f7d8ac2629c10535a1",
+        "title": "S2-S4 updates",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/6",
+        "created_at": "2026-10-14T18:18:58Z",
+        "updated_at": "2026-10-16T08:51:17Z",
+        "title_sha256": "074aab50f11df1837f25b1ca9a667d187e9cde4c6406e18a95bce90c412cb9f1",
+        "body_sha256": "da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec",
         "assignees": [
-          "thsf-hy"
+          "nvanva",
+          "oepen"
+        ]
+      },
+      "target_id": "github:hplt-project/warc2text-runner#2",
+      "target": {
+        "id": "github:hplt-project/warc2text-runner#2",
+        "repo": "hplt-project/warc2text-runner",
+        "number": 2,
+        "kind": "issue",
+        "state": "closed",
+        "title": "Change trafilatura TEI/XML to text behaviour",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/2",
+        "created_at": "2024-03-15T14:03:26Z",
+        "updated_at": "2024-04-29T17:02:02Z",
+        "title_sha256": "0856849343dd3cc35a6bd9eb6df8cd8ac36c93c620fadff67167a5b000a68302",
+        "body_sha256": "0e3c996962897b825bf2fe4d2cdc76727eb73b8f377c92996b348b0784c2a7fd",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 22.277,
+      "fulltext_baseline_score": 14.472,
+      "matched_terms": [
+        {
+          "term": "trafilatura",
+          "source": {
+            "field": "body",
+            "excerpt": "The requirements from Mattermost: \"the latest trafilatura release, current openlid (v3) and glotlid versions, xm"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Change trafilatura TEI/XML to text behaviour"
+          },
+          "idf": 5.304
+        },
+        {
+          "term": "xml",
+          "source": {
+            "field": "body",
+            "excerpt": "ra release, current openlid (v3) and glotlid versions, xml and md into one file, standard zstd output, id ingesti"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Change trafilatura TEI/XML to text behaviour"
+          },
+          "idf": 5.304
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#7->github:hplt-project/HPLT-textpipes#17",
+      "source_id": "github:OpenEuroLLM/web-data-processing#7",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#7",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 7,
+        "kind": "issue",
+        "state": "open",
+        "title": "robots.txt",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
+        "created_at": "2026-10-14T18:20:52Z",
+        "updated_at": "2026-11-10T08:19:55Z",
+        "title_sha256": "870b1fc137c2af20441f74a26febf99739d79cee1246063e279ca05f288e943c",
+        "body_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/HPLT-textpipes#17",
+      "target": {
+        "id": "github:hplt-project/HPLT-textpipes#17",
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 17,
+        "kind": "issue",
+        "state": "closed",
+        "title": "coordinate between uio and prompsit about robots.txt filtering",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/17",
+        "created_at": "2025-10-30T15:11:54Z",
+        "updated_at": "2025-11-18T14:54:37Z",
+        "title_sha256": "c1a7856bffa73a859a0bbf5be343a1715fee855d47ad33c09ebbb987d2491339",
+        "body_sha256": "c536125202804a56c61942837bb338fcc6d5cb13beab404621d93179a9a5677d",
+        "assignees": [
+          "ZJaume",
+          "oepen"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 17.777,
+      "fulltext_baseline_score": 12.63,
+      "matched_terms": [
+        {
+          "term": "robotstxt",
+          "source": {
+            "field": "title",
+            "excerpt": "robots.txt"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "coordinate between uio and prompsit about robots.txt filtering"
+          },
+          "idf": 5.555
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#7->github:hplt-project/HPLT-textpipes#28",
+      "source_id": "github:OpenEuroLLM/web-data-processing#7",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#7",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 7,
+        "kind": "issue",
+        "state": "open",
+        "title": "robots.txt",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
+        "created_at": "2026-10-14T18:20:52Z",
+        "updated_at": "2026-11-10T08:19:55Z",
+        "title_sha256": "870b1fc137c2af20441f74a26febf99739d79cee1246063e279ca05f288e943c",
+        "body_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/HPLT-textpipes#28",
+      "target": {
+        "id": "github:hplt-project/HPLT-textpipes#28",
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 28,
+        "kind": "issue",
+        "state": "closed",
+        "title": "filtering by robots.txt for IA",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/28",
+        "created_at": "2025-11-19T00:46:52Z",
+        "updated_at": "2025-11-25T22:35:26Z",
+        "title_sha256": "1bd400a4381f8a543d08d1b0968e3d7ef3e67ee7a11347a4ee597612d721e319",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 17.777,
+      "fulltext_baseline_score": 5.555,
+      "matched_terms": [
+        {
+          "term": "robotstxt",
+          "source": {
+            "field": "title",
+            "excerpt": "robots.txt"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "filtering by robots.txt for IA"
+          },
+          "idf": 5.555
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#339->github:hplt-project/monotextor-slurm#9",
+      "source_id": "github:OpenEuroLLM/Taskboard#339",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#339",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 339,
+        "kind": "issue",
+        "state": "open",
+        "title": "Long-Context Data Generation",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
+        "created_at": "2026-07-01T13:57:57Z",
+        "updated_at": "2026-07-01T13:58:00Z",
+        "title_sha256": "d1f03efb897a25aab3abc89ad24f279114d6dfc5391836df41e3a0e31f95698d",
+        "body_sha256": "99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba",
+        "assignees": [
+          "abhash-er"
+        ]
+      },
+      "target_id": "github:hplt-project/monotextor-slurm#9",
+      "target": {
+        "id": "github:hplt-project/monotextor-slurm#9",
+        "repo": "hplt-project/monotextor-slurm",
+        "number": 9,
+        "kind": "issue",
+        "state": "closed",
+        "title": "pick up crawl identifier in repackaging",
+        "url": "https://github.com/hplt-project/monotextor-slurm/issues/9",
+        "created_at": "2025-05-09T10:28:50Z",
+        "updated_at": "2025-06-24T12:31:12Z",
+        "title_sha256": "f099620cc7c9f979e12282a908376887796df6d8e090a970e7a1e7d40a8d8e9c",
+        "body_sha256": "fd551bc90d760be0ae4250bb2a565bf33b0c8da27590f3234724cab5df392561",
+        "assignees": [
+          "ZJaume"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 15.147,
+      "fulltext_baseline_score": 37.697,
+      "matched_terms": [
+        {
+          "term": "crawl",
+          "source": {
+            "field": "body",
+            "excerpt": "**HPLT v2 · CulturaX · FineWeb-2**: document-level web crawl with strong per-language coverage incl. `uk`, `el`. So"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "pick up crawl identifier in repackaging"
+          },
+          "idf": 4.862
+        },
+        {
+          "term": "metadata",
+          "source": {
+            "field": "body",
+            "excerpt": "[ ] Output in the agreed training format with retained metadata (language, task type, source doc, needle depth where a"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
+          },
+          "idf": 4.936
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#146->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#146",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#146",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 146,
+        "kind": "issue",
+        "state": "open",
+        "title": "Tokenizer evaluation",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/146",
+        "created_at": "2025-11-13T10:45:55Z",
+        "updated_at": "2025-12-18T11:25:21Z",
+        "title_sha256": "abb49707bd6129ebcbd4807447ded3602c16ac5da98faa5eb44889f84bfcfab4",
+        "body_sha256": "f60963ca7f0673544d33bf3d599f942befa5365705eb63a2a7e94c18924a18d9",
+        "assignees": [
+          "stefan-it",
+          "timpal0l"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 12.914,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "title",
+            "excerpt": "Tokenizer evaluation"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#188->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#188",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#188",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 188,
+        "kind": "issue",
+        "state": "open",
+        "title": "Tokenize NemotronCC dataset with GPT OSS tokenizer",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/188",
+        "created_at": "2026-03-12T14:31:21Z",
+        "updated_at": "2026-04-13T20:44:32Z",
+        "title_sha256": "3a1b11c9f2c5400bf24a8fdc23ea57e43083c3286799cb7920c7fb0db9f0ce23",
+        "body_sha256": "4452388e694a4f46c25509c0de735248daae0670c7ab0d58eaa0a0eeb01a40cd",
+        "assignees": [
+          "dianaonutu",
+          "swag2198"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 12.914,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "title",
+            "excerpt": "Tokenize NemotronCC dataset with GPT OSS tokenizer"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#377->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#377",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#377",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 377,
+        "kind": "issue",
+        "state": "open",
+        "title": "Custom tokenizer for final flagship model training",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/377",
+        "created_at": "2026-08-28T11:21:10Z",
+        "updated_at": "2026-09-28T10:49:37Z",
+        "title_sha256": "bb7b7c7a6fd6e130b0ca2ddb7e3a7511848f1dd3ff0512b5becd8ef6bc484a28",
+        "body_sha256": "8ab196d2603c0a39a6a27890a83f894bcc8db8224f0955b51a6e6a3a5ff70584",
+        "assignees": [
+          "timpal0l",
+          "vitiugin"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 12.914,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "title",
+            "excerpt": "Custom tokenizer for final flagship model training"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#188->github:LAION-AI/CLIP_benchmark#148",
+      "source_id": "github:OpenEuroLLM/Taskboard#188",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#188",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 188,
+        "kind": "issue",
+        "state": "open",
+        "title": "Tokenize NemotronCC dataset with GPT OSS tokenizer",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/188",
+        "created_at": "2026-03-12T14:31:21Z",
+        "updated_at": "2026-04-13T20:44:32Z",
+        "title_sha256": "3a1b11c9f2c5400bf24a8fdc23ea57e43083c3286799cb7920c7fb0db9f0ce23",
+        "body_sha256": "4452388e694a4f46c25509c0de735248daae0670c7ab0d58eaa0a0eeb01a40cd",
+        "assignees": [
+          "dianaonutu",
+          "swag2198"
         ]
       },
       "target_id": "github:LAION-AI/CLIP_benchmark#148",
@@ -1611,30 +896,112 @@
       },
       "classification": "possible_parallel_work",
       "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 49.798,
-      "fulltext_baseline_score": 45.604,
+      "score": 12.885,
+      "fulltext_baseline_score": 33.578,
       "matched_terms": [
         {
-          "term": "tasks",
+          "term": "tokenizer",
           "source": {
             "field": "title",
-            "excerpt": "add text summarization tasks"
+            "excerpt": "Tokenize NemotronCC dataset with GPT OSS tokenizer"
           },
           "target": {
             "field": "body",
-            "excerpt": "### Key features - **Audio modality in all evaluation tasks**: zero-shot classification, zero-shot retrieval, and"
+            "excerpt": "ependencies - `open_clip` (for model architecture and tokenizer) - `librosa` (audio decoding) - `torchaudio` (mel spec"
           },
-          "idf": 3.812
+          "idf": 4.036
+        },
+        {
+          "term": "markdown",
+          "source": {
+            "field": "body",
+            "excerpt": "m/OpenEuroLLM/training-data-catalogue/blob/main/README.md). - Which tokenizer? [`spyysalo/harmony-latin-plus`](h"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "ty functions for audio data handling | | `AUDIO_README.md` | Documentation for audio benchmarks with usage examp"
+          },
+          "idf": 4.41
         }
       ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#148",
-      "same_as_fulltext_baseline_top1": true,
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
+      "same_as_fulltext_baseline_top1": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
     },
     {
-      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#18",
+      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#29",
+      "source_id": "github:LAION-AI/CLIP_benchmark#148",
+      "source": {
+        "id": "github:LAION-AI/CLIP_benchmark#148",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 148,
+        "kind": "pull_request",
+        "state": "open",
+        "title": "Add audio modality support for CLAP evaluation",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
+        "created_at": "2026-02-19T04:01:55Z",
+        "updated_at": "2026-06-11T19:39:57Z",
+        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
+        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
+        "assignees": []
+      },
+      "target_id": "github:OpenEuroLLM/Taskboard#29",
+      "target": {
+        "id": "github:OpenEuroLLM/Taskboard#29",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 29,
+        "kind": "issue",
+        "state": "closed",
+        "title": "Polish checkpoint conversion scripts and add unittests",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/29",
+        "created_at": "2025-04-16T13:30:26Z",
+        "updated_at": "2026-06-23T08:38:39Z",
+        "title_sha256": "691b7d99fe2dfec1e24bfca0d2421584e0a5ae7d5ba2f7ac6d56d7c408e4d592",
+        "body_sha256": "ac451ecf109bf2e18c8bdc9fd96a703ff492d069d3ae286c9356813bf53fa7e0",
+        "assignees": [
+          "timurcarstensen"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 11.041,
+      "fulltext_baseline_score": 46.112,
+      "matched_terms": [
+        {
+          "term": "checkpoint",
+          "source": {
+            "field": "body",
+            "excerpt": "LAP](https://github.com/LAION-AI/CLAP) (v1) pretrained checkpoints and models trained with the most recent [open_clip](ht"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Polish checkpoint conversion scripts and add unittests"
+          },
+          "idf": 3.157
+        },
+        {
+          "term": "markdown",
+          "source": {
+            "field": "body",
+            "excerpt": "ty functions for audio data handling | | `AUDIO_README.md` | Documentation for audio benchmarks with usage examp"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "github.com/OpenEuroLLM/hpo-experiment/blob/main/README.md)"
+          },
+          "idf": 4.41
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#7",
       "source_id": "github:OpenEuroLLM/web-data-processing#1",
       "source": {
         "id": "github:OpenEuroLLM/web-data-processing#1",
@@ -1652,52 +1019,39 @@
           "oepen"
         ]
       },
-      "target_id": "github:hplt-project/HPLT-textpipes#18",
+      "target_id": "github:hplt-project/HPLT-textpipes#7",
       "target": {
-        "id": "github:hplt-project/HPLT-textpipes#18",
+        "id": "github:hplt-project/HPLT-textpipes#7",
         "repo": "hplt-project/HPLT-textpipes",
-        "number": 18,
+        "number": 7,
         "kind": "issue",
         "state": "closed",
-        "title": "(storage) management around 3.1 release",
-        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
-        "created_at": "2025-11-04T14:56:22Z",
-        "updated_at": "2025-12-17T13:12:45Z",
-        "title_sha256": "99b26c700b92deb2ac324a890381db5aebd671ab7872ff9d806b5c32c6e84575",
-        "body_sha256": "aab15a7df6112e6a2be4fd4de1abba903d75bbfc6ccda59c1e84dc47d3908b80",
+        "title": "Adapting S1 to LUMI-O",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/7",
+        "created_at": "2025-07-03T18:35:41Z",
+        "updated_at": "2025-11-18T14:52:08Z",
+        "title_sha256": "92cfeb618b56d951c344b93ba6a7a2b8b69a3d941c7e79d3bd686b86609319a6",
+        "body_sha256": "3574a597308492298cbd573784064b7824ec0cca1045eb5432af97ce8383252c",
         "assignees": [
-          "nvanva",
-          "oepen"
+          "nvanva"
         ]
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 48.7,
-      "fulltext_baseline_score": 35.289,
+      "score": 10.717,
+      "fulltext_baseline_score": 14.553,
       "matched_terms": [
         {
-          "term": "hplt",
+          "term": "lumio",
           "source": {
-            "field": "title",
-            "excerpt": "finalize HPLT 4.0 public release"
-          },
-          "target": {
             "field": "body",
-            "excerpt": "background: https://ms.neural.mt/hplt/pl/mazfqbsf5fr5bea8gukc83m34o + ArchiveBot 2.3 pib on"
-          },
-          "idf": 4.41
-        },
-        {
-          "term": "release",
-          "source": {
-            "field": "title",
-            "excerpt": "finalize HPLT 4.0 public release"
+            "excerpt": "`poor` data after filtering. of these, (a) resides on LUMI-O (with an interim manifesto in `/nird/datalake/NS8112K/"
           },
           "target": {
             "field": "title",
-            "excerpt": "(storage) management around 3.1 release"
+            "excerpt": "Adapting S1 to LUMI-O"
           },
-          "idf": 3.89
+          "idf": 5.103
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
@@ -1707,40 +1061,37 @@
       "outreach": "none"
     },
     {
-      "id": "match:github:OpenEuroLLM/Taskboard#407->github:hplt-project/HPLT-textpipes#18",
-      "source_id": "github:OpenEuroLLM/Taskboard#407",
+      "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#9",
+      "source_id": "github:OpenEuroLLM/web-data-processing#1",
       "source": {
-        "id": "github:OpenEuroLLM/Taskboard#407",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 407,
+        "id": "github:OpenEuroLLM/web-data-processing#1",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 1,
         "kind": "issue",
         "state": "open",
-        "title": "[32B Dense] Mid-training downstream evals",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/407",
-        "created_at": "2026-09-16T13:26:52Z",
-        "updated_at": "2026-10-27T14:17:28Z",
-        "title_sha256": "02deeba0861c671d2e3b211c5890e525cdab7f255c0348d152abd4400b07d5b2",
-        "body_sha256": "f6dfb8a222749af2be2ed0a2ed722a3f1d9f8942bae220aec5ab05f86df724b4",
+        "title": "finalize HPLT 4.0 public release",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
+        "created_at": "2026-08-06T13:28:37Z",
+        "updated_at": "2026-10-25T21:23:58Z",
+        "title_sha256": "cd765120778ed7168047ad9f02c84e8a908a9d1dc7a3aa57bcdee54056e29a10",
+        "body_sha256": "00efe157f2cb1cb2ba128461e0a8744dc9b8bb4bbc2cb89936deb847ebfb7e35",
         "assignees": [
-          "JeniaJitsev",
-          "joaquinvanschoren",
-          "kpoeppel",
-          "tvosch"
+          "oepen"
         ]
       },
-      "target_id": "github:hplt-project/HPLT-textpipes#18",
+      "target_id": "github:hplt-project/HPLT-textpipes#9",
       "target": {
-        "id": "github:hplt-project/HPLT-textpipes#18",
+        "id": "github:hplt-project/HPLT-textpipes#9",
         "repo": "hplt-project/HPLT-textpipes",
-        "number": 18,
+        "number": 9,
         "kind": "issue",
         "state": "closed",
-        "title": "(storage) management around 3.1 release",
-        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
-        "created_at": "2025-11-04T14:56:22Z",
-        "updated_at": "2025-12-17T13:12:45Z",
-        "title_sha256": "99b26c700b92deb2ac324a890381db5aebd671ab7872ff9d806b5c32c6e84575",
-        "body_sha256": "aab15a7df6112e6a2be4fd4de1abba903d75bbfc6ccda59c1e84dc47d3908b80",
+        "title": "downloading 2025 CC crawls to LUMI-O",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/9",
+        "created_at": "2025-07-07T11:09:35Z",
+        "updated_at": "2025-11-18T14:55:26Z",
+        "title_sha256": "cc4b51c8ef8a6efccc2a5991bbad1ea5dcd9cd3302538b8f99a112c135a7acaf",
+        "body_sha256": "46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f",
         "assignees": [
           "nvanva",
           "oepen"
@@ -1748,23 +1099,570 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 45.786,
-      "fulltext_baseline_score": 39.952,
+      "score": 10.717,
+      "fulltext_baseline_score": 23.601,
       "matched_terms": [
         {
-          "term": "storage",
+          "term": "lumio",
           "source": {
             "field": "body",
-            "excerpt": "write access to the shared eval directory. ### Weight storage Converted HF checkpoints can be found here: - `/e/fs"
+            "excerpt": "`poor` data after filtering. of these, (a) resides on LUMI-O (with an interim manifesto in `/nird/datalake/NS8112K/"
           },
           "target": {
             "field": "title",
-            "excerpt": "(storage) management around 3.1 release"
+            "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 5.304
+          "idf": 5.103
         }
       ],
-      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#148",
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#66",
+      "source_id": "github:LAION-AI/CLIP_benchmark#148",
+      "source": {
+        "id": "github:LAION-AI/CLIP_benchmark#148",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 148,
+        "kind": "pull_request",
+        "state": "open",
+        "title": "Add audio modality support for CLAP evaluation",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
+        "created_at": "2026-02-19T04:01:55Z",
+        "updated_at": "2026-06-11T19:39:57Z",
+        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
+        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
+        "assignees": []
+      },
+      "target_id": "github:OpenEuroLLM/Taskboard#66",
+      "target": {
+        "id": "github:OpenEuroLLM/Taskboard#66",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 66,
+        "kind": "issue",
+        "state": "closed",
+        "title": "Evaluate missing checkpoints",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/66",
+        "created_at": "2025-06-06T13:38:32Z",
+        "updated_at": "2025-10-17T13:42:54Z",
+        "title_sha256": "3d901d96f64733da45d7a6363df8cab1e041600832310c174089942de9874987",
+        "body_sha256": "aca3b3af9708b676d326195edc38be53b92908a595b1891972e6f1f92a6e869c",
+        "assignees": [
+          "timurcarstensen"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 10.666,
+      "fulltext_baseline_score": 15.281,
+      "matched_terms": [
+        {
+          "term": "checkpoint",
+          "source": {
+            "field": "body",
+            "excerpt": "LAP](https://github.com/LAION-AI/CLAP) (v1) pretrained checkpoints and models trained with the most recent [open_clip](ht"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Evaluate missing checkpoints"
+          },
+          "idf": 3.157
+        },
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "body",
+            "excerpt": "ependencies - `open_clip` (for model architecture and tokenizer) - `librosa` (audio decoding) - `torchaudio` (mel spec"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "ons. - [x] open-sci-ref_model-0.13b_data-CommonCorpus_tokenizer-GPT-NeoX_samples-300B_global_bs-1008_context-4096_sche"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#3->github:hplt-project/warc2text-runner#22",
+      "source_id": "github:OpenEuroLLM/web-data-processing#3",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#3",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 3,
+        "kind": "issue",
+        "state": "open",
+        "title": "opt-out handling",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+        "created_at": "2026-10-09T14:11:20Z",
+        "updated_at": "2026-10-12T21:49:38Z",
+        "title_sha256": "a40dcc821a6bcefad1fd78e16bd1547e6ae173b32c5d179cbc1aacd5b5b12026",
+        "body_sha256": "1a4769a95e100eda9f656ca822cf45096f681cd1e88f11a36f0b509cca5ef344",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/warc2text-runner#22",
+      "target": {
+        "id": "github:hplt-project/warc2text-runner#22",
+        "repo": "hplt-project/warc2text-runner",
+        "number": 22,
+        "kind": "issue",
+        "state": "closed",
+        "title": "De-chunking in warc2text",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/22",
+        "created_at": "2025-09-04T14:17:40Z",
+        "updated_at": "2025-10-06T15:36:20Z",
+        "title_sha256": "f6fea495edf5ea044cbe0784caccf09359377a752160f81c8a10f7be8a1d6697",
+        "body_sha256": "db82b1a21482c9c8d943a94fb932d90839bf8ad8243acdba77e574f23a3cdb8a",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 9.803,
+      "fulltext_baseline_score": 4.668,
+      "matched_terms": [
+        {
+          "term": "warc2text",
+          "source": {
+            "field": "body",
+            "excerpt": "Update warc2text to support opt-out handling. Quick look at the Apertus"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "De-chunking in warc2text"
+          },
+          "idf": 4.668
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#3->github:hplt-project/warc2text-runner#3",
+      "source_id": "github:OpenEuroLLM/web-data-processing#3",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#3",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 3,
+        "kind": "issue",
+        "state": "open",
+        "title": "opt-out handling",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+        "created_at": "2026-10-09T14:11:20Z",
+        "updated_at": "2026-10-12T21:49:38Z",
+        "title_sha256": "a40dcc821a6bcefad1fd78e16bd1547e6ae173b32c5d179cbc1aacd5b5b12026",
+        "body_sha256": "1a4769a95e100eda9f656ca822cf45096f681cd1e88f11a36f0b509cca5ef344",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/warc2text-runner#3",
+      "target": {
+        "id": "github:hplt-project/warc2text-runner#3",
+        "repo": "hplt-project/warc2text-runner",
+        "number": 3,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "Add warc2text html parser output for tests",
+        "url": "https://github.com/hplt-project/warc2text-runner/pull/3",
+        "created_at": "2024-03-22T12:32:03Z",
+        "updated_at": "2024-03-22T12:38:00Z",
+        "title_sha256": "22308485b5b060d77198966b70277c5537a3e206d0f0c4c2e4163b09d239034f",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 9.803,
+      "fulltext_baseline_score": 4.668,
+      "matched_terms": [
+        {
+          "term": "warc2text",
+          "source": {
+            "field": "body",
+            "excerpt": "Update warc2text to support opt-out handling. Quick look at the Apertus"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Add warc2text html parser output for tests"
+          },
+          "idf": 4.668
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#8->github:hplt-project/warc2text-runner#22",
+      "source_id": "github:OpenEuroLLM/web-data-processing#8",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#8",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 8,
+        "kind": "issue",
+        "state": "open",
+        "title": "audio and video extraction from WARCs",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+        "created_at": "2026-10-15T13:52:58Z",
+        "updated_at": "2026-11-10T04:56:15Z",
+        "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
+        "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
+        "assignees": [
+          "MariaFjodorowa",
+          "akutuzov",
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/warc2text-runner#22",
+      "target": {
+        "id": "github:hplt-project/warc2text-runner#22",
+        "repo": "hplt-project/warc2text-runner",
+        "number": 22,
+        "kind": "issue",
+        "state": "closed",
+        "title": "De-chunking in warc2text",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/22",
+        "created_at": "2025-09-04T14:17:40Z",
+        "updated_at": "2025-10-06T15:36:20Z",
+        "title_sha256": "f6fea495edf5ea044cbe0784caccf09359377a752160f81c8a10f7be8a1d6697",
+        "body_sha256": "db82b1a21482c9c8d943a94fb932d90839bf8ad8243acdba77e574f23a3cdb8a",
+        "assignees": [
+          "nvanva"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 9.803,
+      "fulltext_baseline_score": 18.524,
+      "matched_terms": [
+        {
+          "term": "warc2text",
+          "source": {
+            "field": "body",
+            "excerpt": "owing [this suggestion](https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6186769627), I create this separ"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "De-chunking in warc2text"
+          },
+          "idf": 4.668
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/web-data-processing#8->github:hplt-project/warc2text-runner#6",
+      "source_id": "github:OpenEuroLLM/web-data-processing#8",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#8",
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 8,
+        "kind": "issue",
+        "state": "open",
+        "title": "audio and video extraction from WARCs",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+        "created_at": "2026-10-15T13:52:58Z",
+        "updated_at": "2026-11-10T04:56:15Z",
+        "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
+        "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
+        "assignees": [
+          "MariaFjodorowa",
+          "akutuzov",
+          "nvanva"
+        ]
+      },
+      "target_id": "github:hplt-project/warc2text-runner#6",
+      "target": {
+        "id": "github:hplt-project/warc2text-runner#6",
+        "repo": "hplt-project/warc2text-runner",
+        "number": 6,
+        "kind": "issue",
+        "state": "closed",
+        "title": "Tag filters moved from warc2text",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/6",
+        "created_at": "2024-04-26T17:46:37Z",
+        "updated_at": "2024-05-04T20:58:21Z",
+        "title_sha256": "c7d99adffae4d35fa166cda6ab7287f624c55575f93dd78aaa7ecf2e904b183e",
+        "body_sha256": "0d94917256843567ef3e993a5bfbd2524a06c76eeb38d7c776c6facf305f01ad",
+        "assignees": [
+          "ZJaume",
+          "nvanva"
+        ]
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 9.803,
+      "fulltext_baseline_score": 13.795,
+      "matched_terms": [
+        {
+          "term": "warc2text",
+          "source": {
+            "field": "body",
+            "excerpt": "owing [this suggestion](https://github.com/OpenEuroLLM/warc2text/issues/1#issuecomment-6186769627), I create this separ"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "Tag filters moved from warc2text"
+          },
+          "idf": 4.668
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#119->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#119",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#119",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 119,
+        "kind": "issue",
+        "state": "open",
+        "title": "Running MoE sanity check baseline",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/119",
+        "created_at": "2025-10-24T14:51:07Z",
+        "updated_at": "2026-09-21T09:39:20Z",
+        "title_sha256": "7ca7fffd5a5268f036330c1e797c20f44530083a2b38d6173db307c93513ef0a",
+        "body_sha256": "2e4058574a103fb794120eb430bbfc666060b21d8bccf87d9c9b880508e0d5fb",
+        "assignees": [
+          "JeniaJitsev",
+          "luukkonenr"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 8.475,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "body",
+            "excerpt": "- Run on Jupiter and LUMI - Tokenizer: Gpt-neox 20B, 50k vocab - Nemotron-cc-HQ - 300BT -"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#114",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#146->github:LAION-AI/CLIP_benchmark#113",
+      "source_id": "github:OpenEuroLLM/Taskboard#146",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#146",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 146,
+        "kind": "issue",
+        "state": "open",
+        "title": "Tokenizer evaluation",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/146",
+        "created_at": "2025-11-13T10:45:55Z",
+        "updated_at": "2025-12-18T11:25:21Z",
+        "title_sha256": "abb49707bd6129ebcbd4807447ded3602c16ac5da98faa5eb44889f84bfcfab4",
+        "body_sha256": "f60963ca7f0673544d33bf3d599f942befa5365705eb63a2a7e94c18924a18d9",
+        "assignees": [
+          "stefan-it",
+          "timpal0l"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#113",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#113",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 113,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "Multilingual benchmark datasets",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/113",
+        "created_at": "2023-11-19T02:09:11Z",
+        "updated_at": "2023-12-02T00:01:46Z",
+        "title_sha256": "3aff48d9c9e28bc788209707450f1112a0687417f2e628f4a06b6a07381b2af1",
+        "body_sha256": "3bc28d2d5ddbdaca6c343793b8bd3c640b5a21ee87141cad70154f325e423214",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 8.475,
+      "fulltext_baseline_score": 33.085,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "title",
+            "excerpt": "Tokenizer evaluation"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "nguage` method to set the target language for the NLLB tokenizer. 6. Enabled building CSV files from directories. @"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
+      "same_as_fulltext_baseline_top1": true,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#148->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#148",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#148",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 148,
+        "kind": "issue",
+        "state": "open",
+        "title": "Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/148",
+        "created_at": "2025-11-13T10:51:14Z",
+        "updated_at": "2025-11-13T10:51:42Z",
+        "title_sha256": "b3632bd91471f741acf649745cbcd0b228baeeb8f951e273018e4cda96eb597f",
+        "body_sha256": "d4a367cadaa3aa00bc144ea65a63bb4842aadaf912d5f7b5e2928f61ee0c4c8a",
+        "assignees": [
+          "flxst"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 8.475,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "body",
+            "excerpt": "ing characters or subwords that are not present in the tokenizer's learned vocabulary. The behavior of the UNK token si"
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
+      "same_as_fulltext_baseline_top1": false,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#339->github:LAION-AI/CLIP_benchmark#19",
+      "source_id": "github:OpenEuroLLM/Taskboard#339",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#339",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 339,
+        "kind": "issue",
+        "state": "open",
+        "title": "Long-Context Data Generation",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
+        "created_at": "2026-07-01T13:57:57Z",
+        "updated_at": "2026-07-01T13:58:00Z",
+        "title_sha256": "d1f03efb897a25aab3abc89ad24f279114d6dfc5391836df41e3a0e31f95698d",
+        "body_sha256": "99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba",
+        "assignees": [
+          "abhash-er"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#19",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 19,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "use open_clip.get_tokenizer to support all tokenizers",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "created_at": "2022-11-10T10:34:56Z",
+        "updated_at": "2022-11-10T15:05:36Z",
+        "title_sha256": "c6a833b633a0c20fdb1d0f8c85a95a9260a54a4b85fcf59e0620bcefd9bcf7ab",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 8.475,
+      "fulltext_baseline_score": 4.036,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "body",
+            "excerpt": "-4) with a genuine 120k input window. - **Per-language tokenizers** for tf-idf term extraction (esp. `el`, `uk`)."
+          },
+          "target": {
+            "field": "title",
+            "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
+          },
+          "idf": 4.036
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
       "same_as_fulltext_baseline_top1": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
@@ -1772,8 +1670,8 @@
     }
   ],
   "suggestions_count": 25,
-  "suggestions_matching_same_input_baseline_top1": 11,
+  "suggestions_matching_same_input_baseline_top1": 3,
   "human_quality_labels_collected": 0,
   "evidence_levels": "Phrase overlap is a review candidate, not collaboration, identical code or verified prior solution.",
-  "limitations": "Bounded repo registry and source age, English-oriented tokens, GitHub-only pilot; issue/PR body and title verified for shortlisted cards, not issue comments or merge status. Closed pull requests are not necessarily merged. No claim of better quality than full-text search, no labels, no automated outreach. Source bodies longer than the configured limit are truncated for ranking."
+  "limitations": "Bounded repo registry and source age, English-oriented tokens, GitHub-only pilot; The technical vocabulary is curated and tuned on this observed cohort, NOT a held-out validation. Issue/PR body and title verified for shortlisted cards, not issue comments or merge status. Closed pull requests are not necessarily merged. No claim of better quality than full-text search, no labels, no automated outreach. Source bodies longer than the configured limit are truncated for ranking."
 }
