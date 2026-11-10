@@ -136,7 +136,7 @@ def validate(packet: dict, proposal: dict) -> dict:
 def select_candidate(matches: dict, identifier: str) -> dict:
     """Select exactly one identified candidate without guessing list position."""
     suggestions = matches.get("suggestions")
-    if not isinstance(suggestions, list):
+    if not isinstance(suggestions, list) or any(not isinstance(c, dict) for c in suggestions):
         raise ValueError("Expected suggestions list in matcher output")
     found = [c for c in suggestions if c.get("id") == identifier]
     if len(found) != 1:
