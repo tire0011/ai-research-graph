@@ -149,3 +149,14 @@ For issues, the audit reads the original bodies and current open/closed status t
 
 The job runs weekly on Wednesday, manually and after merging source changes. It produces [results/HPLT_OVERLAP.md](results/HPLT_OVERLAP.md) and [results/hplt_overlap.json](results/hplt_overlap.json) only after a complete successful audit; a source error prevents replacing last-known-good reports. Unit tests run on pull requests without external API access. No automated outreach or changes to external repositories.
 
+
+## Tracing robots.txt reuse across HPLT and OpenEuroLLM
+
+The [robots.txt reuse source audit](robots_reuse_audit.py) extends the HPLT overlap study with a **12-source, pinned-code and issue-text trace**. It follows the handoff that the OpenEuroLLM issue already proposes: reusing Jaume's earlier HPLT robots.txt indexing and annotation work. The [curated registry](robots_reuse_cases.json) distinguishes sitewide historical robots.txt evaluation from the separate HTTP `X-Robots-Tag`, HTML robots meta tag and TDM mechanisms in `warc2text`.
+
+The audit cryptographically verifies each downloaded file against its original Git blob SHA from a pinned commit and re-reads every selected issue. It verifies **the presence of cited implementation steps**, not the correctness of robots.txt matching, AI-training permission policy, runtime throughput or legal compliance.
+
+The corresponding [source report](results/ROBOTS_REUSE.md) and [machine-readable trace](results/robots_reuse.json) are generated alongside the existing HPLT audit. The report includes a checklist of acceptance tests for user-agent selection, path matching, historical captures, URL normalization, line-aligned `allowed.zst` masks, and the behavior when an expected mask is missing. Missing `allowed.zst` is not inherently a bug: HPLT intentionally omits this step for some crawl types; however, when the mask is required, silently proceeding without it must be assessed.
+
+This analysis is **read-only** and does not claim a new implementation, verified duplicate work, or a fix. No automatic posting to other projects.
+
