@@ -160,3 +160,17 @@ The corresponding [source report](results/ROBOTS_REUSE.md) and [machine-readable
 
 This analysis is **read-only** and does not claim a new implementation, verified duplicate work, or a fix. No automatic posting to other projects.
 
+
+## Collaboration Matcher — the collaboration goal, not a graph speed race
+
+The current research question is **whether separate EU research teams can reuse earlier work and find useful collaborators**, not whether precomputed graph traversal is faster than an equivalent snapshot text scan.
+
+The [collaboration matcher](collaboration_matcher.py) is a **rule-based, auditable baseline** (not an LLM): a bounded registry of [eight public GitHub repositories](collaboration_sources.json) is scanned for all visible issues and pull requests. Recently created *open* tasks are matched to earlier related work in **other GitHub organizations**. Matching issue numbers are **not** hand-picked. Original titles, body hashes, matched phrases, source links, states, assignees and a separate full-text baseline are kept for each suggestion. Only shortlisted sources are re-fetched and checked for source changes before writing the report.
+
+- [Collaboration matches (human-review queue)](results/COLLABORATION_MATCHES.md)
+- [Structured matches and baseline](results/collaboration_matches.json)
+
+The matcher runs inside the existing cross-project audit workflow on a weekly/manual schedule and on code changes. It does **not** post comments, send messages, infer that closed PRs were merged, or claim a historic issue is solved. This initial candidate finder is limited to GitHub. Hugging Face and OpenAIRE remain important for a later *cross-platform* evaluation, but must not be represented as covered by this test.
+
+**The measurement that matters next:** ask a reviewer who did not prepare the candidates to label both matcher suggestions *and* same-input full-text search results as actionable reuse, already-coordinated related work or irrelevant. Record precision and useful unique discoveries; compare against the baseline before investing in a graph service, MCP endpoint or LLM ranking. Current benchmark ties are real and do **not** justify a permanent service by themselves.
+
