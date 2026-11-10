@@ -1,0 +1,132 @@
+{
+  "scope": "Curated code-to-task trace for robots.txt reuse across HPLT and OpenEuroLLM. Literal evidence only; not a runtime correctness or legal compliance audit.",
+  "sources": [
+    {
+      "id": "requested-adaptation",
+      "kind": "issue",
+      "repo": "OpenEuroLLM/web-data-processing",
+      "number": 7,
+      "phrase": "adopt and adapt the intermediate step by jaume",
+      "stage": "OpenEuroLLM request",
+      "meaning": "The existing pipeline is explicitly named as work to adapt; this is not newly discovered unrelated duplication."
+    },
+    {
+      "id": "existing-opt-out-task",
+      "kind": "issue",
+      "repo": "OpenEuroLLM/web-data-processing",
+      "number": 3,
+      "phrase": "opt-out handling",
+      "stage": "Adjacent OpenEuroLLM task",
+      "meaning": "Separate opt-out policy issue requiring decisions about applicability and retroactive filtering."
+    },
+    {
+      "id": "hplt-capture",
+      "kind": "file",
+      "repo": "hplt-project/HPLT-textpipes",
+      "branch": "main",
+      "path": "README.md",
+      "phrase": "robotstxt.warc.gz",
+      "stage": "Capture",
+      "meaning": "HPLT Stage 1 stores robots.txt captures separately for later processing."
+    },
+    {
+      "id": "hplt-index",
+      "kind": "file",
+      "repo": "hplt-project/monotextor-slurm",
+      "branch": "main",
+      "path": "09.robotstxt",
+      "phrase": "disallowed-urls.fst",
+      "stage": "Sitewide URL index",
+      "meaning": "Existing HPLT batch produces an indexed set of disallowed URLs from captured robots.txt."
+    },
+    {
+      "id": "hplt-agent-scope",
+      "kind": "file",
+      "repo": "hplt-project/monotextor-slurm",
+      "branch": "main",
+      "path": "scripts/robots2tsv.py",
+      "phrase": "agents = ('ia_archiver', 'ccbot', '*')",
+      "stage": "Crawler policy selection",
+      "meaning": "The existing parser is scoped to these user agents and requires review against OpenEuroLLM use cases."
+    },
+    {
+      "id": "hplt-rule-matcher",
+      "kind": "file",
+      "repo": "hplt-project/monotextor-slurm",
+      "branch": "main",
+      "path": "utils/src/bin/robots-filter.rs",
+      "phrase": "StringPatriciaSet",
+      "stage": "Matching",
+      "meaning": "HPLT already has a compiled Rust matcher for robots allow/disallow patterns against an URL index."
+    },
+    {
+      "id": "hplt-annotation",
+      "kind": "file",
+      "repo": "hplt-project/monotextor-slurm",
+      "branch": "main",
+      "path": "09.2.robots-annotate",
+      "phrase": "robotstxt-annotate",
+      "stage": "Annotation",
+      "meaning": "Prior HPLT script invokes the tool generating line-aligned allowance annotations."
+    },
+    {
+      "id": "hplt-stage3-filter",
+      "kind": "file",
+      "repo": "hplt-project/HPLT-textpipes",
+      "branch": "main",
+      "path": "src/hplt_textpipes/stage3/stage3local_v2.sh",
+      "phrase": "rclone lsf \"${INPUT_DIR}/allowed.zst\"",
+      "stage": "Stage 3 consumption",
+      "meaning": "Stage 3 optionally reads allowed.zst; if absent it does not apply this sitewide filter."
+    },
+    {
+      "id": "hplt-stage3-docs",
+      "kind": "file",
+      "repo": "hplt-project/HPLT-textpipes",
+      "branch": "main",
+      "path": "src/hplt_textpipes/stage3/README.md",
+      "phrase": "If present, this file will be used",
+      "stage": "Documented Stage 3 contract",
+      "meaning": "HPLT documents that allowance filtering depends on presence of allowed.zst."
+    },
+    {
+      "id": "oe-page-level",
+      "kind": "file",
+      "repo": "OpenEuroLLM/warc2text",
+      "branch": "master",
+      "path": "src/robotsreservation.cc",
+      "phrase": "x-robots-tag",
+      "stage": "Record-local opt-outs",
+      "meaning": "Existing OpenEuroLLM code checks X-Robots-Tag and HTML robots directives, not the cross-page historical sitewide robots index."
+    },
+    {
+      "id": "oe-robot-captures",
+      "kind": "file",
+      "repo": "OpenEuroLLM/warc2text",
+      "branch": "master",
+      "path": "src/warcpreprocessor.cc",
+      "phrase": "robots_warc_writer.writeRecord(content)",
+      "stage": "WARC capture extraction",
+      "meaning": "OpenEuroLLM extracts robots.txt response records for a separate downstream processing step."
+    },
+    {
+      "id": "oe-opt-out-doc",
+      "kind": "file",
+      "repo": "OpenEuroLLM/warc2text",
+      "branch": "master",
+      "path": "OPTOUT.md",
+      "phrase": "X-Robots-Tag",
+      "stage": "Policy explanation",
+      "meaning": "The current page-local filtering rules are documented separately from sitewide robots.txt evaluation."
+    }
+  ],
+  "review_checks": [
+    "Confirm the intended crawler user-agent policy and robots.txt group precedence, wildcard handling and allow/disallow specificity with tests.",
+    "Decide the temporal policy for robots.txt captures and missing/ambiguous captures; avoid assuming one historical capture applies retroactively.",
+    "For IA or other crawls requiring post-hoc robots filtering, explicitly require allowed.zst or fail the job rather than silently continuing.",
+    "Check URL normalization (scheme, www, ports, percent encoding) and sample allow/disallow precedence before reusing a URL index.",
+    "Verify line count, line order, and key consistency among metadata.zst, allowed.zst and downstream Stage 3 outputs.",
+    "Keep HTTP/meta/TDM reservations separate from sitewide robots.txt decisions; document combined exclusion policy.",
+    "Confirm existing stakeholders have already scheduled this adaptation before posting any duplicate implementation request."
+  ]
+}
