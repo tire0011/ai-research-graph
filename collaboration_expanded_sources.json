@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "description": "Experimental cross-org phrase review (11 public repos). Additional independent evaluation workflows broaden potential duplicates and complementary handoffs, without changing the scheduled technical matcher registry.",
+  "repositories": [
+    "OpenEuroLLM/web-data-processing",
+    "OpenEuroLLM/warc2text",
+    "OpenEuroLLM/Taskboard",
+    "OpenEuroLLM/oellm-eval",
+    "hplt-project/HPLT-textpipes",
+    "hplt-project/warc2text-runner",
+    "hplt-project/monotextor-slurm",
+    "hplt-project/HPLT-WP4",
+    "LAION-AI/CLIP_benchmark",
+    "utter-project/eurollm-evaluation",
+    "allenai/olmo-eval"
+  ],
+  "source_owners": ["OpenEuroLLM", "LAION-AI", "hplt-project", "allenai"],
+  "max_pages_per_repo": 12,
+  "page_size": 100,
+  "max_body_chars_for_matching": 6000,
+  "source_max_age_days": 400,
+  "max_suggestions": 25,
+  "max_suggestions_per_source": 2,
+  "min_score": 7,
+  "match_scope": "different GitHub organizations only",
+  "reviewer_policy": "suggestions_only_no_outreach",
+  "evaluation": "Require review of exact source issues, code maturity, existing coordination and independent third-party artifacts. No proof of novel collaboration."
+}
