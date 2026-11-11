@@ -221,6 +221,12 @@ snapshot; the live **AIoD v2 public listing endpoint was verified** on
 metadata and false-positive limitations. No EOSC adapter is implemented. AIoD also has its own
 [semantic search project](https://github.com/aiondemand/aiod-enhanced-interaction),
 which must be considered a retrieval baseline rather than rebuilt by default.
+The second [targeted search pilot](results/aiod/TARGETED_REVIEW.md) verifies
+five live, open OpenEuroLLM requirements against AIoD search. It retrieves
+42 issue-specific results from 15 bounded search calls, but identifies **zero
+verified technical handoffs or newly collaborating teams**; single-word
+matches dominate. The [search script](aiod_targeted_search.py) and its
+results are separate from the production matcher and scheduled workflows.
 EOSC-ARENA publicly plans agent-to-agent interoperability; this is a proposed
 work package, *not* proof that a usable integration has shipped.
 
