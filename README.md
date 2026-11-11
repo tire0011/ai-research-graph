@@ -206,3 +206,29 @@ for local commands and JSON schema. Model judgments of maturity and practical
 compatibility are *not* certified by exact-quote validation. No automatic
 contact, no novelty claim and no measured ranking improvement.
 
+### European platform and requirement comparison (separate source layer)
+
+The optional [European ecosystem source registry](ecosystem_sources.json)
+records **AI-on-Demand (AIoD), EOSC EU Node, AI4EOSC and EOSC-ARENA**, using
+official platform documentation, including known relations among them. AIoD's
+metadata catalogue provides a documented [REST API](https://aiondemand.github.io/AIOD-rest-api/)
+and [Python SDK](https://aiondemand.github.io/aiondemand/), but the current
+script **does not fetch AIoD/EOSC data** or claim to have tested a connector.
+EOSC-ARENA publicly plans agent-to-agent interoperability; this is a proposed
+work package, *not* proof that a usable integration has shipped.
+
+Run `python ecosystem_requirements.py` to regenerate **six requirement-specific
+JSON and Markdown reports** and a combined
+[comparison matrix](results/requirements/OVERVIEW.md). Requirement domains are:
+resource/people discovery, duplicate work/reuse, human–agent coordination,
+interoperability, joint model work and evidence/provenance. The report links
+three earlier GitHub candidate case reviews to relevant domains without
+silently promoting them to confirmed collaborations. Machine-readable
+[comparison JSON](results/requirements/comparison.json) preserves official URLs,
+documented/planned/adjacent evidence and explicit existing relationships.
+
+The static evidence snapshot was reviewed on 2026-11-11. Adding a future live
+catalogue adapter needs endpoint/authentication/pagination, stable resource IDs,
+licensing and change-detection verification first. **Platform coverage is not
+a score; missing evidence is not evidence of a missing feature.**
+
