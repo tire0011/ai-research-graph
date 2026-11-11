@@ -64,6 +64,30 @@ failed or fabricated "live" results.
 The [2026-11-11 pilot findings](results/aiod/PILOT_FINDINGS.md) include a
 source-backed quality assessment and results of the initial bounded queries.
 
+## Targeted search pilot against five open OpenEuroLLM issues
+
+`aiod_targeted_search.py` separately uses the **official v2 search API**
+(`GET /search/{asset_type}`), verified against the service's OpenAPI schema
+on 2026-11-11. The search response has the shape
+`{total_hits, resources, offset, limit}`; this differs from the catalogue
+listing endpoint's bare `list[dict]`. It uses explicit `search_query`,
+`search_fields=name`, and `get_all=true`, with at most five returned results
+per search and three concurrent reads. Search phrases, issue IDs and asset
+types are fixed in code before inspecting the results; no source mutation or
+external messaging is possible. Reports retain source IDs, URLs, titles and
+metadata hashes rather than copying full third-party publication abstracts.
+
+```powershell
+python aiod_targeted_search.py --limit 5
+python -m unittest discover -s tests -p 'test_aiod_targeted_search.py' -v
+```
+
+The recorded [targeted retrieval results](results/aiod/TARGETED_SEARCH_RESULTS.md)
+and [five-case technical review](results/aiod/TARGETED_REVIEW.md) show mostly
+single-word false positives. The reported title-term gate only determines a
+review priority; it is **not** a collaboration score. A failed search leaves
+the previous successful results untouched.
+
 ## What to review in a candidate
 
 1. Are both source URLs and descriptions real, current and independently read?
