@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "status": "exploratory_lexical_baseline_only",
+  "aiod_source_generated_at_utc": "2026-11-11T09:06:46.157330+00:00",
+  "github_snapshot_generated_at_utc": "2026-11-10T08:30:22.171016+00:00",
+  "aiod_sample_limited": true,
+  "aiod_nodes": 10,
+  "unique_aiod_claimed_sources": 10,
+  "aiod_possible_aliases_skipped": 0,
+  "open_github_tasks": 244,
+  "candidates": [
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U->github:OpenEuroLLM/Taskboard#437",
+      "aiod_id": "aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_title": "Flood and Fire Real Description Generated Synthetic Dataset",
+      "aiod_metadata_sha256": "863ea3dc9cfc81f8f1a59c3698935b2c9312db9b9ea42ea7f5f5af5d7e9ebf2d",
+      "github_id": "github:OpenEuroLLM/Taskboard#437",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/437",
+      "github_title": "Synthetic Generation for Multilingual Instruction Tuning",
+      "shared_terms": [
+        "description",
+        "generated",
+        "real",
+        "synthetic"
+      ],
+      "score": 15.651,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U->github:OpenEuroLLM/Taskboard#339",
+      "aiod_id": "aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_title": "Flood and Fire Real Description Generated Synthetic Dataset",
+      "aiod_metadata_sha256": "863ea3dc9cfc81f8f1a59c3698935b2c9312db9b9ea42ea7f5f5af5d7e9ebf2d",
+      "github_id": "github:OpenEuroLLM/Taskboard#339",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/339",
+      "github_title": "Long-Context Data Generation",
+      "shared_terms": [
+        "description",
+        "real",
+        "synthetic"
+      ],
+      "score": 11.675,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U->github:OpenEuroLLM/Taskboard#345",
+      "aiod_id": "aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_title": "Flood and Fire Real Description Generated Synthetic Dataset",
+      "aiod_metadata_sha256": "863ea3dc9cfc81f8f1a59c3698935b2c9312db9b9ea42ea7f5f5af5d7e9ebf2d",
+      "github_id": "github:OpenEuroLLM/Taskboard#345",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/345",
+      "github_title": "Synthetic Data Generation for Multilingual Instruction Following",
+      "shared_terms": [
+        "description",
+        "generated",
+        "synthetic"
+      ],
+      "score": 10.902,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_nnFCHQmYz7UZL5Q91XT2OAyt->github:OpenEuroLLM/Taskboard#353",
+      "aiod_id": "aiod:v2:datasets:data_nnFCHQmYz7UZL5Q91XT2OAyt",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_nnFCHQmYz7UZL5Q91XT2OAyt",
+      "aiod_title": "AI concepts relevant for AI and e-commerce/retail sectors",
+      "aiod_metadata_sha256": "2920020e026fbc5ea587027227b959220dd2db85327db0424ee7146acd87020a",
+      "github_id": "github:OpenEuroLLM/Taskboard#353",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/353",
+      "github_title": "Discover and Verify Concepts in Preference and Instruction-tuning Datasets",
+      "shared_terms": [
+        "concept",
+        "relevant"
+      ],
+      "score": 9.499,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_nnFCHQmYz7UZL5Q91XT2OAyt->github:OpenEuroLLM/Taskboard#446",
+      "aiod_id": "aiod:v2:datasets:data_nnFCHQmYz7UZL5Q91XT2OAyt",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_nnFCHQmYz7UZL5Q91XT2OAyt",
+      "aiod_title": "AI concepts relevant for AI and e-commerce/retail sectors",
+      "aiod_metadata_sha256": "2920020e026fbc5ea587027227b959220dd2db85327db0424ee7146acd87020a",
+      "github_id": "github:OpenEuroLLM/Taskboard#446",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/446",
+      "github_title": "Question: Cross-project knowledge sharing between people and AI agents",
+      "shared_terms": [
+        "concept",
+        "relevant"
+      ],
+      "score": 9.499,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U->github:OpenEuroLLM/Taskboard#353",
+      "aiod_id": "aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_title": "Flood and Fire Real Description Generated Synthetic Dataset",
+      "aiod_metadata_sha256": "863ea3dc9cfc81f8f1a59c3698935b2c9312db9b9ea42ea7f5f5af5d7e9ebf2d",
+      "github_id": "github:OpenEuroLLM/Taskboard#353",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/353",
+      "github_title": "Discover and Verify Concepts in Preference and Instruction-tuning Datasets",
+      "shared_terms": [
+        "description",
+        "generated"
+      ],
+      "score": 6.44,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    },
+    {
+      "id": "aiod_cross:aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U->github:OpenEuroLLM/Taskboard#417",
+      "aiod_id": "aiod:v2:datasets:data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_url": "https://api.aiodp.eu/v2/datasets/data_C4wiuFaFITG7HBBGV0JWsI8U",
+      "aiod_title": "Flood and Fire Real Description Generated Synthetic Dataset",
+      "aiod_metadata_sha256": "863ea3dc9cfc81f8f1a59c3698935b2c9312db9b9ea42ea7f5f5af5d7e9ebf2d",
+      "github_id": "github:OpenEuroLLM/Taskboard#417",
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/417",
+      "github_title": "Evaluate other baselines to Prelude with `eval-framework`",
+      "shared_terms": [
+        "description",
+        "generated"
+      ],
+      "score": 6.44,
+      "classification": "unreviewed_lexical_overlap",
+      "existing_coordination": "unknown",
+      "outreach": "none"
+    }
+  ],
+  "total_lexical_candidates": 7,
+  "novel_collaboration_confirmed": false,
+  "outreach": "none",
+  "limitations": "Not a semantic match and not an independent holdout. Both inputs are bounded snapshots. Shared tokens do not establish a useful handoff, duplicate code or a new human relationship. Repeated claimed external URLs were collapsed within this sample, not resolved as identities. Inspect originals and the AIoD external-platform identity before any action."
+}
