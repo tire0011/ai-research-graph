@@ -6,7 +6,7 @@
 
 | Platform | Evidence status | Source-backed observation |
 | --- | --- | --- |
-| [AI-on-Demand (AIoD)](https://www.aiodp.ai/) | adjacent | AI resources are made discoverable and reusable, but evidence here does not establish automatic duplicate-work detection. [Official source](https://www.iais.fraunhofer.de/en/press-events/press-releases/AI-on-Demand_Platform.html) |
+| [AI-on-Demand (AIoD)](https://www.aiodp.ai/) | adjacent | AIoD already has an open-source semantic catalogue search project (aiod-enhanced-interaction), including vector search. This is a strong retrieval baseline but does not establish requirement-level duplicate-work detection, artifact compatibility or new human collaborations. [Official source](https://github.com/aiondemand/aiod-enhanced-interaction) |
 | [EOSC EU Node](https://open-science-cloud.ec.europa.eu/) | adjacent | Software and workflows can be found and reused, but documented discovery is not itself a duplicate-work detector. [Official source](https://open-science-cloud.ec.europa.eu/support/frequently-asked-questions) |
 | [AI4EOSC](https://ai4eosc.eu/) | adjacent | Reusable modules and common APIs support implementation reuse, not automated discovery of overlapping team requirements. [Official source](https://docs.ai4eosc.eu/en/latest/getting-started/overview.html) |
 | [EOSC-ARENA](https://arena.ai4eosc.eu/) | adjacent | Planned agent marketplace and knowledge services may help reuse, but no implemented duplicate-work matcher is demonstrated. [Official source](https://arena.ai4eosc.eu/project-deliverables/) |
