@@ -212,8 +212,15 @@ The optional [European ecosystem source registry](ecosystem_sources.json)
 records **AI-on-Demand (AIoD), EOSC EU Node, AI4EOSC and EOSC-ARENA**, using
 official platform documentation, including known relations among them. AIoD's
 metadata catalogue provides a documented [REST API](https://aiondemand.github.io/AIOD-rest-api/)
-and [Python SDK](https://aiondemand.github.io/aiondemand/), but the current
-script **does not fetch AIoD/EOSC data** or claim to have tested a connector.
+and [Python SDK](https://aiondemand.github.io/aiondemand/). The separate,
+bounded [AIoD source pilot](AIOD_SOURCE_ADAPTER.md) can now **request public
+REST v2 catalogue metadata** and compare it lexically with the stored GitHub
+snapshot; the live **AIoD v2 public listing endpoint was verified** on
+2026-11-11 in three bounded samples. See
+[pilot findings](results/aiod/PILOT_FINDINGS.md) for coverage, duplicate
+metadata and false-positive limitations. No EOSC adapter is implemented. AIoD also has its own
+[semantic search project](https://github.com/aiondemand/aiod-enhanced-interaction),
+which must be considered a retrieval baseline rather than rebuilt by default.
 EOSC-ARENA publicly plans agent-to-agent interoperability; this is a proposed
 work package, *not* proof that a usable integration has shipped.
 
@@ -227,8 +234,10 @@ silently promoting them to confirmed collaborations. Machine-readable
 [comparison JSON](results/requirements/comparison.json) preserves official URLs,
 documented/planned/adjacent evidence and explicit existing relationships.
 
-The static evidence snapshot was reviewed on 2026-11-11. Adding a future live
-catalogue adapter needs endpoint/authentication/pagination, stable resource IDs,
-licensing and change-detection verification first. **Platform coverage is not
-a score; missing evidence is not evidence of a missing feature.**
+The static evidence snapshot was reviewed on 2026-11-11. The pilot limits
+pagination, uses v2 resource IDs and records metadata SHA256; a live bounded
+API response and nested project descriptions were confirmed. Authentication,
+full catalogue coverage, licensing and change detection remain unverified.
+**Platform coverage is not a score; missing evidence is not
+evidence of a missing feature.**
 
