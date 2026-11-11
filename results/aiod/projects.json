@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "source": "aiod_metadata_v2",
+  "status": "sampled_read_only",
+  "generated_at_utc": "2026-11-11T09:06:07.154451+00:00",
+  "asset_type": "projects",
+  "api_host": "https://api.aiodp.eu",
+  "requested_offset": 0,
+  "requested_limit": 10,
+  "pages_fetched": 2,
+  "sample_limited": true,
+  "items": 20,
+  "source_pages": [
+    {
+      "url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "items": 10
+    },
+    {
+      "url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "items": 10
+    }
+  ],
+  "nodes": [
+    {
+      "id": "aiod:v2:projects:proj_KiHbzfaMKyx9xP0de9jodI1m",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "AI Engineering Suite to Support Agile Efficient Software Engineering",
+      "description": "Software and AI engineering are becoming increasingly crucial to various sectors, which are growing more dependent on them due to their numerous benefits. However, the complexity of software and AI development, coupled with high-stress deadlines, creates unsustainable pressure on this important sector. In this context, the EU-funded AI4SWEng project will develop and validate an innovative platform and tool set that leverages key AI-powered technologies to provide developers with much-needed assistance, reduce stress, and help enhance productivity, creativity, reliability and job satisfaction. The platform will feature a user-centric design, allowing teams to adapt and tailor it to their specific needs and experiences.",
+      "url": "https://api.aiodp.eu/v2/projects/proj_KiHbzfaMKyx9xP0de9jodI1m",
+      "original_url_claim": "https://ai4sweng.eu/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_KiHbzfaMKyx9xP0de9jodI1m",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "cfd7f5b91050146addd672912cc9b0822beba274751b5b643fe6b6f437722c45",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_JkRaf2Uwic9onIxCVRFAg7Hb",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Common European-scale Energy Artificial Intelligence Federated Testing and Experimentation Facility",
+      "description": "EnerTEF is a pan-European innovation initiative built to accelerate the deployment of trustworthy Artificial Intelligence (AI) across the energy sector.",
+      "url": "https://api.aiodp.eu/v2/projects/proj_JkRaf2Uwic9onIxCVRFAg7Hb",
+      "original_url_claim": "https://enertef.eu/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_JkRaf2Uwic9onIxCVRFAg7Hb",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "ab29822dd6f08e51d3e1fad8a8dbc3ef5d4d6f11b37a0d2df3dd4bbcb7cc2cb4",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_EOcXG261sGnhBYjySDvMcD4Y",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of source independent sensor fusion model for localization on the vessel",
+      "description": "The aim of the demo project was to test and validate a model that allows real-time determination of the trailer’s location both inside the ship and in the port area and update its location every few seconds. Satellite positioning or GNSS, cannot be used for navigation inside the ship, so alternative technologies were used. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_EOcXG261sGnhBYjySDvMcD4Y",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-source-independent-sensor-fusion-model-for-localization-on-the-vessel/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_EOcXG261sGnhBYjySDvMcD4Y",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "3e7f30112b3965326dbb611212525eab0534bd76e5758e608cece8e8eb180372",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_1MVNkveOqhAYqb51E7CF0ZrT",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of the Applicability of an AI-based Optimization Model for Production Processes using a Digital Twin of the Factory",
+      "description": "The project “Testing of the Applicability of an AI-based Optimization Model for Production Processes using a Digital Twin of the Factory” focuses on adjusting digital models of the factory and using AI to identify and mitigate bottlenecks in production processes. By using Siemens Plant Simualtion software, the project simulates the factory’s actual process times to test a digital twin, enabling production optimization without disrupting real manufacturing. The project utilizes an AI optimization model based on machine learning and data analysis to improve production throughput and resource efficiency. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_1MVNkveOqhAYqb51E7CF0ZrT",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-the-applicability-of-an-ai-based-optimization-model-for-production-processes-using-a-digital-twin-of-the-factory/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_1MVNkveOqhAYqb51E7CF0ZrT",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "51333d952794e696e22e17aceedecfa88304e03ce5dd5f81fe881a2298ac8bac",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_btUHkDO5tYPqOxCngsPJwH7d",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "A follow-up project for testing the robot assembly of intelligent bag filters at the company Vado Filters OÜ",
+      "description": "The novelty of the demo project is the joint handling of non-form-retaining textile materials and solid frame materials by intelligent and flexible robot/assembly robot stations. The active control method detects the performance of the robot’s working organs and checks the quality assurance data with the real ones. Through the analysis and pattern recognition of the collected data, artificial intelligence must be able to make changes to the drafting process. During testing, data will be collected and algorithms created for artificial intelligence to make decisions. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_btUHkDO5tYPqOxCngsPJwH7d",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-a-follow-up-project-for-testing-the-robot-assembly-of-intelligent-bag-filters-at-the-company-vado-filters-ou/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_btUHkDO5tYPqOxCngsPJwH7d",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "91efbcdab4e2ec05806c2ba6545fa4e7f0e3505a405fa0df3a58f8b66eaf4b63",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_AVaYa8ndw98YsP8pOrEHGpBt",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "RAC – Testing and validating a Robot Activity Coordinator to enhance the well-being of the elderly at the care homes",
+      "description": "The RAC project, short for “Testing and validating a Robot Activity Coordinator to enhance the well-being of the elderly at care homes,” was to explore the potential use of a robot assistant in the daily operations of a care home. To achieve this, an application suitable needed to be adapted to enable the TEMI robot-assistant to move efficiently within the for Pihlakodu care home environment, communicate with residents, staff, and guests, and share information. During the project, usage scenarios for the robot as an activity coordinator were first tested through collaboration between Pihlakodu and TalTech IT College. Following this, the necessary application (RAC) was adapted to enable the robot to support activity coordinators in their work. A key focus of this demo project was the thorough testing and validation of the application and the robot in the day-to-day care work process at the Viimsi and Tabasalu care homes: the robots, named Pipi and Olle, moved around the care home sharin",
+      "url": "https://api.aiodp.eu/v2/projects/proj_AVaYa8ndw98YsP8pOrEHGpBt",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-rac-testing-and-validating-a-robot-activity-coordinator-to-enhance-the-well-being-of-the-elderly-at-the-care-homes/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_AVaYa8ndw98YsP8pOrEHGpBt",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "1848aa7e2ef3d1899c53ffe0a04c7164e0136363b677b1103de23f93deddf1c4",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_8sRrkALz30EzyzuzbwvjlOmn",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Validation of a prototype of a software robot for automatic modelling, planning and optimiztion of production processes based on artificial intelligence in Aktaprint OÜ",
+      "description": "PROJECT NAME: Adjustment and validation of a prototype of an AI-based software robot for automatic modelling, planning and optimization of production processes based on artificial intelligence in Aktaprint OÜ. \n\nCHALLENGE: Adjusting and validating a prototype of an automatic modelling and optimization software robot based on Artificial Intelligence, which takes into account the complexity of production planning in this field, streamlines production processes, improves efficiency and thereby increases the company’s competitiveness. \n\nPURPOSE: To adjust and validate a prototype of a software robot, designed for the most effective modelling and optimization of the company’s various products and production processes. \n\nAI TECHNOLOGY TO BE VALIDATED: a wide range of machine learning models were tried and compared: decision tree, random forest, logistic/linear/polynomial regression, etc. Monte Carlo Tree Search and Simulated Annealing proved to be the most suitable. \n\nPROJECT ACTIVITIES: In ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_8sRrkALz30EzyzuzbwvjlOmn",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-validation-of-a-prototype-of-a-software-robot-for-automatic-modelling-planning-and-optimiztion-of-production-processes-based-on-artificial-intelligence-in-aktaprint-ou/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_8sRrkALz30EzyzuzbwvjlOmn",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "3ff573e2340e310aa710ad5c147cdccaf6cc868af3195b8bdecd7d7503eac285",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_Vx5BT84smiukOlSBPGeQZlLx",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing artificial intelligence to automate business processes with voice commands",
+      "description": "The aim of the demo project is to test new AI-based ways to automate the processes necessary for the company's warehouse processes using AI in order to increase the competitiveness of Tempest AS and optimize the time it takes to complete the supply chain. Within the framework of the project, AI manages and mediates the warehouse worker's activities and the company's information system communication (which previously took place on paper in the form of warehouse sheets).",
+      "url": "https://api.aiodp.eu/v2/projects/proj_Vx5BT84smiukOlSBPGeQZlLx",
+      "original_url_claim": "https://aire-edih.eu/en/project/2023-testing-artificial-intelligence-to-automate-business-processes-with-voice-commands/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_Vx5BT84smiukOlSBPGeQZlLx",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "ee672ac081193737b648958973d3a3770d255a9096a9630b0ee8fa5772ee4186",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_BV2Tn4KtJizMrfFfMAyywWHY",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of a robotic assembly workstation for the production of acoustic panels at Silen OÜ",
+      "description": "One of the challenges that this demonstration project sought to solve was the robotic production of acoustic panels to reduce the time needed to manufacture these. \n\nThe demonstration project tested the robotic screwing process for acoustic panels of different configurations, taking into account the different dimensions of the panels, the number of screws to be installed and their installation. \n\nThis demonstration project linked robotics (UR10 collaborative robot), automation (screw feeder, automatic screwdriver, intelligent jig), AI tools (digital twin workstation, machine vision tools, simulation of robot work trajectory).  \n\nThe solution took into account the company’s specific production processes and the requirements for acoustic panel parameters, as well as the possibilities for implementing fully automated production in the company or for deployment in other companies in the sector. \n\nResults of the demonstration project: realization of the product assembly operation, adjustmen",
+      "url": "https://api.aiodp.eu/v2/projects/proj_BV2Tn4KtJizMrfFfMAyywWHY",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-a-robotic-assembly-workstation-for-the-production-of-acoustic-panels-at-silen-ou/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_BV2Tn4KtJizMrfFfMAyywWHY",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "2d6ac66bad11f670f24f6c39e0a89edb92896386a391e8832b3f3a57030c50af",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_oNkrgJxcRD6MdeDBWW9Jaev5",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Project_test",
+      "description": "Testing of MDC",
+      "url": "https://api.aiodp.eu/v2/projects/proj_oNkrgJxcRD6MdeDBWW9Jaev5",
+      "original_url_claim": null,
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_oNkrgJxcRD6MdeDBWW9Jaev5",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=0&limit=10",
+      "metadata_sha256": "78cf0a80a664f18d50d1a0844cf2a5f1f0167954c392b3774143a26c291998db",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_KGebxhzsWrCGd3CedAHHRRqP",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing AI algorithms for the automatic extraction and application of guitar effects to enable new product lines",
+      "description": "Recreating guitar tones from existing music is a time-consuming and technically difficult task for musicians. The goal of this project was to test and validate AI-based methods for automatically extracting guitar effects from songs and applying them to new performances. The system was divided into three functional blocks, each validated with different neural architectures. For source separation (Block 1), UVR and Moises.AI models gave promising results in isolating guitar tracks. For clean signal reconstruction (Block 2), a combination of Mel-Denoiser and HiFi-GAN showed potential but remains the key bottleneck. In Block 3, GCNTF was validated for modeling and reapplying effects to new guitar inputs. A web interface was adjusted for testing, and a command-line tool was developed for delay modeling. The project successfully demonstrated the feasibility of the core concept and identified key areas for improvement. This work lays the foundation for future development toward real-time, AI-",
+      "url": "https://api.aiodp.eu/v2/projects/proj_KGebxhzsWrCGd3CedAHHRRqP",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-ai-algorithms-for-the-automatic-extraction-and-application-of-guitar-effects-to-enable-new-product-lines/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_KGebxhzsWrCGd3CedAHHRRqP",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "a9f0f3c5879ee7130c8c07a6aee5dfda3b56308a1afa7588ce0106b856fc5360",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_afXKnf3nX09DFB1CbQmsqabG",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of improving supply reliability at Saku Metall Allhanke Tehas through early warning system",
+      "description": "Experimenting in Improving supply reliability at Saku Metall Allhanke Tehas AS through early warning system. \n\nIn this demonstration project, we addressed a key challenge related to processing orders from our largest client. The main objective was to identify orders that require immediate attention to specific critical parts, materials, or purchased components—as delays in their procurement and logistics could compromise supply reliability and disrupt production timelines. \n\nTo solve this, a customized AI tool that leverages the strengths of Association Rule Mining (ARM), while being extensively tailored to the structure and complexity of the dataset provided by Saku Metall was validated. \n\nThe AI tool integrates standard data mining metrics, such as Support and Confidence (commonly used in the Apriori algorithm), with a novel tokenization strategy designed specifically for analyzing multi-level Bill of Materials (BOM). This approach enables the identification of rare purchases and uni",
+      "url": "https://api.aiodp.eu/v2/projects/proj_afXKnf3nX09DFB1CbQmsqabG",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-improving-supply-reliability-at-saku-metall-allhanke-tehas-through-early-warning-system/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_afXKnf3nX09DFB1CbQmsqabG",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "d3907d00dc02400d024b11af84ee69f5f1638f61a850c1d0e524196148c16aea",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_Ek2GDWofGQJWIXGUu8jA0YOz",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of novel AI based intelligent robotic assembly workplace for the production of bag filters in Vado Filters OÜ",
+      "description": "The purpose of adjusting an intelligent workplace for robotic assembly of bag filters is to reduce the proportion of monotonous hand work, with reduction of workers’ fatigue and possible errors. \n\nThe increase of efficiency is a key factor of today’s production. Therefore, it is important to speed up the assembly process and reduce the non-productive time in the production process. Thereby, the high quality of the product has to be achieved. \n\nThe novelty of the project lies in the validation and testing of a prototype of an intelligent and flexible robotic assembly system to handle textile materials that do not hold form. \n\nAs a result of the project, a physical prototype of the robotic system with the principles of intelligent assembly has been validated. In addition to engineering solutions, a variety of AI technologies have been used – machine vision to ensure the quality of the assembly process and to optimize the production process by data analysis. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_Ek2GDWofGQJWIXGUu8jA0YOz",
+      "original_url_claim": "https://aire-edih.eu/en/project/2023-intelligent-robot-assembly-workstation-for-the-production-of-bag-filters/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_Ek2GDWofGQJWIXGUu8jA0YOz",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "aa813195ae309a6d2a89c3f93b39d9d240690c7fe9fab2f4011285466b7e3df5",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_XgQps8wcm90nZkqms8DdAO0p",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of the Applicability of an AI-based Optimization Model for Production Processes using a Digital Twin of the Factory",
+      "description": "The project “Testing of the Applicability of an AI-based Optimization Model for Production Processes using a Digital Twin of the Factory” focuses on adjusting digital models of the factory and using AI to identify and mitigate bottlenecks in production processes. By using Siemens Plant Simualtion software, the project simulates the factory’s actual process times to test a digital twin, enabling production optimization without disrupting real manufacturing. The project utilizes an AI optimization model based on machine learning and data analysis to improve production throughput and resource efficiency. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_XgQps8wcm90nZkqms8DdAO0p",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-the-applicability-of-an-ai-based-optimization-model-for-production-processes-using-a-digital-twin-of-the-factory/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_XgQps8wcm90nZkqms8DdAO0p",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "f2be7e56af78b2da0786f7f5007c7390fe284e52a08481454fd7f7f473b98109",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_eM3VoRok2UPrJ5TKLo3x5d58",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of video stream based pallet movement detection system in realistic production process",
+      "description": "In the current project we validated the efficacy of a video stream-based pallet detection system in collaboration with AS Valdek in a realistic production process scenario. We implemented a custom pallet tracking solution based on Mask DINO model published in 2023, that we amended with a filtering solution. We improved the performance of the models to optimize hardware resource requirements, we managed to go from running 4 simultaneous video streams in a single computer to 15. In addition, we compared the results of the video-based tracking with the data from the information system of the company to, on the one hand detect the quality of detections and, on the other hand, detect imperfections of the data represented in the information system. As a result of the project, the system running in the factory of AS Valdek being able to perform real-time detections. The system needs further development to further filter the detections from video streams in order to use it in production. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_eM3VoRok2UPrJ5TKLo3x5d58",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-video-stream-based-pallet-movement-detection-system-in-realistic-production-process/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_eM3VoRok2UPrJ5TKLo3x5d58",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "ac4636819c70c1def861ff00fe5e8e622d820cc9591bef960a8a4cd13a96f1e8",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_DXkkzvNKFsIbcAD3wgwEZSlI",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of artificial intelligence in the control of a bicycle tire studding machine",
+      "description": "The goal was to propose and test a possible solution using artificial intelligence, where stud slots are detected on the tire tread and studs are installed with the correct orientation. After installing the studs, the artificial intelligence solution also performs quality control to ensure that all corresponding slots are filled and the correct orientation of the studs is ensured. \n\nA model was validated that can be used for image recognition tasks and was suitable for identifying tire elements. The characteristics of the bicycle tire studding process and the capabilities of the studding machine were mapped. Hardware and software solutions were selected according to the requirements of the production environment. The selected artificial intelligence solution was trained and tests were carried out in the laboratory and on a real machine at the company. The artificial intelligence was trained on a production device and sample studding and tests of different tires were performed. In concl",
+      "url": "https://api.aiodp.eu/v2/projects/proj_DXkkzvNKFsIbcAD3wgwEZSlI",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-artificial-intelligence-in-the-control-of-a-bicycle-tire-studding-machine/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_DXkkzvNKFsIbcAD3wgwEZSlI",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "72dd78949725402425381ce06b950cc96150baae4dcb51df0c377801a8cd2912",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_UtzT7Afp6X8HEfbNuyzUujrz",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "ParKinSim, Validating of Parallel Kinematic Simulation based Machine Learning project",
+      "description": "Trajectory planning for typical serial kinematic robotic manipulators using inverse kinematic analyses can be considered trivial. However, there exists a multitude of different complex kinematic mechanisms, that are difficult to analyse using inverse kinematic approach, but which offer unique possibilities for solving different tasks. Mechanisms that use parallel kinematic actuators, or a combination of parallel and serial kinematic actuators, are of particular interest.\nAll such mechanisms can be modelled with CAD tools. It is possible to generate abundant simulated data about how the position and pose of the end of arm tool changes as a result of moving any actuators. Machine learning algorithms can be used for determining the suitable actuator motions to change to position and pose of the EOAT as desired.\nThe current project has a goal to test if such approach to trajectory planning can give usable results. What is the accuracy of the predicted position compared to the desired goal?",
+      "url": "https://api.aiodp.eu/v2/projects/proj_UtzT7Afp6X8HEfbNuyzUujrz",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-parkinsim-validating-of-parallel-kinematic-simulation-based-machine-learning-project/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_UtzT7Afp6X8HEfbNuyzUujrz",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "2bf9ce3c3565278509891e880ad4e26a44468023c4ad15418705dbc2a77667b5",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_pvdOWA5GTKZcE8rMU0snoxbR",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "A follow-up project for testing the robot assembly of intelligent bag filters at the company Vado Filters OÜ",
+      "description": "The novelty of the demo project is the joint handling of non-form-retaining textile materials and solid frame materials by intelligent and flexible robot/assembly robot stations. The active control method detects the performance of the robot’s working organs and checks the quality assurance data with the real ones. Through the analysis and pattern recognition of the collected data, artificial intelligence must be able to make changes to the drafting process. During testing, data will be collected and algorithms created for artificial intelligence to make decisions. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_pvdOWA5GTKZcE8rMU0snoxbR",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-a-follow-up-project-for-testing-the-robot-assembly-of-intelligent-bag-filters-at-the-company-vado-filters-ou/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_pvdOWA5GTKZcE8rMU0snoxbR",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "6eaf7f65c2d1f5dc947d1d04a9465727b44923c1c87fb8264e74678131bea3c6",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_REiJ3gTLKdakjLe952fhSoxN",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Adaptive Digital Twin of custom robotics system for validation of the anomaly detection algorithms",
+      "description": "The project aimed to address the challenge of limited real-time monitoring and safety in CNC manufacturing by testing dashboard solutions and camera-based anomaly detection. Activities focused on validating the effectiveness of real-time parameter tracking and AI-driven safety alerts. While the digital twin concept was explored, a full implementation was not achieved, and several hypotheses remain untested. The project successfully demonstrated the feasibility of certain technologies and established a scalable user interface concept, providing a strong basis for further development and future integration into manufacturing environments. ",
+      "url": "https://api.aiodp.eu/v2/projects/proj_REiJ3gTLKdakjLe952fhSoxN",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-adaptive-digital-twin-of-custom-robotics-system-for-validation-of-the-anomaly-detection-algorithms/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_REiJ3gTLKdakjLe952fhSoxN",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "b807720c108e42d58575194cbb214c840137777488558783d9f50e322514260f",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    },
+    {
+      "id": "aiod:v2:projects:proj_J5Ax7EZy3kbydtW5Y8J8zOej",
+      "type": "catalogue_asset",
+      "asset_type": "projects",
+      "title": "Testing of audio-based and user experience-driven content based on artificial intelligence technology for the time-critical support of children’s mental health",
+      "description": "The project aimed to enhance the Triumfland Saga mental health game with dialogs that are adapted to the needs and cognitive development of a child. The project validated AI technologies to adapt the game’s content based on children’s interactions and emotional states. Activities included developing audio elements, integrating AI models, testing with users, and collecting feedback. The results showed improved user engagement and emotional response, demonstrating the effectiveness of AI-enhanced content and audio feedback in supporting children’s mental health. European AI models were used.",
+      "url": "https://api.aiodp.eu/v2/projects/proj_J5Ax7EZy3kbydtW5Y8J8zOej",
+      "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-audio-based-and-user-experience-driven-content-based-on-artificial-intelligence-technology-for-the-time-critical-support-of-childrens-mental-health/",
+      "platform": "aiod",
+      "platform_resource_identifier": "proj_J5Ax7EZy3kbydtW5Y8J8zOej",
+      "source_page_url": "https://api.aiodp.eu/v2/projects?offset=10&limit=10",
+      "metadata_sha256": "fd149039b6eaf611a24ce036d3abd8b2965a034e545369476e36f35b1ff5ae8e",
+      "evidence_level": "indexed_metadata_only",
+      "new_collaboration_confirmed": false
+    }
+  ],
+  "data_quality": {
+    "grain": "AIoD v2 catalogue record, not unique underlying research project",
+    "description_present": 20,
+    "same_claimed_url_groups": [
+      {
+        "claimed_external_url": "https://aire-edih.eu/en/project/2024-a-follow-up-project-for-testing-the-robot-assembly-of-intelligent-bag-filters-at-the-company-vado-filters-ou/",
+        "aiod_record_ids": [
+          "aiod:v2:projects:proj_btUHkDO5tYPqOxCngsPJwH7d",
+          "aiod:v2:projects:proj_pvdOWA5GTKZcE8rMU0snoxbR"
+        ]
+      },
+      {
+        "claimed_external_url": "https://aire-edih.eu/en/project/2024-testing-of-the-applicability-of-an-ai-based-optimization-model-for-production-processes-using-a-digital-twin-of-the-factory/",
+        "aiod_record_ids": [
+          "aiod:v2:projects:proj_1MVNkveOqhAYqb51E7CF0ZrT",
+          "aiod:v2:projects:proj_XgQps8wcm90nZkqms8DdAO0p"
+        ]
+      }
+    ],
+    "records_in_same_claimed_url_groups": 4,
+    "same_title_groups": [
+      {
+        "normalized_title": "a follow-up project for testing the robot assembly of intelligent bag filters at the company vado filters oü",
+        "aiod_record_ids": [
+          "aiod:v2:projects:proj_btUHkDO5tYPqOxCngsPJwH7d",
+          "aiod:v2:projects:proj_pvdOWA5GTKZcE8rMU0snoxbR"
+        ]
+      },
+      {
+        "normalized_title": "testing of the applicability of an ai-based optimization model for production processes using a digital twin of the factory",
+        "aiod_record_ids": [
+          "aiod:v2:projects:proj_1MVNkveOqhAYqb51E7CF0ZrT",
+          "aiod:v2:projects:proj_XgQps8wcm90nZkqms8DdAO0p"
+        ]
+      }
+    ],
+    "records_in_same_title_groups": 4,
+    "scope": "Sample-only indicators; external identities not verified"
+  },
+  "novel_collaboration_confirmed": false,
+  "limitations": "Bounded REST v2 metadata sample only; a full page does not prove completeness. No semantic matching, person/contact inference, artifact reuse or source-side execution was verified; platform URLs are metadata claims."
+}
