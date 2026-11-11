@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-10T06:09:07.672910+00:00",
+  "generated_at_utc": "2026-11-11T15:12:07.576557+00:00",
   "scope": "Narrow source-audited comparison of HPLT and OpenEuroLLM data-processing code and issues. Curated pairs are hypotheses, not automatically discovered duplicates.",
   "pinned_trees": 3,
   "unique_issues_checked": 8,
@@ -389,13 +389,13 @@
         "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/7",
         "title": "robots.txt",
         "state": "open",
-        "updated_at": "2026-10-15T14:20:29Z",
+        "updated_at": "2026-11-10T08:19:55Z",
         "body_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
         "evidence_field": "body",
         "evidence_sha256": "c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7",
         "phrase": "robots.txt",
         "excerpt": "apt the intermediate step by jaume, interpreting the totality of robots.txt captures (now probably more conservatively then we used to) and",
-        "comments_count_unreviewed": 0
+        "comments_count_unreviewed": 1
       },
       "b": {
         "url": "https://github.com/hplt-project/HPLT-textpipes/issues/17",

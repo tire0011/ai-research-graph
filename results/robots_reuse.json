@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-10T06:09:12.808033+00:00",
+  "generated_at_utc": "2026-11-11T15:12:12.979676+00:00",
   "scope": "Curated code-to-task trace for robots.txt reuse across HPLT and OpenEuroLLM. Literal evidence only; not a runtime correctness or legal compliance audit.",
   "sources_verified": 12,
   "pinned_repositories": 3,
