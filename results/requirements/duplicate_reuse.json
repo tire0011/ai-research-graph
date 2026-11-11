@@ -12,8 +12,8 @@
       "platform": "aiod",
       "requirement": "duplicate_reuse",
       "status": "adjacent",
-      "finding": "AI resources are made discoverable and reusable, but evidence here does not establish automatic duplicate-work detection.",
-      "source_url": "https://www.iais.fraunhofer.de/en/press-events/press-releases/AI-on-Demand_Platform.html"
+      "finding": "AIoD already has an open-source semantic catalogue search project (aiod-enhanced-interaction), including vector search. This is a strong retrieval baseline but does not establish requirement-level duplicate-work detection, artifact compatibility or new human collaborations.",
+      "source_url": "https://github.com/aiondemand/aiod-enhanced-interaction"
     },
     {
       "platform": "eosc",
