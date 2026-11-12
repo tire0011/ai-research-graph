@@ -29,11 +29,13 @@ contacts the teams.
 
 ### First falsification step
 
-A later test (see workflow on the same PR branch) samples **12 disjoint
-shorter blocks × 8 rows per language**, using seed `20261113`.
-It also measures **domain × score** so we can compare the same topical
-categories across languages. A changed estimate will signal sampling
-instability, not a worsening or improvement of the underlying dataset.
+A **planned manually triggered** follow-up samples **8 disjoint shorter
+blocks × 12 rows per language** (seed `20261113`, one-second request pacing)
+and additionally measures **domain × score** to compare matched topics.
+An earlier 12×8 automated attempt was interrupted by the public API's
+HTTP 429 rate limit; it produced no complete data. The workflow now runs
+only offline tests on pushes; live sampling requires deliberate manual dispatch.
+A changed estimate would signal sampling instability, not a change in data quality.
 
 A next-stage experiment needs a revision-pinned, independent
 language/domain/score-stratified sample, human-checked cases and a
