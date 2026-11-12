@@ -8,6 +8,22 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
 
+## Experimental research-intervention review (2026-11-12)
+
+The [research intervention pilot](results/interventions/PILOT.md) reframes
+cross-project matching as **testable actions that might remove a research
+bottleneck**. The first case examines possible reuse of PrefScope to audit
+EuroMultiSynth-Instruct data; a separate note explains why the ongoing Prelude
+long-context EOS investigation should not receive duplicate advice.
+
+Run the optional [offline multi-model review harness](research_interventions.py)
+with [source-backed case input](results/interventions/CONCEPT_AUDIT_CASE.json).
+It prepares three independent prompts (proposer, skeptic, experimenter) and
+validates returned JSON evidence references. **No other LLM has been run here**;
+no automated outreach, model voting, test of scientific benefit or claim of
+unknown collaborators. Tests are in
+[`tests/test_research_interventions.py`](tests/test_research_interventions.py).
+
 ## Workflow
 
 The [Research graph probe](.github/workflows/research-graph.yml) runs on the default branch, manually, and weekly on Monday. It publishes:
