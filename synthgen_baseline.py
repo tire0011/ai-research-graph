@@ -86,6 +86,7 @@ def collect(languages=DEFAULT_LANGUAGES, pages=3, length=25, seed=20261112, fetc
             raise ValueError(f"Unknown language config: {lang}")
         starts = offsets(sizes[lang], pages, length, seed, lang)
         scores, domains = Counter(), Counter()
+        domain_scores = {}
         digest = hashlib.sha256()
         for start in starts:
             payload = fetch(viewer("rows", config=lang, split="train", offset=start, length=length))
@@ -99,12 +100,14 @@ def collect(languages=DEFAULT_LANGUAGES, pages=3, length=25, seed=20261112, fetc
                 seen_ids.add(rid)
                 scores[str(score)] += 1
                 domains[domain] += 1
+                domain_scores.setdefault(domain, Counter())[str(score)] += 1
                 # Hash only: sampled row index/id and original text checksum; no raw content stored.
                 digest.update(f"{wrapper.get('row_idx')}\t{rid}\t{domain}\t{score}\t{text_sha}\n".encode())
         count = pages * length
         data[lang] = {
             "population_rows": sizes[lang], "sample_rows": count, "sample_offsets": starts,
             "scores": dict(sorted(scores.items())), "domains": dict(sorted(domains.items())),
+            "score_by_domain": {k: dict(sorted(v.items())) for k, v in sorted(domain_scores.items())},
             "score_10_share": round(scores["10"] / count, 4), "sample_sha256": digest.hexdigest()
         }
     after = dataset_revision(fetch)
