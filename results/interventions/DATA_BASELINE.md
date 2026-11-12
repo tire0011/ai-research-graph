@@ -1,11 +1,12 @@
 # EuroMultiSynth-Instruct: source-backed baseline before model experiments
 
-**Status (2026-11-12):** The 16 new isolated unit tests passed locally (seven
-independent-review tests and nine new baseline tests). A read-only GitHub
-Actions pilot was started on branch `experiment/concept-phrase-bridge-20261110`:
-[view its runs](https://github.com/tire0011/ai-research-graph/actions/workflows/synthgen-baseline-pilot.yml).
-Live sampled results must be checked from the workflow artifact; they are
-**not** represented here as verified scientific measurements.
+**Status (2026-11-12):** A real-data read-only run
+[completed successfully](https://github.com/tire0011/ai-research-graph/actions/runs/43312918956)
+and is summarized in [LIVE_BASELINE_20261112.md](LIVE_BASELINE_20261112.md).
+The updated 18 tests (seven independent-review and eleven baseline tests)
+also passed in [subsequent CI](https://github.com/tire0011/ai-research-graph/actions/runs/43314001425).
+An expanded live replication hit API rate limits; therefore **pushes now run tests only**,
+and live sampling is manual.
 
 ## Why this baseline
 
