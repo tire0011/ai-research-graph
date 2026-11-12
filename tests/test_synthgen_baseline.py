@@ -58,6 +58,7 @@ class BaselineTests(unittest.TestCase):
         self.assertFalse(output["viewer_revision_pinned"])
         self.assertEqual(output["samples"]["eu"]["sample_rows"],10)
         self.assertEqual(sum(output["samples"]["de"]["scores"].values()),10)
+        self.assertEqual(sum(sum(v.values()) for v in output["samples"]["de"]["score_by_domain"].values()),10)
 
     def test_revision_change_fails(self):
         count = 0
