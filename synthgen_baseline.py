@@ -10,6 +10,8 @@ from collections import Counter
 import hashlib
 import json
 import random
+import time
+from urllib.error import HTTPError
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -21,8 +23,15 @@ DEFAULT_LANGUAGES = ("de", "fr", "eu", "ga")
 
 
 def get_json(url: str) -> dict:
-    with urlopen(Request(url, headers={"User-Agent": "research-graph-baseline/0.1"}), timeout=25) as resp:
-        return json.load(resp)
+    for attempt in range(5):
+        try:
+            with urlopen(Request(url, headers={"User-Agent": "research-graph-baseline/0.1"}), timeout=25) as resp:
+                return json.load(resp)
+        except HTTPError as exc:
+            if exc.code not in {429, 500, 502, 503, 504} or attempt == 4:
+                raise
+            time.sleep(min(8, 0.5 * (2 ** attempt)))
+    raise AssertionError("unreachable")
 
 
 def viewer(path: str, **params) -> str:
