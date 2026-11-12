@@ -105,7 +105,7 @@ Different models do not independently verify factual claims just by agreeing.
 Use [`research_interventions.py`](../../research_interventions.py)
 with the source-backed
 [`CONCEPT_AUDIT_CASE.json`](CONCEPT_AUDIT_CASE.json).
-The script prepares three prompts without calling a model. Review JSON is
+The script prepares three prompts without calling a model or showing the curator's intervention proposal to the independent reviewers. Review JSON is
 checked for valid roles, cited source URLs, and differing model families.
 A successful gate means `human_review_only`, **never "verified impact"**.
 This is a preparation protocol, not an evaluation of model quality.
@@ -113,7 +113,7 @@ This is a preparation protocol, not an evaluation of model quality.
 ## PowerShell pilot
 
 ```powershell
-python -m unittest tests.test_research_interventions -v
+python -m unittest discover -s tests -p "test_research_interventions.py" -v
 python .\research_interventions.py prepare --case .\results\interventions\CONCEPT_AUDIT_CASE.json --dir .\results\interventions\review_run
 Get-Content .\results\interventions\review_run\proposer.prompt.txt -Raw | Set-Clipboard
 ```
