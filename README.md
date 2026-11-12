@@ -21,7 +21,7 @@ with [source-backed case input](results/interventions/CONCEPT_AUDIT_CASE.json).
 It prepares three independent prompts (proposer, skeptic, experimenter) and
 validates returned JSON evidence references. **No other LLM has been run here**;
 no automated outreach, model voting, test of scientific benefit or claim of
-unknown collaborators. Tests are in
+unknown collaborators. The independent prompts can also be executed against **installed local Ollama models** via [the PowerShell 7 runner](tools/run_local_llm_review.ps1), with [editable example model configuration](results/interventions/ollama_models.example.json). Tests are in
 [`tests/test_research_interventions.py`](tests/test_research_interventions.py).
 
 ## Workflow
