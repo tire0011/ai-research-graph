@@ -1,0 +1,33 @@
+name: Synthgen baseline pilot
+on:
+  push:
+    branches: [experiment/concept-phrase-bridge-20261110]
+    paths:
+      - synthgen_baseline.py
+      - tests/test_synthgen_baseline.py
+      - .github/workflows/synthgen-baseline-pilot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test baseline and model-review gate
+        run: |
+          python -m unittest discover -s tests -p 'test_research_interventions.py' -v
+          python -m unittest discover -s tests -p 'test_synthgen_baseline.py' -v
+      - name: Collect bounded real-data summary (four languages, 300 rows)
+        run: |
+          python synthgen_baseline.py --languages de,fr,eu,ga --pages 3 --length 25 --out results/interventions/synthgen_baseline_live.json
+      - name: Upload summary only, never raw prompts
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthgen-baseline-aggregates
+          path: results/interventions/synthgen_baseline_live.json
+          retention-days: 14
