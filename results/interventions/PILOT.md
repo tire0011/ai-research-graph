@@ -129,6 +129,31 @@ Do not publish raw chats or secrets.
 python .\research_interventions.py evaluate --case .\results\interventions\CONCEPT_AUDIT_CASE.json --dir .\results\interventions\review_run
 ```
 
+### Optional: run three installed local models automatically (PowerShell 7)
+
+The manual prompts above are also supported by
+[`tools/run_local_llm_review.ps1`](../../tools/run_local_llm_review.ps1).
+This uses Ollama's local `/api/chat` JSON mode; it will **not download
+models** or contact hosted LLM services. Different model families are
+required for the proposer and skeptic, and the local configuration
+supplies model identity instead of trusting LLM self-reports.
+
+```powershell
+ollama list
+Copy-Item .\results\interventions\ollama_models.example.json .\results\interventions\ollama_models.local.json
+# Edit the three model IDs above to match ollama list; keep family names accurate.
+pwsh -File .\tools\run_local_llm_review.ps1 -Models .\results\interventions\ollama_models.local.json
+```
+
+The command creates a new `results/interventions/review_ollama` folder,
+calls each local model independently and saves both raw JSON reviews and
+`gate.json`. If that directory already exists, specify a different
+`-OutputPath`; previous runs are not overwritten. All claims still
+require direct source inspection and actual technical testing.
+
+**Execution note:** This runner is committed but has **not** been executed
+against Ollama in this environment. It is an optional local next step.
+
 **Current status:** Only the code, tests and source cards have been added.
 This transcript has not executed other model families or a GPU evaluation.
 No external project contacts have been made.
