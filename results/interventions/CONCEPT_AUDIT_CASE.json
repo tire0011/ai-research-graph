@@ -1,0 +1,32 @@
+{
+  "case_id": "oellm-353-437-concept-audit",
+  "question": "Could an independent PrefScope concept audit reveal actionable coverage gaps or unwanted behavior patterns in the released EuroMultiSynth-Instruct data, beyond synthgen's judge score and deduplication?",
+  "facts": [
+    "OpenEuroLLM/Taskboard#437 describes generation, judge filtering and same-language near-duplicate removal for multilingual instruction data.",
+    "The public synthgen run report documents 4,160,598 released rows in 35 languages after quality filtering and near-duplicate removal.",
+    "The PrefScope project associated with OpenEuroLLM/Taskboard#353 can ingest single prompt/response rows, retain language metadata and compute concept-feature statistics.",
+    "PrefScope feature names and activations are hypotheses; numerical correlation is not proof of semantic meaning or causal data quality."
+  ],
+  "unknowns": [
+    "Whether PrefScope has already been applied to EuroMultiSynth-Instruct by the project team or in private discussions.",
+    "Whether the chosen embedding/lens works comparably across selected low-resource languages.",
+    "Whether discovered concept gaps predict real downstream model-quality improvements rather than sampling artifacts.",
+    "Actual execution cost, compatible exact dataset schema and available evaluation benchmarks."
+  ],
+  "evidence_urls": [
+    "https://github.com/OpenEuroLLM/Taskboard/issues/353",
+    "https://github.com/OpenEuroLLM/Taskboard/issues/437",
+    "https://github.com/kargibora/PrefScope",
+    "https://github.com/kargibora/PrefScope/blob/main/prefscope/data/tabular.py",
+    "https://github.com/OpenEuroLLM/synthgen/blob/main/production/35lang_run/RUN.md",
+    "https://huggingface.co/datasets/openeurollm/EuroMultiSynth-Instruct"
+  ],
+  "experiment_proposal": {
+    "intervention": "Offline post-hoc audit only; no retraining and no automatic contact.",
+    "minimum_test": "Check actual dataset schema; sample fixed-seed prompts/responses within 4 languages (2 high-resource, 2 low-resource), record exact dataset revision, and run PrefScope feature summaries.",
+    "comparator": "Existing language-specific judge scores and near-duplicate statistics on the same held-out sample; include hand-labeled control examples.",
+    "falsification": "Stop if concepts are dominated by language artifacts, fail held-out validation, or reveal no stable gap beyond baseline.",
+    "decision_owner": "OpenEuroLLM maintainers; not established that they have not already coordinated",
+    "maturity": "unexecuted_hypothesis"
+  }
+}
