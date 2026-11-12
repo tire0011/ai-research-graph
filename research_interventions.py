@@ -118,6 +118,8 @@ def evaluate(case: dict, review_dir: Path) -> dict:
         status = "gather_evidence"
     elif len(families) < 2:
         status = "needs_other_model_family"
+    elif reviews[0]["model_family"].casefold().strip() == reviews[1]["model_family"].casefold().strip():
+        status = "needs_independent_skeptic"
     else:
         status = "human_review_only"
     return {
