@@ -10,6 +10,14 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 ## Experimental research-intervention review (2026-11-12)
 
+The [first live Synthgen baseline](results/interventions/LIVE_BASELINE_20261112.md)
+identified a striking **sample-level** difference in retained judge scores across
+four languages, but the small contiguous samples are not representative. An
+[alternative multi-model case](results/interventions/SYNTHGEN_CALIBRATION_CASE.json)
+asks whether language-specific score calibration or sampling confounds should
+be investigated **before** an expensive PrefScope concept audit.
+[Baseline methodology and manual follow-up](results/interventions/DATA_BASELINE.md).
+
 The [research intervention pilot](results/interventions/PILOT.md) reframes
 cross-project matching as **testable actions that might remove a research
 bottleneck**. The first case examines possible reuse of PrefScope to audit
