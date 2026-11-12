@@ -9,6 +9,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: synthgen-baseline-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   baseline:
     runs-on: ubuntu-latest
@@ -25,9 +28,12 @@ jobs:
       - name: Collect bounded real-data summary (four languages, 300 rows)
         run: |
           python synthgen_baseline.py --languages de,fr,eu,ga --pages 3 --length 25 --out results/interventions/synthgen_baseline_live.json
+      - name: Independent wider-spread replication (four languages, 384 rows)
+        run: |
+          python synthgen_baseline.py --languages de,fr,eu,ga --pages 12 --length 8 --seed 20261113 --out results/interventions/synthgen_baseline_replication.json
       - name: Upload summary only, never raw prompts
         uses: actions/upload-artifact@v4
         with:
           name: synthgen-baseline-aggregates
-          path: results/interventions/synthgen_baseline_live.json
+          path: results/interventions/synthgen_baseline_*.json
           retention-days: 14
