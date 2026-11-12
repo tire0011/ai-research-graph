@@ -85,7 +85,7 @@ def normalized(row: dict, lang: str) -> tuple[str, str, int, str]:
     return rid, domain, score, hashlib.sha256((messages[0]["content"] + "\0" + messages[1]["content"]).encode()).hexdigest()
 
 
-def collect(languages=DEFAULT_LANGUAGES, pages=3, length=25, seed=20261112, fetch=get_json) -> dict:
+def collect(languages=DEFAULT_LANGUAGES, pages=3, length=25, seed=20261112, fetch=get_json, pause_seconds=0.0) -> dict:
     sizes = split_sizes(fetch)
     before = dataset_revision(fetch)
     data = {}
@@ -99,6 +99,8 @@ def collect(languages=DEFAULT_LANGUAGES, pages=3, length=25, seed=20261112, fetc
         digest = hashlib.sha256()
         for start in starts:
             payload = fetch(viewer("rows", config=lang, split="train", offset=start, length=length))
+            if pause_seconds > 0:
+                time.sleep(pause_seconds)
             rows = payload.get("rows")
             if not isinstance(rows, list) or len(rows) != length:
                 raise ValueError(f"Incomplete page for {lang} offset={start}")
@@ -142,11 +144,14 @@ def main(argv=None) -> int:
     p.add_argument("--pages", type=int, default=3)
     p.add_argument("--length", type=int, default=25)
     p.add_argument("--seed", type=int, default=20261112)
+    p.add_argument("--pause-seconds", type=float, default=0.0)
     a = p.parse_args(argv)
     languages = tuple(x.strip() for x in a.languages.split(","))
     if not all(languages) or len(set(languages)) != len(languages):
         p.error("Languages must be nonempty and unique")
-    result = collect(languages, a.pages, a.length, a.seed)
+    if a.pause_seconds < 0 or a.pause_seconds > 30:
+        p.error("pause-seconds must be between 0 and 30")
+    result = collect(languages, a.pages, a.length, a.seed, pause_seconds=a.pause_seconds)
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"dataset": DATASET, "languages": list(result["samples"]), "rows": sum(x["sample_rows"] for x in result["samples"].values()), "out": str(a.out)}))
