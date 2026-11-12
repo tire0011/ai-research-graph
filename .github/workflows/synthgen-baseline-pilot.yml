@@ -25,15 +25,14 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_research_interventions.py' -v
           python -m unittest discover -s tests -p 'test_synthgen_baseline.py' -v
-      - name: Collect bounded real-data summary (four languages, 300 rows)
+      - name: Sample wider-spread real data (manual dispatch only)
+        if: github.event_name == 'workflow_dispatch'
         run: |
-          python synthgen_baseline.py --languages de,fr,eu,ga --pages 3 --length 25 --out results/interventions/synthgen_baseline_live.json
-      - name: Independent wider-spread replication (four languages, 384 rows)
-        run: |
-          python synthgen_baseline.py --languages de,fr,eu,ga --pages 12 --length 8 --seed 20261113 --out results/interventions/synthgen_baseline_replication.json
+          python synthgen_baseline.py --languages de,fr,eu,ga --pages 8 --length 12 --seed 20261113 --pause-seconds 1 --out results/interventions/synthgen_baseline_replication.json
       - name: Upload summary only, never raw prompts
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: synthgen-baseline-aggregates
-          path: results/interventions/synthgen_baseline_*.json
+          name: synthgen-baseline-followup
+          path: results/interventions/synthgen_baseline_replication.json
           retention-days: 14
