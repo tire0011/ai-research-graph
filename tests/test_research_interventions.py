@@ -30,6 +30,7 @@ class InterventionReviewTests(unittest.TestCase):
             prepare(CASE, folder)
             self.assertEqual(len(list(folder.glob("*.prompt.txt"))), 3)
             self.assertIn("Do not see or infer other model answers", prompt(CASE, "skeptic"))
+            self.assertNotIn("NEVER_SHOW", prompt({**CASE, "experiment_proposal": {"hint": "NEVER_SHOW"}}, "skeptic"))
             self.assertFalse((folder / "proposer.json").exists())
 
     def test_cross_family_requires_human_review(self):
@@ -55,6 +56,13 @@ class InterventionReviewTests(unittest.TestCase):
             for role in ("proposer", "skeptic", "experimenter"):
                 (folder / f"{role}.json").write_text(json.dumps(review(role, "A")))
             self.assertEqual(evaluate(CASE, folder)["gate"], "needs_other_model_family")
+
+    def test_skeptic_must_be_other_family(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder = Path(d)
+            for role, family in zip(("proposer", "skeptic", "experimenter"), ("A", "A", "B")):
+                (folder / f"{role}.json").write_text(json.dumps(review(role, family)))
+            self.assertEqual(evaluate(CASE, folder)["gate"], "needs_independent_skeptic")
 
     def test_wrong_source_rejected(self):
         with tempfile.TemporaryDirectory() as d:
