@@ -25,6 +25,7 @@ The [Research graph probe](.github/workflows/research-graph.yml) runs on the def
 - [`results/OPPORTUNITIES.md`](results/OPPORTUNITIES.md): a small **human-review queue** of evidence-backed opportunities with responsible public GitHub contacts, proposed verification and clickable original sources; no messages or labels are sent.
 - [`QA_AI_REVIEW.md`](QA_AI_REVIEW.md): the first one-time AI answer trial, including evidence limits and cases that require abstention.
 - [`CASE_STUDY_OPENTHINKER3.md`](CASE_STUDY_OPENTHINKER3.md): a deeper end-to-end investigation of a real reproduction objective, including data-processing evidence and missing experimental provenance.
+- [`EU_AI_ACCELERATION.md`](EU_AI_ACCELERATION.md): a strategy note on where the levers are to accelerate AI development in the EU, grounded in this repository's measured evidence and public EU programs; hypotheses with falsification conditions, not measured impact.
 
 It uses only public endpoints and the built-in GitHub Actions token. No local PC or GPU is required. The GitHub token is used only for read access to source issues and committing generated results to this repository.
 
