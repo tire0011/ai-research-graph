@@ -33,6 +33,7 @@ researcher's priority and spare capacity must be learned from them, not inferred
   **4,160,598** rows; columns `id`, `language`, `messages` (user / assistant),
   `domain`, `persona` and `judge_score` (retained scores 7–10).
   License: Apache-2.0 in the dataset card.
+- **Potential measurement gap:** the public dataset card reports that **77.7% of retained rows have judge_score=10**, limiting score discrimination *within the released subset*. This is not proof of poor judging: the upstream quality filter selected these rows. The proposed audit must compare against this existing field and against separate human-labeled controls.
 - PrefScope's [table mapper](https://github.com/kargibora/PrefScope/blob/main/prefscope/data/tabular.py)
   understands roles such as `user:first` / `assistant:last` and
   records model/data provenance. This suggests a small input-format bridge;
