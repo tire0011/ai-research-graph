@@ -1,7 +1,9 @@
 """No-network synthetic fixtures, never interpreted as real dataset measurements."""
 import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
 from urllib.parse import parse_qs, urlparse
-from synthgen_baseline import collect, dataset_revision, normalized, offsets, split_sizes
+from synthgen_baseline import get_json, collect, dataset_revision, normalized, offsets, split_sizes
 
 SHA = "a" * 40
 
@@ -70,6 +72,24 @@ class BaselineTests(unittest.TestCase):
             return fake_api(url)
         with self.assertRaisesRegex(ValueError,"revision changed"):
             collect(("de",),pages=2,length=5,fetch=modified)
+
+    def test_retry_transient_502(self):
+        from io import BytesIO
+        with patch("synthgen_baseline.urlopen", side_effect=[
+            HTTPError("https://example.test", 502, "Bad Gateway", {}, None),
+            BytesIO(b'{"ok": true}')
+        ]) as call, patch("synthgen_baseline.time.sleep") as sleep:
+            self.assertEqual(get_json("https://example.test"), {"ok": True})
+            self.assertEqual(call.call_count, 2)
+            sleep.assert_called_once()
+
+    def test_no_retry_on_404(self):
+        with patch("synthgen_baseline.urlopen", side_effect=HTTPError(
+            "https://example.test", 404, "Not Found", {}, None
+        )) as call, patch("synthgen_baseline.time.sleep") as sleep:
+            with self.assertRaises(HTTPError): get_json("https://example.test")
+            self.assertEqual(call.call_count, 1)
+            sleep.assert_not_called()
 
     def test_incomplete_page_fails(self):
         def modified(url):
