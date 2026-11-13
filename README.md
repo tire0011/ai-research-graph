@@ -10,6 +10,8 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 ## Experimental research-intervention review (2026-11-12)
 
+A [decision-focused experiment proposal](results/interventions/JUDGE_OR_GENERATOR_DECISION.md) connects the already-known Irish judge-pass-rate gap with closed multilingual data-quality work (#32) and existing SFT findings (#186). It asks whether the next intervention should improve the **generator, the judge, or the evaluation design**, and explicitly flags that the published release contains no rejected rows.
+
 The [first live Synthgen baseline](results/interventions/LIVE_BASELINE_20261112.md)
 identified a striking **sample-level** difference in retained judge scores across
 four languages, but the small contiguous samples are not representative. An
