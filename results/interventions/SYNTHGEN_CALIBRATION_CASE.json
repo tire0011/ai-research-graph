@@ -6,14 +6,18 @@
     "A read-only pilot sampled three 25-row contiguous blocks per language. In these 75-row samples, score 10 appeared 74 times in German, 71 in French, 6 in Basque and 23 in Irish. These are observations of four small clustered samples, NOT population estimates.",
     "Topic composition varied heavily in sampled blocks: coding accounted for 33/75 German, 10/75 French, 26/75 Basque and 52/75 Irish rows.",
     "The baseline script verifies dataset fields and revision before/after the API sampling, but the public dataset-viewer pages cannot be pinned to the exact Hub commit.",
-    "The same project has an independent concept-analysis toolkit named PrefScope, which can analyze prompt/response concepts but has not been shown here to detect true quality errors."
+    "The same project has an independent concept-analysis toolkit named PrefScope, which can analyze prompt/response concepts but has not been shown here to detect true quality errors.",
+    "The original production findings explicitly flagged Irish judge pass rate 8.3% versus 99.0% German in an earlier partial evaluation. This is an already-recognized problem, not a novel discovery.",
+    "Taskboard #32 (closed) explored multilingual quality classification and human-labeled Basque examples for pretraining; its methodology might inform SFT judging, but its trained classifier is not interchangeable.",
+    "Taskboard #345 documented limited independent backtranslation checks; Taskboard #186 contains multilingual SFT performance comparisons and shows more multilingual data is not automatically better."
   ],
   "unknowns": [
     "Whether the score distributions persist in a revision-pinned and domain-balanced sample.",
     "Whether judge scores are calibrated comparably across languages or affected by topic mix.",
     "Whether human experts independently agree on language-specific quality of scored examples.",
     "Whether ongoing OpenEuroLLM efforts already conduct such a calibration study.",
-    "Whether a concept analysis would add insight beyond a simple manual independent quality audit."
+    "Whether a concept analysis would add insight beyond a simple manual independent quality audit.",
+    "The public release is truncated at judge_score >=7, so rejected examples needed to attribute pass-rate differences are not observable from the release alone."
   ],
   "evidence_urls": [
     "https://huggingface.co/datasets/openeurollm/EuroMultiSynth-Instruct",
@@ -21,13 +25,17 @@
     "https://github.com/OpenEuroLLM/Taskboard/issues/437",
     "https://github.com/OpenEuroLLM/Taskboard/issues/353",
     "https://github.com/tire0011/ai-research-graph/actions/runs/43312918956",
-    "https://github.com/tire0011/ai-research-graph/blob/experiment/concept-phrase-bridge-20261110/results/interventions/LIVE_BASELINE_20261112.md"
+    "https://github.com/tire0011/ai-research-graph/blob/experiment/concept-phrase-bridge-20261110/results/interventions/LIVE_BASELINE_20261112.md",
+    "https://github.com/OpenEuroLLM/Taskboard/issues/32",
+    "https://github.com/OpenEuroLLM/Taskboard/issues/345",
+    "https://github.com/OpenEuroLLM/Taskboard/issues/186",
+    "https://github.com/OpenEuroLLM/synthgen/blob/main/production/35lang_run/FINDINGS.md"
   ],
   "experiment_proposal": {
     "maturity": "unexecuted_hypothesis",
-    "first_gate": "Repeat source-pinned, widely spaced domain-balanced sampling and test whether score distribution differences remain within matched domains.",
-    "second_gate": "Conduct an independently rated small blinded human-language audit of selected high/low score bins.",
-    "alternative": "Test whether the metadata-and-human-audit baseline suffices before adding PrefScope SAE-based concept discovery.",
-    "stop_rule": "Stop or change direction if observed differences disappear under domain balancing or lack reliable independent quality labels."
+    "first_gate": "Use a pinned released-data sample plus 20 independently checked meaning-equivalent multilingual anchor task/answer pairs; compare independent model judge scores and language/domain effects, with blind human checks.",
+    "second_gate": "If evidence survives controls, request only a small original pre-filter accepted+rejected sample from the team (or a local aggregate check) to distinguish generator failures from judge calibration.",
+    "alternative": "Reuse the cross-language experimental protocol and human-annotation expertise in closed #32, not its pretraining-specific classifier; defer PrefScope SAE audit.",
+    "stop_rule": "No claim of judge bias without human-checked equivalence; abstain if authentic Irish/Basque reviewer or original rejected data is unavailable."
   }
 }
