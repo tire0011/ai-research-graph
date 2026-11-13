@@ -8,6 +8,34 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
 
+## Experimental research-intervention review (2026-11-12)
+
+The [four-language European IFEval source-alignment pilot](results/interventions/IFEVAL_ALIGNMENT_REVIEW.md) offers a narrower **objective instruction-following** control, with 197 strictly metadata-aligned tasks and 20 candidate checks. A pinned [read-only audit script](ifeval_alignment.py), eight offline tests and a [successful GitHub Actions run](https://github.com/tire0011/ai-research-graph/actions/runs/43445610677) validate the source alignment. **This is not evidence about the Synthgen judge's general quality scoring**; OpenEuroLLM already has IFEval support, so no replacement evaluator is proposed.
+
+A [decision-focused experiment proposal](results/interventions/JUDGE_OR_GENERATOR_DECISION.md) connects the already-known Irish judge-pass-rate gap with closed multilingual data-quality work (#32) and existing SFT findings (#186). It asks whether the next intervention should improve the **generator, the judge, or the evaluation design**, and explicitly flags that the published release contains no rejected rows.
+
+The [first live Synthgen baseline](results/interventions/LIVE_BASELINE_20261112.md)
+identified a striking **sample-level** difference in retained judge scores across
+four languages, but the small contiguous samples are not representative. An
+[alternative multi-model case](results/interventions/SYNTHGEN_CALIBRATION_CASE.json)
+asks whether language-specific score calibration or sampling confounds should
+be investigated **before** an expensive PrefScope concept audit.
+[Baseline methodology and manual follow-up](results/interventions/DATA_BASELINE.md).
+
+The [research intervention pilot](results/interventions/PILOT.md) reframes
+cross-project matching as **testable actions that might remove a research
+bottleneck**. The first case examines possible reuse of PrefScope to audit
+EuroMultiSynth-Instruct data; a separate note explains why the ongoing Prelude
+long-context EOS investigation should not receive duplicate advice.
+
+Run the optional [offline multi-model review harness](research_interventions.py)
+with [source-backed case input](results/interventions/CONCEPT_AUDIT_CASE.json).
+It prepares three independent prompts (proposer, skeptic, experimenter) and
+validates returned JSON evidence references. **No other LLM has been run here**;
+no automated outreach, model voting, test of scientific benefit or claim of
+unknown collaborators. The independent prompts can also be executed against **installed local Ollama models** via [the PowerShell 7 runner](tools/run_local_llm_review.ps1), with [editable example model configuration](results/interventions/ollama_models.example.json). Tests are in
+[`tests/test_research_interventions.py`](tests/test_research_interventions.py).
+
 ## Workflow
 
 The [Research graph probe](.github/workflows/research-graph.yml) runs on the default branch, manually, and weekly on Monday. It publishes:
@@ -179,4 +207,71 @@ The [public coordination check](collaboration_coordination.py) now re-reads each
 The matcher runs inside the existing cross-project audit workflow on a weekly/manual schedule and on code changes. It does **not** post comments, send messages, infer that closed PRs were merged, or claim a historic issue is solved. This initial candidate finder is limited to GitHub. Hugging Face and OpenAIRE remain important for a later *cross-platform* evaluation, but must not be represented as covered by this test.
 
 **The measurement that matters next:** ask a reviewer who did not prepare the candidates to label both matcher suggestions *and* same-input full-text search results as actionable reuse, already-coordinated related work or irrelevant. Record precision and useful unique discoveries; compare against the baseline before investing in a graph service, MCP endpoint or LLM ranking. Current benchmark ties are real and do **not** justify a permanent service by themselves.
+
+### Exploratory concept-phrase bridge (separate experiment)
+
+The technical vocabulary gate misses some cross-project work-product relationships. The optional [concept-phrase probe](concept_bridge_probe.py) explores **rare, adjacent two-word phrases anchored in an active issue title**, including simple singular/plural normalization. It rechecks the selected original source bodies, carries a same-input lexical baseline, and leaves existing technical matches untouched. Run it manually with `python concept_bridge_probe.py`; it has no scheduled workflow and does not contact anyone.
+
+The [first non-blinded case review](results/CONCEPT_BRIDGE_FIRST_REVIEW.md) documents an OpenEuroLLM model-card reporting task and an earlier, unanswered proposal in LAION's benchmark issue tracker. This hypothesis **was identified manually before the phrase probe was implemented**. Recovering it is a replay check, not an independent discovery or measured accuracy gain. The first two-repository probe also surfaced generic or misleading pairs; an independent reviewer and a frozen future holdout are needed before any wider rollout.
+
+### Requirement-level collaboration triage (manual experiment)
+
+The next question is whether tasks are **potentially duplicative**, have a
+**specific complementary handoff**, or could benefit from an **independent
+third-party artifact**. Shared terms and benchmark names are not enough.
+The [expanded source registry](collaboration_expanded_sources.json) adds
+OpenEuroLLM's eval work, HPLT-WP4 and AllenAI's `olmo-eval`, without changing
+the production source registry or scheduled matcher.
+
+The [second case review](results/COLLABORATION_REVIEW_NEXT_CASES.md) examines
+long-context training vs. already-implemented state-tracking evaluations, and
+different Arena-Hard scoring/contamination tasks. The optional
+[evidence review CLI](collaboration_review.py) first re-fetches the full
+original issue/PR bodies, can inspect public coordination, and checks an
+independent reviewer or local LLM's **exact source quotations** and proposed
+technical handoff. See the [review protocol](COLLABORATION_REVIEW_PROTOCOL.md)
+for local commands and JSON schema. Model judgments of maturity and practical
+compatibility are *not* certified by exact-quote validation. No automatic
+contact, no novelty claim and no measured ranking improvement.
+
+### European platform and requirement comparison (separate source layer)
+
+The optional [European ecosystem source registry](ecosystem_sources.json)
+records **AI-on-Demand (AIoD), EOSC EU Node, AI4EOSC and EOSC-ARENA**, using
+official platform documentation, including known relations among them. AIoD's
+metadata catalogue provides a documented [REST API](https://aiondemand.github.io/AIOD-rest-api/)
+and [Python SDK](https://aiondemand.github.io/aiondemand/). The separate,
+bounded [AIoD source pilot](AIOD_SOURCE_ADAPTER.md) can now **request public
+REST v2 catalogue metadata** and compare it lexically with the stored GitHub
+snapshot; the live **AIoD v2 public listing endpoint was verified** on
+2026-11-11 in three bounded samples. See
+[pilot findings](results/aiod/PILOT_FINDINGS.md) for coverage, duplicate
+metadata and false-positive limitations. No EOSC adapter is implemented. AIoD also has its own
+[semantic search project](https://github.com/aiondemand/aiod-enhanced-interaction),
+which must be considered a retrieval baseline rather than rebuilt by default.
+The second [targeted search pilot](results/aiod/TARGETED_REVIEW.md) verifies
+five live, open OpenEuroLLM requirements against AIoD search. It retrieves
+42 issue-specific results from 15 bounded search calls, but identifies **zero
+verified technical handoffs or newly collaborating teams**; single-word
+matches dominate. The [search script](aiod_targeted_search.py) and its
+results are separate from the production matcher and scheduled workflows.
+EOSC-ARENA publicly plans agent-to-agent interoperability; this is a proposed
+work package, *not* proof that a usable integration has shipped.
+
+Run `python ecosystem_requirements.py` to regenerate **six requirement-specific
+JSON and Markdown reports** and a combined
+[comparison matrix](results/requirements/OVERVIEW.md). Requirement domains are:
+resource/people discovery, duplicate work/reuse, human–agent coordination,
+interoperability, joint model work and evidence/provenance. The report links
+three earlier GitHub candidate case reviews to relevant domains without
+silently promoting them to confirmed collaborations. Machine-readable
+[comparison JSON](results/requirements/comparison.json) preserves official URLs,
+documented/planned/adjacent evidence and explicit existing relationships.
+
+The static evidence snapshot was reviewed on 2026-11-11. The pilot limits
+pagination, uses v2 resource IDs and records metadata SHA256; a live bounded
+API response and nested project descriptions were confirmed. Authentication,
+full catalogue coverage, licensing and change detection remain unverified.
+**Platform coverage is not a score; missing evidence is not
+evidence of a missing feature.**
 

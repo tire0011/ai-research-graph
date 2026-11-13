@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "human_agent_coordination",
+    "title": "Connect humans and agents",
+    "question": "Can relevant humans/agents be notified and coordinate work across teams and systems?",
+    "acceptance": "Show a consented, auditable cross-team handoff and whether participants were already coordinating."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "human_agent_coordination",
+      "status": "adjacent",
+      "finding": "Ecosystem mapping and RAIL support research collaboration; no cross-platform autonomous agent trigger protocol verified.",
+      "source_url": "https://www.iais.fraunhofer.de/en/press-events/press-releases/AI-on-Demand_Platform.html"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "human_agent_coordination",
+      "status": "adjacent",
+      "finding": "Federated collaboration, shared services and access are documented, not automatic human-agent or agent-agent matching.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/support/getting-started-eosc-eu-node"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "human_agent_coordination",
+      "status": "adjacent",
+      "finding": "AI-module composition and common APIs exist, but the documented module infrastructure alone is not an agent-to-agent conversation network.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/getting-started/overview.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "human_agent_coordination",
+      "status": "planned",
+      "finding": "Work package 6 explicitly plans composable agents and an agent-to-agent interoperability protocol; deliverables are still in preparation.",
+      "source_url": "https://arena.ai4eosc.eu/project-deliverables/"
+    }
+  ],
+  "cross_project_cases": [
+    {
+      "id": "model_card_provenance",
+      "title": "Model-card reporting / benchmark provenance",
+      "requirements": [
+        "duplicate_reuse",
+        "provenance",
+        "human_agent_coordination"
+      ],
+      "classification": "complementary_hypothesis",
+      "finding": "OpenEuroLLM needs model-card reports; LAION has an optional audit-manifest proposal. Code compatibility and maintainer interest are not established.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+        "https://github.com/LAION-AI/CLIP_benchmark/issues/153"
+      ]
+    }
+  ],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

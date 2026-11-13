@@ -1,0 +1,31 @@
+name: European IFEval alignment audit
+on:
+  push:
+    branches: [experiment/concept-phrase-bridge-20261110]
+    paths:
+      - ifeval_alignment.py
+      - tests/test_ifeval_alignment.py
+      - .github/workflows/ifeval-alignment-pilot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  alignment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run independent offline alignment tests
+        run: python -m unittest discover -s tests -v
+      - name: Audit four upstream files at pinned revision (read-only)
+        run: |
+          python ifeval_alignment.py --fetch --source-dir ./ifeval_audit_source --out results/interventions/IFEVAL_ALIGNMENT_LIVE.json
+      - name: Keep aggregate IDs and hashes only
+        uses: actions/upload-artifact@v4
+        with:
+          name: ifeval-four-language-constraints
+          path: results/interventions/IFEVAL_ALIGNMENT_LIVE.json
+          retention-days: 14

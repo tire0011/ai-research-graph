@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "duplicate_reuse",
+    "title": "Spot duplicate work and reuse",
+    "question": "Are independent teams solving the same requirement, and can one reuse a specific artifact?",
+    "acceptance": "Name both requirements, implementation maturity, transferable artifact and technical mismatch; human confirms relevance."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "duplicate_reuse",
+      "status": "adjacent",
+      "finding": "AIoD already has an open-source semantic catalogue search project (aiod-enhanced-interaction), including vector search. This is a strong retrieval baseline but does not establish requirement-level duplicate-work detection, artifact compatibility or new human collaborations.",
+      "source_url": "https://github.com/aiondemand/aiod-enhanced-interaction"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "duplicate_reuse",
+      "status": "adjacent",
+      "finding": "Software and workflows can be found and reused, but documented discovery is not itself a duplicate-work detector.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/support/frequently-asked-questions"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "duplicate_reuse",
+      "status": "adjacent",
+      "finding": "Reusable modules and common APIs support implementation reuse, not automated discovery of overlapping team requirements.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/getting-started/overview.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "duplicate_reuse",
+      "status": "adjacent",
+      "finding": "Planned agent marketplace and knowledge services may help reuse, but no implemented duplicate-work matcher is demonstrated.",
+      "source_url": "https://arena.ai4eosc.eu/project-deliverables/"
+    }
+  ],
+  "cross_project_cases": [
+    {
+      "id": "model_card_provenance",
+      "title": "Model-card reporting / benchmark provenance",
+      "requirements": [
+        "duplicate_reuse",
+        "provenance",
+        "human_agent_coordination"
+      ],
+      "classification": "complementary_hypothesis",
+      "finding": "OpenEuroLLM needs model-card reports; LAION has an optional audit-manifest proposal. Code compatibility and maintainer interest are not established.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+        "https://github.com/LAION-AI/CLIP_benchmark/issues/153"
+      ]
+    },
+    {
+      "id": "long_context_tests",
+      "title": "256k context extension / StateBench",
+      "requirements": [
+        "duplicate_reuse",
+        "joint_model_work"
+      ],
+      "classification": "complementary_hypothesis",
+      "finding": "OpenEuroLLM's ongoing 256k model extension could potentially use AllenAI's merged long-context state-tracking evaluations; runner compatibility is unknown.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/392",
+        "https://github.com/allenai/olmo-eval/pull/358"
+      ]
+    },
+    {
+      "id": "arena_hard_contamination",
+      "title": "Arena-Hard v2 / contamination exclusion",
+      "requirements": [
+        "duplicate_reuse",
+        "provenance"
+      ],
+      "classification": "shared_problem",
+      "finding": "Both teams address Arena-Hard v2, but one implements pairwise scoring and the other cleans contaminated results. Neither duplicate code nor a transferable contract is proven.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/oellm-eval/pull/174",
+        "https://github.com/allenai/olmo-eval/pull/474"
+      ]
+    }
+  ],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

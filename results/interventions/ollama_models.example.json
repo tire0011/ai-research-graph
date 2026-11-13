@@ -1,0 +1,14 @@
+{
+  "proposer": {
+    "model": "REPLACE_WITH_INSTALLED_QWEN_MODEL",
+    "family": "qwen"
+  },
+  "skeptic": {
+    "model": "REPLACE_WITH_INSTALLED_GEMMA_MODEL",
+    "family": "gemma"
+  },
+  "experimenter": {
+    "model": "REPLACE_WITH_INSTALLED_THIRD_MODEL",
+    "family": "mistral"
+  }
+}
