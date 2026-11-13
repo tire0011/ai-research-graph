@@ -2,7 +2,7 @@
 
 This is **source verification**, not an automated LLM response. The listed evidence is the minimal context an AI agent could receive; a language model must still be evaluated separately.
 
-Graph snapshot: `2026-11-10T08:30:22.171016+00:00` UTC. Passed: **4/4** evidence checks.
+Graph snapshot: `2026-11-13T19:33:08.963869+00:00` UTC. Passed: **4/4** evidence checks.
 
 ## openthoughts_bridge
 
