@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run independent offline alignment tests
-        run: python -m unittest discover -s tests -p 'test_ifeval_alignment.py' -v
+        run: python -m unittest discover -s tests -v
       - name: Audit four upstream files at pinned revision (read-only)
         run: |
           python ifeval_alignment.py --fetch --source-dir ./ifeval_audit_source --out results/interventions/IFEVAL_ALIGNMENT_LIVE.json
