@@ -1,6 +1,6 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-10T08:30:22.171016+00:00`. Evaluated: `2026-11-10T08:33:08.844535+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-13T19:33:08.963869+00:00`. Evaluated: `2026-11-13T19:35:17.127052+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
 
 Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
@@ -42,7 +42,7 @@ Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-referen
 
 ### github:OpenEuroLLM/Taskboard#442 — Investigate performance gap between current and Marianna's pipeline
 
-Live issue state: `open`. Body versus graph: `exact_parity`. GitHub task-reference edges from this issue: **0**. Issue-body SHA256: `c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d`.
+Live issue state: `closed`. Body versus graph: `exact_parity`. GitHub task-reference edges from this issue: **0**. Issue-body SHA256: `ad5a17676b4198296557197aa63670eba4225d61f788eca8cad39fd8f40308fe`.
 
 - [body evidence](https://github.com/OpenEuroLLM/Taskboard/issues/442): `before / after chat template fix` — The issue requests a controlled comparison to address a confounding factor.
 - [comment evidence](https://github.com/OpenEuroLLM/Taskboard/issues/442#issuecomment-6635516812): `84.6%` — The comment reports forced-thinking MATH500 accuracy.

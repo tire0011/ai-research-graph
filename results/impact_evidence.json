@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "evaluated_utc": "2026-11-10T08:33:08.844535+00:00",
-  "snapshot_utc": "2026-11-10T08:30:22.171016+00:00",
+  "evaluated_utc": "2026-11-13T19:35:17.127052+00:00",
+  "snapshot_utc": "2026-11-13T19:33:08.963869+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
@@ -142,9 +142,9 @@
       "candidate": "Isolate the chat-template/thinking-adherence effect with a same-base control.",
       "next_check": "Report same-base accuracy and generated-token costs; quality gains are not throughput gains.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
-      "source_updated_at": "2026-11-09T11:04:17Z",
-      "source_sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
-      "live_state": "open",
+      "source_updated_at": "2026-11-13T08:52:13Z",
+      "source_sha256": "ad5a17676b4198296557197aa63670eba4225d61f788eca8cad39fd8f40308fe",
+      "live_state": "closed",
       "title": "Investigate performance gap between current and Marianna's pipeline",
       "issue_author": "geoalgo",
       "assignees": [
@@ -157,8 +157,8 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/442",
-          "updated_at": "2026-11-09T11:04:17Z",
-          "sha256": "c8fb2d8fafecd4da87af75d3acf92171d5168e39a9f3618749e87caa44cec38d",
+          "updated_at": "2026-11-13T08:52:13Z",
+          "sha256": "ad5a17676b4198296557197aa63670eba4225d61f788eca8cad39fd8f40308fe",
           "matched_text": "before / after chat template fix",
           "meaning": "The issue requests a controlled comparison to address a confounding factor."
         },
@@ -366,7 +366,7 @@
       "candidate": "Generate model-card tables and plots automatically from the evaluation dataset.",
       "next_check": "Compare time-to-publish and correction rates before and after automation.",
       "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
-      "source_updated_at": "2026-11-06T16:57:02Z",
+      "source_updated_at": "2026-11-10T16:34:35Z",
       "source_sha256": "05a981a03488774b06a6995f3d8120ee921d441da1c175c80e9c516bc1f97a6c",
       "live_state": "open",
       "title": "Automatic evaluation reporting for model card",
@@ -381,7 +381,7 @@
         {
           "source": "body",
           "url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
-          "updated_at": "2026-11-06T16:57:02Z",
+          "updated_at": "2026-11-10T16:34:35Z",
           "sha256": "05a981a03488774b06a6995f3d8120ee921d441da1c175c80e9c516bc1f97a6c",
           "matched_text": "a single script which generates model card table",
           "meaning": "The task defines a concrete automation goal but reports no saved time."
