@@ -10,6 +10,8 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 ## Experimental research-intervention review (2026-11-12)
 
+The [four-language European IFEval source-alignment pilot](results/interventions/IFEVAL_ALIGNMENT_REVIEW.md) offers a narrower **objective instruction-following** control, with 197 strictly metadata-aligned tasks and 20 candidate checks. A pinned [read-only audit script](ifeval_alignment.py), eight offline tests and a [successful GitHub Actions run](https://github.com/tire0011/ai-research-graph/actions/runs/43445610677) validate the source alignment. **This is not evidence about the Synthgen judge's general quality scoring**; OpenEuroLLM already has IFEval support, so no replacement evaluator is proposed.
+
 A [decision-focused experiment proposal](results/interventions/JUDGE_OR_GENERATOR_DECISION.md) connects the already-known Irish judge-pass-rate gap with closed multilingual data-quality work (#32) and existing SFT findings (#186). It asks whether the next intervention should improve the **generator, the judge, or the evaluation design**, and explicitly flags that the published release contains no rejected rows.
 
 The [first live Synthgen baseline](results/interventions/LIVE_BASELINE_20261112.md)
