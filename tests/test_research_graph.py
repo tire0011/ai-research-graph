@@ -72,6 +72,37 @@ class ResearchGraphTests(unittest.TestCase):
                          {"repository_issue_number", "github_pull_url"})
         self.assertEqual(missing, [])
 
+    def test_markdown_labels_are_not_false_local_task_links(self):
+        # Real failure pattern in OpenEuroLLM/Taskboard#450: the numbers in
+        # link labels name oellm-eval tasks, not Taskboard tasks.
+        origin = self.issue(
+            "[Evaluation issue #152](https://github.com/OpenEuroLLM/oellm-eval/issues/152) "
+            "and [Integration PR #164](https://github.com/OpenEuroLLM/oellm-eval/pull/164)"
+        )
+        local_152 = {**self.issue(""), "id": "github:OpenEuroLLM/Taskboard#152"}
+        local_164 = {**self.issue(""), "id": "github:OpenEuroLLM/Taskboard#164"}
+        external_152 = {**self.issue(""), "id": "github:OpenEuroLLM/oellm-eval#152"}
+        external_164 = {**self.issue(""), "id": "github:OpenEuroLLM/oellm-eval#164",
+                        "type": "pull_request"}
+        edges, unresolved = github_task_references(
+            [origin, local_152, local_164, external_152, external_164]
+        )
+        self.assertEqual({edge["target"] for edge in edges},
+                         {external_152["id"], external_164["id"]})
+        self.assertEqual(unresolved, [])
+
+    def test_markdown_link_label_preserves_other_local_reference(self):
+        origin = self.issue(
+            "[Compare local #214 with foreign #152]"
+            "(https://github.com/OpenEuroLLM/oellm-eval/issues/152)"
+        )
+        local_214 = {**self.issue(""), "id": "github:OpenEuroLLM/Taskboard#214"}
+        foreign_152 = {**self.issue(""), "id": "github:OpenEuroLLM/oellm-eval#152"}
+        edges, unresolved = github_task_references([origin, local_214, foreign_152])
+        self.assertEqual({edge["target"] for edge in edges},
+                         {local_214["id"], foreign_152["id"]})
+        self.assertEqual(unresolved, [])
+
     def test_unindexed_references_are_diagnostics_not_edges(self):
         origin = self.issue("See #777, https://github.com/Other/Project/issues/9")
         edges, missing = github_task_references([origin])
