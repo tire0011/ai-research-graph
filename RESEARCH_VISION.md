@@ -80,13 +80,43 @@ The current answers include substantial prior work. **No hypothesis here is clai
 
 **Preserve an idea registry** even when the first investigation shows earlier researchers already tried something. Attach "already studied" citations and the precise remaining gap; do not drop the reasoning trail.
 
+## Persistent idea checkpoints and synthesis (proposal)
+
+Human exploration must survive chat changes without treating each new question as a mission pivot. Store **research/idea checkpoints**, distinct from neural-network training checkpoints. This section specifies a minimal human-reviewed workflow, **not an implemented scheduler or graph schema**.
+
+### Checkpoint lifecycle and lineage
+
+- Create an **append-only checkpoint** after a meaningful new question, relevant result, contradiction, discarded hypothesis or unexpected connection; do not save every casual message.
+- Each checkpoint should record a stable ID, creation date, original question/intuition, current synthesis, linked prior checkpoint IDs, source evidence and its availability date, confidence/limitations, open questions, candidate falsifiable hypotheses, and what would cause a re-review.
+- Preserve previous snapshots. **Corrections, expansions and mergers produce new checkpoints** with explicit `supersedes`, `extends`, `combines` or `contradicts` links. Never silently rewrite the earlier line of reasoning.
+- Revisit open checkpoints when new evidence appears and at deliberate review milestones (e.g. after a batch of related explorations, before choosing an experiment, or during a project review). No automatic periodic execution is implied.
+- A **synthesis checkpoint** joins multiple idea threads into a coherent *working* theory, identifies tensions and competing explanations, and proposes the next decisive test. It is a provisional model, not proof of a new scientific theory.
+- Include previously researched, refuted and inconclusive ideas. `already_known`, `rejected`, `open`, `under_test`, `supported` and `superseded` are suggested statuses, **not current schema values**.
+- Keep source evidence, interpretive claims, and hypotheses in separate fields. A graph connection or expert analogy does not automatically provide causal evidence.
+
+A manual checkpoint can initially be a Markdown file with explicit backlinks; only develop typed graph records after we verify that the format helps. The first manually captured example is [research_checkpoints/0001-foundation-2026-11-14.md](research_checkpoints/0001-foundation-2026-11-14.md). Additional checkpoints should be captured when we actually review new ideas; no automatic collection from future chat sessions is claimed.
+
+### Historical replay / rediscovery experiment (2023 cutoff)
+
+**Specific proposed test:** freeze information that was publicly available no later than **2023-12-31**, formulate hypotheses about future research directions, then independently examine published evidence from **2024-01-01 through 2026-11-14** for support, contradiction, novelty, and missing predictions.
+
+1. Choose a small bounded set of research questions and record their source snapshots, publication/availability dates and exact revisions **as known at the 2023 cutoff**.
+2. Separate the hypothesis-generation phase from the **later-evidence evaluation**. Avoid exposing later papers, citations, metadata or derived claims to the candidate-generation step.
+3. Beware **training-knowledge leakage**: an LLM trained after the cutoff can implicitly remember 2024–2026 results. Retrieval filters alone do not make this genuine historical prediction. Where feasible use a dated earlier model and strong controls; otherwise describe the result as *retrospective reconstruction with leakage risk*, not a real forecast.
+4. Compare graph-assisted hypothesis generation with simpler fair baselines using the same permitted evidence: direct literature search, source-following search and source-grounded LLM without graph.
+5. Evaluate exact, falsifiable predictions; how novel they were relative to 2023 prior art; soundness; cost; later independent corroborating **and contradicting** findings. Distinguish a published claim from replication or established truth. A hypothesis without a later paper is **unresolved**, not automatically wrong.
+6. Record all candidate predictions *before* checking held-out sources and retain negative, inconclusive and already-known ideas. Prefer blind human review where possible.
+7. Repeat the comparison only if a first small manual pilot demonstrates value. A broader graph or better-looking ideas alone are not success.
+
+This 2023 cutoff is the current **candidate** for the first historical pilot; the precise design remains a human-reviewed decision.
+
 ## First proposed evaluation: historical research rediscovery
 
 **Question:** Does a grounded cross-disciplinary graph help produce *more useful, testable and later-supported* hypotheses than straightforward literature search and LLM prompting?
 
 A small, preregistered pilot:
 
-- Choose a bounded scientific topic and a strict historical cutoff (e.g. knowledge available by **2022-12-31**).
+- Choose a bounded scientific topic and a strict historical cutoff (e.g. knowledge available by **2023-12-31**).
 - Build candidate ideas using only sources available at that cutoff, including publication dates, revisions and metadata restrictions. Be explicit about LLM pretraining leakage: a modern model may already know later discoveries. Do **not** claim a genuine time-blind prediction from a modern LLM without leakage controls.
 - Compare at least: (a) plain keyword/semantic search with multi-hop reading, (b) LLM plus identical source packets, (c) graph-assisted reasoning using identical available evidence. Give the baselines comparable research effort and source access.
 - Evaluate human-rated **specificity, novelty relative to the cutoff, falsifiability, evidence correctness, and experiment cost**. Separately measure whether a subsequently published study corroborates *or contradicts* the hypothesis. "Later published" is not automatically "true", and later absence is not proof of failure.
