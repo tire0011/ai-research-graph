@@ -1,7 +1,7 @@
 {
   "status": "review_only",
-  "generated_at_utc": "2026-11-14T19:04:24.735819+00:00",
-  "evidence_snapshot_utc": "2026-11-14T19:01:02.555031+00:00",
+  "generated_at_utc": "2026-11-14T19:13:44.284992+00:00",
+  "evidence_snapshot_utc": "2026-11-14T19:10:31.379485+00:00",
   "scope": "Three explicit evidence categories within ten purposefully selected Taskboard issues",
   "examined": 10,
   "opportunities": [
