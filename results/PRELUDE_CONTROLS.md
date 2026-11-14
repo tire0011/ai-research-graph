@@ -1,11 +1,11 @@
 # Prelude checkpoint-matched benchmark controls
 
-Collected: 2026-11-13T19:35:18.476521+00:00 UTC.
+Collected: 2026-11-14T19:04:29.142267+00:00 UTC.
 
 Source: [openeurollm/prelude-base-eval-scores](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores) and [research issue #163](https://github.com/OpenEuroLLM/oellm-eval/issues/163).
 All data are published evaluation aggregates; no evaluation was rerun.
 
-Dataset revision: 31c2dec340d38be545bc6575c5da4f1fcd97141d (modified 2026-11-12T13:26:57.000Z).
+Dataset revision: eec0c45416749fabe2660b68bc7ef6134e026682 (modified 2026-11-14T08:05:04.000Z).
 Original source files inspected: 5; their SHA256 and provenance URLs are in the JSON evidence.
 
 ## Per-task data quality

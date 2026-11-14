@@ -1,10 +1,10 @@
 {
-  "timestamp_utc": "2026-11-13T19:35:15.044972+00:00",
+  "timestamp_utc": "2026-11-14T19:04:24.609172+00:00",
   "status": "comparable",
   "source": {
     "dataset": "openeurollm/prelude-base-eval-scores",
-    "revision_sha": "31c2dec340d38be545bc6575c5da4f1fcd97141d",
-    "last_modified": "2026-11-12T13:26:57.000Z",
+    "revision_sha": "eec0c45416749fabe2660b68bc7ef6134e026682",
+    "last_modified": "2026-11-14T08:05:04.000Z",
     "config": "original_files",
     "split": "all",
     "model": "prelude_anneal2t",
@@ -16,7 +16,7 @@
     "source_files": [
       {
         "path": "english_lm_eval_scores.parquet",
-        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/31c2dec340d38be545bc6575c5da4f1fcd97141d/english_lm_eval_scores.parquet",
+        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/eec0c45416749fabe2660b68bc7ef6134e026682/english_lm_eval_scores.parquet",
         "rows": 374,
         "bytes": 14347,
         "sha256": "80dfc85431e5c325b60bb3a7033aa506853f3c5279cfa265d89cb2f7e32d614e",
@@ -27,7 +27,7 @@
       },
       {
         "path": "eval_framework_scores.parquet",
-        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/31c2dec340d38be545bc6575c5da4f1fcd97141d/eval_framework_scores.parquet",
+        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/eec0c45416749fabe2660b68bc7ef6134e026682/eval_framework_scores.parquet",
         "rows": 96678,
         "bytes": 483730,
         "sha256": "5e6ad16d08a88a9501752d885f991dd0d246d26a379e7c93188fc948bd894d2d",
@@ -40,7 +40,7 @@
       },
       {
         "path": "multilingual_scores.parquet",
-        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/31c2dec340d38be545bc6575c5da4f1fcd97141d/multilingual_scores.parquet",
+        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/eec0c45416749fabe2660b68bc7ef6134e026682/multilingual_scores.parquet",
         "rows": 66932,
         "bytes": 7405642,
         "sha256": "fe307270923c611f846caa53ed5d8c6f7d71a1d2523da794ef97c4268ee8ea6c",
@@ -51,7 +51,7 @@
       },
       {
         "path": "noreval_scores.parquet",
-        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/31c2dec340d38be545bc6575c5da4f1fcd97141d/noreval_scores.parquet",
+        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/eec0c45416749fabe2660b68bc7ef6134e026682/noreval_scores.parquet",
         "rows": 8505,
         "bytes": 429352,
         "sha256": "3953637184ddf270809bff5cf0e6a1545f35cd05cd0833e3499364e1bb8dd105",
@@ -62,7 +62,7 @@
       },
       {
         "path": "scores.parquet",
-        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/31c2dec340d38be545bc6575c5da4f1fcd97141d/scores.parquet",
+        "url": "https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores/resolve/eec0c45416749fabe2660b68bc7ef6134e026682/scores.parquet",
         "rows": 117768,
         "bytes": 892253,
         "sha256": "763d38524348fc0680acfa74ceba3d9203c1aef8fe8658f2f2b0b1bd8d18a69f",
