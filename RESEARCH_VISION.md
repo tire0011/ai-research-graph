@@ -12,6 +12,8 @@ The long-term goal is **not** merely to find related documents, assemble a knowl
 
 This is an **extension of the existing graph**, not a replacement or a separate agent project. Preserve its evidence/provenance discipline and independently validated baselines. Keep human decisions and automated external actions separate.
 
+**Unified mission checkpoint:** [Checkpoint 0002 — one graph, multiple scientific outcomes](research_checkpoints/0002-unified-mission-2026-11-14.md) explicitly preserves the original aims of **detecting potential duplicate work, finding high-leverage low-effort interventions, and facilitating grounded collaboration** alongside hypothesis discovery, historical evaluation and checkpoint-based learning. These are complementary views over one evidence foundation, not independent project pivots.
+
 ## Essential conversation principle: questions are probes, not pivots
 
 The researcher need not be a subject-matter expert. Questions, analogies, speculative comparisons, and apparent changes of topic are how new connections are explored.
