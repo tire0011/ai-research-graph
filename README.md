@@ -4,6 +4,8 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Goal:** find demonstrable links between live engineering tasks and open research artifacts; measure gaps before proposing any additional infrastructure. This is independent of the Nexus agent project.
 
+**Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
+
 ## Feasibility verdict
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
