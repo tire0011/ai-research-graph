@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "timestamp_utc": "2026-11-14T19:28:22.575544+00:00",
-  "snapshot_utc": "2026-11-14T19:25:20.257652+00:00",
+  "timestamp_utc": "2026-11-14T21:58:13.915056+00:00",
+  "snapshot_utc": "2026-11-14T21:55:11.184606+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "seed": "research-benchmark20-2026-11-08-v1",
@@ -24,7 +24,7 @@
         "true_positives": 11,
         "false_positives": 1,
         "false_negatives": 2,
-        "median_ms": 2.7082
+        "median_ms": 2.0308
       },
       "text": {
         "cases": 20,
@@ -34,7 +34,7 @@
         "true_positives": 11,
         "false_positives": 1,
         "false_negatives": 2,
-        "median_ms": 2.7441
+        "median_ms": 2.0617
       },
       "github_search": {
         "cases": 20,
@@ -44,7 +44,7 @@
         "true_positives": 11,
         "false_positives": 0,
         "false_negatives": 2,
-        "median_ms": 409.8
+        "median_ms": 300.05
       }
     },
     "random": {
@@ -56,7 +56,7 @@
         "true_positives": 2,
         "false_positives": 0,
         "false_negatives": 0,
-        "median_ms": 1.8983
+        "median_ms": 1.4104
       },
       "text": {
         "cases": 10,
@@ -66,7 +66,7 @@
         "true_positives": 2,
         "false_positives": 0,
         "false_negatives": 0,
-        "median_ms": 1.9122
+        "median_ms": 1.4338
       },
       "github_search": {
         "cases": 10,
@@ -76,7 +76,7 @@
         "true_positives": 2,
         "false_positives": 0,
         "false_negatives": 0,
-        "median_ms": 412.6
+        "median_ms": 307.5
       }
     },
     "reference_rich": {
@@ -88,7 +88,7 @@
         "true_positives": 9,
         "false_positives": 1,
         "false_negatives": 2,
-        "median_ms": 2.7082
+        "median_ms": 2.0308
       },
       "text": {
         "cases": 10,
@@ -98,7 +98,7 @@
         "true_positives": 9,
         "false_positives": 1,
         "false_negatives": 2,
-        "median_ms": 2.7441
+        "median_ms": 2.0617
       },
       "github_search": {
         "cases": 10,
@@ -108,7 +108,7 @@
         "true_positives": 9,
         "false_positives": 0,
         "false_negatives": 2,
-        "median_ms": 406.35
+        "median_ms": 296.85
       }
     }
   },
@@ -146,7 +146,7 @@
         "targets": [
           "github:OpenEuroLLM/Taskboard#220"
         ],
-        "median_lookup_ms": 3.7503
+        "median_lookup_ms": 2.8359
       },
       "text": {
         "source_top1": true,
@@ -158,7 +158,7 @@
         "targets": [
           "github:openeurollm/taskboard#220"
         ],
-        "median_lookup_ms": 4.2519
+        "median_lookup_ms": 3.1956
       },
       "github_search": {
         "source_top1": true,
@@ -174,7 +174,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#351"
         ],
-        "latency_ms": 442.2,
+        "latency_ms": 333.6,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Function-calling RL reproduction transfer",
         "total_results": 1
       },
@@ -209,7 +209,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 4.1116
+        "median_lookup_ms": 3.1288
       },
       "text": {
         "source_top1": true,
@@ -219,7 +219,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 4.1424
+        "median_lookup_ms": 3.1378
       },
       "github_search": {
         "source_top1": true,
@@ -233,7 +233,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#320"
         ],
-        "latency_ms": 424.9,
+        "latency_ms": 315.4,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title support LUMI post-training pipeline",
         "total_results": 1
       },
@@ -272,7 +272,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-autoexp#54"
         ],
-        "median_lookup_ms": 3.5996
+        "median_lookup_ms": 2.681
       },
       "text": {
         "source_top1": true,
@@ -284,7 +284,7 @@
         "targets": [
           "github:openeurollm/oellm-autoexp#54"
         ],
-        "median_lookup_ms": 3.6439
+        "median_lookup_ms": 2.7211
       },
       "github_search": {
         "source_top1": true,
@@ -300,7 +300,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#364"
         ],
-        "latency_ms": 414.5,
+        "latency_ms": 299.6,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Qwen3 MoE conversion oellm-autoexp",
         "total_results": 1
       },
@@ -335,7 +335,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 3.19
+        "median_lookup_ms": 2.3733
       },
       "text": {
         "source_top1": true,
@@ -345,7 +345,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 3.1815
+        "median_lookup_ms": 2.3912
       },
       "github_search": {
         "source_top1": true,
@@ -359,7 +359,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#130"
         ],
-        "latency_ms": 404.9,
+        "latency_ms": 326.0,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title CUNI people github",
         "total_results": 1
       },
@@ -394,7 +394,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 3.6817
+        "median_lookup_ms": 2.7532
       },
       "text": {
         "source_top1": true,
@@ -404,7 +404,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 3.7267
+        "median_lookup_ms": 2.8075
       },
       "github_search": {
         "source_top1": true,
@@ -418,7 +418,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#184"
         ],
-        "latency_ms": 418.4,
+        "latency_ms": 294.0,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Better LLM judges instruction-tuned",
         "total_results": 1
       },
@@ -447,7 +447,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.4133
+        "median_lookup_ms": 0.298
       },
       "text": {
         "source_top1": true,
@@ -457,7 +457,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.4284
+        "median_lookup_ms": 0.3132
       },
       "github_search": {
         "source_top1": true,
@@ -471,7 +471,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#152"
         ],
-        "latency_ms": 410.7,
+        "latency_ms": 318.6,
         "query": "repo:OpenEuroLLM/oellm-eval is:issue in:title Integrate vLLM backend",
         "total_results": 1
       },
@@ -497,7 +497,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.4859
+        "median_lookup_ms": 0.2888
       },
       "text": {
         "source_top1": true,
@@ -507,7 +507,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.4131
+        "median_lookup_ms": 0.2854
       },
       "github_search": {
         "source_top1": true,
@@ -521,7 +521,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#5"
         ],
-        "latency_ms": 401.5,
+        "latency_ms": 279.8,
         "query": "repo:OpenEuroLLM/oellm-eval is:issue in:title instructions add automatically bashrc",
         "total_results": 1
       },
@@ -556,7 +556,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.5683
+        "median_lookup_ms": 0.3264
       },
       "text": {
         "source_top1": true,
@@ -566,7 +566,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.5617
+        "median_lookup_ms": 0.4129
       },
       "github_search": {
         "source_top1": true,
@@ -580,7 +580,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#126"
         ],
-        "latency_ms": 470.1,
+        "latency_ms": 289.2,
         "query": "repo:OpenEuroLLM/oellm-eval is:issue in:title Integrate packaged JudgeArena tasks",
         "total_results": 1
       },
@@ -615,7 +615,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.6067
+        "median_lookup_ms": 0.4475
       },
       "text": {
         "source_top1": true,
@@ -625,7 +625,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.6428
+        "median_lookup_ms": 0.4764
       },
       "github_search": {
         "source_top1": true,
@@ -639,7 +639,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-autoexp#10"
         ],
-        "latency_ms": 400.8,
+        "latency_ms": 281.9,
         "query": "repo:OpenEuroLLM/oellm-autoexp is:issue in:title error message path config file wrong",
         "total_results": 1
       },
@@ -666,7 +666,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.5379
+        "median_lookup_ms": 0.3931
       },
       "text": {
         "source_top1": true,
@@ -676,7 +676,7 @@
         "false_negatives": 0,
         "abstention_correct": true,
         "targets": [],
-        "median_lookup_ms": 0.538
+        "median_lookup_ms": 0.3929
       },
       "github_search": {
         "source_top1": true,
@@ -690,7 +690,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-autoexp#43"
         ],
-        "latency_ms": 402.1,
+        "latency_ms": 386.2,
         "query": "repo:OpenEuroLLM/oellm-autoexp is:issue in:title Progress tracker tool",
         "total_results": 1
       },
@@ -729,7 +729,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-eval#124"
         ],
-        "median_lookup_ms": 3.3355
+        "median_lookup_ms": 2.4795
       },
       "text": {
         "source_top1": true,
@@ -741,7 +741,7 @@
         "targets": [
           "github:openeurollm/oellm-eval#124"
         ],
-        "median_lookup_ms": 3.5534
+        "median_lookup_ms": 2.6614
       },
       "github_search": {
         "source_top1": true,
@@ -757,7 +757,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#405"
         ],
-        "latency_ms": 392.0,
+        "latency_ms": 339.7,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title safety fairness benchmarks",
         "total_results": 1
       },
@@ -796,7 +796,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-eval#56"
         ],
-        "median_lookup_ms": 3.6415
+        "median_lookup_ms": 2.7054
       },
       "text": {
         "source_top1": true,
@@ -808,7 +808,7 @@
         "targets": [
           "github:openeurollm/oellm-eval#56"
         ],
-        "median_lookup_ms": 3.685
+        "median_lookup_ms": 2.7357
       },
       "github_search": {
         "source_top1": false,
@@ -823,7 +823,7 @@
           "github:OpenEuroLLM/Taskboard#350",
           "github:OpenEuroLLM/Taskboard#337"
         ],
-        "latency_ms": 423.7,
+        "latency_ms": 275.8,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Integrate JudgeArena oellm-eval",
         "total_results": 2
       },
@@ -862,7 +862,7 @@
         "targets": [
           "github:OpenEuroLLM/Taskboard#132"
         ],
-        "median_lookup_ms": 4.315
+        "median_lookup_ms": 3.3081
       },
       "text": {
         "source_top1": true,
@@ -874,7 +874,7 @@
         "targets": [
           "github:openeurollm/taskboard#132"
         ],
-        "median_lookup_ms": 4.3313
+        "median_lookup_ms": 3.301
       },
       "github_search": {
         "source_top1": true,
@@ -890,7 +890,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#131"
         ],
-        "latency_ms": 408.9,
+        "latency_ms": 300.5,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title LUMI container working kernels bias",
         "total_results": 1
       },
@@ -927,7 +927,7 @@
         "false_negatives": 1,
         "abstention_correct": false,
         "targets": [],
-        "median_lookup_ms": 2.8509
+        "median_lookup_ms": 2.0867
       },
       "text": {
         "source_top1": false,
@@ -937,7 +937,7 @@
         "false_negatives": 1,
         "abstention_correct": false,
         "targets": [],
-        "median_lookup_ms": 2.8914
+        "median_lookup_ms": 2.1185
       },
       "github_search": {
         "source_top1": true,
@@ -953,7 +953,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#50"
         ],
-        "latency_ms": 426.8,
+        "latency_ms": 293.2,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Evaluate new models",
         "total_results": 1
       },
@@ -992,7 +992,7 @@
         "targets": [
           "github:OpenEuroLLM/Taskboard#385"
         ],
-        "median_lookup_ms": 3.065
+        "median_lookup_ms": 2.2681
       },
       "text": {
         "source_top1": true,
@@ -1004,7 +1004,7 @@
         "targets": [
           "github:openeurollm/taskboard#385"
         ],
-        "median_lookup_ms": 3.2122
+        "median_lookup_ms": 2.3706
       },
       "github_search": {
         "source_top1": true,
@@ -1020,7 +1020,7 @@
         "top10": [
           "github:OpenEuroLLM/Taskboard#384"
         ],
-        "latency_ms": 403.8,
+        "latency_ms": 291.7,
         "query": "repo:OpenEuroLLM/Taskboard is:issue in:title Benchmark Qwen3.5-9B BFCL V4",
         "total_results": 1
       },
@@ -1059,7 +1059,7 @@
         "targets": [
           "github:OpenEuroLLM/Taskboard#70"
         ],
-        "median_lookup_ms": 2.2441
+        "median_lookup_ms": 1.7044
       },
       "text": {
         "source_top1": true,
@@ -1071,7 +1071,7 @@
         "targets": [
           "github:openeurollm/taskboard#70"
         ],
-        "median_lookup_ms": 2.2598
+        "median_lookup_ms": 1.7057
       },
       "github_search": {
         "source_top1": true,
@@ -1087,7 +1087,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#2"
         ],
-        "latency_ms": 401.7,
+        "latency_ms": 339.8,
         "query": "repo:OpenEuroLLM/oellm-eval is:pull-request in:title adding multi-cluster eval functionality",
         "total_results": 1
       },
@@ -1126,7 +1126,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-eval#28"
         ],
-        "median_lookup_ms": 2.5655
+        "median_lookup_ms": 1.9749
       },
       "text": {
         "source_top1": false,
@@ -1138,7 +1138,7 @@
         "targets": [
           "github:openeurollm/oellm-eval#28"
         ],
-        "median_lookup_ms": 2.5968
+        "median_lookup_ms": 2.005
       },
       "github_search": {
         "source_top1": true,
@@ -1156,7 +1156,7 @@
           "github:OpenEuroLLM/oellm-eval#31",
           "github:OpenEuroLLM/oellm-eval#36"
         ],
-        "latency_ms": 461.4,
+        "latency_ms": 307.6,
         "query": "repo:OpenEuroLLM/oellm-eval is:pull-request in:title venv_path option running without containers",
         "total_results": 3
       },
@@ -1195,7 +1195,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-eval#132"
         ],
-        "median_lookup_ms": 1.9308
+        "median_lookup_ms": 1.45
       },
       "text": {
         "source_top1": true,
@@ -1207,7 +1207,7 @@
         "targets": [
           "github:openeurollm/oellm-eval#132"
         ],
-        "median_lookup_ms": 2.0393
+        "median_lookup_ms": 1.5277
       },
       "github_search": {
         "source_top1": true,
@@ -1223,7 +1223,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#135"
         ],
-        "latency_ms": 435.2,
+        "latency_ms": 287.0,
         "query": "repo:OpenEuroLLM/oellm-eval is:pull-request in:title Fix model args in models",
         "total_results": 1
       },
@@ -1264,7 +1264,7 @@
           "github:OpenEuroLLM/oellm-eval#131",
           "github:OpenEuroLLM/oellm-eval#135"
         ],
-        "median_lookup_ms": 2.0182
+        "median_lookup_ms": 1.5211
       },
       "text": {
         "source_top1": true,
@@ -1277,7 +1277,7 @@
           "github:openeurollm/oellm-eval#131",
           "github:openeurollm/oellm-eval#135"
         ],
-        "median_lookup_ms": 2.0658
+        "median_lookup_ms": 1.5558
       },
       "github_search": {
         "source_top1": true,
@@ -1294,7 +1294,7 @@
         "top10": [
           "github:OpenEuroLLM/oellm-eval#143"
         ],
-        "latency_ms": 390.2,
+        "latency_ms": 343.8,
         "query": "repo:OpenEuroLLM/oellm-eval is:pull-request in:title Replace CSV file format TSV",
         "total_results": 1
       },
@@ -1333,7 +1333,7 @@
         "targets": [
           "github:OpenEuroLLM/oellm-autoexp#70"
         ],
-        "median_lookup_ms": 0.6147
+        "median_lookup_ms": 0.4465
       },
       "text": {
         "source_top1": true,
@@ -1345,7 +1345,7 @@
         "targets": [
           "github:openeurollm/oellm-autoexp#70"
         ],
-        "median_lookup_ms": 0.7675
+        "median_lookup_ms": 0.5753
       },
       "github_search": {
         "source_top1": false,
@@ -1357,7 +1357,7 @@
         "targets": [],
         "source_top10": false,
         "top10": [],
-        "latency_ms": 354.9,
+        "latency_ms": 216.8,
         "query": "repo:OpenEuroLLM/oellm-autoexp is:issue in:title monitor_autoexp session crashes TypeError",
         "total_results": 0
       },
