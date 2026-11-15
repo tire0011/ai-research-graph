@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "kind": "frozen_identical_source_packet",
+  "created_date": "2026-11-15",
+  "purpose": "Compare equal public original-source evidence; graph edges may only add structural hints. This is not blind independent reviewer output.",
+  "selector": "studies/decision_pilot_20261115/SELECTION.md",
+  "cases": [
+    {
+      "case_id": "E1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#346",
+      "title": "[multilingual scaling laws] downstream evaluation",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346",
+      "state": "open",
+      "body": "__Goal__\nEvaluate all checkpoints of the multilingual scaling ladder (`multilingual models`) *and* nemotron-cc scaling ladder (`nemotron models`) on `dclm-core-22` and `oellm-multilingual` task groups for comparison. \n\n\n__Overview__:\n\n- [x] `nemotron models` on `oellm-multilingual`; assignee: @haideraltahan \n- [x] `multilingual models` on `dclm-core-22` @swag2198 , [csv](https://github.com/OpenEuroLLM/dense_multilingual_models_scaling_results/blob/main/results/downstream/eval_results.csv)\n- [x] `multilingual models` on `oellm-multilingual`; assignee: @haideraltahan \n- [ ] `nemotron models` on `dclm-core-22`; assignee: TODO\n- [x] `prelude models` on `oellm-multilingual`; assignee: @haideraltahan \n",
+      "updated_at": "2026-10-21T13:48:27Z",
+      "comments": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346#issuecomment-4981280373",
+          "id": 4981280373,
+          "body": "Thanks for tracking all evals in this issue! Some comments:\n- `multilingual models` on `dclm-core-22` is already done on Leonardo. CSV has all 4 model sizes [here](https://github.com/OpenEuroLLM/dense_multilingual_models_scaling_results/blob/main/results/downstream/eval_results.csv).\n- Environment details (it would be great if `dclm-core-22` evals `nemotron models` could also use the same versions, atleast for lm-eval @haideraltahan @Niccolo-Ajroldi, see also VENV instructions [here](https://github.com/OpenEuroLLM/oellm-eval/blob/main/docs/VENV.md#dclm-core-22)):\n```\nlm-eval: 0.4.9.2\ntorch: 2.6.0+cu124\ntransformers: 4.57.6\ndatasets: 3.6.0\noellm-eval: 0.1.0\n```\n- The same environment is also used for baby dclm evals in #344\n",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346#issuecomment-5045562390",
+          "id": 5045562390,
+          "body": "The ML evals for English models are done, and all csv are going to be uploaded here: https://drive.google.com/drive/folders/1zp06Le-Dpmu0gOxnZl_-qDumzXd5JrMv",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346#issuecomment-6317702798",
+          "id": 6317702798,
+          "body": "@haideraltahan can you update the evals with the corrected scores? ty!",
+          "created_at": null,
+          "updated_at": null
+        }
+      ],
+      "graph_snapshot": {
+        "timestamp_utc": "2026-11-15T09:48:15.797370+00:00",
+        "node_title": "[multilingual scaling laws] downstream evaluation",
+        "node_description": "__Goal__\nEvaluate all checkpoints of the multilingual scaling ladder (`multilingual models`) *and* nemotron-cc scaling ladder (`nemotron models`) on `dclm-core-22` and `oellm-multilingual` task groups for comparison. \n\n\n__Overview__:\n\n- [x] `nemotron models` on `oellm-multilingual`; assignee: @haideraltahan \n- [x] `multilingual models` on `dclm-core-22` @swag2198 , [csv](https://github.com/OpenEuroLLM/dense_multilingual_models_scaling_results/blob/main/results/downstream/eval_results.csv)\n- [x] `multilingual models` on `oellm-multilingual`; assignee: @haideraltahan \n- [ ] `nemotron models` on `dclm-core-22`; assignee: TODO\n- [x] `prelude models` on `oellm-multilingual`; assignee: @haideraltahan \n",
+        "edge_count": 0,
+        "explicit_edges": []
+      }
+    },
+    {
+      "case_id": "D1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#341",
+      "title": "Analysis of DocHPLT parallel document dataset",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341",
+      "state": "closed",
+      "body": "Analyze how DocHPLT dataset is structured, and how should it be processed in datamix",
+      "updated_at": "2026-09-01T11:56:36Z",
+      "comments": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-4876471226",
+          "id": 4876471226,
+          "body": "Here are the total statistics, broken down by document and by segment (indicated by the Seq prefix). Segments were defined using new-line delimiters.\n\n<img width=\"2400\" height=\"1800\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e47c310c-47c7-4915-a0c5-e259f3d8da01\" />",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5000224012",
+          "id": 5000224012,
+          "body": "During processing of the data, I encountered alignment issues. It seems like there is a discrepancy between segment counts for targets and sources.\n\nBelow is a breakdown of the fraction of samples with different segment counts for each language pair:\n\n| Language Pair | Samples with Different Segment Counts (%) |\n| :--- | :---: |\n| Greek ➔ English (`el` ➔ `en`) | 51.0% |\n| English ➔ Turkish (`en` ➔ `tr`) | 62.7% |\n| English ➔ Ukrainian (`en` ➔ `uk`) | 24.7% |",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5001909148",
+          "id": 5001909148,
+          "body": "i am no expert on this dataset, but intuitively i would not find minor discrepancies in segment counts too surprising.  for all i know, the document pairings were induced based on discovery of translational correspondences.  when translating a full document, i imagine that the packaging and boilerplate structure can change.",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5002140093",
+          "id": 5002140093,
+          "body": "We had a meeting with @gramirez-prompsit and @mdocekal and decided to continue by splitting data in two types:\n- Documents below context window (length of english + target language concatenated)\n- Documents above context window.\nThe second type will be truncated **to last sentence before limit** (i.e. we don't cut at last possible character, but at last possible comma). We aim to truncate `eng` and `target_language` to maximally half of context window (2048), so entire document fits in context window.\n\nThis will result in decreased amount of tokens we will get from docHPLT, but using entire documents instead of sentences should boost translation capabilities by providing longer context of translation.",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5030942524",
+          "id": 5030942524,
+          "body": "The data has been preprocessed and training has started:\nhttps://wandb.ai/openeurollm-project/dochplt_parallel_data\n\n### Token Counts for Parallel Data\n\n| Language Pair | Sequence Count | Total Tokens |\n| :--- | :--- | :--- |\n| `ell_Grek-eng_Latn` | 2,952,707 | 3,017,482,650 |\n| `eng_Latn-tur_Latn` | 2,375,135 | 2,050,696,307 |\n| `eng_Latn-ukr_Cyrl` | 68,987 | 26,823,777 |",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5176031327",
+          "id": 5176031327,
+          "body": "Here are the results for experiments comparing models trained on parallel data. \n### Models and Data\nThe experiments compare models trained on docHPLT (whole documents) and FineOPUS (sentence level) with the following data mixture:\n\n- 0.5 English (nemotron)\n- 0.45 monolingual\n- 0.05 parallel data\n\nThere are also purely **monolingually** trained models that are used for comparison.\n\nIn total, we have the following **models**:\n\n- **Parallel** (**two times** one for each **docHPLT** and **FineOpus**)\n  - el-en\n  - en-tr\n  - en-uk\n- **Monolingual**:\n  - ell_Greek\n  - tur_Latn\n  - ukr_cyrl\n\nWhen constructing samples for FineOPUS, we create a pseudo-context by concatenating up to 10 sentences (as in https://arxiv.org/pdf/2506.00469). For docHPLT, we use as much context from the beginning of a document as we can fit within the 4096 input token budget, accounting for sentence boundaries.\n\n### Evaluation\nFor the evaluation, three evaluation suits were used:\n\n\n**LM Harness**\nUsed datasets for each language:\n\n- belebele_ell_Grek,global_mmlu_full_el\n- belebele_tur_Latn,global_mmlu_full_tr\n- belebele_ukr_Cyrl,global_mmlu_full_uk\n\n**Lighteval english**\nUsed datasets, same for all languages:\n\n- arc:easy\n- piqa\n- openbookqa\n- arc:challenge\n- hellaswag\n- winogrande\n\n**Lighteval translation**\nUsed datasets for each language (also the opposite direction):\n\n- flores200:eng_Latn-ell_Grek\n- flores200:eng_Latn-tur_Latn\n- flores200:eng_Latn-ukr_Cyrl\n\n\n\nThe evaluation is performed in **0-shot, 1-shot, and 5-shot** settings.\n\n\nDue to the extreme number of evaluations, a dashboard was created:\n\nhttps://mdocekal.github.io/oellm-experiments/dochplt-parallel-analysis/\n\nHere we report only a few selected graphs. All of them use average results over all tested languages.\n\n**LM Harness, all accuracy oriented tasks (all-shots)**\n\n<img width=\"2400\" height=\"1600\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/992319fa-72b9-4582-a62a-33c911d5f85a\" />\n\n**Lighteval english, all accuracy oriented tasks (all-shots)**\n\n<img width=\"2400\" height=\"1600\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/eb0b31b2-a8e4-44bd-9b75-3862b08d4273\" />\n\n**Lighteval translation, bleu-4  (all-shots)**\n\n<img width=\"2400\" height=\"1600\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/be139d4e-1138-4fea-9785-375cdf7fe5e1\" />\n\n### Conclusion:\n\nThe results suggest that the docHPLT and FineOPUS models yield **similar outcomes**.\ndocHPLT is not deteriorating monolingual task scores\n\n\n\n\n",
+          "created_at": null,
+          "updated_at": null
+        }
+      ],
+      "graph_snapshot": {
+        "timestamp_utc": "2026-11-15T09:48:15.797370+00:00",
+        "node_title": "Analysis of DocHPLT parallel document dataset",
+        "node_description": "Analyze how DocHPLT dataset is structured, and how should it be processed in datamix",
+        "edge_count": 0,
+        "explicit_edges": []
+      }
+    },
+    {
+      "case_id": "W1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#343",
+      "title": "Fault tolerance intra-job training",
+      "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343",
+      "state": "closed",
+      "body": "# Fault tolerance intra-job training\nDuring large-scale pretraining on a Slurm cluster, node failures (GPU errors, NVLink/network faults, ECC errors, etc.) are common and grow more frequent with node count and job duration, especially at node counts of 256-1024 which is our target. By default, a single node failure kills the whole job, which then has to requeue and restart from the last checkpoint which costs time. Instead, we want to allocate a small number of spare nodes alongside the training job (e.g. 2 spares). When a node fails, the job swaps in a spare and continues within the same Slurm allocation, avoiding a full requeue and minimizing lost progress. This thus works with a static world size.\n\nInspiration from Bloom: https://github.com/stas00/ml-engineering/tree/master/training/fault-tolerance#fault-tolerance\n\n## Tasks\n- [x] Survey existing solutions and assess fit for our stack (Megatron-LM, torchrun elastic launcher, shared sudoless HPC, Slurm). Start with NVIDIA Resiliency Extension (NVRx): https://github.com/NVIDIA/nvidia-resiliency-ext\n- [x] Check what Megatron-LM already supports natively (it integrates parts of NVRx / fault tolerance hooks)\n- [x] Evaluate torchrun elastic + rendezvous backend (e.g. c10d/etcd) for node replacement\n Note any requirements that conflict with a sudoless / shared HPC environment\n- [x] Design the spare-node mechanism: how spares are allocated in the Slurm job, held idle, and promoted on failure\n- [x] Implement the feature in the [oellm-autoexp](github.com/OpenEuroLLM/oellm-autoexp) codebase\n- [x] Test at small scale and simulate a node failure (e.g. scancel a node, kill a process, or inject a fault) to verify recovery\n- [x] Measure recovery cost: wall-clock time to detect + swap + resume, and steps lost per failure\n- [x] Document usage (how many spares to request, config flags) for other users of the codebase",
+      "updated_at": "2026-10-27T13:12:52Z",
+      "comments": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-4901251069",
+          "id": 4901251069,
+          "body": "Initial PR: https://github.com/OpenEuroLLM/oellm-autoexp/pull/48",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-4969902010",
+          "id": 4969902010,
+          "body": "A list of comments regarding the tasks:\n- NVRx is needed as it provides stalling detection, torchrun is not resilient here\n- our current main Megatron-LM version is built with NVRx 0.5.0 - it was slightly patch to make it work (use_infra_group_rank config)\n- torchelastic can also be used, but might fail on stalls, is also integrated (except for integrated into all configs)\n- implemented in oellm-autoexp, slight update to the Megatron-LM version to support ft_launcher properly\n- simulated node failure integrated\n- measured time overhead: 33s, lost steps: 20 (can be tuned) - using non-persistent checkpointing\n- documentation: Reference integration in `config/experiments/korbi/megatron_moe_resilient_leonardo.yaml`",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-5044391794",
+          "id": 5044391794,
+          "body": "The main remaining question is: Do we want to \"waste\" GPU-hrs for faster re-scheduling? As of now, we have to reserve more nodes. Having more frequent \"disposable\" checkpointing is also possible without spare nodes (so we don't loose GPU-time). And of course the job might have to be re-scheduled. The job will be restarted anyways so startup time overhead is the same.\n@tvosch what's you opinion? I'd close this now as functioning in case we need it, but I'm not sure if it's actually beneficial.\n\nThe non-persistent checkpoint options are these:\n```yaml\n    non_persistent_ckpt_type: global  # we might switch to \n    non_persistent_local_ckpt_dir: ...\n    non_persistent_save_interval: 100                 # FREQUENT (tune to your iter time)\n    replication: false\n    load: ...  # needs to be adapted from base checkpoint\n```\n",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-5088514356",
+          "id": 5088514356,
+          "body": "Sorry for the delayed response @kpoeppel \nI think the main benefit for intra-job auto-healing would to avoid or minimize being in the shared Slurm queue again after a node failure. On Leonardo this was not necessary at all because we had a reservation, though maybe this would be nice for Jupiter if we don't have a dedicated partition or reservation. \nIn that case, do you think this feature would be beneficial to avoid landing in the queue (whatever long the queue times are) just because of a node failure? Also at 512 node scale, a spare node is little overhead.",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-5088871358",
+          "id": 5088871358,
+          "body": "The main question is how much of priority we can accumulate with dependency-chained jobs. (If we can't and have to wait, it will be worth the \"waste\"). I agree that at the 512 node scale one additional job doesn't matter. Let's add both cases now as options and decide until submission.",
+          "created_at": null,
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-5089451739",
+          "id": 5089451739,
+          "body": "I agree, the dependency-chained jobs worked quite well on Leonardo though we had elevated priority. Let's indeed investigate how this will go on Jupiter. Are you fine with keeping this open for now?",
+          "created_at": null,
+          "updated_at": null
+        }
+      ],
+      "graph_snapshot": {
+        "timestamp_utc": "2026-11-15T09:48:15.797370+00:00",
+        "node_title": "Fault tolerance intra-job training",
+        "node_description": "# Fault tolerance intra-job training\nDuring large-scale pretraining on a Slurm cluster, node failures (GPU errors, NVLink/network faults, ECC errors, etc.) are common and grow more frequent with node count and job duration, especially at node counts of 256-1024 which is our target. By default, a single node failure kills the whole job, which then has to requeue and restart from the last checkpoint which costs time. Instead, we want to allocate a small number of spare nodes alongside the training job (e.g. 2 spares). When a node fails, the job swaps in a spare and continues within the same Slurm allocation, avoiding a full requeue and minimizing lost progress. This thus works with a static world size.\n\nInspiration from Bloom: https://github.com/stas00/ml-engineering/tree/master/training/fault-tolerance#fault-tolerance\n\n## Tasks\n- [x] Survey existing solutions and assess fit for our stack (Megatron-LM, torchrun elastic launcher, shared sudoless HPC, Slurm). Start with NVIDIA Resiliency Extension (NVRx): https://github.com/NVIDIA/nvidia-resiliency-ext\n- [x] Check what Megatron-LM already supports natively (it integrates parts of NVRx / fault tolerance hooks)\n- [x] Evaluate torchrun elastic + rendezvous backend (e.g. c10d/etcd) for node replacement\n Note any requirements that conflict with a sudoless / shared HPC environment\n- [x] Design the spare-node mechanism: how spares are allocated in the Slurm job, held idle, and promoted on failure\n- [x] Implement the feature in the [oellm-autoexp](github.com/OpenEuroLLM/oellm-autoexp) codebase\n- [x] Test at small scale and simulate a node failure (e.g. scancel a node, kill a process, or inject a fault) to verify recovery\n- [x] Measure recovery cost: wall-clock time to detect + swap + resume, and steps lost per failure\n- [x] Document usage (how many spares to request, config flags) for other users of the codebase",
+        "edge_count": 0,
+        "explicit_edges": []
+      }
+    }
+  ],
+  "limitations": [
+    "Original issue bodies and comments are live reads, captured immutably by this repository commit, not by upstream commit SHAs",
+    "No linked external artifacts are included unless explicitly recorded in the original text",
+    "No evaluator responses or model performance claims are included",
+    "Metadata from source API can be missing, e.g. comment created_at"
+  ]
+}
