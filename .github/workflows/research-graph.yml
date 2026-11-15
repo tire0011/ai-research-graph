@@ -47,7 +47,9 @@ jobs:
         if: always()
         with:
           name: research-graph-snapshot
-          path: results/
+          path: |
+            results/
+            studies/decision_pilot_20261115/PAIRED_PARITY.json
       - name: Save results in repository
         run: |
           git config user.name 'github-actions[bot]'
