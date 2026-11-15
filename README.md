@@ -6,6 +6,10 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## Freshness gate for research decisions (2026-11-15)
+
+Before acting on a previously identified research overlap or cross-project candidate, use the [small read-only PR status revalidation](source_revalidation.py) and its [four dated source claims](studies/decision_gate_20261115/status_watch_manifest.json). [PR #43](https://github.com/tire0011/ai-research-graph/pull/43) passed **9 unit tests** and a live **4-PR source check** that detected **one post-review merge**; no scientific or time-saving benefit is claimed. The [weekly/manual workflow](.github/workflows/source-revalidation.yml) retains its attributable output as an Actions artifact, and [checkpoint 0009](research_checkpoints/0009-source-drift-2026-11-15.md) preserves the exact decision and limitations. A direct GitHub lookup remains a fair baseline.
+
 ## Feasibility verdict
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
