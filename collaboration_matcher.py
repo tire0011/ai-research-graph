@@ -291,6 +291,10 @@ def rank_pairs(items, config, now):
                 ],
                 "baseline_fulltext_top1_id": baseline_first,
                 "same_as_fulltext_baseline_top1": target["id"] == baseline_first,
+                # Non-destructive review signal, NOT a prediction of relevance.
+                # A sole shared technical term can describe unrelated work
+                # (e.g. CLIP tokenizer vs MoE tokenizer).
+                "single_term_only": len(match_terms) == 1,
                 "ranking_text_truncated": src_truncated or tgt_truncated,
                 "validation": "unreviewed_candidate_not_confirmed_reusable",
                 "outreach": "none",
@@ -389,6 +393,10 @@ def markdown(report):
             f"- Suggested assignees (not contacted): "
             f"{', '.join('@' + p for p in b['assignees']) or 'not specified'}",
             f"- Ranking text truncated: {'yes' if c['ranking_text_truncated'] else 'no'}",
+            ("- **Single-term lexical match: extra technical/mechanism review required;** "
+             "not a confirmed reusable research artifact."
+             if c["single_term_only"] else
+             "- Multiple matched technical terms; **still not confirmed reusable**."),
             "- Original matching expressions (not independently validated):",
         ]
         for t in c["matched_terms"]:
