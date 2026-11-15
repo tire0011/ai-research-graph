@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "public_pr_status_revalidation",
+  "purpose": "Only unresolved research dependencies are rechecked weekly; completed historical examples remain archived in status_watch_manifest.json.",
+  "records": [
+    {
+      "id": "llamafactory-post-training",
+      "url": "https://github.com/OpenEuroLLM/post-training/pull/65",
+      "prior_status": "open",
+      "prior_review_date": "2026-11-15",
+      "origin": "studies/decision_gate_20261115/ARENAHARD_REUSE_RECHECK.md",
+      "decision_tag": "declared_dependency"
+    }
+  ],
+  "notes": [
+    "The old four-case pre/post review demonstration stays immutable in status_watch_manifest.json",
+    "Once PR #65 changes, record the transition in a new research checkpoint and update this active watchlist, or retire it; do not issue the same alert weekly",
+    "No contact, code changes or task execution in external research repositories"
+  ]
+}
