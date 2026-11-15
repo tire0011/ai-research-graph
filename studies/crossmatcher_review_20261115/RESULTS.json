@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "kind": "single_reviewer_crossmatcher_relevance_review",
+  "as_of": "2026-11-15",
+  "selection": "studies/crossmatcher_review_20261115/SELECTION.md",
+  "candidate_snapshot": "results/collaboration_matches.json",
+  "scoring": "0 unrelated, 1 adjacent without verified reusable artifact, 2 plausible reusable artifact with source evidence, 3 specific technically compatible and decision-ready",
+  "review_method": "Same assistant read original primary GitHub issue/PR bodies and public issue comments of each selected source and both paired targets. Selection was committed before the primary-source review. No independent or blinded judge. Candidate ranking was previously tuned on this cohort; these labels must not be used as a held-out generalization claim.",
+  "cases": [
+    {
+      "id": "R1",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#119",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/119",
+        "facts": [
+          "MoE sanity baseline on JUPITER/LUMI uses GPT-NeoX 20B tokenizer, 50k vocabulary",
+          "Issue comments ask to close the work; source remains open"
+        ],
+        "evidence_urls": [
+          "https://github.com/OpenEuroLLM/Taskboard/issues/119",
+          "https://github.com/OpenEuroLLM/Taskboard/issues/119#issuecomment-5758427706"
+        ]
+      },
+      "technical": {
+        "id": "github:LAION-AI/CLIP_benchmark#19",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/19",
+        "score": 0,
+        "reason": "A 2022 merged change selecting CLIP model tokenizers does not answer a 2025/2026 MoE training baseline on GPT-NeoX vocabulary. Shared word 'tokenizer' is not a reusable solution."
+      },
+      "fulltext": {
+        "id": "github:LAION-AI/CLIP_benchmark#114",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/114",
+        "score": 0,
+        "reason": "A CLIP WebDataset distributed-evaluation nodesplitter crash fix does not address the source MoE training baseline."
+      },
+      "decision": "abstain",
+      "lowest_effort_note": "The original task already has a closure request; check whether it remains necessary before proposing new infrastructure.",
+      "outreach": false
+    },
+    {
+      "id": "R2",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#3",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+        "facts": [
+          "Issue asks to adapt warc2text for opt-out handling",
+          "Its own comments link Swiss-AI/Apertus retroactive robots.txt filtering and existing public source code"
+        ],
+        "evidence_urls": [
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133246012"
+        ]
+      },
+      "technical": {
+        "id": "github:hplt-project/warc2text-runner#22",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/22",
+        "score": 0,
+        "reason": "De-chunking ArchiveBot HTTP responses, completed via bitextor/warc2text PR #76, is not retroactive website opt-out recognition."
+      },
+      "fulltext": {
+        "id": "github:hplt-project/HPLT-textpipes#18",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
+        "score": 1,
+        "reason": "The release planning discussion includes robots.txt opt-out filtering; the topic overlaps the source work, but that downstream filtering stage is not proven a compatible warc2text implementation or missing collaboration."
+      },
+      "decision": "already_related_work_known_to_source",
+      "lowest_effort_note": "Source discussion already points to the Swiss-AI/Apertus preprocessing references. Do not contact maintainers to repeat that advice.",
+      "outreach": false
+    },
+    {
+      "id": "R3",
+      "source": {
+        "id": "github:OpenEuroLLM/web-data-processing#8",
+        "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+        "facts": [
+          "Audio/video MIME extraction is planned as a warc2text extension",
+          "Source comments report little useful audio in 2025/2026 crawls, most useful finds in 2018/2019",
+          "Contributors already discuss a mixed-crawl trial and LUMI-O storage constraints; developer estimated 3–5 days for the change"
+        ],
+        "evidence_urls": [
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6753122403",
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6780649827",
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6795969898",
+          "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829815600"
+        ]
+      },
+      "technical": {
+        "id": "github:hplt-project/warc2text-runner#22",
+        "url": "https://github.com/hplt-project/warc2text-runner/issues/22",
+        "score": 0,
+        "reason": "ArchiveBot de-chunking is no demonstrated solution for MIME routing, audio usefulness or crawl-sampling economics."
+      },
+      "fulltext": {
+        "id": "github:hplt-project/HPLT-textpipes#18",
+        "url": "https://github.com/hplt-project/HPLT-textpipes/issues/18",
+        "score": 1,
+        "reason": "HPLT storage and 2025 CC processing are related operational context, but the completed HPLT 3.1 storage issue provides no direct media extraction implementation."
+      },
+      "decision": "existing_team_discussion_not_new_knowledge",
+      "lowest_effort_note": "The current team already plans a small multi-crawl trial; any independent recommendation should test representativeness and expected useful-audio yield before committing larger reprocessing. No extra outreach.",
+      "outreach": false
+    }
+  ],
+  "summary": {
+    "cases": 3,
+    "candidate_pairs": 6,
+    "technical_score_sum": 0,
+    "fulltext_score_sum": 2,
+    "technical_actionable_pairs_score_ge_2": 0,
+    "fulltext_actionable_pairs_score_ge_2": 0,
+    "technical_better_cases": 0,
+    "fulltext_better_cases": 2,
+    "tied_cases": 1,
+    "verified_research_reuse": 0,
+    "measured_avoided_effort": null,
+    "interpretation": "In this small, knowingly source-tuned and single-reviewer set, both approaches failed to produce any actionable cross-project handoff; technical-vocabulary ranking was not better and had lower topical relevance. The full-text's two 'adjacent' matches are not established useful solutions."
+  },
+  "limitations": [
+    "Only three chosen source anchors, non-blinded single reviewer",
+    "Original matcher rules were tuned on observed corpus, not a true holdout",
+    "No source body hash pinned by Git commit upstream; URLs/dated descriptions used",
+    "Neither method sees all of source comments in its initial index; reviewer had equal comment-source access",
+    "No measurement of search time, independent decision accuracy, adoption or saved GPU hours",
+    "No automatic external comments or actions"
+  ]
+}
