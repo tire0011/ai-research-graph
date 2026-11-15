@@ -2,6 +2,12 @@ name: Research source-status revalidation
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'source_revalidation.py'
+      - 'tests/test_source_revalidation.py'
+      - 'studies/decision_gate_20261115/status_watch_manifest.json'
+      - '.github/workflows/source-revalidation.yml'
   schedule:
     - cron: '37 6 * * 1'
   push:
