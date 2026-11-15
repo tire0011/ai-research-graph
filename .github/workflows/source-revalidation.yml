@@ -7,6 +7,7 @@ on:
       - 'source_revalidation.py'
       - 'tests/test_source_revalidation.py'
       - 'studies/decision_gate_20261115/status_watch_manifest.json'
+      - 'studies/decision_gate_20261115/status_watch_active.json'
       - '.github/workflows/source-revalidation.yml'
   schedule:
     - cron: '37 6 * * 1'
@@ -16,6 +17,7 @@ on:
       - 'source_revalidation.py'
       - 'tests/test_source_revalidation.py'
       - 'studies/decision_gate_20261115/status_watch_manifest.json'
+      - 'studies/decision_gate_20261115/status_watch_active.json'
       - '.github/workflows/source-revalidation.yml'
 
 permissions:
@@ -41,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python source_revalidation.py \
-            --manifest studies/decision_gate_20261115/status_watch_manifest.json \
+            --manifest studies/decision_gate_20261115/status_watch_active.json \
             --output "results/REVALIDATION_${{ github.run_id }}.json" \
             --markdown "results/REVALIDATION_${{ github.run_id }}.md"
       - name: Retain attributable review packet
