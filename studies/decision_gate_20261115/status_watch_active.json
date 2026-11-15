@@ -8,7 +8,7 @@
       "url": "https://github.com/OpenEuroLLM/post-training/pull/65",
       "prior_status": "open",
       "prior_review_date": "2026-11-15",
-      "origin": "studies/decision_gate_20261115/ARENAHARD_REUSE_RECHECK.md",
+      "origin": "research_checkpoints/0009-source-drift-2026-11-15.md",
       "decision_tag": "declared_dependency"
     }
   ],
