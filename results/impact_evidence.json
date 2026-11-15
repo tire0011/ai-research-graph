@@ -1,7 +1,7 @@
 {
   "status": "completed",
-  "evaluated_utc": "2026-11-15T10:11:57.458805+00:00",
-  "snapshot_utc": "2026-11-15T10:08:40.638470+00:00",
+  "evaluated_utc": "2026-11-15T10:21:08.913602+00:00",
+  "snapshot_utc": "2026-11-15T10:17:50.412392+00:00",
   "selection": {
     "date_utc": "2026-11-08",
     "scope": "Ten deliberately selected public, open OpenEuroLLM/Taskboard issues spanning training throughput, evaluation quality, explicit dependencies, memory failures and automation",
