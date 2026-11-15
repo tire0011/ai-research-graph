@@ -1,0 +1,53 @@
+name: Research source-status revalidation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'source_revalidation.py'
+      - 'tests/test_source_revalidation.py'
+      - 'studies/decision_gate_20261115/status_watch_manifest.json'
+      - '.github/workflows/source-revalidation.yml'
+  schedule:
+    - cron: '37 6 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - 'source_revalidation.py'
+      - 'tests/test_source_revalidation.py'
+      - 'studies/decision_gate_20261115/status_watch_manifest.json'
+      - '.github/workflows/source-revalidation.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-source-revalidation
+  cancel-in-progress: false
+
+jobs:
+  revalidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run source-status unit tests
+        run: python -m unittest discover -s tests -p 'test_source_revalidation.py' -v
+      - name: Recheck original public PR sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python source_revalidation.py \
+            --manifest studies/decision_gate_20261115/status_watch_manifest.json \
+            --output "results/REVALIDATION_${{ github.run_id }}.json" \
+            --markdown "results/REVALIDATION_${{ github.run_id }}.md"
+      - name: Retain attributable review packet
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-source-revalidation-${{ github.run_id }}
+          path: results/REVALIDATION_*
+          if-no-files-found: warn
