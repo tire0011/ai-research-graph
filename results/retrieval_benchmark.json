@@ -1,9 +1,9 @@
 {
-  "snapshot_utc": "2026-11-15T10:08:40.638470+00:00",
-  "evaluated_utc": "2026-11-15T10:11:39.101522+00:00",
+  "snapshot_utc": "2026-11-15T10:17:50.412392+00:00",
+  "evaluated_utc": "2026-11-15T10:20:48.560908+00:00",
   "nodes": 982,
   "edges": 407,
-  "index_build_ms": 0.2765,
+  "index_build_ms": 0.3049,
   "repetitions": 31,
   "top_k": 10,
   "targets": 6,
@@ -39,7 +39,7 @@
         "hf:dataset:allenai/tulu-3-sft-mixture"
       ],
       "graph_median_ms": 0.0081,
-      "text_median_ms": 1.8361
+      "text_median_ms": 1.9125
     },
     {
       "id": "tokenizer_v2",
@@ -70,7 +70,7 @@
         "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k"
       ],
       "graph_median_ms": 0.0086,
-      "text_median_ms": 0.4835
+      "text_median_ms": 0.4772
     },
     {
       "id": "openthoughts_shared_paper",
@@ -100,8 +100,8 @@
         "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
         "hf:dataset:open-web-math/open-web-math"
       ],
-      "graph_median_ms": 0.0083,
-      "text_median_ms": 1.8422
+      "graph_median_ms": 0.0081,
+      "text_median_ms": 1.908
     },
     {
       "id": "finemath_shared_paper",
@@ -131,8 +131,8 @@
         "hf:dataset:HuggingFaceFW/finephrase",
         "hf:dataset:HuggingFaceFW/finewiki"
       ],
-      "graph_median_ms": 0.0119,
-      "text_median_ms": 1.8098
+      "graph_median_ms": 0.0122,
+      "text_median_ms": 1.8457
     },
     {
       "id": "olmo3_shared_paper",
@@ -165,7 +165,7 @@
         "hf:model:openeurollm/oellm-9b-256k-sft",
         "hf:model:Snowflake/snowflake-arctic-embed-l-v2.0"
       ],
-      "graph_median_ms": 0.0159,
+      "graph_median_ms": 0.0161,
       "text_median_ms": 0.6347
     },
     {

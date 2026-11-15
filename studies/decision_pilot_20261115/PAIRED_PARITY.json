@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "paired_evidence_parity_only",
+  "frozen_input_sha256": "2d528679640c8388655b37bdb22eea49525089d98789aaed092200c3e54b1f38",
+  "cases": [
+    {
+      "case_id": "E1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#346",
+      "primary_source_records_per_arm": 4,
+      "public_comments_per_arm": 3,
+      "source_sha256": "19c2b246048e31487c55b13afd22f781069d8384496c39f4ea7524a441a3e4ea",
+      "graph_primary_source_sha256": "19c2b246048e31487c55b13afd22f781069d8384496c39f4ea7524a441a3e4ea",
+      "identical_original_evidence": true,
+      "graph_structural_hints": 0,
+      "extra_original_sources_from_graph": 0,
+      "independent_decision_quality": null,
+      "human_time_saved": null
+    },
+    {
+      "case_id": "D1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#341",
+      "primary_source_records_per_arm": 7,
+      "public_comments_per_arm": 6,
+      "source_sha256": "1704c4e14797f4bab320d5e2a35dfa1c579215dfaf3ca6e954f97e00637c587d",
+      "graph_primary_source_sha256": "1704c4e14797f4bab320d5e2a35dfa1c579215dfaf3ca6e954f97e00637c587d",
+      "identical_original_evidence": true,
+      "graph_structural_hints": 0,
+      "extra_original_sources_from_graph": 0,
+      "independent_decision_quality": null,
+      "human_time_saved": null
+    },
+    {
+      "case_id": "W1",
+      "anchor_id": "github:OpenEuroLLM/Taskboard#343",
+      "primary_source_records_per_arm": 7,
+      "public_comments_per_arm": 6,
+      "source_sha256": "8d9fa1844361b0634e8ce4ef16125e9b93adc58c9898f75d2bf1ea52b67b101f",
+      "graph_primary_source_sha256": "8d9fa1844361b0634e8ce4ef16125e9b93adc58c9898f75d2bf1ea52b67b101f",
+      "identical_original_evidence": true,
+      "graph_structural_hints": 0,
+      "extra_original_sources_from_graph": 0,
+      "independent_decision_quality": null,
+      "human_time_saved": null
+    }
+  ],
+  "summary": {
+    "case_count": 3,
+    "identical_evidence_cases": 3,
+    "total_comment_records_per_arm": 15,
+    "graph_structural_hints": 0,
+    "evidence_only_graph_advantage_demonstrated": false,
+    "decision_accuracy_measured": false
+  },
+  "limitations": [
+    "A common source packet is not an independently blinded decision test",
+    "Graph edge hints are metadata, not extra original-source documents",
+    "Any benefit in reasoning with graph structure remains untested",
+    "Three selected cases are not representative of a research corpus",
+    "No research time, GPU budget, collaboration or scientific gain is measured"
+  ]
+}
