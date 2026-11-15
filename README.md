@@ -16,6 +16,13 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 A small, read-only [manual comment packet command](decision_comment_packet.py) **reuses** the existing verified comment collector to obtain SHA256-checked evidence on demand for at most five indexed issues; it does not add a crawler, AI judge or global comment index. Unit tests cover source attribution and fail-closed errors. See the [study report](studies/decision_pilot_20261115/RESULTS.md) for usage, evidence and limits.
 
+## Equal-source research decisions and 2023-cutoff replay (2026-11-15)
+
+- [Frozen, identical three-case source packet](studies/decision_pilot_20261115/FROZEN_EVIDENCE.json): three OpenEuroLLM task bodies and 15 attributable public comments. The [paired evidence audit script](paired_decision_evidence.py) checks source parity **without implying decision-quality or time-saving gains**; tests run in GitHub Actions.
+- [2023-baseline multilingual hypothesis register](studies/historical_2023/HYPOTHESES.md) and [2024–2026 outcome inspection](studies/historical_2023/OUTCOME_REVIEW.md): an explicitly **retrospective, contaminated** exercise. Later language-diversity findings are not valid proof of forecasting by a modern model.
+- [Near-prior-art audit](studies/historical_2023/PRIOR_ART_FOLLOWUP_20261115.md) covers gradient-based multilingual data filtering and controlled cross-language ability transfer; do not present these approaches as novel.
+- [Synthesis checkpoint 0006](research_checkpoints/0006-unified-evidence-2026-11-15.md) keeps the original goals of avoiding duplicated research and finding low-effort interventions alongside testable scientific discovery ideas. The next gate is an **independently reviewed, same-source decision comparison**, not additional crawling infrastructure.
+
 ## Source-following decision audit (2026-11-14)
 
 The [four-case decision audit](results/interventions/DECISION_AUDIT_20261114.md) checks real OpenEuroLLM **overlap, dependency, candidate reuse, and correct-abstention** cases against ordinary issue search and source-following. Its [structured evidence cards](results/interventions/DECISION_AUDIT_20261114.json) include exact links, proposed smallest actions and stop conditions; [checkpoint 0003](research_checkpoints/0003-decision-audit-2026-11-14.md) preserves the synthesis. **No automated graph query comparison or measured acceleration was performed:** the central connections were often available from direct source reading, so a fresh blinded same-source baseline is the prerequisite for any further infrastructure.
