@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "public_pr_status_revalidation",
+  "purpose": "Compare dated research review claims to live primary PR states before recommending research work; no automated outreach or content edits.",
+  "limits": {
+    "max_checks": 10,
+    "only_public_github_pull_requests": true
+  },
+  "records": [
+    {
+      "id": "arena-exclusions-oellm",
+      "url": "https://github.com/OpenEuroLLM/oellm-eval/pull/174",
+      "prior_status": "open",
+      "prior_review_date": "2026-11-10",
+      "origin": "results/COLLABORATION_REVIEW_NEXT_CASES.md",
+      "decision_tag": "conditional_compatibility"
+    },
+    {
+      "id": "llamafactory-post-training",
+      "url": "https://github.com/OpenEuroLLM/post-training/pull/65",
+      "prior_status": "open",
+      "prior_review_date": "2026-11-14",
+      "origin": "results/interventions/DECISION_AUDIT_20261114.md",
+      "decision_tag": "declared_dependency"
+    },
+    {
+      "id": "allenai-statebench",
+      "url": "https://github.com/allenai/olmo-eval/pull/358",
+      "prior_status": "merged",
+      "prior_review_date": "2026-11-10",
+      "origin": "results/COLLABORATION_REVIEW_NEXT_CASES.md",
+      "decision_tag": "possible_complement"
+    },
+    {
+      "id": "allenai-longbench-v2",
+      "url": "https://github.com/allenai/olmo-eval/pull/372",
+      "prior_status": "merged",
+      "prior_review_date": "2026-11-10",
+      "origin": "results/COLLABORATION_REVIEW_NEXT_CASES.md",
+      "decision_tag": "existing_benchmark"
+    }
+  ],
+  "notes": [
+    "Dated status claims are a purposeful sample, not a global freshness study",
+    "Source status change does not automatically imply a scientifically useful action",
+    "A GitHub API read must never mutate third-party repositories",
+    "The watch manifest is a historical baseline; do not silently update old claims when new sources change"
+  ]
+}
