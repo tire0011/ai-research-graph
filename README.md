@@ -10,6 +10,12 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
 
+## Critical decision gates (2026-11-15)
+
+The [seven-question decision review protocol](RESEARCH_DECISION_GATES.md) asks whether a graph candidate addresses the same **measurement and real unmet need** before proposing any collaboration or new implementation. The [Prelude ↔ StateBench review](studies/decision_gate_20261115/STATEBENCH_VS_PRELUDE.md) found a **measurement mismatch** (generative EOS-first QA vs logprob state tracking) and rejects an immediate integration. The [Arena-Hard reuse recheck](studies/decision_gate_20261115/ARENAHARD_REUSE_RECHECK.md) corrected a stale PR status after [OpenEuroLLM #174](https://github.com/OpenEuroLLM/oellm-eval/pull/174) merged; reusable validation principles are possible, **not a verified unmet AllenAI need**. [Checkpoint 0008](research_checkpoints/0008-decision-gates-2026-11-15.md) preserves both decisions and the source-freshness lesson.
+
+**Result:** two evidence-backed review decisions, no new software, training or external outreach; **no graph-vs-plain-search advantage yet measured**.
+
 ## Preselected decision audit and on-demand comment evidence (2026-11-15)
 
 [Three new cases](studies/decision_pilot_20261115/SELECTION.md) were frozen from title/metadata before reading their sources. The [decision audit](studies/decision_pilot_20261115/RESULTS.md) found **15 public comments across three issues**, but **zero indexed comment edges for those issues** in the bounded graph snapshot. Comments contain completed experiments, result corrections and operational cost questions. Simple GitHub issue-and-comment reading revealed these facts too; this is an **evidence-coverage gap**, not proven graph advantage. [Checkpoint 0005](research_checkpoints/0005-comment-evidence-2026-11-15.md) preserves the finding.
