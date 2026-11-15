@@ -8,6 +8,13 @@ on:
     branches: [main]
     paths-ignore:
       - 'results/**'
+      - 'research_checkpoints/**'
+      - 'studies/**'
+      - '**/*.md'
+
+concurrency:
+  group: research-graph-main
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -43,4 +50,9 @@ jobs:
           git add results/REPORT.md results/snapshot.json results/QA_EVIDENCE.md results/RETRIEVAL_BENCHMARK.md results/retrieval_benchmark.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: update research graph snapshot'
-          git push
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep "$attempt"
+          done
+          exit 1
