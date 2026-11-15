@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-15T19:13:55.905504+00:00",
+  "timestamp_utc": "2026-11-15T19:17:06.783057+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#451",
@@ -11571,23 +11571,6 @@
       "updated_at": "2026-11-14T07:54:29.000Z"
     },
     {
-      "id": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
-      "type": "dataset",
-      "title": "Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
-      "url": "https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"code\", \"math\", \"scientific-qa\", \"instruction-following\", \"reasoning\", \"thinking\", \"gpt-oss-120b\", \"distill\"], \"size_categories\": [\"435K\"], \"configs\": [{\"config_name\": \"stage1\", \"data_files\": \"Superior-Reasoning-SFT-gpt-oss-120b-stage1-train-data.jsonl\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"input\", \"dtype\": \"string\"}, {\"name\": \"output\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"meta\", \"dtype\": \"string\"}]}, {\"config_name\": \"stage2\", \"data_files\": \"Superior-Reasoning-SFT-gpt-oss-120b-stage2-train-data.jsonl\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"input\", \"dtype\": \"string\"}, {\"name\": \"output\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"meta\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.20908",
-          "2601.09088"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-01-31T10:05:46.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "type": "dataset",
       "title": "allenai/Dolci-Instruct-SFT",
@@ -11620,16 +11603,19 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:bigcode/starcoderdata",
+      "id": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
       "type": "dataset",
-      "title": "bigcode/starcoderdata",
-      "url": "https://huggingface.co/datasets/bigcode/starcoderdata",
-      "description": "{\"annotations_creators\": [], \"language_creators\": [\"crowdsourced\", \"expert-generated\"], \"language\": [\"code\"], \"license\": [\"other\"], \"multilinguality\": [\"multilingual\"], \"pretty_name\": \"The-Stack\", \"size_categories\": [\"unknown\"], \"source_datasets\": [], \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"## Terms of Use for The Stack\\n\\nThe Stack dataset is a collection of source code in over 300 programming languages. We ask that you read and acknowledge the following points before using the dataset:\\n1. The Stack is a collection of source code from repositories with various licenses. Any use of all or part of the code gathered in The Stack must abide by the terms of the original licenses, including attribution clauses when relevant. We facilitate this by providing provenance information for each data point.\\n2. The Stack is regularly updated to enact validated data removal requests. By clicking on \\\"Access repository\\\", you agree to update your own version of The Stack to the most recent usable version specified by the maintainers in [the following thread](https://huggingface.co/datasets/bigcode/the-stack/discussions/7). If you have questions about dataset versions and allowed uses, please also ask them in the dataset’s [community discussions](https://huggingface.co/datasets/bigcode/the-stack/discussions/new). We will also notify users via email when the latest usable version changes.\\n3. To host, share, or otherwise provide access to The Stack dataset, you must include [these Terms of Use](https://huggingface.co/datasets/bigcode/the-stack#terms-of-use-for-the-stack) and require users to agree to it.\\n\\nBy clicking on \\\"Access repository\\\" below, you accept that your contact information (email address and username) can be shared with the dataset maintainers as well.\\n  \", \"extra_gated_fields\": {\"Email\": \"text\", \"I have read the License and agree with its terms\": \"checkbox\"}}",
+      "title": "Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "url": "https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"tags\": [\"code\", \"math\", \"scientific-qa\", \"instruction-following\", \"reasoning\", \"thinking\", \"gpt-oss-120b\", \"distill\"], \"size_categories\": [\"435K\"], \"configs\": [{\"config_name\": \"stage1\", \"data_files\": \"Superior-Reasoning-SFT-gpt-oss-120b-stage1-train-data.jsonl\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"input\", \"dtype\": \"string\"}, {\"name\": \"output\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"meta\", \"dtype\": \"string\"}]}, {\"config_name\": \"stage2\", \"data_files\": \"Superior-Reasoning-SFT-gpt-oss-120b-stage2-train-data.jsonl\", \"features\": [{\"name\": \"uuid\", \"dtype\": \"string\"}, {\"name\": \"input\", \"dtype\": \"string\"}, {\"name\": \"output\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"meta\", \"dtype\": \"string\"}]}]}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2512.20908",
+          "2601.09088"
+        ],
         "doi": []
       },
-      "updated_at": "2023-05-16T10:05:48.000Z",
+      "updated_at": "2026-01-31T10:05:46.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11644,6 +11630,20 @@
         "doi": []
       },
       "updated_at": "2024-12-02T19:48:33.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:bigcode/starcoderdata",
+      "type": "dataset",
+      "title": "bigcode/starcoderdata",
+      "url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "description": "{\"annotations_creators\": [], \"language_creators\": [\"crowdsourced\", \"expert-generated\"], \"language\": [\"code\"], \"license\": [\"other\"], \"multilinguality\": [\"multilingual\"], \"pretty_name\": \"The-Stack\", \"size_categories\": [\"unknown\"], \"source_datasets\": [], \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"## Terms of Use for The Stack\\n\\nThe Stack dataset is a collection of source code in over 300 programming languages. We ask that you read and acknowledge the following points before using the dataset:\\n1. The Stack is a collection of source code from repositories with various licenses. Any use of all or part of the code gathered in The Stack must abide by the terms of the original licenses, including attribution clauses when relevant. We facilitate this by providing provenance information for each data point.\\n2. The Stack is regularly updated to enact validated data removal requests. By clicking on \\\"Access repository\\\", you agree to update your own version of The Stack to the most recent usable version specified by the maintainers in [the following thread](https://huggingface.co/datasets/bigcode/the-stack/discussions/7). If you have questions about dataset versions and allowed uses, please also ask them in the dataset’s [community discussions](https://huggingface.co/datasets/bigcode/the-stack/discussions/new). We will also notify users via email when the latest usable version changes.\\n3. To host, share, or otherwise provide access to The Stack dataset, you must include [these Terms of Use](https://huggingface.co/datasets/bigcode/the-stack#terms-of-use-for-the-stack) and require users to agree to it.\\n\\nBy clicking on \\\"Access repository\\\" below, you accept that your contact information (email address and username) can be shared with the dataset maintainers as well.\\n  \", \"extra_gated_fields\": {\"Email\": \"text\", \"I have read the License and agree with its terms\": \"checkbox\"}}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2023-05-16T10:05:48.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11696,6 +11696,22 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
+      "type": "dataset",
+      "title": "allenai/dolma3_dolmino_mix-100B-1125",
+      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
+      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
+      "identifiers": {
+        "arxiv": [
+          "2512.13961"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-02-23T19:03:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:allenai/olmo-mix-1124",
       "type": "dataset",
       "title": "allenai/olmo-mix-1124",
@@ -11706,6 +11722,20 @@
         "doi": []
       },
       "updated_at": "2025-08-19T18:45:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finepdfs-edu",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-11-11T18:49:02.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11743,16 +11773,30 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "id": "hf:dataset:HuggingFaceFW/finewiki",
       "type": "dataset",
-      "title": "HuggingFaceFW/finepdfs-edu",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "title": "HuggingFaceFW/finewiki",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finewiki",
+      "description": "{\"license\": [\"cc-by-sa-4.0\", \"gfdl\"], \"task_categories\": [\"text-generation\"], \"pretty_name\": \"🌐 FineWiki\", \"configs\": [{\"config_name\": \"ab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/abwiki/*\"}]}, {\"config_name\": \"ace\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/acewiki/*\"}]}, {\"config_name\": \"ady\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/adywiki/*\"}]}, {\"config_name\": \"af\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afwiki/*\"}]}, {\"config_name\": \"als\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/alswiki/*\"}]}, {\"config_name\": \"alt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/altwiki/*\"}]}, {\"config_name\": \"ami\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/amiwiki/*\"}]}, {\"config_name\": \"am\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/amwiki/*\"}]}, {\"config_name\": \"ang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/angwiki/*\"}]}, {\"config_name\": \"anp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anpwiki/*\"}]}, {\"config_name\": \"an\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anwiki/*\"}]}, {\"config_name\": \"arc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arcwiki/*\"}]}, {\"config_name\": \"ar\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arwiki/*\"}]}, {\"config_name\": \"ary\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arywiki/*\"}]}, {\"config_name\": \"arz\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arzwiki/*\"}]}, {\"config_name\": \"ast\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/astwiki/*\"}]}, {\"config_name\": \"as\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/aswiki/*\"}]}, {\"config_name\": \"atj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/atjwiki/*\"}]}, {\"config_name\": \"avk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/avkwiki/*\"}]}, {\"config_name\": \"av\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/avwiki/*\"}]}, {\"config_name\": \"awa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/awawiki/*\"}]}, {\"config_name\": \"ay\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/aywiki/*\"}]}, {\"config_name\": \"azb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azbwiki/*\"}]}, {\"config_name\": \"az\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azwiki/*\"}]}, {\"config_name\": \"ban\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/banwiki/*\"}]}, {\"config_name\": \"bar\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/barwiki/*\"}]}, {\"config_name\": \"bat_smg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bat_smgwiki/*\"}]}, {\"config_name\": \"ba\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bawiki/*\"}]}, {\"config_name\": \"bbc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bbcwiki/*\"}]}, {\"config_name\": \"bcl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bclwiki/*\"}]}, {\"config_name\": \"be\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bewiki/*\"}]}, {\"config_name\": \"bg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bgwiki/*\"}]}, {\"config_name\": \"bh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bhwiki/*\"}]}, {\"config_name\": \"bi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/biwiki/*\"}]}, {\"config_name\": \"bjn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bjnwiki/*\"}]}, {\"config_name\": \"blk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/blkwiki/*\"}]}, {\"config_name\": \"bm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bmwiki/*\"}]}, {\"config_name\": \"bn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bnwiki/*\"}]}, {\"config_name\": \"bo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bowiki/*\"}]}, {\"config_name\": \"bpy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bpywiki/*\"}]}, {\"config_name\": \"br\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/brwiki/*\"}]}, {\"config_name\": \"bs\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bswiki/*\"}]}, {\"config_name\": \"bug\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bugwiki/*\"}]}, {\"config_name\": \"bxr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bxrwiki/*\"}]}, {\"config_name\": \"ca\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cawiki/*\"}]}, {\"config_name\": \"cbk_zam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cbk_zamwiki/*\"}]}, {\"config_name\": \"cdo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cdowiki/*\"}]}, {\"config_name\": \"ceb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cebwiki/*\"}]}, {\"config_name\": \"ce\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cewiki/*\"}]}, {\"config_name\": \"chr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chrwiki/*\"}]}, {\"config_name\": \"ch\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chwiki/*\"}]}, {\"config_name\": \"chy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chywiki/*\"}]}, {\"config_name\": \"ckb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ckbwiki/*\"}]}, {\"config_name\": \"co\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cowiki/*\"}]}, {\"config_name\": \"crh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/crhwiki/*\"}]}, {\"config_name\": \"cr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/crwiki/*\"}]}, {\"config_name\": \"csb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/csbwiki/*\"}]}, {\"config_name\": \"cs\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cswiki/*\"}]}, {\"config_name\": \"cu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cuwiki/*\"}]}, {\"config_name\": \"cv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cvwiki/*\"}]}, {\"config_name\": \"cy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cywiki/*\"}]}, {\"config_name\": \"dag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dagwiki/*\"}]}, {\"config_name\": \"da\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dawiki/*\"}]}, {\"config_name\": \"de\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dewiki/*\"}]}, {\"config_name\": \"dga\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dgawiki/*\"}]}, {\"config_name\": \"din\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dinwiki/*\"}]}, {\"config_name\": \"diq\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/diqwiki/*\"}]}, {\"config_name\": \"dsb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dsbwiki/*\"}]}, {\"config_name\": \"dty\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dtywiki/*\"}]}, {\"config_name\": \"dv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dvwiki/*\"}]}, {\"config_name\": \"dz\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dzwiki/*\"}]}, {\"config_name\": \"ee\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eewiki/*\"}]}, {\"config_name\": \"el\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/elwiki/*\"}]}, {\"config_name\": \"eml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/emlwiki/*\"}]}, {\"config_name\": \"en\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/enwiki/*\"}]}, {\"config_name\": \"eo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eowiki/*\"}]}, {\"config_name\": \"es\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eswiki/*\"}]}, {\"config_name\": \"et\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/etwiki/*\"}]}, {\"config_name\": \"eu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/euwiki/*\"}]}, {\"config_name\": \"ext\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/extwiki/*\"}]}, {\"config_name\": \"fat\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fatwiki/*\"}]}, {\"config_name\": \"fa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fawiki/*\"}]}, {\"config_name\": \"ff\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ffwiki/*\"}]}, {\"config_name\": \"fiu_vro\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fiu_vrowiki/*\"}]}, {\"config_name\": \"fi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fiwiki/*\"}]}, {\"config_name\": \"fj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fjwiki/*\"}]}, {\"config_name\": \"fon\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fonwiki/*\"}]}, {\"config_name\": \"fo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fowiki/*\"}]}, {\"config_name\": \"frp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frpwiki/*\"}]}, {\"config_name\": \"frr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frrwiki/*\"}]}, {\"config_name\": \"fr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frwiki/*\"}]}, {\"config_name\": \"fur\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/furwiki/*\"}]}, {\"config_name\": \"fy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fywiki/*\"}]}, {\"config_name\": \"gag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gagwiki/*\"}]}, {\"config_name\": \"gan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ganwiki/*\"}]}, {\"config_name\": \"ga\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gawiki/*\"}]}, {\"config_name\": \"gcr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gcrwiki/*\"}]}, {\"config_name\": \"gd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gdwiki/*\"}]}, {\"config_name\": \"glk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glkwiki/*\"}]}, {\"config_name\": \"gl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glwiki/*\"}]}, {\"config_name\": \"gn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gnwiki/*\"}]}, {\"config_name\": \"gom\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gomwiki/*\"}]}, {\"config_name\": \"gor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gorwiki/*\"}]}, {\"config_name\": \"got\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gotwiki/*\"}]}, {\"config_name\": \"gpe\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gpewiki/*\"}]}, {\"config_name\": \"guc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gucwiki/*\"}]}, {\"config_name\": \"gur\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gurwiki/*\"}]}, {\"config_name\": \"gu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/guwiki/*\"}]}, {\"config_name\": \"guw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/guwwiki/*\"}]}, {\"config_name\": \"gv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gvwiki/*\"}]}, {\"config_name\": \"hak\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hakwiki/*\"}]}, {\"config_name\": \"ha\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hawiki/*\"}]}, {\"config_name\": \"haw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hawwiki/*\"}]}, {\"config_name\": \"he\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hewiki/*\"}]}, {\"config_name\": \"hif\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hifwiki/*\"}]}, {\"config_name\": \"hi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hiwiki/*\"}]}, {\"config_name\": \"hr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrwiki/*\"}]}, {\"config_name\": \"hsb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hsbwiki/*\"}]}, {\"config_name\": \"ht\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/htwiki/*\"}]}, {\"config_name\": \"hu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/huwiki/*\"}]}, {\"config_name\": \"hy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hywiki/*\"}]}, {\"config_name\": \"hyw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hywwiki/*\"}]}, {\"config_name\": \"ia\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iawiki/*\"}]}, {\"config_name\": \"id\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/idwiki/*\"}]}, {\"config_name\": \"ie\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iewiki/*\"}]}, {\"config_name\": \"ig\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/igwiki/*\"}]}, {\"config_name\": \"ik\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ikwiki/*\"}]}, {\"config_name\": \"ilo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ilowiki/*\"}]}, {\"config_name\": \"inh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/inhwiki/*\"}]}, {\"config_name\": \"io\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iowiki/*\"}]}, {\"config_name\": \"is\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iswiki/*\"}]}, {\"config_name\": \"it\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/itwiki/*\"}]}, {\"config_name\": \"iu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iuwiki/*\"}]}, {\"config_name\": \"jam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jamwiki/*\"}]}, {\"config_name\": \"ja\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jawiki/*\"}]}, {\"config_name\": \"jbo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jbowiki/*\"}]}, {\"config_name\": \"jv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jvwiki/*\"}]}, {\"config_name\": \"kaa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaawiki/*\"}]}, {\"config_name\": \"kab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kabwiki/*\"}]}, {\"config_name\": \"ka\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kawiki/*\"}]}, {\"config_name\": \"kbd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kbdwiki/*\"}]}, {\"config_name\": \"kbp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kbpwiki/*\"}]}, {\"config_name\": \"kcg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kcgwiki/*\"}]}, {\"config_name\": \"kg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kgwiki/*\"}]}, {\"config_name\": \"ki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiwiki/*\"}]}, {\"config_name\": \"kk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kkwiki/*\"}]}, {\"config_name\": \"kl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/klwiki/*\"}]}, {\"config_name\": \"km\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kmwiki/*\"}]}, {\"config_name\": \"kn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/knwiki/*\"}]}, {\"config_name\": \"koi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/koiwiki/*\"}]}, {\"config_name\": \"ko\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kowiki/*\"}]}, {\"config_name\": \"krc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/krcwiki/*\"}]}, {\"config_name\": \"ksh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kshwiki/*\"}]}, {\"config_name\": \"ks\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kswiki/*\"}]}, {\"config_name\": \"ku\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kuwiki/*\"}]}, {\"config_name\": \"kv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kvwiki/*\"}]}, {\"config_name\": \"kw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kwwiki/*\"}]}, {\"config_name\": \"ky\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kywiki/*\"}]}, {\"config_name\": \"lad\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ladwiki/*\"}]}, {\"config_name\": \"la\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lawiki/*\"}]}, {\"config_name\": \"lbe\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lbewiki/*\"}]}, {\"config_name\": \"lb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lbwiki/*\"}]}, {\"config_name\": \"lez\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lezwiki/*\"}]}, {\"config_name\": \"lfn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lfnwiki/*\"}]}, {\"config_name\": \"lg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lgwiki/*\"}]}, {\"config_name\": \"lij\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lijwiki/*\"}]}, {\"config_name\": \"li\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/liwiki/*\"}]}, {\"config_name\": \"lld\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lldwiki/*\"}]}, {\"config_name\": \"lmo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lmowiki/*\"}]}, {\"config_name\": \"ln\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lnwiki/*\"}]}, {\"config_name\": \"lo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lowiki/*\"}]}, {\"config_name\": \"ltg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ltgwiki/*\"}]}, {\"config_name\": \"lt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ltwiki/*\"}]}, {\"config_name\": \"lv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvwiki/*\"}]}, {\"config_name\": \"mad\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/madwiki/*\"}]}, {\"config_name\": \"mai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/maiwiki/*\"}]}, {\"config_name\": \"map_bms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/map_bmswiki/*\"}]}, {\"config_name\": \"mdf\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mdfwiki/*\"}]}, {\"config_name\": \"mg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mgwiki/*\"}]}, {\"config_name\": \"mhr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mhrwiki/*\"}]}, {\"config_name\": \"min\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/minwiki/*\"}]}, {\"config_name\": \"mi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/miwiki/*\"}]}, {\"config_name\": \"mk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkwiki/*\"}]}, {\"config_name\": \"ml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlwiki/*\"}]}, {\"config_name\": \"mni\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mniwiki/*\"}]}, {\"config_name\": \"mn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mnwiki/*\"}]}, {\"config_name\": \"mnw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mnwwiki/*\"}]}, {\"config_name\": \"mrj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mrjwiki/*\"}]}, {\"config_name\": \"mr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mrwiki/*\"}]}, {\"config_name\": \"ms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mswiki/*\"}]}, {\"config_name\": \"mt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mtwiki/*\"}]}, {\"config_name\": \"mwl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mwlwiki/*\"}]}, {\"config_name\": \"myv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/myvwiki/*\"}]}, {\"config_name\": \"my\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mywiki/*\"}]}, {\"config_name\": \"mzn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mznwiki/*\"}]}, {\"config_name\": \"nah\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nahwiki/*\"}]}, {\"config_name\": \"nap\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/napwiki/*\"}]}, {\"config_name\": \"nds_nl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nds_nlwiki/*\"}]}, {\"config_name\": \"nds\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ndswiki/*\"}]}, {\"config_name\": \"ne\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/newiki/*\"}]}, {\"config_name\": \"new\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/newwiki/*\"}]}, {\"config_name\": \"nia\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/niawiki/*\"}]}, {\"config_name\": \"nl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nlwiki/*\"}]}, {\"config_name\": \"nn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nnwiki/*\"}]}, {\"config_name\": \"nov\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/novwiki/*\"}]}, {\"config_name\": \"no\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nowiki/*\"}]}, {\"config_name\": \"nqo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nqowiki/*\"}]}, {\"config_name\": \"nrm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrmwiki/*\"}]}, {\"config_name\": \"nso\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nsowiki/*\"}]}, {\"config_name\": \"nv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nvwiki/*\"}]}, {\"config_name\": \"ny\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nywiki/*\"}]}, {\"config_name\": \"oc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ocwiki/*\"}]}, {\"config_name\": \"olo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/olowiki/*\"}]}, {\"config_name\": \"om\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/omwiki/*\"}]}, {\"config_name\": \"or\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/orwiki/*\"}]}, {\"config_name\": \"os\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/oswiki/*\"}]}, {\"config_name\": \"pag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pagwiki/*\"}]}, {\"config_name\": \"pam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pamwiki/*\"}]}, {\"config_name\": \"pap\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/papwiki/*\"}]}, {\"config_name\": \"pa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pawiki/*\"}]}, {\"config_name\": \"pcd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcdwiki/*\"}]}, {\"config_name\": \"pcm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcmwiki/*\"}]}, {\"config_name\": \"pdc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pdcwiki/*\"}]}, {\"config_name\": \"pfl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pflwiki/*\"}]}, {\"config_name\": \"pih\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pihwiki/*\"}]}, {\"config_name\": \"pi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/piwiki/*\"}]}, {\"config_name\": \"pl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/plwiki/*\"}]}, {\"config_name\": \"pms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pmswiki/*\"}]}, {\"config_name\": \"pnb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pnbwiki/*\"}]}, {\"config_name\": \"pnt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pntwiki/*\"}]}, {\"config_name\": \"ps\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pswiki/*\"}]}, {\"config_name\": \"pt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ptwiki/*\"}]}, {\"config_name\": \"pwn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pwnwiki/*\"}]}, {\"config_name\": \"q",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2025-11-11T18:49:02.000Z",
+      "updated_at": "2025-10-22T11:02:22.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "type": "dataset",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11775,50 +11819,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finewiki",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finewiki",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finewiki",
-      "description": "{\"license\": [\"cc-by-sa-4.0\", \"gfdl\"], \"task_categories\": [\"text-generation\"], \"pretty_name\": \"🌐 FineWiki\", \"configs\": [{\"config_name\": \"ab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/abwiki/*\"}]}, {\"config_name\": \"ace\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/acewiki/*\"}]}, {\"config_name\": \"ady\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/adywiki/*\"}]}, {\"config_name\": \"af\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afwiki/*\"}]}, {\"config_name\": \"als\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/alswiki/*\"}]}, {\"config_name\": \"alt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/altwiki/*\"}]}, {\"config_name\": \"ami\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/amiwiki/*\"}]}, {\"config_name\": \"am\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/amwiki/*\"}]}, {\"config_name\": \"ang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/angwiki/*\"}]}, {\"config_name\": \"anp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anpwiki/*\"}]}, {\"config_name\": \"an\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anwiki/*\"}]}, {\"config_name\": \"arc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arcwiki/*\"}]}, {\"config_name\": \"ar\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arwiki/*\"}]}, {\"config_name\": \"ary\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arywiki/*\"}]}, {\"config_name\": \"arz\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arzwiki/*\"}]}, {\"config_name\": \"ast\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/astwiki/*\"}]}, {\"config_name\": \"as\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/aswiki/*\"}]}, {\"config_name\": \"atj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/atjwiki/*\"}]}, {\"config_name\": \"avk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/avkwiki/*\"}]}, {\"config_name\": \"av\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/avwiki/*\"}]}, {\"config_name\": \"awa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/awawiki/*\"}]}, {\"config_name\": \"ay\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/aywiki/*\"}]}, {\"config_name\": \"azb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azbwiki/*\"}]}, {\"config_name\": \"az\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azwiki/*\"}]}, {\"config_name\": \"ban\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/banwiki/*\"}]}, {\"config_name\": \"bar\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/barwiki/*\"}]}, {\"config_name\": \"bat_smg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bat_smgwiki/*\"}]}, {\"config_name\": \"ba\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bawiki/*\"}]}, {\"config_name\": \"bbc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bbcwiki/*\"}]}, {\"config_name\": \"bcl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bclwiki/*\"}]}, {\"config_name\": \"be\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bewiki/*\"}]}, {\"config_name\": \"bg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bgwiki/*\"}]}, {\"config_name\": \"bh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bhwiki/*\"}]}, {\"config_name\": \"bi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/biwiki/*\"}]}, {\"config_name\": \"bjn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bjnwiki/*\"}]}, {\"config_name\": \"blk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/blkwiki/*\"}]}, {\"config_name\": \"bm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bmwiki/*\"}]}, {\"config_name\": \"bn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bnwiki/*\"}]}, {\"config_name\": \"bo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bowiki/*\"}]}, {\"config_name\": \"bpy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bpywiki/*\"}]}, {\"config_name\": \"br\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/brwiki/*\"}]}, {\"config_name\": \"bs\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bswiki/*\"}]}, {\"config_name\": \"bug\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bugwiki/*\"}]}, {\"config_name\": \"bxr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bxrwiki/*\"}]}, {\"config_name\": \"ca\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cawiki/*\"}]}, {\"config_name\": \"cbk_zam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cbk_zamwiki/*\"}]}, {\"config_name\": \"cdo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cdowiki/*\"}]}, {\"config_name\": \"ceb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cebwiki/*\"}]}, {\"config_name\": \"ce\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cewiki/*\"}]}, {\"config_name\": \"chr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chrwiki/*\"}]}, {\"config_name\": \"ch\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chwiki/*\"}]}, {\"config_name\": \"chy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/chywiki/*\"}]}, {\"config_name\": \"ckb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ckbwiki/*\"}]}, {\"config_name\": \"co\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cowiki/*\"}]}, {\"config_name\": \"crh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/crhwiki/*\"}]}, {\"config_name\": \"cr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/crwiki/*\"}]}, {\"config_name\": \"csb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/csbwiki/*\"}]}, {\"config_name\": \"cs\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cswiki/*\"}]}, {\"config_name\": \"cu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cuwiki/*\"}]}, {\"config_name\": \"cv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cvwiki/*\"}]}, {\"config_name\": \"cy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cywiki/*\"}]}, {\"config_name\": \"dag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dagwiki/*\"}]}, {\"config_name\": \"da\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dawiki/*\"}]}, {\"config_name\": \"de\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dewiki/*\"}]}, {\"config_name\": \"dga\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dgawiki/*\"}]}, {\"config_name\": \"din\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dinwiki/*\"}]}, {\"config_name\": \"diq\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/diqwiki/*\"}]}, {\"config_name\": \"dsb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dsbwiki/*\"}]}, {\"config_name\": \"dty\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dtywiki/*\"}]}, {\"config_name\": \"dv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dvwiki/*\"}]}, {\"config_name\": \"dz\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dzwiki/*\"}]}, {\"config_name\": \"ee\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eewiki/*\"}]}, {\"config_name\": \"el\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/elwiki/*\"}]}, {\"config_name\": \"eml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/emlwiki/*\"}]}, {\"config_name\": \"en\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/enwiki/*\"}]}, {\"config_name\": \"eo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eowiki/*\"}]}, {\"config_name\": \"es\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eswiki/*\"}]}, {\"config_name\": \"et\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/etwiki/*\"}]}, {\"config_name\": \"eu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/euwiki/*\"}]}, {\"config_name\": \"ext\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/extwiki/*\"}]}, {\"config_name\": \"fat\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fatwiki/*\"}]}, {\"config_name\": \"fa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fawiki/*\"}]}, {\"config_name\": \"ff\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ffwiki/*\"}]}, {\"config_name\": \"fiu_vro\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fiu_vrowiki/*\"}]}, {\"config_name\": \"fi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fiwiki/*\"}]}, {\"config_name\": \"fj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fjwiki/*\"}]}, {\"config_name\": \"fon\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fonwiki/*\"}]}, {\"config_name\": \"fo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fowiki/*\"}]}, {\"config_name\": \"frp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frpwiki/*\"}]}, {\"config_name\": \"frr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frrwiki/*\"}]}, {\"config_name\": \"fr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frwiki/*\"}]}, {\"config_name\": \"fur\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/furwiki/*\"}]}, {\"config_name\": \"fy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fywiki/*\"}]}, {\"config_name\": \"gag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gagwiki/*\"}]}, {\"config_name\": \"gan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ganwiki/*\"}]}, {\"config_name\": \"ga\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gawiki/*\"}]}, {\"config_name\": \"gcr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gcrwiki/*\"}]}, {\"config_name\": \"gd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gdwiki/*\"}]}, {\"config_name\": \"glk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glkwiki/*\"}]}, {\"config_name\": \"gl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glwiki/*\"}]}, {\"config_name\": \"gn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gnwiki/*\"}]}, {\"config_name\": \"gom\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gomwiki/*\"}]}, {\"config_name\": \"gor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gorwiki/*\"}]}, {\"config_name\": \"got\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gotwiki/*\"}]}, {\"config_name\": \"gpe\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gpewiki/*\"}]}, {\"config_name\": \"guc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gucwiki/*\"}]}, {\"config_name\": \"gur\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gurwiki/*\"}]}, {\"config_name\": \"gu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/guwiki/*\"}]}, {\"config_name\": \"guw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/guwwiki/*\"}]}, {\"config_name\": \"gv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/gvwiki/*\"}]}, {\"config_name\": \"hak\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hakwiki/*\"}]}, {\"config_name\": \"ha\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hawiki/*\"}]}, {\"config_name\": \"haw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hawwiki/*\"}]}, {\"config_name\": \"he\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hewiki/*\"}]}, {\"config_name\": \"hif\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hifwiki/*\"}]}, {\"config_name\": \"hi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hiwiki/*\"}]}, {\"config_name\": \"hr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrwiki/*\"}]}, {\"config_name\": \"hsb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hsbwiki/*\"}]}, {\"config_name\": \"ht\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/htwiki/*\"}]}, {\"config_name\": \"hu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/huwiki/*\"}]}, {\"config_name\": \"hy\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hywiki/*\"}]}, {\"config_name\": \"hyw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hywwiki/*\"}]}, {\"config_name\": \"ia\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iawiki/*\"}]}, {\"config_name\": \"id\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/idwiki/*\"}]}, {\"config_name\": \"ie\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iewiki/*\"}]}, {\"config_name\": \"ig\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/igwiki/*\"}]}, {\"config_name\": \"ik\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ikwiki/*\"}]}, {\"config_name\": \"ilo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ilowiki/*\"}]}, {\"config_name\": \"inh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/inhwiki/*\"}]}, {\"config_name\": \"io\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iowiki/*\"}]}, {\"config_name\": \"is\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iswiki/*\"}]}, {\"config_name\": \"it\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/itwiki/*\"}]}, {\"config_name\": \"iu\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/iuwiki/*\"}]}, {\"config_name\": \"jam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jamwiki/*\"}]}, {\"config_name\": \"ja\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jawiki/*\"}]}, {\"config_name\": \"jbo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jbowiki/*\"}]}, {\"config_name\": \"jv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jvwiki/*\"}]}, {\"config_name\": \"kaa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaawiki/*\"}]}, {\"config_name\": \"kab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kabwiki/*\"}]}, {\"config_name\": \"ka\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kawiki/*\"}]}, {\"config_name\": \"kbd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kbdwiki/*\"}]}, {\"config_name\": \"kbp\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kbpwiki/*\"}]}, {\"config_name\": \"kcg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kcgwiki/*\"}]}, {\"config_name\": \"kg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kgwiki/*\"}]}, {\"config_name\": \"ki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiwiki/*\"}]}, {\"config_name\": \"kk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kkwiki/*\"}]}, {\"config_name\": \"kl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/klwiki/*\"}]}, {\"config_name\": \"km\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kmwiki/*\"}]}, {\"config_name\": \"kn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/knwiki/*\"}]}, {\"config_name\": \"koi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/koiwiki/*\"}]}, {\"config_name\": \"ko\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kowiki/*\"}]}, {\"config_name\": \"krc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/krcwiki/*\"}]}, {\"config_name\": \"ksh\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kshwiki/*\"}]}, {\"config_name\": \"ks\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kswiki/*\"}]}, {\"config_name\": \"ku\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kuwiki/*\"}]}, {\"config_name\": \"kv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kvwiki/*\"}]}, {\"config_name\": \"kw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kwwiki/*\"}]}, {\"config_name\": \"ky\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kywiki/*\"}]}, {\"config_name\": \"lad\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ladwiki/*\"}]}, {\"config_name\": \"la\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lawiki/*\"}]}, {\"config_name\": \"lbe\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lbewiki/*\"}]}, {\"config_name\": \"lb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lbwiki/*\"}]}, {\"config_name\": \"lez\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lezwiki/*\"}]}, {\"config_name\": \"lfn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lfnwiki/*\"}]}, {\"config_name\": \"lg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lgwiki/*\"}]}, {\"config_name\": \"lij\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lijwiki/*\"}]}, {\"config_name\": \"li\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/liwiki/*\"}]}, {\"config_name\": \"lld\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lldwiki/*\"}]}, {\"config_name\": \"lmo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lmowiki/*\"}]}, {\"config_name\": \"ln\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lnwiki/*\"}]}, {\"config_name\": \"lo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lowiki/*\"}]}, {\"config_name\": \"ltg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ltgwiki/*\"}]}, {\"config_name\": \"lt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ltwiki/*\"}]}, {\"config_name\": \"lv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvwiki/*\"}]}, {\"config_name\": \"mad\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/madwiki/*\"}]}, {\"config_name\": \"mai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/maiwiki/*\"}]}, {\"config_name\": \"map_bms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/map_bmswiki/*\"}]}, {\"config_name\": \"mdf\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mdfwiki/*\"}]}, {\"config_name\": \"mg\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mgwiki/*\"}]}, {\"config_name\": \"mhr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mhrwiki/*\"}]}, {\"config_name\": \"min\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/minwiki/*\"}]}, {\"config_name\": \"mi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/miwiki/*\"}]}, {\"config_name\": \"mk\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkwiki/*\"}]}, {\"config_name\": \"ml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlwiki/*\"}]}, {\"config_name\": \"mni\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mniwiki/*\"}]}, {\"config_name\": \"mn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mnwiki/*\"}]}, {\"config_name\": \"mnw\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mnwwiki/*\"}]}, {\"config_name\": \"mrj\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mrjwiki/*\"}]}, {\"config_name\": \"mr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mrwiki/*\"}]}, {\"config_name\": \"ms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mswiki/*\"}]}, {\"config_name\": \"mt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mtwiki/*\"}]}, {\"config_name\": \"mwl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mwlwiki/*\"}]}, {\"config_name\": \"myv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/myvwiki/*\"}]}, {\"config_name\": \"my\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mywiki/*\"}]}, {\"config_name\": \"mzn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mznwiki/*\"}]}, {\"config_name\": \"nah\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nahwiki/*\"}]}, {\"config_name\": \"nap\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/napwiki/*\"}]}, {\"config_name\": \"nds_nl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nds_nlwiki/*\"}]}, {\"config_name\": \"nds\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ndswiki/*\"}]}, {\"config_name\": \"ne\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/newiki/*\"}]}, {\"config_name\": \"new\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/newwiki/*\"}]}, {\"config_name\": \"nia\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/niawiki/*\"}]}, {\"config_name\": \"nl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nlwiki/*\"}]}, {\"config_name\": \"nn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nnwiki/*\"}]}, {\"config_name\": \"nov\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/novwiki/*\"}]}, {\"config_name\": \"no\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nowiki/*\"}]}, {\"config_name\": \"nqo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nqowiki/*\"}]}, {\"config_name\": \"nrm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrmwiki/*\"}]}, {\"config_name\": \"nso\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nsowiki/*\"}]}, {\"config_name\": \"nv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nvwiki/*\"}]}, {\"config_name\": \"ny\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nywiki/*\"}]}, {\"config_name\": \"oc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ocwiki/*\"}]}, {\"config_name\": \"olo\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/olowiki/*\"}]}, {\"config_name\": \"om\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/omwiki/*\"}]}, {\"config_name\": \"or\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/orwiki/*\"}]}, {\"config_name\": \"os\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/oswiki/*\"}]}, {\"config_name\": \"pag\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pagwiki/*\"}]}, {\"config_name\": \"pam\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pamwiki/*\"}]}, {\"config_name\": \"pap\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/papwiki/*\"}]}, {\"config_name\": \"pa\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pawiki/*\"}]}, {\"config_name\": \"pcd\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcdwiki/*\"}]}, {\"config_name\": \"pcm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcmwiki/*\"}]}, {\"config_name\": \"pdc\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pdcwiki/*\"}]}, {\"config_name\": \"pfl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pflwiki/*\"}]}, {\"config_name\": \"pih\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pihwiki/*\"}]}, {\"config_name\": \"pi\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/piwiki/*\"}]}, {\"config_name\": \"pl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/plwiki/*\"}]}, {\"config_name\": \"pms\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pmswiki/*\"}]}, {\"config_name\": \"pnb\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pnbwiki/*\"}]}, {\"config_name\": \"pnt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pntwiki/*\"}]}, {\"config_name\": \"ps\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pswiki/*\"}]}, {\"config_name\": \"pt\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ptwiki/*\"}]}, {\"config_name\": \"pwn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pwnwiki/*\"}]}, {\"config_name\": \"q",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-10-22T11:02:22.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
-      "type": "dataset",
-      "title": "allenai/dolma3_dolmino_mix-100B-1125",
-      "url": "https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125",
-      "description": "{\"license\": \"odc-by\", \"language\": [\"en\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.13961"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-02-23T19:03:37.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
-      "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-31T06:26:09.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
       "type": "dataset",
       "title": "nvidia/Nemotron-Math-Proofs-v1",
@@ -11833,6 +11833,22 @@
         "doi": []
       },
       "updated_at": "2026-01-05T18:40:31.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-CC-v2",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
+      "identifiers": {
+        "arxiv": [
+          "2508.14444"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-07-07T15:21:11.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11854,18 +11870,18 @@
       "resolved_from_alias": "LLM360/MegaMath"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
       "type": "dataset",
-      "title": "nvidia/Nemotron-CC-v2",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
-      "description": "{\"license\": \"other\", \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"By clicking “Agree” I confirm I have read and agree to NVIDIA Data Agreement for Model Training and agree that I intend to use this data for model training purposes only. (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample/raw/main/LICENSE.md) \", \"extra_gated_fields\": {\"Company\": \"text\", \"Institutional Email\": \"text\", \"I agree to use this dataset for model training purposes ONLY\": \"checkbox\"}, \"configs\": [{\"config_name\": \"High-Quality\", \"data_files\": [{\"path\": \"High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"High-Quality-Synthetic\", \"data_files\": [{\"path\": \"High-Quality-Synthetic/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-High-Quality\", \"data_files\": [{\"path\": \"Medium-High-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Medium-Quality\", \"data_files\": [{\"path\": \"Medium-Quality/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Diverse-QA\", \"data_files\": [{\"path\": \"Diverse-QA/*.parquet\", \"split\": \"train\"}]}, {\"config_name\": \"Translated-Diverse-QA\", \"data_files\": [{\"path\": \"Translated-Diverse-QA/*.parquet\", \"split\": \"train\"}]}], \"track_downloads\": true}",
+      "title": "mlfoundations/dclm-baseline-1.0",
+      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
       "identifiers": {
         "arxiv": [
-          "2508.14444"
+          "2406.11794"
         ],
         "doi": []
       },
-      "updated_at": "2026-07-07T15:21:11.000Z",
+      "updated_at": "2024-07-22T15:27:52.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11902,36 +11918,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "type": "dataset",
-      "title": "mlfoundations/dclm-baseline-1.0",
-      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
-      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
-      "identifiers": {
-        "arxiv": [
-          "2406.11794"
-        ],
-        "doi": []
-      },
-      "updated_at": "2024-07-22T15:27:52.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2026-03-11T14:43:59.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
       "type": "dataset",
       "title": "nvidia/Nemotron-Pretraining-Specialized-v1",
@@ -11947,6 +11933,20 @@
         "doi": []
       },
       "updated_at": "2026-10-28T17:56:57.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "type": "dataset",
+      "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"text-generation\"], \"track_downloads\": true, \"configs\": [{\"config_name\": \"Nemotron-Pretraining-Formal-Logic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Formal-Logic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Economics\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Economics/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Multiple-Choice\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Multiple-Choice/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Unconditional-Algorithmic\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Unconditional-Algorithmic/*.parquet\"}]}, {\"config_name\": \"Nemotron-Pretraining-Code-Concepts\", \"data_files\": [{\"split\": \"train\", \"path\": \"Nemotron-Pretraining-Code-Concepts/*.parquet\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-03-11T14:43:59.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12016,6 +12016,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:tokyotech-llm/swallow-math-v2",
       "type": "dataset",
       "title": "tokyotech-llm/swallow-math-v2",
@@ -12032,36 +12046,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
-      "type": "model",
-      "title": "allenai/Olmo-3-7B-Instruct-SFT",
-      "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
-      "description": "{\"license\": \"apache-2.0\", \"base_model\": \"allenai/Olmo-3-1025-7B\", \"language\": [\"en\"], \"library_name\": \"transformers\", \"datasets\": [\"allenai/Dolci-Instruct-SFT\", \"allenai/Dolci-Instruct-SFT-Tool-Use-SA\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.13961"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-01-05T16:23:33.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-09-09T08:20:19.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:model:allenai/Olmo-3-7B-Think-SFT",
       "type": "model",
       "title": "allenai/Olmo-3-7B-Think-SFT",
@@ -12074,6 +12058,22 @@
         "doi": []
       },
       "updated_at": "2026-01-05T16:25:46.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
+      "type": "model",
+      "title": "allenai/Olmo-3-7B-Instruct-SFT",
+      "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
+      "description": "{\"license\": \"apache-2.0\", \"base_model\": \"allenai/Olmo-3-1025-7B\", \"language\": [\"en\"], \"library_name\": \"transformers\", \"datasets\": [\"allenai/Dolci-Instruct-SFT\", \"allenai/Dolci-Instruct-SFT-Tool-Use-SA\"]}",
+      "identifiers": {
+        "arxiv": [
+          "2512.13961"
+        ],
+        "doi": []
+      },
+      "updated_at": "2026-01-05T16:23:33.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -13957,20 +13957,20 @@
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#297",
-      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "status": "explicit_reference",
-      "evidence_type": "url",
-      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
-      "context": "ttps://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1 ) 300B Overall: ca. 1T (2T ? do we manage that much? eg via rephrasing?",
-      "reason": "Source mentions a specific HF resource"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#297",
       "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
       "status": "explicit_reference",
       "evidence_type": "url",
       "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
       "context": "~~; UPDATE: Nemotron-MIND too old, exclude. Nemotron specialied pretrain (https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v",
+      "reason": "Source mentions a specific HF resource"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#297",
+      "target": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "context": "ttps://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1, https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1 ) 300B Overall: ca. 1T (2T ? do we manage that much? eg via rephrasing?",
       "reason": "Source mentions a specific HF resource"
     },
     {
@@ -13993,20 +13993,20 @@
     },
     {
       "source": "github:OpenEuroLLM/Taskboard#230",
-      "target": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
-      "status": "explicit_reference",
-      "evidence_type": "url",
-      "evidence": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
-      "context": "lidation milestone is to reproduce the results of [Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) starting from the [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Ol",
-      "reason": "Source mentions a specific HF resource"
-    },
-    {
-      "source": "github:OpenEuroLLM/Taskboard#230",
       "target": "hf:model:allenai/Olmo-3-7B-Think-SFT",
       "status": "explicit_reference",
       "evidence_type": "url",
       "evidence": "https://huggingface.co/allenai/Olmo-3-7B-Think-SFT",
       "context": "co/allenai/Olmo-3-7B-Instruct-SFT) starting from the [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) checkpoint. The second milestone is to apply DPO on top of the reproduce",
+      "reason": "Source mentions a specific HF resource"
+    },
+    {
+      "source": "github:OpenEuroLLM/Taskboard#230",
+      "target": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
+      "status": "explicit_reference",
+      "evidence_type": "url",
+      "evidence": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
+      "context": "lidation milestone is to reproduce the results of [Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) starting from the [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Ol",
       "reason": "Source mentions a specific HF resource"
     },
     {
@@ -14685,24 +14685,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
-      "target": "openaire:doi_dedup___::0cf39ecf056ba0d4f09fe7c7aeddaef2",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2512.20908",
-      "context": "Both public metadata records contain arxiv:2512.20908",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
-      "target": "openaire:doi_dedup___::ea771f9befdcf3c52efa041b3c820491",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2601.09088",
-      "context": "Both public metadata records contain arxiv:2601.09088",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
@@ -14721,6 +14703,24 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "target": "openaire:doi_dedup___::0cf39ecf056ba0d4f09fe7c7aeddaef2",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2512.20908",
+      "context": "Both public metadata records contain arxiv:2512.20908",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
+      "target": "openaire:doi_dedup___::ea771f9befdcf3c52efa041b3c820491",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2601.09088",
+      "context": "Both public metadata records contain arxiv:2601.09088",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:common-pile/stackv2",
       "target": "openaire:doi_dedup___::71c317ecfa4a1627fd81a73e7e3fffa8",
       "status": "identifier_match",
@@ -14754,6 +14754,15 @@
       "evidence_type": "arxiv",
       "evidence": "2506.05209",
       "context": "Both public metadata records contain arxiv:2506.05209",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
+      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2512.13961",
+      "context": "Both public metadata records contain arxiv:2512.13961",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14793,15 +14802,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
-      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2512.13961",
-      "context": "Both public metadata records contain arxiv:2512.13961",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
       "target": "openaire:doi_dedup___::1a3277909982977a8e6fab6933c3659a",
       "status": "identifier_match",
@@ -14829,6 +14829,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:IFM/MegaMath",
       "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
       "status": "identifier_match",
@@ -14838,12 +14847,12 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
       "status": "identifier_match",
       "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
+      "evidence": "2406.11794",
+      "context": "Both public metadata records contain arxiv:2406.11794",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14862,15 +14871,6 @@
       "evidence_type": "arxiv",
       "evidence": "2508.14444",
       "context": "Both public metadata records contain arxiv:2508.14444",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
-      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2406.11794",
-      "context": "Both public metadata records contain arxiv:2406.11794",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -14964,7 +14964,7 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
+      "source": "hf:model:allenai/Olmo-3-7B-Think-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
       "evidence_type": "arxiv",
@@ -14973,7 +14973,7 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:model:allenai/Olmo-3-7B-Think-SFT",
+      "source": "hf:model:allenai/Olmo-3-7B-Instruct-SFT",
       "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
       "status": "identifier_match",
       "evidence_type": "arxiv",
