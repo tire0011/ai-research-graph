@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-10T15:04:37.923550+00:00",
+  "generated_at_utc": "2026-11-15T21:18:11.934371+00:00",
   "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
   "repositories_checked": 9,
   "pairs_checked": 6,
@@ -13,7 +13,7 @@
       "repository_b": "utter-project/eurollm-evaluation",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
-      "repo_pushed_a": "2026-11-04T13:24:00Z",
+      "repo_pushed_a": "2026-11-11T14:08:05Z",
       "repo_pushed_b": "2025-03-17T20:49:57Z",
       "shared_terms": [
         {
@@ -21,7 +21,7 @@
           "a": {
             "term": "evaluation",
             "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
-            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "sha256": "0484b970ff90acbafb73b4c134767684b96907e7a1448aa5beb6fe47dde3aeda",
             "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HPC clusters using SLURM job arrays and Singularity",
             "origin": "README"
           },
@@ -38,7 +38,7 @@
           "a": {
             "term": "lm-eval",
             "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
-            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "sha256": "0484b970ff90acbafb73b4c134767684b96907e7a1448aa5beb6fe47dde3aeda",
             "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HP",
             "origin": "README"
           },
@@ -255,7 +255,7 @@
       "repository_b": "LAION-AI/CLIP_benchmark",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-      "repo_pushed_a": "2026-11-04T13:24:00Z",
+      "repo_pushed_a": "2026-11-11T14:08:05Z",
       "repo_pushed_b": "2026-11-05T15:23:52Z",
       "shared_terms": [
         {
@@ -263,7 +263,7 @@
           "a": {
             "term": "benchmark",
             "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
-            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "sha256": "0484b970ff90acbafb73b4c134767684b96907e7a1448aa5beb6fe47dde3aeda",
             "excerpt": "gs. Available task groups: - `crows-pairs` - CrowS-Pairs social bias benchmark (English, 0-shot, `pct_stereotype`) - `bpb-corpus` - Bits-per-byte on",
             "origin": "README"
           },
@@ -280,7 +280,7 @@
           "a": {
             "term": "evaluation",
             "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
-            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "sha256": "0484b970ff90acbafb73b4c134767684b96907e7a1448aa5beb6fe47dde3aeda",
             "excerpt": "# OpenEuroLLM Eval (oellm-eval) A lightweight CLI for scheduling LLM evaluations across multiple HPC clusters using SLURM job arrays and Singularity",
             "origin": "README"
           },
@@ -297,7 +297,7 @@
           "a": {
             "term": "model",
             "source_url": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
-            "sha256": "a8f7a28ac5bad0f3c529b16b9f35d4304393a6d2ee86dc0ffeffada62eb2b6ab",
+            "sha256": "0484b970ff90acbafb73b4c134767684b96907e7a1448aa5beb6fe47dde3aeda",
             "excerpt": "rity containers. ## Features - **Schedule evaluations** on multiple models and tasks: `oellm-eval schedule` - **Collect results** and check for",
             "origin": "README"
           },

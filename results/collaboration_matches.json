@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "review_only",
-  "generated_at_utc": "2026-11-10T15:04:37.988714+00:00",
+  "generated_at_utc": "2026-11-15T21:18:12.011590+00:00",
   "repositories": [
     "OpenEuroLLM/web-data-processing",
     "OpenEuroLLM/warc2text",
@@ -15,19 +15,19 @@
   "inventory_counts": {
     "OpenEuroLLM/web-data-processing": 8,
     "OpenEuroLLM/warc2text": 1,
-    "OpenEuroLLM/Taskboard": 435,
+    "OpenEuroLLM/Taskboard": 437,
     "hplt-project/HPLT-textpipes": 29,
     "hplt-project/warc2text-runner": 22,
     "hplt-project/monotextor-slurm": 16,
     "LAION-AI/CLIP_benchmark": 154,
     "utter-project/eurollm-evaluation": 0
   },
-  "items_indexed": 665,
-  "source_candidates": 202,
+  "items_indexed": 667,
+  "source_candidates": 201,
   "shortlisted_sources_rechecked": 30,
   "matcher": "bounded technical-vocabulary gate with max four IDF/title-weighted terms (NOT an LLM)",
   "baseline": "unweighted IDF overlap on the exact same title+body snapshot; not a restricted title-only or one-hop control",
-  "baseline_top1_sources": 193,
+  "baseline_top1_sources": 192,
   "suggestions": [
     {
       "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/monotextor-slurm#9",
@@ -65,8 +65,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 32.567,
-      "fulltext_baseline_score": 34.318,
+      "score": 32.586,
+      "fulltext_baseline_score": 34.339,
       "matched_terms": [
         {
           "term": "warc",
@@ -78,7 +78,7 @@
             "field": "body",
             "excerpt": "2 does not include the crawl identifier. the specific WARC file name is there, but that may not be unique across"
           },
-          "idf": 5.71
+          "idf": 5.713
         },
         {
           "term": "metadata",
@@ -90,7 +90,7 @@
             "field": "body",
             "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
           },
-          "idf": 4.936
+          "idf": 4.939
         },
         {
           "term": "crawl",
@@ -102,11 +102,12 @@
             "field": "title",
             "excerpt": "pick up crawl identifier in repackaging"
           },
-          "idf": 4.862
+          "idf": 4.865
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -150,8 +151,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 31.89,
-      "fulltext_baseline_score": 27.184,
+      "score": 31.909,
+      "fulltext_baseline_score": 27.189,
       "matched_terms": [
         {
           "term": "lumio",
@@ -163,7 +164,7 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 5.103
+          "idf": 5.106
         },
         {
           "term": "crawl",
@@ -175,11 +176,12 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 4.862
+          "idf": 4.865
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
       "same_as_fulltext_baseline_top1": true,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -221,8 +223,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 27.219,
-      "fulltext_baseline_score": 58.053,
+      "score": 27.234,
+      "fulltext_baseline_score": 58.043,
       "matched_terms": [
         {
           "term": "warc",
@@ -234,7 +236,7 @@
             "field": "body",
             "excerpt": "ctories for different stages (S1 + S2 combined), e.g. `warc`, `html`, `pool`, `clean`, `noise` + `robots.txt` pl"
           },
-          "idf": 5.71
+          "idf": 5.713
         },
         {
           "term": "metadata",
@@ -246,7 +248,7 @@
             "field": "body",
             "excerpt": "Ls, if these were to occur~~ + output format: all `metadata.zst` in one file; XML, MD, and TEXT each in separate f"
           },
-          "idf": 4.936
+          "idf": 4.939
         },
         {
           "term": "crawl",
@@ -258,11 +260,12 @@
             "field": "body",
             "excerpt": "to decide whether to preserve or not) + eight 2025 CC crawls on LUMI-O: 800 tib, each a separate bucket + S1 comple"
           },
-          "idf": 4.862
+          "idf": 4.865
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": true,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -303,8 +306,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 26.542,
-      "fulltext_baseline_score": 18.035,
+      "score": 26.557,
+      "fulltext_baseline_score": 18.047,
       "matched_terms": [
         {
           "term": "lumio",
@@ -316,7 +319,7 @@
             "field": "title",
             "excerpt": "Stage 1 preprocessing for LUMI with streaming from/to LUMI-O"
           },
-          "idf": 5.103
+          "idf": 5.106
         },
         {
           "term": "crawl",
@@ -328,11 +331,12 @@
             "field": "body",
             "excerpt": "kept, including: * shuffling of WARCs within a single crawl before dividing them to batches, and shuffling batches"
           },
-          "idf": 4.862
+          "idf": 4.865
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -374,8 +378,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 25.704,
-      "fulltext_baseline_score": 18.568,
+      "score": 25.72,
+      "fulltext_baseline_score": 18.58,
       "matched_terms": [
         {
           "term": "xml",
@@ -387,7 +391,7 @@
             "field": "title",
             "excerpt": "XML to markdown conversion"
           },
-          "idf": 5.304
+          "idf": 5.307
         },
         {
           "term": "markdown",
@@ -399,7 +403,7 @@
             "field": "title",
             "excerpt": "XML to markdown conversion"
           },
-          "idf": 4.41
+          "idf": 4.413
         },
         {
           "term": "trafilatura",
@@ -411,11 +415,12 @@
             "field": "body",
             "excerpt": "res: - jsonlines stdin->stdout processing - converts trafilatura's output XML to markdown, adding `md` field to *some*"
           },
-          "idf": 5.304
+          "idf": 5.307
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -457,8 +462,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 22.277,
-      "fulltext_baseline_score": 14.472,
+      "score": 22.29,
+      "fulltext_baseline_score": 14.481,
       "matched_terms": [
         {
           "term": "trafilatura",
@@ -470,7 +475,7 @@
             "field": "title",
             "excerpt": "Change trafilatura TEI/XML to text behaviour"
           },
-          "idf": 5.304
+          "idf": 5.307
         },
         {
           "term": "xml",
@@ -482,11 +487,12 @@
             "field": "title",
             "excerpt": "Change trafilatura TEI/XML to text behaviour"
           },
-          "idf": 5.304
+          "idf": 5.307
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -530,8 +536,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 17.777,
-      "fulltext_baseline_score": 12.63,
+      "score": 17.787,
+      "fulltext_baseline_score": 12.599,
       "matched_terms": [
         {
           "term": "robotstxt",
@@ -543,11 +549,12 @@
             "field": "title",
             "excerpt": "coordinate between uio and prompsit about robots.txt filtering"
           },
-          "idf": 5.555
+          "idf": 5.558
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -588,8 +595,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 17.777,
-      "fulltext_baseline_score": 5.555,
+      "score": 17.787,
+      "fulltext_baseline_score": 5.558,
       "matched_terms": [
         {
           "term": "robotstxt",
@@ -601,11 +608,12 @@
             "field": "title",
             "excerpt": "filtering by robots.txt for IA"
           },
-          "idf": 5.555
+          "idf": 5.558
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -648,8 +656,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 15.147,
-      "fulltext_baseline_score": 37.697,
+      "score": 15.156,
+      "fulltext_baseline_score": 37.656,
       "matched_terms": [
         {
           "term": "crawl",
@@ -661,7 +669,7 @@
             "field": "title",
             "excerpt": "pick up crawl identifier in repackaging"
           },
-          "idf": 4.862
+          "idf": 4.865
         },
         {
           "term": "metadata",
@@ -673,11 +681,12 @@
             "field": "body",
             "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
           },
-          "idf": 4.936
+          "idf": 4.939
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -719,8 +728,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.914,
-      "fulltext_baseline_score": 4.036,
+      "score": 12.923,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -732,11 +741,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -778,8 +788,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.914,
-      "fulltext_baseline_score": 4.036,
+      "score": 12.923,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -791,11 +801,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -837,8 +848,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.914,
-      "fulltext_baseline_score": 4.036,
+      "score": 12.923,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -850,11 +861,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -896,8 +908,8 @@
       },
       "classification": "possible_parallel_work",
       "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 12.885,
-      "fulltext_baseline_score": 33.578,
+      "score": 12.894,
+      "fulltext_baseline_score": 33.54,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -909,7 +921,7 @@
             "field": "body",
             "excerpt": "ependencies - `open_clip` (for model architecture and tokenizer) - `librosa` (audio decoding) - `torchaudio` (mel spec"
           },
-          "idf": 4.036
+          "idf": 4.039
         },
         {
           "term": "markdown",
@@ -921,11 +933,12 @@
             "field": "body",
             "excerpt": "ty functions for audio data handling | | `AUDIO_README.md` | Documentation for audio benchmarks with usage examp"
           },
-          "idf": 4.41
+          "idf": 4.413
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -966,8 +979,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 11.041,
-      "fulltext_baseline_score": 46.112,
+      "score": 11.05,
+      "fulltext_baseline_score": 46.106,
       "matched_terms": [
         {
           "term": "checkpoint",
@@ -979,7 +992,7 @@
             "field": "title",
             "excerpt": "Polish checkpoint conversion scripts and add unittests"
           },
-          "idf": 3.157
+          "idf": 3.16
         },
         {
           "term": "markdown",
@@ -991,11 +1004,12 @@
             "field": "body",
             "excerpt": "github.com/OpenEuroLLM/hpo-experiment/blob/main/README.md)"
           },
-          "idf": 4.41
+          "idf": 4.413
         }
       ],
       "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1038,8 +1052,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.717,
-      "fulltext_baseline_score": 14.553,
+      "score": 10.723,
+      "fulltext_baseline_score": 14.562,
       "matched_terms": [
         {
           "term": "lumio",
@@ -1051,11 +1065,12 @@
             "field": "title",
             "excerpt": "Adapting S1 to LUMI-O"
           },
-          "idf": 5.103
+          "idf": 5.106
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1099,8 +1114,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.717,
-      "fulltext_baseline_score": 23.601,
+      "score": 10.723,
+      "fulltext_baseline_score": 23.616,
       "matched_terms": [
         {
           "term": "lumio",
@@ -1112,11 +1127,12 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 5.103
+          "idf": 5.106
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1157,8 +1173,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.666,
-      "fulltext_baseline_score": 15.281,
+      "score": 10.676,
+      "fulltext_baseline_score": 15.223,
       "matched_terms": [
         {
           "term": "checkpoint",
@@ -1170,7 +1186,7 @@
             "field": "title",
             "excerpt": "Evaluate missing checkpoints"
           },
-          "idf": 3.157
+          "idf": 3.16
         },
         {
           "term": "tokenizer",
@@ -1182,11 +1198,12 @@
             "field": "body",
             "excerpt": "ons. - [x] open-sci-ref_model-0.13b_data-CommonCorpus_tokenizer-GPT-NeoX_samples-300B_global_bs-1008_context-4096_sche"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1229,8 +1246,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.803,
-      "fulltext_baseline_score": 4.668,
+      "score": 9.809,
+      "fulltext_baseline_score": 4.671,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1242,11 +1259,12 @@
             "field": "title",
             "excerpt": "De-chunking in warc2text"
           },
-          "idf": 4.668
+          "idf": 4.671
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1287,8 +1305,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.803,
-      "fulltext_baseline_score": 4.668,
+      "score": 9.809,
+      "fulltext_baseline_score": 4.671,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1300,11 +1318,12 @@
             "field": "title",
             "excerpt": "Add warc2text html parser output for tests"
           },
-          "idf": 4.668
+          "idf": 4.671
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1321,7 +1340,7 @@
         "title": "audio and video extraction from WARCs",
         "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
         "created_at": "2026-10-15T13:52:58Z",
-        "updated_at": "2026-11-10T13:33:05Z",
+        "updated_at": "2026-11-12T16:43:32Z",
         "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
         "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
         "assignees": [
@@ -1349,8 +1368,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.803,
-      "fulltext_baseline_score": 18.524,
+      "score": 9.809,
+      "fulltext_baseline_score": 18.515,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1362,11 +1381,12 @@
             "field": "title",
             "excerpt": "De-chunking in warc2text"
           },
-          "idf": 4.668
+          "idf": 4.671
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1383,7 +1403,7 @@
         "title": "audio and video extraction from WARCs",
         "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
         "created_at": "2026-10-15T13:52:58Z",
-        "updated_at": "2026-11-10T13:33:05Z",
+        "updated_at": "2026-11-12T16:43:32Z",
         "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
         "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
         "assignees": [
@@ -1412,8 +1432,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.803,
-      "fulltext_baseline_score": 13.795,
+      "score": 9.809,
+      "fulltext_baseline_score": 13.784,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1425,11 +1445,12 @@
             "field": "title",
             "excerpt": "Tag filters moved from warc2text"
           },
-          "idf": 4.668
+          "idf": 4.671
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1471,8 +1492,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.475,
-      "fulltext_baseline_score": 4.036,
+      "score": 8.481,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1484,11 +1505,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#114",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1530,8 +1552,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.475,
-      "fulltext_baseline_score": 33.085,
+      "score": 8.481,
+      "fulltext_baseline_score": 33.101,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1543,11 +1565,12 @@
             "field": "body",
             "excerpt": "nguage` method to set the target language for the NLLB tokenizer. 6. Enabled building CSV files from directories. @"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
       "same_as_fulltext_baseline_top1": true,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1588,8 +1611,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.475,
-      "fulltext_baseline_score": 4.036,
+      "score": 8.481,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1601,11 +1624,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1646,8 +1670,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.475,
-      "fulltext_baseline_score": 4.036,
+      "score": 8.481,
+      "fulltext_baseline_score": 4.039,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1659,11 +1683,12 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.036
+          "idf": 4.039
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
       "same_as_fulltext_baseline_top1": false,
+      "single_term_only": true,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
