@@ -111,6 +111,35 @@ class MatcherTests(unittest.TestCase):
         self.assertEqual(result["human_quality_labels_collected"], 0)
         self.assertTrue(result["baseline"].startswith("unweighted IDF overlap"))
 
+    def test_single_term_match_is_retained_but_explicitly_flagged(self):
+        result = cm.build(self.config, fetch=FakeGitHub(self.config), now=NOW)
+        candidate = next(c for c in result["suggestions"]
+                         if c["source"]["number"] == 7
+                         and c["target"]["number"] == 17)
+        self.assertEqual([t["term"] for t in candidate["matched_terms"]], ["robotstxt"])
+        self.assertTrue(candidate["single_term_only"])
+        self.assertEqual(candidate["validation"], "unreviewed_candidate_not_confirmed_reusable")
+        self.assertIn("Single-term lexical match: extra technical/mechanism review required",
+                      cm.markdown(result))
+
+    def test_multiple_terms_do_not_imply_verified_reuse(self):
+        fake = FakeGitHub(self.config)
+        fake.items["OpenEuroLLM/web-data-processing"].append(issue(
+            "OpenEuroLLM/web-data-processing", 11, "Stage 3 changes",
+            "Combine xml and md into one artifact."
+        ))
+        fake.items["hplt-project/HPLT-textpipes"].append(issue(
+            "hplt-project/HPLT-textpipes", 20, "XML-to-MD run",
+            "Transform XML and markdown with a stage 3 runner.",
+            state="closed", created="2025-10-20T00:00:00Z"
+        ))
+        result = cm.build(self.config, fetch=fake, now=NOW)
+        candidate = next(c for c in result["suggestions"]
+                         if c["source"]["number"] == 11
+                         and c["target"]["number"] == 20)
+        self.assertFalse(candidate["single_term_only"])
+        self.assertEqual(candidate["validation"], "unreviewed_candidate_not_confirmed_reusable")
+
     def test_body_to_title_signal_is_not_lost(self):
         result = cm.build(self.config, fetch=FakeGitHub(self.config), now=NOW)
         pair = next((c for c in result["suggestions"]
