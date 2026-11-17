@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "status": "public_evidence_only",
-  "generated_at_utc": "2026-11-15T21:18:55.078060+00:00",
-  "source_matcher_run": "2026-11-15T21:18:12.011590+00:00",
+  "generated_at_utc": "2026-11-17T16:17:36.733917+00:00",
+  "source_matcher_run": "2026-11-17T16:16:32.760331+00:00",
   "source_items_rechecked": 30,
   "pairs_checked": 25,
   "comments_read": 140,

@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-15T21:18:11.934371+00:00",
+  "generated_at_utc": "2026-11-17T16:16:32.692413+00:00",
   "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
   "repositories_checked": 9,
   "pairs_checked": 6,
@@ -13,7 +13,7 @@
       "repository_b": "utter-project/eurollm-evaluation",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
-      "repo_pushed_a": "2026-11-11T14:08:05Z",
+      "repo_pushed_a": "2026-11-16T11:40:49Z",
       "repo_pushed_b": "2025-03-17T20:49:57Z",
       "shared_terms": [
         {
@@ -255,7 +255,7 @@
       "repository_b": "LAION-AI/CLIP_benchmark",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-      "repo_pushed_a": "2026-11-11T14:08:05Z",
+      "repo_pushed_a": "2026-11-16T11:40:49Z",
       "repo_pushed_b": "2026-11-05T15:23:52Z",
       "shared_terms": [
         {
