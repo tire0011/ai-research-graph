@@ -103,7 +103,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Record-local opt-outs — oe-page-level
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/e3ea96f28f79c1020264611de9f3f071d9b0f88a/src/robotsreservation.cc) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/src/robotsreservation.cc) — pinned_git_file
 - Matched source phrase: x-robots-tag
 - Exact excerpt: Header(const Record& record) const { if (!record.HTTPheaderExists("x-robots-tag")) return true; std::string directives = util::toLower
 - SHA256: c72e432657e6dd3770abd0327c0deaf6e5f712894c5a24aaff22b472617aaea0
@@ -112,16 +112,16 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### WARC capture extraction — oe-robot-captures
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/e3ea96f28f79c1020264611de9f3f071d9b0f88a/src/warcpreprocessor.cc) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/src/warcpreprocessor.cc) — pinned_git_file
 - Matched source phrase: robots_warc_writer.writeRecord(content)
 - Exact excerpt: if (!options.robots_process && ::isRobotsTxt(record)) { robots_warc_writer.writeRecord(content); // no-op if robots_warc_writer is not opened. continue;
-- SHA256: 9f0583e60a34cf1d15a4cf56077e33612fb125582fd3b7512f2aca05ff487836
+- SHA256: b61be43857b7bd0131a6046a2757ed79cac6d586c921a76f86f0dc65a9a6dd3b
 - Interpretation for human review: OpenEuroLLM extracts robots.txt response records for a separate downstream processing step.
 - Runtime claim validated: no
 
 ### Policy explanation — oe-opt-out-doc
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/e3ea96f28f79c1020264611de9f3f071d9b0f88a/OPTOUT.md) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/OPTOUT.md) — pinned_git_file
 - Matched source phrase: X-Robots-Tag
 - Exact excerpt: atching tag has a value other than `0`. ## Robots reservation Both the `X-Robots-Tag` HTTP header and the `<meta name="robots" ...>` meta tag hold a comma-sepa
 - SHA256: 51826c1b487ad5847d6b4553cd70c91616f2e0650b1827c031b46d9121cbe28f
