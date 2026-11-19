@@ -8,12 +8,14 @@ on:
     branches: [main]
     paths:
       - opportunity_discovery.py
+      - http_util.py
       - opportunity_feedback.py
       - tests/test_opportunity_discovery.py
       - .github/workflows/opportunity-discovery.yml
   pull_request:
     paths:
       - opportunity_discovery.py
+      - http_util.py
       - opportunity_feedback.py
       - tests/test_opportunity_discovery.py
       - .github/workflows/opportunity-discovery.yml

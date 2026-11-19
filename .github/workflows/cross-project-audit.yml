@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - cross_project_audit.py
+      - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
       - collaboration_matcher.py
@@ -19,6 +20,7 @@ on:
   pull_request:
     paths:
       - cross_project_audit.py
+      - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
       - collaboration_matcher.py
