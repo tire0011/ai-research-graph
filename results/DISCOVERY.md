@@ -2,7 +2,7 @@
 
 **Read-only experiment. No messages were sent.** Mentions are evidence for triage, not proof of a performance gain, confirmed blocker, or available contributor.
 
-Sample: **50** ID-selected open issues out of **212** open issues, excluding **10** original cases. Seed: 2026-W47. Source re-reads: **50**.
+Sample: **50** ID-selected open issues out of **213** open issues, excluding **10** original cases. Seed: 2026-W47. Source re-reads: **50**.
 
 Found **1** source-linked review cards across **1** issues. No automatic impact ranking.
 
