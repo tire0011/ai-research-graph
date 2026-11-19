@@ -2,9 +2,9 @@
 
 **No outreach. No automatic assertion of new collaboration.**
 
-25 shortlisted pairs, 30 original tasks rechecked, 140 comments inspected.
+24 shortlisted pairs, 28 original tasks rechecked, 139 comments inspected.
 
-Direct task links: 0; shared participants: 10; broader repo links: 2; no directly visible link: 13.
+Direct task links: 0; shared participants: 10; broader repo links: 2; no directly visible link: 12.
 
 **No directly visible link** is *unknown*, not proof of novel collaboration.
 
@@ -115,15 +115,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 5 / 6
 - Next: manually check relevance and whether these people already cooperate.
 
-## 14. [Active task](https://github.com/LAION-AI/CLIP_benchmark/pull/148) ↔ [Prior task](https://github.com/OpenEuroLLM/Taskboard/issues/29)
-
-- Observation: no_direct_public_link_observed
-- Technical terms: checkpoint, markdown
-- Public participants in both: none found
-- Issue comments inspected: 6 / 1
-- Next: manually check relevance and whether these people already cooperate.
-
-## 15. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/1) ↔ [Prior task](https://github.com/hplt-project/HPLT-textpipes/issues/7)
+## 14. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/1) ↔ [Prior task](https://github.com/hplt-project/HPLT-textpipes/issues/7)
 
 - Observation: shared_public_participants
 - Technical terms: lumio
@@ -131,7 +123,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 4 / 11
 - Next: manually check relevance and whether these people already cooperate.
 
-## 16. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/1) ↔ [Prior task](https://github.com/hplt-project/HPLT-textpipes/issues/9)
+## 15. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/1) ↔ [Prior task](https://github.com/hplt-project/HPLT-textpipes/issues/9)
 
 - Observation: shared_public_participants
 - Technical terms: lumio
@@ -139,15 +131,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 4 / 6
 - Next: manually check relevance and whether these people already cooperate.
 
-## 17. [Active task](https://github.com/LAION-AI/CLIP_benchmark/pull/148) ↔ [Prior task](https://github.com/OpenEuroLLM/Taskboard/issues/66)
-
-- Observation: no_direct_public_link_observed
-- Technical terms: checkpoint, tokenizer
-- Public participants in both: none found
-- Issue comments inspected: 6 / 4
-- Next: manually check relevance and whether these people already cooperate.
-
-## 18. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/3) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/22)
+## 16. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/3) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/22)
 
 - Observation: shared_public_participants
 - Technical terms: warc2text
@@ -155,7 +139,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 3 / 1
 - Next: manually check relevance and whether these people already cooperate.
 
-## 19. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/3) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/pull/3)
+## 17. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/3) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/pull/3)
 
 - Observation: no_direct_public_link_observed
 - Technical terms: warc2text
@@ -163,23 +147,23 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 3 / 0
 - Next: manually check relevance and whether these people already cooperate.
 
-## 20. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/22)
+## 18. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/22)
 
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @akutuzov, @nvanva
-- Issue comments inspected: 15 / 1
+- Issue comments inspected: 19 / 1
 - Next: manually check relevance and whether these people already cooperate.
 
-## 21. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/6)
+## 19. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/6)
 
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @nvanva
-- Issue comments inspected: 15 / 4
+- Issue comments inspected: 19 / 4
 - Next: manually check relevance and whether these people already cooperate.
 
-## 22. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/119) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
+## 20. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/119) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
 
 - Observation: no_direct_public_link_observed
 - Technical terms: tokenizer
@@ -187,7 +171,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 3 / 0
 - Next: manually check relevance and whether these people already cooperate.
 
-## 23. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/146) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/113)
+## 21. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/146) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/113)
 
 - Observation: no_direct_public_link_observed
 - Technical terms: tokenizer
@@ -195,7 +179,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 8 / 9
 - Next: manually check relevance and whether these people already cooperate.
 
-## 24. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/148) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
+## 22. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/148) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
 
 - Observation: no_direct_public_link_observed
 - Technical terms: tokenizer
@@ -203,12 +187,20 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Issue comments inspected: 0 / 0
 - Next: manually check relevance and whether these people already cooperate.
 
-## 25. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/339) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
+## 23. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/339) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)
 
 - Observation: no_direct_public_link_observed
 - Technical terms: tokenizer
 - Public participants in both: none found
 - Issue comments inspected: 0 / 0
+- Next: manually check relevance and whether these people already cooperate.
+
+## 24. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/377) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/113)
+
+- Observation: no_direct_public_link_observed
+- Technical terms: tokenizer
+- Public participants in both: none found
+- Issue comments inspected: 2 / 9
 - Next: manually check relevance and whether these people already cooperate.
 
 ## Limitations

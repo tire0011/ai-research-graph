@@ -1,16 +1,16 @@
 {
   "schema": 1,
   "status": "public_evidence_only",
-  "generated_at_utc": "2026-11-17T16:17:36.733917+00:00",
-  "source_matcher_run": "2026-11-17T16:16:32.760331+00:00",
-  "source_items_rechecked": 30,
-  "pairs_checked": 25,
-  "comments_read": 140,
+  "generated_at_utc": "2026-11-19T21:32:59.874294+00:00",
+  "source_matcher_run": "2026-11-19T21:31:59.359725+00:00",
+  "source_items_rechecked": 28,
+  "pairs_checked": 24,
+  "comments_read": 139,
   "counts": {
     "direct_task_link": 0,
     "shared_public_participants": 10,
     "same_repository_mentioned": 2,
-    "no_direct_public_link_observed": 13
+    "no_direct_public_link_observed": 12
   },
   "pairs": [
     {
@@ -416,22 +416,6 @@
       "requires_human_review": true
     },
     {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#29",
-      "source": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-      "target": "https://github.com/OpenEuroLLM/Taskboard/issues/29",
-      "technical_terms": [
-        "checkpoint",
-        "markdown"
-      ],
-      "public_coordination_signal": "no_direct_public_link_observed",
-      "shared_people": [],
-      "references": [],
-      "comments_source": 6,
-      "comments_target": 1,
-      "new_collaboration_confirmed": false,
-      "requires_human_review": true
-    },
-    {
       "id": "match:github:OpenEuroLLM/web-data-processing#1->github:hplt-project/HPLT-textpipes#7",
       "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/1",
       "target": "https://github.com/hplt-project/HPLT-textpipes/issues/7",
@@ -527,22 +511,6 @@
       "requires_human_review": true
     },
     {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#66",
-      "source": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-      "target": "https://github.com/OpenEuroLLM/Taskboard/issues/66",
-      "technical_terms": [
-        "checkpoint",
-        "tokenizer"
-      ],
-      "public_coordination_signal": "no_direct_public_link_observed",
-      "shared_people": [],
-      "references": [],
-      "comments_source": 6,
-      "comments_target": 4,
-      "new_collaboration_confirmed": false,
-      "requires_human_review": true
-    },
-    {
       "id": "match:github:OpenEuroLLM/web-data-processing#3->github:hplt-project/warc2text-runner#22",
       "source": "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
       "target": "https://github.com/hplt-project/warc2text-runner/issues/22",
@@ -615,7 +583,9 @@
           "source_urls": [
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6196681212",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6764049782"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6764049782",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6957263552",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7015231487"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22",
@@ -640,7 +610,9 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6768687793",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6780649827",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6795969898",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6955615702",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22"
@@ -648,7 +620,7 @@
         }
       ],
       "references": [],
-      "comments_source": 15,
+      "comments_source": 19,
       "comments_target": 1,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -682,7 +654,9 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6768687793",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6780649827",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6795969898",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6955615702",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/6",
@@ -692,7 +666,7 @@
         }
       ],
       "references": [],
-      "comments_source": 15,
+      "comments_source": 19,
       "comments_target": 4,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -754,6 +728,21 @@
       "references": [],
       "comments_source": 0,
       "comments_target": 0,
+      "new_collaboration_confirmed": false,
+      "requires_human_review": true
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#377->github:LAION-AI/CLIP_benchmark#113",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/377",
+      "target": "https://github.com/LAION-AI/CLIP_benchmark/pull/113",
+      "technical_terms": [
+        "tokenizer"
+      ],
+      "public_coordination_signal": "no_direct_public_link_observed",
+      "shared_people": [],
+      "references": [],
+      "comments_source": 2,
+      "comments_target": 9,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
     }

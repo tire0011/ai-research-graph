@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "review_only",
-  "generated_at_utc": "2026-11-17T16:16:32.760331+00:00",
+  "generated_at_utc": "2026-11-19T21:31:59.359725+00:00",
   "repositories": [
     "OpenEuroLLM/web-data-processing",
     "OpenEuroLLM/warc2text",
@@ -15,19 +15,19 @@
   "inventory_counts": {
     "OpenEuroLLM/web-data-processing": 8,
     "OpenEuroLLM/warc2text": 1,
-    "OpenEuroLLM/Taskboard": 438,
+    "OpenEuroLLM/Taskboard": 440,
     "hplt-project/HPLT-textpipes": 29,
     "hplt-project/warc2text-runner": 22,
     "hplt-project/monotextor-slurm": 16,
     "LAION-AI/CLIP_benchmark": 154,
     "utter-project/eurollm-evaluation": 0
   },
-  "items_indexed": 668,
-  "source_candidates": 198,
-  "shortlisted_sources_rechecked": 30,
+  "items_indexed": 670,
+  "source_candidates": 197,
+  "shortlisted_sources_rechecked": 28,
   "matcher": "bounded technical-vocabulary gate with max four IDF/title-weighted terms (NOT an LLM)",
   "baseline": "unweighted IDF overlap on the exact same title+body snapshot; not a restricted title-only or one-hop control",
-  "baseline_top1_sources": 189,
+  "baseline_top1_sources": 188,
   "suggestions": [
     {
       "id": "match:github:OpenEuroLLM/warc2text#1->github:hplt-project/monotextor-slurm#9",
@@ -65,8 +65,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 32.595,
-      "fulltext_baseline_score": 34.349,
+      "score": 32.614,
+      "fulltext_baseline_score": 34.37,
       "matched_terms": [
         {
           "term": "warc",
@@ -78,7 +78,7 @@
             "field": "body",
             "excerpt": "2 does not include the crawl identifier. the specific WARC file name is there, but that may not be unique across"
           },
-          "idf": 5.714
+          "idf": 5.717
         },
         {
           "term": "metadata",
@@ -90,7 +90,7 @@
             "field": "body",
             "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
           },
-          "idf": 4.941
+          "idf": 4.944
         },
         {
           "term": "crawl",
@@ -102,7 +102,7 @@
             "field": "title",
             "excerpt": "pick up crawl identifier in repackaging"
           },
-          "idf": 4.867
+          "idf": 4.87
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -151,8 +151,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 31.919,
-      "fulltext_baseline_score": 27.198,
+      "score": 31.938,
+      "fulltext_baseline_score": 27.202,
       "matched_terms": [
         {
           "term": "lumio",
@@ -164,7 +164,7 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 5.108
+          "idf": 5.111
         },
         {
           "term": "crawl",
@@ -176,7 +176,7 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 4.867
+          "idf": 4.87
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
@@ -223,8 +223,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 27.242,
-      "fulltext_baseline_score": 58.058,
+      "score": 27.257,
+      "fulltext_baseline_score": 58.062,
       "matched_terms": [
         {
           "term": "warc",
@@ -236,7 +236,7 @@
             "field": "body",
             "excerpt": "ctories for different stages (S1 + S2 combined), e.g. `warc`, `html`, `pool`, `clean`, `noise` + `robots.txt` pl"
           },
-          "idf": 5.714
+          "idf": 5.717
         },
         {
           "term": "metadata",
@@ -248,7 +248,7 @@
             "field": "body",
             "excerpt": "Ls, if these were to occur~~ + output format: all `metadata.zst` in one file; XML, MD, and TEXT each in separate f"
           },
-          "idf": 4.941
+          "idf": 4.944
         },
         {
           "term": "crawl",
@@ -260,7 +260,7 @@
             "field": "body",
             "excerpt": "to decide whether to preserve or not) + eight 2025 CC crawls on LUMI-O: 800 tib, each a separate bucket + S1 comple"
           },
-          "idf": 4.867
+          "idf": 4.87
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -306,8 +306,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 26.565,
-      "fulltext_baseline_score": 18.053,
+      "score": 26.581,
+      "fulltext_baseline_score": 18.065,
       "matched_terms": [
         {
           "term": "lumio",
@@ -319,7 +319,7 @@
             "field": "title",
             "excerpt": "Stage 1 preprocessing for LUMI with streaming from/to LUMI-O"
           },
-          "idf": 5.108
+          "idf": 5.111
         },
         {
           "term": "crawl",
@@ -331,7 +331,7 @@
             "field": "body",
             "excerpt": "kept, including: * shuffling of WARCs within a single crawl before dividing them to batches, and shuffling batches"
           },
-          "idf": 4.867
+          "idf": 4.87
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#9",
@@ -378,8 +378,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 25.727,
-      "fulltext_baseline_score": 18.586,
+      "score": 25.743,
+      "fulltext_baseline_score": 18.598,
       "matched_terms": [
         {
           "term": "xml",
@@ -391,7 +391,7 @@
             "field": "title",
             "excerpt": "XML to markdown conversion"
           },
-          "idf": 5.309
+          "idf": 5.312
         },
         {
           "term": "markdown",
@@ -403,7 +403,7 @@
             "field": "title",
             "excerpt": "XML to markdown conversion"
           },
-          "idf": 4.415
+          "idf": 4.418
         },
         {
           "term": "trafilatura",
@@ -415,7 +415,7 @@
             "field": "body",
             "excerpt": "res: - jsonlines stdin->stdout processing - converts trafilatura's output XML to markdown, adding `md` field to *some*"
           },
-          "idf": 5.309
+          "idf": 5.312
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -462,8 +462,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 22.296,
-      "fulltext_baseline_score": 14.485,
+      "score": 22.308,
+      "fulltext_baseline_score": 14.494,
       "matched_terms": [
         {
           "term": "trafilatura",
@@ -475,7 +475,7 @@
             "field": "title",
             "excerpt": "Change trafilatura TEI/XML to text behaviour"
           },
-          "idf": 5.309
+          "idf": 5.312
         },
         {
           "term": "xml",
@@ -487,7 +487,7 @@
             "field": "title",
             "excerpt": "Change trafilatura TEI/XML to text behaviour"
           },
-          "idf": 5.309
+          "idf": 5.312
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -536,8 +536,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 17.792,
-      "fulltext_baseline_score": 12.604,
+      "score": 17.801,
+      "fulltext_baseline_score": 12.574,
       "matched_terms": [
         {
           "term": "robotstxt",
@@ -549,7 +549,7 @@
             "field": "title",
             "excerpt": "coordinate between uio and prompsit about robots.txt filtering"
           },
-          "idf": 5.56
+          "idf": 5.563
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -595,8 +595,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 17.792,
-      "fulltext_baseline_score": 5.56,
+      "score": 17.801,
+      "fulltext_baseline_score": 5.563,
       "matched_terms": [
         {
           "term": "robotstxt",
@@ -608,7 +608,7 @@
             "field": "title",
             "excerpt": "filtering by robots.txt for IA"
           },
-          "idf": 5.56
+          "idf": 5.563
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -656,8 +656,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 15.161,
-      "fulltext_baseline_score": 37.668,
+      "score": 15.17,
+      "fulltext_baseline_score": 37.692,
       "matched_terms": [
         {
           "term": "crawl",
@@ -669,7 +669,7 @@
             "field": "title",
             "excerpt": "pick up crawl identifier in repackaging"
           },
-          "idf": 4.867
+          "idf": 4.87
         },
         {
           "term": "metadata",
@@ -681,7 +681,7 @@
             "field": "body",
             "excerpt": "metadata after S1 and S2 does not include the crawl identifier."
           },
-          "idf": 4.941
+          "idf": 4.944
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
@@ -728,8 +728,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.928,
-      "fulltext_baseline_score": 4.04,
+      "score": 12.938,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -741,7 +741,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
@@ -788,8 +788,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.928,
-      "fulltext_baseline_score": 4.04,
+      "score": 12.938,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -801,7 +801,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
@@ -848,8 +848,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 12.928,
-      "fulltext_baseline_score": 4.04,
+      "score": 12.938,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -861,7 +861,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
@@ -897,19 +897,19 @@
         "repo": "LAION-AI/CLIP_benchmark",
         "number": 148,
         "kind": "pull_request",
-        "state": "open",
+        "state": "closed",
         "title": "Add audio modality support for CLAP evaluation",
         "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
         "created_at": "2026-02-19T04:01:55Z",
-        "updated_at": "2026-06-11T19:39:57Z",
+        "updated_at": "2026-11-17T17:30:35Z",
         "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
         "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
         "assignees": []
       },
-      "classification": "possible_parallel_work",
-      "prior_closed_work_not_proven_merged_or_solved": false,
-      "score": 12.899,
-      "fulltext_baseline_score": 33.509,
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 12.908,
+      "fulltext_baseline_score": 33.433,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -921,7 +921,7 @@
             "field": "body",
             "excerpt": "ependencies - `open_clip` (for model architecture and tokenizer) - `librosa` (audio decoding) - `torchaudio` (mel spec"
           },
-          "idf": 4.04
+          "idf": 4.043
         },
         {
           "term": "markdown",
@@ -933,81 +933,10 @@
             "field": "body",
             "excerpt": "ty functions for audio data handling | | `AUDIO_README.md` | Documentation for audio benchmarks with usage examp"
           },
-          "idf": 4.415
+          "idf": 4.418
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#133",
-      "same_as_fulltext_baseline_top1": false,
-      "single_term_only": false,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#29",
-      "source_id": "github:LAION-AI/CLIP_benchmark#148",
-      "source": {
-        "id": "github:LAION-AI/CLIP_benchmark#148",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 148,
-        "kind": "pull_request",
-        "state": "open",
-        "title": "Add audio modality support for CLAP evaluation",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-        "created_at": "2026-02-19T04:01:55Z",
-        "updated_at": "2026-06-11T19:39:57Z",
-        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
-        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
-        "assignees": []
-      },
-      "target_id": "github:OpenEuroLLM/Taskboard#29",
-      "target": {
-        "id": "github:OpenEuroLLM/Taskboard#29",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 29,
-        "kind": "issue",
-        "state": "closed",
-        "title": "Polish checkpoint conversion scripts and add unittests",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/29",
-        "created_at": "2025-04-16T13:30:26Z",
-        "updated_at": "2026-06-23T08:38:39Z",
-        "title_sha256": "691b7d99fe2dfec1e24bfca0d2421584e0a5ae7d5ba2f7ac6d56d7c408e4d592",
-        "body_sha256": "ac451ecf109bf2e18c8bdc9fd96a703ff492d069d3ae286c9356813bf53fa7e0",
-        "assignees": [
-          "timurcarstensen"
-        ]
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 11.028,
-      "fulltext_baseline_score": 46.09,
-      "matched_terms": [
-        {
-          "term": "checkpoint",
-          "source": {
-            "field": "body",
-            "excerpt": "LAP](https://github.com/LAION-AI/CLAP) (v1) pretrained checkpoints and models trained with the most recent [open_clip](ht"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Polish checkpoint conversion scripts and add unittests"
-          },
-          "idf": 3.149
-        },
-        {
-          "term": "markdown",
-          "source": {
-            "field": "body",
-            "excerpt": "ty functions for audio data handling | | `AUDIO_README.md` | Documentation for audio benchmarks with usage examp"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "github.com/OpenEuroLLM/hpo-experiment/blob/main/README.md)"
-          },
-          "idf": 4.415
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
       "same_as_fulltext_baseline_top1": false,
       "single_term_only": false,
       "ranking_text_truncated": false,
@@ -1052,8 +981,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.727,
-      "fulltext_baseline_score": 14.566,
+      "score": 10.733,
+      "fulltext_baseline_score": 14.575,
       "matched_terms": [
         {
           "term": "lumio",
@@ -1065,7 +994,7 @@
             "field": "title",
             "excerpt": "Adapting S1 to LUMI-O"
           },
-          "idf": 5.108
+          "idf": 5.111
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
@@ -1114,8 +1043,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.727,
-      "fulltext_baseline_score": 23.624,
+      "score": 10.733,
+      "fulltext_baseline_score": 23.638,
       "matched_terms": [
         {
           "term": "lumio",
@@ -1127,83 +1056,12 @@
             "field": "title",
             "excerpt": "downloading 2025 CC crawls to LUMI-O"
           },
-          "idf": 5.108
+          "idf": 5.111
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#29",
       "same_as_fulltext_baseline_top1": false,
       "single_term_only": true,
-      "ranking_text_truncated": false,
-      "validation": "unreviewed_candidate_not_confirmed_reusable",
-      "outreach": "none"
-    },
-    {
-      "id": "match:github:LAION-AI/CLIP_benchmark#148->github:OpenEuroLLM/Taskboard#66",
-      "source_id": "github:LAION-AI/CLIP_benchmark#148",
-      "source": {
-        "id": "github:LAION-AI/CLIP_benchmark#148",
-        "repo": "LAION-AI/CLIP_benchmark",
-        "number": 148,
-        "kind": "pull_request",
-        "state": "open",
-        "title": "Add audio modality support for CLAP evaluation",
-        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/148",
-        "created_at": "2026-02-19T04:01:55Z",
-        "updated_at": "2026-06-11T19:39:57Z",
-        "title_sha256": "fe7a5bcfab68974cc6097f6c390c05915ff533b2b383640805203358706022cc",
-        "body_sha256": "df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473",
-        "assignees": []
-      },
-      "target_id": "github:OpenEuroLLM/Taskboard#66",
-      "target": {
-        "id": "github:OpenEuroLLM/Taskboard#66",
-        "repo": "OpenEuroLLM/Taskboard",
-        "number": 66,
-        "kind": "issue",
-        "state": "closed",
-        "title": "Evaluate missing checkpoints",
-        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/66",
-        "created_at": "2025-06-06T13:38:32Z",
-        "updated_at": "2025-10-17T13:42:54Z",
-        "title_sha256": "3d901d96f64733da45d7a6363df8cab1e041600832310c174089942de9874987",
-        "body_sha256": "aca3b3af9708b676d326195edc38be53b92908a595b1891972e6f1f92a6e869c",
-        "assignees": [
-          "timurcarstensen"
-        ]
-      },
-      "classification": "possible_prior_work",
-      "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 10.653,
-      "fulltext_baseline_score": 15.198,
-      "matched_terms": [
-        {
-          "term": "checkpoint",
-          "source": {
-            "field": "body",
-            "excerpt": "LAP](https://github.com/LAION-AI/CLAP) (v1) pretrained checkpoints and models trained with the most recent [open_clip](ht"
-          },
-          "target": {
-            "field": "title",
-            "excerpt": "Evaluate missing checkpoints"
-          },
-          "idf": 3.149
-        },
-        {
-          "term": "tokenizer",
-          "source": {
-            "field": "body",
-            "excerpt": "ependencies - `open_clip` (for model architecture and tokenizer) - `librosa` (audio decoding) - `torchaudio` (mel spec"
-          },
-          "target": {
-            "field": "body",
-            "excerpt": "ons. - [x] open-sci-ref_model-0.13b_data-CommonCorpus_tokenizer-GPT-NeoX_samples-300B_global_bs-1008_context-4096_sche"
-          },
-          "idf": 4.04
-        }
-      ],
-      "baseline_fulltext_top1_id": "github:OpenEuroLLM/Taskboard#167",
-      "same_as_fulltext_baseline_top1": false,
-      "single_term_only": false,
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
@@ -1246,8 +1104,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.812,
-      "fulltext_baseline_score": 4.673,
+      "score": 9.819,
+      "fulltext_baseline_score": 4.676,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1259,7 +1117,7 @@
             "field": "title",
             "excerpt": "De-chunking in warc2text"
           },
-          "idf": 4.673
+          "idf": 4.676
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1305,8 +1163,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.812,
-      "fulltext_baseline_score": 4.673,
+      "score": 9.819,
+      "fulltext_baseline_score": 4.676,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1318,7 +1176,7 @@
             "field": "title",
             "excerpt": "Add warc2text html parser output for tests"
           },
-          "idf": 4.673
+          "idf": 4.676
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1340,7 +1198,7 @@
         "title": "audio and video extraction from WARCs",
         "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
         "created_at": "2026-10-15T13:52:58Z",
-        "updated_at": "2026-11-12T16:43:32Z",
+        "updated_at": "2026-11-19T16:28:35Z",
         "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
         "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
         "assignees": [
@@ -1368,8 +1226,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.812,
-      "fulltext_baseline_score": 18.52,
+      "score": 9.819,
+      "fulltext_baseline_score": 18.512,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1381,7 +1239,7 @@
             "field": "title",
             "excerpt": "De-chunking in warc2text"
           },
-          "idf": 4.673
+          "idf": 4.676
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1403,7 +1261,7 @@
         "title": "audio and video extraction from WARCs",
         "url": "https://github.com/OpenEuroLLM/web-data-processing/issues/8",
         "created_at": "2026-10-15T13:52:58Z",
-        "updated_at": "2026-11-12T16:43:32Z",
+        "updated_at": "2026-11-19T16:28:35Z",
         "title_sha256": "e5632e66511924438a22fdf8f7e120bc67e973ecb8a7d53b5e3c3344994ed560",
         "body_sha256": "ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e",
         "assignees": [
@@ -1432,8 +1290,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 9.812,
-      "fulltext_baseline_score": 13.787,
+      "score": 9.819,
+      "fulltext_baseline_score": 13.776,
       "matched_terms": [
         {
           "term": "warc2text",
@@ -1445,7 +1303,7 @@
             "field": "title",
             "excerpt": "Tag filters moved from warc2text"
           },
-          "idf": 4.673
+          "idf": 4.676
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/HPLT-textpipes#18",
@@ -1492,8 +1350,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.484,
-      "fulltext_baseline_score": 4.04,
+      "score": 8.49,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1505,7 +1363,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#114",
@@ -1552,8 +1410,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.484,
-      "fulltext_baseline_score": 33.108,
+      "score": 8.49,
+      "fulltext_baseline_score": 33.124,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1565,7 +1423,7 @@
             "field": "body",
             "excerpt": "nguage` method to set the target language for the NLLB tokenizer. 6. Enabled building CSV files from directories. @"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
@@ -1611,8 +1469,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.484,
-      "fulltext_baseline_score": 4.04,
+      "score": 8.49,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1624,7 +1482,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
@@ -1670,8 +1528,8 @@
       },
       "classification": "possible_prior_work",
       "prior_closed_work_not_proven_merged_or_solved": true,
-      "score": 8.484,
-      "fulltext_baseline_score": 4.04,
+      "score": 8.49,
+      "fulltext_baseline_score": 4.043,
       "matched_terms": [
         {
           "term": "tokenizer",
@@ -1683,7 +1541,7 @@
             "field": "title",
             "excerpt": "use open_clip.get_tokenizer to support all tokenizers"
           },
-          "idf": 4.04
+          "idf": 4.043
         }
       ],
       "baseline_fulltext_top1_id": "github:hplt-project/warc2text-runner#17",
@@ -1692,10 +1550,70 @@
       "ranking_text_truncated": false,
       "validation": "unreviewed_candidate_not_confirmed_reusable",
       "outreach": "none"
+    },
+    {
+      "id": "match:github:OpenEuroLLM/Taskboard#377->github:LAION-AI/CLIP_benchmark#113",
+      "source_id": "github:OpenEuroLLM/Taskboard#377",
+      "source": {
+        "id": "github:OpenEuroLLM/Taskboard#377",
+        "repo": "OpenEuroLLM/Taskboard",
+        "number": 377,
+        "kind": "issue",
+        "state": "open",
+        "title": "Custom tokenizer for final flagship model training",
+        "url": "https://github.com/OpenEuroLLM/Taskboard/issues/377",
+        "created_at": "2026-08-28T11:21:10Z",
+        "updated_at": "2026-09-28T10:49:37Z",
+        "title_sha256": "bb7b7c7a6fd6e130b0ca2ddb7e3a7511848f1dd3ff0512b5becd8ef6bc484a28",
+        "body_sha256": "8ab196d2603c0a39a6a27890a83f894bcc8db8224f0955b51a6e6a3a5ff70584",
+        "assignees": [
+          "timpal0l",
+          "vitiugin"
+        ]
+      },
+      "target_id": "github:LAION-AI/CLIP_benchmark#113",
+      "target": {
+        "id": "github:LAION-AI/CLIP_benchmark#113",
+        "repo": "LAION-AI/CLIP_benchmark",
+        "number": 113,
+        "kind": "pull_request",
+        "state": "closed",
+        "title": "Multilingual benchmark datasets",
+        "url": "https://github.com/LAION-AI/CLIP_benchmark/pull/113",
+        "created_at": "2023-11-19T02:09:11Z",
+        "updated_at": "2023-12-02T00:01:46Z",
+        "title_sha256": "3aff48d9c9e28bc788209707450f1112a0687417f2e628f4a06b6a07381b2af1",
+        "body_sha256": "3bc28d2d5ddbdaca6c343793b8bd3c640b5a21ee87141cad70154f325e423214",
+        "assignees": []
+      },
+      "classification": "possible_prior_work",
+      "prior_closed_work_not_proven_merged_or_solved": true,
+      "score": 8.49,
+      "fulltext_baseline_score": 20.541,
+      "matched_terms": [
+        {
+          "term": "tokenizer",
+          "source": {
+            "field": "title",
+            "excerpt": "Custom tokenizer for final flagship model training"
+          },
+          "target": {
+            "field": "body",
+            "excerpt": "nguage` method to set the target language for the NLLB tokenizer. 6. Enabled building CSV files from directories. @"
+          },
+          "idf": 4.043
+        }
+      ],
+      "baseline_fulltext_top1_id": "github:LAION-AI/CLIP_benchmark#113",
+      "same_as_fulltext_baseline_top1": true,
+      "single_term_only": true,
+      "ranking_text_truncated": false,
+      "validation": "unreviewed_candidate_not_confirmed_reusable",
+      "outreach": "none"
     }
   ],
-  "suggestions_count": 25,
-  "suggestions_matching_same_input_baseline_top1": 3,
+  "suggestions_count": 24,
+  "suggestions_matching_same_input_baseline_top1": 4,
   "human_quality_labels_collected": 0,
   "evidence_levels": "Phrase overlap is a review candidate, not collaboration, identical code or verified prior solution.",
   "limitations": "Bounded repo registry and source age, English-oriented tokens, GitHub-only pilot; The technical vocabulary is curated and tuned on this observed cohort, NOT a held-out validation. Issue/PR body and title verified for shortlisted cards, not issue comments or merge status. Closed pull requests are not necessarily merged. No claim of better quality than full-text search, no labels, no automated outreach. Source bodies longer than the configured limit are truncated for ranking."

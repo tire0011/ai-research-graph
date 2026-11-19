@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-17T16:16:32.692413+00:00",
+  "generated_at_utc": "2026-11-19T21:31:59.308696+00:00",
   "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
   "repositories_checked": 9,
   "pairs_checked": 6,
@@ -13,7 +13,7 @@
       "repository_b": "utter-project/eurollm-evaluation",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
-      "repo_pushed_a": "2026-11-16T11:40:49Z",
+      "repo_pushed_a": "2026-11-18T10:47:52Z",
       "repo_pushed_b": "2025-03-17T20:49:57Z",
       "shared_terms": [
         {
@@ -255,8 +255,8 @@
       "repository_b": "LAION-AI/CLIP_benchmark",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-      "repo_pushed_a": "2026-11-16T11:40:49Z",
-      "repo_pushed_b": "2026-11-05T15:23:52Z",
+      "repo_pushed_a": "2026-11-18T10:47:52Z",
+      "repo_pushed_b": "2026-11-17T19:16:18Z",
       "shared_terms": [
         {
           "term": "benchmark",
@@ -270,7 +270,7 @@
           "b": {
             "term": "benchmark",
             "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
+            "sha256": "394e04507e31111679a49e204d081289fc1321d6d87ef2cada310bfe0f175236",
             "excerpt": "# CLIP Benchmark [![pypi](https://img.shields.io/pypi/v/clip_benchmark.svg)](https://p",
             "origin": "README"
           }
@@ -287,8 +287,8 @@
           "b": {
             "term": "evaluation",
             "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
-            "excerpt": "del to use, the dataset and the task to evaluate on. Once it is done, evaluation is performed and the results are written into a JSON file. ### Using",
+            "sha256": "394e04507e31111679a49e204d081289fc1321d6d87ef2cada310bfe0f175236",
+            "excerpt": "Support for audio-text models (CLAP) on [MAEB, MSEB and HEAR](#audio-evaluation) ## How to install? `pip install clip-benchmark` ## How to use? T",
             "origin": "README"
           }
         },
@@ -304,7 +304,7 @@
           "b": {
             "term": "model",
             "source_url": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-            "sha256": "a484cfa42d08749beda9957a70fc60373c22b2a7d3488b7c6fb98f3ed12907dc",
+            "sha256": "394e04507e31111679a49e204d081289fc1321d6d87ef2cada310bfe0f175236",
             "excerpt": "/pypi/clip_benchmark) The goal of this repo is to evaluate CLIP-like models on a standard set of datasets on different tasks such as zero-shot c",
             "origin": "README"
           }
