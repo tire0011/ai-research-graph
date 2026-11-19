@@ -1,0 +1,27 @@
+name: EU model landscape pilot checks
+
+on:
+  pull_request:
+    paths:
+      - 'eu_model_landscape.py'
+      - 'studies/eu_model_landscape_20261119/**'
+      - 'tests/test_eu_model_landscape.py'
+      - '.github/workflows/eu-model-landscape-pilot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check bounded pilot and existing read-only overlay
+        run: python -m unittest discover -s tests -p 'test_eu_model_landscape.py' -v
+      - name: Generate overlay without external network requests
+        run: python eu_model_landscape.py --output /tmp/eu_model_landscape.json --report /tmp/eu_model_landscape.md
