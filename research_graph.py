@@ -45,6 +45,11 @@ GITHUB_QUALIFIED_TASK_PATTERN = re.compile(
     r"(?<![\w./-])([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)#([1-9]\d*)(?![\w-])"
 )
 GITHUB_LOCAL_TASK_PATTERN = re.compile(r"(?<![\w/#])#([1-9]\d*)(?![\w-])")
+GITHUB_MARKDOWN_TASK_LINK_PATTERN = re.compile(
+    r"\[(?P<label>[^\]\n]+)\]\(\s*https://github\.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+/"
+    r"(?:issues|pull)/(?P<number>[1-9]\d*)(?:[?#][^\s)]*)?\s*\)",
+    re.IGNORECASE,
+)
 ARXIV_PATTERN = re.compile(
     r"(?:arxiv\s*:\s*|arxiv\.org/(?:abs|pdf|html)/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?![a-z0-9.])",
     re.IGNORECASE,
@@ -104,6 +109,8 @@ def fetch_json(url: str, *, token: str | None = None, timeout: int = 20):
 
 
 def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
+    if max_pages < 1:
+        raise ValueError("max_pages must be positive")
     issues = []
     for page in range(1, max_pages + 1):
         query = urllib.parse.urlencode({"state": "all", "per_page": 100, "page": page})
@@ -125,7 +132,7 @@ def github_issues(repo: str, *, token: str | None = None, max_pages: int = 10):
         if len(batch) < 100:
             break
     else:
-        raise ValueError(f"{repo} issue listing exceeds {max_pages} pages; refusing silent truncation")
+        raise ValueError(f"GitHub issues for {repo} hit the {max_pages}-page cap; refusing incomplete inventory")
     return issues
 
 
@@ -427,6 +434,13 @@ def github_task_references(nodes: list[dict]) -> tuple[list[dict], list[dict]]:
             owner, repo, number = match.groups()
             claims.append((match, f"{owner}/{repo}", number, "repository_issue_number"))
             occupied.append(match.span())
+        # A label such as "[Evaluation issue #152](https://github.com/Other/Repo/issues/152)"
+        # describes the linked issue, not a same-repository issue with that number.
+        for link in GITHUB_MARKDOWN_TASK_LINK_PATTERN.finditer(body):
+            for label_ref in GITHUB_LOCAL_TASK_PATTERN.finditer(link.group("label")):
+                if label_ref.group(1) == link.group("number"):
+                    occupied.append((link.start("label") + label_ref.start(),
+                                     link.start("label") + label_ref.end()))
         for match in GITHUB_LOCAL_TASK_PATTERN.finditer(body):
             if any(start <= match.start() < end for start, end in occupied):
                 continue

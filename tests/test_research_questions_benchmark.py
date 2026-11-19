@@ -27,6 +27,34 @@ class ResearchQuestionsBenchmarkTests(unittest.TestCase):
         self.assertEqual(benchmark.source_references(body, "OpenEuroLLM/Taskboard", known),
                          ["github:openeurollm/oellm-eval#124", "github:openeurollm/taskboard#11"])
 
+    def test_cross_repo_markdown_labels_do_not_create_local_targets(self):
+        known = {
+            "github:openeurollm/taskboard#152",
+            "github:openeurollm/taskboard#164",
+            "github:openeurollm/oellm-eval#152",
+            "github:openeurollm/oellm-eval#164",
+        }
+        body = (
+            "[Evaluation issue #152](https://github.com/OpenEuroLLM/oellm-eval/issues/152) "
+            "[Integration PR #164](https://github.com/OpenEuroLLM/oellm-eval/pull/164)"
+        )
+        self.assertEqual(
+            benchmark.source_references(body, "OpenEuroLLM/Taskboard", known),
+            ["github:openeurollm/oellm-eval#152", "github:openeurollm/oellm-eval#164"],
+        )
+
+    def test_cross_repo_markdown_label_keeps_other_local_reference(self):
+        known = {"github:openeurollm/taskboard#214",
+                 "github:openeurollm/oellm-eval#152"}
+        body = (
+            "[Compare local #214 with foreign #152]"
+            "(https://github.com/OpenEuroLLM/oellm-eval/issues/152)"
+        )
+        self.assertEqual(
+            benchmark.source_references(body, "OpenEuroLLM/Taskboard", known),
+            ["github:openeurollm/oellm-eval#152", "github:openeurollm/taskboard#214"],
+        )
+
     def test_parser_rejects_reference_prefixes(self):
         known = {"github:openeurollm/taskboard#11"}
         self.assertEqual(benchmark.source_references("#11-experimental and #111 and foo#11",

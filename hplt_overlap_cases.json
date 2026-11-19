@@ -1,0 +1,110 @@
+{
+  "scope": "Narrow source-audited comparison of HPLT and OpenEuroLLM data-processing code and issues. Curated pairs are hypotheses, not automatically discovered duplicates.",
+  "code_pairs": [
+    {
+      "id": "common-crawl-download",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "ref": "main",
+        "prefix": "download/cc/"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "ref": "main",
+        "prefix": "download/cc/"
+      },
+      "question": "Which Common Crawl acquisition scripts are byte-identical, and which have diverged?"
+    },
+    {
+      "id": "hplt-stage2-lineage",
+      "a": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "ref": "main",
+        "prefix": "src/hplt_textpipes/stage2/"
+      },
+      "b": {
+        "repo": "hplt-project/warc2text-runner",
+        "ref": "main",
+        "prefix": "src/warc2text_runner/stage2/"
+      },
+      "question": "Which Stage-2 pipeline utilities were carried forward unchanged, and which differ across HPLT releases?"
+    }
+  ],
+  "issue_pairs": [
+    {
+      "id": "common-crawl-lumio",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 2,
+        "phrase": "crawl"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 9,
+        "phrase": "crawl"
+      },
+      "hypothesis": "Review the older HPLT LUMI-O Common Crawl workflow before duplicating download tooling."
+    },
+    {
+      "id": "robots-txt",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 7,
+        "phrase": "robots.txt"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 17,
+        "phrase": "robots.txt"
+      },
+      "hypothesis": "Compare previously coordinated robots.txt filtering with the new planned interpretation of allow/deny rules."
+    },
+    {
+      "id": "openlid-upgrade",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 6,
+        "phrase": "openlid"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 19,
+        "phrase": "OpenLID"
+      },
+      "hypothesis": "Check whether HPLT OpenLID v3 integration can be reused for the OpenEuroLLM pipeline update."
+    },
+    {
+      "id": "glotlid-upgrade",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 6,
+        "phrase": "glotlid"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 21,
+        "phrase": "GlotLID"
+      },
+      "hypothesis": "Check the earlier GlotLID v3 runner and interface before implementing an alternative."
+    },
+    {
+      "id": "xml-to-markdown",
+      "a": {
+        "repo": "OpenEuroLLM/web-data-processing",
+        "number": 6,
+        "phrase": "xml"
+      },
+      "b": {
+        "repo": "hplt-project/HPLT-textpipes",
+        "number": 20,
+        "phrase": "XML"
+      },
+      "hypothesis": "Inspect existing HPLT XML-to-Markdown script and I/O contract before combining outputs."
+    }
+  ],
+  "guardrails": {
+    "code": "Git blob equality means identical bytes at pinned revisions; a matching suffix or different SHA alone does not imply lineage or duplication.",
+    "issues": "Issue-body phrase and current state are source-verified observations, not proof a task was solved or that requirements match.",
+    "communication": "Never contact or notify project teams automatically."
+  }
+}

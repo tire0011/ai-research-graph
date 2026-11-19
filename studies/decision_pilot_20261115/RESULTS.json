@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "study": "2026-11-15-small-decision-coverage",
+  "selection": "studies/decision_pilot_20261115/SELECTION.md",
+  "snapshot_timestamp_utc": "2026-11-14T21:59:08.316070+00:00",
+  "status": "complete_manual_source_coverage_audit",
+  "not_blinded": true,
+  "sample_size": 3,
+  "summaries": {
+    "selected_with_zero_graph_edges": 3,
+    "selected_with_zero_graph_comment_edges": 3,
+    "selected_with_public_comments": 3,
+    "total_public_comments": 15,
+    "verified_graph_advantage": false,
+    "decision_time_saved": null
+  },
+  "method": "The first three anchors were frozen from titles/metadata before inspecting their source bodies; graph snapshot node descriptions and explicit graph edges were then inspected, followed by live original GitHub issue states/bodies/comments and relevant links. Same reviewer saw both; no blinded decision quality or equal-time retrieval comparison. No code was run on HPC.",
+  "cases": [
+    {
+      "id": "E1",
+      "anchor": "github:OpenEuroLLM/Taskboard#346",
+      "question": "Is a related evaluation already planned and what smallest missing validation remains?",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/346",
+      "observed_source_status": "open",
+      "graph": {
+        "explicit_task_edges": 0,
+        "comment_edges": 0,
+        "body_summary": "Four evaluations marked complete, nemotron models on dclm-core-22 unchecked.",
+        "limitation": "Does not capture result correction request or environment discussion."
+      },
+      "public_comments": 3,
+      "source_evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346#issuecomment-4981280373",
+          "claim": "Comment identifies prior multilingual dclm-core-22 CSV and recommends matching specific eval package versions."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/346#issuecomment-6317702798",
+          "claim": "Public request to update corrected scores; whether resolved is not established."
+        }
+      ],
+      "external_data_limit": "Linked dense_multilingual_models_scaling_results CSV returned 404 through available GitHub API access; not interpreted as nonexistence or a failed model result.",
+      "decision": "known_evaluation_with_unresolved_status",
+      "minimum_action": "Check whether corrected scores and the remaining nemotron dclm-core-22 evaluation are already published in primary artifacts, using version-matched environment before suggesting a rerun.",
+      "stop_condition": "If both are already publicly available and correct, no new action.",
+      "benefit_verified": false
+    },
+    {
+      "id": "D1",
+      "anchor": "github:OpenEuroLLM/Taskboard#341",
+      "question": "Is DocHPLT data analysis duplicated and is prior experiment reusable?",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/341",
+      "observed_source_status": "closed",
+      "graph": {
+        "explicit_task_edges": 0,
+        "comment_edges": 0,
+        "body_summary": "One-sentence proposal to analyze DocHPLT for a data mixture.",
+        "limitation": "No resulting experiments, final findings or processing decision."
+      },
+      "public_comments": 6,
+      "source_evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5000224012",
+          "claim": "Comment reports language-pair segment-count mismatches."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5002140093",
+          "claim": "Project discussion records chosen preprocessing strategy based on whole-document and context-window constraints."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/341#issuecomment-5176031327",
+          "claim": "Detailed report compares whole-document DocHPLT against sentence-level FineOPUS; authors report broadly similar outcomes and no apparent deterioration of monolingual tasks."
+        }
+      ],
+      "decision": "already_studied_avoid_duplicate",
+      "minimum_action": "Reuse published study and inspect specific methods/metrics before proposing a second analysis. No generic rerun.",
+      "stop_condition": "If no clearly missing question or independent replication need is identified, abstain.",
+      "benefit_verified": false
+    },
+    {
+      "id": "W1",
+      "anchor": "github:OpenEuroLLM/Taskboard#343",
+      "question": "Is fault tolerance implemented and where is the smallest actual bottleneck?",
+      "source": "https://github.com/OpenEuroLLM/Taskboard/issues/343",
+      "observed_source_status": "closed",
+      "graph": {
+        "explicit_task_edges": 0,
+        "comment_edges": 0,
+        "body_summary": "Design and all checklist items marked complete; links to inspiration but no tracked implementation PR edge.",
+        "limitation": "Missing reported recovery cost, merged PR, and queue-versus-spare economic discussion."
+      },
+      "public_comments": 6,
+      "source_evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-4901251069",
+          "claim": "Project links implementation pull request."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-4969902010",
+          "claim": "Author reports about 33 seconds recovery and 20 lost steps under one setup; not independently reproduced here."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/Taskboard/issues/343#issuecomment-5088871358",
+          "claim": "Team weighs reserve-node cost against queue delays and scheduling priority."
+        },
+        {
+          "url": "https://github.com/OpenEuroLLM/oellm-autoexp/pull/48",
+          "claim": "PR #48 was checked and is merged."
+        }
+      ],
+      "decision": "implemented_with_unresolved_cost_benefit",
+      "minimum_action": "Use existing queue, node-failure, retry and restart logs for a small cost/latency decision table; compare spare-node and ordinary requeue scenarios before touching integration code.",
+      "stop_condition": "If queued restart is fast/reliable enough or no representative logs are available, no further implementation.",
+      "benefit_verified": false
+    }
+  ],
+  "overall_finding": "For these three locked anchors, project decisions materially depend on public comment evidence not present in the bounded graph snapshot; a conventional issue+comments read finds them. A source-backed on-demand comment packet can close this coverage gap without collecting all comments or asserting semantic links.",
+  "next_gate": "Run an independently assessed, equal-source reviewer decision test (or use practical maintainer feedback) before claiming graph superiority or expanding research-agent infrastructure."
+}

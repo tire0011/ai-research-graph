@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "discovery",
+    "title": "Find projects, tools and people",
+    "question": "Can an agent discover relevant existing public research assets, projects, experts and source URLs?",
+    "acceptance": "Return source-backed candidates with stable resource identities; compare with ordinary keyword search."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "discovery",
+      "status": "documented",
+      "finding": "Metadata Catalogue aggregates datasets, models, projects and papers from multiple sources; REST API and Python SDK are documented.",
+      "source_url": "https://aiondemand.github.io/AIOD-rest-api/"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "discovery",
+      "status": "documented",
+      "finding": "Resource Hub exposes research data, publications, software, services and related material from the federation.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/support/frequently-asked-questions"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "discovery",
+      "status": "documented",
+      "finding": "Dashboard Marketplace lists reusable AI modules and related tools; narrower than general research-project discovery.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/dashboard/catalog.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "discovery",
+      "status": "planned",
+      "finding": "Research assistant is intended to cover literature review and knowledge-supported scientific workflows.",
+      "source_url": "https://arena.ai4eosc.eu/project-plan/"
+    }
+  ],
+  "cross_project_cases": [],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

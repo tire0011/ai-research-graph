@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "interop",
+    "title": "Interoperable sources and services",
+    "question": "Can a third-party catalogue, service, module or agent connect via documented APIs?",
+    "acceptance": "Prove one end-to-end import/export with source and permission boundaries."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "interop",
+      "status": "documented",
+      "finding": "AIoD Metadata Catalogue has an official REST API and Python SDK, suitable for a future read-only adapter evaluation.",
+      "source_url": "https://aiondemand.github.io/AIOD-rest-api/"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "interop",
+      "status": "documented",
+      "finding": "Contributor onboarding accepts eligible mature research tools, services and catalogues under review; not an unconditional publication API.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/contributors"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "interop",
+      "status": "documented",
+      "finding": "Modules expose a common API and can be deployed to local or federated resources; standard DEEPaaS integration is documented.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/advanced/api.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "interop",
+      "status": "planned",
+      "finding": "Project plans plug-in agent orchestration and interoperability integrated with EOSC and AI4EOSC.",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    }
+  ],
+  "cross_project_cases": [],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

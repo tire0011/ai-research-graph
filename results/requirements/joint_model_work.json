@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "joint_model_work",
+    "title": "Shared model development and evaluation",
+    "question": "Can separate contributors contribute to the same model-training or evaluation effort?",
+    "acceptance": "Demonstrate one jointly versioned model/data/evaluation contribution and a reproducible outcome."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "joint_model_work",
+      "status": "adjacent",
+      "finding": "RAIL and the AI Builder support experiments; this does not establish a shared training pipeline for one common LLM.",
+      "source_url": "https://www.iais.fraunhofer.de/en/press-events/press-releases/AI-on-Demand_Platform.html"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "joint_model_work",
+      "status": "adjacent",
+      "finding": "Compute and data services support research workflows; no EOSC-wide common LLM-training process is established by this source.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/support/frequently-asked-questions"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "joint_model_work",
+      "status": "documented",
+      "finding": "Platform supports training, fine-tuning, federated computing and shared modules; this does not imply joint training of one European foundation model.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/getting-started/overview.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "joint_model_work",
+      "status": "planned",
+      "finding": "Work package 7 covers scientific GenAI model pre- and post-training; this is not proof of a common open European foundation model.",
+      "source_url": "https://arena.ai4eosc.eu/project-deliverables/"
+    }
+  ],
+  "cross_project_cases": [
+    {
+      "id": "long_context_tests",
+      "title": "256k context extension / StateBench",
+      "requirements": [
+        "duplicate_reuse",
+        "joint_model_work"
+      ],
+      "classification": "complementary_hypothesis",
+      "finding": "OpenEuroLLM's ongoing 256k model extension could potentially use AllenAI's merged long-context state-tracking evaluations; runner compatibility is unknown.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/392",
+        "https://github.com/allenai/olmo-eval/pull/358"
+      ]
+    }
+  ],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

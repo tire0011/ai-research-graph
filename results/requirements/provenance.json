@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "requirement": {
+    "id": "provenance",
+    "title": "Provenance and verification",
+    "question": "Can the platform track evidence, changes, dataset/model identity and human acceptance?",
+    "acceptance": "Trace a suggestion to original sources and distinguish documentation, intentions and executed results."
+  },
+  "as_of": "2026-11-11",
+  "observations": [
+    {
+      "platform": "aiod",
+      "requirement": "provenance",
+      "status": "adjacent",
+      "finding": "Cross-platform metadata provides resource identities, not a verified provenance chain for our matcher's collaboration claims.",
+      "source_url": "https://aiondemand.github.io/aiondemand/"
+    },
+    {
+      "platform": "eosc",
+      "requirement": "provenance",
+      "status": "documented",
+      "finding": "The federation emphasizes FAIR metadata, open research outputs and reproducible workflows; application-level claim verification is still separate.",
+      "source_url": "https://open-science-cloud.ec.europa.eu/support/frequently-asked-questions"
+    },
+    {
+      "platform": "ai4eosc",
+      "requirement": "provenance",
+      "status": "adjacent",
+      "finding": "Model-development and experiment-tracking services are documented; our particular cross-team evidence chain is not verified.",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/getting-started/overview.html"
+    },
+    {
+      "platform": "eosc_arena",
+      "requirement": "provenance",
+      "status": "planned",
+      "finding": "Work package 8 plans data/model lifecycle tracking, provenance, persistent IDs and automatically generated metadata.",
+      "source_url": "https://arena.ai4eosc.eu/project-deliverables/"
+    }
+  ],
+  "cross_project_cases": [
+    {
+      "id": "model_card_provenance",
+      "title": "Model-card reporting / benchmark provenance",
+      "requirements": [
+        "duplicate_reuse",
+        "provenance",
+        "human_agent_coordination"
+      ],
+      "classification": "complementary_hypothesis",
+      "finding": "OpenEuroLLM needs model-card reports; LAION has an optional audit-manifest proposal. Code compatibility and maintainer interest are not established.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+        "https://github.com/LAION-AI/CLIP_benchmark/issues/153"
+      ]
+    },
+    {
+      "id": "arena_hard_contamination",
+      "title": "Arena-Hard v2 / contamination exclusion",
+      "requirements": [
+        "duplicate_reuse",
+        "provenance"
+      ],
+      "classification": "shared_problem",
+      "finding": "Both teams address Arena-Hard v2, but one implements pairwise scoring and the other cleans contaminated results. Neither duplicate code nor a transferable contract is proven.",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/oellm-eval/pull/174",
+        "https://github.com/allenai/olmo-eval/pull/474"
+      ]
+    }
+  ],
+  "not_assessed": [],
+  "known_relations": [
+    {
+      "from": "eosc_arena",
+      "to": "ai4eosc",
+      "type": "extends",
+      "source_url": "https://arena.ai4eosc.eu/platform-overview/"
+    },
+    {
+      "from": "eosc_arena",
+      "to": "eosc",
+      "type": "integrates_with",
+      "source_url": "https://arena.ai4eosc.eu/"
+    },
+    {
+      "from": "ai4eosc",
+      "to": "eosc",
+      "type": "deploys_via",
+      "source_url": "https://docs.ai4eosc.eu/en/latest/howtos/deploy/eosc-node.html"
+    }
+  ],
+  "novel_collaboration_confirmed": false
+}

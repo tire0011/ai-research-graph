@@ -1,0 +1,40 @@
+# AIoD ↔ GitHub cross-source candidates
+
+15 shown / 226 lexical overlaps from 10 AIoD records (10 unique claimed URLs/records) and 244 open GitHub tasks.
+
+**Review-only lexical comparator, not a detected new collaboration.**
+
+- [Bio-Inspired Metaheuristics for Time-Optimal Trajectory Planning in Cooperative Dual-Arm Bimanipulation](https://api.aiodp.eu/v2/publications/pub_vfxWTYSetUOVyFjojSgCQwbs) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: candidate, discover, discovery, first, inspired, objective, optimization, paper, problem, safety, showing; score: 50.412; AIoD raw metadata SHA256: `23573f052433d66568f9ee12bc64355c9952d86d0c69dac39b6113aa9cd13cba`
+- [MoVEInt: Mixture of Variational Experts for Learning Human–Robot Interactions From Demonstrations](https://api.aiodp.eu/v2/publications/pub_3FJLVpexJuvcEdHOpjlL4z0W) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: autoencoder, generating, human, learn, over, regression, representation, show, such, therefore; score: 46.109; AIoD raw metadata SHA256: `ff5eab0f5ae6185d6095e6718e9cc742caeaacbed9033295d852439cb88be354`
+- [Human-intelligent trajectory optimization for robotic manipulators with hybrid PSO-PS algorithm](https://api.aiodp.eu/v2/publications/pub_jRkaou6yKwaZzurb6krjM1UL) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: automatically, between, context, example, human, input, optimization, point, provide, starting, therefore; score: 45.777; AIoD raw metadata SHA256: `4886897cdaf18f655a1ccf26b6655fae3958ac6687b99074c8d2c38abcfc26ab`
+- [Event-Triggered Prescribed Performance Control for SISO Uncertain Nonlinear Systems in Brunovsky Canonical Form](https://api.aiodp.eu/v2/publications/pub_MOAsSbuydo77T2gs3N9Bo6Fv) ↔ [Long-Context Data Generation](https://github.com/OpenEuroLLM/Taskboard/issues/339)
+  - Terms: form, high, non, output, problem, produce, require, signal, structure, terms; score: 44.157; AIoD raw metadata SHA256: `f6674153affbaa80cd46c590422534cd8e9edc361003fb476cd3eb8dd8c671ff`
+- [Learning Any-View 6DoF Robotic Grasping in Cluttered Scenes via Neural Surface Rendering](https://api.aiodp.eu/v2/publications/pub_jvSzwHMdpe3sG64GcBnztxp4) ↔ [Key Features decisions:Special Tokens (BOS), Whitespace, Reversibility, and Byte Fallback etc](https://github.com/OpenEuroLLM/Taskboard/issues/148)
+  - Terms: between, end, even, feature, level, manipulation, novel, representation, single, space; score: 43.325; AIoD raw metadata SHA256: `58339ea02fe317db1a7c86cd3d687739fcfb03f03fbdf09858239bebe3ca2499`
+- [Learning Any-View 6DoF Robotic Grasping in Cluttered Scenes via Neural Surface Rendering](https://api.aiodp.eu/v2/publications/pub_jvSzwHMdpe3sG64GcBnztxp4) ↔ [OpenSubtitles: 5-shot from a held-out movie, chrF as the metric](https://github.com/OpenEuroLLM/oellm-eval/pull/158)
+  - Terms: between, generation, level, quality, random, scene, significant, space, uses, without; score: 42.419; AIoD raw metadata SHA256: `58339ea02fe317db1a7c86cd3d687739fcfb03f03fbdf09858239bebe3ca2499`
+- [Human-Aware Design for Transferring Knowledge During Human-AI Co-Learning](https://api.aiodp.eu/v2/publications/pub_tqle2hdZTSavRauOwfqvi0Tc) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: aware, context, demonstrate, develop, human, individual, learn, relevant, research; score: 41.87; AIoD raw metadata SHA256: `bb541fe57d7c1aa597fa4c40e3e8659635f0c82497370d237e4145fe4902c7cc`
+- [Human-intelligent trajectory optimization for robotic manipulators with hybrid PSO-PS algorithm](https://api.aiodp.eu/v2/publications/pub_jRkaou6yKwaZzurb6krjM1UL) ↔ [Synthetic Generation for Multilingual Instruction Tuning](https://github.com/OpenEuroLLM/Taskboard/issues/437)
+  - Terms: example, expert, generate, generation, high, high-quality, plays, quality, role; score: 40.503; AIoD raw metadata SHA256: `4886897cdaf18f655a1ccf26b6655fae3958ac6687b99074c8d2c38abcfc26ab`
+- [Human-intelligent trajectory optimization for robotic manipulators with hybrid PSO-PS algorithm](https://api.aiodp.eu/v2/publications/pub_jRkaou6yKwaZzurb6krjM1UL) ↔ [`install_eval_env.sh --cluster lumi` doesn't produce a working eval environment](https://github.com/OpenEuroLLM/oellm-autoexp/issues/73)
+  - Terms: become, between, defined, environment, generate, guide, point, system, therefore; score: 40.354; AIoD raw metadata SHA256: `4886897cdaf18f655a1ccf26b6655fae3958ac6687b99074c8d2c38abcfc26ab`
+- [Learning Any-View 6DoF Robotic Grasping in Cluttered Scenes via Neural Surface Rendering](https://api.aiodp.eu/v2/publications/pub_jvSzwHMdpe3sG64GcBnztxp4) ↔ [Synthetic Generation for Multilingual Instruction Tuning](https://github.com/OpenEuroLLM/Taskboard/issues/437)
+  - Terms: detection, generation, local, quality, real, real-world, rendering, single, world; score: 39.962; AIoD raw metadata SHA256: `58339ea02fe317db1a7c86cd3d687739fcfb03f03fbdf09858239bebe3ca2499`
+- [Learning Any-View 6DoF Robotic Grasping in Cluttered Scenes via Neural Surface Rendering](https://api.aiodp.eu/v2/publications/pub_jvSzwHMdpe3sG64GcBnztxp4) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: between, demonstrate, existing, feature, level, representation, single, surface, without; score: 37.988; AIoD raw metadata SHA256: `58339ea02fe317db1a7c86cd3d687739fcfb03f03fbdf09858239bebe3ca2499`
+- [Learning a Pre-Grasp Manipulation Policy to Effectively Retrieve a Target in Dense Clutter](https://api.aiodp.eu/v2/publications/pub_EmY4KwMrYg4n09gwalilPl4E) ↔ [Investigating Multilingual Post-Training Data Performance](https://github.com/OpenEuroLLM/Taskboard/issues/186)
+  - Terms: capabilitie, caused, dense, non, per, trained, transfer, within, without; score: 37.486; AIoD raw metadata SHA256: `1e13864e9aea2134f21bd61e0a632762283df2e44cfb8c7b4edd71fb0e0bf1d1`
+- [Generalized Design Methodology for Dual-Arm Robotic Platforms: From Conceptualization to Experimental Validation Within the MANiBOT Framework](https://api.aiodp.eu/v2/publications/pub_lZtQJpuruam4mzA2QIdR4K1e) ↔ [Synthetic Generation for Multilingual Instruction Tuning](https://github.com/OpenEuroLLM/Taskboard/issues/437)
+  - Terms: deliverable, final, general, real, real-world, stage, tasks, within, world; score: 37.309; AIoD raw metadata SHA256: `4c026545c2a7794433703fbb5aa582c9c2268209cdf2b51ff5c8758964691b7f`
+- [Generalized Design Methodology for Dual-Arm Robotic Platforms: From Conceptualization to Experimental Validation Within the MANiBOT Framework](https://api.aiodp.eu/v2/publications/pub_lZtQJpuruam4mzA2QIdR4K1e) ↔ [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353)
+  - Terms: analysi, architecture, context, criteria, definition, deliverable, framework, requirement, stage; score: 36.87; AIoD raw metadata SHA256: `4c026545c2a7794433703fbb5aa582c9c2268209cdf2b51ff5c8758964691b7f`
+- [Human-Aware Design for Transferring Knowledge During Human-AI Co-Learning](https://api.aiodp.eu/v2/publications/pub_tqle2hdZTSavRauOwfqvi0Tc) ↔ [Question: Cross-project knowledge sharing between people and AI agents](https://github.com/OpenEuroLLM/Taskboard/issues/446)
+  - Terms: agent, context, human, knowledge, question, relevant, research, teams; score: 36.063; AIoD raw metadata SHA256: `bb541fe57d7c1aa597fa4c40e3e8659635f0c82497370d237e4145fe4902c7cc`
+
+## Caveats
+
+Not a semantic match and not an independent holdout. Both inputs are bounded snapshots. Shared tokens do not establish a useful handoff, duplicate code or a new human relationship. Repeated claimed external URLs were collapsed within this sample, not resolved as identities. Inspect originals and the AIoD external-platform identity before any action.

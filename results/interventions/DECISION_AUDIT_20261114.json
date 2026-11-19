@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "title": "Four source-following decisions: overlap, leverage, coordination, and negative control",
+  "as_of": "2026-11-14",
+  "status": "read-only qualitative audit; no claims of measured research acceleration",
+  "method": {
+    "source_search_queries": [
+      "repo:OpenEuroLLM/Taskboard \"IFEVAL\"",
+      "repo:OpenEuroLLM/Taskboard \"synthetic\" \"instruction\"",
+      "repo:OpenEuroLLM/Taskboard \"LlamaFactory\"",
+      "repo:OpenEuroLLM/Taskboard \"concept\" \"dataset\""
+    ],
+    "process": "Search GitHub issues, open primary issue bodies and selected comments; follow explicit task and pull-request links (up to two hops); check selected publicly linked project data; compare against existing graph intervention reports.",
+    "live_source_access": "GitHub connected account and public Hugging Face pages read on 2026-11-14; external GitHub texts not pinned to immutable commit revisions",
+    "graph_comparison": "The existing graph reports were inspected, but a side-by-side timed automated graph query was NOT run. No unique graph advantage measured.",
+    "cautions": [
+      "GitHub issue body timestamps and open/closed state are not experiment outcomes",
+      "Keyword search is a real baseline, not an exhaustive novelty review",
+      "Private research coordination unknown",
+      "An unobserved task metric is not proof of missing evaluation"
+    ]
+  },
+  "cases": [
+    {
+      "id": "2026-11-14-sft-mix-451",
+      "decision_type": "avoid_redundant_training_and_check_comparability",
+      "source_ids": [
+        "OpenEuroLLM/Taskboard#451",
+        "OpenEuroLLM/Taskboard#448",
+        "OpenEuroLLM/Taskboard#186",
+        "OpenEuroLLM/Taskboard#437"
+      ],
+      "sources": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/451",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/448",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/186",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/437"
+      ],
+      "verified_public_observations": [
+        "#451 is open and describes a controlled 50B-token leave-one-out dataset ablation (English/other languages 80/20, three multilingual datasets). Updated 2026-11-14.",
+        "#448 is open and calls for evaluation of multilingual mixes, listing Arena-hard-2.0, elo-EU, math500, IFEVAL, AIME24/25 and GPQA-Diamond.",
+        "#186 reports earlier mixture and Dolci replay experiments, including English retention tradeoffs."
+      ],
+      "interpretation": "Related and complementary planned research, not proof of two independent competing implementations. Avoid proposing another ablation or separate IFEval implementation.",
+      "smallest_next_action": "Once #451 reports results, check whether its per-language evaluation and benchmark definitions are comparable to #448 and its previous #186 baseline; note any actual missing comparable metric, not just missing words in an issue.",
+      "falsification_or_stop": "If #451/#448 already share the evaluation contract, document no action. Do not infer a data-quality cause from leave-one-out scores alone.",
+      "baseline_discovery": "GitHub issue search for 'synthetic' 'instruction' returned #451 directly; 'IFEVAL' returned #448. Direct reading revealed their planned metrics and relationship.",
+      "value": "Potential avoided duplicate multi-run training; savings not measured."
+    },
+    {
+      "id": "2026-11-14-post-training-391",
+      "decision_type": "existing_dependency_not_new_collaboration",
+      "source_ids": [
+        "OpenEuroLLM/Taskboard#391",
+        "OpenEuroLLM/Taskboard#432",
+        "OpenEuroLLM/post-training#65"
+      ],
+      "sources": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/391",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/432",
+        "https://github.com/OpenEuroLLM/post-training/pull/65",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/391#issuecomment-6741197470"
+      ],
+      "verified_public_observations": [
+        "#391 explicitly lists #432 as dependency for LlamaFactory-vs-TRL throughput and SFT/DPO comparison.",
+        "#432 comments link the active LlamaFactory branch and PR #65.",
+        "PR #65 is open, not merged; its description reports 332 unit tests passing and is focused on submission/configuration handling. Those tests are not a published same-configuration LUMI throughput comparison.",
+        "The project owner tire0011 has already asked on #391 whether blockers or benchmark assistance remain; no new generic contact is justified."
+      ],
+      "interpretation": "Known coordination and active upstream implementation, not previously undiscovered duplication; substantial review already under way.",
+      "smallest_next_action": "Monitor for #65 merge or public comparable SFT/DPO benchmark. Only then assess whether #391 has a genuine untested reproducibility or performance gap.",
+      "falsification_or_stop": "If maintainers post a same-budget throughput comparison covering #391, mark resolved/no outreach; do not repeat existing review comments.",
+      "baseline_discovery": "Search for 'LlamaFactory' returned both #391 and #432; first-hop #391→#432 plus the #432 comment→PR #65 is visible via ordinary source following.",
+      "value": "Avoid redundant review/outreach; no proven performance acceleration."
+    },
+    {
+      "id": "2026-11-14-synthgen-concepts",
+      "decision_type": "possible_complementary_handoff_not_proven",
+      "source_ids": [
+        "OpenEuroLLM/Taskboard#437",
+        "OpenEuroLLM/Taskboard#353",
+        "OpenEuroLLM/Taskboard#416",
+        "OpenEuroLLM/Taskboard#318"
+      ],
+      "sources": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/437",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/353",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/416",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/318",
+        "https://huggingface.co/datasets/openeurollm/EuroMultiSynth-Instruct",
+        "https://huggingface.co/datasets/openeurollm/propella-annotations"
+      ],
+      "verified_public_observations": [
+        "#437 defines the synthgen production pipeline with one judge and language-aware filtering.",
+        "#353 proposes sparse concept discovery and held-out verification for prompt-response datasets.",
+        "#416 is an open Propella-based instruction-level selection task, while #318 is closed; they are related curation work, not the same deliverable as PrefScope.",
+        "The public EuroMultiSynth-Instruct release has 4,160,598 accepted pairs and only judge scores 7–10 (77.7% are score 10). The released subset alone cannot reveal why rejected generations failed.",
+        "Published propella-annotations include several Dolci splits; available descriptions do not establish that EuroMultiSynth has the same row-level annotations."
+      ],
+      "interpretation": "Complementary methods and possible shared quality-control evidence; not duplicate projects and not a confirmed transferable artifact.",
+      "smallest_next_action": "Check whether already published Propella quality dimensions can serve as a *comparison methodology* on a tiny shared sample before integrating PrefScope; first compare language×domain×score and obtain independent held-out human verification. Do not assume existing Propella annotations align to EuroMultiSynth rows.",
+      "falsification_or_stop": "If no matching sample/independent labels are possible, or concepts add no actionable information beyond metadata, stop. No dataset quality or judge bias finding is established.",
+      "baseline_discovery": "Searching synthetic instruction issues returned #437 and #345; searching 'concept' 'dataset' returned #353, #318 and #32. A human must still inspect methods; search overlap alone does not establish a useful handoff.",
+      "value": "Possible avoided redundant annotation and clearer decision about judge vs generator; no demonstrated gain."
+    },
+    {
+      "id": "2026-11-14-prelude-392-negative",
+      "decision_type": "negative_control_already_active_investigation",
+      "source_ids": [
+        "OpenEuroLLM/Taskboard#392"
+      ],
+      "sources": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/392",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/392#issuecomment-6824248223",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/392#issuecomment-6858140249"
+      ],
+      "verified_public_observations": [
+        "#392 remains open, with multiple extensive source comments documenting context-extension curriculum and high P(EOS) on RULER QA.",
+        "Comments document controlled checkpoint probes, a release discussion, and a newly published prelude-long checkpoint; the question is not untouched."
+      ],
+      "interpretation": "Avoid proposing generic EOS investigation, forced decoding, or basic long-context evaluation already reported. New claims would need to distinguish themselves from documented work.",
+      "smallest_next_action": "No unsolicited change. Revisit only when a specific, non-overlapping independent measurement or maintainer request becomes public.",
+      "falsification_or_stop": "Without a new decision gap, abstain.",
+      "baseline_discovery": "Following #392 comments directly exposes the active diagnosis; graph-only similarity is unnecessary.",
+      "value": "Correct abstention is a useful outcome; no quantified time saving."
+    }
+  ],
+  "next_evaluation": {
+    "plan": "Freeze 3-4 unseen seed tasks, hold same source window and review budget for a source-following human/text baseline and graph-assisted decision packet. Blind-check whether each answer changed a real research decision.",
+    "measure": [
+      "source-grounded actionable precision",
+      "unjustified duplicate/collaboration claims",
+      "reviewer time",
+      "whether decision differs from baseline",
+      "independent actual saved effort or avoided rerun"
+    ],
+    "no_go": "If none of the graph-assisted decisions exceeds the source-following baseline, do not build an automated idea engine or broad schema migration."
+  }
+}

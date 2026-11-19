@@ -13,12 +13,14 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import re
 import statistics
 import sys
 import time
 import urllib.error
 import urllib.parse
+import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
@@ -30,6 +32,11 @@ from retrieval_benchmark import rank
 TASK_URL = re.compile(r"https://github\.com/([\w.-]+)/([\w.-]+)/(?:issues|pull)/([1-9]\d*)(?=$|[/?#\s\]>)\.,;:])", re.I)
 QUALIFIED = re.compile(r"(?<![\w./-])([\w.-]+)/([\w.-]+)#([1-9]\d*)(?![\w-])")
 LOCAL = re.compile(r"(?<![\w/#])#([1-9]\d*)(?![\w-])")
+MARKDOWN_TASK_LINK = re.compile(
+    r"\[(?P<label>[^\]\n]+)\]\(\s*https://github\.com/[\w.-]+/[\w.-]+/"
+    r"(?:issues|pull)/(?P<number>[1-9]\d*)(?:[?#][^\s)]*)?\s*\)",
+    re.IGNORECASE,
+)
 UA = "ai-research-graph-questions/0.1"
 
 
@@ -39,6 +46,14 @@ def source_references(text: str, repo: str, indexed: set[str]) -> list[str]:
     Unindexed targets are outside this experiment's answer vocabulary.
     """
     spans = []
+    # Parse Markdown link labels independently of graph edges: a linked
+    # "[Issue #152](https://github.com/Other/Repo/issues/152)" is not #152
+    # of the source repository.
+    for link in MARKDOWN_TASK_LINK.finditer(text):
+        for labeled in LOCAL.finditer(link.group("label")):
+            if labeled.group(1) == link.group("number"):
+                spans.append((link.start("label") + labeled.start(),
+                              link.start("label") + labeled.end()))
     candidates = []
     for pattern, kind in ((TASK_URL, "url"), (QUALIFIED, "qualified"), (LOCAL, "local")):
         for match in pattern.finditer(text):

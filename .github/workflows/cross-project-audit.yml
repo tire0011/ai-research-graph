@@ -11,6 +11,11 @@ on:
       - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
+      - collaboration_matcher.py
+      - collaboration_sources.json
+      - tests/test_collaboration_matcher.py
+      - collaboration_coordination.py
+      - tests/test_collaboration_coordination.py
       - .github/workflows/cross-project-audit.yml
   pull_request:
     paths:
@@ -18,6 +23,11 @@ on:
       - http_util.py
       - cross_project_sources.json
       - tests/test_cross_project_audit.py
+      - collaboration_matcher.py
+      - collaboration_sources.json
+      - tests/test_collaboration_matcher.py
+      - collaboration_coordination.py
+      - tests/test_collaboration_coordination.py
       - .github/workflows/cross-project-audit.yml
 
 permissions:
@@ -56,7 +66,10 @@ jobs:
       - name: Compare nine original GitHub repository sources
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python cross_project_audit.py --registry cross_project_sources.json --output results
+        run: |
+          python cross_project_audit.py --registry cross_project_sources.json --output results
+          python collaboration_matcher.py --sources collaboration_sources.json --output results
+          python collaboration_coordination.py --matches results/collaboration_matches.json --output results
       - name: Upload evidence and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -65,11 +78,15 @@ jobs:
           path: |
             results/cross_project.json
             results/CROSS_PROJECT.md
+            results/collaboration_matches.json
+            results/COLLABORATION_MATCHES.md
+            results/collaboration_coordination.json
+            results/COLLABORATION_COORDINATION.md
       - name: Commit only successfully verified comparison
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results/cross_project.json results/CROSS_PROJECT.md
+          git add results/cross_project.json results/CROSS_PROJECT.md results/collaboration_matches.json results/COLLABORATION_MATCHES.md results/collaboration_coordination.json results/COLLABORATION_COORDINATION.md
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'data: refresh EU cross-project comparison'
           for attempt in 1 2 3; do

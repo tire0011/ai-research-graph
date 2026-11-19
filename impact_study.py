@@ -7,7 +7,11 @@ Source text supports a candidate or a reported result, never an inferred speedup
 import argparse
 import datetime as dt
 import json
+import os
 import sys
+import time
+import urllib.error
+import urllib.request
 from collections import Counter
 from pathlib import Path
 

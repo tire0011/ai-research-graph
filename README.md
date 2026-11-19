@@ -4,9 +4,74 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Goal:** find demonstrable links between live engineering tasks and open research artifacts; measure gaps before proposing any additional infrastructure. This is independent of the Nexus agent project.
 
+**Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
+
+## Freshness gate for research decisions (2026-11-15)
+
+Before acting on a previously identified research overlap or cross-project candidate, use the [small read-only PR status revalidation](source_revalidation.py). The [four dated source claims](studies/decision_gate_20261115/status_watch_manifest.json) are preserved as a historical test; the weekly [active watchlist](studies/decision_gate_20261115/status_watch_active.json) now contains **only the unresolved PR #65**, so the known #174 merge is not reported as a new discovery every week. [PR #43](https://github.com/tire0011/ai-research-graph/pull/43) passed **9 unit tests** and a live **4-PR source check** that detected **one post-review merge**; no scientific or time-saving benefit is claimed. The [weekly/manual workflow](.github/workflows/source-revalidation.yml) retains its attributable output as an Actions artifact, and [checkpoint 0009](research_checkpoints/0009-source-drift-2026-11-15.md) preserves the exact decision and limitations. A direct GitHub lookup remains a fair baseline.
+
+## Cross-project matcher: source-reviewed negative result (2026-11-15)
+
+A [three-case preregistered review](studies/crossmatcher_review_20261115/SELECTION.md) compared the technical-vocabulary matcher with its **same-input full-text top-1** baseline. [Original-source review and labels](studies/crossmatcher_review_20261115/RESULTS.md): **0/3 actionable suggestions for both**, and lower *topical* relevance for the technical matcher (0 vs 2 ordinal points). This is **one non-blinded reviewer on a previously tuned cohort**, not generalizable precision. The case notes reveal an already-planned, potentially valuable small audio-extraction pilot—not a new team connection.
+
+[PR #44](https://github.com/tire0011/ai-research-graph/pull/44) adds a **non-destructive warning** for suggestions based on only one technical term. It does not filter candidates or claim useful collaboration. [Checkpoint 0010](research_checkpoints/0010-crossmatcher-negative-2026-11-15.md) preserves the negative result and the decision **not to tune the same cohort further**.
+
 ## Feasibility verdict
 
 **A cross-platform evidence graph is feasible; the need for a permanent graph service or MCP is not yet demonstrated.** In the audited snapshot of **920 nodes**, we found **35 explicit URL/ID references**, **89 shared scholarly identifiers**, and **75 metadata declarations**. These are separate evidence levels, not 199 confirmed research dependencies: a shared paper ID or a dataset declaration does **not** prove an artifact was used in training or reproduction. The immediate next step is to test whether the existing, versioned snapshot answers concrete research questions better than direct searches; only then decide whether a shared query service is worth maintaining.
+
+## Critical decision gates (2026-11-15)
+
+The [seven-question decision review protocol](RESEARCH_DECISION_GATES.md) asks whether a graph candidate addresses the same **measurement and real unmet need** before proposing any collaboration or new implementation. The [Prelude ↔ StateBench review](studies/decision_gate_20261115/STATEBENCH_VS_PRELUDE.md) found a **measurement mismatch** (generative EOS-first QA vs logprob state tracking) and rejects an immediate integration. The [Arena-Hard reuse recheck](studies/decision_gate_20261115/ARENAHARD_REUSE_RECHECK.md) corrected a stale PR status after [OpenEuroLLM #174](https://github.com/OpenEuroLLM/oellm-eval/pull/174) merged; reusable validation principles are possible, **not a verified unmet AllenAI need**. [Checkpoint 0008](research_checkpoints/0008-decision-gates-2026-11-15.md) preserves both decisions and the source-freshness lesson.
+
+**Result:** two evidence-backed review decisions, no new software, training or external outreach; **no graph-vs-plain-search advantage yet measured**.
+
+## Preselected decision audit and on-demand comment evidence (2026-11-15)
+
+[Three new cases](studies/decision_pilot_20261115/SELECTION.md) were frozen from title/metadata before reading their sources. The [decision audit](studies/decision_pilot_20261115/RESULTS.md) found **15 public comments across three issues**, but **zero indexed comment edges for those issues** in the bounded graph snapshot. Comments contain completed experiments, result corrections and operational cost questions. Simple GitHub issue-and-comment reading revealed these facts too; this is an **evidence-coverage gap**, not proven graph advantage. [Checkpoint 0005](research_checkpoints/0005-comment-evidence-2026-11-15.md) preserves the finding.
+
+A small, read-only [manual comment packet command](decision_comment_packet.py) **reuses** the existing verified comment collector to obtain SHA256-checked evidence on demand for at most five indexed issues; it does not add a crawler, AI judge or global comment index. Unit tests cover source attribution and fail-closed errors. See the [study report](studies/decision_pilot_20261115/RESULTS.md) for usage, evidence and limits.
+
+## Equal-source research decisions and 2023-cutoff replay (2026-11-15)
+
+- [Frozen, identical three-case source packet](studies/decision_pilot_20261115/FROZEN_EVIDENCE.json): three OpenEuroLLM task bodies and 15 attributable public comments. The [paired evidence audit script](paired_decision_evidence.py) checks source parity **without implying decision-quality or time-saving gains**; tests run in GitHub Actions.
+- [2023-baseline multilingual hypothesis register](studies/historical_2023/HYPOTHESES.md) and [2024–2026 outcome inspection](studies/historical_2023/OUTCOME_REVIEW.md): an explicitly **retrospective, contaminated** exercise. Later language-diversity findings are not valid proof of forecasting by a modern model.
+- [Near-prior-art audit](studies/historical_2023/PRIOR_ART_FOLLOWUP_20261115.md) covers gradient-based multilingual data filtering and controlled cross-language ability transfer; do not present these approaches as novel.
+- [Synthesis checkpoint 0006](research_checkpoints/0006-unified-evidence-2026-11-15.md) keeps the original goals of avoiding duplicated research and finding low-effort interventions alongside testable scientific discovery ideas. The next gate is an **independently reviewed, same-source decision comparison**, not additional crawling infrastructure.
+
+## Source-following decision audit (2026-11-14)
+
+The [four-case decision audit](results/interventions/DECISION_AUDIT_20261114.md) checks real OpenEuroLLM **overlap, dependency, candidate reuse, and correct-abstention** cases against ordinary issue search and source-following. Its [structured evidence cards](results/interventions/DECISION_AUDIT_20261114.json) include exact links, proposed smallest actions and stop conditions; [checkpoint 0003](research_checkpoints/0003-decision-audit-2026-11-14.md) preserves the synthesis. **No automated graph query comparison or measured acceleration was performed:** the central connections were often available from direct source reading, so a fresh blinded same-source baseline is the prerequisite for any further infrastructure.
+
+**Link-correctness replay (2026-11-14):** The [four-case source audit](results/interventions/TASK_LINK_REPLAY_20261114.md) found and fixed two false cross-repository Markdown issue-number links in the graph. The successful [workflow run](https://github.com/tire0011/ai-research-graph/actions/runs/43645317653) regenerated the snapshot with 982 nodes/407 edges; the corrected graph and a simple canonical-URL baseline both answered the four chosen link cases exactly (4/4). This is **not** a blinded research-decision comparison or proven graph advantage. [Checkpoint 0004](research_checkpoints/0004-link-correctness-2026-11-14.md) keeps the finding and next review trigger.
+
+## Experimental research-intervention review (2026-11-12)
+
+The [four-language European IFEval source-alignment pilot](results/interventions/IFEVAL_ALIGNMENT_REVIEW.md) offers a narrower **objective instruction-following** control, with 197 strictly metadata-aligned tasks and 20 candidate checks. A pinned [read-only audit script](ifeval_alignment.py), eight offline tests and a [successful GitHub Actions run](https://github.com/tire0011/ai-research-graph/actions/runs/43445610677) validate the source alignment. **This is not evidence about the Synthgen judge's general quality scoring**; OpenEuroLLM already has IFEval support, so no replacement evaluator is proposed.
+
+A [decision-focused experiment proposal](results/interventions/JUDGE_OR_GENERATOR_DECISION.md) connects the already-known Irish judge-pass-rate gap with closed multilingual data-quality work (#32) and existing SFT findings (#186). It asks whether the next intervention should improve the **generator, the judge, or the evaluation design**, and explicitly flags that the published release contains no rejected rows.
+
+The [first live Synthgen baseline](results/interventions/LIVE_BASELINE_20261112.md)
+identified a striking **sample-level** difference in retained judge scores across
+four languages, but the small contiguous samples are not representative. An
+[alternative multi-model case](results/interventions/SYNTHGEN_CALIBRATION_CASE.json)
+asks whether language-specific score calibration or sampling confounds should
+be investigated **before** an expensive PrefScope concept audit.
+[Baseline methodology and manual follow-up](results/interventions/DATA_BASELINE.md).
+
+The [research intervention pilot](results/interventions/PILOT.md) reframes
+cross-project matching as **testable actions that might remove a research
+bottleneck**. The first case examines possible reuse of PrefScope to audit
+EuroMultiSynth-Instruct data; a separate note explains why the ongoing Prelude
+long-context EOS investigation should not receive duplicate advice.
+
+Run the optional [offline multi-model review harness](research_interventions.py)
+with [source-backed case input](results/interventions/CONCEPT_AUDIT_CASE.json).
+It prepares three independent prompts (proposer, skeptic, experimenter) and
+validates returned JSON evidence references. **No other LLM has been run here**;
+no automated outreach, model voting, test of scientific benefit or claim of
+unknown collaborators. The independent prompts can also be executed against **installed local Ollama models** via [the PowerShell 7 runner](tools/run_local_llm_review.ps1), with [editable example model configuration](results/interventions/ollama_models.example.json). Tests are in
+[`tests/test_research_interventions.py`](tests/test_research_interventions.py).
 
 ## Workflow
 
@@ -134,4 +199,116 @@ The [cross-project audit](.github/workflows/cross-project-audit.yml) now compare
 The job independently loads and re-loads every repository README, checks source stability and SHA256 hashes, and records linked original README excerpts for matching **literal technical terms** and any direct GitHub repo hyperlinks. Results: [results/CROSS_PROJECT.md](results/CROSS_PROJECT.md) and [results/cross_project.json](results/cross_project.json). It runs weekly on Tuesday, on manual dispatch and once on merge; pull requests run offline tests only.
 
 **Strict evidence distinctions:** an official blog describing collaboration is a curated external source, not checked automatically by this GitHub-only audit. A literal shared term is a *topic overlap*, not identical implementation. An explicit GitHub URL in a README proves a mention, **not cooperation or reuse**. None of these are sufficient to claim duplicate code, redundant effort or measured savings; such claims require manual review of current tasks, code, provenance, licenses, existing dependencies and use cases. No automated outreach, labels or GitHub comments. This bounded pilot is not exhaustive, does not yet search cross-project issues, and does not change the existing ten-issue or 50-issue discovery workflows.
+
+
+## HPLT–OpenEuroLLM code and issue handoff (bounded audit)
+
+The [HPLT code/issue workflow](.github/workflows/hplt-overlap-audit.yml) extends the preceding README-only EU overlap pilot with a **narrow, original-source comparison** of the Common Crawl download components and HPLT Stage-2 version lineage. The [case registry](hplt_overlap_cases.json) deliberately scopes two code pairs and five issue pairs; selection is manual, **not a project-wide duplicate detector**.
+
+The audit pins each repository tree to a commit SHA before comparing Git blob hashes. It distinguishes:
+- **Byte-identical nontrivial files** (same blob SHA, at least 64 bytes): verified reuse of file *content*, not evidence of shared authorship or unnecessary duplication.
+- **Byte-identical trivial files** (such as zero-length module markers): excluded from meaningful reuse counts.
+- **Same relative file path, different blob SHA**: a candidate for reviewing version divergence, without claiming the changes are compatible.
+
+For issues, the audit reads the original bodies and current open/closed status twice, checks literal preselected phrases and hashes each body. The five human-review links cover **Common Crawl transfers, robots.txt handling, OpenLID, GlotLID and XML-to-Markdown**. A closed HPLT issue and an open OpenEuroLLM issue suggest potential prior knowledge, **not proof of a solution or of duplicate work**. Comments, historical discussions, code semantics, licenses, acceptance tests and actual reuse are outside the automated evidence level.
+
+The job runs weekly on Wednesday, manually and after merging source changes. It produces [results/HPLT_OVERLAP.md](results/HPLT_OVERLAP.md) and [results/hplt_overlap.json](results/hplt_overlap.json) only after a complete successful audit; a source error prevents replacing last-known-good reports. Unit tests run on pull requests without external API access. No automated outreach or changes to external repositories.
+
+
+## Tracing robots.txt reuse across HPLT and OpenEuroLLM
+
+The [robots.txt reuse source audit](robots_reuse_audit.py) extends the HPLT overlap study with a **12-source, pinned-code and issue-text trace**. It follows the handoff that the OpenEuroLLM issue already proposes: reusing Jaume's earlier HPLT robots.txt indexing and annotation work. The [curated registry](robots_reuse_cases.json) distinguishes sitewide historical robots.txt evaluation from the separate HTTP `X-Robots-Tag`, HTML robots meta tag and TDM mechanisms in `warc2text`.
+
+The audit cryptographically verifies each downloaded file against its original Git blob SHA from a pinned commit and re-reads every selected issue. It verifies **the presence of cited implementation steps**, not the correctness of robots.txt matching, AI-training permission policy, runtime throughput or legal compliance.
+
+The corresponding [source report](results/ROBOTS_REUSE.md) and [machine-readable trace](results/robots_reuse.json) are generated alongside the existing HPLT audit. The report includes a checklist of acceptance tests for user-agent selection, path matching, historical captures, URL normalization, line-aligned `allowed.zst` masks, and the behavior when an expected mask is missing. Missing `allowed.zst` is not inherently a bug: HPLT intentionally omits this step for some crawl types; however, when the mask is required, silently proceeding without it must be assessed.
+
+This analysis is **read-only** and does not claim a new implementation, verified duplicate work, or a fix. No automatic posting to other projects.
+
+
+## Collaboration Matcher — the collaboration goal, not a graph speed race
+
+The current research question is **whether separate EU research teams can reuse earlier work and find useful collaborators**, not whether precomputed graph traversal is faster than an equivalent snapshot text scan.
+
+
+
+**Pilot precision gate:** after the first live run, general shared words (e.g. `two`, `optional`, `stage`) produced unhelpful suggestions involving dependency-update PRs. The matcher now requires a specific shared technical component (such as `robots.txt` or `OpenLID`) or multiple technical terms and caps score contributions to four signals. This curated technical vocabulary was refined from observed live results: **it is not independent test evidence or a model of all possible research collaboration**, particularly policy/governance topics. The next evaluation must use unseen questions and independent human labels.
+
+The [collaboration matcher](collaboration_matcher.py) is a **rule-based, auditable baseline** (not an LLM): a bounded registry of [eight public GitHub repositories](collaboration_sources.json) is scanned for all visible issues and pull requests. Recently created *open* tasks are matched to earlier related work in **other GitHub organizations**. Matching issue numbers are **not** hand-picked. Original titles, body hashes, matched phrases, source links, states, assignees and a separate full-text baseline are kept for each suggestion. Only shortlisted sources are re-fetched and checked for source changes before writing the report.
+
+- [Collaboration matches (human-review queue)](results/COLLABORATION_MATCHES.md)
+- [Structured matches and baseline](results/collaboration_matches.json)
+
+The [public coordination check](collaboration_coordination.py) now re-reads each shortlisted issue/PR and its public issue comments to distinguish **exact cross-task references**, **shared authors/assignees/commenters**, **broader repository references**, and **no directly observed public link**. Findings are saved to [results/COLLABORATION_COORDINATION.md](results/COLLABORATION_COORDINATION.md) and [results/collaboration_coordination.json](results/collaboration_coordination.json), within the existing weekly cross-project workflow. **Shared participants do not prove successful collaboration; absent public evidence does not prove novelty.** Human review of technical relevance and any private discussions is still needed. No messages are sent.
+
+The matcher runs inside the existing cross-project audit workflow on a weekly/manual schedule and on code changes. It does **not** post comments, send messages, infer that closed PRs were merged, or claim a historic issue is solved. This initial candidate finder is limited to GitHub. Hugging Face and OpenAIRE remain important for a later *cross-platform* evaluation, but must not be represented as covered by this test.
+
+**The measurement that matters next:** ask a reviewer who did not prepare the candidates to label both matcher suggestions *and* same-input full-text search results as actionable reuse, already-coordinated related work or irrelevant. Record precision and useful unique discoveries; compare against the baseline before investing in a graph service, MCP endpoint or LLM ranking. Current benchmark ties are real and do **not** justify a permanent service by themselves.
+
+### Exploratory concept-phrase bridge (separate experiment)
+
+The technical vocabulary gate misses some cross-project work-product relationships. The optional [concept-phrase probe](concept_bridge_probe.py) explores **rare, adjacent two-word phrases anchored in an active issue title**, including simple singular/plural normalization. It rechecks the selected original source bodies, carries a same-input lexical baseline, and leaves existing technical matches untouched. Run it manually with `python concept_bridge_probe.py`; it has no scheduled workflow and does not contact anyone.
+
+The [first non-blinded case review](results/CONCEPT_BRIDGE_FIRST_REVIEW.md) documents an OpenEuroLLM model-card reporting task and an earlier, unanswered proposal in LAION's benchmark issue tracker. This hypothesis **was identified manually before the phrase probe was implemented**. Recovering it is a replay check, not an independent discovery or measured accuracy gain. The first two-repository probe also surfaced generic or misleading pairs; an independent reviewer and a frozen future holdout are needed before any wider rollout.
+
+### Requirement-level collaboration triage (manual experiment)
+
+The next question is whether tasks are **potentially duplicative**, have a
+**specific complementary handoff**, or could benefit from an **independent
+third-party artifact**. Shared terms and benchmark names are not enough.
+The [expanded source registry](collaboration_expanded_sources.json) adds
+OpenEuroLLM's eval work, HPLT-WP4 and AllenAI's `olmo-eval`, without changing
+the production source registry or scheduled matcher.
+
+The [second case review](results/COLLABORATION_REVIEW_NEXT_CASES.md) examines
+long-context training vs. already-implemented state-tracking evaluations, and
+different Arena-Hard scoring/contamination tasks. The optional
+[evidence review CLI](collaboration_review.py) first re-fetches the full
+original issue/PR bodies, can inspect public coordination, and checks an
+independent reviewer or local LLM's **exact source quotations** and proposed
+technical handoff. See the [review protocol](COLLABORATION_REVIEW_PROTOCOL.md)
+for local commands and JSON schema. Model judgments of maturity and practical
+compatibility are *not* certified by exact-quote validation. No automatic
+contact, no novelty claim and no measured ranking improvement.
+
+### European platform and requirement comparison (separate source layer)
+
+The optional [European ecosystem source registry](ecosystem_sources.json)
+records **AI-on-Demand (AIoD), EOSC EU Node, AI4EOSC and EOSC-ARENA**, using
+official platform documentation, including known relations among them. AIoD's
+metadata catalogue provides a documented [REST API](https://aiondemand.github.io/AIOD-rest-api/)
+and [Python SDK](https://aiondemand.github.io/aiondemand/). The separate,
+bounded [AIoD source pilot](AIOD_SOURCE_ADAPTER.md) can now **request public
+REST v2 catalogue metadata** and compare it lexically with the stored GitHub
+snapshot; the live **AIoD v2 public listing endpoint was verified** on
+2026-11-11 in three bounded samples. See
+[pilot findings](results/aiod/PILOT_FINDINGS.md) for coverage, duplicate
+metadata and false-positive limitations. No EOSC adapter is implemented. AIoD also has its own
+[semantic search project](https://github.com/aiondemand/aiod-enhanced-interaction),
+which must be considered a retrieval baseline rather than rebuilt by default.
+The second [targeted search pilot](results/aiod/TARGETED_REVIEW.md) verifies
+five live, open OpenEuroLLM requirements against AIoD search. It retrieves
+42 issue-specific results from 15 bounded search calls, but identifies **zero
+verified technical handoffs or newly collaborating teams**; single-word
+matches dominate. The [search script](aiod_targeted_search.py) and its
+results are separate from the production matcher and scheduled workflows.
+EOSC-ARENA publicly plans agent-to-agent interoperability; this is a proposed
+work package, *not* proof that a usable integration has shipped.
+
+Run `python ecosystem_requirements.py` to regenerate **six requirement-specific
+JSON and Markdown reports** and a combined
+[comparison matrix](results/requirements/OVERVIEW.md). Requirement domains are:
+resource/people discovery, duplicate work/reuse, human–agent coordination,
+interoperability, joint model work and evidence/provenance. The report links
+three earlier GitHub candidate case reviews to relevant domains without
+silently promoting them to confirmed collaborations. Machine-readable
+[comparison JSON](results/requirements/comparison.json) preserves official URLs,
+documented/planned/adjacent evidence and explicit existing relationships.
+
+The static evidence snapshot was reviewed on 2026-11-11. The pilot limits
+pagination, uses v2 resource IDs and records metadata SHA256; a live bounded
+API response and nested project descriptions were confirmed. Authentication,
+full catalogue coverage, licensing and change detection remain unverified.
+**Platform coverage is not a score; missing evidence is not
+evidence of a missing feature.**
 

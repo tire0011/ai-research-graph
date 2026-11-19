@@ -1,0 +1,1004 @@
+{
+  "schema": 1,
+  "status": "live_search_retrieval_only",
+  "generated_at_utc": "2026-11-11T10:05:29.471637+00:00",
+  "api_host": "https://api.aiodp.eu",
+  "github_source": "2026-11-11 live issue state checks, snapshot issue descriptions",
+  "query_count": 15,
+  "per_query_limit": 5,
+  "targets": [
+    {
+      "github_issue": 445,
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+      "github_title": "Automatic evaluation reporting for model card",
+      "search_query": "model card",
+      "asset_queries": [
+        {
+          "url": "https://api.aiodp.eu/search/projects?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 4,
+          "returned": 4,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/datasets?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 2,
+          "returned": 2,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 51,
+          "returned": 5,
+          "sample_limited": true
+        }
+      ],
+      "retrieved_distinct_assets": 10,
+      "title_two_term_candidates": 0,
+      "candidates": [
+        {
+          "id": "aiod:v2:datasets:data_PewJHfUbZ4IGTk1Abnd1P4gT",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "AI4CZC model testing scenarios",
+          "url": "https://api.aiodp.eu/v2/datasets/data_PewJHfUbZ4IGTk1Abnd1P4gT",
+          "original_url_claim": "https://www.ai4europe.eu/research/ai-catalog/ai4czc-model-testing-scenarios",
+          "platform": "ai4europe_cms",
+          "platform_resource_identifier": "node-1747",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "09407fbff3cb1e39e0e4d5cb9b4b7c14eb1a656c926f0ddbf9d082a974752c74",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:datasets:data_ZiVTwhbi1JyNgOqyeo4NkfSH",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "LDA model on scientific articles relevant for INAIR",
+          "url": "https://api.aiodp.eu/v2/datasets/data_ZiVTwhbi1JyNgOqyeo4NkfSH",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "data_ZiVTwhbi1JyNgOqyeo4NkfSH",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "501b4f33337b900fc8da28f0544bcfaebb11e0f7fdabfa1269d2a1d94b9e2ae4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_1MVNkveOqhAYqb51E7CF0ZrT",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Testing of the Applicability of an AI-based Optimization Model for Production Processes using a Digital Twin of the Factory",
+          "url": "https://api.aiodp.eu/v2/projects/proj_1MVNkveOqhAYqb51E7CF0ZrT",
+          "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-the-applicability-of-an-ai-based-optimization-model-for-production-processes-using-a-digital-twin-of-the-factory/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_1MVNkveOqhAYqb51E7CF0ZrT",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "dde05a6f5caad5e2f7dbaad4089ad3ea616f8b422bf83b93ab07ecdb29180cc1",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_EOcXG261sGnhBYjySDvMcD4Y",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Testing of source independent sensor fusion model for localization on the vessel",
+          "url": "https://api.aiodp.eu/v2/projects/proj_EOcXG261sGnhBYjySDvMcD4Y",
+          "original_url_claim": "https://aire-edih.eu/en/project/2024-testing-of-source-independent-sensor-fusion-model-for-localization-on-the-vessel/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_EOcXG261sGnhBYjySDvMcD4Y",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "e73fbc14d40216ab7f02351f9d3a24333c3805010b46793aa22bee0467cc1c01",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_OJ8gLWXqMCxkA2WyA2prw0m7",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Validating applicability of an artificial intelligence-based optimization model for production processes based on Scandinor OÜ new planned production unit",
+          "url": "https://api.aiodp.eu/v2/projects/proj_OJ8gLWXqMCxkA2WyA2prw0m7",
+          "original_url_claim": "https://aire-edih.eu/en/project/2023-a-study-on-the-applicability-of-an-artificial-intelligence-based-optimization-model-for-production-processes-based-on-new-planned-production-unit/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_OJ8gLWXqMCxkA2WyA2prw0m7",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "2e7d41dec93c68a65c16b4f5474aaca56796d76f73ec78abd1e01a4cc5505d10",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_70hSDivUgyn3uPG7nerK5Qs5",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Fine-tuning whisper model",
+          "url": "https://api.aiodp.eu/v2/publications/pub_70hSDivUgyn3uPG7nerK5Qs5",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "aafac246a9d1b522f73c113764de6af1f3363ed713012bd9fe80f57fc026e8c5",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_OVWGdMO1Z3S6bG30Zj8gqrRh",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Circular Data Service Cards: A Card-Based Ideation Tool For Data Services Supporting The Twin Transition",
+          "url": "https://api.aiodp.eu/v2/publications/pub_OVWGdMO1Z3S6bG30Zj8gqrRh",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "pub_OVWGdMO1Z3S6bG30Zj8gqrRh",
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "33e2cb54cd1f9847c375cf994e20ceaa79263204d534a3125a3751044f8cec66",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "card"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_PA5NvOdMtbhnIys7MJFEh3fW",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Use Your Data: Design and Evaluation of a Card-Based Ideation Tool for Data-Driven Services",
+          "url": "https://api.aiodp.eu/v2/publications/pub_PA5NvOdMtbhnIys7MJFEh3fW",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "pub_PA5NvOdMtbhnIys7MJFEh3fW",
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "8b4fd5b9334d84c380c6d62e1f417aeec76151aa93d643b3e4112c84d1db256d",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "card"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_UFnDivUgvbDJuaDK15Ncwtfc",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+          "url": "https://api.aiodp.eu/v2/publications/pub_UFnDivUgvbDJuaDK15Ncwtfc",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "8fe93c8a634e999ebde1c185c50fb2552f7ed2a8074aeb77dc865cf947e24b88",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_tBFfb1JUXCOLWda3WPS7Dj2x",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Kienzle Model Drilling Dataset",
+          "url": "https://api.aiodp.eu/v2/publications/pub_tBFfb1JUXCOLWda3WPS7Dj2x",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=model+card&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "ffdaf8d4586cac862407f3836ffccea9c33de60942f39326db7fd54b3cb64f96",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "model"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        }
+      ]
+    },
+    {
+      "github_issue": 392,
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/392",
+      "github_title": "Long context extension of prelude final checkpoint",
+      "search_query": "long context",
+      "asset_queries": [
+        {
+          "url": "https://api.aiodp.eu/search/projects?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 0,
+          "returned": 0,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/datasets?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 0,
+          "returned": 0,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 38,
+          "returned": 5,
+          "sample_limited": true
+        }
+      ],
+      "retrieved_distinct_assets": 5,
+      "title_two_term_candidates": 0,
+      "candidates": [
+        {
+          "id": "aiod:v2:publications:pub_XttnJAv5g7aZ5hF9zVYHkr6w",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "QUAC: Question answering in context",
+          "url": "https://api.aiodp.eu/v2/publications/pub_XttnJAv5g7aZ5hF9zVYHkr6w",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "698168d6f4bcc349cb069625bcf7aeee2bcf48512cf8f09e7699dca3af496a09",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "context"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_cpFl46H5crPVHufdC5pu1Nnu",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "audio-kw-in-context",
+          "url": "https://api.aiodp.eu/v2/publications/pub_cpFl46H5crPVHufdC5pu1Nnu",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "eb5c7ca75983581dbd8b22eecbd07cd2a5283409ea468ae316d6b7c882ddaf15",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "context"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_iZip1c3Oou7s2YcTWCOPtBGj",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Microsoft coco: Common objects in context",
+          "url": "https://api.aiodp.eu/v2/publications/pub_iZip1c3Oou7s2YcTWCOPtBGj",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "8bfdf847ed5a85960fedc560e270f46dbcc374902acf56faf4b38f401dffc0fc",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "context"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_yO2239aVkDpUxLrFhkdwpJ3K",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "{ELI5:} Long Form Question Answering",
+          "url": "https://api.aiodp.eu/v2/publications/pub_yO2239aVkDpUxLrFhkdwpJ3K",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "f7c1e224b0c9e1bf18a921e741042666672bba45d70a6c5b3e7e46f1fd8050f4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "long"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_zb2NmnbeQDoMQ1o1gMlkS3q7",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Microsoft {COCO:} Common Objects in Context",
+          "url": "https://api.aiodp.eu/v2/publications/pub_zb2NmnbeQDoMQ1o1gMlkS3q7",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=long+context&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "2cfe2f14d0c6e84205e4a9b1499886d29807339360fa2c20e8a7583033cc61c1",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "context"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        }
+      ]
+    },
+    {
+      "github_issue": 353,
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/353",
+      "github_title": "Discover and Verify Concepts in Preference and Instruction-tuning Datasets",
+      "search_query": "concept discovery",
+      "asset_queries": [
+        {
+          "url": "https://api.aiodp.eu/search/projects?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 1,
+          "returned": 1,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/datasets?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 0,
+          "returned": 0,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 13,
+          "returned": 5,
+          "sample_limited": true
+        }
+      ],
+      "retrieved_distinct_assets": 6,
+      "title_two_term_candidates": 0,
+      "candidates": [
+        {
+          "id": "aiod:v2:projects:proj_QpCClfQiUyA4uV5K5A4bRR0D",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Validating of artificial intelligence-based concept for decoding low-power signals",
+          "url": "https://api.aiodp.eu/v2/projects/proj_QpCClfQiUyA4uV5K5A4bRR0D",
+          "original_url_claim": "https://aire-edih.eu/en/project/2024-validating-of-artificial-intelligence-based-concept-for-decoding-low-power-signals/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_QpCClfQiUyA4uV5K5A4bRR0D",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "7f5553d4a5bec2f5340d806652ecc2b960486fe4ba3536ec933349f3d30d890e",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "concept"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_Q5soQrN8Id4FOgPB3dmAP1Iw",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Post-hoc Concept Disentanglement: From Correlated to Isolated Concept Representations",
+          "url": "https://api.aiodp.eu/v2/publications/pub_Q5soQrN8Id4FOgPB3dmAP1Iw",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "pub_Q5soQrN8Id4FOgPB3dmAP1Iw",
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "ad6103bba0a6b55c7a8f0967e8faf77768ff2b03e4c447e05280ee65bcc683c0",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "concept"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_QZTY8GogbJjpLrEf3FqRoTUp",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Beyond Scalars: Concept-Based Alignment Analysis in Vision Transformers",
+          "url": "https://api.aiodp.eu/v2/publications/pub_QZTY8GogbJjpLrEf3FqRoTUp",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "pub_QZTY8GogbJjpLrEf3FqRoTUp",
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "ce7998bdc6646bd4e2feb4cfe479c28ec2d74415519c6cad6e1509d425c14a60",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "concept"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_WnRojEw2MgNnsyHTXEaDIqLB",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Exploring and Verbalizing Academic Ideas by Concept Co-occurrence",
+          "url": "https://api.aiodp.eu/v2/publications/pub_WnRojEw2MgNnsyHTXEaDIqLB",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "67a7873852a5864e2c5d39d52e865424dafa85f1b5a2b987cf16e7167103a8b4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "concept"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_Yx9qoW9EhoxN1wgZmDiwXrj4",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "{ZINC}20{\\textemdash}A Free Ultralarge-Scale Chemical Database for Ligand Discovery",
+          "url": "https://api.aiodp.eu/v2/publications/pub_Yx9qoW9EhoxN1wgZmDiwXrj4",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "a7e4702ee281ed075792bffa69efbf05a1585a3e368de39a58b64ba3d4a25ec0",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "discovery"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_nu8yTSpnVAIz5Rzay6clxXnP",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Biomedical Concept Relatedness {--} A large {EHR}-based benchmark",
+          "url": "https://api.aiodp.eu/v2/publications/pub_nu8yTSpnVAIz5Rzay6clxXnP",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=concept+discovery&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "80d50cab26486a8484f984d8111b589c48ba29c0f31db096ce9873143d6ed5bd",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "concept"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        }
+      ]
+    },
+    {
+      "github_issue": 437,
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/437",
+      "github_title": "Synthetic Generation for Multilingual Instruction Tuning",
+      "search_query": "multilingual instruction",
+      "asset_queries": [
+        {
+          "url": "https://api.aiodp.eu/search/projects?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 0,
+          "returned": 0,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/datasets?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 1,
+          "returned": 1,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 113,
+          "returned": 5,
+          "sample_limited": true
+        }
+      ],
+      "retrieved_distinct_assets": 6,
+      "title_two_term_candidates": 0,
+      "candidates": [
+        {
+          "id": "aiod:v2:datasets:data_ugYAIrCmmIoBnGrDgQAMrZ9G",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "MAD-TSC: A Multilingual Aligned News Dataset for Target-dependent Sentiment Classification",
+          "url": "https://api.aiodp.eu/v2/datasets/data_ugYAIrCmmIoBnGrDgQAMrZ9G",
+          "original_url_claim": "https://www.ai4europe.eu/research/ai-catalog/mad-tsc-multilingual-aligned-news-dataset-target-dependent-sentiment",
+          "platform": "ai4europe_cms",
+          "platform_resource_identifier": "node-2273",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "3c8918d22daab839609b5a589d143b239136cfd15a9378a5f04730ec993543eb",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "multilingual"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_4XVrpWAHtbKp9HxxvjvODura",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Stanford Alpaca: An Instruction-following LLaMA model",
+          "url": "https://api.aiodp.eu/v2/publications/pub_4XVrpWAHtbKp9HxxvjvODura",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "11ed2724978d105a2bbb12dffcd9e9fba7b8ce1a04df4ebe51c11e62b0d01b54",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "instruction"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_cEHiiR431weSI8kNc0AoZRU7",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Chinese Open Instruction Generalist: A Preliminary Release",
+          "url": "https://api.aiodp.eu/v2/publications/pub_cEHiiR431weSI8kNc0AoZRU7",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "a64bcd2280bb30ff285bdfab93bd3513aeb65a0e293c95c4233cd89fa3844599",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "instruction"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_dFJrK4NgJTTwJhaqRf2Crk9U",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "AlpacaEval: An Automatic Evaluator of Instruction-following Models",
+          "url": "https://api.aiodp.eu/v2/publications/pub_dFJrK4NgJTTwJhaqRf2Crk9U",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "b0736c60447603e3c26b4c0bd5378ad8f5f5e0711bf7fe1a909a65437fb56abe",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "instruction"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_lCegRBaN9cdKjgD4e4Qr5pu4",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "OctoPack: Instruction Tuning Code Large Language Models",
+          "url": "https://api.aiodp.eu/v2/publications/pub_lCegRBaN9cdKjgD4e4Qr5pu4",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "83c8ada2570fe655525112146f4aadccd09882dd18901fca8a24d71822f774b4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "instruction"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_lYUkIFN7SvIgVX7zc5dsUodi",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "SVIT: Scaling up Visual Instruction Tuning",
+          "url": "https://api.aiodp.eu/v2/publications/pub_lYUkIFN7SvIgVX7zc5dsUodi",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=multilingual+instruction&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "9277c341c90db2e44e0cf9ecdd6cfec355aa14caed96d80d931f99938eb926e5",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "instruction"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        }
+      ]
+    },
+    {
+      "github_issue": 360,
+      "github_url": "https://github.com/OpenEuroLLM/Taskboard/issues/360",
+      "github_title": "Define Data Compliance Governance Strategy",
+      "search_query": "data governance",
+      "asset_queries": [
+        {
+          "url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 5,
+          "returned": 5,
+          "sample_limited": false
+        },
+        {
+          "url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 19,
+          "returned": 5,
+          "sample_limited": true
+        },
+        {
+          "url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "total_hits": 99,
+          "returned": 5,
+          "sample_limited": true
+        }
+      ],
+      "retrieved_distinct_assets": 15,
+      "title_two_term_candidates": 0,
+      "candidates": [
+        {
+          "id": "aiod:v2:datasets:data_2qj4CneQTISwBJWyEdPXsJPR",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "Cast iron 2 product 4 microshrinks data",
+          "url": "https://api.aiodp.eu/v2/datasets/data_2qj4CneQTISwBJWyEdPXsJPR",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "data_2qj4CneQTISwBJWyEdPXsJPR",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "f2404e959f7741eaeb2e0f4f047a07ae9491d19538d1b79de687389ebb0f991c",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:datasets:data_B70joZJ24hF81x55rUldyMeB",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "DIH4AI OC2 UOLD SENTINEL-2 DATA PISTOIA",
+          "url": "https://api.aiodp.eu/v2/datasets/data_B70joZJ24hF81x55rUldyMeB",
+          "original_url_claim": "https://www.ai4europe.eu/research/ai-catalog/dih4ai-oc2-uold-sentinel-2-data-pistoia",
+          "platform": "ai4europe_cms",
+          "platform_resource_identifier": "node-1593",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "38b7ab3af37671613c6f2aeb62c06b99d7b43f47bc84c8862fa0c4ad79567f58",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:datasets:data_o4QpyqXymcH1cWU15k67W6Ft",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "Aggregated data of Radiation measured in Asturias",
+          "url": "https://api.aiodp.eu/v2/datasets/data_o4QpyqXymcH1cWU15k67W6Ft",
+          "original_url_claim": "https://www.ai4europe.eu/research/ai-catalog/aggregated-data-radiation-measured-asturias",
+          "platform": "ai4europe_cms",
+          "platform_resource_identifier": "node-781",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "d045e98c85ba7bd6ff58c192fbbf68ac5e6965babf9b13ba277369e857957abc",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:datasets:data_pyzKOqsgBI6Ik1Refq2MB8s4",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "AI4Hotels data",
+          "url": "https://api.aiodp.eu/v2/datasets/data_pyzKOqsgBI6Ik1Refq2MB8s4",
+          "original_url_claim": "https://www.ai4europe.eu/research/ai-catalog/ai4hotels-data",
+          "platform": "ai4europe_cms",
+          "platform_resource_identifier": "node-838",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "11e592a3078a7340dc54d7e8825f60a6f07dbe146497de0318ae656ad3b1d71e",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:datasets:data_y1DMz21nLxQa79NFQij0zMFE",
+          "type": "catalogue_asset",
+          "asset_type": "datasets",
+          "title": "Antenna Positioning Data",
+          "url": "https://api.aiodp.eu/v2/datasets/data_y1DMz21nLxQa79NFQij0zMFE",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "data_y1DMz21nLxQa79NFQij0zMFE",
+          "source_page_url": "https://api.aiodp.eu/search/datasets?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "8def27c0f744e644327d7453bf9be2ece70f126b1db006ad1e8d7441afeeeac1",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_4TWlxEXt9PQPtGVQpUbJZNVW",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Extreme Near-Data Processing Platform",
+          "url": "https://api.aiodp.eu/v2/projects/proj_4TWlxEXt9PQPtGVQpUbJZNVW",
+          "original_url_claim": "https://neardata.eu/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_4TWlxEXt9PQPtGVQpUbJZNVW",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "61fdee5f7ab0995cd82655e37bfa8216c2fb5c92efc04d12a1daba6c5df17df4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_7yIB83mDHRpHJXHhc8LYYiyD",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "AI-DAPT: AI-Ops Framework for Automated, Intelligent and Reliable Data/AI Pipelines Lifecycle with Humans-in-the-Loop and Coupling of Hybrid Science-Guided and AI Models",
+          "url": "https://api.aiodp.eu/v2/projects/proj_7yIB83mDHRpHJXHhc8LYYiyD",
+          "original_url_claim": "https://www.ai-dapt.eu/project/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_7yIB83mDHRpHJXHhc8LYYiyD",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "cf4ef71626197ac612096a30e95c1d868a35bb272d1418ca835a36e6b49306e4",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_FWlJnsuR2trQIkaJZtv2E84I",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Fast and Efficient Robotic Automation via Re-Use of Data",
+          "url": "https://api.aiodp.eu/v2/projects/proj_FWlJnsuR2trQIkaJZtv2E84I",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_FWlJnsuR2trQIkaJZtv2E84I",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "cb3cefa54f69cc25823e774d982ff2b540b35b80c73b4d4426cb8328a043225d",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_JFeFBqXyjOmNBMcRpicoM4wv",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Spatio-TEmporal Linked data tools for the AgRi-food data space",
+          "url": "https://api.aiodp.eu/v2/projects/proj_JFeFBqXyjOmNBMcRpicoM4wv",
+          "original_url_claim": "https://stelar-project.eu/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_JFeFBqXyjOmNBMcRpicoM4wv",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "4fb3c4dafe4e07cb81ee3a54518aeb91e7035bbac04a14c59eb1da256ddf8713",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:projects:proj_Zd6dk5Y0Url5XKDdo427A0tL",
+          "type": "catalogue_asset",
+          "asset_type": "projects",
+          "title": "Cooperative robotics powered by AI and data for flexible production cells",
+          "url": "https://api.aiodp.eu/v2/projects/proj_Zd6dk5Y0Url5XKDdo427A0tL",
+          "original_url_claim": "https://corob-project.eu/",
+          "platform": "aiod",
+          "platform_resource_identifier": "proj_Zd6dk5Y0Url5XKDdo427A0tL",
+          "source_page_url": "https://api.aiodp.eu/search/projects?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "02474cb481493adb1fbd63ba62c11397cc6f751bf1085922e648cdc6a10bb150",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_BaN6Oe6XQS3rAHrVu4al30rH",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "MyoQuant SDH Data",
+          "url": "https://api.aiodp.eu/v2/publications/pub_BaN6Oe6XQS3rAHrVu4al30rH",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "c9b7bc9db91d6f8941850b126584fda2c13689e6fabd5aefe9a4f6e7fd714959",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_Rqv4bm55ClCi0qFfZunH0Bu0",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Vystadial 2016 – Czech data",
+          "url": "https://api.aiodp.eu/v2/publications/pub_Rqv4bm55ClCi0qFfZunH0Bu0",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "628eb825d64b333e42a089ca5d4bb8ecba43cc992151bf0e2cf0fce8b6388c16",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_efMq5wTV742vXv2PwTWEbHbB",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "{US Census Data (1990)}",
+          "url": "https://api.aiodp.eu/v2/publications/pub_efMq5wTV742vXv2PwTWEbHbB",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "0b3b6ead0df436096aa7bb169552e86fa5168f68d4fd38c8eddd453427d65031",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_gFCEbIeP338WDTlOd2JO37Qk",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "{Old Bailey Online XML Data}",
+          "url": "https://api.aiodp.eu/v2/publications/pub_gFCEbIeP338WDTlOd2JO37Qk",
+          "original_url_claim": null,
+          "platform": null,
+          "platform_resource_identifier": null,
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "9aa9812b3acadcdf66ab832b78a2f6290b3018e042302102e0420050564a124b",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "data"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        },
+        {
+          "id": "aiod:v2:publications:pub_tUNqtm44Y4Sym9qZgjan2Rzl",
+          "type": "catalogue_asset",
+          "asset_type": "publications",
+          "title": "Situating Harms in the AI Governance Landscape: Understanding AI Harms Through the Lens of Interactivity, Temporality, and Intentionality",
+          "url": "https://api.aiodp.eu/v2/publications/pub_tUNqtm44Y4Sym9qZgjan2Rzl",
+          "original_url_claim": null,
+          "platform": "aiod",
+          "platform_resource_identifier": "pub_tUNqtm44Y4Sym9qZgjan2Rzl",
+          "source_page_url": "https://api.aiodp.eu/search/publications?search_query=data+governance&search_fields=name&limit=5&offset=0&get_all=true&exact_match=false",
+          "metadata_sha256": "9ce379660844a768c2b4176c991a151147d4137c3bdda4bcd127e72b1f74fe96",
+          "evidence_level": "indexed_metadata_only",
+          "new_collaboration_confirmed": false,
+          "query_title_terms": [
+            "governance"
+          ],
+          "relevance_gate": "weak_keyword_result",
+          "collaboration_classification": "unreviewed",
+          "existing_coordination": "unknown"
+        }
+      ]
+    }
+  ],
+  "novel_collaboration_confirmed": false,
+  "outreach": "none",
+  "limitations": "AIoD search is broad and keyword-based; title overlaps are not validated requirement equivalence. Small first-result windows; source snapshots do not prove absent collaboration or availability of implementation artifacts."
+}

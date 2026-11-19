@@ -8,13 +8,15 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import re
 import statistics
 import sys
+import time
 import urllib.error
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-
 from http_util import get_json
 
 

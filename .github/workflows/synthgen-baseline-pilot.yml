@@ -1,0 +1,38 @@
+name: Synthgen baseline pilot
+on:
+  push:
+    branches: [experiment/concept-phrase-bridge-20261110]
+    paths:
+      - synthgen_baseline.py
+      - tests/test_synthgen_baseline.py
+      - .github/workflows/synthgen-baseline-pilot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: synthgen-baseline-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test baseline and model-review gate
+        run: |
+          python -m unittest discover -s tests -p 'test_research_interventions.py' -v
+          python -m unittest discover -s tests -p 'test_synthgen_baseline.py' -v
+      - name: Sample wider-spread real data (manual dispatch only)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python synthgen_baseline.py --languages de,fr,eu,ga --pages 8 --length 12 --seed 20261113 --pause-seconds 1 --out results/interventions/synthgen_baseline_replication.json
+      - name: Upload summary only, never raw prompts
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthgen-baseline-followup
+          path: results/interventions/synthgen_baseline_replication.json
+          retention-days: 14

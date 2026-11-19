@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-14",
+  "status": "live original-source read vs existing committed snapshot; targeted, NOT blinded",
+  "snapshot_timestamp_utc": "2026-11-14T21:55:11.184606+00:00",
+  "snapshot_counts": {
+    "nodes": 982,
+    "edges": 407
+  },
+  "research_goal": "Audit explicit issue/PR reference precision and identify semantic relation gaps, not measure actual research benefit",
+  "selection": "Four purposefully chosen original-task anchors not present in the earlier twenty-question task-reference case set; #450 chosen after observing suspicious double-reference link, so NOT an independent statistical holdout. Others selected for negative/related examples.",
+  "method": "For each source issue, independently read current GitHub issue body. Enumerate canonical GitHub task URLs; manually audit that this equals expected literal linked targets. Compare exact target sets with precomputed explicit_task_reference edges. Comments and semantic relatedness are out of literal-link scoring scope.",
+  "cases": [
+    {
+      "id": 450,
+      "question": "HF vs vLLM on oellm-eval",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/450",
+      "source_updated_at": "2026-11-11T12:42:59Z",
+      "source_body_link_targets": [
+        "github:OpenEuroLLM/oellm-eval#152",
+        "github:OpenEuroLLM/oellm-eval#164"
+      ],
+      "expected_explicit_canonical_links": [
+        "github:OpenEuroLLM/oellm-eval#152",
+        "github:OpenEuroLLM/oellm-eval#164"
+      ],
+      "graph_status_explicit_task_reference_targets": [
+        "github:OpenEuroLLM/oellm-eval#152",
+        "github:OpenEuroLLM/oellm-eval#164"
+      ],
+      "raw_url_baseline_exact": true,
+      "graph_exact": true,
+      "graph_false_target_ids": [],
+      "source_has_only_literal_target_links": true
+    },
+    {
+      "id": 443,
+      "question": "Collect evaluations for prelude",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/443",
+      "source_updated_at": "2026-11-12T14:11:10Z",
+      "source_body_link_targets": [],
+      "expected_explicit_canonical_links": [],
+      "graph_status_explicit_task_reference_targets": [],
+      "raw_url_baseline_exact": true,
+      "graph_exact": true,
+      "graph_false_target_ids": [],
+      "source_has_only_literal_target_links": true
+    },
+    {
+      "id": 445,
+      "question": "Automatic evaluation reporting for model card",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+      "source_updated_at": "2026-11-10T16:34:35Z",
+      "source_body_link_targets": [],
+      "expected_explicit_canonical_links": [],
+      "graph_status_explicit_task_reference_targets": [],
+      "raw_url_baseline_exact": true,
+      "graph_exact": true,
+      "graph_false_target_ids": [],
+      "source_has_only_literal_target_links": true
+    },
+    {
+      "id": 449,
+      "question": "Annealing 32B",
+      "source_url": "https://github.com/OpenEuroLLM/Taskboard/issues/449",
+      "source_updated_at": "2026-11-09T16:25:00Z",
+      "source_body_link_targets": [],
+      "expected_explicit_canonical_links": [],
+      "graph_status_explicit_task_reference_targets": [],
+      "raw_url_baseline_exact": true,
+      "graph_exact": true,
+      "graph_false_target_ids": [],
+      "source_has_only_literal_target_links": true
+    }
+  ],
+  "summary": {
+    "cases": 4,
+    "graph_exact": 4,
+    "canonical_url_baseline_exact": 4,
+    "false_targets": 0,
+    "caution": "The independent baseline only extracts canonical task URLs and does not search all source text, so do not treat its 4/4 score as global retrieval quality. Graph snapshot may predate a code fix. Neither metric measures researcher time or redundancy detection."
+  },
+  "semantic_candidates": [
+    {
+      "from": "github:OpenEuroLLM/Taskboard#443",
+      "to": "github:OpenEuroLLM/Taskboard#445",
+      "relationship": "potential_complementary_work",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/443",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/445",
+        "https://github.com/OpenEuroLLM/Taskboard/issues/445#issuecomment-6681393457"
+      ],
+      "evidence": "Collecting model evaluations and generating model-card tables from evaluations are related phases; no explicit task-to-task link in currently captured issue bodies.",
+      "status": "candidate_only; do not assert duplication or missing coordination"
+    },
+    {
+      "from": "github:OpenEuroLLM/Taskboard#450",
+      "to": "github:OpenEuroLLM/oellm-eval#164",
+      "relationship": "explicit_public_workflow_link",
+      "source_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/450",
+        "https://github.com/OpenEuroLLM/oellm-eval/pull/164"
+      ],
+      "evidence": "#450 reports matched HF-vLLM benchmark task and links integration PR; the issue reports task-dependent performance changes and explicitly requests more controlled runs.",
+      "status": "verified_textual_link_only"
+    }
+  ],
+  "limitations": [
+    "Purposefully selected small set; no unbiased precision estimate",
+    "Graph snapshot includes only bounded node/comment sample",
+    "Canonical URL baseline lacks same-repository bare #n references",
+    "Issue source update dates are not content hash pinning",
+    "The graph-vs-text quality comparison on researcher decisions has not yet been executed"
+  ]
+}
