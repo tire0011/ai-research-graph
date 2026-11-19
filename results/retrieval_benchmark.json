@@ -1,9 +1,9 @@
 {
-  "snapshot_utc": "2026-11-16T15:41:45.465491+00:00",
-  "evaluated_utc": "2026-11-16T15:44:52.748418+00:00",
-  "nodes": 986,
-  "edges": 407,
-  "index_build_ms": 0.2821,
+  "snapshot_utc": "2026-11-19T21:31:38.210145+00:00",
+  "evaluated_utc": "2026-11-19T21:34:06.411481+00:00",
+  "nodes": 993,
+  "edges": 412,
+  "index_build_ms": 0.2359,
   "repetitions": 31,
   "top_k": 10,
   "targets": 6,
@@ -29,17 +29,17 @@
       "text_top10": [
         "hf:dataset:HuggingFaceFW/finephrase",
         "hf:dataset:HuggingFaceTB/finemath",
+        "hf:dataset:openeurollm/prelude-reward-modeling",
         "hf:dataset:HuggingFaceFW/finepdfs",
         "hf:dataset:HuggingFaceFW/finepdfs-edu",
         "hf:dataset:HuggingFaceFW/finewiki",
         "hf:dataset:openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated",
         "hf:dataset:openeurollm/prelude-base-eval-scores",
         "hf:dataset:nvidia/Nemotron-Post-Training-Dataset-v2",
-        "hf:dataset:openeurollm/smoltalk2-decontaminated",
-        "hf:dataset:allenai/tulu-3-sft-mixture"
+        "hf:dataset:openeurollm/smoltalk2-decontaminated"
       ],
-      "graph_median_ms": 0.0079,
-      "text_median_ms": 1.9715
+      "graph_median_ms": 0.0061,
+      "text_median_ms": 1.6052
     },
     {
       "id": "tokenizer_v2",
@@ -69,8 +69,8 @@
         "hf:model:openeurollm/tokenizer-256k-v2",
         "hf:model:openeurollm/oellm-9b-yarn-multilingual-v2-32k"
       ],
-      "graph_median_ms": 0.008,
-      "text_median_ms": 0.4785
+      "graph_median_ms": 0.0061,
+      "text_median_ms": 0.345
     },
     {
       "id": "openthoughts_shared_paper",
@@ -100,8 +100,8 @@
         "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
         "hf:dataset:open-web-math/open-web-math"
       ],
-      "graph_median_ms": 0.008,
-      "text_median_ms": 1.8654
+      "graph_median_ms": 0.0063,
+      "text_median_ms": 1.5889
     },
     {
       "id": "finemath_shared_paper",
@@ -131,8 +131,8 @@
         "hf:dataset:HuggingFaceFW/finepdfs-edu",
         "hf:dataset:HuggingFaceFW/finephrase"
       ],
-      "graph_median_ms": 0.0118,
-      "text_median_ms": 1.8356
+      "graph_median_ms": 0.009,
+      "text_median_ms": 1.5165
     },
     {
       "id": "olmo3_shared_paper",
@@ -165,8 +165,8 @@
         "hf:model:openeurollm/oellm-9b-256k-sft",
         "hf:model:Snowflake/snowflake-arctic-embed-l-v2.0"
       ],
-      "graph_median_ms": 0.0159,
-      "text_median_ms": 0.6356
+      "graph_median_ms": 0.0116,
+      "text_median_ms": 0.4217
     },
     {
       "id": "hplt_unverified",
