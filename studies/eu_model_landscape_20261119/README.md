@@ -26,7 +26,7 @@ infrastructure IDs compatible with the main graph's node/edge convention.
 ## Execute (PowerShell)
 
 ```powershell
-python -m unittest tests.test_eu_model_landscape -v
+python -m unittest discover -s tests -p 'test_eu_model_landscape.py' -v
 python .\eu_model_landscape.py --snapshot .\results\snapshot.json
 # Without the existing snapshot, omit --snapshot to inspect only new nodes/edges.
 ```
