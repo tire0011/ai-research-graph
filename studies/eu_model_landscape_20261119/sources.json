@@ -1,0 +1,312 @@
+{
+  "schema": 1,
+  "as_of": "2026-11-19",
+  "purpose": "Bounded EU model ecosystem graph pilot. Catalogue discovery != primary verification. No automated outreach or inferred collaboration.",
+  "catalogue_url": "https://github.com/OpenLLM-Europe/European-OpenLLM-Projects",
+  "projects": [
+    {
+      "id": "olala",
+      "name": "Olala mini (OVHai LLM)",
+      "focus": "hybrid Mamba-3 / MoE, multilingual agents",
+      "url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+      "evidence": "primary_checked"
+    },
+    {
+      "id": "openeurollm",
+      "name": "OpenEuroLLM",
+      "focus": "open multilingual foundation models and evaluation",
+      "url": "https://openeurollm.eu/",
+      "evidence": "primary_checked"
+    },
+    {
+      "id": "hplt",
+      "name": "HPLT",
+      "focus": "multilingual web datasets and reference models",
+      "url": "https://hplt-project.org/",
+      "evidence": "primary_checked"
+    },
+    {
+      "id": "eurollm",
+      "name": "EuroLLM",
+      "focus": "24 EU-language foundation models",
+      "url": "https://eurollm.io/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "apertus",
+      "name": "Apertus / Swiss AI Initiative",
+      "focus": "multilingual open foundation models",
+      "url": "https://swiss-ai.org/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "teuken",
+      "name": "Teuken / OpenGPT-X",
+      "focus": "24 official EU languages",
+      "url": "https://huggingface.co/openGPT-X",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "soofi",
+      "name": "Soofi S",
+      "focus": "hybrid Mamba-2 / MoE models",
+      "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
+      "evidence": "primary_checked"
+    },
+    {
+      "id": "luciole",
+      "name": "Luciole / OpenLLM France",
+      "focus": "Mamba-Transformer multilingual models",
+      "url": "https://huggingface.co/OpenLLM-France/Luciole-8B-Base",
+      "evidence": "primary_checked"
+    },
+    {
+      "id": "tildeopen",
+      "name": "TildeOpen",
+      "focus": "Baltic and European language models",
+      "url": "https://tilde.ai/tildeopen-llm/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "bielik",
+      "name": "Bielik / SpeakLeash",
+      "focus": "Polish and European languages",
+      "url": "https://huggingface.co/collections/speakleash/bielik-v3-family",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "mistral3",
+      "name": "Mistral 3",
+      "focus": "multilingual and sparse MoE models",
+      "url": "https://mistral.ai/news/mistral-3/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "pleias",
+      "name": "Pleias",
+      "focus": "open-corpus pretrained models",
+      "url": "https://pleias.ai/research",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "salamandra",
+      "name": "Salamandra / ALIA",
+      "focus": "Spanish and regional-language models",
+      "url": "https://projecteaina.cat/tech/en/introducing-the-salamandra-family-of-models/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "occiglot",
+      "name": "Occiglot",
+      "focus": "five-language European models",
+      "url": "https://occiglot.eu/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "poro",
+      "name": "PORO / Viking / Europa",
+      "focus": "Nordic multilingual models",
+      "url": "https://www.silo.ai/blog/poro-a-family-of-open-models-that-bring-european-languages-to-the-frontier",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "aisweden",
+      "name": "AI Sweden / GPT-SW3",
+      "focus": "Nordic foundation models",
+      "url": "https://www.ai.se/en",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "bggpt",
+      "name": "BgGPT / INSAIT",
+      "focus": "Bulgarian and English language models",
+      "url": "https://models.bggpt.ai/blog/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "croissant",
+      "name": "Croissant LLM",
+      "focus": "French-English models",
+      "url": "https://huggingface.co/croissantllm",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "munin",
+      "name": "Danish Foundation Models / Munin",
+      "focus": "Danish models",
+      "url": "https://huggingface.co/danish-foundation-models",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "latxa",
+      "name": "Latxa / HiTZ",
+      "focus": "Basque models and evaluation",
+      "url": "https://huggingface.co/collections/HiTZ/latxa-instruct",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "krikri",
+      "name": "Krikri / ILSP",
+      "focus": "Greek models and evaluation",
+      "url": "https://huggingface.co/ilsp",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "romanian",
+      "name": "LLM for Romanian / ILDS",
+      "focus": "Romanian language models",
+      "url": "https://ilds.ro/llm-for-romanian/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "holo",
+      "name": "Holo-1 / H Company",
+      "focus": "open vision-language web agents",
+      "url": "https://hcompany.ai/",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "moshi",
+      "name": "Moshi / Kyutai",
+      "focus": "duplex speech models",
+      "url": "https://github.com/kyutai-labs/moshi",
+      "evidence": "catalogue_lead"
+    },
+    {
+      "id": "alfred",
+      "name": "Alfred Sovereign / LightOn",
+      "focus": "RAG-oriented language models",
+      "url": "https://docs.lighton.ai/en/developer-resources/lighton-models/alfred-sv5",
+      "evidence": "catalogue_lead"
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "jupiter",
+      "name": "JUPITER",
+      "url": "https://www.fz-juelich.de/en/ias/jsc/jupiter"
+    },
+    {
+      "id": "jean_zay",
+      "name": "Jean Zay",
+      "url": "https://www.idris.fr/eng/jean-zay/jean-zay-hw-eng.html"
+    },
+    {
+      "id": "meluxina",
+      "name": "MeluXina",
+      "url": "https://www.luxprovide.lu/meluxina/"
+    },
+    {
+      "id": "lumi",
+      "name": "LUMI",
+      "url": "https://www.lumi-supercomputer.eu/"
+    },
+    {
+      "id": "industrial_ai_cloud",
+      "name": "Industrial AI Cloud (Deutsche Telekom)",
+      "url": "https://www.iis.fraunhofer.de/en/ff/amm/allinga/ai-model-factory/soofi.html"
+    }
+  ],
+  "facts": [
+    {
+      "from": "hplt",
+      "to": "openeurollm",
+      "relation": "joint_public_release",
+      "assertion": "Jointly released 38 monolingual 2.15B reference models.",
+      "source_url": "https://openeurollm.eu/blog/hplt-oellm-38-reference-models",
+      "level": "documented_collaboration"
+    },
+    {
+      "from": "olala",
+      "to": "jupiter",
+      "relation": "reports_training_on",
+      "assertion": "Publisher reports training on JUPITER.",
+      "source_url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+      "level": "publisher_report"
+    },
+    {
+      "from": "olala",
+      "to": "jean_zay",
+      "relation": "reports_training_on",
+      "assertion": "Publisher reports training on Jean Zay.",
+      "source_url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+      "level": "publisher_report"
+    },
+    {
+      "from": "olala",
+      "to": "meluxina",
+      "relation": "reports_training_on",
+      "assertion": "Publisher reports training on MeluXina.",
+      "source_url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+      "level": "publisher_report"
+    },
+    {
+      "from": "luciole",
+      "to": "jean_zay",
+      "relation": "reports_training_on",
+      "assertion": "OpenLLM France reports Luciole training on Jean Zay.",
+      "source_url": "https://futurium.ec.europa.eu/en/apply-ai-alliance/community-content/luciole-fully-open-llm-family-european-digital-commons",
+      "level": "publisher_report"
+    },
+    {
+      "from": "hplt",
+      "to": "lumi",
+      "relation": "reports_training_on",
+      "assertion": "HPLT/OpenEuroLLM reference models were trained on LUMI.",
+      "source_url": "https://openeurollm.eu/blog/hplt-oellm-38-reference-models",
+      "level": "publisher_report"
+    },
+    {
+      "from": "soofi",
+      "to": "industrial_ai_cloud",
+      "relation": "reports_training_on",
+      "assertion": "Fraunhofer reports Soofi S training on Industrial AI Cloud.",
+      "source_url": "https://www.iis.fraunhofer.de/en/ff/amm/allinga/ai-model-factory/soofi.html",
+      "level": "publisher_report"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "olala_luciole",
+      "from": "olala",
+      "to": "luciole",
+      "title": "Shared HPC, different Mamba generations",
+      "question": "Do Olala and Luciole teams publish comparable efficiency/context evaluations that could be reused?",
+      "smallest_action": "Compare published model cards for common task, hardware and measurement before any benchmarking.",
+      "falsifier": "No shared measurement contract or source-backed unmet evaluation request.",
+      "sources": [
+        "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+        "https://huggingface.co/OpenLLM-France/Luciole-8B-Base"
+      ],
+      "status": "unreviewed_hypothesis"
+    },
+    {
+      "id": "olala_soofi",
+      "from": "olala",
+      "to": "soofi",
+      "title": "Sparse hybrid models across different scales",
+      "question": "Is there a reproducible efficiency/quality comparison of Mamba-3/MoE vs Mamba-2/MoE with controlled hardware and context?",
+      "smallest_action": "Inspect existing architecture reports and benchmark setups; reject direct comparisons with incompatible scales.",
+      "falsifier": "Different token budget, scale or inference implementation prevents an informative fair comparison.",
+      "sources": [
+        "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+        "https://huggingface.co/Soofi-Project/Soofi-S-Base"
+      ],
+      "status": "unreviewed_hypothesis"
+    },
+    {
+      "id": "olala_openeurollm",
+      "from": "olala",
+      "to": "openeurollm",
+      "title": "Multilingual evaluation artefact reuse",
+      "question": "Could already published Olala multilingual evaluation scripts offer an actionable reuse opportunity for an open OpenEuroLLM task?",
+      "smallest_action": "Find a specific still-open receiver issue and exact compatible test artefact; otherwise abstain.",
+      "falsifier": "No receiver requirement, existing equivalent tests or incompatible model/task contracts.",
+      "sources": [
+        "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+        "https://openeurollm.eu/"
+      ],
+      "status": "unreviewed_hypothesis"
+    }
+  ]
+}
