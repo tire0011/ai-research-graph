@@ -6,6 +6,21 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## European open AI opportunities — cross-project pilot (2026-11-21)
+
+This separate [read-only discovery](eu_opportunity_discovery.py) broadens the contribution opportunity search beyond OpenEuroLLM. Its [curated source registry](eu_opportunity_sources.json) initially names 13 public AI research/tooling repositories across OpenEuroLLM, LAION, HPLT, OpenAIRE, OpenLLM-France, and Kyutai. The EU selection is a maintained starting set, **not** a complete inventory of all European AI, and public access does not imply maintainer approval to contribute.
+
+The workflow samples the 15 latest-updated open issues per repository, excludes PRs, and selects up to 3 source-verifiable candidate issues per repository for deeper review. It reuses the contributor state tracker to check comments, assignments, issue ownership and cross-referenced PRs. Every candidate has its source URL, reason, disposition and limits. The report presents up to 5 previously untouched, unassigned candidates. A lexical title-only same-pool baseline appears alongside, with no claim of improved precision or scientific impact.
+
+```powershell
+python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai
+python -m unittest discover -s tests -v
+```
+
+GitHub Actions: [.github/workflows/european-ai-opportunities.yml](.github/workflows/european-ai-opportunities.yml), scheduled weekly or on manual invocation, stores JSON and Markdown as artifacts. There is no posting, no assignment, no issues created and no automatic source discovery; list additions must be reviewed and versioned.
+
+**Sampling limits:** at most 15 recently updated open issues per repo and 3 candidate checks each, so neither task recall nor 'no opportunities' conclusions are justified. Unknown PR context, missing comments and changed source material are never treated as confirmed new tasks. Next research gate: have a blinded reviewer compare the frozen shortlist against plain GitHub search for the same repositories and task criteria.
+
 ## Contributor opportunity state tracker (2026-11-21)
 
 The read-only [opportunity discovery](opportunity_discovery.py) now distinguishes **new personal suggestions** from **follow-ups**, **potentially active work**, **closed tasks**, and **unverified tasks**, using [opportunity_state.py](opportunity_state.py). The rotating 50-issue selection and source-linked evidence remain unchanged. JSON includes `state_counts` and an issue-deduplicated `new_top5`; Markdown separates that shortlist from the complete review queue.
