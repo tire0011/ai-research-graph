@@ -37,5 +37,6 @@
   "baseline": "GitHub REST Search Issues /search/issues, best-match order per query, deterministic round-robin across repository groups/terms, no enriched state/relevance",
   "enrichment": "Same raw pool; verify issue/comments, check cross-referenced PRs; extract literal typed links and verify up to two referenced code paths",
   "decision_gate": "Do not claim relative quality until method-blinded manual issue review has been completed",
-  "sampling_note": "This is a fixed stratified GitHub Search API query set, not a single complete global GitHub search or representative European inventory."
+  "sampling_note": "This is a fixed stratified GitHub Search API query set, not a single complete global GitHub search or representative European inventory.",
+  "actor": "tire0011"
 }
