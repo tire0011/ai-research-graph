@@ -165,7 +165,7 @@ def frozen_comparison(ledger: dict) -> dict:
     }
 
 
-def annotate(discovery: dict, ledger: dict) -> dict:
+def annotate(discovery: dict, ledger: dict, *, code_heads=None) -> dict:
     """Add transparent review states; keep original discovery untouched.
 
     Historical manual labels apply only while GitHub's issue updated_at is
@@ -174,6 +174,8 @@ def annotate(discovery: dict, ledger: dict) -> dict:
     """
     validate(ledger)
     by_url = {row["issue_url"]: row for row in review_rows(ledger)}
+    corrections = {row["issue_url"]: row for row in ledger.get("code_rechecks", [])}
+    code_heads = {} if code_heads is None else code_heads
     cards = []
     for item in discovery["all_reviewed"]:
         card = dict(item)
@@ -199,21 +201,42 @@ def annotate(discovery: dict, ledger: dict) -> dict:
                 "reason": label["explanation"],
                 "evidence_urls": label["evidence_urls"],
             }
+        correction = corrections.get(url)
+        if correction and status == "new":
+            if (card["updated_at"] != correction["issue_updated_at"]
+                    or card.get("comment_count") != correction["issue_comment_count"]):
+                quality = {"status": "stale_review", "tier": None,
+                           "reason": "issue_changed_after_code_recheck",
+                           "evidence_urls": correction["evidence_urls"]}
+            elif code_heads.get(correction["code_repo"]) != correction["code_head_sha"]:
+                quality = {"status": "code_revision_unverified", "tier": None,
+                           "reason": "default_branch_changed_or_code_check_failed",
+                           "evidence_urls": correction["evidence_urls"]}
+            else:
+                quality = {"status": "manual_code_review_current",
+                           "tier": correction["contribution_fit_tier"],
+                           "verdict": correction["verdict"],
+                           "reason": correction["explanation"],
+                           "evidence_urls": correction["evidence_urls"]}
         card["quality_review"] = quality
         cards.append(card)
 
     plausible = [row for row in cards
                  if row["state"]["status"] == "new"
-                 and row["quality_review"]["status"] == "manual_review_current"
+                 and row["quality_review"]["status"] in {"manual_review_current",
+                                                          "manual_code_review_current"}
                  and row["quality_review"]["tier"] >= 2][:5]
     unreviewed = [row for row in cards
                   if row["state"]["status"] == "new"
-                  and row["quality_review"]["status"] in {"unreviewed", "stale_review"}]
+                  and row["quality_review"]["status"] in {"unreviewed", "stale_review",
+                                                         "code_revision_unverified"}]
     return {
         "schema": 1,
         "comparison": frozen_comparison(ledger),
         "source_run": ledger["frozen_run_url"],
         "additional_review_cohorts": len(ledger.get("additional_cohorts", [])),
+        "code_rechecks": len(ledger.get("code_rechecks", [])),
+        "verified_code_heads": code_heads,
         "quality_shortlist": plausible,
         "new_needing_human_review": unreviewed[:5],
         "annotated_candidates": cards,
@@ -224,6 +247,7 @@ def annotate(discovery: dict, ledger: dict) -> dict:
             "The title-only baseline shares the same candidate pool; it is NOT a full GitHub search baseline.",
             "No tier-2 record is maintainer-confirmed or proven quick to implement.",
             "Reviews are source-version-bound; changed or missing cases require review again.",
+            "Code-dependent corrections require a matching live source repository HEAD.",
             "Unreviewed tasks must never be described as confirmed actionable.",
         ],
     }
