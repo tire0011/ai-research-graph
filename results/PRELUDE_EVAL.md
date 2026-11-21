@@ -1,6 +1,6 @@
 # Prelude checkpoint evaluation – bounded source inspection
 
-Collected: 2026-11-21T14:30:33.436972+00:00 UTC.
+Collected: 2026-11-21T17:26:40.681401+00:00 UTC.
 
 Dataset: [openeurollm/prelude-base-eval-scores](https://huggingface.co/datasets/openeurollm/prelude-base-eval-scores). Research question: [oellm-eval #163](https://github.com/OpenEuroLLM/oellm-eval/issues/163).
 Filter: prelude_anneal2t / coqa_gen / f1; source method: pinned_source_parquet.
