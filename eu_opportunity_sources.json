@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "scope": "Curated EU-based open AI research and enabling infrastructure; sample, not census. Repositories are publicly accessible but not all tasks are suitable for contributors. Checked 2026-11-21.",
+  "selection": "Each source must have a directly inspected public GitHub repository. Expand via reviewed PRs; do not imply these are all EU AI initiatives.",
+  "max_issues_per_repo": 15,
+  "candidate_checks_per_repo": 3,
+  "max_new_suggestions": 5,
+  "actor": "tire0011",
+  "repositories": [
+    {
+      "repo": "OpenEuroLLM/oellm-eval",
+      "area": "evaluation",
+      "region": "EU consortium"
+    },
+    {
+      "repo": "OpenEuroLLM/Taskboard",
+      "area": "research coordination",
+      "region": "EU consortium"
+    },
+    {
+      "repo": "OpenEuroLLM/post-training",
+      "area": "LLM post-training",
+      "region": "EU consortium"
+    },
+    {
+      "repo": "openaire/iis",
+      "area": "research metadata and knowledge graph",
+      "region": "EU research infrastructure"
+    },
+    {
+      "repo": "openaire/guidelines-literature-repositories",
+      "area": "research metadata interoperability",
+      "region": "EU research infrastructure"
+    },
+    {
+      "repo": "LAION-AI/CLIP_benchmark",
+      "area": "AI evaluation",
+      "region": "Germany"
+    },
+    {
+      "repo": "LAION-AI/CLAP",
+      "area": "speech and multimodal AI",
+      "region": "Germany"
+    },
+    {
+      "repo": "hplt-project/OpusCleaner",
+      "area": "multilingual dataset preprocessing",
+      "region": "EU research consortium"
+    },
+    {
+      "repo": "hplt-project/HPLT-textpipes",
+      "area": "web data processing",
+      "region": "EU research consortium"
+    },
+    {
+      "repo": "OpenLLM-France/Luciole-Training",
+      "area": "open LLM training",
+      "region": "France"
+    },
+    {
+      "repo": "OpenLLM-France/Lucie-Training",
+      "area": "open LLM training",
+      "region": "France"
+    },
+    {
+      "repo": "kyutai-labs/moshi",
+      "area": "speech AI",
+      "region": "France"
+    },
+    {
+      "repo": "kyutai-labs/pocket-tts",
+      "area": "speech AI",
+      "region": "France"
+    }
+  ]
+}
