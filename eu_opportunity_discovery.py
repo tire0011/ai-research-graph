@@ -30,6 +30,8 @@ TERMS = re.compile(r"\b(?:bug|fix|fail(?:ure|ing|ed|s)?|broken|regression|test(?
 EVIDENCE_TERMS = re.compile(r"\b(?:reproduc\w*|steps to reproduce|expected behavior|"
                             r"acceptance criteria|test case|traceback|failing tests?)\b", re.I)
 VOLUNTEER_LABELS = {"good first issue", "help wanted", "up for grabs", "contributions welcome"}
+QUESTION_LABELS = {"question", "support", "discussion", "help"}
+FRESHNESS_DAYS = 365
 
 
 def get_json(url):
@@ -86,7 +88,7 @@ def list_recent(fetch, repo, limit):
     return issues
 
 
-def preliminary_score(item):
+def preliminary_score(item, *, now=None):
     """Transparent, non-scientific triage. Not a proof of an actionable task."""
     text = item["title"] + "\n" + (item.get("body") or "")
     labels = {v.get("name", "").casefold() for v in item.get("labels", [])
@@ -98,7 +100,29 @@ def preliminary_score(item):
         score += 2
     if item.get("assignees"):
         score -= 2
+    if labels & QUESTION_LABELS:
+        score -= 4
+    try:
+        if is_stale(item["updated_at"], now=now):
+            score -= 3
+    except (ValueError, TypeError):
+        score -= 3
     return score
+
+
+def is_stale(updated_at, *, now=None):
+    """Reject old or invalid dates as fresh opportunity evidence."""
+    if not isinstance(updated_at, str):
+        raise ValueError("Invalid issue update date")
+    stamp = dt.datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+    if stamp.tzinfo is None:
+        raise ValueError("Missing timezone on issue update")
+    current = now or dt.datetime.now(dt.timezone.utc)
+    if current.tzinfo is None:
+        raise ValueError("Missing timezone for current time")
+    if stamp > current + dt.timedelta(days=1):
+        raise ValueError("Issue update date in future")
+    return current - stamp > dt.timedelta(days=FRESHNESS_DAYS)
 
 
 def issue_comments(fetch, repo, item):
@@ -118,9 +142,12 @@ def issue_comments(fetch, repo, item):
     return comments
 
 
-def build(config, fetch=get_json):
+def build(config, fetch=get_json, *, now=None):
     validate(config)
     actor = config["actor"]
+    now = now or dt.datetime.now(dt.timezone.utc)
+    if now.tzinfo is None:
+        raise ValueError("Current date must be timezone-aware")
     records, errors, examined = [], [], 0
     for source in config["repositories"]:
         repo = source["repo"]
@@ -131,7 +158,7 @@ def build(config, fetch=get_json):
             errors.append({"repository": repo, "stage": "list", "error": type(exc).__name__})
             continue
         examined += len(issues)
-        pool = sorted(issues, key=lambda i: (-preliminary_score(i), i["number"]))
+        pool = sorted(issues, key=lambda i: (-preliminary_score(i, now=now), i["number"]))
         for item in pool[:config["candidate_checks_per_repo"]]:
             url = item["html_url"]
             try:
@@ -146,6 +173,17 @@ def build(config, fetch=get_json):
                 comments = issue_comments(fetch, repo, fresh)
                 related = related_pull_requests(fetch, url)
                 disposition = classify(fresh, comments, related, actor=actor)
+                if disposition["status"] == "new":
+                    labels = {x.get("name", "").casefold() for x in fresh.get("labels", [])
+                              if isinstance(x, dict) and isinstance(x.get("name"), str)}
+                    if labels & QUESTION_LABELS:
+                        disposition = {"status": "needs_review",
+                                       "reason": "question_not_confirmed_implementation_task",
+                                       "evidence_urls": [url]}
+                    elif is_stale(fresh["updated_at"], now=now):
+                        disposition = {"status": "needs_review",
+                                       "reason": "stale_issue_requires_maintainer_reconfirmation",
+                                       "evidence_urls": [url]}
             except (ValueError, TypeError, KeyError, urllib.error.URLError, TimeoutError) as exc:
                 # Show an unverified candidate only if its GitHub identity is sound.
                 errors.append({"repository": repo, "issue_url": url, "stage": "verify",
@@ -158,7 +196,7 @@ def build(config, fetch=get_json):
             records.append({
                 "repository": repo, "area": source["area"], "issue_number": item["number"],
                 "issue_url": url, "title": item["title"], "updated_at": item["updated_at"],
-                "score": preliminary_score(item), "score_meaning": "rule_based_triage_not_impact",
+                "score": preliminary_score(item, now=now), "score_meaning": "rule_based_triage_not_impact",
                 "labels": labels, "assignees": [v.get("login") for v in item.get("assignees", [])
                                                  if isinstance(v, dict)],
                 "state": disposition, "related_prs": related, "review_only": True,
@@ -185,6 +223,7 @@ def build(config, fetch=get_json):
             "Scores are lexical heuristics, not demonstrated impact or graph advantage.",
             "Both rankings use exactly the same collected issue pool and state checks.",
             "A cross-referenced PR or assignment does not prove work is complete.",
+            "Support questions and issues unchanged for over a year require maintainer reconfirmation.",
             "No maintainer approval, duplicate-work prevention, time saved, or outreach is claimed.",
         ],
     }
@@ -195,7 +234,7 @@ def markdown(result):
         "# European open AI contributor opportunities — read-only pilot", "",
         f"Sources: **{result['sources']} repositories**, sampled **{result['sampled_issues']}** "
         f"open issues; **{result['fully_checked']}** candidates fully checked.",
-        f"Contributors: \`{result['actor']}\`. Errors: **{len(result['errors'])}**.", "",
+        f"Contributor: {result['actor']}. Errors: **{len(result['errors'])}**.", "",
         "## Up to five new tasks for human review", "",
     ]
     if not result["new_top5"]:
