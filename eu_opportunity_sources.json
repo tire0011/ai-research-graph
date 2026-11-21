@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Curated EU-based open AI research and enabling infrastructure; sample, not census. Repositories are publicly accessible but not all tasks are suitable for contributors. Checked 2026-11-21.",
+  "scope": "Curated EU-based open AI research and enabling infrastructure; verified source registry expanded 2026-11-21. This is not a census; historical pilot cohorts must remain separately identified.",
   "selection": "Each source must have a directly inspected public GitHub repository. Expand via reviewed PRs; do not imply these are all EU AI initiatives.",
   "max_issues_per_repo": 15,
   "candidate_checks_per_repo": 3,
@@ -71,6 +71,48 @@
       "repo": "kyutai-labs/pocket-tts",
       "area": "speech AI",
       "region": "France"
+    },
+    {
+      "repo": "Helsinki-NLP/OpusFilter",
+      "area": "multilingual corpus filtering and data quality",
+      "region": "Finland",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/Helsinki-NLP/OpusFilter"
+    },
+    {
+      "repo": "Helsinki-NLP/Tatoeba-Challenge",
+      "area": "multilingual translation evaluation",
+      "region": "Finland",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/Helsinki-NLP/Tatoeba-Challenge"
+    },
+    {
+      "repo": "Pleias/Pleias-RAG-Library",
+      "area": "open retrieval and source-grounded AI",
+      "region": "France",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/Pleias/Pleias-RAG-Library"
+    },
+    {
+      "repo": "kyutai-labs/hibiki",
+      "area": "streaming speech translation",
+      "region": "France",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/kyutai-labs/hibiki"
+    },
+    {
+      "repo": "OpenEuroLLM/JudgeArena",
+      "area": "LLM evaluation and judging",
+      "region": "EU consortium",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/OpenEuroLLM/JudgeArena"
+    },
+    {
+      "repo": "OpenEuroLLM/oellm-autoexp",
+      "area": "LLM automated training experiments",
+      "region": "EU consortium",
+      "source_checked_at": "2026-11-21",
+      "repository_url": "https://github.com/OpenEuroLLM/oellm-autoexp"
     }
   ]
 }
