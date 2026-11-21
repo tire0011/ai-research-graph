@@ -124,6 +124,20 @@ class DiscoveryTests(unittest.TestCase):
                             ["opportunity_state"]["status"] == "new" for key in new_ids))
         self.assertEqual(len(new_ids), len(result["candidates"]))
 
+    def test_feedback_on_one_signal_suppresses_others_for_same_issue(self):
+        gh = FakeGitHub()
+        gh.issues[21]["body"] = "This experiment was 12% faster."
+        key = f"github:{od.REPO}#21:reported_memory_issue"
+        result = od.build(gh, seed="2026-W46", actor="external-dev",
+                          feedback={key: "reviewed"})
+        cards = [c for c in result["candidates"] if c["issue_number"] == 21]
+        self.assertEqual({c["kind"] for c in cards},
+                         {"reported_memory_issue", "performance_mention"})
+        self.assertTrue(all(c["opportunity_state"]["status"] == "follow_up"
+                            for c in cards))
+        self.assertFalse(any(key in result["new_top5"] for key in
+                             (c["id"] for c in cards)))
+
     def test_edited_issue_fails_closed(self):
         gh = FakeGitHub()
         gh.edit_on_reread = True
