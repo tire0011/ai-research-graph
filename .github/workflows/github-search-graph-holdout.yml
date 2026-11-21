@@ -6,12 +6,16 @@ on:
     branches: [main]
     paths:
       - github_search_graph_holdout.py
+      - opportunity_state.py
+      - tests/test_opportunity_state.py
       - tests/test_github_search_graph_holdout.py
       - studies/github_search_graph_holdout_20261121/config.json
       - .github/workflows/github-search-graph-holdout.yml
   pull_request:
     paths:
       - github_search_graph_holdout.py
+      - opportunity_state.py
+      - tests/test_opportunity_state.py
       - tests/test_github_search_graph_holdout.py
       - studies/github_search_graph_holdout_20261121/config.json
       - .github/workflows/github-search-graph-holdout.yml
