@@ -21,6 +21,7 @@ from pathlib import Path
 from http_util import get_json as fetch_json
 
 from opportunity_feedback import read_feedback
+from opportunity_state import classify, related_pull_requests
 
 REPO = "OpenEuroLLM/Taskboard"
 LIMIT = 50
@@ -124,13 +125,15 @@ def verify_source(issue: dict, proof: dict, fetch=get_json):
         raise ValueError(f"Changed or invalid supporting text at {proof['source_url']}")
 
 
-def build(fetch=get_json, *, excluded=None, seed=None, feedback=None):
+def build(fetch=get_json, *, excluded=None, seed=None, feedback=None, actor=None):
     """Fail closed on stale or incomplete sources before writing reports."""
     excluded = set() if excluded is None else set(excluded)
     seed = seed or dt.datetime.now(dt.timezone.utc).strftime("%G-W%V")
     population = list_population(fetch)
     selected = select(population, excluded, seed)
     feedback = {} if feedback is None else feedback
+    if actor is not None and not LOGIN.fullmatch(actor):
+        raise ValueError("Invalid GitHub actor")
     cards, verified = [], 0
     for number in selected:
         url = f"{GITHUB}/repos/{REPO}/issues/{number}"
@@ -167,10 +170,21 @@ def build(fetch=get_json, *, excluded=None, seed=None, feedback=None):
         if not contacts:
             contacts = [author] if isinstance(author, str) and LOGIN.fullmatch(author) else []
             basis = "issue_author_fallback" if contacts else "unavailable"
+        # One bounded live PR-context check per issue with an actual signal.
+        # Failed/incomplete checks quarantine the candidate, never mark it new.
+        pr_context, pr_error = None, None
+        if signals and actor:
+            try:
+                pr_context = related_pull_requests(fetch, reread["html_url"])
+            except (ValueError, TypeError, KeyError, urllib.error.URLError, TimeoutError) as exc:
+                pr_error = f"{type(exc).__name__}: {exc}"
         for kind, proofs in sorted(signals.items()):
             for proof in proofs:
                 verify_source(reread, proof, fetch)
             key = f"github:{REPO}#{number}:{kind}"
+            state = classify(reread, comments, pr_context, actor=actor,
+                             feedback_state=feedback.get(key, "new"),
+                             validation_error=pr_error)
             cards.append({
                 "id": key, "issue_number": number, "title": reread.get("title") or "",
                 "issue_url": reread["html_url"], "issue_updated_at": reread.get("updated_at"),
@@ -181,18 +195,34 @@ def build(fetch=get_json, *, excluded=None, seed=None, feedback=None):
                 "related_issue_number": proofs[0].get("target_issue"), "evidence": proofs,
                 "contacts": contacts, "contact_basis": basis,
                 "review_status": feedback.get(key, "new"),
+                "opportunity_state": state,
                 "communication_status": "human_approval_required", "sent": False,
             })
     cards.sort(key=lambda c: (c["issue_number"], c["kind"]))
+    # Stable, issue-deduplicated queue. No impact ranking is implied.
+    states_by_issue = {}
+    new_top5, seen_new = [], set()
+    for card in cards:
+        issue_number = card["issue_number"]
+        state = card["opportunity_state"]["status"]
+        states_by_issue.setdefault(issue_number, state)
+        if state == "new" and issue_number not in seen_new and len(new_top5) < 5:
+            new_top5.append(card["id"])
+            seen_new.add(issue_number)
     return {
         "schema": 1, "status": "review_only", "seed": seed, "repo": REPO,
         "generated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "population_open": len(population), "excluded_preselected": sorted(excluded),
         "sampled": len(selected), "verified_issue_reads": verified,
         "selected_issue_numbers": selected, "candidates": cards,
+        "state_actor": actor, "new_top5": new_top5,
+        "state_counts": dict(Counter(states_by_issue.values())),
         "signal_counts": dict(Counter(c["kind"] for c in cards)),
         "limitations": "Deterministic, weekly rotating 50-issue sample of currently open tasks; "
                        "heuristic text triage only, not verified impact or a project-wide ranking. "
+                       "Cross-referenced PRs and assignees indicate possible activity, not a fix. "
+                       "Only a bounded timeline is checked; absence of a PR is not proof none exists. "
+                       "New means unclaimed in observed public evidence, not maintainer-approved. "
                        "Human review required before communication; no posts sent.",
     }
 
@@ -209,7 +239,16 @@ def markdown(data):
         f"Found **{len(data['candidates'])}** source-linked review cards across "
         f"**{len(set(c['issue_number'] for c in data['candidates']))}** issues. "
         "No automatic impact ranking.", "",
+        "## Up to five new, unclaimed review candidates", "",
     ]
+    by_id = {card["id"]: card for card in data["candidates"]}
+    if not data.get("new_top5"):
+        lines += ["None in this sample passed the public state checks. This is not proof that no work exists.", ""]
+    for key in data.get("new_top5", []):
+        card = by_id[key]
+        lines.append(f"- [#{card['issue_number']}: {card['title']}]({card['issue_url']}) "
+                     f"— {card['kind']}; inspect the evidence before volunteering.")
+    lines += ["", "## All source-backed candidates and dispositions", ""]
     for c in data["candidates"]:
         title = c["title"].replace("\n", " ")
         lines += [
@@ -217,6 +256,9 @@ def markdown(data):
             f"- Signal: {c['kind']} — {c['claim_scope']}",
             f"- Required verification: {c['verification_needed']}",
             f"- Manual feedback state: {c['review_status']}",
+            f"- Opportunity state: **{c['opportunity_state']['status']}** "
+            f"({c['opportunity_state']['reason']})", 
+            f"- State evidence: {', '.join(c['opportunity_state']['evidence_urls'])}",
             f"- Suggested contact (not notified): {', '.join('@' + x for x in c['contacts']) or 'unknown'} "
             f"({c['contact_basis']})", f"- Stable ID: {c['id']}", "- Source excerpts:",
         ]
@@ -241,6 +283,7 @@ def main(argv=None):
     parser.add_argument("--feedback", default="results/opportunity_feedback.jsonl")
     parser.add_argument("--output", default="results")
     parser.add_argument("--seed", default=None)
+    parser.add_argument("--actor", default=None, help="GitHub login for personal follow-up detection")
     args = parser.parse_args(argv)
     try:
         case_data = json.loads(Path(args.impact_cases).read_text(encoding="utf-8"))
@@ -248,14 +291,15 @@ def main(argv=None):
         if len(excluded) != 10:
             raise ValueError("Expected original ten-case exclusion list")
         result = build(excluded=excluded, seed=args.seed,
-                       feedback=read_feedback(Path(args.feedback)))
+                       feedback=read_feedback(Path(args.feedback)), actor=args.actor)
         out = Path(args.output)
         out.mkdir(parents=True, exist_ok=True)
         (out / "discovery.json").write_text(
             json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
         (out / "DISCOVERY.md").write_text(markdown(result), encoding="utf-8")
-        print(f"Discovery: {len(result['candidates'])} review cards / {result['sampled']} issues")
+        print(f"Discovery: {len(result['candidates'])} review cards, "
+              f"{len(result['new_top5'])} new / {result['sampled']} issues")
         return 0
     except (OSError, ValueError, TypeError, KeyError, urllib.error.URLError) as exc:
         print(f"Discovery failed without publishing: {type(exc).__name__}: {exc}", file=sys.stderr)
