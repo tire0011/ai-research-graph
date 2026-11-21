@@ -19,7 +19,7 @@ python -m unittest discover -s tests -v
 
 GitHub Actions: [.github/workflows/european-ai-opportunities.yml](.github/workflows/european-ai-opportunities.yml), scheduled weekly or on manual invocation, stores JSON and Markdown as artifacts. There is no posting, no assignment, no issues created and no automatic source discovery; list additions must be reviewed and versioned.
 
-**Sampling limits:** at most 15 recently updated open issues per repo and 3 candidate checks each, so neither task recall nor 'no opportunities' conclusions are justified. Unknown PR context, missing comments and changed source material are never treated as confirmed new tasks. Next research gate: have a blinded reviewer compare the frozen shortlist against plain GitHub search for the same repositories and task criteria.
+**Sampling limits:** at most 15 recently updated open issues per repo and 3 candidate checks each, so neither task recall nor 'no opportunities' conclusions are justified. Unknown PR context, missing comments and changed source material are never treated as confirmed new tasks. Support-only questions and tasks with no updates for over 365 days also require human reconfirmation instead of being recommended as fresh contribution slots. Next research gate: have a blinded reviewer compare the frozen shortlist against plain GitHub search for the same repositories and task criteria.
 
 ## Contributor opportunity state tracker (2026-11-21)
 
