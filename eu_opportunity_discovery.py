@@ -18,6 +18,7 @@ from pathlib import Path
 
 from http_util import get_json as shared_get_json
 from opportunity_state import classify, related_pull_requests
+from opportunity_quality_review import annotate as annotate_quality, markdown as quality_markdown
 
 API = "https://api.github.com"
 REPO_RE = re.compile(r"^[\w.-]+/[\w.-]+$")
@@ -260,6 +261,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sources", default="eu_opportunity_sources.json")
     parser.add_argument("--output", default="results/european_ai")
+    parser.add_argument("--review-ledger", default=None,
+                        help="Optional source-pinned manual actionability review JSON")
     args = parser.parse_args(argv)
     try:
         config = json.loads(Path(args.sources).read_text(encoding="utf-8"))
@@ -269,6 +272,12 @@ def main(argv=None):
         (out / "opportunities.json").write_text(
             json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         (out / "OPPORTUNITIES.md").write_text(markdown(result), encoding="utf-8")
+        if args.review_ledger:
+            ledger = json.loads(Path(args.review_ledger).read_text(encoding="utf-8"))
+            reviewed = annotate_quality(result, ledger)
+            (out / "quality_review.json").write_text(
+                json.dumps(reviewed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            (out / "QUALITY_REVIEW.md").write_text(quality_markdown(reviewed), encoding="utf-8")
         print(f"EU AI: {result['sampled_issues']} sampled, {result['candidate_count']} "
               f"triaged, {len(result['new_top5'])} new, {len(result['errors'])} errors")
         return 0 if not result["errors"] else 2
