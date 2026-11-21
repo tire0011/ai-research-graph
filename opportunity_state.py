@@ -11,6 +11,7 @@ from urllib.parse import urlencode
 
 ISSUE_URL = re.compile(r"https://github\.com/([\w.-]+)/([\w.-]+)/issues/([1-9]\d*)")
 PR_API = re.compile(r"https://api\.github\.com/repos/([\w.-]+)/([\w.-]+)/pulls/([1-9]\d*)")
+PR_URL = re.compile(r"https://github\.com/([\w.-]+)/([\w.-]+)/pull/([1-9]\d*)")
 PAGE_SIZE = 100
 MAX_TIMELINE_PAGES = 3
 MAX_LINKED_PRS = 5
@@ -132,25 +133,38 @@ def classify(issue: dict, comments: list[dict], linked_prs: list[dict] | None,
     if actor and user in {login.casefold() for login in assigned}:
         return verdict("follow_up", "actor_assigned")
 
+    # GitHub timelines cross-reference ANY PR that mentions an issue URL.
+    # An analysis PR in another repository is not a fix or participation in
+    # the target repository. Keep such references in source evidence only.
+    same_repo_prs = []
     if linked_prs is not None:
         if not isinstance(linked_prs, list):
             raise ValueError("Invalid linked PRs")
+        issue_parts = ISSUE_URL.fullmatch(url)
+        assert issue_parts is not None
+        target_repo = tuple(p.casefold() for p in issue_parts.groups()[:2])
         for pr in linked_prs:
             if not isinstance(pr, dict) or pr.get("state") not in {"open", "closed"}:
                 raise ValueError("Invalid linked PR status")
-            if not isinstance(pr.get("url"), str) or not pr["url"].startswith("https://github.com/"):
+            pr_url = pr.get("url")
+            match = PR_URL.fullmatch(pr_url) if isinstance(pr_url, str) else None
+            if match is None:
                 raise ValueError("Invalid linked PR evidence")
+            source_repo = tuple(p.casefold() for p in match.groups()[:2])
+            if source_repo != target_repo:
+                continue
+            same_repo_prs.append(pr)
             if actor and isinstance(pr.get("author"), str) and pr["author"].casefold() == user:
-                return verdict("follow_up", "actor_cross_referenced_pr", [pr["url"]])
+                return verdict("follow_up", "actor_cross_referenced_pr", [pr_url])
 
     if validation_error or linked_prs is None:
         return verdict("needs_review", "pr_context_unavailable")
-    open_prs = [pr["url"] for pr in linked_prs if pr["state"] == "open"]
+    open_prs = [pr["url"] for pr in same_repo_prs if pr["state"] == "open"]
     if open_prs:
         return verdict("in_progress", "open_cross_referenced_pr_not_proof_of_fix", open_prs)
-    if linked_prs:
+    if same_repo_prs:
         return verdict("needs_review", "closed_cross_referenced_pr_not_proof_of_fix",
-                       [pr["url"] for pr in linked_prs])
+                       [pr["url"] for pr in same_repo_prs])
     if assigned:
         return verdict("in_progress", "issue_assigned_activity_unconfirmed")
     return verdict("new", "open_unassigned_no_observed_actor_or_pr_activity")
