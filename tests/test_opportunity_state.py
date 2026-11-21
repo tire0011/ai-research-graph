@@ -76,6 +76,35 @@ class StateSafetyTests(unittest.TestCase):
         self.assertEqual(result["evidence_urls"], [self.pr_url])
         self.assertIn("not_proof_of_fix", result["reason"])
 
+    def test_research_graph_pr_mention_is_not_work_on_judgearena_issue(self):
+        target = issue("OpenEuroLLM/JudgeArena", 24, creator="kargibora")
+        crossrepo_pr = {
+            "url": "https://github.com/tire0011/ai-research-graph/pull/51",
+            "state": "closed", "merged": True, "author": ACTOR,
+        }
+        result = status(target, prs=[crossrepo_pr])
+        self.assertEqual(result["status"], "new")
+        self.assertNotEqual(result["reason"], "actor_cross_referenced_pr")
+
+    def test_research_graph_pr_mention_is_not_work_on_post_training_issue(self):
+        target = issue("OpenEuroLLM/post-training", 35, creator="maintainer")
+        crossrepo_pr = {
+            "url": "https://github.com/tire0011/ai-research-graph/pull/52",
+            "state": "closed", "merged": True, "author": ACTOR,
+        }
+        self.assertEqual(status(target, prs=[crossrepo_pr])["status"], "new")
+
+    def test_cross_repo_open_pr_cannot_imply_work_in_progress(self):
+        pr = {"url": "https://github.com/other-org/other-repo/pull/5",
+              "state": "open", "author": "other", "merged": False}
+        self.assertEqual(status(self.task, prs=[pr])["status"], "new")
+
+    def test_malformed_cross_reference_is_not_ignored(self):
+        pr = {"url": "https://github.com/other-org/other-repo/issues/5",
+              "state": "open", "author": "other"}
+        with self.assertRaisesRegex(ValueError, "Invalid linked PR evidence"):
+            status(self.task, prs=[pr])
+
     def test_closed_or_merged_pr_does_not_prove_issue_fixed(self):
         pr = {"url": self.pr_url, "state": "closed", "author": "other", "merged": True}
         self.assertEqual(status(self.task, prs=[pr])["status"], "needs_review")
