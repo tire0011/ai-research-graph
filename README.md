@@ -12,6 +12,8 @@ An [eight-issue non-blinded review](studies/eu_opportunity_quality_20261121/REVI
 
 A [second, separately evaluated review](studies/eu_opportunity_quality_20261121/SECOND_REVIEW.md) covers five more candidates from the 19-repository pilot. The initial comparison remains frozen and no overall graph ranking advantage is asserted. Additional review cohorts are append-only in the ledger and checked against current sources.
 
+A [subsequent code-level recheck](studies/eu_opportunity_quality_20261121/CODE_RECHECK.md) showed that the earlier logging suggestion was partly implemented even though its Issue remained open. The original comparison is preserved as historical evidence; the current quality assessment additionally verifies the pinned repository code commit, and abstains if it changes.
+
 The read-only [source-pinned ledger](studies/eu_opportunity_quality_20261121/reviews.json) is used by [opportunity_quality_review.py](opportunity_quality_review.py). It adds a separate quality report without changing historical source evidence or tuning ranking weights on inspected examples. Issue update timestamps **and comment counts** invalidate stale reviews; unknown issues remain **unreviewed**, never automatically marked ready. Contributor permissions and human contact are unchanged.
 
 ```powershell
