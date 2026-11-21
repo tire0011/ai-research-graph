@@ -64,7 +64,7 @@ class FrozenComparisonTests(unittest.TestCase):
         sample["all_reviewed"].extend(new_cards)
         result = q.annotate(sample, ledger)
         self.assertEqual(result["additional_review_cohorts"], 1)
-        self.assertEqual(len(result["quality_shortlist"]), 2)
+        self.assertEqual(len(result["quality_shortlist"]), 1)
         self.assertTrue(any(item["issue_url"].endswith("/JudgeArena/issues/24")
                             for item in result["quality_shortlist"]))
         self.assertEqual(result["comparison"]["unique_issues_reviewed"], 8)
@@ -110,10 +110,10 @@ class CurrentQueueTests(unittest.TestCase):
     def test_plausibly_scoped_task_is_still_not_maintainer_confirmed(self):
         ledger, sample = fixture()
         result = q.annotate(sample, ledger)
-        self.assertEqual(len(result["quality_shortlist"]), 1)
-        self.assertTrue(result["quality_shortlist"][0]["issue_url"].endswith(
-            "/OpenEuroLLM/post-training/issues/35"))
-        self.assertEqual(result["quality_shortlist"][0]["quality_review"]["tier"], 2)
+        self.assertEqual(result["quality_shortlist"], [])
+        reviewed = next(c for c in result["annotated_candidates"]
+                        if c["issue_url"].endswith("/OpenEuroLLM/post-training/issues/35"))
+        self.assertEqual(reviewed["quality_review"]["status"], "code_revision_unverified")
         self.assertEqual(result["comparison"]["graph_heuristic_top5"]["maintainer_confirmed"], 0)
         self.assertIn("non-blinded", q.markdown(result))
 
@@ -151,6 +151,47 @@ class CurrentQueueTests(unittest.TestCase):
         reviewed = next(c for c in result["annotated_candidates"]
                         if c["issue_url"] == target["issue_url"])
         self.assertEqual(reviewed["quality_review"]["status"], "state_supersedes_review")
+
+    def test_pinned_code_head_supersedes_original_frozen_rating(self):
+        ledger, sample = fixture()
+        pin = ledger["code_rechecks"][0]
+        result = q.annotate(sample, ledger,
+                            code_heads={pin["code_repo"]: pin["code_head_sha"]})
+        entry = next(c for c in result["annotated_candidates"]
+                     if c["issue_url"] == pin["issue_url"])
+        self.assertEqual(entry["quality_review"]["status"], "manual_code_review_current")
+        self.assertEqual(entry["quality_review"]["tier"], 1)
+        self.assertEqual(result["quality_shortlist"], [])
+        # Original non-blinded comparison remains historical, not overwritten.
+        self.assertEqual(result["comparison"]["same_pool_title_only_top5"]
+                         ["plausible_or_better"], 1)
+
+    def test_changed_code_head_blocks_old_manual_recommendation(self):
+        ledger, sample = fixture()
+        pin = ledger["code_rechecks"][0]
+        result = q.annotate(sample, ledger, code_heads={pin["code_repo"]: "0" * 40})
+        entry = next(c for c in result["annotated_candidates"]
+                     if c["issue_url"] == pin["issue_url"])
+        self.assertEqual(entry["quality_review"]["status"], "code_revision_unverified")
+        self.assertIn(entry, result["new_needing_human_review"])
+
+    def test_live_code_head_fetch_can_fail_without_claiming_readiness(self):
+        ledger, sample = fixture()
+        pin = ledger["code_rechecks"][0]
+        def good(url):
+            self.assertIn(pin["code_repo"], url)
+            return [{"sha": pin["code_head_sha"]}]
+        self.assertEqual(q.fetch_code_heads(ledger, good),
+                         {pin["code_repo"]: pin["code_head_sha"]})
+        def failing(_):
+            raise OSError("temporary network error")
+        self.assertEqual(q.fetch_code_heads(ledger, failing), {})
+
+    def test_code_recheck_requires_pinned_repository_commit(self):
+        ledger, _ = fixture()
+        ledger["code_rechecks"][0]["code_head_sha"] = "not-a-real-sha"
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
 
     def test_unreviewed_issue_is_not_implicitly_approved(self):
         ledger, sample = fixture()
