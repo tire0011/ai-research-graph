@@ -41,6 +41,8 @@ class FakeGitHub:
         if path.endswith("/issues"):
             page = int(query["page"][0])
             return [self.issues[i] for i in range(1, 81)] if page == 1 else []
+        if path.endswith("/timeline"):
+            return []  # no cross-referenced PRs in the offline sample
         if path.endswith("/comments/777"):
             result = dict(self.comments[21][0])
             if self.corrupt_comment_on_reread:
@@ -98,6 +100,43 @@ class DiscoveryTests(unittest.TestCase):
                             for e in c["evidence"]))
         self.assertIn("No messages were sent", od.markdown(result))
         self.assertTrue(any("/comments/777" in url for url in gh.calls))
+
+    def test_personal_queue_excludes_previously_touched_and_assigned_work(self):
+        gh = FakeGitHub()
+        # The live status check is used only for signal-bearing tasks.
+        result = od.build(gh, seed="2026-W46", actor="Reviewer")
+        self.assertEqual(result["state_actor"], "Reviewer")
+        self.assertEqual(result["new_top5"], [])
+        self.assertTrue(all(c["opportunity_state"]["status"] == "follow_up"
+                            for c in result["candidates"]))
+        self.assertIn("Up to five new", od.markdown(result))
+        self.assertTrue(any("/timeline?" in url for url in gh.calls))
+
+    def test_new_queue_is_issue_deduplicated_and_capped(self):
+        gh = FakeGitHub()
+        for issue in gh.issues.values():
+            issue["assignees"] = []
+        result = od.build(gh, seed="2026-W46", actor="external-dev")
+        new_ids = result["new_top5"]
+        self.assertLessEqual(len(new_ids), 5)
+        self.assertEqual(len(new_ids), len(set(new_ids)))
+        self.assertTrue(all(next(c for c in result["candidates"] if c["id"] == key)
+                            ["opportunity_state"]["status"] == "new" for key in new_ids))
+        self.assertEqual(len(new_ids), len(result["candidates"]))
+
+    def test_feedback_on_one_signal_suppresses_others_for_same_issue(self):
+        gh = FakeGitHub()
+        gh.issues[21]["body"] = "This experiment was 12% faster."
+        key = f"github:{od.REPO}#21:reported_memory_issue"
+        result = od.build(gh, seed="2026-W46", actor="external-dev",
+                          feedback={key: "reviewed"})
+        cards = [c for c in result["candidates"] if c["issue_number"] == 21]
+        self.assertEqual({c["kind"] for c in cards},
+                         {"reported_memory_issue", "performance_mention"})
+        self.assertTrue(all(c["opportunity_state"]["status"] == "follow_up"
+                            for c in cards))
+        self.assertFalse(any(key in result["new_top5"] for key in
+                             (c["id"] for c in cards)))
 
     def test_edited_issue_fails_closed(self):
         gh = FakeGitHub()

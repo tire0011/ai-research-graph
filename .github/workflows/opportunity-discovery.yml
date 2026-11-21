@@ -8,16 +8,20 @@ on:
     branches: [main]
     paths:
       - opportunity_discovery.py
+      - opportunity_state.py
       - http_util.py
       - opportunity_feedback.py
       - tests/test_opportunity_discovery.py
+      - tests/test_opportunity_state.py
       - .github/workflows/opportunity-discovery.yml
   pull_request:
     paths:
       - opportunity_discovery.py
+      - opportunity_state.py
       - http_util.py
       - opportunity_feedback.py
       - tests/test_opportunity_discovery.py
+      - tests/test_opportunity_state.py
       - .github/workflows/opportunity-discovery.yml
 
 permissions:
@@ -56,7 +60,7 @@ jobs:
       - name: Sample and independently verify 50 live open issues
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python opportunity_discovery.py --impact-cases impact_cases.json --feedback results/opportunity_feedback.jsonl --output results
+        run: python opportunity_discovery.py --impact-cases impact_cases.json --feedback results/opportunity_feedback.jsonl --output results --actor tire0011
       - name: Upload results and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
