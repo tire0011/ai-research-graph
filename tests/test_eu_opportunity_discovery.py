@@ -153,6 +153,47 @@ class CrossProjectTests(unittest.TestCase):
         self.assertTrue(any(c["state"]["status"] == "needs_review"
                             for c in result["all_reviewed"]))
 
+    def test_old_unassigned_issues_require_fresh_confirmation(self):
+        gh = GitHubFixture()
+        for number in range(1, 6):
+            gh.data[("kyutai-labs/moshi", number)]["updated_at"] = (
+                "2024-01-01T00:00:00Z")
+        result = d.build(registry(), gh)
+        selected = [c for c in result["all_reviewed"]
+                    if c["repository"] == "kyutai-labs/moshi"]
+        self.assertTrue(selected)
+        self.assertTrue(all(c["state"]["status"] == "needs_review"
+                            for c in selected))
+        self.assertTrue(all(c["state"]["reason"] ==
+                            "stale_issue_requires_maintainer_reconfirmation"
+                            for c in selected))
+
+    def test_support_questions_are_not_contribution_tasks(self):
+        gh = GitHubFixture()
+        for number in range(1, 6):
+            gh.data[("kyutai-labs/moshi", number)]["labels"] = [
+                {"name": "question"}]
+        result = d.build(registry(), gh)
+        selected = [c for c in result["all_reviewed"]
+                    if c["repository"] == "kyutai-labs/moshi"]
+        self.assertTrue(selected)
+        self.assertTrue(all(c["state"]["reason"] ==
+                            "question_not_confirmed_implementation_task"
+                            for c in selected))
+        self.assertFalse(any(c["repository"] == "kyutai-labs/moshi"
+                             for c in result["new_top5"]))
+
+    def test_issue_dates_must_be_timezone_aware(self):
+        import datetime as dt
+        with self.assertRaises(ValueError):
+            d.is_stale("2026-11-21T12:00:00")
+        self.assertFalse(d.is_stale(
+            "2026-11-20T12:00:00Z",
+            now=dt.datetime(2026, 11, 21, tzinfo=dt.timezone.utc)))
+        self.assertTrue(d.is_stale(
+            "2024-01-01T00:00:00Z",
+            now=dt.datetime(2026, 11, 21, tzinfo=dt.timezone.utc)))
+
     def test_no_writes_or_notifications(self):
         gh = GitHubFixture()
         d.build(registry(), gh)
