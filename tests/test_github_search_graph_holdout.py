@@ -35,6 +35,7 @@ class API:
         self.blocked_issue = None
         self.prior_work_issue = None
         self.assigned_issue = None
+        self.comment_threads = {}
 
         for k, plan in enumerate(s.search_queries(cfg)):
             repo = plan["repositories"][0]
@@ -73,7 +74,9 @@ class API:
                 raise OSError("rate limit")
             return []
         if parts.path.endswith("/comments"):
-            return []
+            values = parts.path.split("/")
+            key = f"https://github.com/{values[2]}/{values[3]}/issues/{values[5]}"
+            return copy.deepcopy(self.comment_threads.get(key, []))
         if "/contents/" in parts.path:
             return {"type": "file", "sha": "b" * 40,
                     "html_url": "https://github.com/" + (
@@ -193,6 +196,26 @@ class StudyContracts(unittest.TestCase):
         self.assertEqual(result["github_search_baseline_top5"][0], first)
         self.assertNotIn(first, result["graph_enriched_top5"])
         self.assertTrue(result["all_inspected"][0]["resource_fit"]["reasons"])
+
+    def test_open_issue_with_explicit_collaborator_refusal_is_not_new_graph_work(self):
+        cfg, registry, ledger = setup()
+        gh = API(cfg)
+        first = list(gh.issues)[0]
+        gh.issues[first]["comments"] = 1
+        gh.comment_threads[first] = [{
+            "html_url": first + "#issuecomment-1",
+            "user": {"login": "repo-maintainer"},
+            "author_association": "COLLABORATOR",
+            "body": "I don't think we'll address it. Use the Python API instead.",
+        }]
+        result = s.build(cfg, registry, ledger, gh, now=NOW)
+        self.assertEqual(result["deeply_verified"], 8)
+        selected = next(x for x in result["all_inspected"]
+                        if x["issue_url"] == first)
+        self.assertEqual(selected["state"]["reason"],
+                         "maintainer_explicitly_declined_requested_work")
+        self.assertNotIn(first, result["graph_enriched_top5"])
+        self.assertEqual(result["github_search_baseline_top5"][0], first)
 
     def test_independent_review_must_be_complete_and_method_blind(self):
         cfg, registry, ledger = setup()
