@@ -17,6 +17,14 @@ MAX_TIMELINE_PAGES = 3
 MAX_LINKED_PRS = 5
 
 FOLLOW_UP_FEEDBACK = {"reviewed", "proposal_prepared", "published", "response_received"}
+MAINTAINER_ASSOCIATIONS = {"OWNER", "MEMBER", "COLLABORATOR"}
+# Deliberately narrow: no keyword-only "wontfix" inference from arbitrary users.
+MAINTAINER_DECLINE = re.compile(
+    r"\b(?:i\s+don['’]t\s+think\s+we['’]ll|"
+    r"we\s+(?:won['’]t|will\s+not|don['’]t\s+plan\s+to|do\s+not\s+plan\s+to))"
+    r"\s+(?:address|fix|implement|support|accept|merge|add)\b", re.I
+)
+
 
 
 def related_pull_requests(fetch, issue_url: str) -> list[dict]:
@@ -125,6 +133,18 @@ def classify(issue: dict, comments: list[dict], linked_prs: list[dict] | None,
             evidence = comment.get("html_url")
             return verdict("follow_up", "actor_commented",
                            [evidence] if isinstance(evidence, str) else [url])
+
+    # An explicit maintainer decision overrides a merely open issue.
+    # Do not treat comment text from random users as maintainer intent.
+    for comment in comments:
+        association = comment.get("author_association")
+        statement = comment.get("body")
+        if (association in MAINTAINER_ASSOCIATIONS and isinstance(statement, str)
+                and MAINTAINER_DECLINE.search(statement)):
+            proof = comment.get("html_url")
+            return verdict("needs_review", "maintainer_explicitly_declined_requested_work",
+                           [proof] if isinstance(proof, str) and proof.startswith(
+                               "https://github.com/") else [url])
 
     assigned = [
         item.get("login") for item in issue.get("assignees", [])
