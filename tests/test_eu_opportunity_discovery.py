@@ -70,6 +70,31 @@ class GitHubFixture:
         raise ValueError(f"Unexpected URL: {url}")
 
 
+class ReviewedSourceExpansionTests(unittest.TestCase):
+    def test_source_registry_includes_multiple_european_ai_ecosystems(self):
+        import json
+        from pathlib import Path
+        config = json.loads((Path(__file__).resolve().parents[1] /
+                             "eu_opportunity_sources.json").read_text(encoding="utf-8"))
+        d.validate(config)
+        repos = {row["repo"] for row in config["repositories"]}
+        expected = {
+            "Helsinki-NLP/OpusFilter",
+            "Helsinki-NLP/Tatoeba-Challenge",
+            "Pleias/Pleias-RAG-Library",
+            "kyutai-labs/hibiki",
+            "OpenEuroLLM/JudgeArena",
+            "OpenEuroLLM/oellm-autoexp",
+        }
+        self.assertTrue(expected.issubset(repos))
+        self.assertEqual(len(config["repositories"]), 19)
+        self.assertGreaterEqual(len({repo.split("/")[0] for repo in repos}), 8)
+        self.assertTrue(all(item.get("repository_url") ==
+                            "https://github.com/" + item["repo"]
+                            for item in config["repositories"]
+                            if item["repo"] in expected))
+
+
 class RegistryTests(unittest.TestCase):
     def test_multi_org_registry_required(self):
         cfg = registry()
