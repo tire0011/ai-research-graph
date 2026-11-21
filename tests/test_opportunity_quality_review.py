@@ -18,6 +18,7 @@ def fixture():
         {
             "issue_url": row["issue_url"],
             "updated_at": row["source_updated_at"],
+            "comment_count": row["source_comment_count"],
             "repository": row["issue_url"].split("/")[3] + "/" + row["issue_url"].split("/")[4],
             "issue_number": int(row["issue_url"].rsplit("/", 1)[-1]),
             "title": f"Historical task {row['issue_url'].rsplit('/', 1)[-1]}",
