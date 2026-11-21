@@ -3,7 +3,7 @@
   "status": "review_only",
   "seed": "2026-W47",
   "repo": "OpenEuroLLM/Taskboard",
-  "generated_at_utc": "2026-11-19T21:32:25.851879+00:00",
+  "generated_at_utc": "2026-11-21T09:25:55.782516+00:00",
   "population_open": 213,
   "excluded_preselected": [
     207,
@@ -98,12 +98,25 @@
       ],
       "contact_basis": "github_assignee",
       "review_status": "new",
+      "opportunity_state": {
+        "status": "in_progress",
+        "reason": "issue_assigned_activity_unconfirmed",
+        "evidence_urls": [
+          "https://github.com/OpenEuroLLM/Taskboard/issues/55"
+        ]
+      },
+      "state_check_error": null,
       "communication_status": "human_approval_required",
       "sent": false
     }
   ],
+  "state_actor": "tire0011",
+  "new_top5": [],
+  "state_counts": {
+    "in_progress": 1
+  },
   "signal_counts": {
     "performance_mention": 1
   },
-  "limitations": "Deterministic, weekly rotating 50-issue sample of currently open tasks; heuristic text triage only, not verified impact or a project-wide ranking. Human review required before communication; no posts sent."
+  "limitations": "Deterministic, weekly rotating 50-issue sample of currently open tasks; heuristic text triage only, not verified impact or a project-wide ranking. Cross-referenced PRs and assignees indicate possible activity, not a fix. Only a bounded timeline is checked; absence of a PR is not proof none exists. New means unclaimed in observed public evidence, not maintainer-approved. Human review required before communication; no posts sent."
 }
