@@ -99,6 +99,17 @@ class CurrentQueueTests(unittest.TestCase):
         self.assertEqual(len(sample["all_reviewed"]), 8)
         self.assertNotIn("quality_review", target)
 
+    def test_added_comment_invalidates_review_even_if_update_timestamp_unchanged(self):
+        ledger, sample = fixture()
+        target = next(c for c in sample["all_reviewed"]
+                      if c["issue_url"].endswith("/OpenEuroLLM/post-training/issues/35"))
+        target["comment_count"] += 1
+        result = q.annotate(sample, ledger)
+        self.assertEqual(result["quality_shortlist"], [])
+        reviewed = next(c for c in result["annotated_candidates"]
+                        if c["issue_url"] == target["issue_url"])
+        self.assertEqual(reviewed["quality_review"]["status"], "stale_review")
+
     def test_live_followup_status_supersedes_manual_positive(self):
         ledger, sample = fixture()
         target = next(c for c in sample["all_reviewed"]
