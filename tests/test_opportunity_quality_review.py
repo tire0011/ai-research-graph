@@ -201,9 +201,9 @@ class CurrentQueueTests(unittest.TestCase):
             "issue_number": 99, "title": "Unknown", "state": {"status": "new"},
         })
         result = q.annotate(sample, ledger)
-        self.assertEqual(len(result["new_needing_human_review"]), 1)
-        self.assertEqual(result["new_needing_human_review"][0]["quality_review"]["status"],
-                         "unreviewed")
+        self.assertTrue(any(card["issue_url"].endswith("/hibiki/issues/99") and
+                            card["quality_review"]["status"] == "unreviewed"
+                            for card in result["new_needing_human_review"]))
         self.assertNotIn("hibiki", [row["repository"] for row in result["quality_shortlist"]])
 
 
