@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "title": "Unblinded manual review of five graph and five title-baseline suggestions",
+  "review_date": "2026-11-21",
+  "frozen_run_url": "https://github.com/tire0011/ai-research-graph/actions/runs/44890820839",
+  "source_scope": "8 unique issues across graph top-5 and title-only same-pool baseline top-5; all 8 rechecked via original issue and available comments",
+  "reviewer": "assistant, non-blinded; no maintainer confirmation",
+  "tier_legend": {
+    "0": "Not a new unclaimed coding opportunity",
+    "1": "Related work, but clarification, prior solution or specialized resources prevent recommending as ready",
+    "2": "Plausible scoped coding contribution; not maintainer-confirmed",
+    "3": "Maintainer explicitly welcomes contribution with reproducible acceptance criteria"
+  },
+  "graph_top5": [
+    "https://github.com/kyutai-labs/pocket-tts/issues/410",
+    "https://github.com/kyutai-labs/pocket-tts/issues/345",
+    "https://github.com/LAION-AI/CLAP/issues/189",
+    "https://github.com/LAION-AI/CLIP_benchmark/issues/147",
+    "https://github.com/OpenEuroLLM/Taskboard/issues/451"
+  ],
+  "title_baseline_top5": [
+    "https://github.com/LAION-AI/CLIP_benchmark/issues/147",
+    "https://github.com/OpenEuroLLM/oellm-eval/issues/165",
+    "https://github.com/OpenEuroLLM/post-training/issues/35",
+    "https://github.com/openaire/iis/issues/1602",
+    "https://github.com/LAION-AI/CLAP/issues/189"
+  ],
+  "reviews": [
+    {
+      "issue_url": "https://github.com/kyutai-labs/pocket-tts/issues/410",
+      "source_updated_at": "2026-11-05T13:43:06Z",
+      "verdict": "needs_maintainer_direction",
+      "contribution_fit_tier": 1,
+      "evidence_urls": [
+        "https://github.com/kyutai-labs/pocket-tts/issues/410"
+      ],
+      "explanation": "Reproducible Spanish digit regression; author explicitly asks about a retrain or a separate normalizer. No accepted code task or ownership established."
+    },
+    {
+      "issue_url": "https://github.com/kyutai-labs/pocket-tts/issues/345",
+      "source_updated_at": "2026-10-12T09:44:14Z",
+      "verdict": "existing_solution_offered",
+      "contribution_fit_tier": 0,
+      "evidence_urls": [
+        "https://github.com/kyutai-labs/pocket-tts/issues/345"
+      ],
+      "explanation": "Issue author reports completed ONNX exports and validation pipeline, offers a PR; a new developer should not duplicate these exports."
+    },
+    {
+      "issue_url": "https://github.com/LAION-AI/CLAP/issues/189",
+      "source_updated_at": "2026-09-14T14:04:23Z",
+      "verdict": "maintainer_metadata_request",
+      "contribution_fit_tier": 0,
+      "evidence_urls": [
+        "https://github.com/LAION-AI/CLAP/issues/189"
+      ],
+      "explanation": "Request to project maintainers to verify reported Papers with Code evaluation metadata; not an independently scoped coding task."
+    },
+    {
+      "issue_url": "https://github.com/LAION-AI/CLIP_benchmark/issues/147",
+      "source_updated_at": "2026-01-22T11:21:21Z",
+      "verdict": "reporter_has_proposed_fix",
+      "contribution_fit_tier": 1,
+      "evidence_urls": [
+        "https://github.com/LAION-AI/CLIP_benchmark/issues/147"
+      ],
+      "explanation": "Issue reporter already describes a squeeze-based fix and offers to open a PR; avoid presenting the same fix as unclaimed work."
+    },
+    {
+      "issue_url": "https://github.com/OpenEuroLLM/Taskboard/issues/451",
+      "source_updated_at": "2026-11-17T09:08:47Z",
+      "verdict": "experiment_already_queued",
+      "contribution_fit_tier": 0,
+      "evidence_urls": [
+        "https://github.com/OpenEuroLLM/Taskboard/issues/451"
+      ],
+      "explanation": "Maintainer comment says tokenization of all four ablations is complete and training jobs are queued on MN5; active work requiring HPC."
+    },
+    {
+      "issue_url": "https://github.com/OpenEuroLLM/oellm-eval/issues/165",
+      "source_updated_at": "2026-11-02T16:33:09Z",
+      "verdict": "needs_implementation_scope",
+      "contribution_fit_tier": 1,
+      "evidence_urls": [
+        "https://github.com/OpenEuroLLM/oellm-eval/issues/165"
+      ],
+      "explanation": "Concrete missing evalchemy sample logging; related backend may need changes. No local-only acceptance test or maintainer endorsement verified."
+    },
+    {
+      "issue_url": "https://github.com/OpenEuroLLM/post-training/issues/35",
+      "source_updated_at": "2026-06-08T13:30:36Z",
+      "verdict": "plausible_small_contribution",
+      "contribution_fit_tier": 2,
+      "evidence_urls": [
+        "https://github.com/OpenEuroLLM/post-training/issues/35"
+      ],
+      "explanation": "Three concrete logging deliverables (copy YAML, log config, rank-0 logging). Open unassigned, likely code-and-tests review without training runs; maintainer approval still unknown."
+    },
+    {
+      "issue_url": "https://github.com/openaire/iis/issues/1602",
+      "source_updated_at": "2026-06-01T10:21:04Z",
+      "verdict": "requires_specialized_resources",
+      "contribution_fit_tier": 1,
+      "evidence_urls": [
+        "https://github.com/openaire/iis/issues/1602"
+      ],
+      "explanation": "Replace Airflow transformer integration tests with Spark unit tests; substantial JVM/Spark/IIS migration and environment knowledge, not a casual coding task."
+    }
+  ]
+}
