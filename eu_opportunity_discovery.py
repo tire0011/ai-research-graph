@@ -197,6 +197,7 @@ def build(config, fetch=get_json, *, now=None):
             records.append({
                 "repository": repo, "area": source["area"], "issue_number": item["number"],
                 "issue_url": url, "title": item["title"], "updated_at": item["updated_at"],
+                "comment_count": item.get("comments"),
                 "score": preliminary_score(item, now=now), "score_meaning": "rule_based_triage_not_impact",
                 "labels": labels, "assignees": [v.get("login") for v in item.get("assignees", [])
                                                  if isinstance(v, dict)],
