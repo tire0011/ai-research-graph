@@ -178,12 +178,25 @@ def build(fetch=get_json, *, excluded=None, seed=None, feedback=None, actor=None
                 pr_context = related_pull_requests(fetch, reread["html_url"])
             except (ValueError, TypeError, KeyError, urllib.error.URLError, TimeoutError) as exc:
                 pr_error = f"{type(exc).__name__}: {exc}"
+        # Feedback was originally signal-level. Any prior intervention on the
+        # same issue must suppress all its other signal cards from the new queue.
+        issue_prefix = f"github:{REPO}#{number}:"
+        issue_feedback = {value for key, value in feedback.items()
+                          if key.startswith(issue_prefix)}
+        if "resolved" in issue_feedback:
+            issue_feedback_state = "resolved"
+        elif issue_feedback.intersection({"reviewed", "proposal_prepared", "published", "response_received"}):
+            issue_feedback_state = "reviewed"
+        elif "dismissed" in issue_feedback:
+            issue_feedback_state = "dismissed"
+        else:
+            issue_feedback_state = "new"
         for kind, proofs in sorted(signals.items()):
             for proof in proofs:
                 verify_source(reread, proof, fetch)
             key = f"github:{REPO}#{number}:{kind}"
             state = classify(reread, comments, pr_context, actor=actor,
-                             feedback_state=feedback.get(key, "new"),
+                             feedback_state=issue_feedback_state,
                              validation_error=pr_error)
             cards.append({
                 "id": key, "issue_number": number, "title": reread.get("title") or "",
@@ -196,6 +209,7 @@ def build(fetch=get_json, *, excluded=None, seed=None, feedback=None, actor=None
                 "contacts": contacts, "contact_basis": basis,
                 "review_status": feedback.get(key, "new"),
                 "opportunity_state": state,
+                "state_check_error": pr_error,
                 "communication_status": "human_approval_required", "sent": False,
             })
     cards.sort(key=lambda c: (c["issue_number"], c["kind"]))
@@ -259,6 +273,8 @@ def markdown(data):
             f"- Opportunity state: **{c['opportunity_state']['status']}** "
             f"({c['opportunity_state']['reason']})", 
             f"- State evidence: {', '.join(c['opportunity_state']['evidence_urls'])}",
+            *( [f"- State check unavailable: {c['state_check_error']}"]
+               if c.get("state_check_error") else [] ),
             f"- Suggested contact (not notified): {', '.join('@' + x for x in c['contacts']) or 'unknown'} "
             f"({c['contact_basis']})", f"- Stable ID: {c['id']}", "- Source excerpts:",
         ]
