@@ -8,11 +8,15 @@ This code deliberately does not learn weights from the small reviewed cohort.
 from __future__ import annotations
 
 import re
+import urllib.error
 from collections import Counter
 
 URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/issues/[1-9]\d*$")
 VERDICT = re.compile(r"^[a-z][a-z0-9_]{2,63}$")
 RUN_URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/actions/runs/[1-9]\d*$")
+
+SHA = re.compile(r"^[0-9a-f]{40}$")
+REPO = re.compile(r"^[\w.-]+/[\w.-]+$")
 
 
 def review_rows(ledger: dict) -> list[dict]:
@@ -85,6 +89,54 @@ def validate(ledger: dict) -> None:
                        or not link.startswith("https://github.com/")
                        for link in item["evidence_urls"])):
             raise ValueError("Review missing source evidence or snapshot")
+
+
+    rechecks = ledger.get("code_rechecks", [])
+    if not isinstance(rechecks, list) or len(rechecks) > 10:
+        raise ValueError("Invalid number of source-code rechecks")
+    rechecked = set()
+    for correction in rechecks:
+        if not isinstance(correction, dict):
+            raise ValueError("Invalid code recheck")
+        url = correction.get("issue_url")
+        if not isinstance(url, str) or url not in seen or url in rechecked:
+            raise ValueError("Code recheck must reference a unique reviewed issue")
+        rechecked.add(url)
+        repo, sha = correction.get("code_repo"), correction.get("code_head_sha")
+        tier = correction.get("contribution_fit_tier")
+        verdict = correction.get("verdict")
+        evidence = correction.get("evidence_urls")
+        if (not isinstance(repo, str) or not REPO.fullmatch(repo)
+                or not isinstance(sha, str) or not SHA.fullmatch(sha)
+                or not isinstance(verdict, str) or not VERDICT.fullmatch(verdict)
+                or type(tier) is not int or tier not in (0, 1, 2)
+                or not isinstance(evidence, list) or url not in evidence
+                or not any(f"/blob/{sha}/" in link for link in evidence
+                           if isinstance(link, str))
+                or not correction.get("explanation")
+                or not isinstance(correction.get("issue_updated_at"), str)
+                or type(correction.get("issue_comment_count")) is not int):
+            raise ValueError("Code recheck missing source evidence or valid tier")
+
+
+def fetch_code_heads(ledger: dict, fetch) -> dict[str, str]:
+    """Fetch default-branch HEAD for code-pinned reviews; fail closed."""
+    validate(ledger)
+    found = {}
+    for row in ledger.get("code_rechecks", []):
+        repo = row["code_repo"]
+        if repo in found:
+            continue
+        try:
+            commits = fetch(f"https://api.github.com/repos/{repo}/commits?per_page=1")
+            if (isinstance(commits, list) and commits
+                    and isinstance(commits[0], dict)
+                    and isinstance(commits[0].get("sha"), str)
+                    and SHA.fullmatch(commits[0]["sha"])):
+                found[repo] = commits[0]["sha"]
+        except (ValueError, TypeError, KeyError, OSError, urllib.error.URLError, TimeoutError):
+            pass
+    return found
 
 
 def frozen_comparison(ledger: dict) -> dict:
