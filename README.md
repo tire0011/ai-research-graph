@@ -10,6 +10,8 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 An [eight-issue non-blinded review](studies/eu_opportunity_quality_20261121/REVIEW.md) evaluated the initial cross-project pilot's five heuristic suggestions against the five title-only same-pool suggestions. **No heuristic top-five item was independently confirmed as a new scoped coding task.** The title-only baseline contained one plausible but *not maintainer-confirmed* coding opportunity; the review is too small and non-blind to infer a general performance difference.
 
+A [second, separately evaluated review](studies/eu_opportunity_quality_20261121/SECOND_REVIEW.md) covers five more candidates from the 19-repository pilot. The initial comparison remains frozen and no overall graph ranking advantage is asserted. Additional review cohorts are append-only in the ledger and checked against current sources.
+
 The read-only [source-pinned ledger](studies/eu_opportunity_quality_20261121/reviews.json) is used by [opportunity_quality_review.py](opportunity_quality_review.py). It adds a separate quality report without changing historical source evidence or tuning ranking weights on inspected examples. Issue update timestamps **and comment counts** invalidate stale reviews; unknown issues remain **unreviewed**, never automatically marked ready. Contributor permissions and human contact are unchanged.
 
 ```powershell
