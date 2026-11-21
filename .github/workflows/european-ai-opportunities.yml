@@ -9,17 +9,23 @@ on:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - opportunity_quality_review.py
+      - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
       - http_util.py
       - tests/test_eu_opportunity_discovery.py
+      - tests/test_opportunity_quality_review.py
       - .github/workflows/european-ai-opportunities.yml
   pull_request:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - opportunity_quality_review.py
+      - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
       - http_util.py
       - tests/test_eu_opportunity_discovery.py
+      - tests/test_opportunity_quality_review.py
       - .github/workflows/european-ai-opportunities.yml
 
 permissions:
@@ -50,7 +56,7 @@ jobs:
       - name: Read-only EU open AI issue review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai
+        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json
       - name: Preserve evidence and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
