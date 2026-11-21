@@ -41,6 +41,7 @@ class GitHubFixture:
         self.data[("openaire/iis", 1)]["comments"] = 1
         self.data[("openaire/iis", 1)]["assignees"] = []
         self.data[("openaire/iis", 2)]["assignees"] = [{"login": "someone"}]
+        self.data[("openaire/iis", 2)]["labels"] = [{"name": "help wanted"}]
         self.comments = {
             ("openaire/iis", 1): [{
                 "html_url": "https://github.com/openaire/iis/issues/1#issuecomment-5",
