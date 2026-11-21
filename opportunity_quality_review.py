@@ -11,17 +11,16 @@ import re
 from collections import Counter
 
 URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/issues/[1-9]\d*$")
-DECISIONS = {
-    "needs_maintainer_direction",
-    "existing_solution_offered",
-    "maintainer_metadata_request",
-    "reporter_has_proposed_fix",
-    "experiment_already_queued",
-    "needs_implementation_scope",
-    "plausible_small_contribution",
-    "requires_specialized_resources",
-    "maintainer_confirmed_contribution",
-}
+VERDICT = re.compile(r"^[a-z][a-z0-9_]{2,63}$")
+RUN_URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/actions/runs/[1-9]\d*$")
+
+
+def review_rows(ledger: dict) -> list[dict]:
+    """Historical comparison remains frozen; later cohorts are additive."""
+    rows = list(ledger["reviews"])
+    for cohort in ledger.get("additional_cohorts", []):
+        rows.extend(cohort["reviews"])
+    return rows
 
 
 def validate(ledger: dict) -> None:
@@ -42,18 +41,39 @@ def validate(ledger: dict) -> None:
             raise ValueError("Duplicate selection issue URL")
     if len(reviews) != len(set(graph) | set(baseline)):
         raise ValueError("Missing review decisions for frozen union")
+    original = {item.get("issue_url") for item in reviews if isinstance(item, dict)}
+    if original != set(graph) | set(baseline):
+        raise ValueError("Original comparison rows changed or incomplete")
+
+    cohorts = ledger.get("additional_cohorts", [])
+    if not isinstance(cohorts, list) or len(cohorts) > 20:
+        raise ValueError("Invalid number of additional review cohorts")
+    for cohort in cohorts:
+        if (not isinstance(cohort, dict)
+                or not isinstance(cohort.get("run_url"), str)
+                or not RUN_URL.fullmatch(cohort["run_url"])
+                or not isinstance(cohort.get("description"), str)
+                or not cohort["description"]
+                or not isinstance(cohort.get("review_date"), str)
+                or not isinstance(cohort.get("reviews"), list)
+                or not 1 <= len(cohort["reviews"]) <= 25):
+            raise ValueError("Invalid additional review cohort")
+
     seen = set()
-    for item in reviews:
+    for item in review_rows(ledger):
         if not isinstance(item, dict):
             raise ValueError("Invalid manual review row")
         url = item.get("issue_url")
         if not isinstance(url, str) or not URL.fullmatch(url) or url in seen:
             raise ValueError("Invalid or duplicate reviewed issue")
         seen.add(url)
-        if (item.get("verdict") not in DECISIONS
-                or type(item.get("contribution_fit_tier")) is not int
-                or not 0 <= item["contribution_fit_tier"] <= 3):
+        verdict = item.get("verdict")
+        tier = item.get("contribution_fit_tier")
+        if (not isinstance(verdict, str) or not VERDICT.fullmatch(verdict)
+                or type(tier) is not int or not 0 <= tier <= 3):
             raise ValueError("Unrecognized review classification")
+        if tier == 3 and verdict != "maintainer_confirmed_contribution":
+            raise ValueError("Tier 3 requires explicit maintainer confirmation")
         if (not isinstance(item.get("source_updated_at"), str)
                 or not item["source_updated_at"].endswith("Z")
                 or type(item.get("source_comment_count")) is not int
@@ -65,8 +85,6 @@ def validate(ledger: dict) -> None:
                        or not link.startswith("https://github.com/")
                        for link in item["evidence_urls"])):
             raise ValueError("Review missing source evidence or snapshot")
-    if seen != (set(graph) | set(baseline)):
-        raise ValueError("Review rows do not match frozen input selections")
 
 
 def frozen_comparison(ledger: dict) -> dict:
@@ -103,7 +121,7 @@ def annotate(discovery: dict, ledger: dict) -> dict:
     stale and abstain. Non-reviewed new issues remain unassessed, never ready.
     """
     validate(ledger)
-    by_url = {row["issue_url"]: row for row in ledger["reviews"]}
+    by_url = {row["issue_url"]: row for row in review_rows(ledger)}
     cards = []
     for item in discovery["all_reviewed"]:
         card = dict(item)
@@ -143,6 +161,7 @@ def annotate(discovery: dict, ledger: dict) -> dict:
         "schema": 1,
         "comparison": frozen_comparison(ledger),
         "source_run": ledger["frozen_run_url"],
+        "additional_review_cohorts": len(ledger.get("additional_cohorts", [])),
         "quality_shortlist": plausible,
         "new_needing_human_review": unreviewed[:5],
         "annotated_candidates": cards,

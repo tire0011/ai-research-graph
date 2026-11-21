@@ -45,6 +45,37 @@ class FrozenComparisonTests(unittest.TestCase):
         self.assertFalse(result["claims_of_graph_superiority_supported"])
         self.assertEqual(result["confirmed_free_contributions"], 0)
 
+    def test_second_review_is_additive_not_part_of_frozen_comparison(self):
+        ledger, sample = fixture()
+        self.assertEqual(len(q.review_rows(ledger)), 13)
+        self.assertEqual(q.frozen_comparison(ledger)["unique_issues_reviewed"], 8)
+        new_cards = []
+        for row in ledger["additional_cohorts"][0]["reviews"]:
+            bits = row["issue_url"].split("/")
+            new_cards.append({
+                "issue_url": row["issue_url"],
+                "updated_at": row["source_updated_at"],
+                "comment_count": row["source_comment_count"],
+                "repository": "/".join(bits[3:5]),
+                "issue_number": int(bits[-1]),
+                "title": "Additional reviewed task",
+                "state": {"status": "new"},
+            })
+        sample["all_reviewed"].extend(new_cards)
+        result = q.annotate(sample, ledger)
+        self.assertEqual(result["additional_review_cohorts"], 1)
+        self.assertEqual(len(result["quality_shortlist"]), 2)
+        self.assertTrue(any(item["issue_url"].endswith("/JudgeArena/issues/24")
+                            for item in result["quality_shortlist"]))
+        self.assertEqual(result["comparison"]["unique_issues_reviewed"], 8)
+
+    def test_additional_cohorts_reject_duplicate_issue(self):
+        ledger, _ = fixture()
+        ledger["additional_cohorts"][0]["reviews"][0]["issue_url"] = (
+            ledger["reviews"][0]["issue_url"])
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
+
     def test_incomplete_review_or_unlinked_evidence_fails(self):
         ledger, _ = fixture()
         ledger["reviews"].pop()

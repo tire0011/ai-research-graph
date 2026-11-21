@@ -114,5 +114,69 @@
       "explanation": "Replace Airflow transformer integration tests with Spark unit tests; substantial JVM/Spark/IIS migration and environment knowledge, not a casual coding task.",
       "source_comment_count": 0
     }
+  ],
+  "additional_cohorts": [
+    {
+      "run_url": "https://github.com/tire0011/ai-research-graph/actions/runs/44912578063",
+      "review_date": "2026-11-21",
+      "description": "Second non-blinded review: five first unreviewed new candidates after expanding to 19 repositories. Not mixed into the original five-versus-five frozen comparison.",
+      "reviews": [
+        {
+          "issue_url": "https://github.com/OpenEuroLLM/JudgeArena/issues/67",
+          "source_updated_at": "2026-07-13T07:46:26Z",
+          "source_comment_count": 2,
+          "verdict": "existing_prototype_under_discussion",
+          "contribution_fit_tier": 0,
+          "evidence_urls": [
+            "https://github.com/OpenEuroLLM/JudgeArena/issues/67"
+          ],
+          "explanation": "Issue author says most leaderboard components are already built on feature branches; subsequent discussion is about specification. Not an unclaimed implementation from scratch."
+        },
+        {
+          "issue_url": "https://github.com/Pleias/Pleias-RAG-Library/issues/18",
+          "source_updated_at": "2026-09-18T16:08:24Z",
+          "source_comment_count": 0,
+          "verdict": "third_party_business_outreach",
+          "contribution_fit_tier": 0,
+          "evidence_urls": [
+            "https://github.com/Pleias/Pleias-RAG-Library/issues/18"
+          ],
+          "explanation": "External vendor proposes paid model audits after its contact form fails; this is a solicitation, not a Pleias coding request."
+        },
+        {
+          "issue_url": "https://github.com/kyutai-labs/hibiki/issues/19",
+          "source_updated_at": "2026-07-08T03:01:24Z",
+          "source_comment_count": 0,
+          "verdict": "reporter_offers_documentation_pr",
+          "contribution_fit_tier": 1,
+          "evidence_urls": [
+            "https://github.com/kyutai-labs/hibiki/issues/19"
+          ],
+          "explanation": "Reporter proposes README polish and offers to implement it; first request maintainer direction, rather than assign identical work to another developer."
+        },
+        {
+          "issue_url": "https://github.com/OpenEuroLLM/JudgeArena/issues/24",
+          "source_updated_at": "2026-03-30T15:27:07Z",
+          "source_comment_count": 1,
+          "verdict": "plausible_scoped_backend_feature",
+          "contribution_fit_tier": 2,
+          "evidence_urls": [
+            "https://github.com/OpenEuroLLM/JudgeArena/issues/24"
+          ],
+          "explanation": "Proposed SGLang inference backend instead of vLLM only; maintainer considers this useful but notes LangChain integration gap. Plausible coding task requiring backend compatibility testing, not approved for an external contributor."
+        },
+        {
+          "issue_url": "https://github.com/OpenEuroLLM/JudgeArena/issues/128",
+          "source_updated_at": "2026-09-11T11:13:21Z",
+          "source_comment_count": 2,
+          "verdict": "already_in_design_discussion",
+          "contribution_fit_tier": 0,
+          "evidence_urls": [
+            "https://github.com/OpenEuroLLM/JudgeArena/issues/128"
+          ],
+          "explanation": "Existing SQLite cache draft stack and linked PRs are under detailed maintainer review; not an unclaimed implementation."
+        }
+      ]
+    }
   ]
 }
