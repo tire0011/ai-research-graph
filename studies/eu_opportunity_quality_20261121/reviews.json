@@ -178,5 +178,24 @@
         }
       ]
     }
+  ],
+  "code_rechecks": [
+    {
+      "issue_url": "https://github.com/OpenEuroLLM/post-training/issues/35",
+      "issue_updated_at": "2026-06-08T13:30:36Z",
+      "issue_comment_count": 0,
+      "code_repo": "OpenEuroLLM/post-training",
+      "code_head_sha": "681ee6d7a9a28f312b993ea83f7f582271fe6eda",
+      "verdict": "partial_implementation_observed",
+      "contribution_fit_tier": 1,
+      "reviewed_at": "2026-11-21",
+      "evidence_urls": [
+        "https://github.com/OpenEuroLLM/post-training/issues/35",
+        "https://github.com/OpenEuroLLM/post-training/blob/681ee6d7a9a28f312b993ea83f7f582271fe6eda/scripts/train.py",
+        "https://github.com/OpenEuroLLM/post-training/blob/681ee6d7a9a28f312b993ea83f7f582271fe6eda/scripts/submit.py",
+        "https://github.com/OpenEuroLLM/post-training/blob/681ee6d7a9a28f312b993ea83f7f582271fe6eda/src/post_training/utils/logging.py"
+      ],
+      "explanation": "Current source already writes a resolved config.yaml from both training and submission entrypoints, and default INFO logging is suppressed on non-zero ranks. It is unclear whether the remaining original-YAML and output-file logging requirements still need work. Reconfirm precise acceptance criteria with maintainers before offering this as an unclaimed implementation."
+    }
   ]
 }

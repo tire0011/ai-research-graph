@@ -8,11 +8,15 @@ This code deliberately does not learn weights from the small reviewed cohort.
 from __future__ import annotations
 
 import re
+import urllib.error
 from collections import Counter
 
 URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/issues/[1-9]\d*$")
 VERDICT = re.compile(r"^[a-z][a-z0-9_]{2,63}$")
 RUN_URL = re.compile(r"^https://github\.com/[\w.-]+/[\w.-]+/actions/runs/[1-9]\d*$")
+
+SHA = re.compile(r"^[0-9a-f]{40}$")
+REPO = re.compile(r"^[\w.-]+/[\w.-]+$")
 
 
 def review_rows(ledger: dict) -> list[dict]:
@@ -87,6 +91,54 @@ def validate(ledger: dict) -> None:
             raise ValueError("Review missing source evidence or snapshot")
 
 
+    rechecks = ledger.get("code_rechecks", [])
+    if not isinstance(rechecks, list) or len(rechecks) > 10:
+        raise ValueError("Invalid number of source-code rechecks")
+    rechecked = set()
+    for correction in rechecks:
+        if not isinstance(correction, dict):
+            raise ValueError("Invalid code recheck")
+        url = correction.get("issue_url")
+        if not isinstance(url, str) or url not in seen or url in rechecked:
+            raise ValueError("Code recheck must reference a unique reviewed issue")
+        rechecked.add(url)
+        repo, sha = correction.get("code_repo"), correction.get("code_head_sha")
+        tier = correction.get("contribution_fit_tier")
+        verdict = correction.get("verdict")
+        evidence = correction.get("evidence_urls")
+        if (not isinstance(repo, str) or not REPO.fullmatch(repo)
+                or not isinstance(sha, str) or not SHA.fullmatch(sha)
+                or not isinstance(verdict, str) or not VERDICT.fullmatch(verdict)
+                or type(tier) is not int or tier not in (0, 1, 2)
+                or not isinstance(evidence, list) or url not in evidence
+                or not any(f"/blob/{sha}/" in link for link in evidence
+                           if isinstance(link, str))
+                or not correction.get("explanation")
+                or not isinstance(correction.get("issue_updated_at"), str)
+                or type(correction.get("issue_comment_count")) is not int):
+            raise ValueError("Code recheck missing source evidence or valid tier")
+
+
+def fetch_code_heads(ledger: dict, fetch) -> dict[str, str]:
+    """Fetch default-branch HEAD for code-pinned reviews; fail closed."""
+    validate(ledger)
+    found = {}
+    for row in ledger.get("code_rechecks", []):
+        repo = row["code_repo"]
+        if repo in found:
+            continue
+        try:
+            commits = fetch(f"https://api.github.com/repos/{repo}/commits?per_page=1")
+            if (isinstance(commits, list) and commits
+                    and isinstance(commits[0], dict)
+                    and isinstance(commits[0].get("sha"), str)
+                    and SHA.fullmatch(commits[0]["sha"])):
+                found[repo] = commits[0]["sha"]
+        except (ValueError, TypeError, KeyError, OSError, urllib.error.URLError, TimeoutError):
+            pass
+    return found
+
+
 def frozen_comparison(ledger: dict) -> dict:
     """Descriptive same-pool comparison; labels were reviewed non-blind."""
     validate(ledger)
@@ -113,7 +165,7 @@ def frozen_comparison(ledger: dict) -> dict:
     }
 
 
-def annotate(discovery: dict, ledger: dict) -> dict:
+def annotate(discovery: dict, ledger: dict, *, code_heads=None) -> dict:
     """Add transparent review states; keep original discovery untouched.
 
     Historical manual labels apply only while GitHub's issue updated_at is
@@ -122,6 +174,8 @@ def annotate(discovery: dict, ledger: dict) -> dict:
     """
     validate(ledger)
     by_url = {row["issue_url"]: row for row in review_rows(ledger)}
+    corrections = {row["issue_url"]: row for row in ledger.get("code_rechecks", [])}
+    code_heads = {} if code_heads is None else code_heads
     cards = []
     for item in discovery["all_reviewed"]:
         card = dict(item)
@@ -147,21 +201,42 @@ def annotate(discovery: dict, ledger: dict) -> dict:
                 "reason": label["explanation"],
                 "evidence_urls": label["evidence_urls"],
             }
+        correction = corrections.get(url)
+        if correction and status == "new":
+            if (card["updated_at"] != correction["issue_updated_at"]
+                    or card.get("comment_count") != correction["issue_comment_count"]):
+                quality = {"status": "stale_review", "tier": None,
+                           "reason": "issue_changed_after_code_recheck",
+                           "evidence_urls": correction["evidence_urls"]}
+            elif code_heads.get(correction["code_repo"]) != correction["code_head_sha"]:
+                quality = {"status": "code_revision_unverified", "tier": None,
+                           "reason": "default_branch_changed_or_code_check_failed",
+                           "evidence_urls": correction["evidence_urls"]}
+            else:
+                quality = {"status": "manual_code_review_current",
+                           "tier": correction["contribution_fit_tier"],
+                           "verdict": correction["verdict"],
+                           "reason": correction["explanation"],
+                           "evidence_urls": correction["evidence_urls"]}
         card["quality_review"] = quality
         cards.append(card)
 
     plausible = [row for row in cards
                  if row["state"]["status"] == "new"
-                 and row["quality_review"]["status"] == "manual_review_current"
+                 and row["quality_review"]["status"] in {"manual_review_current",
+                                                          "manual_code_review_current"}
                  and row["quality_review"]["tier"] >= 2][:5]
     unreviewed = [row for row in cards
                   if row["state"]["status"] == "new"
-                  and row["quality_review"]["status"] in {"unreviewed", "stale_review"}]
+                  and row["quality_review"]["status"] in {"unreviewed", "stale_review",
+                                                         "code_revision_unverified"}]
     return {
         "schema": 1,
         "comparison": frozen_comparison(ledger),
         "source_run": ledger["frozen_run_url"],
         "additional_review_cohorts": len(ledger.get("additional_cohorts", [])),
+        "code_rechecks": len(ledger.get("code_rechecks", [])),
+        "verified_code_heads": code_heads,
         "quality_shortlist": plausible,
         "new_needing_human_review": unreviewed[:5],
         "annotated_candidates": cards,
@@ -172,6 +247,7 @@ def annotate(discovery: dict, ledger: dict) -> dict:
             "The title-only baseline shares the same candidate pool; it is NOT a full GitHub search baseline.",
             "No tier-2 record is maintainer-confirmed or proven quick to implement.",
             "Reviews are source-version-bound; changed or missing cases require review again.",
+            "Code-dependent corrections require a matching live source repository HEAD.",
             "Unreviewed tasks must never be described as confirmed actionable.",
         ],
     }

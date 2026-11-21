@@ -18,7 +18,8 @@ from pathlib import Path
 
 from http_util import get_json as shared_get_json
 from opportunity_state import classify, related_pull_requests
-from opportunity_quality_review import annotate as annotate_quality, markdown as quality_markdown
+from opportunity_quality_review import (annotate as annotate_quality,
+                                        fetch_code_heads, markdown as quality_markdown)
 
 API = "https://api.github.com"
 REPO_RE = re.compile(r"^[\w.-]+/[\w.-]+$")
@@ -275,7 +276,8 @@ def main(argv=None):
         (out / "OPPORTUNITIES.md").write_text(markdown(result), encoding="utf-8")
         if args.review_ledger:
             ledger = json.loads(Path(args.review_ledger).read_text(encoding="utf-8"))
-            reviewed = annotate_quality(result, ledger)
+            reviewed = annotate_quality(result, ledger,
+                                        code_heads=fetch_code_heads(ledger, get_json))
             (out / "quality_review.json").write_text(
                 json.dumps(reviewed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
             (out / "QUALITY_REVIEW.md").write_text(quality_markdown(reviewed), encoding="utf-8")
