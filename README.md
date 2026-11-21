@@ -6,6 +6,12 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## Real GitHub Search API versus graph-context holdout (2026-11-21)
+
+The [preregistered holdout experiment](studies/github_search_graph_holdout_20261121/README.md) compares real stratified GitHub Search API results with a typed, source-verified GitHub context overlay **on exactly the same previously unreviewed issue pool**. It checks author activity, source changes, linked PRs, literal scholarly or Hugging Face references and source-code paths, while preserving the original native-search ranking and generating a method-blinded evaluation sheet.
+
+This is **not yet a full OpenAIRE-enriched graph retrieval experiment** and no advantage is claimed without independent source-based rating. The live output is a GitHub Actions artifact, not a public contribution recommendation.
+
 ## European AI contribution readiness review (2026-11-21)
 
 An [eight-issue non-blinded review](studies/eu_opportunity_quality_20261121/REVIEW.md) evaluated the initial cross-project pilot's five heuristic suggestions against the five title-only same-pool suggestions. **No heuristic top-five item was independently confirmed as a new scoped coding task.** The title-only baseline contained one plausible but *not maintainer-confirmed* coding opportunity; the review is too small and non-blind to infer a general performance difference.
