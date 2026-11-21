@@ -1,5 +1,7 @@
 # Registered GitHub Search API versus graph-context holdout
 
+**First live outcome:** [negative finding and source-backed maintainer-declined false positive](FIRST_RUN.md). The result was not a graph win; subsequent runs include an explicit correction and are not untouched holdouts.
+
 Date frozen: **2026-11-21**. Code: [`github_search_graph_holdout.py`](../../github_search_graph_holdout.py), preregistration: [`config.json`](config.json).
 
 ## Decision question
