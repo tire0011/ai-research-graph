@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "date": "2026-11-21",
+  "profile": "External European open-AI contributor; Python/software engineering; local CPU development and automated tests; 2-6 hours; no access to HPC, model training clusters, or private data",
+  "question": "Where can I make one concrete, independently testable contribution to open European AI research software?",
+  "search_terms": [
+    "bug",
+    "test"
+  ],
+  "repository_scope": [
+    "Helsinki-NLP/OpusFilter",
+    "Helsinki-NLP/Tatoeba-Challenge",
+    "LAION-AI/CLAP",
+    "LAION-AI/CLIP_benchmark",
+    "OpenEuroLLM/JudgeArena",
+    "OpenEuroLLM/Taskboard",
+    "OpenEuroLLM/oellm-autoexp",
+    "OpenEuroLLM/oellm-eval",
+    "OpenEuroLLM/post-training",
+    "OpenLLM-France/Lucie-Training",
+    "OpenLLM-France/Luciole-Training",
+    "Pleias/Pleias-RAG-Library",
+    "hplt-project/HPLT-textpipes",
+    "hplt-project/OpusCleaner",
+    "kyutai-labs/hibiki",
+    "kyutai-labs/moshi",
+    "kyutai-labs/pocket-tts",
+    "openaire/guidelines-literature-repositories",
+    "openaire/iis"
+  ],
+  "repositories_per_query": 5,
+  "results_per_query": 8,
+  "max_deep_checks": 20,
+  "top_k": 5,
+  "historical_review_file": "studies/eu_opportunity_quality_20261121/reviews.json",
+  "exclusion": "Previously human-reviewed issues excluded before ranking; no use of their review labels as features",
+  "baseline": "GitHub REST Search Issues /search/issues, best-match order per query, deterministic round-robin across repository groups/terms, no enriched state/relevance",
+  "enrichment": "Same raw pool; verify issue/comments, check cross-referenced PRs; extract literal typed links and verify up to two referenced code paths",
+  "decision_gate": "Do not claim relative quality until method-blinded manual issue review has been completed",
+  "sampling_note": "This is a fixed stratified GitHub Search API query set, not a single complete global GitHub search or representative European inventory.",
+  "actor": "tire0011"
+}
