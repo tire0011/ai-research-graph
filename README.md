@@ -6,6 +6,18 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## European AI contribution readiness review (2026-11-21)
+
+An [eight-issue non-blinded review](studies/eu_opportunity_quality_20261121/REVIEW.md) evaluated the initial cross-project pilot's five heuristic suggestions against the five title-only same-pool suggestions. **No heuristic top-five item was independently confirmed as a new scoped coding task.** The title-only baseline contained one plausible but *not maintainer-confirmed* coding opportunity; the review is too small and non-blind to infer a general performance difference.
+
+The read-only [source-pinned ledger](studies/eu_opportunity_quality_20261121/reviews.json) is used by [opportunity_quality_review.py](opportunity_quality_review.py). It adds a separate quality report without changing historical source evidence or tuning ranking weights on inspected examples. Issue update timestamps **and comment counts** invalidate stale reviews; unknown issues remain **unreviewed**, never automatically marked ready. Contributor permissions and human contact are unchanged.
+
+```powershell
+python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json
+```
+
+Workflow artifacts include `quality_review.json` and `QUALITY_REVIEW.md`. The benchmark is **not** a full GitHub Search API baseline; that requires a separately frozen future pilot.
+
 ## European open AI opportunities — cross-project pilot (2026-11-21)
 
 This separate [read-only discovery](eu_opportunity_discovery.py) broadens the contribution opportunity search beyond OpenEuroLLM. Its [curated source registry](eu_opportunity_sources.json) initially names 13 public AI research/tooling repositories across OpenEuroLLM, LAION, HPLT, OpenAIRE, OpenLLM-France, and Kyutai. The EU selection is a maintained starting set, **not** a complete inventory of all European AI, and public access does not imply maintainer approval to contribute.
