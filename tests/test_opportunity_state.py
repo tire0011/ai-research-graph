@@ -105,6 +105,45 @@ class StateSafetyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Invalid linked PR evidence"):
             status(self.task, prs=[pr])
 
+    def test_real_kyutai_wav_229_collaborator_declined_requested_fix(self):
+        # https://github.com/kyutai-labs/pocket-tts/issues/229
+        task = issue("kyutai-labs/pocket-tts", 229, creator="davidvk89")
+        comment = {
+            "user": {"login": "gabrieldemarmiesse"},
+            "author_association": "COLLABORATOR",
+            "body": ("Yup this was intentional, otherwise the wav format doesn't "
+                     "support streaming write. I don't think we'll address it though, "
+                     "if you want a good wav file with the size inside, "
+                     "i encourage you to write the python code."),
+            "html_url": "https://github.com/kyutai-labs/pocket-tts/issues/229#issuecomment-1",
+        }
+        result = status(task, comments=[comment])
+        self.assertEqual(result["status"], "needs_review")
+        self.assertEqual(result["reason"], "maintainer_explicitly_declined_requested_work")
+        self.assertIn("issues/229", result["evidence_urls"][0])
+
+    def test_comment_without_maintainer_authority_cannot_decline(self):
+        task = issue("kyutai-labs/pocket-tts", 229, creator="davidvk89")
+        text = "I don't think we'll address it."
+        comment = {"user": {"login": "someone"},
+                   "author_association": "NONE", "body": text}
+        result = status(task, comments=[comment])
+        self.assertEqual(result["status"], "new")
+
+    def test_maintainer_just_discussing_not_a_decline(self):
+        task = issue("kyutai-labs/pocket-tts", 229, creator="davidvk89")
+        comment = {"user": {"login": "collaborator"},
+                   "author_association": "COLLABORATOR",
+                   "body": "We'll address it in the next release."}
+        self.assertEqual(status(task, comments=[comment])["status"], "new")
+
+    def test_explicit_we_wont_fix_comment_from_owner_blocks_new_work(self):
+        task = issue("kyutai-labs/pocket-tts", 229, creator="davidvk89")
+        comment = {"author_association": "OWNER",
+                   "user": {"login": "maintainer"},
+                   "body": "We won't fix this in the server."}
+        self.assertEqual(status(task, comments=[comment])["status"], "needs_review")
+
     def test_closed_or_merged_pr_does_not_prove_issue_fixed(self):
         pr = {"url": self.pr_url, "state": "closed", "author": "other", "merged": True}
         self.assertEqual(status(self.task, prs=[pr])["status"], "needs_review")
