@@ -1,0 +1,127 @@
+"""Offline tests: manual labels are source-pinned, conservative, and not auto-approval."""
+
+import copy
+import json
+import unittest
+from pathlib import Path
+
+import opportunity_quality_review as q
+
+LEDGER = Path(__file__).resolve().parents[1] / (
+    "studies/eu_opportunity_quality_20261121/reviews.json"
+)
+
+
+def fixture():
+    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    cards = [
+        {
+            "issue_url": row["issue_url"],
+            "updated_at": row["source_updated_at"],
+            "repository": row["issue_url"].split("/")[3] + "/" + row["issue_url"].split("/")[4],
+            "issue_number": int(row["issue_url"].rsplit("/", 1)[-1]),
+            "title": f"Historical task {row['issue_url'].rsplit('/', 1)[-1]}",
+            "state": {"status": "new"},
+        }
+        for row in ledger["reviews"]
+    ]
+    return ledger, {"all_reviewed": cards, "new_top5": ledger["graph_top5"][:]}
+
+
+class FrozenComparisonTests(unittest.TestCase):
+    def test_complete_eight_issue_union(self):
+        ledger, _ = fixture()
+        q.validate(ledger)
+        self.assertEqual(len(ledger["reviews"]), 8)
+        self.assertEqual(len(set(ledger["graph_top5"] + ledger["title_baseline_top5"])), 8)
+
+    def test_no_superiority_claim_and_no_confirmed_maintainer_approval(self):
+        ledger, _ = fixture()
+        result = q.frozen_comparison(ledger)
+        self.assertEqual(result["graph_heuristic_top5"]["plausible_or_better"], 0)
+        self.assertEqual(result["same_pool_title_only_top5"]["plausible_or_better"], 1)
+        self.assertEqual(result["unique_issues_reviewed"], 8)
+        self.assertFalse(result["claims_of_graph_superiority_supported"])
+        self.assertEqual(result["confirmed_free_contributions"], 0)
+
+    def test_incomplete_review_or_unlinked_evidence_fails(self):
+        ledger, _ = fixture()
+        ledger["reviews"].pop()
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
+        ledger, _ = fixture()
+        ledger["reviews"][0]["evidence_urls"] = []
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
+
+    def test_duplicate_source_or_fake_url_fails(self):
+        ledger, _ = fixture()
+        ledger["graph_top5"][0] = ledger["graph_top5"][1]
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
+        ledger, _ = fixture()
+        ledger["reviews"][0]["issue_url"] = "https://example.invalid/1"
+        with self.assertRaises(ValueError):
+            q.validate(ledger)
+
+
+class CurrentQueueTests(unittest.TestCase):
+    def test_existing_solution_is_not_presented_as_new_coding_work(self):
+        ledger, sample = fixture()
+        result = q.annotate(sample, ledger)
+        rejected = next(c for c in result["annotated_candidates"]
+                        if c["issue_url"].endswith("/pocket-tts/issues/345"))
+        self.assertEqual(rejected["quality_review"]["tier"], 0)
+        self.assertNotIn(rejected["issue_url"],
+                         [row["issue_url"] for row in result["quality_shortlist"]])
+
+    def test_plausibly_scoped_task_is_still_not_maintainer_confirmed(self):
+        ledger, sample = fixture()
+        result = q.annotate(sample, ledger)
+        self.assertEqual(len(result["quality_shortlist"]), 1)
+        self.assertTrue(result["quality_shortlist"][0]["issue_url"].endswith(
+            "/OpenEuroLLM/post-training/issues/35"))
+        self.assertEqual(result["quality_shortlist"][0]["quality_review"]["tier"], 2)
+        self.assertEqual(result["comparison"]["graph_heuristic_top5"]["maintainer_confirmed"], 0)
+        self.assertIn("non-blinded", q.markdown(result))
+
+    def test_changed_source_invalidates_manual_review_without_overwrite(self):
+        ledger, sample = fixture()
+        target = next(c for c in sample["all_reviewed"]
+                      if c["issue_url"].endswith("/OpenEuroLLM/post-training/issues/35"))
+        target["updated_at"] = "2026-11-22T00:00:00Z"
+        result = q.annotate(sample, ledger)
+        self.assertEqual(result["quality_shortlist"], [])
+        reviewed = next(c for c in result["annotated_candidates"]
+                        if c["issue_url"] == target["issue_url"])
+        self.assertEqual(reviewed["quality_review"]["status"], "stale_review")
+        self.assertEqual(len(sample["all_reviewed"]), 8)
+        self.assertNotIn("quality_review", target)
+
+    def test_live_followup_status_supersedes_manual_positive(self):
+        ledger, sample = fixture()
+        target = next(c for c in sample["all_reviewed"]
+                      if c["issue_url"].endswith("/OpenEuroLLM/post-training/issues/35"))
+        target["state"]["status"] = "follow_up"
+        result = q.annotate(sample, ledger)
+        self.assertEqual(result["quality_shortlist"], [])
+        reviewed = next(c for c in result["annotated_candidates"]
+                        if c["issue_url"] == target["issue_url"])
+        self.assertEqual(reviewed["quality_review"]["status"], "state_supersedes_review")
+
+    def test_unreviewed_issue_is_not_implicitly_approved(self):
+        ledger, sample = fixture()
+        sample["all_reviewed"].append({
+            "issue_url": "https://github.com/kyutai-labs/hibiki/issues/99",
+            "updated_at": "2026-11-21T00:00:00Z", "repository": "kyutai-labs/hibiki",
+            "issue_number": 99, "title": "Unknown", "state": {"status": "new"},
+        })
+        result = q.annotate(sample, ledger)
+        self.assertEqual(len(result["new_needing_human_review"]), 1)
+        self.assertEqual(result["new_needing_human_review"][0]["quality_review"]["status"],
+                         "unreviewed")
+        self.assertNotIn("hibiki", [row["repository"] for row in result["quality_shortlist"]])
+
+
+if __name__ == "__main__":
+    unittest.main()
