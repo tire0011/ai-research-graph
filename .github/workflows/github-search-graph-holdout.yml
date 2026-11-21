@@ -1,0 +1,54 @@
+name: Real GitHub Search versus graph context holdout
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - github_search_graph_holdout.py
+      - tests/test_github_search_graph_holdout.py
+      - studies/github_search_graph_holdout_20261121/config.json
+      - .github/workflows/github-search-graph-holdout.yml
+  pull_request:
+    paths:
+      - github_search_graph_holdout.py
+      - tests/test_github_search_graph_holdout.py
+      - studies/github_search_graph_holdout_20261121/config.json
+      - .github/workflows/github-search-graph-holdout.yml
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Full offline regression suite
+        run: python -m unittest discover -s tests -v
+
+  holdout:
+    if: github.event_name != 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read-only GitHub Search and graph-context retrieval
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python github_search_graph_holdout.py --config studies/github_search_graph_holdout_20261121/config.json --registry eu_opportunity_sources.json --ledger studies/eu_opportunity_quality_20261121/reviews.json --output results/github_search_graph_holdout
+      - name: Retain query evidence, source checks and blind review sheet
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-search-graph-holdout
+          path: results/github_search_graph_holdout/
+          if-no-files-found: warn
