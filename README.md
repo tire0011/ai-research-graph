@@ -6,6 +6,20 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## Contributor opportunity state tracker (2026-11-21)
+
+The read-only [opportunity discovery](opportunity_discovery.py) now distinguishes **new personal suggestions** from **follow-ups**, **potentially active work**, **closed tasks**, and **unverified tasks**, using [opportunity_state.py](opportunity_state.py). The rotating 50-issue selection and source-linked evidence remain unchanged. JSON includes `state_counts` and an issue-deduplicated `new_top5`; Markdown separates that shortlist from the complete review queue.
+
+The weekly workflow uses `--actor tire0011` to identify previous contributions by that account. Other contributors can run:
+
+```powershell
+python opportunity_discovery.py --actor your-github-login
+```
+
+State checks use the issue author, assignees, verified public comments, manual feedback, and a **bounded live GitHub timeline** followed by checks of cross-referenced PR states. Existing participation becomes a follow-up; PRs/assignees indicate possible activity; missing or partial PR context forces human review. A closed issue is never called new. Cross-references do **not** prove a PR fixes a task, and a merged PR attached to an open issue remains unverified.
+
+Five historical OpenEuroLLM cases in [tests/test_opportunity_state.py](tests/test_opportunity_state.py) cover [Taskboard #441](https://github.com/OpenEuroLLM/Taskboard/issues/441), [oellm-eval #163](https://github.com/OpenEuroLLM/oellm-eval/issues/163), [web-data-processing #8](https://github.com/OpenEuroLLM/web-data-processing/issues/8), [oellm-eval #165](https://github.com/OpenEuroLLM/oellm-eval/issues/165), and [oellm-eval #169](https://github.com/OpenEuroLLM/oellm-eval/issues/169). All output is **review-only**: not consent to claim a task. This is a shortlist over the existing narrow lexical discovery, **not** a general-purpose opportunity ranking, and no advantage over ordinary search has yet been shown.
+
 ## Freshness gate for research decisions (2026-11-15)
 
 Before acting on a previously identified research overlap or cross-project candidate, use the [small read-only PR status revalidation](source_revalidation.py). The [four dated source claims](studies/decision_gate_20261115/status_watch_manifest.json) are preserved as a historical test; the weekly [active watchlist](studies/decision_gate_20261115/status_watch_active.json) now contains **only the unresolved PR #65**, so the known #174 merge is not reported as a new discovery every week. [PR #43](https://github.com/tire0011/ai-research-graph/pull/43) passed **9 unit tests** and a live **4-PR source check** that detected **one post-review merge**; no scientific or time-saving benefit is claimed. The [weekly/manual workflow](.github/workflows/source-revalidation.yml) retains its attributable output as an Actions artifact, and [checkpoint 0009](research_checkpoints/0009-source-drift-2026-11-15.md) preserves the exact decision and limitations. A direct GitHub lookup remains a fair baseline.
