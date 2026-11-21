@@ -1,6 +1,6 @@
 # OpenEuroLLM change-impact candidates: ten original-source audits
 
-Graph snapshot: `2026-11-21T14:23:05.499839+00:00`. Evaluated: `2026-11-21T14:25:30.048736+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
+Graph snapshot: `2026-11-21T14:27:32.367910+00:00`. Evaluated: `2026-11-21T14:30:44.302101+00:00`. Evidence verified: **10/10** cases, **21** literal phrases, **4** separately fetched comments. Status: `completed`.
 
 Graph source parity for selected comments: **4/4**. Author-declared upstream links in the graph: **1**; commenter-reported OOM links: **1**. These are evidence classifications, not independent validation of the asserted dependency or failure.
 
