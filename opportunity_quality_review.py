@@ -56,6 +56,8 @@ def validate(ledger: dict) -> None:
             raise ValueError("Unrecognized review classification")
         if (not isinstance(item.get("source_updated_at"), str)
                 or not item["source_updated_at"].endswith("Z")
+                or type(item.get("source_comment_count")) is not int
+                or item["source_comment_count"] < 0
                 or not item.get("explanation")
                 or not isinstance(item.get("evidence_urls"), list)
                 or url not in item["evidence_urls"]
@@ -87,7 +89,9 @@ def frozen_comparison(ledger: dict) -> dict:
         "unique_issues_reviewed": len(by_url),
         "method": "one_non_blinded_review_of_same_source_pool_not_a_precision_estimate",
         "claims_of_graph_superiority_supported": False,
-        "confirmed_free_contributions": 0,
+        "confirmed_free_contributions": sum(
+            row["contribution_fit_tier"] == 3 for row in ledger["reviews"]
+        ),
     }
 
 
@@ -112,7 +116,8 @@ def annotate(discovery: dict, ledger: dict) -> dict:
         elif status != "new":
             quality = {"status": "state_supersedes_review", "tier": None,
                        "reason": "live_github_state_is_not_new"}
-        elif card["updated_at"] != label["source_updated_at"]:
+        elif (card["updated_at"] != label["source_updated_at"]
+              or card.get("comment_count") != label["source_comment_count"]):
             quality = {"status": "stale_review", "tier": None,
                        "reason": "source_changed_since_manual_review",
                        "evidence_urls": label["evidence_urls"]}
