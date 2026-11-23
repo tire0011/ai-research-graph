@@ -1,28 +1,28 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-21T17:27:36.277815+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-23T18:02:03.323424+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
-- issue: **502** records
-- pull_request: **194** records
+- issue: **506** records
+- pull_request: **195** records
 - model: **112** records
 - dataset: **80** records
-- research_product: **73** records
+- research_product: **75** records
 - source_file: **10** records
 - processing_script: **2** records
 - experiment_run_ref: **1** records
 - Of HF models/datasets, publicly verified one-hop targets outside the initial inventory: **38**
 - OpenAIRE keyword-search total (not project coverage): **12**
 
-- GitHub open issues / closed issues: **225 / 277**
-- GitHub open PRs / closed PRs: **16 / 178**
+- GitHub open issues / closed issues: **222 / 284**
+- GitHub open PRs / closed PRs: **16 / 179**
 
 ## Evidenced relationships
 
 - Explicit URL/ID mentions (not semantic proof): **44**
 - Name-only candidates, NOT confirmed: **7**
-- Shared scholarly identifiers (arXiv/DOI): **90**
+- Shared scholarly identifiers (arXiv/DOI): **92**
 - HF model-card declarations to indexed/verified targets: **75**
 
 - GitHub YAML manifest declarations to indexed/verified datasets: **10**
@@ -30,7 +30,7 @@ Collected: `2026-11-21T17:27:36.277815+00:00` (UTC). Source: public APIs, read-o
 
 - Concrete W&B run URLs in GitHub tasks (source links only): **1**
 
-- Literal GitHub issue/PR cross-references to indexed tasks: **158**
+- Literal GitHub issue/PR cross-references to indexed tasks: **160**
 - GitHub issue/PR references without an indexed target: **20**
 
 - Public comments on selected issues, individually source-hashed: **19**
@@ -43,10 +43,10 @@ GitHub task links are **textual mentions only**; they do not prove a dependency,
 | --- | --- | --- | --- |
 | [#453](https://github.com/OpenEuroLLM/Taskboard/issues/453) | [openeurollm/Prelude-SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2) | url | `https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2` |
 | [#452](https://github.com/OpenEuroLLM/Taskboard/issues/452) | [openeurollm/Prelude-SFT-Excellent-v0.2](https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2) | url | `https://huggingface.co/openeurollm/Prelude-SFT-Excellent-v0.2` |
-| [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) | url | `https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT` |
 | [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/Dolci-Instruct-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated) | url | `https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated` |
 | [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/Dolci-Think-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-translated) | url | `https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-translated` |
 | [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/openeurollm-model-identity](https://huggingface.co/datasets/openeurollm/openeurollm-model-identity) | url | `https://huggingface.co/datasets/openeurollm/openeurollm-model-identity` |
+| [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/OpenEuroLLM-Excellent-SFT](https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT) | url | `https://huggingface.co/datasets/openeurollm/OpenEuroLLM-Excellent-SFT` |
 | [#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | [openeurollm/EuroMultiSynth-Instruct](https://huggingface.co/datasets/openeurollm/EuroMultiSynth-Instruct) | url | `https://huggingface.co/datasets/openeurollm/EuroMultiSynth-Instruct` |
 | [#448](https://github.com/OpenEuroLLM/Taskboard/issues/448) | [openeurollm/Dolci-Think-SFT-translated](https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-translated) | url | `https://huggingface.co/datasets/openeurollm/Dolci-Think-SFT-translated` |
 | [#442](https://github.com/OpenEuroLLM/Taskboard/issues/442) | [marianna13/prelude-9b-midtrain-v1](https://huggingface.co/marianna13/prelude-9b-midtrain-v1) | url | `https://huggingface.co/marianna13/prelude-9b-midtrain-v1` |
@@ -63,8 +63,8 @@ GitHub task links are **textual mentions only**; they do not prove a dependency,
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/orca-agentinstruct-1M-v1-decontaminated](https://huggingface.co/datasets/openeurollm/orca-agentinstruct-1M-v1-decontaminated) | repository_id | `openeurollm/orca-agentinstruct-1M-v1-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [openeurollm/lmsys-chat-1m-decontaminated](https://huggingface.co/datasets/openeurollm/lmsys-chat-1m-decontaminated) | repository_id | `openeurollm/lmsys-chat-1m-decontaminated` |
 | [#330](https://github.com/OpenEuroLLM/Taskboard/issues/330) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | repository_id | `allenai/Olmo-3-7B-Think-SFT` |
-| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1` |
+| [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | url | `https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1` |
 | [#297](https://github.com/OpenEuroLLM/Taskboard/issues/297) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | url | `https://huggingface.co/datasets/nvidia/Nemotron-MIND` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Instruct-SFT](https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT` |
 | [#230](https://github.com/OpenEuroLLM/Taskboard/issues/230) | [allenai/Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) | url | `https://huggingface.co/allenai/Olmo-3-7B-Think-SFT` |
@@ -98,6 +98,7 @@ Only exact issue numbers and GitHub task URLs count; every target is present in 
 
 | Referencing task | Mentioned task | Literal text |
 | --- | --- | --- |
+| [github:OpenEuroLLM/Taskboard#454](https://github.com/OpenEuroLLM/Taskboard/issues/454) | [github:OpenEuroLLM/Taskboard#439](https://github.com/OpenEuroLLM/Taskboard/issues/439) | `https://github.com/OpenEuroLLM/Taskboard/issues/439` |
 | [github:OpenEuroLLM/Taskboard#453](https://github.com/OpenEuroLLM/Taskboard/issues/453) | [github:OpenEuroLLM/Taskboard#442](https://github.com/OpenEuroLLM/Taskboard/issues/442) | `https://github.com/OpenEuroLLM/Taskboard/issues/442` |
 | [github:OpenEuroLLM/Taskboard#452](https://github.com/OpenEuroLLM/Taskboard/issues/452) | [github:OpenEuroLLM/Taskboard#451](https://github.com/OpenEuroLLM/Taskboard/issues/451) | `#451` |
 | [github:OpenEuroLLM/Taskboard#450](https://github.com/OpenEuroLLM/Taskboard/issues/450) | [github:OpenEuroLLM/oellm-eval#152](https://github.com/OpenEuroLLM/oellm-eval/issues/152) | `https://github.com/OpenEuroLLM/oellm-eval/issues/152` |
@@ -167,9 +168,8 @@ Only exact issue numbers and GitHub task URLs count; every target is present in 
 | [github:OpenEuroLLM/Taskboard#50](https://github.com/OpenEuroLLM/Taskboard/issues/50) | [github:OpenEuroLLM/Taskboard#49](https://github.com/OpenEuroLLM/Taskboard/issues/49) | `#49` |
 | [github:OpenEuroLLM/Taskboard#9](https://github.com/OpenEuroLLM/Taskboard/issues/9) | [github:OpenEuroLLM/Taskboard#1](https://github.com/OpenEuroLLM/Taskboard/issues/1) | `#1` |
 | [github:OpenEuroLLM/Taskboard#4](https://github.com/OpenEuroLLM/Taskboard/issues/4) | [github:OpenEuroLLM/Taskboard#3](https://github.com/OpenEuroLLM/Taskboard/issues/3) | `#3` |
-| [github:OpenEuroLLM/oellm-eval#172](https://github.com/OpenEuroLLM/oellm-eval/pull/172) | [github:OpenEuroLLM/oellm-eval#169](https://github.com/OpenEuroLLM/oellm-eval/issues/169) | `#169` |
 
-Showing the first 70 of 158 task links; all are in snapshot.json.
+Showing the first 70 of 160 task links; all are in snapshot.json.
 
 ## Scoped GitHub comment and dependency evidence
 
@@ -188,6 +188,8 @@ Comments are collected only for the ten preselected change-impact issues, not al
 
 | Source artifact | OpenAIRE publication | Shared ID |
 | --- | --- | --- |
+| [Try DroPE for context extension](https://github.com/OpenEuroLLM/Taskboard/issues/457) | [Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings](https://arxiv.org/abs/2512.12167) | `arxiv:2512.12167` |
+| [Optimizer Scaling Laws for hybrid MoEs](https://github.com/OpenEuroLLM/Taskboard/issues/454) | [Deriving Hyperparameter Scaling Laws via Modern Optimization Theory](https://arxiv.org/abs/2603.15958) | `arxiv:2603.15958` |
 | [[32B Dense] Comparison v1 vs. v2 run](https://github.com/OpenEuroLLM/Taskboard/issues/412) | [WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training](https://arxiv.org/abs/2507.17634) | `arxiv:2507.17634` |
 | [Compare WSM and WSD annealing](https://github.com/OpenEuroLLM/Taskboard/issues/406) | [WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training](https://arxiv.org/abs/2507.17634) | `arxiv:2507.17634` |
 | [Discover and Verify Concepts in Preference and Instruction-tuning Datasets](https://github.com/OpenEuroLLM/Taskboard/issues/353) | [BatchTopK Sparse Autoencoders](https://arxiv.org/abs/2412.06410) | `arxiv:2412.06410` |
@@ -242,10 +244,10 @@ Comments are collected only for the ten preselected change-impact issues, not al
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [OpenCodeReasoning: Advancing Data Distillation for Competitive Coding](https://arxiv.org/abs/2504.01943) | `arxiv:2504.01943` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code](https://arxiv.org/abs/2403.07974) | `arxiv:2403.07974` |
 | [openeurollm/oellm-code-rlvr](https://huggingface.co/datasets/openeurollm/oellm-code-rlvr) | [DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation](https://arxiv.org/abs/2511.06307) | `arxiv:2511.06307` |
-| [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
-| [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
 | [allenai/Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
+| [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
+| [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
@@ -253,23 +255,23 @@ Comments are collected only for the ten preselected change-impact issues, not al
 | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
-| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [HuggingFaceTB/finemath](https://huggingface.co/datasets/HuggingFaceTB/finemath) | [SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model](https://arxiv.org/abs/2502.02737) | `arxiv:2502.02737` |
+| [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [gpt-oss-120b &amp; gpt-oss-20b Model Card](https://arxiv.org/abs/2508.10925) | `arxiv:2508.10925` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
-| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
 | [IFM/MegaMath](https://huggingface.co/datasets/IFM/MegaMath) | [MegaMath: Pushing the Limits of Open Math Corpora](https://arxiv.org/abs/2504.02807) | `arxiv:2504.02807` |
-| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
+| [nvidia/Nemotron-CC-v2](https://huggingface.co/datasets/nvidia/Nemotron-CC-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
+| [mlfoundations/dclm-baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) | [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794) | `arxiv:2406.11794` |
 | [nvidia/Nemotron-Terminal-Corpus](https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus) | [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193) | `arxiv:2602.21193` |
-| [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
 | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178) | `arxiv:2506.04178` |
+| [open-web-math/open-web-math](https://huggingface.co/datasets/open-web-math/open-web-math) | [OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) | `arxiv:2310.06786` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Seed-Coder: Let the Code Model Curate Data for Itself](https://arxiv.org/abs/2506.03524) | `arxiv:2506.03524` |
 | [tokyotech-llm/swallow-code-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-code-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [tokyotech-llm/swallow-math-v2](https://huggingface.co/datasets/tokyotech-llm/swallow-math-v2) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
@@ -390,28 +392,28 @@ Verified means the public HF API returned that repository, **not** that its mode
 
 Manifest declarations are version-pinned source-code evidence, **not** proof of actual training, data inclusion or completed evaluation. Co-located script paths are not proof of script execution.
 
-- Scanned repository: [OpenEuroLLM/training-data-collection](https://github.com/OpenEuroLLM/training-data-collection/tree/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a)
-- Selected manifests: **32** of **39** candidates (bounded sample)
+- Scanned repository: [OpenEuroLLM/training-data-collection](https://github.com/OpenEuroLLM/training-data-collection/tree/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a)
+- Selected manifests: **32** of **40** candidates (bounded sample)
 - Manifests with explicit HF dataset URLs: **10**
 - Manifests skipped due to size limit: **0**
 - Selection was truncated: **true**
 
 | GitHub source manifest | Public HF dataset | Evidence |
 | --- | --- | --- |
-| [flag/openthoughts-3/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/openthoughts-3/metadata.yaml) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | `declares_dataset` (`indexed`) |
-| [flag/agenttrove-0.0-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/agenttrove-0.0-pure/metadata.yaml) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | `declares_dataset` (`verified_public`) |
-| [flag/agenttrove-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/agenttrove-0.0/metadata.yaml) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | `declares_dataset` (`verified_public`) |
-| [flag/dolmino-mix-100b-1125-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/dolmino-mix-100b-1125-pure/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
-| [flag/dolmino-mix-100b-1125/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/dolmino-mix-100b-1125/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
-| [flag/fineweb2-hq-1.0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/fineweb2-hq-1.0.0/metadata.yaml) | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | `declares_dataset` (`verified_public`) |
-| [flag/nemotron-mind-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/nemotron-mind-0.0/metadata.yaml) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | `declares_dataset` (`verified_public`) |
-| [flag/nemotron-pretraining-specialized-1.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/nemotron-pretraining-specialized-1.0/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | `declares_dataset` (`indexed`) |
-| [flag/nemotron-pretraining-specialized-1.1/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/nemotron-pretraining-specialized-1.1/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | `declares_dataset` (`indexed`) |
-| [flag/openthoughts-3-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/openthoughts-3-pure/metadata.yaml) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | `declares_dataset` (`indexed`) |
+| [flag/openthoughts-3/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/openthoughts-3/metadata.yaml) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | `declares_dataset` (`indexed`) |
+| [flag/agenttrove-0.0-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/agenttrove-0.0-pure/metadata.yaml) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | `declares_dataset` (`verified_public`) |
+| [flag/agenttrove-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/agenttrove-0.0/metadata.yaml) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | `declares_dataset` (`verified_public`) |
+| [flag/dolmino-mix-100b-1125-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/dolmino-mix-100b-1125-pure/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
+| [flag/dolmino-mix-100b-1125/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/dolmino-mix-100b-1125/metadata.yaml) | [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | `declares_dataset` (`indexed`) |
+| [flag/fineweb2-hq-1.0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/fineweb2-hq-1.0.0/metadata.yaml) | [epfml/FineWeb2-HQ](https://huggingface.co/datasets/epfml/FineWeb2-HQ) | `declares_dataset` (`verified_public`) |
+| [flag/nemotron-mind-0.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/nemotron-mind-0.0/metadata.yaml) | [nvidia/Nemotron-MIND](https://huggingface.co/datasets/nvidia/Nemotron-MIND) | `declares_dataset` (`verified_public`) |
+| [flag/nemotron-pretraining-specialized-1.0/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/nemotron-pretraining-specialized-1.0/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | `declares_dataset` (`indexed`) |
+| [flag/nemotron-pretraining-specialized-1.1/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/nemotron-pretraining-specialized-1.1/metadata.yaml) | [nvidia/Nemotron-Pretraining-Specialized-v1.1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1) | `declares_dataset` (`indexed`) |
+| [flag/openthoughts-3-pure/metadata.yaml](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/openthoughts-3-pure/metadata.yaml) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | `declares_dataset` (`indexed`) |
 
 Unverified GitHub manifest dataset targets: **0** (details in `snapshot.json`; missing verification is not evidence of nonexistence).
 
-Adjacent script paths (existence only): [flag/openthoughts-3/etc/textify.py](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/openthoughts-3/etc/textify.py), [flag/openthoughts-3/etc/textify.slurm](https://github.com/OpenEuroLLM/training-data-collection/blob/0ed3eaa663653ef7fd08c978e10c6ef5a6343f1a/flag/openthoughts-3/etc/textify.slurm)
+Adjacent script paths (existence only): [flag/openthoughts-3/etc/textify.py](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/openthoughts-3/etc/textify.py), [flag/openthoughts-3/etc/textify.slurm](https://github.com/OpenEuroLLM/training-data-collection/blob/d842a2d1f88ea573ee05bd5b933f0593d7cdaf0a/flag/openthoughts-3/etc/textify.slurm)
 
 ## Experiment run links from GitHub tasks
 
@@ -433,15 +435,15 @@ These are shared citations, **not** proof of direct model/task dependence.
 
 ## Citation lookup completeness
 
-- Unique arXiv IDs explicitly cited by GitHub/HF: **62**
-- Resolved to OpenAIRE records: **62**
+- Unique arXiv IDs explicitly cited by GitHub/HF: **64**
+- Resolved to OpenAIRE records: **64**
 - Not resolved by OpenAIRE responses: **0**
 - Publications cited by both GitHub and Hugging Face: **3**
 
 | Source type | Records | With DOI/arXiv ID | Linked to OpenAIRE |
 | --- | ---: | ---: | ---: |
-| issue | 502 | 18 | 18 |
-| pull_request | 194 | 2 | 2 |
+| issue | 506 | 20 | 20 |
+| pull_request | 195 | 2 | 2 |
 | model | 112 | 13 | 13 |
 | dataset | 80 | 32 | 32 |
 
@@ -450,11 +452,11 @@ These are shared citations, **not** proof of direct model/task dependence.
 - duplicate node ids: **0**
 - duplicate edge pairs: **0**
 - edges with missing endpoints: **0**
-- github open issues: **225**
-- github closed issues: **277**
+- github open issues: **222**
+- github closed issues: **284**
 - github open prs: **16**
-- github closed prs: **178**
-- missing update timestamps: **86**
+- github closed prs: **179**
+- missing update timestamps: **88**
 
 ## Source errors / incomplete coverage
 
