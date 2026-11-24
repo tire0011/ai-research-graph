@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-24T15:44:14.918707+00:00",
+  "timestamp_utc": "2026-11-24T17:51:02.123805+00:00",
   "nodes": [
     {
       "id": "github:OpenEuroLLM/Taskboard#462",
@@ -9949,7 +9949,7 @@
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2026-11-19T16:30:07.000Z"
+      "updated_at": "2026-11-24T17:03:46.000Z"
     },
     {
       "id": "hf:model:openeurollm/hplt2c-nemotron-cc_eurollm_500BT",
@@ -11855,22 +11855,6 @@
       "updated_at": "2026-11-16T11:58:21.000Z"
     },
     {
-      "id": "hf:dataset:allenai/Dolci-Instruct-SFT",
-      "type": "dataset",
-      "title": "allenai/Dolci-Instruct-SFT",
-      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
-      "description": "{\"annotations_creators\": [\"crowdsourced\", \"expert-generated\", \"machine-generated\"], \"language\": [\"amh\", \"arb\", \"ary\", \"ars\", \"acq\", \"arz\", \"apc\", \"ben\", \"ceb\", \"dan\", \"deu\", \"ell\", \"eng\", \"eus\", \"fil\", \"fin\", \"fra\", \"gle\", \"guj\", \"hat\", \"hau\", \"hin\", \"hun\", \"ibo\", \"ind\", \"ita\", \"jav\", \"jpn\", \"kan\", \"kir\", \"kor\", \"kur\", \"lit\", \"mal\", \"mar\", \"mlg\", \"msa\", \"mya\", \"nep\", \"nld\", \"nso\", \"nya\", \"pan\", \"pes\", \"pol\", \"por\", \"pus\", \"rus\", \"sin\", \"sna\", \"snd\", \"som\", \"spa\", \"sqi\", \"srp\", \"sun\", \"swa\", \"swe\", \"tam\", \"tel\", \"tha\", \"tur\", \"ukr\", \"urd\", \"vie\", \"wol\", \"xho\", \"yor\", \"zho\", \"zul\"], \"license\": \"odc-by\", \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"other\"], \"dataset_info\": {\"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"content\", \"dtype\": \"string\"}, {\"name\": \"function_calls\", \"dtype\": \"string\"}, {\"name\": \"functions\", \"dtype\": \"string\"}, {\"name\": \"role\", \"dtype\": \"string\"}]}, {\"name\": \"source_dataset\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 7006978580, \"num_examples\": 2152112}], \"download_size\": 3061427649, \"dataset_size\": 7006978580}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2512.13961"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-02-03T00:08:38.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
       "type": "dataset",
       "title": "Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
@@ -11904,16 +11888,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:bigcode/starcoderdata",
+      "id": "hf:dataset:allenai/Dolci-Instruct-SFT",
       "type": "dataset",
-      "title": "bigcode/starcoderdata",
-      "url": "https://huggingface.co/datasets/bigcode/starcoderdata",
-      "description": "{\"annotations_creators\": [], \"language_creators\": [\"crowdsourced\", \"expert-generated\"], \"language\": [\"code\"], \"license\": [\"other\"], \"multilinguality\": [\"multilingual\"], \"pretty_name\": \"The-Stack\", \"size_categories\": [\"unknown\"], \"source_datasets\": [], \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"## Terms of Use for The Stack\\n\\nThe Stack dataset is a collection of source code in over 300 programming languages. We ask that you read and acknowledge the following points before using the dataset:\\n1. The Stack is a collection of source code from repositories with various licenses. Any use of all or part of the code gathered in The Stack must abide by the terms of the original licenses, including attribution clauses when relevant. We facilitate this by providing provenance information for each data point.\\n2. The Stack is regularly updated to enact validated data removal requests. By clicking on \\\"Access repository\\\", you agree to update your own version of The Stack to the most recent usable version specified by the maintainers in [the following thread](https://huggingface.co/datasets/bigcode/the-stack/discussions/7). If you have questions about dataset versions and allowed uses, please also ask them in the dataset’s [community discussions](https://huggingface.co/datasets/bigcode/the-stack/discussions/new). We will also notify users via email when the latest usable version changes.\\n3. To host, share, or otherwise provide access to The Stack dataset, you must include [these Terms of Use](https://huggingface.co/datasets/bigcode/the-stack#terms-of-use-for-the-stack) and require users to agree to it.\\n\\nBy clicking on \\\"Access repository\\\" below, you accept that your contact information (email address and username) can be shared with the dataset maintainers as well.\\n  \", \"extra_gated_fields\": {\"Email\": \"text\", \"I have read the License and agree with its terms\": \"checkbox\"}}",
+      "title": "allenai/Dolci-Instruct-SFT",
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "description": "{\"annotations_creators\": [\"crowdsourced\", \"expert-generated\", \"machine-generated\"], \"language\": [\"amh\", \"arb\", \"ary\", \"ars\", \"acq\", \"arz\", \"apc\", \"ben\", \"ceb\", \"dan\", \"deu\", \"ell\", \"eng\", \"eus\", \"fil\", \"fin\", \"fra\", \"gle\", \"guj\", \"hat\", \"hau\", \"hin\", \"hun\", \"ibo\", \"ind\", \"ita\", \"jav\", \"jpn\", \"kan\", \"kir\", \"kor\", \"kur\", \"lit\", \"mal\", \"mar\", \"mlg\", \"msa\", \"mya\", \"nep\", \"nld\", \"nso\", \"nya\", \"pan\", \"pes\", \"pol\", \"por\", \"pus\", \"rus\", \"sin\", \"sna\", \"snd\", \"som\", \"spa\", \"sqi\", \"srp\", \"sun\", \"swa\", \"swe\", \"tam\", \"tel\", \"tha\", \"tur\", \"ukr\", \"urd\", \"vie\", \"wol\", \"xho\", \"yor\", \"zho\", \"zul\"], \"license\": \"odc-by\", \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"other\"], \"dataset_info\": {\"features\": [{\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"list\": [{\"name\": \"content\", \"dtype\": \"string\"}, {\"name\": \"function_calls\", \"dtype\": \"string\"}, {\"name\": \"functions\", \"dtype\": \"string\"}, {\"name\": \"role\", \"dtype\": \"string\"}]}, {\"name\": \"source_dataset\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 7006978580, \"num_examples\": 2152112}], \"download_size\": 3061427649, \"dataset_size\": 7006978580}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2512.13961"
+        ],
         "doi": []
       },
-      "updated_at": "2023-05-16T10:05:48.000Z",
+      "updated_at": "2026-02-03T00:08:38.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11928,6 +11914,20 @@
         "doi": []
       },
       "updated_at": "2024-12-02T19:48:33.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:bigcode/starcoderdata",
+      "type": "dataset",
+      "title": "bigcode/starcoderdata",
+      "url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+      "description": "{\"annotations_creators\": [], \"language_creators\": [\"crowdsourced\", \"expert-generated\"], \"language\": [\"code\"], \"license\": [\"other\"], \"multilinguality\": [\"multilingual\"], \"pretty_name\": \"The-Stack\", \"size_categories\": [\"unknown\"], \"source_datasets\": [], \"task_categories\": [\"text-generation\"], \"extra_gated_prompt\": \"## Terms of Use for The Stack\\n\\nThe Stack dataset is a collection of source code in over 300 programming languages. We ask that you read and acknowledge the following points before using the dataset:\\n1. The Stack is a collection of source code from repositories with various licenses. Any use of all or part of the code gathered in The Stack must abide by the terms of the original licenses, including attribution clauses when relevant. We facilitate this by providing provenance information for each data point.\\n2. The Stack is regularly updated to enact validated data removal requests. By clicking on \\\"Access repository\\\", you agree to update your own version of The Stack to the most recent usable version specified by the maintainers in [the following thread](https://huggingface.co/datasets/bigcode/the-stack/discussions/7). If you have questions about dataset versions and allowed uses, please also ask them in the dataset’s [community discussions](https://huggingface.co/datasets/bigcode/the-stack/discussions/new). We will also notify users via email when the latest usable version changes.\\n3. To host, share, or otherwise provide access to The Stack dataset, you must include [these Terms of Use](https://huggingface.co/datasets/bigcode/the-stack#terms-of-use-for-the-stack) and require users to agree to it.\\n\\nBy clicking on \\\"Access repository\\\" below, you accept that your contact information (email address and username) can be shared with the dataset maintainers as well.\\n  \", \"extra_gated_fields\": {\"Email\": \"text\", \"I have read the License and agree with its terms\": \"checkbox\"}}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2023-05-16T10:05:48.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -11966,6 +11966,34 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
+      "id": "hf:dataset:HPLT/HPLT3.0",
+      "type": "dataset",
+      "title": "HPLT/HPLT3.0",
+      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
+      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2026-07-08T12:37:21.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:allenai/olmo-mix-1124",
+      "type": "dataset",
+      "title": "allenai/olmo-mix-1124",
+      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-08-19T18:45:37.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
       "id": "hf:dataset:allenai/dolma3_dolmino_mix-100B-1125",
       "type": "dataset",
       "title": "allenai/dolma3_dolmino_mix-100B-1125",
@@ -11982,16 +12010,16 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HPLT/HPLT3.0",
+      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
       "type": "dataset",
-      "title": "HPLT/HPLT3.0",
-      "url": "https://huggingface.co/datasets/HPLT/HPLT3.0",
-      "description": "{\"license\": \"cc0-1.0\", \"size_categories\": [\"n>1T\"], \"multilinguality\": [\"multilingual\"], \"task_categories\": [\"fill-mask\", \"text-generation\"], \"task_ids\": [\"language-modeling\"], \"language\": [\"ace\", \"aeb\", \"afr\", \"als\", \"amh\", \"apc\", \"arb\", \"ars\", \"ary\", \"arz\", \"asm\", \"ast\", \"awa\", \"ayr\", \"azb\", \"azj\", \"bak\", \"bam\", \"ban\", \"bel\", \"bem\", \"ben\", \"bho\", \"bjn\", \"bod\", \"bos\", \"bug\", \"bul\", \"cat\", \"ceb\", \"ces\", \"cjk\", \"ckb\", \"cmn\", \"crh\", \"cym\", \"dan\", \"deu\", \"dik\", \"dyu\", \"dzo\", \"ekk\", \"ell\", \"eng\", \"epo\", \"eus\", \"ewe\", \"fao\", \"fij\", \"fil\", \"fin\", \"fon\", \"fra\", \"fur\", \"fuv\", \"gaz\", \"gla\", \"gle\", \"glg\", \"gug\", \"guj\", \"hat\", \"hau\", \"heb\", \"hin\", \"hne\", \"hrv\", \"hun\", \"hye\", \"ibo\", \"ilo\", \"ind\", \"isl\", \"ita\", \"jav\", \"jpn\", \"kab\", \"kac\", \"kam\", \"kan\", \"kas\", \"kat\", \"kaz\", \"kbp\", \"kea\", \"khk\", \"khm\", \"kik\", \"kin\", \"kir\", \"kmb\", \"kmr\", \"knc\", \"kor\", \"ktu\", \"lao\", \"lij\", \"lim\", \"lin\", \"lit\", \"lmo\", \"ltg\", \"ltz\", \"lua\", \"lug\", \"luo\", \"lus\", \"lvs\", \"mag\", \"mai\", \"mal\", \"mar\", \"min\", \"mkd\", \"mlt\", \"mni\", \"mos\", \"mri\", \"mya\", \"nld\", \"nno\", \"nob\", \"npi\", \"nso\", \"nus\", \"nya\", \"oci\", \"ory\", \"pag\", \"pan\", \"pap\", \"pbt\", \"pes\", \"plt\", \"pol\", \"por\", \"prs\", \"quy\", \"ron\", \"run\", \"rus\", \"sag\", \"san\", \"sat\", \"scn\", \"shn\", \"sin\", \"slk\", \"slv\", \"smo\", \"sna\", \"snd\", \"som\", \"sot\", \"spa\", \"srd\", \"srp\", \"ssw\", \"sun\", \"swe\", \"swh\", \"szl\", \"tam\", \"taq\", \"tat\", \"tel\", \"tgk\", \"tha\", \"tir\", \"tpi\", \"tsn\", \"tso\", \"tuk\", \"tum\", \"tur\", \"twi\", \"uig\", \"ukr\", \"umb\", \"urd\", \"uzn\", \"vec\", \"vie\", \"war\", \"wol\", \"xho\", \"ydd\", \"yor\", \"yue\", \"zgh\", \"zsm\", \"zul\"], \"tags\": [\"web-crawled\"]}",
+      "title": "HuggingFaceFW/finepdfs-edu",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
+      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2026-07-08T12:37:21.000Z",
+      "updated_at": "2025-11-11T18:49:02.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12008,20 +12036,6 @@
         "doi": []
       },
       "updated_at": "2026-06-11T09:20:44.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:allenai/olmo-mix-1124",
-      "type": "dataset",
-      "title": "allenai/olmo-mix-1124",
-      "url": "https://huggingface.co/datasets/allenai/olmo-mix-1124",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\"], \"pretty_name\": \"OLMo 2 Mix (November 2024)\", \"size_categories\": [\"1B<n<10B\"], \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"algebraic-stack\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/algebraic-stack/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"arxiv\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arxiv/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"dclm\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dclm/**/*\"}], \"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"previous_word_count\", \"dtype\": \"string\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"open-web-math\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/open-web-math/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"pes2o\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pes2o/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"starcoder\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/starcoder/**/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}, {\"config_name\": \"wiki\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wiki/*\"}], \"features\": [{\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"added\", \"dtype\": \"string\"}, {\"name\": \"created\", \"dtype\": \"string\"}, {\"name\": \"attributes\", \"dtype\": \"string\"}, {\"name\": \"doc\", \"dtype\": \"string\"}, {\"name\": \"id\", \"dtype\": \"string\"}, {\"name\": \"metadata\", \"dtype\": \"string\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"version\", \"dtype\": \"string\"}]}]}",
-      "identifiers": {
-        "arxiv": [],
-        "doi": []
-      },
-      "updated_at": "2025-08-19T18:45:37.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12043,16 +12057,16 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finepdfs-edu",
+      "id": "hf:dataset:HuggingFaceFW/finephrase",
       "type": "dataset",
-      "title": "HuggingFaceFW/finepdfs-edu",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu",
-      "description": "{\"license\": \"odc-by\", \"task_categories\": [\"text-generation\"], \"language\": [\"en\", \"de\", \"ja\", \"fr\", \"es\", \"it\", \"ru\", \"pt\", \"pl\", \"nl\", \"cs\", \"zh\", \"ro\", \"sv\", \"hu\", \"sk\", \"uk\", \"th\", \"da\", \"id\", \"el\", \"fi\", \"ca\", \"tr\", \"dag\", \"hr\", \"fa\", \"bg\", \"nb\", \"kiu\", \"ar\", \"vi\", \"sr\", \"ko\", \"sl\", \"lt\", \"hi\", \"he\", \"bs\", \"ms\", \"et\", \"lv\", \"bn\", \"frp\", \"is\", \"glk\", \"eu\", \"gl\", \"sq\", \"mk\", \"mr\", \"ne\", \"ka\", \"la\", \"pcm\", \"mt\", \"cy\", \"vec\", \"hy\", \"nrm\", \"wuu\", \"anp\", \"bcc\", \"ur\", \"af\", \"az\", \"ta\", \"kk\", \"nn\"], \"pretty_name\": \"FinePDFs-Edu\", \"size_categories\": [\"n>1T\"], \"configs\": [{\"config_name\": \"eng_Latn\", \"default\": true, \"data_files\": [{\"split\": \"train\", \"path\": \"data/eng_Latn/train/*\"}]}, {\"config_name\": \"deu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/deu_Latn/train/*\"}]}, {\"config_name\": \"jpn_Jpan\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/jpn_Jpan/train/*\"}]}, {\"config_name\": \"fra_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fra_Latn/train/*\"}]}, {\"config_name\": \"spa_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/spa_Latn/train/*\"}]}, {\"config_name\": \"ita_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ita_Latn/train/*\"}]}, {\"config_name\": \"rus_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/rus_Cyrl/train/*\"}]}, {\"config_name\": \"por_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/por_Latn/train/*\"}]}, {\"config_name\": \"pol_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pol_Latn/train/*\"}]}, {\"config_name\": \"nld_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nld_Latn/train/*\"}]}, {\"config_name\": \"ces_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ces_Latn/train/*\"}]}, {\"config_name\": \"cmn_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cmn_Hani/train/*\"}]}, {\"config_name\": \"ron_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ron_Latn/train/*\"}]}, {\"config_name\": \"swe_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/swe_Latn/train/*\"}]}, {\"config_name\": \"hun_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hun_Latn/train/*\"}]}, {\"config_name\": \"slk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slk_Latn/train/*\"}]}, {\"config_name\": \"ukr_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ukr_Cyrl/train/*\"}]}, {\"config_name\": \"tha_Thai\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tha_Thai/train/*\"}]}, {\"config_name\": \"dan_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dan_Latn/train/*\"}]}, {\"config_name\": \"ind_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ind_Latn/train/*\"}]}, {\"config_name\": \"ell_Grek\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ell_Grek/train/*\"}]}, {\"config_name\": \"fin_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fin_Latn/train/*\"}]}, {\"config_name\": \"cat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cat_Latn/train/*\"}]}, {\"config_name\": \"tur_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tur_Latn/train/*\"}]}, {\"config_name\": \"dag_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/dag_Latn/train/*\"}]}, {\"config_name\": \"hrv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hrv_Latn/train/*\"}]}, {\"config_name\": \"fas_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/fas_Arab/train/*\"}]}, {\"config_name\": \"bul_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bul_Cyrl/train/*\"}]}, {\"config_name\": \"nob_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nob_Latn/train/*\"}]}, {\"config_name\": \"kiu_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kiu_Latn/train/*\"}]}, {\"config_name\": \"arb_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/arb_Arab/train/*\"}]}, {\"config_name\": \"vie_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vie_Latn/train/*\"}]}, {\"config_name\": \"srp_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/srp_Cyrl/train/*\"}]}, {\"config_name\": \"kor_Hang\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kor_Hang/train/*\"}]}, {\"config_name\": \"slv_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/slv_Latn/train/*\"}]}, {\"config_name\": \"lit_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lit_Latn/train/*\"}]}, {\"config_name\": \"hin_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hin_Deva/train/*\"}]}, {\"config_name\": \"heb_Hebr\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/heb_Hebr/train/*\"}]}, {\"config_name\": \"bos_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bos_Latn/train/*\"}]}, {\"config_name\": \"zsm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/zsm_Latn/train/*\"}]}, {\"config_name\": \"ekk_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ekk_Latn/train/*\"}]}, {\"config_name\": \"lvs_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lvs_Latn/train/*\"}]}, {\"config_name\": \"ben_Beng\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/ben_Beng/train/*\"}]}, {\"config_name\": \"frp_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/frp_Latn/train/*\"}]}, {\"config_name\": \"isl_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/isl_Latn/train/*\"}]}, {\"config_name\": \"glk_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glk_Arab/train/*\"}]}, {\"config_name\": \"eus_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/eus_Latn/train/*\"}]}, {\"config_name\": \"glg_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/glg_Latn/train/*\"}]}, {\"config_name\": \"als_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/als_Latn/train/*\"}]}, {\"config_name\": \"mkd_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mkd_Cyrl/train/*\"}]}, {\"config_name\": \"mar_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mar_Deva/train/*\"}]}, {\"config_name\": \"npi_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/npi_Deva/train/*\"}]}, {\"config_name\": \"kat_Geor\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kat_Geor/train/*\"}]}, {\"config_name\": \"lat_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/lat_Latn/train/*\"}]}, {\"config_name\": \"pcm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/pcm_Latn/train/*\"}]}, {\"config_name\": \"mlt_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/mlt_Latn/train/*\"}]}, {\"config_name\": \"cym_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/cym_Latn/train/*\"}]}, {\"config_name\": \"vec_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/vec_Latn/train/*\"}]}, {\"config_name\": \"hye_Armn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/hye_Armn/train/*\"}]}, {\"config_name\": \"nrm_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nrm_Latn/train/*\"}]}, {\"config_name\": \"wuu_Hani\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/wuu_Hani/train/*\"}]}, {\"config_name\": \"anp_Deva\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/anp_Deva/train/*\"}]}, {\"config_name\": \"bcc_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/bcc_Arab/train/*\"}]}, {\"config_name\": \"urd_Arab\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/urd_Arab/train/*\"}]}, {\"config_name\": \"afr_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/afr_Latn/train/*\"}]}, {\"config_name\": \"azj_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/azj_Latn/train/*\"}]}, {\"config_name\": \"tam_Taml\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/tam_Taml/train/*\"}]}, {\"config_name\": \"kaz_Cyrl\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/kaz_Cyrl/train/*\"}]}, {\"config_name\": \"nno_Latn\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/nno_Latn/train/*\"}]}]}",
+      "title": "HuggingFaceFW/finephrase",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
+      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
       "identifiers": {
         "arxiv": [],
         "doi": []
       },
-      "updated_at": "2025-11-11T18:49:02.000Z",
+      "updated_at": "2026-03-31T06:26:09.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12089,16 +12103,20 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:HuggingFaceFW/finephrase",
+      "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
       "type": "dataset",
-      "title": "HuggingFaceFW/finephrase",
-      "url": "https://huggingface.co/datasets/HuggingFaceFW/finephrase",
-      "description": "{\"language\": [\"en\"], \"license\": \"odc-by\", \"tags\": [\"SmolLM2-1.7B-Instruct\", \"fineweb-edu\", \"synthetic\", \"datatrove\"], \"annotations_creators\": [\"machine-generated\"], \"language_creators\": [\"found\"], \"pretty_name\": \"HuggingFaceFW/finephrase\", \"size_categories\": [\"n>1M\"], \"source_datasets\": [\"HuggingFaceFW/fineweb-edu/sample-350BT\"], \"task_categories\": [\"text-generation\"], \"task_ids\": [\"language-modeling\"], \"configs\": [{\"config_name\": \"all\", \"data_files\": [{\"split\": \"train\", \"path\": [\"faq/**/*.parquet\", \"math/**/*.parquet\", \"table/**/*.parquet\", \"tutorial/**/*.parquet\"]}]}, {\"config_name\": \"faq\", \"data_files\": [{\"split\": \"train\", \"path\": \"faq/**/*.parquet\"}]}, {\"config_name\": \"math\", \"data_files\": [{\"split\": \"train\", \"path\": \"math/**/*.parquet\"}]}, {\"config_name\": \"table\", \"data_files\": [{\"split\": \"train\", \"path\": \"table/**/*.parquet\"}]}, {\"config_name\": \"tutorial\", \"data_files\": [{\"split\": \"train\", \"path\": \"tutorial/**/*.parquet\"}]}], \"train-eval-index\": [{\"config\": \"all\", \"task\": \"text-generation\", \"task_id\": \"language-modeling\", \"splits\": {\"train_split\": \"train\", \"eval_split\": null}, \"col_mapping\": {\"text\": \"text\"}}]}",
+      "title": "nvidia/Nemotron-Math-Proofs-v1",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+      "description": "{\"language\": [\"en\"], \"license\": \"cc-by-sa-4.0\", \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"lean\", \"path\": \"data/lean.jsonl\"}]}], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"lean4\", \"proof-generation\", \"theorem-proving\", \"synthetic-data\"]}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2508.03613",
+          "2508.10925",
+          "2512.15489"
+        ],
         "doi": []
       },
-      "updated_at": "2026-03-31T06:26:09.000Z",
+      "updated_at": "2026-01-05T18:40:31.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12115,24 +12133,6 @@
         "doi": []
       },
       "updated_at": "2026-07-07T15:21:11.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
-      "id": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Math-Proofs-v1",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
-      "description": "{\"language\": [\"en\"], \"license\": \"cc-by-sa-4.0\", \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"lean\", \"path\": \"data/lean.jsonl\"}]}], \"task_categories\": [\"text-generation\"], \"tags\": [\"mathematical-reasoning\", \"lean4\", \"proof-generation\", \"theorem-proving\", \"synthetic-data\"]}",
-      "identifiers": {
-        "arxiv": [
-          "2508.03613",
-          "2508.10925",
-          "2512.15489"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-01-05T18:40:31.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12169,22 +12169,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "type": "dataset",
-      "title": "mlfoundations/dclm-baseline-1.0",
-      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
-      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
-      "identifiers": {
-        "arxiv": [
-          "2406.11794"
-        ],
-        "doi": []
-      },
-      "updated_at": "2024-07-22T15:27:52.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:IFM/MegaMath",
       "type": "dataset",
       "title": "IFM/MegaMath",
@@ -12200,6 +12184,22 @@
       "is_external": true,
       "verification": "api_confirmed_public_metadata",
       "resolved_from_alias": "LLM360/MegaMath"
+    },
+    {
+      "id": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "type": "dataset",
+      "title": "mlfoundations/dclm-baseline-1.0",
+      "url": "https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0",
+      "description": "{\"license\": \"cc-by-4.0\", \"dataset_info\": {\"features\": [{\"name\": \"bff_contained_ngram_count_before_dedupe\", \"dtype\": \"int64\"}, {\"name\": \"language_id_whole_page_fasttext\", \"struct\": [{\"name\": \"en\", \"dtype\": \"float64\"}]}, {\"name\": \"metadata\", \"struct\": [{\"name\": \"Content-Length\", \"dtype\": \"string\"}, {\"name\": \"Content-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Block-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Concurrent-To\", \"dtype\": \"string\"}, {\"name\": \"WARC-Date\", \"dtype\": \"timestamp[s]\"}, {\"name\": \"WARC-IP-Address\", \"dtype\": \"string\"}, {\"name\": \"WARC-Identified-Payload-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Payload-Digest\", \"dtype\": \"string\"}, {\"name\": \"WARC-Record-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Target-URI\", \"dtype\": \"string\"}, {\"name\": \"WARC-Type\", \"dtype\": \"string\"}, {\"name\": \"WARC-Warcinfo-ID\", \"dtype\": \"string\"}, {\"name\": \"WARC-Truncated\", \"dtype\": \"string\"}]}, {\"name\": \"previous_word_count\", \"dtype\": \"int64\"}, {\"name\": \"text\", \"dtype\": \"string\"}, {\"name\": \"url\", \"dtype\": \"string\"}, {\"name\": \"warcinfo\", \"dtype\": \"string\"}, {\"name\": \"fasttext_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train_prob\", \"dtype\": \"float64\"}]}}",
+      "identifiers": {
+        "arxiv": [
+          "2406.11794"
+        ],
+        "doi": []
+      },
+      "updated_at": "2024-07-22T15:27:52.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
     },
     {
       "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1",
@@ -12221,22 +12221,6 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
-      "type": "dataset",
-      "title": "nvidia/Nemotron-Terminal-Corpus",
-      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
-      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
-      "identifiers": {
-        "arxiv": [
-          "2602.21193"
-        ],
-        "doi": []
-      },
-      "updated_at": "2026-11-07T02:27:21.000Z",
-      "is_external": true,
-      "verification": "api_confirmed_public_metadata"
-    },
-    {
       "id": "hf:dataset:nvidia/Nemotron-Pretraining-Specialized-v1.1",
       "type": "dataset",
       "title": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
@@ -12251,18 +12235,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
+      "id": "hf:dataset:nvidia/Nemotron-Terminal-Corpus",
       "type": "dataset",
-      "title": "open-thoughts/OpenThoughts3-1.2M",
-      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"difficulty\", \"dtype\": \"int64\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 59763369750, \"num_examples\": 1200000}], \"download_size\": 28188197544, \"dataset_size\": 59763369750}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}], \"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"tags\": [\"reasoning\", \"mathematics\", \"code\", \"science\"], \"library_name\": \"datasets\"}",
+      "title": "nvidia/Nemotron-Terminal-Corpus",
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+      "description": "{\"license\": \"cc-by-4.0\", \"task_categories\": [\"question-answering\"], \"language\": [\"en\"], \"tags\": [\"code\"], \"size_categories\": [\"100K<n<1M\"], \"configs\": [{\"config_name\": \"dataset_adapters\", \"data_files\": [{\"split\": \"train\", \"path\": \"dataset_adapters/*.parquet\"}]}, {\"config_name\": \"skill_based_easy\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/easy/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_medium\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/medium/*/data_filtered.parquet\"}]}, {\"config_name\": \"skill_based_mixed\", \"data_files\": [{\"split\": \"train\", \"path\": \"synthetic_tasks/skill_based/mixed/*/data_filtered.parquet\"}]}]}",
       "identifiers": {
         "arxiv": [
-          "2506.04178"
+          "2602.21193"
         ],
         "doi": []
       },
-      "updated_at": "2025-06-09T16:14:06.000Z",
+      "updated_at": "2026-11-07T02:27:21.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12283,16 +12267,18 @@
       "verification": "api_confirmed_public_metadata"
     },
     {
-      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "id": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
       "type": "dataset",
-      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
-      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "title": "open-thoughts/OpenThoughts3-1.2M",
+      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"difficulty\", \"dtype\": \"int64\"}, {\"name\": \"source\", \"dtype\": \"string\"}, {\"name\": \"domain\", \"dtype\": \"string\"}, {\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 59763369750, \"num_examples\": 1200000}], \"download_size\": 28188197544, \"dataset_size\": 59763369750}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}], \"license\": \"apache-2.0\", \"task_categories\": [\"text-generation\"], \"tags\": [\"reasoning\", \"mathematics\", \"code\", \"science\"], \"library_name\": \"datasets\"}",
       "identifiers": {
-        "arxiv": [],
+        "arxiv": [
+          "2506.04178"
+        ],
         "doi": []
       },
-      "updated_at": "2025-09-09T08:20:19.000Z",
+      "updated_at": "2025-06-09T16:14:06.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -12326,6 +12312,20 @@
         "doi": []
       },
       "updated_at": "2025-11-06T05:11:09.000Z",
+      "is_external": true,
+      "verification": "api_confirmed_public_metadata"
+    },
+    {
+      "id": "hf:dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "type": "dataset",
+      "title": "utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "url": "https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124",
+      "description": "{\"dataset_info\": {\"features\": [{\"name\": \"conversations\", \"list\": [{\"name\": \"from\", \"dtype\": \"string\"}, {\"name\": \"value\", \"dtype\": \"string\"}]}, {\"name\": \"dataset\", \"dtype\": \"string\"}, {\"name\": \"language\", \"dtype\": \"string\"}, {\"name\": \"task\", \"dtype\": \"string\"}, {\"name\": \"ArmoRM-score\", \"dtype\": \"float64\"}, {\"name\": \"educational_score\", \"dtype\": \"float64\"}, {\"name\": \"category\", \"dtype\": \"string\"}, {\"name\": \"complexity\", \"dtype\": \"float64\"}, {\"name\": \"readability\", \"dtype\": \"float64\"}, {\"name\": \"langid\", \"dtype\": \"string\"}, {\"name\": \"messages\", \"dtype\": \"float64\"}, {\"name\": \"dedup_0.9\", \"dtype\": \"bool\"}, {\"name\": \"dedup_0.8\", \"dtype\": \"bool\"}], \"splits\": [{\"name\": \"train\", \"num_bytes\": 857723304, \"num_examples\": 340286}], \"download_size\": 389740376, \"dataset_size\": 857723304}, \"configs\": [{\"config_name\": \"default\", \"data_files\": [{\"split\": \"train\", \"path\": \"data/train-*\"}]}]}",
+      "identifiers": {
+        "arxiv": [],
+        "doi": []
+      },
+      "updated_at": "2025-09-09T08:20:19.000Z",
       "is_external": true,
       "verification": "api_confirmed_public_metadata"
     },
@@ -15078,15 +15078,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:allenai/Dolci-Instruct-SFT",
-      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2512.13961",
-      "context": "Both public metadata records contain arxiv:2512.13961",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b",
       "target": "openaire:doi_dedup___::0cf39ecf056ba0d4f09fe7c7aeddaef2",
       "status": "identifier_match",
@@ -15111,6 +15102,15 @@
       "evidence_type": "arxiv",
       "evidence": "2510.01179",
       "context": "Both public metadata records contain arxiv:2510.01179",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:allenai/Dolci-Instruct-SFT",
+      "target": "openaire:doi_dedup___::15e8a4a172234c499f7aecbe6af5a603",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2512.13961",
+      "context": "Both public metadata records contain arxiv:2512.13961",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -15195,15 +15195,6 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
-      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2508.14444",
-      "context": "Both public metadata records contain arxiv:2508.14444",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:nvidia/Nemotron-Math-Proofs-v1",
       "target": "openaire:doi_dedup___::1a3277909982977a8e6fab6933c3659a",
       "status": "identifier_match",
@@ -15231,6 +15222,15 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
+      "source": "hf:dataset:nvidia/Nemotron-CC-v2",
+      "target": "openaire:doi_dedup___::9e73395fd7477cac05491b9201cb791c",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2508.14444",
+      "context": "Both public metadata records contain arxiv:2508.14444",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
       "source": "hf:dataset:nvidia/Nemotron-Math-v2",
       "target": "openaire:doi_dedup___::28927c151ce3da8b3ba89fa98fc76d97",
       "status": "identifier_match",
@@ -15249,21 +15249,21 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
-      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2406.11794",
-      "context": "Both public metadata records contain arxiv:2406.11794",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:IFM/MegaMath",
       "target": "openaire:doi_dedup___::164bdcf076b7281d085cc169cb1e2423",
       "status": "identifier_match",
       "evidence_type": "arxiv",
       "evidence": "2504.02807",
       "context": "Both public metadata records contain arxiv:2504.02807",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:mlfoundations/dclm-baseline-1.0",
+      "target": "openaire:doi_dedup___::fa204c6ab454ff65e99d82f522f2e466",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2406.11794",
+      "context": "Both public metadata records contain arxiv:2406.11794",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
@@ -15312,21 +15312,21 @@
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
-      "source": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
-      "target": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
-      "status": "identifier_match",
-      "evidence_type": "arxiv",
-      "evidence": "2506.04178",
-      "context": "Both public metadata records contain arxiv:2506.04178",
-      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
-    },
-    {
       "source": "hf:dataset:open-web-math/open-web-math",
       "target": "openaire:doi_dedup___::7e37ef6754b1894804cda904eb104f04",
       "status": "identifier_match",
       "evidence_type": "arxiv",
       "evidence": "2310.06786",
       "context": "Both public metadata records contain arxiv:2310.06786",
+      "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
+    },
+    {
+      "source": "hf:dataset:open-thoughts/OpenThoughts3-1.2M",
+      "target": "openaire:doi_dedup___::1b1ca0f5429bec58f5ca6d7b223b79df",
+      "status": "identifier_match",
+      "evidence_type": "arxiv",
+      "evidence": "2506.04178",
+      "context": "Both public metadata records contain arxiv:2506.04178",
       "reason": "Shared persistent scholarly ID; not proof of usage, endorsement, or scientific dependence"
     },
     {
