@@ -12,6 +12,11 @@ The existing European opportunity workflow now supports the optional `arxiv_disc
 
 See the official [API documentation](https://info.arxiv.org/help/api/user-manual.html) and [terms](https://info.arxiv.org/help/api/tou.html). Page-budget truncation and failed requests are reported, not interpreted as exhaustive coverage. A valid zero-result feed is distinct from a transport/parser failure. This pilot does not yet resolve institutions, verify EU affiliation, or guarantee discovery of all recent papers. The previously known Multiverse case in issue #56 is a retrospective acceptance case, not an independent holdout.
 
+
+### Organization enrichment
+
+With `organization_discovery` enabled, at most six papers per run are selected by least-recently attempted version. When Atom affiliations are missing, the first 512 KiB of the canonical versioned arXiv HTML is inspected for explicit LaTeXML author-affiliation elements; the body is not persisted. At most 16 ROR v2 affiliation queries per run are made and successful observations are cached for 30 days. Results are retained in the existing cumulative `organization_discovery` state, with paper/version, original affiliation text, source URL, ROR identifier, match evidence and registry country codes. Ambiguous, absent or budget-deferred results stay unknown. EU means EU-27 location listed in ROR, not proof of author geography, a company's headquarters or collaboration. HTML affiliations are paper-level rather than per-author links. No automatic promotion. [ROR affiliation API](https://ror.readme.io/docs/api-affiliation), [schema](https://ror.readme.io/docs/ror-data-structure). OpenAIRE enrichment remains a separate next step.
+
 ## Real GitHub Search API versus graph-context holdout (2026-11-21)
 
 The [preregistered holdout experiment](studies/github_search_graph_holdout_20261121/README.md) compares real stratified GitHub Search API results with a typed, source-verified GitHub context overlay **on exactly the same previously unreviewed issue pool**. It checks author activity, source changes, linked PRs, literal scholarly or Hugging Face references and source-code paths, while preserving the original native-search ranking and generating a method-blinded evaluation sheet.
