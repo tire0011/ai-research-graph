@@ -3,6 +3,7 @@
   "arxiv_discovery": true,
   "organization_discovery": true,
   "openaire_discovery": true,
+  "organization_expansion": true,
   "web_seeds": ["https://raise4science.eu/"],
   "scope": "Curated EU-based open AI research and enabling infrastructure; verified source registry expanded 2026-11-21. This is not a census; historical pilot cohorts must remain separately identified.",
   "selection": "Each source must have a directly inspected public GitHub repository. Expand via reviewed PRs; do not imply these are all EU AI initiatives.",
