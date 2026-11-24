@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "status": "public_evidence_only",
-  "generated_at_utc": "2026-11-19T21:32:59.874294+00:00",
-  "source_matcher_run": "2026-11-19T21:31:59.359725+00:00",
+  "generated_at_utc": "2026-11-24T17:58:52.391034+00:00",
+  "source_matcher_run": "2026-11-24T17:58:01.456929+00:00",
   "source_items_rechecked": 28,
   "pairs_checked": 24,
-  "comments_read": 139,
+  "comments_read": 150,
   "counts": {
     "direct_task_link": 0,
     "shared_public_participants": 10,
@@ -533,7 +533,8 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/3",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133103534",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133207263",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133246012"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-6133246012",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/3#issuecomment-7106370092"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22"
@@ -541,7 +542,7 @@
         }
       ],
       "references": [],
-      "comments_source": 3,
+      "comments_source": 5,
       "comments_target": 1,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -556,7 +557,7 @@
       "public_coordination_signal": "no_direct_public_link_observed",
       "shared_people": [],
       "references": [],
-      "comments_source": 3,
+      "comments_source": 5,
       "comments_target": 0,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -585,7 +586,10 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6196681212",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6764049782",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6957263552",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7015231487"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7015231487",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7053303445",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7087107677",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7111234224"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22",
@@ -612,7 +616,12 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6795969898",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6955615702",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7054513374",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7054550333",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7098914702",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7098953744",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7112087710"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/22"
@@ -620,7 +629,7 @@
         }
       ],
       "references": [],
-      "comments_source": 19,
+      "comments_source": 28,
       "comments_target": 1,
       "new_collaboration_confirmed": false,
       "requires_human_review": true
@@ -656,7 +665,12 @@
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6795969898",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6829231584",
             "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6955615702",
-            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727"
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-6986559727",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7054513374",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7054550333",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7098914702",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7098953744",
+            "https://github.com/OpenEuroLLM/web-data-processing/issues/8#issuecomment-7112087710"
           ],
           "target_urls": [
             "https://github.com/hplt-project/warc2text-runner/issues/6",
@@ -666,7 +680,7 @@
         }
       ],
       "references": [],
-      "comments_source": 19,
+      "comments_source": 28,
       "comments_target": 4,
       "new_collaboration_confirmed": false,
       "requires_human_review": true

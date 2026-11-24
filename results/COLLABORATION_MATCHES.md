@@ -1,7 +1,7 @@
 # Collaboration Matcher — cross-organization pilot
 
 **Review only. Rule-based matcher, not an LLM and not proof of duplicate effort.**
-Audited **670** public issues/PRs in **8** repositories, considering **197** recently opened active items. Found **24** candidate handoffs. Re-checked **28** underlying issue/PR sources.
+Audited **678** public issues/PRs in **8** repositories, considering **198** recently opened active items. Found **24** candidate handoffs. Re-checked **28** underlying issue/PR sources.
 
 **Same-input full-text baseline:** 4/24 suggestions are also the lexical baseline's top-1 target for that source. **This does not establish improved precision or recall.**
 
@@ -12,7 +12,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/warc2text / issue / open / SHA256 d0efd4d10dc3ec879537c86212cdd10e121a3d0e1d2280118ea7cb2cc68c5436
 - Possible related work: hplt-project/monotextor-slurm / issue / closed / SHA256 fd551bc90d760be0ae4250bb2a565bf33b0c8da27590f3234724cab5df392561
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 32.614; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 32.689; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @ZJaume
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -27,7 +27,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 ecb0d2f70fdee40a8970c59dabbf96f8f6a351fd0dce31163ce64d4bc23363cd
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 31.938; baseline top-1 agrees: yes (baseline target ID: github:hplt-project/HPLT-textpipes#9).
+- Ranking score: 32.014; baseline top-1 agrees: yes (baseline target ID: github:hplt-project/HPLT-textpipes#9).
 - Suggested assignees (not contacted): @nvanva, @oepen
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -41,7 +41,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/warc2text / issue / open / SHA256 d0efd4d10dc3ec879537c86212cdd10e121a3d0e1d2280118ea7cb2cc68c5436
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 aab15a7df6112e6a2be4fd4de1abba903d75bbfc6ccda59c1e84dc47d3908b80
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 27.257; baseline top-1 agrees: yes (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 27.319; baseline top-1 agrees: yes (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @nvanva, @oepen
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -56,7 +56,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 ecb0d2f70fdee40a8970c59dabbf96f8f6a351fd0dce31163ce64d4bc23363cd
 - Possible related work: hplt-project/HPLT-textpipes / pull_request / closed / SHA256 5ccba177b5f7bb930e7b93c280890adba195794793259cf813d20725e5ac817a
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 26.581; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#9).
+- Ranking score: 26.644; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#9).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -70,7 +70,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec
 - Possible related work: hplt-project/HPLT-textpipes / pull_request / closed / SHA256 16701edb91eb2ee2a6c20abf8f63821252ac27b73f0c105173b8ecf8a603fee4
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 25.743; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 25.805; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -85,7 +85,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 da1ef26f63fa097d38f34a984399f68abb1ce63e59f0c6a34720e3cba39e83ec
 - Possible related work: hplt-project/warc2text-runner / issue / closed / SHA256 0e3c996962897b825bf2fe4d2cdc76727eb73b8f377c92996b348b0784c2a7fd
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 22.308; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 22.358; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -99,7 +99,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 c536125202804a56c61942837bb338fcc6d5cb13beab404621d93179a9a5677d
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 17.801; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 17.839; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @ZJaume, @oepen
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -112,7 +112,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 c3dc6cd8ff795cf5d7f7c658bb416174de9183beeca2ffbde2c295a2d34467a7
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 17.801; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 17.839; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -125,7 +125,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba
 - Possible related work: hplt-project/monotextor-slurm / issue / closed / SHA256 fd551bc90d760be0ae4250bb2a565bf33b0c8da27590f3234724cab5df392561
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 15.17; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
+- Ranking score: 15.207; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
 - Suggested assignees (not contacted): @ZJaume
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -139,7 +139,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 f60963ca7f0673544d33bf3d599f942befa5365705eb63a2a7e94c18924a18d9
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 12.938; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
+- Ranking score: 12.976; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -152,7 +152,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 4452388e694a4f46c25509c0de735248daae0670c7ab0d58eaa0a0eeb01a40cd
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 12.938; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#133).
+- Ranking score: 12.976; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#133).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -165,7 +165,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 8ab196d2603c0a39a6a27890a83f894bcc8db8224f0955b51a6e6a3a5ff70584
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 12.938; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
+- Ranking score: 12.976; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -178,7 +178,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 4452388e694a4f46c25509c0de735248daae0670c7ab0d58eaa0a0eeb01a40cd
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 df48eb6c4d53295923feb9d152e9e1974d46e8c6fd0ad0331df56de1b36ff473
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 12.908; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#133).
+- Ranking score: 12.945; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#133).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - Multiple matched technical terms; **still not confirmed reusable**.
@@ -192,7 +192,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 00efe157f2cb1cb2ba128461e0a8744dc9b8bb4bbc2cb89936deb847ebfb7e35
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 3574a597308492298cbd573784064b7824ec0cca1045eb5432af97ce8383252c
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 10.733; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#29).
+- Ranking score: 10.758; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#29).
 - Suggested assignees (not contacted): @nvanva
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -205,7 +205,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 00efe157f2cb1cb2ba128461e0a8744dc9b8bb4bbc2cb89936deb847ebfb7e35
 - Possible related work: hplt-project/HPLT-textpipes / issue / closed / SHA256 46049d90e424be16cbe569d8df9c24e18cc2bb4a51d4eb06f9d892b474249f9f
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 10.733; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#29).
+- Ranking score: 10.758; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#29).
 - Suggested assignees (not contacted): @nvanva, @oepen
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -218,7 +218,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 1a4769a95e100eda9f656ca822cf45096f681cd1e88f11a36f0b509cca5ef344
 - Possible related work: hplt-project/warc2text-runner / issue / closed / SHA256 db82b1a21482c9c8d943a94fb932d90839bf8ad8243acdba77e574f23a3cdb8a
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 9.819; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 9.844; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @nvanva
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -231,7 +231,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 1a4769a95e100eda9f656ca822cf45096f681cd1e88f11a36f0b509cca5ef344
 - Possible related work: hplt-project/warc2text-runner / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 9.819; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 9.844; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -244,7 +244,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e
 - Possible related work: hplt-project/warc2text-runner / issue / closed / SHA256 db82b1a21482c9c8d943a94fb932d90839bf8ad8243acdba77e574f23a3cdb8a
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 9.819; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 9.844; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @nvanva
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -257,7 +257,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/web-data-processing / issue / open / SHA256 ed185fc6ff1ef2c3e059152801691ee71e85c64b7b221bdce9294745dd782e2e
 - Possible related work: hplt-project/warc2text-runner / issue / closed / SHA256 0d94917256843567ef3e993a5bfbd2524a06c76eeb38d7c776c6facf305f01ad
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 9.819; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
+- Ranking score: 9.844; baseline top-1 agrees: no (baseline target ID: github:hplt-project/HPLT-textpipes#18).
 - Suggested assignees (not contacted): @ZJaume, @nvanva
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -270,7 +270,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 2e4058574a103fb794120eb430bbfc666060b21d8bccf87d9c9b880508e0d5fb
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 8.49; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#114).
+- Ranking score: 8.515; baseline top-1 agrees: no (baseline target ID: github:LAION-AI/CLIP_benchmark#114).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -283,7 +283,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 f60963ca7f0673544d33bf3d599f942befa5365705eb63a2a7e94c18924a18d9
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 3bc28d2d5ddbdaca6c343793b8bd3c640b5a21ee87141cad70154f325e423214
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 8.49; baseline top-1 agrees: yes (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
+- Ranking score: 8.515; baseline top-1 agrees: yes (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -296,7 +296,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 d4a367cadaa3aa00bc144ea65a63bb4842aadaf912d5f7b5e2928f61ee0c4c8a
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 8.49; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
+- Ranking score: 8.515; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -309,7 +309,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 99bac3aa3e6944c44ac3f173ffde93b7e71046438847cc1324e3e6b8a51e21ba
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 8.49; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
+- Ranking score: 8.515; baseline top-1 agrees: no (baseline target ID: github:hplt-project/warc2text-runner#17).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.
@@ -322,7 +322,7 @@ Audited **670** public issues/PRs in **8** repositories, considering **197** rec
 - Source: OpenEuroLLM/Taskboard / issue / open / SHA256 8ab196d2603c0a39a6a27890a83f894bcc8db8224f0955b51a6e6a3a5ff70584
 - Possible related work: LAION-AI/CLIP_benchmark / pull_request / closed / SHA256 3bc28d2d5ddbdaca6c343793b8bd3c640b5a21ee87141cad70154f325e423214
 - Category: possible_prior_work — **not a verified solution or collaboration**.
-- Ranking score: 8.49; baseline top-1 agrees: yes (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
+- Ranking score: 8.515; baseline top-1 agrees: yes (baseline target ID: github:LAION-AI/CLIP_benchmark#113).
 - Suggested assignees (not contacted): not specified
 - Ranking text truncated: no
 - **Single-term lexical match: extra technical/mechanism review required;** not a confirmed reusable research artifact.

@@ -2,7 +2,7 @@
 
 **No outreach. No automatic assertion of new collaboration.**
 
-24 shortlisted pairs, 28 original tasks rechecked, 139 comments inspected.
+24 shortlisted pairs, 28 original tasks rechecked, 150 comments inspected.
 
 Direct task links: 0; shared participants: 10; broader repo links: 2; no directly visible link: 12.
 
@@ -136,7 +136,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @nvanva
-- Issue comments inspected: 3 / 1
+- Issue comments inspected: 5 / 1
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 17. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/3) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/pull/3)
@@ -144,7 +144,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: no_direct_public_link_observed
 - Technical terms: warc2text
 - Public participants in both: none found
-- Issue comments inspected: 3 / 0
+- Issue comments inspected: 5 / 0
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 18. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/22)
@@ -152,7 +152,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @akutuzov, @nvanva
-- Issue comments inspected: 19 / 1
+- Issue comments inspected: 28 / 1
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 19. [Active task](https://github.com/OpenEuroLLM/web-data-processing/issues/8) ↔ [Prior task](https://github.com/hplt-project/warc2text-runner/issues/6)
@@ -160,7 +160,7 @@ Direct task links: 0; shared participants: 10; broader repo links: 2; no directl
 - Observation: shared_public_participants
 - Technical terms: warc2text
 - Public participants in both: @nvanva
-- Issue comments inspected: 19 / 4
+- Issue comments inspected: 28 / 4
 - Next: manually check relevance and whether these people already cooperate.
 
 ## 20. [Active task](https://github.com/OpenEuroLLM/Taskboard/issues/119) ↔ [Prior task](https://github.com/LAION-AI/CLIP_benchmark/pull/19)

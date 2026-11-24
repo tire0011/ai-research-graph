@@ -1,6 +1,6 @@
 {
   "status": "read_only_human_review",
-  "generated_at_utc": "2026-11-19T21:31:59.308696+00:00",
+  "generated_at_utc": "2026-11-24T17:58:01.403328+00:00",
   "scope": "Bounded cross-project research-topic pilot; manually selected repos and keywords. Not a census or code-level duplicate detector.",
   "repositories_checked": 9,
   "pairs_checked": 6,
@@ -13,7 +13,7 @@
       "repository_b": "utter-project/eurollm-evaluation",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/utter-project/eurollm-evaluation/blob/main/README.md",
-      "repo_pushed_a": "2026-11-18T10:47:52Z",
+      "repo_pushed_a": "2026-11-23T17:15:28Z",
       "repo_pushed_b": "2025-03-17T20:49:57Z",
       "shared_terms": [
         {
@@ -66,7 +66,7 @@
       "source_a": "https://github.com/OpenEuroLLM/web-data-processing/blob/main/README.md",
       "source_b": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
       "repo_pushed_a": "2026-11-09T13:57:56Z",
-      "repo_pushed_b": "2026-10-06T15:53:03Z",
+      "repo_pushed_b": "2026-11-20T17:02:56Z",
       "shared_terms": [
         {
           "term": "metadata extraction",
@@ -255,7 +255,7 @@
       "repository_b": "LAION-AI/CLIP_benchmark",
       "source_a": "https://github.com/OpenEuroLLM/oellm-eval/blob/main/README.md",
       "source_b": "https://github.com/LAION-AI/CLIP_benchmark/blob/main/README.md",
-      "repo_pushed_a": "2026-11-18T10:47:52Z",
+      "repo_pushed_a": "2026-11-23T17:15:28Z",
       "repo_pushed_b": "2026-11-17T19:16:18Z",
       "shared_terms": [
         {
@@ -325,7 +325,7 @@
       "source_a": "https://github.com/OpenEuroLLM/training-data-catalogue/blob/main/README.md",
       "source_b": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
       "repo_pushed_a": "2026-10-25T14:45:46Z",
-      "repo_pushed_b": "2026-10-06T15:53:03Z",
+      "repo_pushed_b": "2026-11-20T17:02:56Z",
       "shared_terms": [
         {
           "term": "dataset",
