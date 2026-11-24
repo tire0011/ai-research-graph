@@ -251,8 +251,9 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         web_state = discover_web(web_seeds, previous=previous.get("web_discovery"),
                                  referrals=web_referrals, platform_key=canonical,
                                  fetch=web_fetch, now=instant, max_pages=max_web_pages)
-        for target_url, proof in web_state["platform_refs"].items():
-            target = canonical(target_url)
+        for reference in web_state["platform_refs"]:
+            target = canonical(reference["target"])
+            proof = reference["evidence"]
             add(target, proof, "public web reference; affiliation unverified")
             pair = (proof["source_entity"], url_for(target))
             edges[pair] = {"source": pair[0], "target": pair[1], "relationship": "references",
