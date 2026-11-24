@@ -13,6 +13,7 @@ from http_util import get_json
 from arxiv_source_discovery import discover_publications
 from publication_organizations import resolve as resolve_organizations
 from publication_openaire import enrich as enrich_openaire
+from organization_source_expansion import expand as expand_organizations
 from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
@@ -22,7 +23,7 @@ ID = re.compile(r"[\w.-]+/[\w.-]+", re.ASCII)
 LIMITATIONS = [
     "Owner membership is a scope hint, not proof of geography or collaboration.",
     "Bounded first two pages; not an exhaustive index.",
-    "RAISE, CORDIS and OpenAIRE not enabled; endpoints and mapping require validation.",
+    "CORDIS not enabled; endpoint and mapping require validation.",
     "Explicit references prove references only, not dependencies or cooperation.",
     "No graph advantage established; search comparison and independent review pending.",
 ]
@@ -95,7 +96,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None, openaire_fetch=None):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None, openaire_fetch=None, organization_registry_fetch=None, organization_research_fetch=None):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -229,6 +230,14 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                                         previous=openaire_state, fetch=openaire_fetch)
         errors.extend(openaire_state["errors"])
 
+    expansion_state = copy.deepcopy(previous.get("organization_expansion"))
+    if config.get("organization_expansion", False) and organization_state and web_seeds:
+        expansion_state, referrals = expand_organizations(
+            organization_state, instant, previous=expansion_state,
+            registry_fetch=organization_registry_fetch, research_fetch=organization_research_fetch)
+        web_referrals.extend(referrals)
+        errors.extend(expansion_state["errors"])
+
     # FIFO across runs. Newly discovered links may themselves yield more links.
     # Never broaden to arbitrary owner listings or execute remote content.
     for _ in range(max_follow):
@@ -297,6 +306,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             "publication_discovery": publication_state,
             "organization_discovery": organization_state,
             "openaire_discovery": openaire_state,
+            "organization_expansion": expansion_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -355,6 +365,18 @@ def write_report(result, output):
             for record in observation.get("records", []):
                 lines += [f"  - {record['openaire_id']}: {len(record['organizations'])} organization(s), {len(record['projects'])} grant(s)"]
         lines += ["- " + x for x in openaire["limitations"]]
+    expansion = result.get("organization_expansion")
+    if expansion:
+        lines += ["", "## Organization-driven source expansion (review only)",
+                  f"Selected organizations: {len(expansion['selected'])} of {expansion['eligible_count']} eligible",
+                  f"Retained organization records: {len(expansion['organizations'])}"]
+        for rid, record in sorted(expansion["organizations"].items()):
+            lines += [f"- {rid}: {record['last_attempt_status']}"]
+            lines += [f"  - Registry website: {site['url']}" for site in record.get("registry", {}).get("websites", [])]
+            research = record.get("research", {})
+            if research:
+                lines += [f"  - OpenAIRE topical products: {len(research['products'])} of {research['total']}"]
+        lines += ["- " + x for x in expansion["limitations"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
