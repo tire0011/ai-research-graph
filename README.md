@@ -6,6 +6,12 @@ Read-only prototype for linking research metadata across [OpenEuroLLM GitHub](ht
 
 **Long-term research direction (proposed):** [From evidence graph to testable, cross-disciplinary hypotheses](RESEARCH_VISION.md). This records the overarching mission and question trail; exploratory questions are probes, not silent changes to project scope. The existing evidence-mapping and validation work remains the current implemented scope.
 
+## Publication discovery — arXiv pilot
+
+The existing European opportunity workflow now supports the optional `arxiv_discovery` configuration flag (enabled in its checked-in configuration). It uses two generic topical queries over a 21-day overlapping window, at most two pages of 50 results per query and at least 3.1 seconds between requests. Papers are deduplicated by version-independent arXiv ID and retained in `publication_discovery` inside the existing cumulative state. Explicit GitHub/Hugging Face links enter the existing reference frontier; public links remain reference evidence only. Raw author-provided affiliations, where present, are observations; European relevance remains unknown pending independent corroboration. No new curated repository entries, external posting, full-text downloads or mandatory model/API key.
+
+See the official [API documentation](https://info.arxiv.org/help/api/user-manual.html) and [terms](https://info.arxiv.org/help/api/tou.html). Page-budget truncation and failed requests are reported, not interpreted as exhaustive coverage. A valid zero-result feed is distinct from a transport/parser failure. This pilot does not yet resolve institutions, verify EU affiliation, or guarantee discovery of all recent papers. The previously known Multiverse case in issue #56 is a retrospective acceptance case, not an independent holdout.
+
 ## Real GitHub Search API versus graph-context holdout (2026-11-21)
 
 The [preregistered holdout experiment](studies/github_search_graph_holdout_20261121/README.md) compares real stratified GitHub Search API results with a typed, source-verified GitHub context overlay **on exactly the same previously unreviewed issue pool**. It checks author activity, source changes, linked PRs, literal scholarly or Hugging Face references and source-code paths, while preserving the original native-search ranking and generating a method-blinded evaluation sheet.
