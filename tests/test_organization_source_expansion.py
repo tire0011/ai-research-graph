@@ -99,3 +99,26 @@ class OrganizationExpansionTests(unittest.TestCase):
         self.assertIn("https://github.com/example/new-tool", urls)
         self.assertTrue(all(x["review_only"] for x in result["candidates"]))
         self.assertTrue(any(x["source"] == RID and x["target"] == SITE for x in result["web_discovery"]["references"]))
+
+    def test_periodic_website_refresh_within_existing_budget(self):
+        from generic_source_discovery import discover_web
+        from eu_source_discovery import canonical
+        proof = {"source_url": "https://api.ror.org/v2/organizations/012345678",
+                 "source_entity": RID, "retrieved_at": NOW.isoformat(),
+                 "type": "ror_registry_website", "excerpt": SITE, "resolved_url": SITE}
+        def web(url):
+            return 200, "text/html", b"<html></html>", None
+        first = discover_web([], referrals=[(SITE, proof)], refresh_referrals=[SITE],
+                             platform_key=canonical, fetch=web, now=NOW, max_pages=1)
+        self.assertEqual(first["sources"][SITE]["status"], "read")
+        calls = []
+        def later(url):
+            calls.append(url)
+            return 200, "text/html", b"<html></html>", None
+        next_run = discover_web(["https://seed.example.org/"], previous=first,
+                                referrals=[(SITE, proof)], refresh_referrals=[SITE],
+                                platform_key=canonical, fetch=later,
+                                now=NOW+dt.timedelta(days=28), max_pages=1)
+        self.assertEqual(calls, [SITE])
+        self.assertEqual(next_run["checked"], 1)
+        self.assertIn("https://seed.example.org/", next_run["pending"])
