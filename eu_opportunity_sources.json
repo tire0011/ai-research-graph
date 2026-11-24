@@ -4,7 +4,9 @@
   "organization_discovery": true,
   "openaire_discovery": true,
   "organization_expansion": true,
-  "web_seeds": ["https://raise4science.eu/"],
+  "web_seeds": [
+    "https://raise4science.eu/"
+  ],
   "scope": "Curated EU-based open AI research and enabling infrastructure; verified source registry expanded 2026-11-21. This is not a census; historical pilot cohorts must remain separately identified.",
   "selection": "Each source must have a directly inspected public GitHub repository. Expand via reviewed PRs; do not imply these are all EU AI initiatives.",
   "max_issues_per_repo": 15,
@@ -118,6 +120,30 @@
       "region": "EU consortium",
       "source_checked_at": "2026-11-21",
       "repository_url": "https://github.com/OpenEuroLLM/oellm-autoexp"
+    }
+  ],
+  "review_referrals": [
+    {
+      "id": "checkpaper-audits",
+      "source_url": "https://github.com/kyutai-labs/aura/issues/1",
+      "urls": [
+        "https://github.com/checkpaper/audits/tree/main/2026/2611.26540-aura",
+        "https://checkpaper.app/r/vbdpgj68wa"
+      ],
+      "scope": "External evidence-quality tooling; EU affiliation unverified; not an EU initiative.",
+      "review_only": true
+    }
+  ],
+  "connection_reviews": [
+    {
+      "id": "arxiv:2611.15250:multiverse-research-network",
+      "source_url": "https://arxiv.org/abs/2611.15250",
+      "status": "already_handled",
+      "reported_by": "tire0011",
+      "reported_on": "2026-11-24",
+      "evidence_status": "user_reported_not_independently_verified",
+      "note": "User reported the connection already dealt with (German: abgeschrieben); whether contact was sent or opportunity dismissed is not documented. Do not treat as new outreach or claim a response.",
+      "scientific_evidence_unchanged": true
     }
   ]
 }
