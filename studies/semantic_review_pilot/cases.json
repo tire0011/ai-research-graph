@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "note": "Three provisional calibration cases, two grounded pairs and one deliberately ablated input. Excerpts from the listed public README blob revisions, with omitted intervening content. Not held-out or an independent benchmark; no experiment performed.",
+  "cases": [
+    {
+      "id": "laion-aura",
+      "question": "Could the LAION expressive speech cases support a technically useful evaluation of Kyutai AURA?",
+      "expected_verdict": "plausible_experiment",
+      "reference_rationale": "Speech input and controlled expressive situations fit an exploratory avatar evaluation; no facial ground truth or cooperation proven.",
+      "evidence": [
+        {
+          "id": "e1",
+          "url": "https://github.com/laion-ai/acting-edge-cases/blob/main/README.md",
+          "revision": "8fac63f9cbfec04ce981cd27b5d3b895d0e773d0",
+          "text": "**266 hard cases for expressive-speech synthesis and annotation**, each written as a\nshort direction an actor could take, together with what it should do to the signal and\nwhich measurable dimensions ought to move.\n\n- **The detector tokens are intentions, not measurements.** They say which dimension\n  *ought* to move; nobody has verified that it does."
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/kyutai-labs/aura/blob/main/README.md",
+          "revision": "a3abfe5728a08a35dd381a07ff14712e3dee1991",
+          "text": "AURA turns a single portrait image and a speech audio stream into a talking-head video, **chunk by chunk,\nin streaming**. Each chunk needs only its own audio, with no multi-second look-ahead.\n\nThe weights have their own licenses, both non-commercial:"
+        }
+      ]
+    },
+    {
+      "id": "laion-sphinx-control",
+      "question": "Is there a direct research-method or experimental collaboration opportunity between LAION Acting Edge Cases and this Sphinx theme, rather than ordinary documentation?",
+      "expected_verdict": "weak_overlap",
+      "reference_rationale": "Theme supports documentation, not speech experiments. No direct research-method complement shown.",
+      "evidence": [
+        {
+          "id": "e1",
+          "url": "https://github.com/laion-ai/acting-edge-cases/blob/main/README.md",
+          "revision": "8fac63f9cbfec04ce981cd27b5d3b895d0e773d0",
+          "text": "**266 hard cases for expressive-speech synthesis and annotation**, each written as a\nshort direction an actor could take, together with what it should do to the signal and\nwhich measurable dimensions ought to move.\n\n- **The detector tokens are intentions, not measurements.** They say which dimension\n  *ought* to move; nobody has verified that it does."
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/readthedocs/sphinx_rtd_theme/blob/master/README.rst",
+          "revision": "f51d8b2e9bcab85d6e837ba2adb08f13db052a55",
+          "text": "This Sphinx_ theme was designed to provide a great reader experience for\ndocumentation users on both desktop and mobile devices. This theme is used\nprimarily on `Read the Docs`_ but can work with any Sphinx project."
+        }
+      ]
+    },
+    {
+      "id": "laion-aura-ablated",
+      "question": "Could these projects jointly evaluate expressive avatar generation?",
+      "expected_verdict": "insufficient_evidence",
+      "reference_rationale": "Deliberately ablated control with only project titles.",
+      "evidence": [
+        {
+          "id": "e1",
+          "url": "https://github.com/laion-ai/acting-edge-cases/blob/main/README.md",
+          "revision": "8fac63f9cbfec04ce981cd27b5d3b895d0e773d0",
+          "text": "# Voice-Acting Edge Cases"
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/kyutai-labs/aura/blob/main/README.md",
+          "revision": "a3abfe5728a08a35dd381a07ff14712e3dee1991",
+          "text": "# AURA: AUdio-dRiven streaming Avatar"
+        }
+      ]
+    }
+  ]
+}
