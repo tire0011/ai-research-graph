@@ -11,6 +11,8 @@ on:
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
       - arxiv_source_discovery.py
+      - publication_organizations.py
+      - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
@@ -30,6 +32,8 @@ on:
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
       - arxiv_source_discovery.py
+      - publication_organizations.py
+      - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
@@ -287,6 +291,8 @@ jobs:
           import time
           from pathlib import Path
           from arxiv_source_discovery import discover_publications, fetch_atom, parse_atom, API
+          from publication_organizations import resolve, ror_json, parse_ror, ROR_API
+          import urllib.parse
           # Transport/parser smoke is deliberately separate from generic discovery recall.
           total, _, rows = parse_atom(fetch_atom(API + "?id_list=2611.15250"))
           assert total and any(row["id"] == "2611.15250" for row in rows), rows
@@ -299,11 +305,23 @@ jobs:
           report = {"direct_id_transport": True, "generic_query_found_paper": match is not None,
                     "generic_query_affiliation_status": match["affiliation_status"] if match else "not_found",
                     "european_affiliation_verified": False, "result": result}
+          # Resolve the discovered record only; no hard-coded institution search.
+          if match:
+              orgs = resolve([match], dt.datetime.now(dt.timezone.utc))
+              report["organization_discovery"] = orgs
+              raw = orgs["papers"][match["id"]]["raw_affiliations"]
+              print("Explicit affiliation observations:", raw)
+              print("Registry organization candidates:", list(orgs["organizations"]))
+              print("Organization diagnostics:", orgs["errors"])
+              print("Multiverse affiliation found:", any("multiverse computing" in x.lower() for x in raw))
           (out / "publication_smoke.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
           print("Generic query paper found:", match is not None)
           print("Coverage:", result["coverage"], "Errors:", result["errors"])
           assert not result["errors"], result["errors"]
           assert result["papers"], "No papers returned by generic discovery"
+          # Independent service/schema smoke, not evidence about the target paper.
+          probe = parse_ror(ror_json(ROR_API + "?" + urllib.parse.urlencode({"affiliation": "University of Helsinki, Finland"})))
+          assert probe["status"] == "registry_match_candidate" and "FI" in probe["countries"], probe
           PY
       - uses: actions/upload-artifact@v4
         if: always()
