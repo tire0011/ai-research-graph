@@ -103,6 +103,16 @@ class RegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate"):
             d.validate(cfg)
 
+    def test_single_owner_requires_explicit_opt_in(self):
+        cfg = registry()
+        cfg["repositories"] = [cfg["repositories"][0]]
+        with self.assertRaises(ValueError):
+            d.validate(cfg)
+        d.validate(cfg, allow_single_owner=True)
+        result = d.build(cfg, GitHubFixture(), allow_single_owner=True)
+        self.assertEqual(result["sources"], 1)
+        self.assertEqual(result["sampled_issues"], 5)
+
     def test_reject_overlarge_registry_and_fetches(self):
         cfg = registry()
         cfg["candidate_checks_per_repo"] = 101

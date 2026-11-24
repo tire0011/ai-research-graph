@@ -10,6 +10,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - discovered_source_triage.py
+      - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
       - tests/test_generic_source_discovery.py
       - tests/test_eu_source_discovery.py
@@ -25,6 +27,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - discovered_source_triage.py
+      - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
       - tests/test_generic_source_discovery.py
       - tests/test_eu_source_discovery.py
@@ -80,6 +84,9 @@ jobs:
               git fetch --no-tags origin refs/heads/eu-discovery-state
               git rev-parse FETCH_HEAD > .discovery-state/parent
               git show FETCH_HEAD:source_candidates.json > .discovery-state/source_candidates.json
+              if git cat-file -e FETCH_HEAD:source_triage.json 2>/dev/null; then
+                git show FETCH_HEAD:source_triage.json > .discovery-state/source_triage.json
+              fi
               ;;
             2) echo "No prior state branch; starting a new registry" ;;
             *) exit "$status" ;;
@@ -88,13 +95,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json --discover-sources --previous-candidates .discovery-state/source_candidates.json
+      - name: Review newly discovered repositories
+        id: source_triage
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python discovered_source_triage.py --snapshot results/european_ai/source_candidates.json --previous .discovery-state/source_triage.json --output results/european_ai
+      - name: Preserve successful source review
+        if: steps.source_triage.outcome == 'success'
+        run: cp results/european_ai/source_triage.json .discovery-state/source_triage.json
       - name: Publish successful cumulative state to dedicated branch
         if: success() && github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
           blob=$(git hash-object -w results/european_ai/source_candidates.json)
-          tree=$(printf '100644 blob %s\tsource_candidates.json\n' "$blob" | git mktree)
+          tree=$({
+            printf '100644 blob %s\tsource_candidates.json\n' "$blob"
+            if [ -f .discovery-state/source_triage.json ]; then
+              review=$(git hash-object -w .discovery-state/source_triage.json)
+              printf '100644 blob %s\tsource_triage.json\n' "$review"
+            fi
+          } | git mktree)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           args=()
@@ -198,4 +220,45 @@ jobs:
         with:
           name: generic-source-live-smoke
           path: results/generic-source-smoke/
+          if-no-files-found: warn
+
+  live-discovered-triage:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Review real discovered sources from published state
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch --no-tags origin refs/heads/eu-discovery-state
+          git rev-parse FETCH_HEAD
+          mkdir -p .discovery-state
+          git show FETCH_HEAD:source_candidates.json > .discovery-state/source_candidates.json
+          python discovered_source_triage.py --snapshot .discovery-state/source_candidates.json --output results/discovered-triage
+          cat results/discovered-triage/SOURCE_TRIAGE.md
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path("results/discovered-triage/source_triage.json").read_text())
+          assert result["pool_size"] and result["selected"] and result["metadata"]
+          assert any(x.get("status") == "review_only" for x in result["metadata"])
+          assert len(result["tasks"]) <= 5 and len(result["topic_hypotheses"]) <= 5
+          assert all(x["status"] == "unverified_topic_overlap" for x in result["topic_hypotheses"])
+          print("Live discovery review generated; inspect diagnostics and evidence, not just exit status.")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-discovered-source-triage
+          path: results/discovered-triage/
           if-no-files-found: warn

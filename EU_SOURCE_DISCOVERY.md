@@ -41,3 +41,23 @@ Offline fixture tests cover canonicalization, explicit references, repeat runs, 
 API documentation: [GitHub organization repositories](https://docs.github.com/en/rest/repos/repos#list-organization-repositories), [GitHub repository details](https://docs.github.com/en/rest/repos/repos#get-a-repository), [Hugging Face Hub API](https://huggingface.co/docs/hub/api).
 
 No external posting, permanent server, paid API or claim of graph advantage.
+
+## Discovered repository review
+
+The weekly workflow now reads up to 12 discovered GitHub repositories from the cumulative state, excluding existing curated sources. It re-fetches public metadata, checks exact identity, owner, activity, license hint, issue availability and explicit technical vocabulary. Least-recently reviewed candidates are sampled first; ties are balanced across owners. At most four eligible repositories are passed to the existing conservative issue/PR state checker (up to eight sampled issues and two deep checks per repository). Discovered-source review explicitly opts into single-owner issue analysis; the curated multi-organization default is unchanged. License metadata is reported, not used to exclude public issue review or topic overlap. Reuse requires separate license review. Topic overlap is independent of issue availability and activity gates.
+
+Outputs: `SOURCE_TRIAGE.md` and `source_triage.json`, including at most five potential tasks and five cross-owner topic hypotheses, original metadata evidence, invitation labels and limitations. A topic match is not a verified technical handoff. Owner affiliation is only contextual evidence from the curated registry, not independently verified geography; unknown owners are explicitly marked unknown. A public issue label does not prove that maintainers will respond. The result includes the existing same-pool title baseline, not an independent test of research usefulness.
+
+Successful reviews are persisted alongside discovery state on `eu-discovery-state`; a failed review preserves the previous successful review and does not block discovery state publication. The workflow uploads diagnostics, and the read-only PR smoke test reviews the live published source snapshot. Existing curated sources and prior research results are unchanged.
+
+To run against a saved snapshot (PowerShell):
+
+```powershell
+python discovered_source_triage.py --snapshot .discovery-state/source_candidates.json --previous .discovery-state/source_triage.json --output results/european_ai
+```
+
+This is a bounded rule-based baseline, not an LLM semantic evaluator. Web/HF content relevance, verified European affiliation, requirement-level collaboration matching, independent review and automatic adapter development remain follow-up work. Adapter-review requests are visible in the report; no new executable code is generated or executed from a discovered source.
+
+### First live review and correction (2026-11-24)
+
+The initial live run (45400789813) reviewed 12 of 159 repositories and returned zero tasks and zero topic hypotheses, without API errors. Only one repository passed the original combined gates, so no issue analysis ran. The same data revealed that license hints were incorrectly used as a prerequisite for discovering topical overlaps and reading public issues. The gates have been separated and the report now includes selection counts. Re-running the same cohort is a regression check, not independent evidence of improved discovery. The original negative result is retained in the original workflow artifacts. Sparse descriptions and coarse vocabulary remain limitations.
