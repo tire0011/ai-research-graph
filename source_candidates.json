@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+  "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
   "owners": [
     "Helsinki-NLP",
     "hplt-project",
@@ -194,23 +194,29 @@
       "https://raise4science.eu/wp-json/wp/v2/pages/2": {
         "url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "json",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "content_type": "application/json",
+        "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
       },
       "https://observatory.raise4science.eu/": {
         "url": "https://observatory.raise4science.eu/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
+        "status": "retry",
         "format": "unknown",
-        "affiliation": "unverified"
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "error": "OSError"
       },
       "https://raise4science.eu/community": {
         "url": "https://raise4science.eu/community",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "redirect",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00"
       },
       "https://raise4science.eu/community/": {
         "url": "https://raise4science.eu/community/",
@@ -285,23 +291,32 @@
       "https://forum.raise4science.eu/": {
         "url": "https://forum.raise4science.eu/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "html",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "content_type": "text/html",
+        "body_sha256": "cecb910ccfffa763c8a9db85e329137f37c39eabe66ec32f6a8cdafa764b47bd"
       },
       "https://helsinki-nlp.github.io/mammoth/FAQ.html": {
         "url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "html",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "content_type": "text/html",
+        "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
       },
       "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html": {
         "url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "html",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "content_type": "text/html",
+        "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
       },
       "https://helsinki-nlp.github.io/mammoth/attention_bridges.html": {
         "url": "https://helsinki-nlp.github.io/mammoth/attention_bridges.html",
@@ -390,16 +405,19 @@
       "https://readthedocs.org/": {
         "url": "https://readthedocs.org/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
+        "status": "retry",
         "format": "unknown",
-        "affiliation": "unverified"
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00",
+        "error": "OSError"
       },
       "https://www.sphinx-doc.org/": {
         "url": "https://www.sphinx-doc.org/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "status": "pending",
-        "format": "unknown",
-        "affiliation": "unverified"
+        "status": "read",
+        "format": "redirect",
+        "affiliation": "unverified",
+        "last_checked": "2026-11-24T17:45:26.961633+00:00"
       },
       "https://kyutai.org/aura/": {
         "url": "https://kyutai.org/aura/",
@@ -512,19 +530,151 @@
         "status": "pending",
         "format": "unknown",
         "affiliation": "unverified"
+      },
+      "https://schema.org/": {
+        "url": "https://schema.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://api.w.org/{rel}": {
+        "url": "https://api.w.org/{rel}",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://raise4science.eu/wp-json/wp/v2/pages": {
+        "url": "https://raise4science.eu/wp-json/wp/v2/pages",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions": {
+        "url": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345": {
+        "url": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://raise4science.eu/wp-json/wp/v2/types/page": {
+        "url": "https://raise4science.eu/wp-json/wp/v2/types/page",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://raise4science.eu/wp-json/wp/v2/users/1": {
+        "url": "https://raise4science.eu/wp-json/wp/v2/users/1",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://forum.raise4science.eu/c/support/37": {
+        "url": "https://forum.raise4science.eu/c/support/37",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://forum.raise4science.eu/c/tools-and-resources/29": {
+        "url": "https://forum.raise4science.eu/c/tools-and-resources/29",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://www.discourse.org/": {
+        "url": "https://www.discourse.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html": {
+        "url": "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
+      },
+      "https://www.sphinx-doc.org/en/master/": {
+        "url": "https://www.sphinx-doc.org/en/master/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "status": "pending",
+        "format": "unknown",
+        "affiliation": "unverified"
       }
     },
     "references": [
       {
+        "source": "https://forum.raise4science.eu/",
+        "target": "https://forum.raise4science.eu/c/support/37",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://forum.raise4science.eu/",
+          "source_entity": "https://forum.raise4science.eu/",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "/c/support/37",
+          "resolved_url": "https://forum.raise4science.eu/c/support/37",
+          "body_sha256": "cecb910ccfffa763c8a9db85e329137f37c39eabe66ec32f6a8cdafa764b47bd"
+        }
+      },
+      {
+        "source": "https://forum.raise4science.eu/",
+        "target": "https://forum.raise4science.eu/c/tools-and-resources/29",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://forum.raise4science.eu/",
+          "source_entity": "https://forum.raise4science.eu/",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "/c/tools-and-resources/29",
+          "resolved_url": "https://forum.raise4science.eu/c/tools-and-resources/29",
+          "body_sha256": "cecb910ccfffa763c8a9db85e329137f37c39eabe66ec32f6a8cdafa764b47bd"
+        }
+      },
+      {
+        "source": "https://forum.raise4science.eu/",
+        "target": "https://www.discourse.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://forum.raise4science.eu/",
+          "source_entity": "https://forum.raise4science.eu/",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://www.discourse.org",
+          "resolved_url": "https://www.discourse.org/",
+          "body_sha256": "cecb910ccfffa763c8a9db85e329137f37c39eabe66ec32f6a8cdafa764b47bd"
+        }
+      },
+      {
         "source": "https://github.com/helsinki-nlp/mammoth",
         "target": "https://helsinki-nlp.github.io/mammoth/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/mammoth",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://helsinki-nlp.github.io/mammoth/",
           "resolved_url": "https://helsinki-nlp.github.io/mammoth/"
@@ -534,12 +684,12 @@
         "source": "https://github.com/hplt-project/openlid-v3-evaluation",
         "target": "https://hplt-project.org/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/openlid-v3-evaluation",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://hplt-project.org/",
           "resolved_url": "https://hplt-project.org/"
@@ -549,12 +699,12 @@
         "source": "https://github.com/hplt-project/opuscleaner",
         "target": "https://pypi.org/project/opuscleaner/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/opuscleaner",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://pypi.org/project/opuscleaner/",
           "resolved_url": "https://pypi.org/project/opuscleaner/"
@@ -564,12 +714,12 @@
         "source": "https://github.com/hplt-project/opustrainer",
         "target": "https://pypi.org/project/opustrainer/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/opustrainer",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://pypi.org/project/opustrainer/",
           "resolved_url": "https://pypi.org/project/opustrainer/"
@@ -579,12 +729,12 @@
         "source": "https://github.com/kyutai-labs/aura",
         "target": "https://kyutai.org/aura",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/aura",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://kyutai.org/aura",
           "resolved_url": "https://kyutai.org/aura"
@@ -594,12 +744,12 @@
         "source": "https://github.com/kyutai-labs/hibiki-zero",
         "target": "https://kyutai.org/blog/2026-02-12-hibiki-zero",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/hibiki-zero",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://kyutai.org/blog/2026-02-12-hibiki-zero",
           "resolved_url": "https://kyutai.org/blog/2026-02-12-hibiki-zero"
@@ -609,12 +759,12 @@
         "source": "https://github.com/kyutai-labs/logit-psv",
         "target": "https://kyutai.org/logit-psv",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/logit-psv",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://kyutai.org/logit-psv",
           "resolved_url": "https://kyutai.org/logit-psv"
@@ -624,12 +774,12 @@
         "source": "https://github.com/kyutai-labs/neural-audio-codecs-anims",
         "target": "https://kyutai.org/next/codec-explainer",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/neural-audio-codecs-anims",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://kyutai.org/next/codec-explainer",
           "resolved_url": "https://kyutai.org/next/codec-explainer"
@@ -639,12 +789,12 @@
         "source": "https://github.com/kyutai-labs/reki",
         "target": "https://kyutai.org/reki/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/reki",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://kyutai.org/reki/",
           "resolved_url": "https://kyutai.org/reki/"
@@ -654,12 +804,12 @@
         "source": "https://github.com/laion-ai/acting-edge-cases",
         "target": "https://laion-ai.github.io/acting-edge-cases/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/acting-edge-cases",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://laion-ai.github.io/acting-edge-cases/",
           "resolved_url": "https://laion-ai.github.io/acting-edge-cases/"
@@ -669,12 +819,12 @@
         "source": "https://github.com/laion-ai/clap",
         "target": "https://arxiv.org/abs/2211.06687",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/clap",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://arxiv.org/abs/2211.06687",
           "resolved_url": "https://arxiv.org/abs/2211.06687"
@@ -684,12 +834,12 @@
         "source": "https://github.com/laion-ai/comprehensive-voice-acting-annotation-pipeline",
         "target": "https://projects.laion.ai/procedural-voice-captions/character-captions/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/comprehensive-voice-acting-annotation-pipeline",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://projects.laion.ai/procedural-voice-captions/character-captions/",
           "resolved_url": "https://projects.laion.ai/procedural-voice-captions/character-captions/"
@@ -699,12 +849,12 @@
         "source": "https://github.com/laion-ai/humaneness-podcast-server",
         "target": "https://arrive-locations-parade-research.trycloudflare.com/podcast/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/humaneness-podcast-server",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://arrive-locations-parade-research.trycloudflare.com/podcast/",
           "resolved_url": "https://arrive-locations-parade-research.trycloudflare.com/podcast/"
@@ -714,12 +864,12 @@
         "source": "https://github.com/laion-ai/humanness-voice-annotator",
         "target": "https://projects.laion.ai/Humanness-Voice-Annotator/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/humanness-voice-annotator",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://projects.laion.ai/Humanness-Voice-Annotator/",
           "resolved_url": "https://projects.laion.ai/Humanness-Voice-Annotator/"
@@ -729,12 +879,12 @@
         "source": "https://github.com/laion-ai/laion-datasets",
         "target": "https://projects.laion.ai/laion-datasets",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/laion-datasets",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://projects.laion.ai/laion-datasets",
           "resolved_url": "https://projects.laion.ai/laion-datasets"
@@ -744,12 +894,12 @@
         "source": "https://github.com/laion-ai/laion.ai",
         "target": "https://laion.ai/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/laion.ai",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://laion.ai/",
           "resolved_url": "https://laion.ai/"
@@ -759,12 +909,12 @@
         "source": "https://github.com/laion-ai/open-assistant",
         "target": "https://open-assistant.io/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/open-assistant",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://open-assistant.io",
           "resolved_url": "https://open-assistant.io/"
@@ -774,12 +924,12 @@
         "source": "https://github.com/laion-ai/procedural-voice-captions",
         "target": "https://projects.laion.ai/procedural-voice-captions/character-captions/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/procedural-voice-captions",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://projects.laion.ai/procedural-voice-captions/character-captions/",
           "resolved_url": "https://projects.laion.ai/procedural-voice-captions/character-captions/"
@@ -789,12 +939,12 @@
         "source": "https://github.com/laion-ai/roar",
         "target": "https://roar.laion.ai/",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
-          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_url": "https://api.github.com/repos/laion-ai/roar",
           "source_entity": "https://github.com/laion-ai/roar",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://roar.laion.ai",
           "resolved_url": "https://roar.laion.ai/"
@@ -804,12 +954,12 @@
         "source": "https://github.com/laion-ai/scaling-laws-openclip",
         "target": "https://arxiv.org/abs/2212.07143",
         "first_seen": "2026-11-24T09:31:57.942785+00:00",
-        "last_seen": "2026-11-24T14:45:30.577360+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
         "relationship": "explicit_reference",
         "evidence": {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/scaling-laws-openclip",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "explicit_metadata_reference",
           "excerpt": "https://arxiv.org/abs/2212.07143",
           "resolved_url": "https://arxiv.org/abs/2212.07143"
@@ -1084,6 +1234,246 @@
           "excerpt": "https://www.sphinx-doc.org/",
           "resolved_url": "https://www.sphinx-doc.org/",
           "body_sha256": "e6d8385280005796e7947f1b6bf664d3f02a722324433ccffb775a917421fa8f"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "HF_TOKENIZERS.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "INDEXED_DATASET_GUIDE.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "exporting_to_huggingface.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "mammoth.inputters.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/modular_model.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "modular_model.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/modular_model.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "prepare_data.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://readthedocs.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://readthedocs.org",
+          "resolved_url": "https://readthedocs.org/",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "target": "https://www.sphinx-doc.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://www.sphinx-doc.org/",
+          "resolved_url": "https://www.sphinx-doc.org/",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "INDEXED_DATASET_GUIDE.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "exporting_to_huggingface.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "mammoth.inputters.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/modular_model.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "modular_model.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/modular_model.html",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "prepare_data.html",
+          "resolved_url": "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://readthedocs.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://readthedocs.org",
+          "resolved_url": "https://readthedocs.org/",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
+        }
+      },
+      {
+        "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "target": "https://www.sphinx-doc.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://www.sphinx-doc.org/",
+          "resolved_url": "https://www.sphinx-doc.org/",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
         }
       },
       {
@@ -1519,6 +1909,150 @@
         }
       },
       {
+        "source": "https://raise4science.eu/community",
+        "target": "https://raise4science.eu/community/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/community",
+          "source_entity": "https://raise4science.eu/community",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_redirect_reference",
+          "excerpt": "https://raise4science.eu/community/",
+          "resolved_url": "https://raise4science.eu/community/",
+          "body_sha256": null
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://api.w.org/{rel}",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://api.w.org/{rel}",
+          "resolved_url": "https://api.w.org/{rel}",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/",
+          "resolved_url": "https://raise4science.eu/",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/wp-json/wp/v2/pages",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/wp-json/wp/v2/pages",
+          "resolved_url": "https://raise4science.eu/wp-json/wp/v2/pages",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions",
+          "resolved_url": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345",
+          "resolved_url": "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/wp-json/wp/v2/types/page",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/wp-json/wp/v2/types/page",
+          "resolved_url": "https://raise4science.eu/wp-json/wp/v2/types/page",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://raise4science.eu/wp-json/wp/v2/users/1",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://raise4science.eu/wp-json/wp/v2/users/1",
+          "resolved_url": "https://raise4science.eu/wp-json/wp/v2/users/1",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
+        "source": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+        "target": "https://schema.org/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "source_entity": "https://raise4science.eu/wp-json/wp/v2/pages/2",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_json_reference",
+          "excerpt": "https://schema.org",
+          "resolved_url": "https://schema.org/",
+          "body_sha256": "c955b3d4ba9b37855367d79550e7e157834863570f536d9c2cbaf63c2a4cd8b7"
+        }
+      },
+      {
         "source": "https://roar.laion.ai/",
         "target": "https://laion.ai/",
         "first_seen": "2026-11-24T14:45:30.577360+00:00",
@@ -1565,39 +2099,25 @@
           "resolved_url": "https://roar.laion.ai/roar.json",
           "body_sha256": "dc3dfff28b263a2f1facd5335f28daf713e4b8c7c2e7a239fda477d96ce1e15d"
         }
+      },
+      {
+        "source": "https://www.sphinx-doc.org/",
+        "target": "https://www.sphinx-doc.org/en/master/",
+        "first_seen": "2026-11-24T17:45:26.961633+00:00",
+        "last_seen": "2026-11-24T17:45:26.961633+00:00",
+        "relationship": "explicit_reference",
+        "evidence": {
+          "source_url": "https://www.sphinx-doc.org/",
+          "source_entity": "https://www.sphinx-doc.org/",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_redirect_reference",
+          "excerpt": "https://www.sphinx-doc.org/en/master/",
+          "resolved_url": "https://www.sphinx-doc.org/en/master/",
+          "body_sha256": null
+        }
       }
     ],
     "pending": [
-      "https://raise4science.eu/wp-json/wp/v2/pages/2",
-      "https://observatory.raise4science.eu/",
-      "https://raise4science.eu/community",
-      "https://raise4science.eu/community/",
-      "https://raise4science.eu/event/webinar-shaping-ai-in-science-in-europe-by-scientists-and-for-scientists/",
-      "https://raise4science.eu/news/ais26-session-the-european-engine-for-scientific-discovery-how-raise-resource-for-ai-science-in-europe-is-taking-shape/",
-      "https://raise4science.eu/news/launching-the-registry-of-good-practices-in-ai-enabled-science/",
-      "https://raise4science.eu/news/raise-forum-launching-october-15-at-ais26-a-collaborative-platform-for-europes-ai-in-science-community/",
-      "https://raise4science.eu/news/raise-observatory-launches-to-help-europe-explore-ai-in-science/",
-      "https://raise4science.eu/news/sciance-announces-ai-in-science-working-groups-aiswg-selection/",
-      "https://raise4science.eu/raise-foundational-model-projects/",
-      "https://raise4science.eu/resources",
-      "https://raise4science.eu/resources/",
-      "https://forum.raise4science.eu/",
-      "https://helsinki-nlp.github.io/mammoth/FAQ.html",
-      "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
-      "https://helsinki-nlp.github.io/mammoth/attention_bridges.html",
-      "https://helsinki-nlp.github.io/mammoth/examples/sharing_schemes.html",
-      "https://helsinki-nlp.github.io/mammoth/examples/train_mammoth_101.html",
-      "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
-      "https://helsinki-nlp.github.io/mammoth/mammoth.html",
-      "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
-      "https://helsinki-nlp.github.io/mammoth/mammoth.translate.translation_server.html",
-      "https://helsinki-nlp.github.io/mammoth/modular_model.html",
-      "https://helsinki-nlp.github.io/mammoth/options/train.html",
-      "https://helsinki-nlp.github.io/mammoth/options/translate.html",
-      "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
-      "https://helsinki-nlp.github.io/mammoth/quickstart.html",
-      "https://readthedocs.org/",
-      "https://www.sphinx-doc.org/",
       "https://kyutai.org/aura/",
       "https://kyutai.org/blog/2026-02-12-hibiki-zero/",
       "https://kyutai.org/reki/",
@@ -1620,42 +2140,94 @@
       "https://projects.laion.ai/laion-datasets/",
       "https://arrive-locations-parade-research.trycloudflare.com/podcast/",
       "https://projects.laion.ai/Humanness-Voice-Annotator/",
-      "https://laion-ai.github.io/acting-edge-cases/"
+      "https://laion-ai.github.io/acting-edge-cases/",
+      "https://schema.org/",
+      "https://api.w.org/{rel}",
+      "https://raise4science.eu/wp-json/wp/v2/pages",
+      "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions",
+      "https://raise4science.eu/wp-json/wp/v2/pages/2/revisions/1345",
+      "https://raise4science.eu/wp-json/wp/v2/types/page",
+      "https://raise4science.eu/wp-json/wp/v2/users/1",
+      "https://forum.raise4science.eu/c/support/37",
+      "https://forum.raise4science.eu/c/tools-and-resources/29",
+      "https://www.discourse.org/",
+      "https://helsinki-nlp.github.io/mammoth/INDEXED_DATASET_GUIDE.html",
+      "https://www.sphinx-doc.org/en/master/",
+      "https://observatory.raise4science.eu/",
+      "https://raise4science.eu/community/",
+      "https://raise4science.eu/event/webinar-shaping-ai-in-science-in-europe-by-scientists-and-for-scientists/",
+      "https://raise4science.eu/news/ais26-session-the-european-engine-for-scientific-discovery-how-raise-resource-for-ai-science-in-europe-is-taking-shape/",
+      "https://raise4science.eu/news/launching-the-registry-of-good-practices-in-ai-enabled-science/",
+      "https://raise4science.eu/news/raise-forum-launching-october-15-at-ais26-a-collaborative-platform-for-europes-ai-in-science-community/",
+      "https://raise4science.eu/news/raise-observatory-launches-to-help-europe-explore-ai-in-science/",
+      "https://raise4science.eu/news/sciance-announces-ai-in-science-working-groups-aiswg-selection/",
+      "https://raise4science.eu/raise-foundational-model-projects/",
+      "https://raise4science.eu/resources",
+      "https://raise4science.eu/resources/",
+      "https://helsinki-nlp.github.io/mammoth/attention_bridges.html",
+      "https://helsinki-nlp.github.io/mammoth/examples/sharing_schemes.html",
+      "https://helsinki-nlp.github.io/mammoth/examples/train_mammoth_101.html",
+      "https://helsinki-nlp.github.io/mammoth/exporting_to_huggingface.html",
+      "https://helsinki-nlp.github.io/mammoth/mammoth.html",
+      "https://helsinki-nlp.github.io/mammoth/mammoth.inputters.html",
+      "https://helsinki-nlp.github.io/mammoth/mammoth.translate.translation_server.html",
+      "https://helsinki-nlp.github.io/mammoth/modular_model.html",
+      "https://helsinki-nlp.github.io/mammoth/options/train.html",
+      "https://helsinki-nlp.github.io/mammoth/options/translate.html",
+      "https://helsinki-nlp.github.io/mammoth/prepare_data.html",
+      "https://helsinki-nlp.github.io/mammoth/quickstart.html",
+      "https://readthedocs.org/"
     ],
     "platform_refs": [
       {
-        "target": "https://github.com/LAION-AI/roar",
+        "target": "https://github.com/Helsinki-NLP/mammoth/issues",
         "evidence": {
-          "source_url": "https://roar.laion.ai/",
-          "source_entity": "https://roar.laion.ai/",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "public_html_reference",
-          "excerpt": "https://github.com/LAION-AI/roar",
-          "resolved_url": "https://github.com/LAION-AI/roar",
-          "body_sha256": "dc3dfff28b263a2f1facd5335f28daf713e4b8c7c2e7a239fda477d96ce1e15d"
+          "excerpt": "https://github.com/Helsinki-NLP/mammoth/issues",
+          "resolved_url": "https://github.com/Helsinki-NLP/mammoth/issues",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "target": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        }
+      },
+      {
+        "target": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "evidence": {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
         }
       }
     ],
     "errors": [
       {
-        "url": "https://arxiv.org/abs/2211.06687",
-        "error": "crawl delay exceeds run budget"
-      },
-      {
-        "url": "https://arrive-locations-parade-research.trycloudflare.com/podcast/",
+        "url": "https://observatory.raise4science.eu/",
         "error": "OSError"
       },
       {
-        "url": "https://arxiv.org/abs/2212.07143",
-        "error": "crawl delay exceeds run budget"
-      },
-      {
-        "url": "https://laion-ai.github.io/acting-edge-cases/",
+        "url": "https://readthedocs.org/",
         "error": "OSError"
       }
     ],
-    "new_sources": 14,
-    "new_references": 15,
+    "new_sources": 12,
+    "new_references": 28,
     "checked": 8,
     "dropped_by_budget": 0,
     "queue_drained": false,
@@ -1745,18 +2317,19 @@
   ],
   "detail_checks": [
     {
-      "url": "https://github.com/readthedocs/sphinx_rtd_theme",
-      "source_url": "https://api.github.com/repos/readthedocs/sphinx_rtd_theme",
+      "url": "https://github.com/laion-ai/roar",
+      "source_url": "https://api.github.com/repos/laion-ai/roar",
       "status": "confirmed_public_metadata"
     }
   ],
   "pending": [
-    "https://github.com/laion-ai/roar"
+    "https://github.com/helsinki-nlp/mammoth"
   ],
   "expanded": {
-    "https://github.com/readthedocs/sphinx_rtd_theme": "confirmed_public_metadata"
+    "https://github.com/readthedocs/sphinx_rtd_theme": "confirmed_public_metadata",
+    "https://github.com/laion-ai/roar": "confirmed_public_metadata"
   },
-  "new_reference_count": 1,
+  "new_reference_count": 3,
   "candidates": [
     {
       "url": "https://github.com/helsinki-nlp/building-nlp-apps-notebooks",
@@ -1770,11 +2343,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/building-nlp-apps-notebooks",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1789,11 +2362,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/carbonfootprint",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1808,11 +2381,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/contributed-mt-leaderboard",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1827,11 +2400,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/dialect-to-standard",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1846,11 +2419,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/dialect-topic-model",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1865,11 +2438,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/expl-simpl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1884,11 +2457,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/external-mt-leaderboard",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1903,11 +2476,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/flam",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1922,11 +2495,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/hbmp",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1941,11 +2514,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/iso-langcodes",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1960,11 +2533,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/kd4mt-survey",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1979,11 +2552,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/languagecodes",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -1998,11 +2571,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/llm-course-2024",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2017,11 +2590,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/llm-course-2026",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2036,11 +2609,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/lsdc",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2055,11 +2628,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/lsdc-morph",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2074,11 +2647,20 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/mammoth",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
+        },
+        {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/Helsinki-NLP/mammoth/issues",
+          "resolved_url": "https://github.com/Helsinki-NLP/mammoth/issues",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2093,11 +2675,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/marmot",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2112,11 +2694,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/mu-shroom",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2131,11 +2713,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/mucow",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2150,11 +2732,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opensubtitles-devtest",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2169,11 +2751,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2188,11 +2770,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opus-api",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2207,11 +2789,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-cat",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2226,11 +2808,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opus-ingest",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2245,11 +2827,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opus-interface",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2264,11 +2846,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-mt",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2283,11 +2865,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-mt-dashboard",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2302,11 +2884,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opus-mt-leaderboard-recipes",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2321,11 +2903,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-mt-testsets",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2340,11 +2922,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-mt-train",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2359,11 +2941,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-translator",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2378,11 +2960,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opus-website",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2397,11 +2979,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opus-website-ui",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2416,11 +2998,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opusexplorer",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2435,11 +3017,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opusindex",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2454,11 +3036,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opustools",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2473,11 +3055,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/opustools-perl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2492,11 +3074,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/opustranslate",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2511,11 +3093,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/prosody",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2530,11 +3112,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/self-feil",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2549,11 +3131,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/shared-info",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2568,11 +3150,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/shibboleth",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2587,11 +3169,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/shroom",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2606,11 +3188,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/shroom_cap",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2625,11 +3207,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/slurmake",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2644,11 +3226,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/helsinki-nlp/subalign",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2663,11 +3245,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/swag_transformers",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2682,11 +3264,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/translate-fineweb",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2701,11 +3283,11 @@
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/helsinki-nlp/ukrainianlt",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2720,11 +3302,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/bitextor-mt-models",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2739,11 +3321,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/cc-download",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2758,11 +3340,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/data-analytics-tool",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2777,11 +3359,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/document-aligner",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2796,11 +3378,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/hplt-e",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2815,11 +3397,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/hplt-mt-models",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2834,11 +3416,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/hplt-wp4",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2853,11 +3435,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/ia-download",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2872,11 +3454,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/minhash-retrieval",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2891,11 +3473,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/monolingual-multilingual-instruction-tuning",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2910,11 +3492,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/monotextor-slurm",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2929,11 +3511,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/hplt-project/mt-winterschool-2023",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2948,11 +3530,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/openlid-v3-evaluation",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2967,11 +3549,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/opuspocus",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -2986,11 +3568,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/opustrainer",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3005,11 +3587,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/hplt-project/paracrawl-dashboard",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3024,11 +3606,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/hplt-project/rehydration-scripts",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3043,11 +3625,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/release2_inspection",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3062,11 +3644,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/release3_inspection",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3081,11 +3663,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/sacremoses",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3100,11 +3682,11 @@
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/hplt-project/warc2text-runner",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3119,11 +3701,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/arc-encoder",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3138,11 +3720,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/aura",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3157,11 +3739,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/cadre-autoencoders-and-world-models",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3176,11 +3758,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/casa",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3195,11 +3777,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/cines-markdown-docs",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3214,11 +3796,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/dactory",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3233,11 +3815,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/delayed-streams-modeling",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3252,11 +3834,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/dora",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3271,11 +3853,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/flash-attn3-jax",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3290,11 +3872,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/flashy",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3309,11 +3891,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/hibiki-zero",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3328,11 +3910,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/invincible-voice",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3347,11 +3929,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/jax-flash-attn2",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3366,11 +3948,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/jax-flash-attn3",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3385,11 +3967,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/kairos",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3404,11 +3986,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/kaudio",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3423,11 +4005,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/launcheon",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3442,11 +4024,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/logit-psv",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3461,11 +4043,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/modular-tokenization",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3480,11 +4062,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/moshi-finetune",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3499,11 +4081,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/moshi-rag",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3518,11 +4100,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/moshi-swift",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3537,11 +4119,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/moshi-webrtc",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3556,11 +4138,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/moshivis",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3575,11 +4157,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/neural-audio-codecs-anims",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3594,11 +4176,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/ogg-table",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3613,11 +4195,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/ovie",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3632,11 +4214,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/reki",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3651,11 +4233,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/sphn",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3670,11 +4252,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/structure-agnostic-distillation",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3689,11 +4271,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/tts_longeval",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3708,11 +4290,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/kyutai-labs/unmute",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3727,11 +4309,11 @@
         {
           "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/kyutai-labs/yomikomi",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3746,11 +4328,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/acting-edge-cases",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3765,11 +4347,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/aesthetic-predictor",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3784,11 +4366,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/agent-bud-e",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3803,11 +4385,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/audio-dataset",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3822,11 +4404,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/bud-e-flutter-openrouter",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3841,11 +4423,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/bvd",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3860,11 +4442,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/chatterbox-voice-conversion",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3879,11 +4461,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/clap2",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3898,11 +4480,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/clap2-audio-scene-captioning",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3917,11 +4499,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/clip-based-nsfw-detector",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3936,11 +4518,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/comprehensive-voice-acting-annotation-pipeline",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3955,11 +4537,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/dalle2-laion",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3974,11 +4556,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/derm-datasets",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -3993,11 +4575,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/discord-scrapers",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4012,11 +4594,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/dream-e",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4031,11 +4613,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/emolia-bench",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4050,11 +4632,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/emonet-face",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4069,11 +4651,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/emotion-annotations",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4088,11 +4670,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/humaneness-ears-preview",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4107,11 +4689,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/humaneness-podcast-server",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4126,11 +4708,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/humaneness-voice",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4145,11 +4727,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/humaneness-voice-demo-server",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4164,11 +4746,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/humanness-voice-annotator",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4183,11 +4765,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/jax-dacvae-echotts",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4202,11 +4784,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/laion-datasets",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4221,11 +4803,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/laion-dreams",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4240,11 +4822,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/laion-safety",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4259,11 +4841,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/laion.ai",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4278,11 +4860,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/laion.ai.preview",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4297,11 +4879,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/ldm-finetune",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4316,11 +4898,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/lucidrains-projects",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4335,11 +4917,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/moss-8b-voice-acting",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4360,11 +4942,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/moss-voiceacting-manual",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4379,11 +4961,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/natural_voice_assistant",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4398,11 +4980,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/open-assistant",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4423,11 +5005,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/open-instruction-generalist",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4442,11 +5024,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/open-sims",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4461,11 +5043,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/phenaki",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4480,11 +5062,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/procedural-voice-captions",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4499,11 +5081,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/project-alexandria",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4516,12 +5098,6 @@
       "first_seen": "2026-11-24T09:31:57.942785+00:00",
       "evidence": [
         {
-          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/laion-ai/roar",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
-          "type": "owner_listing"
-        },
-        {
           "source_url": "https://roar.laion.ai/",
           "source_entity": "https://roar.laion.ai/",
           "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
@@ -4529,10 +5105,23 @@
           "excerpt": "https://github.com/LAION-AI/roar",
           "resolved_url": "https://github.com/LAION-AI/roar",
           "body_sha256": "dc3dfff28b263a2f1facd5335f28daf713e4b8c7c2e7a239fda477d96ce1e15d"
+        },
+        {
+          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/laion-ai/roar",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "owner_listing"
+        },
+        {
+          "source_url": "https://api.github.com/repos/laion-ai/roar",
+          "source_entity": "https://github.com/laion-ai/roar",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "detail_lookup"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
-      "identity_status": "confirmed_public_metadata"
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
+      "identity_status": "confirmed_public_metadata",
+      "detail_status": "confirmed_public_metadata"
     },
     {
       "url": "https://github.com/laion-ai/scaled-echo-tts",
@@ -4546,11 +5135,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/scaled-echo-tts",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4565,11 +5154,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/scaling-laws-for-comparison",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4584,11 +5173,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/scaling-laws-openclip",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4603,11 +5192,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/scientific-summaries-analysis",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4622,11 +5211,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/singing-voice-data-lab",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4641,11 +5230,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/storytree",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4660,11 +5249,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/tunes",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4679,11 +5268,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/univeral-audio-annotation-pipeline",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4698,11 +5287,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/vocal-burst-annotation-pipeline",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4717,11 +5306,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/voice-acting-pipeline",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4736,11 +5325,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/voice-taxonomies",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4755,11 +5344,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
           "source_entity": "https://github.com/laion-ai/voicenet",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4774,11 +5363,11 @@
         {
           "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
           "source_entity": "https://github.com/laion-ai/worldsim",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4804,9 +5393,27 @@
           "source_entity": "https://github.com/readthedocs/sphinx_rtd_theme",
           "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
           "type": "detail_lookup"
+        },
+        {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+        },
+        {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata",
       "detail_status": "confirmed_public_metadata"
     },
@@ -4822,11 +5429,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-NORTH_EU-NORTH_EU",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4841,11 +5448,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ROMANCE-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4860,11 +5467,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-SCANDINAVIA-SCANDINAVIA",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4879,11 +5486,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-aav-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4898,11 +5505,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-aed-es",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4917,11 +5524,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-de",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4936,11 +5543,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4955,11 +5562,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-eo",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4974,11 +5581,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-es",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -4993,11 +5600,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-fi",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5012,11 +5619,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-fr",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5031,11 +5638,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-nl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5050,11 +5657,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-ru",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5069,11 +5676,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-af-sv",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5088,11 +5695,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-afa-afa",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5107,11 +5714,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-afa-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5126,11 +5733,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-alv-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5145,11 +5752,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-am-sv",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5164,11 +5771,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-de",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5183,11 +5790,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-el",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5202,11 +5809,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-en",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5221,11 +5828,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-eo",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5240,11 +5847,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-es",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5259,11 +5866,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-fr",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5278,11 +5885,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-he",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5297,11 +5904,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-it",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5316,11 +5923,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-pl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5335,11 +5942,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-ar-ru",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5354,11 +5961,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5373,11 +5980,11 @@
         {
           "source_url": "https://huggingface.co/api/models?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/Helsinki-NLP/opus-mt-en-vi",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5392,11 +5999,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/bianet",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5411,11 +6018,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/bible_para",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5430,11 +6037,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/ecb",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5449,11 +6056,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/eitb_parcc",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5468,11 +6075,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/emea",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5487,11 +6094,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/euconst",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5506,11 +6113,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/europarl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5525,11 +6132,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/giga_fren",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5544,11 +6151,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/kde4",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5563,11 +6170,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/multi_para_crawl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5582,11 +6189,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/news_commentary",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5601,11 +6208,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/ofis_publik",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5620,11 +6227,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/open_subtitles",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5639,11 +6246,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus-100",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5658,11 +6265,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_books",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5677,11 +6284,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_dgt",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5696,11 +6303,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_dogc",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5715,11 +6322,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_elhuyar",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5734,11 +6341,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_finlex",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5753,11 +6360,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_fiskmo",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5772,11 +6379,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_gnome",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5791,11 +6398,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_infopankki",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5810,11 +6417,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_memat",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5829,11 +6436,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_montenegrinsubs",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5848,11 +6455,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_openoffice",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5867,11 +6474,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_paracrawl",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5886,11 +6493,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_rf",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5905,11 +6512,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_tedtalks",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5924,11 +6531,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_ubuntu",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     },
     {
@@ -5943,11 +6550,11 @@
         {
           "source_url": "https://huggingface.co/api/datasets?author=Helsinki-NLP&limit=30&full=true",
           "source_entity": "https://huggingface.co/datasets/Helsinki-NLP/opus_wikipedia",
-          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
           "type": "owner_listing"
         }
       ],
-      "last_seen": "2026-11-24T14:45:30.577360+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
       "identity_status": "confirmed_public_metadata"
     }
   ],
@@ -5967,6 +6574,57 @@
         "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
         "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
         "body_sha256": "e6d8385280005796e7947f1b6bf664d3f02a722324433ccffb775a917421fa8f"
+      }
+    },
+    {
+      "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+      "target": "https://github.com/helsinki-nlp/mammoth",
+      "relationship": "references",
+      "verification_status": "verified",
+      "first_seen": "2026-11-24T17:45:26.961633+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
+      "evidence": {
+        "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+        "type": "public_html_reference",
+        "excerpt": "https://github.com/Helsinki-NLP/mammoth/issues",
+        "resolved_url": "https://github.com/Helsinki-NLP/mammoth/issues",
+        "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+      }
+    },
+    {
+      "source": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+      "target": "https://github.com/readthedocs/sphinx_rtd_theme",
+      "relationship": "references",
+      "verification_status": "verified",
+      "first_seen": "2026-11-24T17:45:26.961633+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
+      "evidence": {
+        "source_url": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "source_entity": "https://helsinki-nlp.github.io/mammoth/FAQ.html",
+        "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+        "type": "public_html_reference",
+        "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "body_sha256": "8adf470bd4775a5b3f64306a8b17eaeb30d47b92750e454e82f0dff6cf4ce97c"
+      }
+    },
+    {
+      "source": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+      "target": "https://github.com/readthedocs/sphinx_rtd_theme",
+      "relationship": "references",
+      "verification_status": "verified",
+      "first_seen": "2026-11-24T17:45:26.961633+00:00",
+      "last_seen": "2026-11-24T17:45:26.961633+00:00",
+      "evidence": {
+        "source_url": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "source_entity": "https://helsinki-nlp.github.io/mammoth/HF_TOKENIZERS.html",
+        "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+        "type": "public_html_reference",
+        "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+        "body_sha256": "79d0bd396a89aed42e386443cc808b754e253861e9b2efe81f2bed9915bcdf60"
       }
     },
     {
