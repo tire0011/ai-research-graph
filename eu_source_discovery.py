@@ -10,6 +10,7 @@ import urllib.request
 from pathlib import Path
 
 from http_util import get_json
+from arxiv_source_discovery import discover_publications
 from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
@@ -92,7 +93,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -163,6 +164,10 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         evidence = {"source_url": source, "source_entity": source_entity,
                     "retrieved_at": stamp, "type": origin}
         add(key, evidence, "scoped discovery; affiliation unverified", identity=True)
+        ingest_references(source_entity, description, evidence)
+
+    def ingest_references(source_entity, description, evidence):
+        source = evidence["source_url"]
         if web_seeds:
             for url, raw in metadata_links(description, source_entity, canonical):
                 web_referrals.append((url, {**evidence, 'type': 'explicit_metadata_reference', 'excerpt': raw, 'resolved_url': url}))
@@ -170,7 +175,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         targets = {}
         for match in LINK.finditer(description):
             target = canonical(match.group())
-            if target and target != key:
+            if target and url_for(target) != source_entity:
                 targets.setdefault(target, match.group())
         for target, excerpt in list(targets.items())[:20]:
             proof = {"source_url": source, "source_entity": source_entity, "retrieved_at": stamp,
@@ -197,6 +202,17 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                             errors.append({"source": source, "error": type(exc).__name__})
             except (ValueError, TypeError, KeyError, OSError) as exc:
                 errors.append({"source": adapter.name, "owner": owner, "error": type(exc).__name__})
+
+    publication_state = copy.deepcopy(previous.get("publication_discovery"))
+    if config.get("arxiv_discovery", False):
+        publication_state, observations = discover_publications(
+            instant, previous=publication_state, fetch=publication_fetch)
+        listings.extend(publication_state["listings"])
+        errors.extend(publication_state["errors"])
+        for paper in observations:
+            proof = {"source_url": paper["source_url"], "source_entity": paper["url"],
+                     "retrieved_at": stamp, "type": "publication_metadata"}
+            ingest_references(paper["url"], " ".join(paper["explicit_links"]), proof)
 
     # FIFO across runs. Newly discovered links may themselves yield more links.
     # Never broaden to arbitrary owner listings or execute remote content.
@@ -263,6 +279,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             enqueue(target)
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
             "web_discovery": web_state,
+            "publication_discovery": publication_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -289,6 +306,17 @@ def write_report(result, output):
               "", "## Errors and limitations"]
     lines += ["- " + json.dumps(x) for x in result["errors"]]
     lines += ["- " + x for x in result["limitations"]]
+    publications = result.get("publication_discovery")
+    if publications:
+        lines += ["", "## arXiv publication discovery (review only)",
+                  f"Retained papers: {len(publications['papers'])}",
+                  f"Coverage: {publications['coverage']}",
+                  "Author-reported affiliations do not establish European relevance.",
+                  "### New papers"]
+        lines += [f"- {x['url']} — affiliation: {x['affiliation_status']}"
+                  for x in publications["papers"] if x["new"]]
+        lines += ["", "### Publication query diagnostics"]
+        lines += ["- " + json.dumps(x) for x in publications["listings"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
