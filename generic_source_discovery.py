@@ -234,7 +234,7 @@ def metadata_links(text, source_entity, platform_key):
              for m in URL_PATTERN.finditer(text)], source_entity, platform_key) if not platform_key(url)]
 
 
-def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None, now=None, max_pages=8):
+def discover_web(seeds, *, previous=None, referrals=(), refresh_referrals=(), platform_key, fetch=None, now=None, max_pages=8):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     state = copy.deepcopy(previous or {})
@@ -287,6 +287,21 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
                 queue(seed)
     for url, proof in referrals:
         queue(url, proof)
+    # Revisit a bounded number of explicitly refreshed organization entry points.
+    priority = []
+    for url in dict.fromkeys(refresh_referrals):
+        item = sources.get(url)
+        if not item:
+            continue
+        if item['status'] == 'read' and item.get('last_checked'):
+            last = dt.datetime.fromisoformat(item['last_checked'])
+            if instant - last >= dt.timedelta(days=28):
+                item['status'] = 'pending'
+                queue(url)
+        if url in queued and len(priority) < min(2, max_pages):
+            priority.append(url)
+    if priority:
+        pending[:] = priority + [url for url in pending if url not in priority]
 
     deferred = []
     checked = 0
