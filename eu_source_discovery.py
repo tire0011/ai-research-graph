@@ -12,6 +12,7 @@ from pathlib import Path
 from http_util import get_json
 from arxiv_source_discovery import discover_publications
 from publication_organizations import resolve as resolve_organizations
+from publication_openaire import enrich as enrich_openaire
 from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
@@ -94,7 +95,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None, openaire_fetch=None):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -222,6 +223,12 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             html_fetch=affiliation_fetch, ror_fetch=ror_fetch)
         errors.extend(organization_state["errors"])
 
+    openaire_state = copy.deepcopy(previous.get("openaire_discovery"))
+    if config.get("openaire_discovery", False) and publication_state:
+        openaire_state = enrich_openaire(publication_state["papers"], instant,
+                                        previous=openaire_state, fetch=openaire_fetch)
+        errors.extend(openaire_state["errors"])
+
     # FIFO across runs. Newly discovered links may themselves yield more links.
     # Never broaden to arbitrary owner listings or execute remote content.
     for _ in range(max_follow):
@@ -289,6 +296,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             "web_discovery": web_state,
             "publication_discovery": publication_state,
             "organization_discovery": organization_state,
+            "openaire_discovery": openaire_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -336,6 +344,17 @@ def write_report(result, output):
             lines += [f"- {org['ror_id']} — {len(org['paper_ids'])} paper(s)"]
         lines += ["", "### Organization discovery limitations"] + [
             "- " + x for x in organizations["limitations"]]
+    openaire = result.get("openaire_discovery")
+    if openaire:
+        lines += ["", "## OpenAIRE exact-ID enrichment (review only)",
+                  f"Selected papers: {len(openaire['selected'])} of {openaire['eligible_count']} eligible",
+                  f"Retained paper observations: {len(openaire['papers'])}",
+                  "Relationships below are OpenAIRE assertions, not independently verified facts."]
+        for pid, observation in sorted(openaire["papers"].items()):
+            lines += [f"- arXiv:{pid} — {observation['last_attempt_status']}"]
+            for record in observation.get("records", []):
+                lines += [f"  - {record['openaire_id']}: {len(record['organizations'])} organization(s), {len(record['projects'])} grant(s)"]
+        lines += ["- " + x for x in openaire["limitations"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
