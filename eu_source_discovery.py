@@ -230,12 +230,14 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                                         previous=openaire_state, fetch=openaire_fetch)
         errors.extend(openaire_state["errors"])
 
+    refreshed_org_sites = []
     expansion_state = copy.deepcopy(previous.get("organization_expansion"))
     if config.get("organization_expansion", False) and organization_state and web_seeds:
         expansion_state, referrals = expand_organizations(
             organization_state, instant, previous=expansion_state,
             registry_fetch=organization_registry_fetch, research_fetch=organization_research_fetch)
         web_referrals.extend(referrals)
+        refreshed_org_sites = [url for url, proof in referrals if proof["type"] == "ror_registry_website"]
         errors.extend(expansion_state["errors"])
 
     # FIFO across runs. Newly discovered links may themselves yield more links.
@@ -289,7 +291,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
     web_state = None
     if web_seeds:
         web_state = discover_web(web_seeds, previous=previous.get("web_discovery"),
-                                 referrals=web_referrals, platform_key=canonical,
+                                 referrals=web_referrals, refresh_referrals=refreshed_org_sites, platform_key=canonical,
                                  fetch=web_fetch, now=instant, max_pages=max_web_pages)
         for reference in web_state["platform_refs"]:
             target = canonical(reference["target"])
