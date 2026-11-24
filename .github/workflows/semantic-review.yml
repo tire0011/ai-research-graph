@@ -1,0 +1,75 @@
+name: Semantic evidence review
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Evidence set
+        type: choice
+        options:
+          - calibration
+          - discovered
+        default: calibration
+  schedule:
+    - cron: '17 8 * * 3'
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_semantic_review.py' -v
+
+  review:
+    needs: tests
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.SEMANTIC_REVIEW_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    concurrency:
+      group: semantic-review
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Review public evidence only (max five calls)
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          MODEL: ${{ vars.SEMANTIC_REVIEW_MODEL || 'mistral-small-latest' }}
+          MODE: ${{ inputs.mode || 'discovered' }}
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$MISTRAL_API_KEY" ]; then
+            echo "::error::Configure MISTRAL_API_KEY in Actions secrets before enabling model calls."
+            exit 1
+          fi
+          if [ "$MODE" = "discovered" ]; then
+            git fetch --no-tags origin refs/heads/eu-discovery-state
+            mkdir -p results
+            git show FETCH_HEAD:source_triage.json > results/source_triage.json
+            args=(--triage results/source_triage.json)
+          else
+            args=(--cases studies/semantic_review_pilot/cases.json)
+          fi
+          python semantic_review.py "${args[@]}" --provider mistral --model "$MODEL" --limit 5 --output results/semantic
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: semantic-review
+          path: results/semantic/
+          if-no-files-found: warn
