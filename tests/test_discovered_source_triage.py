@@ -45,7 +45,8 @@ class DiscoveredSourceTriageTests(unittest.TestCase):
         self.assertEqual(len(self.config["repositories"]), 2)
 
     @patch("discovered_source_triage.build")
-    def test_identity_and_license_gates(self, build):
+    def test_identity_gate_and_missing_license_does_not_hide_tasks(self, build):
+        build.return_value = {"errors": [], "new_top5": [{"repository": "unknown/nolicense", "labels": [], "title": "Inspect issue", "issue_url": "https://github.com/unknown/nolicense/issues/1"}]}
         def fetch(url):
             row = self.fetch(url)
             if url.endswith("/bad"):
@@ -58,9 +59,11 @@ class DiscoveredSourceTriageTests(unittest.TestCase):
         result = analyze(self.config, self.snapshot(["known/bad", "unknown/nolicense", "third/archived"]),
                          fetch, now=self.now)
         self.assertEqual(len(result["errors"]), 1)
-        self.assertEqual(result["tasks"], [])
-        self.assertFalse(result["issue_repositories"])
-        build.assert_not_called()
+        self.assertEqual(result["issue_repositories"], ["unknown/nolicense"])
+        self.assertEqual(result["tasks"][0]["reuse_status"], "license_review_required")
+        self.assertIsNone(result["tasks"][0]["license_spdx"])
+        self.assertEqual(result["filter_counts"]["unknown_license_among_topical"], 1)
+        build.assert_called_once()
 
     @patch("discovered_source_triage.build")
     def test_rotation_and_distinct_owners(self, build):
@@ -78,8 +81,24 @@ class DiscoveredSourceTriageTests(unittest.TestCase):
         self.assertEqual(len(first["last_attempt"]), MAX_METADATA)
 
     @patch("discovered_source_triage.build")
-    def test_only_one_owner_abstains(self, build):
+    def test_single_owner_still_reviews_issues(self, build):
+        build.return_value = {"errors": [], "new_top5": []}
         result = analyze(self.config, self.snapshot(["known/new"]), self.fetch, now=self.now)
         self.assertEqual(result["tasks"], [])
-        self.assertIsNone(result["issue_review"])
+        self.assertIsNotNone(result["issue_review"])
+        self.assertTrue(build.call_args.kwargs["allow_single_owner"])
+        self.assertEqual(result["topic_hypotheses"], [])
+
+    @patch("discovered_source_triage.build")
+    def test_topical_overlap_does_not_require_issues_or_license(self, build):
+        def fetch(url):
+            row = self.fetch(url)
+            row["license"] = None
+            row["has_issues"] = False
+            return row
+        result = analyze(self.config, self.snapshot(["known/one", "unknown/two"]),
+                         fetch, now=self.now)
+        self.assertEqual(len(result["topic_hypotheses"]), 1)
+        self.assertEqual(result["issue_repositories"], [])
+        self.assertEqual(result["filter_counts"]["technical_signals"], 2)
         build.assert_not_called()
