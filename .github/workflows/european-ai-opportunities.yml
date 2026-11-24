@@ -10,6 +10,14 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - arxiv_source_discovery.py
+      - publication_organizations.py
+      - publication_openaire.py
+      - organization_source_expansion.py
+      - tests/test_organization_source_expansion.py
+      - tests/test_publication_openaire.py
+      - tests/test_publication_organizations.py
+      - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
@@ -27,6 +35,14 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - arxiv_source_discovery.py
+      - publication_organizations.py
+      - publication_openaire.py
+      - organization_source_expansion.py
+      - tests/test_organization_source_expansion.py
+      - tests/test_publication_openaire.py
+      - tests/test_publication_organizations.py
+      - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
@@ -262,3 +278,87 @@ jobs:
           name: live-discovered-source-triage
           path: results/discovered-triage/
           if-no-files-found: warn
+
+  live-publication-smoke:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real arXiv metadata and record generic search coverage
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import time
+          from pathlib import Path
+          from arxiv_source_discovery import discover_publications, fetch_atom, parse_atom, API
+          from publication_organizations import resolve, ror_json, parse_ror, ROR_API
+          from publication_openaire import enrich as enrich_openaire
+          from organization_source_expansion import expand
+          from generic_source_discovery import discover_web
+          from eu_source_discovery import canonical
+          import urllib.parse
+          # Transport/parser smoke is deliberately separate from generic discovery recall.
+          total, _, rows = parse_atom(fetch_atom(API + "?id_list=2611.15250"))
+          assert total and any(row["id"] == "2611.15250" for row in rows), rows
+          time.sleep(3.1)
+          # Freeze the retrospective time window; no company name or paper ID in query.
+          result, _ = discover_publications(dt.datetime(2026, 11, 24, 18, tzinfo=dt.timezone.utc))
+          out = Path("results/publication-smoke")
+          out.mkdir(parents=True, exist_ok=True)
+          match = next((p for p in result["papers"] if p["id"] == "2611.15250"), None)
+          report = {"direct_id_transport": True, "generic_query_found_paper": match is not None,
+                    "generic_query_affiliation_status": match["affiliation_status"] if match else "not_found",
+                    "european_affiliation_verified": False, "result": result}
+          # Resolve the discovered record only; no hard-coded institution search.
+          if match:
+              orgs = resolve([match], dt.datetime.now(dt.timezone.utc))
+              report["organization_discovery"] = orgs
+              expansion, refs = expand(orgs, dt.datetime.now(dt.timezone.utc), max_organizations=1)
+              report["organization_expansion"] = expansion
+              print("Organization expansion selected:", expansion["selected"])
+              print("Organization expansion referrals:", [x[0] for x in refs])
+              print("Organization expansion errors:", expansion["errors"])
+              if refs:
+                  web = discover_web([], referrals=refs, platform_key=canonical, max_pages=2)
+                  report["organization_web_expansion"] = web
+                  print("Organization web sources:", len(web["sources"]))
+                  print("Organization downstream platform references:", len(web["platform_refs"]))
+                  print("Organization web diagnostics:", web["errors"])
+              oa = enrich_openaire([match], dt.datetime.now(dt.timezone.utc))
+              report["openaire_discovery"] = oa
+              observation = oa["papers"][match["id"]]
+              print("OpenAIRE target status:", observation["last_attempt_status"])
+              print("OpenAIRE target diagnostics:", oa["errors"])
+              raw = orgs["papers"][match["id"]]["raw_affiliations"]
+              print("Explicit affiliation observations:", raw)
+              print("Registry organization candidates:", list(orgs["organizations"]))
+              print("Organization diagnostics:", orgs["errors"])
+              print("Multiverse affiliation found:", any("multiverse computing" in x.lower() for x in raw))
+          (out / "publication_smoke.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+          print("Generic query paper found:", match is not None)
+          print("Coverage:", result["coverage"], "Errors:", result["errors"])
+          assert not result["errors"], result["errors"]
+          assert result["papers"], "No papers returned by generic discovery"
+          # Independent service/schema smoke, not evidence about the target paper.
+          probe = parse_ror(ror_json(ROR_API + "?" + urllib.parse.urlencode({"affiliation": "University of Helsinki, Finland"})))
+          assert probe["status"] == "registry_match_candidate" and "FI" in probe["countries"], probe
+          # Known indexed control from existing research graph audit.
+          control = enrich_openaire([{"id": "2609.24797", "version_id": "2609.24797v1"}], dt.datetime.now(dt.timezone.utc))
+          (out / "openaire_control.json").write_text(json.dumps(control, indent=2), encoding="utf-8")
+          print("OpenAIRE control status:", control["papers"]["2609.24797"]["last_attempt_status"])
+          assert not control["errors"], control["errors"]
+          assert control["papers"]["2609.24797"]["status"] == "matched"
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: arxiv-publication-smoke
+          path: results/publication-smoke/

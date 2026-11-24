@@ -10,6 +10,10 @@ import urllib.request
 from pathlib import Path
 
 from http_util import get_json
+from arxiv_source_discovery import discover_publications
+from publication_organizations import resolve as resolve_organizations
+from publication_openaire import enrich as enrich_openaire
+from organization_source_expansion import expand as expand_organizations
 from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
@@ -19,7 +23,7 @@ ID = re.compile(r"[\w.-]+/[\w.-]+", re.ASCII)
 LIMITATIONS = [
     "Owner membership is a scope hint, not proof of geography or collaboration.",
     "Bounded first two pages; not an exhaustive index.",
-    "RAISE, CORDIS and OpenAIRE not enabled; endpoints and mapping require validation.",
+    "CORDIS not enabled; endpoint and mapping require validation.",
     "Explicit references prove references only, not dependencies or cooperation.",
     "No graph advantage established; search comparison and independent review pending.",
 ]
@@ -92,7 +96,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None, openaire_fetch=None, organization_registry_fetch=None, organization_research_fetch=None):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -163,6 +167,10 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         evidence = {"source_url": source, "source_entity": source_entity,
                     "retrieved_at": stamp, "type": origin}
         add(key, evidence, "scoped discovery; affiliation unverified", identity=True)
+        ingest_references(source_entity, description, evidence)
+
+    def ingest_references(source_entity, description, evidence):
+        source = evidence["source_url"]
         if web_seeds:
             for url, raw in metadata_links(description, source_entity, canonical):
                 web_referrals.append((url, {**evidence, 'type': 'explicit_metadata_reference', 'excerpt': raw, 'resolved_url': url}))
@@ -170,7 +178,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         targets = {}
         for match in LINK.finditer(description):
             target = canonical(match.group())
-            if target and target != key:
+            if target and url_for(target) != source_entity:
                 targets.setdefault(target, match.group())
         for target, excerpt in list(targets.items())[:20]:
             proof = {"source_url": source, "source_entity": source_entity, "retrieved_at": stamp,
@@ -197,6 +205,40 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                             errors.append({"source": source, "error": type(exc).__name__})
             except (ValueError, TypeError, KeyError, OSError) as exc:
                 errors.append({"source": adapter.name, "owner": owner, "error": type(exc).__name__})
+
+    publication_state = copy.deepcopy(previous.get("publication_discovery"))
+    if config.get("arxiv_discovery", False):
+        publication_state, observations = discover_publications(
+            instant, previous=publication_state, fetch=publication_fetch)
+        listings.extend(publication_state["listings"])
+        errors.extend(publication_state["errors"])
+        for paper in observations:
+            proof = {"source_url": paper["source_url"], "source_entity": paper["url"],
+                     "retrieved_at": stamp, "type": "publication_metadata"}
+            ingest_references(paper["url"], " ".join(paper["explicit_links"]), proof)
+
+    organization_state = copy.deepcopy(previous.get("organization_discovery"))
+    if config.get("organization_discovery", False) and publication_state:
+        organization_state = resolve_organizations(
+            publication_state["papers"], instant, previous=organization_state,
+            html_fetch=affiliation_fetch, ror_fetch=ror_fetch)
+        errors.extend(organization_state["errors"])
+
+    openaire_state = copy.deepcopy(previous.get("openaire_discovery"))
+    if config.get("openaire_discovery", False) and publication_state:
+        openaire_state = enrich_openaire(publication_state["papers"], instant,
+                                        previous=openaire_state, fetch=openaire_fetch)
+        errors.extend(openaire_state["errors"])
+
+    refreshed_org_sites = []
+    expansion_state = copy.deepcopy(previous.get("organization_expansion"))
+    if config.get("organization_expansion", False) and organization_state and web_seeds:
+        expansion_state, referrals = expand_organizations(
+            organization_state, instant, previous=expansion_state,
+            registry_fetch=organization_registry_fetch, research_fetch=organization_research_fetch)
+        web_referrals.extend(referrals)
+        refreshed_org_sites = [url for url, proof in referrals if proof["type"] == "ror_registry_website"]
+        errors.extend(expansion_state["errors"])
 
     # FIFO across runs. Newly discovered links may themselves yield more links.
     # Never broaden to arbitrary owner listings or execute remote content.
@@ -249,7 +291,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
     web_state = None
     if web_seeds:
         web_state = discover_web(web_seeds, previous=previous.get("web_discovery"),
-                                 referrals=web_referrals, platform_key=canonical,
+                                 referrals=web_referrals, refresh_referrals=refreshed_org_sites, platform_key=canonical,
                                  fetch=web_fetch, now=instant, max_pages=max_web_pages)
         for reference in web_state["platform_refs"]:
             target = canonical(reference["target"])
@@ -263,6 +305,10 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             enqueue(target)
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
             "web_discovery": web_state,
+            "publication_discovery": publication_state,
+            "organization_discovery": organization_state,
+            "openaire_discovery": openaire_state,
+            "organization_expansion": expansion_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -289,6 +335,50 @@ def write_report(result, output):
               "", "## Errors and limitations"]
     lines += ["- " + json.dumps(x) for x in result["errors"]]
     lines += ["- " + x for x in result["limitations"]]
+    publications = result.get("publication_discovery")
+    if publications:
+        lines += ["", "## arXiv publication discovery (review only)",
+                  f"Retained papers: {len(publications['papers'])}",
+                  f"Coverage: {publications['coverage']}",
+                  "Author-reported affiliations do not establish European relevance.",
+                  "### New papers"]
+        lines += [f"- {x['url']} — affiliation: {x['affiliation_status']}"
+                  for x in publications["papers"] if x["new"]]
+        lines += ["", "### Publication query diagnostics"]
+        lines += ["- " + json.dumps(x) for x in publications["listings"]]
+    organizations = result.get("organization_discovery")
+    if organizations:
+        lines += ["", "## Publication organization candidates (review only)",
+                  f"Retained ROR organizations: {len(organizations['organizations'])}",
+                  f"HTML requests: {organizations['html_requests']}; ROR requests: {organizations['ror_requests']}",
+                  "Registry location is not proof of an author's location or headquarters."]
+        for org in organizations["organizations"].values():
+            lines += [f"- {org['ror_id']} — {len(org['paper_ids'])} paper(s)"]
+        lines += ["", "### Organization discovery limitations"] + [
+            "- " + x for x in organizations["limitations"]]
+    openaire = result.get("openaire_discovery")
+    if openaire:
+        lines += ["", "## OpenAIRE exact-ID enrichment (review only)",
+                  f"Selected papers: {len(openaire['selected'])} of {openaire['eligible_count']} eligible",
+                  f"Retained paper observations: {len(openaire['papers'])}",
+                  "Relationships below are OpenAIRE assertions, not independently verified facts."]
+        for pid, observation in sorted(openaire["papers"].items()):
+            lines += [f"- arXiv:{pid} — {observation['last_attempt_status']}"]
+            for record in observation.get("records", []):
+                lines += [f"  - {record['openaire_id']}: {len(record['organizations'])} organization(s), {len(record['projects'])} grant(s)"]
+        lines += ["- " + x for x in openaire["limitations"]]
+    expansion = result.get("organization_expansion")
+    if expansion:
+        lines += ["", "## Organization-driven source expansion (review only)",
+                  f"Selected organizations: {len(expansion['selected'])} of {expansion['eligible_count']} eligible",
+                  f"Retained organization records: {len(expansion['organizations'])}"]
+        for rid, record in sorted(expansion["organizations"].items()):
+            lines += [f"- {rid}: {record['last_attempt_status']}"]
+            lines += [f"  - Registry website: {site['url']}" for site in record.get("registry", {}).get("websites", [])]
+            research = record.get("research", {})
+            if research:
+                lines += [f"  - OpenAIRE topical products: {len(research['products'])} of {research['total']}"]
+        lines += ["- " + x for x in expansion["limitations"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
