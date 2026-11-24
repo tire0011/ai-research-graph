@@ -10,6 +10,7 @@ import urllib.request
 from pathlib import Path
 
 from http_util import get_json
+from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
 HF = "https://huggingface.co"
@@ -91,7 +92,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -122,6 +123,8 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
     queued = set(pending)
     errors, cache, listings, checks = [], {}, [], []
     attempted = set()
+    web_seeds = config.get('web_seeds', [])
+    web_referrals = []
 
     def read(url):
         if url not in cache:
@@ -160,6 +163,9 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
         evidence = {"source_url": source, "source_entity": source_entity,
                     "retrieved_at": stamp, "type": origin}
         add(key, evidence, "scoped discovery; affiliation unverified", identity=True)
+        if web_seeds:
+            for url in metadata_links(description, source_entity, canonical):
+                web_referrals.append((url, {**evidence, 'type': 'explicit_metadata_reference', 'excerpt': url}))
         # Bound reference fan-out per record; references are evidence, not confirmed cooperation.
         targets = {}
         for match in LINK.finditer(description):
@@ -240,7 +246,22 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
             errors.append({"source": source, "error": type(exc).__name__})
             enqueue(key)
             break
+    web_state = None
+    if web_seeds:
+        web_state = discover_web(web_seeds, previous=previous.get("web_discovery"),
+                                 referrals=web_referrals, platform_key=canonical,
+                                 fetch=web_fetch, now=instant, max_pages=max_web_pages)
+        for target_url, proof in web_state["platform_refs"].items():
+            target = canonical(target_url)
+            add(target, proof, "public web reference; affiliation unverified")
+            pair = (proof["source_entity"], url_for(target))
+            edges[pair] = {"source": pair[0], "target": pair[1], "relationship": "references",
+                           "verification_status": "verified",
+                           "first_seen": edges.get(pair, {}).get("first_seen", stamp),
+                           "last_seen": stamp, "evidence": proof}
+            enqueue(target)
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
+            "web_discovery": web_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -267,4 +288,21 @@ def write_report(result, output):
               "", "## Errors and limitations"]
     lines += ["- " + json.dumps(x) for x in result["errors"]]
     lines += ["- " + x for x in result["limitations"]]
+    web = result.get("web_discovery")
+    if web:
+        (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
+        lines += ["", "## Generic web source discovery",
+                  f"Retained web sources: {len(web['sources'])}",
+                  f"New web sources: {web['new_sources']}",
+                  f"New web references: {web['new_references']}",
+                  f"Pending web sources: {len(web['pending'])}",
+                  f"Errors this run: {len(web['errors'])}",
+                  f"Budget exclusions this run: {web['dropped_by_budget']}",
+                  "Partial traversal; public links do not prove affiliation or collaboration.",
+                  "", "### Source format / adapter review"]
+        lines += [f"- {x['url']} — {x['format']} ({x['status']})"
+                  for x in web["sources"].values() if x["status"] != "pending"]
+        lines += ["", "### Adapter proposals (review required; not executed)"]
+        lines += [f"- {x['url']} — {x['format']}: {x['action']}" for x in web["adapter_proposals"]]
+        lines += ["", "### Web source diagnostics"] + ["- " + json.dumps(x) for x in web["errors"]]
     (out / "SOURCE_DISCOVERY.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
