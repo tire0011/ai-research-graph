@@ -40,17 +40,17 @@ def get_json(url):
     return shared_get_json(url, user_agent="european-open-ai-opportunity-pilot")[0]
 
 
-def validate(config):
+def validate(config, *, allow_single_owner=False):
     if config.get("schema") != 1 or not isinstance(config.get("repositories"), list):
         raise ValueError("Unsupported source registry")
     sources = config["repositories"]
-    if not 2 <= len(sources) <= MAX_SOURCES:
+    if not (1 if allow_single_owner else 2) <= len(sources) <= MAX_SOURCES:
         raise ValueError("Need a bounded multi-repository registry")
     repos = [x.get("repo") for x in sources if isinstance(x, dict)]
     if (len(repos) != len(sources) or any(not isinstance(x, str) or not REPO_RE.fullmatch(x)
                                          for x in repos) or len(set(repos)) != len(repos)):
         raise ValueError("Invalid or duplicate repositories")
-    if len({name.split("/")[0].lower() for name in repos}) < 2:
+    if not allow_single_owner and len({name.split("/")[0].lower() for name in repos}) < 2:
         raise ValueError("Sources must include multiple organizations")
     for x in sources:
         if not isinstance(x.get("area"), str) or not x["area"].strip() or not x.get("region"):
@@ -144,8 +144,8 @@ def issue_comments(fetch, repo, item):
     return comments
 
 
-def build(config, fetch=get_json, *, now=None):
-    validate(config)
+def build(config, fetch=get_json, *, now=None, allow_single_owner=False):
+    validate(config, allow_single_owner=allow_single_owner)
     actor = config["actor"]
     now = now or dt.datetime.now(dt.timezone.utc)
     if now.tzinfo is None:
