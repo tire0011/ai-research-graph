@@ -164,8 +164,8 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                     "retrieved_at": stamp, "type": origin}
         add(key, evidence, "scoped discovery; affiliation unverified", identity=True)
         if web_seeds:
-            for url in metadata_links(description, source_entity, canonical):
-                web_referrals.append((url, {**evidence, 'type': 'explicit_metadata_reference', 'excerpt': url}))
+            for url, raw in metadata_links(description, source_entity, canonical):
+                web_referrals.append((url, {**evidence, 'type': 'explicit_metadata_reference', 'excerpt': raw, 'resolved_url': url}))
         # Bound reference fan-out per record; references are evidence, not confirmed cooperation.
         targets = {}
         for match in LINK.finditer(description):
