@@ -1,4 +1,5 @@
 """Bounded source expansion for the European opportunity pipeline (review only)."""
+import copy
 import datetime as dt
 import json
 import re
@@ -30,7 +31,11 @@ def canonical(url):
         kind, parts = "dataset", parts[1:]
     if p.scheme != "https" or p.netloc not in ("github.com", "huggingface.co") or len(parts) < 2:
         return None
-    name = "/".join(parts[:2]).removesuffix(".git")
+    if parts[0].lower() in ({"topics", "orgs", "users", "search", "marketplace", "features", "collections", "settings"} if kind == "repository" else {"spaces", "collections", "organizations", "docs", "blog", "models", "datasets"}):
+        return None
+    name = "/".join(parts[:2])
+    if kind == "repository":
+        name = name.removesuffix(".git")
     if not ID.fullmatch(name) or any(x in (".", "..") for x in name.split("/")):
         return None
     return (kind, name.lower() if kind == "repository" else name)
@@ -79,62 +84,172 @@ class HuggingFace:
             return None
         return ("model" if kind == "models" else "dataset", name), json.dumps(row.get("cardData") or {})
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4):
-    stamp = (now or dt.datetime.now(dt.timezone.utc)).isoformat()
+def detail_url(key):
+    kind, name = key
+    if kind == "repository":
+        return f"{GH}/repos/{name}"
+    return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
+
+
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12):
+    instant = now or dt.datetime.now(dt.timezone.utc)
+    stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
     owners = sorted({x["repo"].split("/")[0] for x in config["repositories"]}, key=str.lower)
-    # Rotate the bounded owner sample weekly to avoid starving later owners.
-    offset = (now or dt.datetime.now(dt.timezone.utc)).isocalendar().week * max_owners % len(owners)
+    if not owners:
+        raise ValueError("empty seed registry")
+    if max_owners < 1 or max_follow < 0:
+        raise ValueError("invalid discovery budget")
+    offset = instant.isocalendar().week * max_owners % len(owners)
     owners = (owners[offset:] + owners[:offset])[:max_owners]
-    candidates, edges, errors, cache = {}, {}, [], {}
-    prior = {x["url"] for x in (previous or {}).get("candidates", [])}
+    previous = previous or {}
+    if previous and previous.get("schema") not in (1, 2):
+        raise ValueError("unsupported discovery state schema")
+    candidates = {x["url"]: copy.deepcopy(x) for x in previous.get("candidates", [])
+                  if canonical(x["url"]) not in known}
+    prior = set(candidates)
+    for item in candidates.values():
+        item["new"] = False
+        item.setdefault("first_seen", previous.get("retrieved_at", stamp))
+    edges = {(x["source"], x["target"]): copy.deepcopy(x)
+             for x in previous.get("verified_references", [])}
+    prior_edges = set(edges)
+    expanded = dict(previous.get("expanded", {}))
+    pending = list(dict.fromkeys(previous.get("pending", [])))
+    # Migrate old snapshots: unresolved reference targets become the first frontier.
+    if previous.get("schema") == 1:
+        pending.extend(x["target"] for x in edges.values() if x["target"] not in pending)
+    queued = set(pending)
+    errors, cache, listings, checks = [], {}, [], []
+    attempted = set()
+
     def read(url):
         if url not in cache:
+            attempted.add(url)
             if fetch is None:
                 time.sleep(0.5)
             cache[url] = (fetch(url) if fetch else
                           get_json(url, user_agent="eu-research-graph", timeout=15, attempts=2)[0]
                           if url.startswith(GH + "/") else hf_json(url))
         return cache[url]
-    def add(key, evidence, reason):
-        if key not in known:
-            url = url_for(key)
-            item = candidates.setdefault(url, {"url": url, "kind": key[0], "review_only": True,
-                "verification_status": "unknown", "european_relevance": reason,
-                "new": url not in prior, "evidence": []})
-            if evidence not in item["evidence"]:
-                item["evidence"].append(evidence)
+
+    def add(key, evidence, reason, identity=False):
+        if key in known:
+            return
+        url = url_for(key)
+        item = candidates.setdefault(url, {"url": url, "kind": key[0], "review_only": True,
+            "verification_status": "unknown", "european_relevance": reason,
+            "new": url not in prior, "first_seen": stamp, "evidence": []})
+        item["last_seen"] = stamp
+        if identity:
+            item["identity_status"] = "confirmed_public_metadata"
+        # Keep the latest observation of each distinct piece of evidence, not a weekly duplicate.
+        fingerprint = lambda e: {k: v for k, v in e.items() if k != "retrieved_at"}
+        item["evidence"] = [e for e in item["evidence"] if fingerprint(e) != fingerprint(evidence)]
+        item["evidence"].append(evidence)
+
+    def enqueue(key):
+        url = url_for(key)
+        if url not in expanded and url not in queued:
+            pending.append(url)
+            queued.add(url)
+
+    def ingest(record, source, origin):
+        key, description = record
+        source_entity = url_for(key)
+        evidence = {"source_url": source, "source_entity": source_entity,
+                    "retrieved_at": stamp, "type": origin}
+        add(key, evidence, "scoped discovery; affiliation unverified", identity=True)
+        # Bound reference fan-out per record; references are evidence, not confirmed cooperation.
+        targets = {}
+        for match in LINK.finditer(description):
+            target = canonical(match.group())
+            if target and target != key:
+                targets.setdefault(target, match.group())
+        for target, excerpt in list(targets.items())[:20]:
+            proof = {"source_url": source, "source_entity": source_entity, "retrieved_at": stamp,
+                     "type": "explicit_metadata_reference", "excerpt": excerpt}
+            add(target, proof, "reference from scoped source; affiliation unverified")
+            pair = (source_entity, url_for(target))
+            first_seen = edges.get(pair, {}).get("first_seen", stamp)
+            edges[pair] = {"source": pair[0], "target": pair[1],
+                "relationship": "references", "verification_status": "verified",
+                "first_seen": first_seen, "last_seen": stamp, "evidence": proof}
+            enqueue(target)
+
     for owner in owners:
         for adapter in (GitHub(), HuggingFace()):
             try:
                 for source, rows in adapter.pages(owner, read):
+                    listings.append({"adapter": adapter.name, "source_url": source, "count": len(rows)})
                     for row in rows:
                         try:
                             record = adapter.record(row)
-                            if not record:
-                                continue
-                            key, description = record
-                            evidence = {"source_url": source, "retrieved_at": stamp, "type": "owner_listing"}
-                            add(key, evidence, "registry owner search; affiliation unverified")
-                            for match in LINK.finditer(description):
-                                target = canonical(match.group())
-                                if not target or target == key:
-                                    continue
-                                proof = {"source_url": source, "retrieved_at": stamp,
-                                         "type": "explicit_metadata_reference", "excerpt": match.group()}
-                                add(target, proof, "reference from scoped source; affiliation unverified")
-                                pair = (url_for(key), url_for(target))
-                                edges[pair] = {"source": pair[0], "target": pair[1],
-                                    "relationship": "references", "verification_status": "verified",
-                                    "evidence": proof}
+                            if record:
+                                ingest(record, source, "owner_listing")
                         except (ValueError, TypeError, KeyError, AttributeError) as exc:
                             errors.append({"source": source, "error": type(exc).__name__})
             except (ValueError, TypeError, KeyError, OSError) as exc:
                 errors.append({"source": adapter.name, "owner": owner, "error": type(exc).__name__})
-    return {"schema": 1, "retrieved_at": stamp, "owners": owners, "requests": len(cache),
+
+    # FIFO across runs. Newly discovered links may themselves yield more links.
+    # Never broaden to arbitrary owner listings or execute remote content.
+    for _ in range(max_follow):
+        if not pending:
+            break
+        url = pending.pop(0)
+        queued.discard(url)
+        if url in expanded:
+            continue
+        key = canonical(url)
+        if not key or url_for(key) != url:
+            errors.append({"source": url, "error": "invalid frontier identity"})
+            continue
+        source = detail_url(key)
+        try:
+            row = read(source)
+            if not isinstance(row, dict):
+                raise ValueError("invalid detail response")
+            if key[0] == "repository":
+                record = GitHub().record(row)
+            else:
+                record = HuggingFace().record(("models" if key[0] == "model" else "datasets", row))
+            if record is None:
+                status = "excluded"
+            elif record[0] != key:
+                status = "identity_mismatch"
+            else:
+                ingest(record, source, "detail_lookup")
+                status = "confirmed_public_metadata"
+            expanded[url] = status
+            # An already-listed entity retains its historical identity observation.
+            if url in candidates:
+                candidates[url]["detail_status"] = status
+            checks.append({"url": url, "source_url": source, "status": status})
+        except urllib.error.HTTPError as exc:
+            if exc.code in (404, 410):
+                expanded[url] = "not_found"
+                if url in candidates:
+                    candidates[url]["detail_status"] = "not_found"
+                checks.append({"url": url, "source_url": source, "status": "not_found"})
+            else:
+                errors.append({"source": source, "error": f"HTTP {exc.code}"})
+                enqueue(key)
+                break
+        except (ValueError, TypeError, KeyError, AttributeError, OSError) as exc:
+            errors.append({"source": source, "error": type(exc).__name__})
+            enqueue(key)
+            break
+    return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
+            "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
+            "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
             "verified_references": sorted(edges.values(), key=lambda x: (x["source"], x["target"])),
-            "hypotheses": [], "errors": errors, "limitations": LIMITATIONS}
+            "hypotheses": [], "errors": errors, "limitations": LIMITATIONS +
+            ["Historical observations persist; not evidence a link is still present.",
+             "At most 20 distinct targets per metadata record and bounded detail requests per run.",
+             "Detail lookups do not prove European affiliation; unresolved or excluded targets stay review-only.",
+             "Previously expanded targets are not automatically revalidated."]}
 
 def write_report(result, output):
     out = Path(output)
@@ -142,7 +257,10 @@ def write_report(result, output):
     (out / "source_candidates.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     lines = ["# Automatic source discovery (review only)", "", "## New candidates"]
     lines += ["- " + x["url"] for x in result["candidates"] if x["new"]]
-    lines += ["", "## Verified metadata references"]
+    lines += ["", f"Total retained candidates: {len(result['candidates'])}",
+              f"New references: {result['new_reference_count']}",
+              f"Pending detail lookups: {len(result['pending'])}",
+              "", "## Historical verified metadata references"]
     lines += ["- " + x["source"] + " references " + x["target"] for x in result["verified_references"]]
     lines += ["", "## Collaboration hypotheses", "Not evaluated in this iteration.",
               "", "## Engineering tasks", "See existing OPPORTUNITIES.md; new sources require review.",
