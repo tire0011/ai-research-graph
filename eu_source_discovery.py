@@ -354,7 +354,7 @@ def write_report(result, output):
               f"New references: {result['new_reference_count']}",
               f"Pending detail lookups: {len(result['pending'])}",
               "", "## Historical verified metadata references"]
-    lines += ["- " + x["source"] + " references " + x["target"] for x in result["verified_references"]]
+    lines += ["- " + x["source"] + " references " + x["target"] for x in result["verified_references"] if x.get("verification_status") == "verified"]
     lines += ["", "## Collaboration hypotheses", "Not evaluated in this iteration.",
               "", "## Engineering tasks", "See existing OPPORTUNITIES.md; new sources require review.",
               "", "## Errors and limitations"]
