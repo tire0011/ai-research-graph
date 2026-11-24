@@ -9,6 +9,8 @@ on:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - eu_source_discovery.py
+      - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
@@ -20,6 +22,8 @@ on:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - eu_source_discovery.py
+      - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
@@ -53,10 +57,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: .discovery-state
+          key: eu-discovery-${{ github.run_id }}
+          restore-keys: eu-discovery-
       - name: Read-only EU open AI issue review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json
+        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json --discover-sources --previous-candidates .discovery-state/source_candidates.json
+      - name: Preserve discovery state
+        if: success()
+        run: mkdir -p .discovery-state && cp results/european_ai/source_candidates.json .discovery-state/
       - name: Preserve evidence and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
