@@ -11,6 +11,7 @@ from pathlib import Path
 
 from http_util import get_json
 from arxiv_source_discovery import discover_publications
+from publication_organizations import resolve as resolve_organizations
 from generic_source_discovery import discover_web, metadata_links
 
 GH = "https://api.github.com"
@@ -93,7 +94,7 @@ def detail_url(key):
     return f"{HF}/api/{'models' if kind == 'model' else 'datasets'}/{name}"
 
 
-def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None):
+def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_follow=12, web_fetch=None, max_web_pages=8, publication_fetch=None, affiliation_fetch=None, ror_fetch=None):
     instant = now or dt.datetime.now(dt.timezone.utc)
     stamp = instant.isoformat()
     known = {("repository", x["repo"].lower()) for x in config["repositories"]}
@@ -214,6 +215,13 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                      "retrieved_at": stamp, "type": "publication_metadata"}
             ingest_references(paper["url"], " ".join(paper["explicit_links"]), proof)
 
+    organization_state = copy.deepcopy(previous.get("organization_discovery"))
+    if config.get("organization_discovery", False) and publication_state:
+        organization_state = resolve_organizations(
+            publication_state["papers"], instant, previous=organization_state,
+            html_fetch=affiliation_fetch, ror_fetch=ror_fetch)
+        errors.extend(organization_state["errors"])
+
     # FIFO across runs. Newly discovered links may themselves yield more links.
     # Never broaden to arbitrary owner listings or execute remote content.
     for _ in range(max_follow):
@@ -280,6 +288,7 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
             "web_discovery": web_state,
             "publication_discovery": publication_state,
+            "organization_discovery": organization_state,
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -317,6 +326,16 @@ def write_report(result, output):
                   for x in publications["papers"] if x["new"]]
         lines += ["", "### Publication query diagnostics"]
         lines += ["- " + json.dumps(x) for x in publications["listings"]]
+    organizations = result.get("organization_discovery")
+    if organizations:
+        lines += ["", "## Publication organization candidates (review only)",
+                  f"Retained ROR organizations: {len(organizations['organizations'])}",
+                  f"HTML requests: {organizations['html_requests']}; ROR requests: {organizations['ror_requests']}",
+                  "Registry location is not proof of an author's location or headquarters."]
+        for org in organizations["organizations"].values():
+            lines += [f"- {org['ror_id']} — {len(org['paper_ids'])} paper(s)"]
+        lines += ["", "### Organization discovery limitations"] + [
+            "- " + x for x in organizations["limitations"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")
