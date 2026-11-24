@@ -10,6 +10,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - generic_source_discovery.py
+      - tests/test_generic_source_discovery.py
       - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
@@ -23,6 +25,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - generic_source_discovery.py
+      - tests/test_generic_source_discovery.py
       - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
@@ -151,4 +155,47 @@ jobs:
         with:
           name: eu-source-live-smoke
           path: results/source-smoke/
+          if-no-files-found: warn
+
+  live-generic-source-smoke:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Discover from the single public RAISE seed
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from generic_source_discovery import discover_web
+          from eu_source_discovery import canonical
+          seed = "https://raise4science.eu/"
+          result = discover_web([seed], platform_key=canonical, max_pages=2)
+          out = Path("results/generic-source-smoke")
+          out.mkdir(parents=True, exist_ok=True)
+          (out / "source_candidates.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+          print("Core:", result["sources"][seed])
+          print("New public sources:", len(result["sources"]) - 1)
+          print("Evidence:", result["references"][:10])
+          print("Platform references:", result["platform_refs"])
+          print("Errors:", result["errors"])
+          assert result["sources"][seed]["status"] == "read", result["sources"][seed]
+          assert len(result["sources"]) > 1, "No source discovered from the single core seed"
+          assert result["references"], "No original link evidence"
+          print("Single-seed discovery passed.")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: generic-source-live-smoke
+          path: results/generic-source-smoke/
           if-no-files-found: warn
