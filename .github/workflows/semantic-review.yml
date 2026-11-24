@@ -1,6 +1,12 @@
 name: Semantic evidence review
 
 on:
+  pull_request:
+    paths:
+      - semantic_review.py
+      - tests/test_semantic_review.py
+      - studies/semantic_review_pilot/**
+      - .github/workflows/semantic-review.yml
   workflow_dispatch:
     inputs:
       mode:
@@ -18,7 +24,6 @@ permissions:
 
 jobs:
   tests:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
