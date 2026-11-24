@@ -103,8 +103,9 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
             metadata.append(record)
         except (ValueError, TypeError, KeyError, AttributeError, OSError) as exc:
             errors.append({"url": url, "stage": "metadata", "error": type(exc).__name__})
-    eligible = [r for r in metadata if r["status"] == "review_only" and r["technical_signals"]
-                and r["recent_push"] and r["has_issues"] and r["license_hint"]]
+    topical = [r for r in metadata if r["status"] == "review_only" and r["technical_signals"]]
+    # License metadata is not a precondition for reading issues or identifying topic overlap.
+    eligible = [r for r in topical if r["recent_push"] and r["has_issues"]]
     eligible.sort(key=lambda r: (-len(r["technical_signals"]), r["url"]))
     # Select distinct owners before a second repository from any owner.
     issue_sources, seen_owners = [], set()
@@ -121,12 +122,12 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
         if r not in issue_sources:
             issue_sources.append(r)
     issue_result = None
-    if len(seen_owners) >= 2:
+    if issue_sources:
         scoped = {**config, "max_issues_per_repo": min(config["max_issues_per_repo"], 8),
                   "candidate_checks_per_repo": 2, "max_new_suggestions": 5,
                   "repositories": [{"repo": r["repo"], "area": ", ".join(r["technical_signals"]),
                                     "region": "UNVERIFIED — candidate review only"} for r in issue_sources]}
-        issue_result = build(scoped, fetch, now=now)
+        issue_result = build(scoped, fetch, now=now, allow_single_owner=True)
         errors.extend({"stage": "issue", **err} for err in issue_result["errors"])
     by_repo = {r["repo"]: r for r in issue_sources}
     tasks = []
@@ -138,11 +139,13 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                           "repository_evidence_url": meta["source_url"],
                           "invitation_labels": labels,
                           "invitation_status": "public_issue_label" if labels else "unknown",
+                          "license_spdx": meta["license_spdx"],
+                          "reuse_status": "license_review_required",
                           "action": "Inspect current code and ask whether the task is wanted; do not claim automatically."})
     # Shared specific metadata signals are hypotheses, not a proven handoff.
     pairs = []
-    for i, left in enumerate(eligible):
-        for right in eligible[i+1:]:
+    for i, left in enumerate(topical):
+        for right in topical[i+1:]:
             if source_owner(left["repo"]) == source_owner(right["repo"]):
                 continue
             shared = sorted(set(left["technical_signals"]) & set(right["technical_signals"]))
@@ -152,13 +155,17 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                           "status": "unverified_topic_overlap",
                           "evidence": [{"url": r["source_url"], "description": r["description"],
                                         "topics": r["topics"], "signals": r["technical_signals"],
+                                        "license_spdx": r["license_spdx"], "recent_push": r["recent_push"],
                                         "retrieved_at": stamp} for r in (left, right)],
                           "next_check": "Compare open requirements, existing code, licenses and maintainer interest."})
     pairs.sort(key=lambda x: (-len(x["shared_areas"]), x["left"], x["right"]))
     web = snapshot.get("web_discovery") or {}
     return {"schema": 1, "retrieved_at": stamp, "snapshot_retrieved_at": snapshot.get("retrieved_at"),
             "pool_size": len(urls), "selected": selected, "last_attempt": history,
-            "metadata": metadata, "issue_repositories": [r["repo"] for r in issue_sources],
+            "metadata": metadata, "filter_counts": {"metadata_review_only": sum(r["status"] == "review_only" for r in metadata),
+                "technical_signals": len(topical), "active_with_issues": len(eligible),
+                "selected_for_issue_review": len(issue_sources),
+                "unknown_license_among_topical": sum(not r["license_hint"] for r in topical)}, "issue_repositories": [r["repo"] for r in issue_sources],
             "issue_review": issue_result, "tasks": tasks, "topic_hypotheses": pairs[:5],
             "adapter_review": web.get("adapter_proposals", []), "errors": errors,
             "limitations": ["Repository descriptions and topics are lexical signals, not scientific assessment.",
@@ -172,10 +179,14 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
 def markdown(result):
     lines = ["# Discovered-source review queue", "",
              f"Pool: {result['pool_size']} repositories; inspected {len(result['selected'])}; errors: {len(result['errors'])}.",
-             "", "## Up to five engineering tasks (review only)"]
+             "", "## Selection diagnostics"]
+    lines += [f"- {key}: {value}" for key, value in result["filter_counts"].items()]
+    lines += [f"- Issue review: {len(result['issue_repositories'])} repositories"]
+    lines += ["", "## Up to five engineering tasks (review only)"]
     for task in result["tasks"]:
         lines += [f"- {task['issue_url']} — {task['title']}",
                   f"  - Affiliation: {task['affiliation_status']}; invitation labels: {', '.join(task['invitation_labels']) or 'unknown'}.",
+                  f"  - License metadata: {task['license_spdx'] or 'unknown'}; reuse requires license review.",
                   f"  - {task['action']}"]
     if not result["tasks"]:
         lines.append("No task surfaced in this bounded review; absence is not evidence of no opportunities.")
