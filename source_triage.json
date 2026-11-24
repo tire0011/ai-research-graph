@@ -1,21 +1,21 @@
 {
   "schema": 1,
-  "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-  "snapshot_retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-  "pool_size": 159,
+  "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+  "snapshot_retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+  "pool_size": 179,
   "selected": [
-    "https://github.com/helsinki-nlp/dialect-to-standard",
-    "https://github.com/hplt-project/document-aligner",
-    "https://github.com/kyutai-labs/casa",
-    "https://github.com/laion-ai/agent-bud-e",
-    "https://github.com/helsinki-nlp/dialect-topic-model",
-    "https://github.com/hplt-project/hplt-e",
-    "https://github.com/kyutai-labs/cines-markdown-docs",
-    "https://github.com/laion-ai/audio-dataset",
-    "https://github.com/helsinki-nlp/expl-simpl",
-    "https://github.com/hplt-project/hplt-mt-models",
-    "https://github.com/kyutai-labs/dactory",
-    "https://github.com/laion-ai/bud-e-flutter-openrouter"
+    "https://github.com/aarnav-kembhavi/mednsq-circuits",
+    "https://github.com/acodercat/atmosregime",
+    "https://github.com/ahmed-mahran/misqal",
+    "https://github.com/bowen1911/symbolic_graph_env",
+    "https://github.com/caidish/klayoutclaw",
+    "https://github.com/civiltime-bench/civiltime-bench",
+    "https://github.com/colinzhaoust/read-tea-leaves",
+    "https://github.com/disha1001/discernbench",
+    "https://github.com/gaojianxin05/rulecraft",
+    "https://github.com/helsinki-nlp/external-mt-leaderboard",
+    "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
+    "https://github.com/hplt-project/hplt-wp4"
   ],
   "last_attempt": {
     "https://github.com/helsinki-nlp/building-nlp-apps-notebooks": "2026-11-24T14:47:12.523613+00:00",
@@ -41,321 +41,293 @@
     "https://github.com/helsinki-nlp/expl-simpl": "2026-11-24T17:47:19.793286+00:00",
     "https://github.com/hplt-project/hplt-mt-models": "2026-11-24T17:47:19.793286+00:00",
     "https://github.com/kyutai-labs/dactory": "2026-11-24T17:47:19.793286+00:00",
-    "https://github.com/laion-ai/bud-e-flutter-openrouter": "2026-11-24T17:47:19.793286+00:00"
+    "https://github.com/laion-ai/bud-e-flutter-openrouter": "2026-11-24T17:47:19.793286+00:00",
+    "https://github.com/aarnav-kembhavi/mednsq-circuits": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/acodercat/atmosregime": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/ahmed-mahran/misqal": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/bowen1911/symbolic_graph_env": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/caidish/klayoutclaw": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/civiltime-bench/civiltime-bench": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/colinzhaoust/read-tea-leaves": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/disha1001/discernbench": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/gaojianxin05/rulecraft": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/helsinki-nlp/external-mt-leaderboard": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/heyavijitroy/multilingual-trustworthiness-study": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/hplt-project/hplt-wp4": "2026-11-24T19:05:25.833321+00:00"
   },
   "metadata": [
     {
-      "url": "https://github.com/helsinki-nlp/dialect-to-standard",
-      "repo": "Helsinki-NLP/dialect-to-standard",
+      "url": "https://github.com/aarnav-kembhavi/mednsq-circuits",
+      "repo": "aarnav-kembhavi/MEDNSQ-CIRCUITS",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/helsinki-nlp/dialect-to-standard",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
+      "source_url": "https://api.github.com/repos/aarnav-kembhavi/mednsq-circuits",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
       "description": "",
       "topics": [],
-      "metadata_sha256": "99bcfa0d7333b429e36a0ba7354898caf6f2c36cfcb5ef4e8b22974a31aa22b2",
+      "metadata_sha256": "759914c1b2f79a9bd44baab0408001219d6286e5943eca619e0e3d8ffccb583e",
       "technical_signals": {},
       "recent_push": true,
-      "license_spdx": "CC-BY-4.0",
-      "license_hint": true,
+      "license_spdx": null,
+      "license_hint": false,
       "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/Helsinki-NLP/OpusFilter",
-          "region": "Finland"
-        },
-        {
-          "source": "https://github.com/Helsinki-NLP/Tatoeba-Challenge",
-          "region": "Finland"
-        }
-      ],
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/helsinki-nlp/dialect-to-standard",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.30675v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/aarnav-kembhavi/MEDNSQ-CIRCUITS"
+        },
+        {
+          "source_url": "https://api.github.com/repos/aarnav-kembhavi/mednsq-circuits",
+          "source_entity": "https://github.com/aarnav-kembhavi/mednsq-circuits",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "detail_lookup"
         }
       ]
     },
     {
-      "url": "https://github.com/hplt-project/document-aligner",
-      "repo": "hplt-project/document-aligner",
+      "url": "https://github.com/acodercat/atmosregime",
+      "repo": "acodercat/AtmosRegime",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/hplt-project/document-aligner",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "tf/idf-based document aligner from Bitextor",
+      "source_url": "https://api.github.com/repos/acodercat/atmosregime",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Why language models misapply atmospheric formulas beyond their regime, and which training repairs it.",
       "topics": [],
-      "metadata_sha256": "63b9ac293c515ef40b7b0b9675b5a0bc9d9b0660a1475db565b6912e9c21e32c",
+      "metadata_sha256": "eacb7626b11d9251277e18cff7d019a37d52e19cb4cae4067547ac4f6aed0ae6",
       "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/hplt-project/OpusCleaner",
-          "region": "EU research consortium"
-        },
-        {
-          "source": "https://github.com/hplt-project/HPLT-textpipes",
-          "region": "EU research consortium"
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/hplt-project/document-aligner",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/kyutai-labs/casa",
-      "repo": "kyutai-labs/casa",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/kyutai-labs/casa",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "A vision-language model with an improved cross-attention mechanism for scalable streaming inference",
-      "topics": [],
-      "metadata_sha256": "98dc7c742a941946502c542ba5913be16c27fd0070bc6e56f09faa291c7c2677",
-      "technical_signals": {
-        "inference": [
-          "inference"
-        ]
-      },
       "recent_push": true,
       "license_spdx": "MIT",
       "license_hint": true,
       "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/kyutai-labs/moshi",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/pocket-tts",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/hibiki",
-          "region": "France"
-        }
-      ],
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/kyutai-labs/casa",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.28669v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/acodercat/AtmosRegime"
         }
       ]
     },
     {
-      "url": "https://github.com/laion-ai/agent-bud-e",
-      "repo": "LAION-AI/agent-bud-e",
+      "url": "https://github.com/ahmed-mahran/misqal",
+      "repo": "ahmed-mahran/misqal",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/laion-ai/agent-bud-e",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "Building an agentic voice assistant for mobile & desktop devices with episodic, semantic & procedural memories",
-      "topics": [],
-      "metadata_sha256": "ae4fc562bb3ee47847e6858b15169c67a20cf365dc6943fe93b182b2c9e5569f",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/LAION-AI/CLIP_benchmark",
-          "region": "Germany"
-        },
-        {
-          "source": "https://github.com/LAION-AI/CLAP",
-          "region": "Germany"
-        }
+      "source_url": "https://api.github.com/repos/ahmed-mahran/misqal",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
+      "topics": [
+        "benchmark",
+        "bird-bench",
+        "data-profiling",
+        "database",
+        "fan-out",
+        "functional-dependencies",
+        "llm",
+        "llm-agents",
+        "sql",
+        "text-to-sql"
       ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/laion-ai/agent-bud-e",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/helsinki-nlp/dialect-topic-model",
-      "repo": "Helsinki-NLP/dialect-topic-model",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/helsinki-nlp/dialect-topic-model",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "Scripts and metadata for the paper \"Corpus-based dialectometry with topic models\"",
-      "topics": [],
-      "metadata_sha256": "38c5619f193f4318fd8045321475a868b7f09a5424ad829fa70f66bf29b6fc12",
-      "technical_signals": {
-        "data-processing": [
-          "corpus"
-        ]
-      },
-      "recent_push": false,
-      "license_spdx": "CC-BY-4.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/Helsinki-NLP/OpusFilter",
-          "region": "Finland"
-        },
-        {
-          "source": "https://github.com/Helsinki-NLP/Tatoeba-Challenge",
-          "region": "Finland"
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/helsinki-nlp/dialect-topic-model",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/hplt-project/hplt-e",
-      "repo": "hplt-project/hplt-e",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/hplt-project/hplt-e",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "Multilingual evaluation framework",
-      "topics": [],
-      "metadata_sha256": "ea5f4e20ae85d2577fb626ecc1d59139f72878f1650d2a82c0495e19be3a6aaf",
+      "metadata_sha256": "2fbf4a8b204a605d93f715876d3e1235fa0b278d27e1c842a848438c8cefd9c2",
       "technical_signals": {
         "evaluation": [
-          "evaluation"
+          "benchmark",
+          "benchmarks"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": "Apache-2.0",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.29009v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/ahmed-mahran/misqal"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/bowen1911/symbolic_graph_env",
+      "repo": "Bowen1911/Symbolic_graph_env",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/bowen1911/symbolic_graph_env",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "596b9473b1f5b454e75bd101207706a4b1995dbb49700c8fe6e4256d52a6756b",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.30281v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/Bowen1911/Symbolic_graph_env"
+        },
+        {
+          "source_url": "https://api.github.com/repos/bowen1911/symbolic_graph_env",
+          "source_entity": "https://github.com/bowen1911/symbolic_graph_env",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "detail_lookup"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/caidish/klayoutclaw",
+      "repo": "caidish/KlayoutClaw",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/caidish/klayoutclaw",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "7e9e9fff2159882540ef99eab98d8f0c5f429d31fbb47569551fb3151489ae7b",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Aquant-ph+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28ti%3Aquantum+OR+abs%3A%22quantum+neural+network%22%29+AND+%28abs%3A%22language+model%22+OR+abs%3Atransformer+OR+abs%3A%22machine+learning%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.30043v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/caidish/KlayoutClaw"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/civiltime-bench/civiltime-bench",
+      "repo": "CivilTime-Bench/CivilTime-Bench",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/civiltime-bench/civiltime-bench",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "17e6fa204f67e35f6b060dc27b7576d7073bf307e54d36d23c76b1e28770a510",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "Apache-2.0",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.29972v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/CivilTime-Bench/CivilTime-Bench"
+        },
+        {
+          "source_url": "https://api.github.com/repos/civiltime-bench/civiltime-bench",
+          "source_entity": "https://github.com/civiltime-bench/civiltime-bench",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "detail_lookup"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/colinzhaoust/read-tea-leaves",
+      "repo": "colinzhaoust/read-tea-leaves",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
+      "topics": [],
+      "metadata_sha256": "0a45fa740e3f5208cc90d01da2df339f1ddc6aa9aae2cd165723767f7c1f2da2",
+      "technical_signals": {
+        "evaluation": [
+          "benchmark"
         ],
-        "multilingual": [
-          "multilingual"
+        "model-training": [
+          "model training"
         ]
       },
       "recent_push": true,
       "license_spdx": "MIT",
       "license_hint": true,
       "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/hplt-project/OpusCleaner",
-          "region": "EU research consortium"
-        },
-        {
-          "source": "https://github.com/hplt-project/HPLT-textpipes",
-          "region": "EU research consortium"
-        }
-      ],
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/hplt-project/hplt-e",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.30141v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/colinzhaoust/read-tea-leaves"
+        },
+        {
+          "source_url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
+          "source_entity": "https://github.com/colinzhaoust/read-tea-leaves",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "detail_lookup"
         }
       ]
     },
     {
-      "url": "https://github.com/kyutai-labs/cines-markdown-docs",
-      "repo": "kyutai-labs/cines-markdown-docs",
+      "url": "https://github.com/gaojianxin05/rulecraft",
+      "repo": "GaoJianXin05/RuleCraft",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/kyutai-labs/cines-markdown-docs",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "",
+      "source_url": "https://api.github.com/repos/gaojianxin05/rulecraft",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
       "topics": [],
-      "metadata_sha256": "ccae1b8b5eb79bf80740b1bc6c916b1d3709e24dba9ee77b643f1e2824882297",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": null,
-      "license_hint": false,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/kyutai-labs/moshi",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/pocket-tts",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/hibiki",
-          "region": "France"
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/kyutai-labs/cines-markdown-docs",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/laion-ai/audio-dataset",
-      "repo": "LAION-AI/audio-dataset",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/laion-ai/audio-dataset",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "Audio Dataset for training CLAP and other models",
-      "topics": [],
-      "metadata_sha256": "5f1c3cc4c90393b6a4a01d1359bab5843f4e4b42a9aa4242a3f133307ca25a13",
+      "metadata_sha256": "0ef582a6839b487c9cb04e1a04327870b89550ef3fbb53dd570b16f0c26522a4",
       "technical_signals": {
-        "data-processing": [
-          "dataset"
+        "evaluation": [
+          "benchmark"
         ]
       },
       "recent_push": true,
-      "license_spdx": null,
-      "license_hint": false,
+      "license_spdx": "MIT",
+      "license_hint": true,
       "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/LAION-AI/CLIP_benchmark",
-          "region": "Germany"
-        },
-        {
-          "source": "https://github.com/LAION-AI/CLAP",
-          "region": "Germany"
-        }
-      ],
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/laion-ai/audio-dataset",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.28745v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/GaoJianXin05/RuleCraft"
         }
       ]
     },
     {
-      "url": "https://github.com/helsinki-nlp/expl-simpl",
-      "repo": "Helsinki-NLP/expl-simpl",
+      "url": "https://github.com/helsinki-nlp/external-mt-leaderboard",
+      "repo": "Helsinki-NLP/External-MT-leaderboard",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/helsinki-nlp/expl-simpl",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "",
+      "source_url": "https://api.github.com/repos/helsinki-nlp/external-mt-leaderboard",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Leaderboards for external MT models",
       "topics": [],
-      "metadata_sha256": "86dcce699c7c7c98578c108f80a48d286e399f1fee40f5917a8699ae49a0a366",
+      "metadata_sha256": "07ab83e04caafd1024c0926aea16e7bf8b419f83e5d76904826d1763bc33f5b0",
       "technical_signals": {},
       "recent_push": true,
-      "license_spdx": null,
-      "license_hint": false,
+      "license_spdx": "CC-BY-SA-4.0",
+      "license_hint": true,
       "has_issues": true,
       "affiliation_status": "curated_owner_context_only",
       "affiliation_context": [
@@ -371,25 +343,57 @@
       "discovery_evidence": [
         {
           "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/helsinki-nlp/expl-simpl",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "source_entity": "https://github.com/helsinki-nlp/external-mt-leaderboard",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
           "type": "owner_listing"
         }
       ]
     },
     {
-      "url": "https://github.com/hplt-project/hplt-mt-models",
-      "repo": "hplt-project/HPLT-MT-Models",
+      "url": "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
+      "repo": "HeyAvijitRoy/multilingual-trustworthiness-study",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/hplt-project/hplt-mt-models",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "This contains the configuration and scripts for HPLT MT model releases.",
+      "source_url": "https://api.github.com/repos/heyavijitroy/multilingual-trustworthiness-study",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "",
       "topics": [],
-      "metadata_sha256": "466cca951bd99a05041ce6f41da8c1fe759a864bccfaa30d4910d7d46026bfab",
+      "metadata_sha256": "4bcf1b6ae7a3fa29ee7c34c3645740fe0ffe9a7e3fd9527be33286a7ef2583e4",
       "technical_signals": {},
-      "recent_push": false,
+      "recent_push": true,
       "license_spdx": null,
       "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.29299v1",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/HeyAvijitRoy/multilingual-trustworthiness-study"
+        },
+        {
+          "source_url": "https://api.github.com/repos/heyavijitroy/multilingual-trustworthiness-study",
+          "source_entity": "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "type": "detail_lookup"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/hplt-project/hplt-wp4",
+      "repo": "hplt-project/HPLT-WP4",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/hplt-project/hplt-wp4",
+      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
+      "description": "Information and pipelines on WP4: language models training",
+      "topics": [],
+      "metadata_sha256": "5dd27eec655be7cd22becc9adf9c070d872cc9abedbe6bf13ebd5add98ecdf15",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "CC0-1.0",
+      "license_hint": true,
       "has_issues": true,
       "affiliation_status": "curated_owner_context_only",
       "affiliation_context": [
@@ -405,265 +409,37 @@
       "discovery_evidence": [
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/hplt-project/hplt-mt-models",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/kyutai-labs/dactory",
-      "repo": "kyutai-labs/dactory",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/kyutai-labs/dactory",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "",
-      "topics": [],
-      "metadata_sha256": "4a1264ab0864c14a285f3925d016e5fa52ec8c6ad14161d8e0fcda9edd302fc9",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/kyutai-labs/moshi",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/pocket-tts",
-          "region": "France"
-        },
-        {
-          "source": "https://github.com/kyutai-labs/hibiki",
-          "region": "France"
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/kyutai-labs/dactory",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
-          "type": "owner_listing"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/laion-ai/bud-e-flutter-openrouter",
-      "repo": "LAION-AI/bud-e-flutter-openrouter",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/laion-ai/bud-e-flutter-openrouter",
-      "retrieved_at": "2026-11-24T17:47:19.793286+00:00",
-      "description": "School Bud-E as a Flutter app, wired to OpenRouter: pick the model for chat, vision, speech recognition, speech output, image and music from a live catalogue, filtered by EU hosting, zero data retention and price.",
-      "topics": [
-        "ai-assistant",
-        "dart",
-        "education",
-        "eu-hosting",
-        "flutter",
-        "llm",
-        "openrouter",
-        "speech-recognition",
-        "tts",
-        "wake-word"
-      ],
-      "metadata_sha256": "34dfd6ac50bace36b1e9e45221f4e1138453114933958d93d8898fa13ab2f492",
-      "technical_signals": {
-        "speech": [
-          "speech"
-        ]
-      },
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "curated_owner_context_only",
-      "affiliation_context": [
-        {
-          "source": "https://github.com/LAION-AI/CLIP_benchmark",
-          "region": "Germany"
-        },
-        {
-          "source": "https://github.com/LAION-AI/CLAP",
-          "region": "Germany"
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/laion-ai/bud-e-flutter-openrouter",
-          "retrieved_at": "2026-11-24T17:45:26.961633+00:00",
+          "source_entity": "https://github.com/hplt-project/hplt-wp4",
+          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
           "type": "owner_listing"
         }
       ]
     }
   ],
   "filter_counts": {
-    "metadata_review_only": 12,
-    "technical_signals": 5,
-    "active_with_issues": 4,
-    "selected_for_issue_review": 4,
-    "unknown_license_among_topical": 1
+    "metadata_review_only": 11,
+    "technical_signals": 3,
+    "active_with_issues": 3,
+    "selected_for_issue_review": 3,
+    "unknown_license_among_topical": 0
   },
   "issue_repositories": [
-    "hplt-project/hplt-e",
-    "kyutai-labs/casa",
-    "LAION-AI/audio-dataset",
-    "LAION-AI/bud-e-flutter-openrouter"
+    "colinzhaoust/read-tea-leaves",
+    "ahmed-mahran/misqal",
+    "GaoJianXin05/RuleCraft"
   ],
   "issue_review": {
     "schema": 1,
-    "created_at_utc": "2026-11-24T17:47:31.104000+00:00",
+    "created_at_utc": "2026-11-24T19:05:32.309860+00:00",
     "actor": "tire0011",
-    "sources": 4,
-    "sampled_issues": 12,
-    "fully_checked": 4,
-    "candidate_count": 4,
-    "state_counts": {
-      "new": 2,
-      "needs_review": 2
-    },
-    "new_top5": [
-      {
-        "repository": "kyutai-labs/casa",
-        "area": "inference",
-        "issue_number": 4,
-        "issue_url": "https://github.com/kyutai-labs/casa/issues/4",
-        "title": "LiveSports-3K-CC results reproduce",
-        "updated_at": "2026-01-20T16:45:35Z",
-        "comment_count": 2,
-        "score": 5,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "new",
-          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-          "evidence_urls": [
-            "https://github.com/kyutai-labs/casa/issues/4"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      },
-      {
-        "repository": "kyutai-labs/casa",
-        "area": "inference",
-        "issue_number": 3,
-        "issue_url": "https://github.com/kyutai-labs/casa/issues/3",
-        "title": "Comparison with Standard Token Insertion + KV Eviction?",
-        "updated_at": "2026-01-05T12:04:24Z",
-        "comment_count": 1,
-        "score": 2,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "new",
-          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-          "evidence_urls": [
-            "https://github.com/kyutai-labs/casa/issues/3"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      }
-    ],
-    "same_source_title_baseline_urls": [
-      "https://github.com/kyutai-labs/casa/issues/4",
-      "https://github.com/kyutai-labs/casa/issues/3"
-    ],
-    "all_reviewed": [
-      {
-        "repository": "kyutai-labs/casa",
-        "area": "inference",
-        "issue_number": 4,
-        "issue_url": "https://github.com/kyutai-labs/casa/issues/4",
-        "title": "LiveSports-3K-CC results reproduce",
-        "updated_at": "2026-01-20T16:45:35Z",
-        "comment_count": 2,
-        "score": 5,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "new",
-          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-          "evidence_urls": [
-            "https://github.com/kyutai-labs/casa/issues/4"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      },
-      {
-        "repository": "LAION-AI/audio-dataset",
-        "area": "data-processing",
-        "issue_number": 99,
-        "issue_url": "https://github.com/LAION-AI/audio-dataset/issues/99",
-        "title": "CLAP_freesound broken",
-        "updated_at": "2023-11-30T21:04:50Z",
-        "comment_count": 0,
-        "score": 2,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "needs_review",
-          "reason": "stale_issue_requires_maintainer_reconfirmation",
-          "evidence_urls": [
-            "https://github.com/LAION-AI/audio-dataset/issues/99"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      },
-      {
-        "repository": "kyutai-labs/casa",
-        "area": "inference",
-        "issue_number": 3,
-        "issue_url": "https://github.com/kyutai-labs/casa/issues/3",
-        "title": "Comparison with Standard Token Insertion + KV Eviction?",
-        "updated_at": "2026-01-05T12:04:24Z",
-        "comment_count": 1,
-        "score": 2,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "new",
-          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-          "evidence_urls": [
-            "https://github.com/kyutai-labs/casa/issues/3"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      },
-      {
-        "repository": "LAION-AI/audio-dataset",
-        "area": "data-processing",
-        "issue_number": 5,
-        "issue_url": "https://github.com/LAION-AI/audio-dataset/issues/5",
-        "title": "Dataset Plan",
-        "updated_at": "2023-06-21T09:19:26Z",
-        "comment_count": 1,
-        "score": -2,
-        "score_meaning": "rule_based_triage_not_impact",
-        "labels": [],
-        "assignees": [],
-        "state": {
-          "status": "needs_review",
-          "reason": "stale_issue_requires_maintainer_reconfirmation",
-          "evidence_urls": [
-            "https://github.com/LAION-AI/audio-dataset/issues/5"
-          ]
-        },
-        "related_prs": [],
-        "review_only": true
-      }
-    ],
+    "sources": 3,
+    "sampled_issues": 0,
+    "fully_checked": 0,
+    "candidate_count": 0,
+    "state_counts": {},
+    "new_top5": [],
+    "same_source_title_baseline_urls": [],
+    "all_reviewed": [],
     "errors": [],
     "limitations": [
       "Curated, latest-updated issue sampling, not an exhaustive EU AI index.",
@@ -674,107 +450,164 @@
       "No maintainer approval, duplicate-work prevention, time saved, or outreach is claimed."
     ]
   },
-  "tasks": [
-    {
-      "repository": "kyutai-labs/casa",
-      "area": "inference",
-      "issue_number": 4,
-      "issue_url": "https://github.com/kyutai-labs/casa/issues/4",
-      "title": "LiveSports-3K-CC results reproduce",
-      "updated_at": "2026-01-20T16:45:35Z",
-      "comment_count": 2,
-      "score": 5,
-      "score_meaning": "rule_based_triage_not_impact",
-      "labels": [],
-      "assignees": [],
-      "state": {
-        "status": "new",
-        "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-        "evidence_urls": [
-          "https://github.com/kyutai-labs/casa/issues/4"
-        ]
-      },
-      "related_prs": [],
-      "review_only": true,
-      "affiliation_status": "curated_owner_context_only",
-      "repository_evidence_url": "https://api.github.com/repos/kyutai-labs/casa",
-      "invitation_labels": [],
-      "invitation_status": "unknown",
-      "license_spdx": "MIT",
-      "reuse_status": "license_review_required",
-      "action": "Inspect current code and ask whether the task is wanted; do not claim automatically."
-    },
-    {
-      "repository": "kyutai-labs/casa",
-      "area": "inference",
-      "issue_number": 3,
-      "issue_url": "https://github.com/kyutai-labs/casa/issues/3",
-      "title": "Comparison with Standard Token Insertion + KV Eviction?",
-      "updated_at": "2026-01-05T12:04:24Z",
-      "comment_count": 1,
-      "score": 2,
-      "score_meaning": "rule_based_triage_not_impact",
-      "labels": [],
-      "assignees": [],
-      "state": {
-        "status": "new",
-        "reason": "open_unassigned_no_observed_actor_or_pr_activity",
-        "evidence_urls": [
-          "https://github.com/kyutai-labs/casa/issues/3"
-        ]
-      },
-      "related_prs": [],
-      "review_only": true,
-      "affiliation_status": "curated_owner_context_only",
-      "repository_evidence_url": "https://api.github.com/repos/kyutai-labs/casa",
-      "invitation_labels": [],
-      "invitation_status": "unknown",
-      "license_spdx": "MIT",
-      "reuse_status": "license_review_required",
-      "action": "Inspect current code and ask whether the task is wanted; do not claim automatically."
-    }
-  ],
+  "tasks": [],
   "topic_hypotheses": [
     {
-      "left": "https://github.com/helsinki-nlp/dialect-topic-model",
-      "right": "https://github.com/laion-ai/audio-dataset",
+      "left": "https://github.com/ahmed-mahran/misqal",
+      "right": "https://github.com/colinzhaoust/read-tea-leaves",
       "shared_areas": [
-        "data-processing"
+        "evaluation"
       ],
       "status": "unverified_topic_overlap",
       "evidence": [
         {
-          "url": "https://api.github.com/repos/helsinki-nlp/dialect-topic-model",
-          "description": "Scripts and metadata for the paper \"Corpus-based dialectometry with topic models\"",
-          "topics": [],
+          "url": "https://api.github.com/repos/ahmed-mahran/misqal",
+          "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
+          "topics": [
+            "benchmark",
+            "bird-bench",
+            "data-profiling",
+            "database",
+            "fan-out",
+            "functional-dependencies",
+            "llm",
+            "llm-agents",
+            "sql",
+            "text-to-sql"
+          ],
           "signals": {
-            "data-processing": [
-              "corpus"
+            "evaluation": [
+              "benchmark",
+              "benchmarks"
             ]
           },
-          "license_spdx": "CC-BY-4.0",
-          "recent_push": false,
-          "retrieved_at": "2026-11-24T17:47:19.793286+00:00"
+          "license_spdx": "Apache-2.0",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
         },
         {
-          "url": "https://api.github.com/repos/laion-ai/audio-dataset",
-          "description": "Audio Dataset for training CLAP and other models",
+          "url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
+          "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
           "topics": [],
           "signals": {
-            "data-processing": [
-              "dataset"
+            "evaluation": [
+              "benchmark"
+            ],
+            "model-training": [
+              "model training"
             ]
           },
-          "license_spdx": null,
+          "license_spdx": "MIT",
           "recent_push": true,
-          "retrieved_at": "2026-11-24T17:47:19.793286+00:00"
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+        }
+      ],
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
+    },
+    {
+      "left": "https://github.com/ahmed-mahran/misqal",
+      "right": "https://github.com/gaojianxin05/rulecraft",
+      "shared_areas": [
+        "evaluation"
+      ],
+      "status": "unverified_topic_overlap",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/ahmed-mahran/misqal",
+          "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
+          "topics": [
+            "benchmark",
+            "bird-bench",
+            "data-profiling",
+            "database",
+            "fan-out",
+            "functional-dependencies",
+            "llm",
+            "llm-agents",
+            "sql",
+            "text-to-sql"
+          ],
+          "signals": {
+            "evaluation": [
+              "benchmark",
+              "benchmarks"
+            ]
+          },
+          "license_spdx": "Apache-2.0",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+        },
+        {
+          "url": "https://api.github.com/repos/gaojianxin05/rulecraft",
+          "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
+          "topics": [],
+          "signals": {
+            "evaluation": [
+              "benchmark"
+            ]
+          },
+          "license_spdx": "MIT",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+        }
+      ],
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
+    },
+    {
+      "left": "https://github.com/colinzhaoust/read-tea-leaves",
+      "right": "https://github.com/gaojianxin05/rulecraft",
+      "shared_areas": [
+        "evaluation"
+      ],
+      "status": "unverified_topic_overlap",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
+          "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
+          "topics": [],
+          "signals": {
+            "evaluation": [
+              "benchmark"
+            ],
+            "model-training": [
+              "model training"
+            ]
+          },
+          "license_spdx": "MIT",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+        },
+        {
+          "url": "https://api.github.com/repos/gaojianxin05/rulecraft",
+          "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
+          "topics": [],
+          "signals": {
+            "evaluation": [
+              "benchmark"
+            ]
+          },
+          "license_spdx": "MIT",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
         }
       ],
       "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
     }
   ],
-  "adapter_review": [],
-  "errors": [],
+  "adapter_review": [
+    {
+      "url": "https://roar.laion.ai/llms.txt",
+      "format": "unsupported",
+      "action": "Review schema and read-only adapter requirements; no code generated or executed"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://github.com/disha1001/discernbench",
+      "stage": "metadata",
+      "error": "HTTPError"
+    }
+  ],
   "limitations": [
     "Repository descriptions and topics are lexical signals, not scientific assessment.",
     "Curated owner context does not independently verify European affiliation.",
