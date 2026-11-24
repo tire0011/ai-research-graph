@@ -13,6 +13,8 @@ on:
       - arxiv_source_discovery.py
       - publication_organizations.py
       - publication_openaire.py
+      - organization_source_expansion.py
+      - tests/test_organization_source_expansion.py
       - tests/test_publication_openaire.py
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
@@ -36,6 +38,8 @@ on:
       - arxiv_source_discovery.py
       - publication_organizations.py
       - publication_openaire.py
+      - organization_source_expansion.py
+      - tests/test_organization_source_expansion.py
       - tests/test_publication_openaire.py
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
@@ -297,6 +301,9 @@ jobs:
           from arxiv_source_discovery import discover_publications, fetch_atom, parse_atom, API
           from publication_organizations import resolve, ror_json, parse_ror, ROR_API
           from publication_openaire import enrich as enrich_openaire
+          from organization_source_expansion import expand
+          from generic_source_discovery import discover_web
+          from eu_source_discovery import canonical
           import urllib.parse
           # Transport/parser smoke is deliberately separate from generic discovery recall.
           total, _, rows = parse_atom(fetch_atom(API + "?id_list=2611.15250"))
@@ -314,6 +321,17 @@ jobs:
           if match:
               orgs = resolve([match], dt.datetime.now(dt.timezone.utc))
               report["organization_discovery"] = orgs
+              expansion, refs = expand(orgs, dt.datetime.now(dt.timezone.utc), max_organizations=1)
+              report["organization_expansion"] = expansion
+              print("Organization expansion selected:", expansion["selected"])
+              print("Organization expansion referrals:", [x[0] for x in refs])
+              print("Organization expansion errors:", expansion["errors"])
+              if refs:
+                  web = discover_web([], referrals=refs, platform_key=canonical, max_pages=2)
+                  report["organization_web_expansion"] = web
+                  print("Organization web sources:", len(web["sources"]))
+                  print("Organization downstream platform references:", len(web["platform_refs"]))
+                  print("Organization web diagnostics:", web["errors"])
               oa = enrich_openaire([match], dt.datetime.now(dt.timezone.utc))
               report["openaire_discovery"] = oa
               observation = oa["papers"][match["id"]]
