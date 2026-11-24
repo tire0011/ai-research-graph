@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "note": "Three provisional calibration cases, two grounded pairs and one deliberately ablated input. Excerpts from the listed public README blob revisions, with omitted intervening content. Not held-out or an independent benchmark; no experiment performed.",
+  "schema": 2,
+  "note": "20 provisional, balanced calibration cases: 5 per verdict. Original three retained. Additional cases reuse selected verbatim public README lines and deliberately ablated excerpts. Revision is the README blob SHA. Not an independent or held-out benchmark; labels are author judgments, not established experimental outcomes.",
   "cases": [
     {
       "id": "laion-aura",
@@ -59,6 +59,354 @@
           "url": "https://github.com/kyutai-labs/aura/blob/main/README.md",
           "revision": "a3abfe5728a08a35dd381a07ff14712e3dee1991",
           "text": "# AURA: AUdio-dRiven streaming Avatar"
+        }
+      ]
+    },
+    {
+      "id": "peft-transformers",
+      "question": "Is a technical integration explicitly documented?",
+      "expected_verdict": "documented_connection",
+      "reference_rationale": "PEFT explicitly identifies integration with Transformers.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/peft/blob/HEAD/README.md",
+          "revision": "dcc5d569db74dde84f69543e09b8d09eb062c851",
+          "text": "Fine-tuning large pretrained models is often prohibitively costly due to their scale. Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of large pretrained models to various downstream applications by only fine-tuning a small number of (extra) model parameters instead of all the model's parameters. This significantly decreases the computational and storage costs. Recent state-of-the-art PEFT techniques achieve performance comparable to fully fine-tuned models.\n\nPEFT is integrated with Transformers for easy model training and inference, Diffusers for conveniently managing different adapters, and Accelerate for distributed training and inference for really big models.",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/transformers/blob/HEAD/README.md",
+          "revision": "3fb175afdddfae6feb4ef5438326aa9b0a9abd99",
+          "text": "    <p>State-of-the-art pretrained models for inference and training</p>",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "peft-accelerate",
+      "question": "Do the descriptions explicitly establish a technical relationship?",
+      "expected_verdict": "documented_connection",
+      "reference_rationale": "PEFT explicitly identifies Accelerate integration for distributed training and inference.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/peft/blob/HEAD/README.md",
+          "revision": "dcc5d569db74dde84f69543e09b8d09eb062c851",
+          "text": "Fine-tuning large pretrained models is often prohibitively costly due to their scale. Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of large pretrained models to various downstream applications by only fine-tuning a small number of (extra) model parameters instead of all the model's parameters. This significantly decreases the computational and storage costs. Recent state-of-the-art PEFT techniques achieve performance comparable to fully fine-tuned models.\n\nPEFT is integrated with Transformers for easy model training and inference, Diffusers for conveniently managing different adapters, and Accelerate for distributed training and inference for really big models.",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/accelerate/blob/HEAD/README.md",
+          "revision": "344d31807fcb44ec034e2606233b7845b7b28942",
+          "text": "🤗 Accelerate was created for PyTorch users who like to write the training loop of PyTorch models but are reluctant to write and maintain the boilerplate code needed to use multi-GPUs/TPU/fp16.\n\nAs you can see in this example, by adding 5-lines to any standard PyTorch training script you can now run on any kind of single or distributed node setting (single CPU, single GPU, multi-GPUs and TPUs) as well as with or without mixed precision (fp8, fp16, bf16).",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "evaluate-lighteval",
+      "question": "Do the descriptions document a relationship between these evaluation tools?",
+      "expected_verdict": "documented_connection",
+      "reference_rationale": "Evaluate explicitly recommends LightEval as a newer maintained evaluation library; this is a documented recommendation, not proof of code integration.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/evaluate/blob/HEAD/README.md",
+          "revision": "1de1656775bbebe6bf4353dabaf73a64a8d443eb",
+          "text": "> **Tip:** For more recent evaluation approaches, for example for evaluating LLMs, we recommend our newer and more actively maintained library [LightEval](https://github.com/huggingface/lighteval).\r\n\n🤗 Evaluate is a library that makes evaluating and comparing models and reporting their performance easier and more standardized. \r\n\n- **implementations of dozens of popular metrics**: the existing metrics cover a variety of tasks spanning from NLP to Computer Vision, and include dataset-specific metrics for datasets. With a simple command like `accuracy = load(\"accuracy\")`, get any of these metrics ready to use for evaluating a ML model in any framework (Numpy/Pandas/PyTorch/TensorFlow/JAX).\r",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/lighteval/blob/HEAD/README.md",
+          "revision": "d4a0dcb1894a0ae8a070ef524dc986d041087b99",
+          "text": "Lighteval supports **1000+ evaluation tasks** across multiple domains and\n\nsample-by-sample results* to debug and see how your models stack-up.",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "tgi-vllm",
+      "question": "Is there a documented technical relationship or recommendation between TGI and vLLM?",
+      "expected_verdict": "documented_connection",
+      "reference_rationale": "TGI explicitly identifies vLLM as a downstream engine and recommends it; do not infer joint governance.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/text-generation-inference/blob/HEAD/README.md",
+          "revision": "0c79c9b26d254b213d2dabbb036a3772684c536b",
+          "text": "> text-generation-inference is now in maintenance mode. Going forward, we will accept pull requests for minor bug fixes, documentation improvements and lightweight maintenance tasks.\n\n> TGI has initiated the movement for optimized inference engines to rely on a `transformers` model architectures. This approach is now adopted by downstream inference engines, which we contribute to and recommend using going forward: [vllm](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), as well as local engines with inter-compatibility such as llama.cpp or MLX.\n\nA Rust, Python and gRPC server for text generation inference. Used in production at [Hugging Face](https://huggingface.co)\n\n- [Messages API](https://huggingface.co/docs/text-generation-inference/en/messages_api) compatible with Open AI Chat Completion API",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/vllm-project/vllm/blob/HEAD/README.md",
+          "revision": "d01261427d0535d9e8f2494f1fc6704e6488bbf4",
+          "text": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "tgi-transformers",
+      "question": "Do the excerpts establish a technical architecture relationship?",
+      "expected_verdict": "documented_connection",
+      "reference_rationale": "TGI describes optimized inference engines relying on transformers model architectures.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/text-generation-inference/blob/HEAD/README.md",
+          "revision": "0c79c9b26d254b213d2dabbb036a3772684c536b",
+          "text": "> text-generation-inference is now in maintenance mode. Going forward, we will accept pull requests for minor bug fixes, documentation improvements and lightweight maintenance tasks.\n\n> TGI has initiated the movement for optimized inference engines to rely on a `transformers` model architectures. This approach is now adopted by downstream inference engines, which we contribute to and recommend using going forward: [vllm](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), as well as local engines with inter-compatibility such as llama.cpp or MLX.\n\nA Rust, Python and gRPC server for text generation inference. Used in production at [Hugging Face](https://huggingface.co)\n\n- [Messages API](https://huggingface.co/docs/text-generation-inference/en/messages_api) compatible with Open AI Chat Completion API",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/transformers/blob/HEAD/README.md",
+          "revision": "3fb175afdddfae6feb4ef5438326aa9b0a9abd99",
+          "text": "    <p>State-of-the-art pretrained models for inference and training</p>",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "judge-datasets",
+      "question": "Could these components enable a concrete multilingual model evaluation?",
+      "expected_verdict": "plausible_experiment",
+      "reference_rationale": "JudgeArena accepts custom datasets; Datasets prepares public multilingual datasets. A format adapter and controlled comparison are testable; no documented integration.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/JudgeArena/blob/HEAD/README.md",
+          "revision": "011dd6a1a55c19fb4d1a115dd9b06455c53e7f40",
+          "text": "JudgeArena lets you compare language models and study the judges that evaluate them. Choose a benchmark, a model and a judge, then inspect the answers, judgments and scores from the run.\n\nYou can run a packaged benchmark or bring your own dataset, prompt, parser and metrics. Models and judges can run locally or through an API. Multilingual tasks let you evaluate across languages using the same setup.",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/datasets/blob/HEAD/README.md",
+          "revision": "e34b32d3c95f8b07195a601d0c06e82509216872",
+          "text": "🤗 Datasets is a lightweight library providing **two** main features:\n\n- **one-line dataloaders for many public datasets**: one-liners to download and pre-process any of the ![number of datasets](https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/datasets&color=brightgreen) major public datasets (image datasets, audio datasets, text datasets in 467 languages and dialects, 3D medical images, video datasets, agent traces, etc.) provided on the [HuggingFace Datasets Hub](https://huggingface.co/datasets). With a simple command like `squad_dataset = load_dataset(\"rajpurkar/squad\")`, get any of these datasets ready to use in a dataloader for training/evaluating a ML model (Numpy/Pandas/PyTorch/TensorFlow/JAX/Polars),\n\n- **efficient data pre-processing**: simple, fast and reproducible data pre-processing for the public datasets as well as your own local datasets in CSV, JSON, JSONL, Parquet, HDF5, XML, text, PNG, JPEG, WAV, MP3, PDF, NIfTI, and more. With simple commands like `processed_dataset = dataset.map(process_example)`, efficiently prepare the dataset for inspection and ML model evaluation and training.",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "judge-evaluate",
+      "question": "Could the supplied capabilities support a reproducible metric comparison?",
+      "expected_verdict": "plausible_experiment",
+      "reference_rationale": "JudgeArena accepts custom metrics; Evaluate implements metrics. Compare metric outputs for the same predictions and references, after checking compatibility.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/JudgeArena/blob/HEAD/README.md",
+          "revision": "011dd6a1a55c19fb4d1a115dd9b06455c53e7f40",
+          "text": "JudgeArena lets you compare language models and study the judges that evaluate them. Choose a benchmark, a model and a judge, then inspect the answers, judgments and scores from the run.\n\nYou can run a packaged benchmark or bring your own dataset, prompt, parser and metrics. Models and judges can run locally or through an API. Multilingual tasks let you evaluate across languages using the same setup.",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/evaluate/blob/HEAD/README.md",
+          "revision": "1de1656775bbebe6bf4353dabaf73a64a8d443eb",
+          "text": "> **Tip:** For more recent evaluation approaches, for example for evaluating LLMs, we recommend our newer and more actively maintained library [LightEval](https://github.com/huggingface/lighteval).\r\n\n🤗 Evaluate is a library that makes evaluating and comparing models and reporting their performance easier and more standardized. \r\n\n- **implementations of dozens of popular metrics**: the existing metrics cover a variety of tasks spanning from NLP to Computer Vision, and include dataset-specific metrics for datasets. With a simple command like `accuracy = load(\"accuracy\")`, get any of these metrics ready to use for evaluating a ML model in any framework (Numpy/Pandas/PyTorch/TensorFlow/JAX).\r",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "judge-peft",
+      "question": "Could these projects support an experiment measuring adaptation quality?",
+      "expected_verdict": "plausible_experiment",
+      "reference_rationale": "PEFT provides parameter-efficient adaptation; JudgeArena evaluates models. Compare base and adapted models on fixed tasks and judges, not assumed integration.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/JudgeArena/blob/HEAD/README.md",
+          "revision": "011dd6a1a55c19fb4d1a115dd9b06455c53e7f40",
+          "text": "JudgeArena lets you compare language models and study the judges that evaluate them. Choose a benchmark, a model and a judge, then inspect the answers, judgments and scores from the run.\n\nYou can run a packaged benchmark or bring your own dataset, prompt, parser and metrics. Models and judges can run locally or through an API. Multilingual tasks let you evaluate across languages using the same setup.",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/peft/blob/HEAD/README.md",
+          "revision": "dcc5d569db74dde84f69543e09b8d09eb062c851",
+          "text": "Fine-tuning large pretrained models is often prohibitively costly due to their scale. Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of large pretrained models to various downstream applications by only fine-tuning a small number of (extra) model parameters instead of all the model's parameters. This significantly decreases the computational and storage costs. Recent state-of-the-art PEFT techniques achieve performance comparable to fully fine-tuned models.\n\nPEFT is integrated with Transformers for easy model training and inference, Diffusers for conveniently managing different adapters, and Accelerate for distributed training and inference for really big models.",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "accelerate-datasets",
+      "question": "Could these methods support a controlled distributed-training reproducibility experiment?",
+      "expected_verdict": "plausible_experiment",
+      "reference_rationale": "Datasets produces preprocessed training datasets; Accelerate supports distributed PyTorch training. Compare identical data and model across device configurations.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/accelerate/blob/HEAD/README.md",
+          "revision": "344d31807fcb44ec034e2606233b7845b7b28942",
+          "text": "🤗 Accelerate was created for PyTorch users who like to write the training loop of PyTorch models but are reluctant to write and maintain the boilerplate code needed to use multi-GPUs/TPU/fp16.\n\nAs you can see in this example, by adding 5-lines to any standard PyTorch training script you can now run on any kind of single or distributed node setting (single CPU, single GPU, multi-GPUs and TPUs) as well as with or without mixed precision (fp8, fp16, bf16).",
+          "id": "e1"
+        },
+        {
+          "url": "https://github.com/huggingface/datasets/blob/HEAD/README.md",
+          "revision": "e34b32d3c95f8b07195a601d0c06e82509216872",
+          "text": "🤗 Datasets is a lightweight library providing **two** main features:\n\n- **one-line dataloaders for many public datasets**: one-liners to download and pre-process any of the ![number of datasets](https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/datasets&color=brightgreen) major public datasets (image datasets, audio datasets, text datasets in 467 languages and dialects, 3D medical images, video datasets, agent traces, etc.) provided on the [HuggingFace Datasets Hub](https://huggingface.co/datasets). With a simple command like `squad_dataset = load_dataset(\"rajpurkar/squad\")`, get any of these datasets ready to use in a dataloader for training/evaluating a ML model (Numpy/Pandas/PyTorch/TensorFlow/JAX/Polars),\n\n- **efficient data pre-processing**: simple, fast and reproducible data pre-processing for the public datasets as well as your own local datasets in CSV, JSON, JSONL, Parquet, HDF5, XML, text, PNG, JPEG, WAV, MP3, PDF, NIfTI, and more. With simple commands like `processed_dataset = dataset.map(process_example)`, efficiently prepare the dataset for inspection and ML model evaluation and training.",
+          "id": "e2"
+        }
+      ]
+    },
+    {
+      "id": "peft-sphinx",
+      "question": "Is a direct model-adaptation research experiment supported by both descriptions?",
+      "expected_verdict": "weak_overlap",
+      "reference_rationale": "Documentation presentation does not establish an adaptation method.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/peft/blob/HEAD/README.md",
+          "revision": "dcc5d569db74dde84f69543e09b8d09eb062c851",
+          "text": "Fine-tuning large pretrained models is often prohibitively costly due to their scale. Parameter-Efficient Fine-Tuning (PEFT) methods enable efficient adaptation of large pretrained models to various downstream applications by only fine-tuning a small number of (extra) model parameters instead of all the model's parameters. This significantly decreases the computational and storage costs. Recent state-of-the-art PEFT techniques achieve performance comparable to fully fine-tuned models.\n\nPEFT is integrated with Transformers for easy model training and inference, Diffusers for conveniently managing different adapters, and Accelerate for distributed training and inference for really big models.",
+          "id": "e1"
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/readthedocs/sphinx_rtd_theme/blob/master/README.rst",
+          "revision": "f51d8b2e9bcab85d6e837ba2adb08f13db052a55",
+          "text": "This Sphinx_ theme was designed to provide a great reader experience for\ndocumentation users on both desktop and mobile devices. This theme is used\nprimarily on `Read the Docs`_ but can work with any Sphinx project."
+        }
+      ]
+    },
+    {
+      "id": "accelerate-aura",
+      "question": "Is there evidence that Accelerate directly improves AURA's streaming generation or evaluation?",
+      "expected_verdict": "weak_overlap",
+      "reference_rationale": "Generic training support and streaming inference alone do not establish a specific compatible implementation or research experiment.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/accelerate/blob/HEAD/README.md",
+          "revision": "344d31807fcb44ec034e2606233b7845b7b28942",
+          "text": "🤗 Accelerate was created for PyTorch users who like to write the training loop of PyTorch models but are reluctant to write and maintain the boilerplate code needed to use multi-GPUs/TPU/fp16.\n\nAs you can see in this example, by adding 5-lines to any standard PyTorch training script you can now run on any kind of single or distributed node setting (single CPU, single GPU, multi-GPUs and TPUs) as well as with or without mixed precision (fp8, fp16, bf16).",
+          "id": "e1"
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/kyutai-labs/aura/blob/main/README.md",
+          "revision": "a3abfe5728a08a35dd381a07ff14712e3dee1991",
+          "text": "AURA turns a single portrait image and a speech audio stream into a talking-head video, **chunk by chunk,\nin streaming**. Each chunk needs only its own audio, with no multi-second look-ahead.\n\nThe weights have their own licenses, both non-commercial:"
+        }
+      ]
+    },
+    {
+      "id": "datasets-sphinx",
+      "question": "Do both descriptions establish a direct dataset preprocessing research experiment?",
+      "expected_verdict": "weak_overlap",
+      "reference_rationale": "Dataset preparation and documentation presentation are distinct; no compatible research method is identified.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/datasets/blob/HEAD/README.md",
+          "revision": "e34b32d3c95f8b07195a601d0c06e82509216872",
+          "text": "🤗 Datasets is a lightweight library providing **two** main features:\n\n- **one-line dataloaders for many public datasets**: one-liners to download and pre-process any of the ![number of datasets](https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/datasets&color=brightgreen) major public datasets (image datasets, audio datasets, text datasets in 467 languages and dialects, 3D medical images, video datasets, agent traces, etc.) provided on the [HuggingFace Datasets Hub](https://huggingface.co/datasets). With a simple command like `squad_dataset = load_dataset(\"rajpurkar/squad\")`, get any of these datasets ready to use in a dataloader for training/evaluating a ML model (Numpy/Pandas/PyTorch/TensorFlow/JAX/Polars),\n\n- **efficient data pre-processing**: simple, fast and reproducible data pre-processing for the public datasets as well as your own local datasets in CSV, JSON, JSONL, Parquet, HDF5, XML, text, PNG, JPEG, WAV, MP3, PDF, NIfTI, and more. With simple commands like `processed_dataset = dataset.map(process_example)`, efficiently prepare the dataset for inspection and ML model evaluation and training.",
+          "id": "e1"
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/readthedocs/sphinx_rtd_theme/blob/master/README.rst",
+          "revision": "f51d8b2e9bcab85d6e837ba2adb08f13db052a55",
+          "text": "This Sphinx_ theme was designed to provide a great reader experience for\ndocumentation users on both desktop and mobile devices. This theme is used\nprimarily on `Read the Docs`_ but can work with any Sphinx project."
+        }
+      ]
+    },
+    {
+      "id": "judge-sphinx",
+      "question": "Is there a direct model-judging experiment supported by the descriptions?",
+      "expected_verdict": "weak_overlap",
+      "reference_rationale": "A documentation theme is not a model-judgment method or dataset.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/JudgeArena/blob/HEAD/README.md",
+          "revision": "011dd6a1a55c19fb4d1a115dd9b06455c53e7f40",
+          "text": "JudgeArena lets you compare language models and study the judges that evaluate them. Choose a benchmark, a model and a judge, then inspect the answers, judgments and scores from the run.\n\nYou can run a packaged benchmark or bring your own dataset, prompt, parser and metrics. Models and judges can run locally or through an API. Multilingual tasks let you evaluate across languages using the same setup.",
+          "id": "e1"
+        },
+        {
+          "id": "e2",
+          "url": "https://github.com/readthedocs/sphinx_rtd_theme/blob/master/README.rst",
+          "revision": "f51d8b2e9bcab85d6e837ba2adb08f13db052a55",
+          "text": "This Sphinx_ theme was designed to provide a great reader experience for\ndocumentation users on both desktop and mobile devices. This theme is used\nprimarily on `Read the Docs`_ but can work with any Sphinx project."
+        }
+      ]
+    },
+    {
+      "id": "peft-accelerate-title-only",
+      "question": "Do the supplied descriptions establish a distributed fine-tuning integration?",
+      "expected_verdict": "insufficient_evidence",
+      "reference_rationale": "Synthetic title-only ablation; no technical details even if the model knows the projects.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/peft/blob/HEAD/README.md",
+          "revision": "dcc5d569db74dde84f69543e09b8d09eb062c851",
+          "text": "# PEFT",
+          "id": "e1",
+          "excerpt_kind": "synthetic_title_only"
+        },
+        {
+          "url": "https://github.com/huggingface/accelerate/blob/HEAD/README.md",
+          "revision": "344d31807fcb44ec034e2606233b7845b7b28942",
+          "text": "# Accelerate",
+          "id": "e2",
+          "excerpt_kind": "synthetic_title_only"
+        }
+      ]
+    },
+    {
+      "id": "judge-datasets-title-only",
+      "question": "Can we identify a concrete multilingual evaluation pipeline from these excerpts alone?",
+      "expected_verdict": "insufficient_evidence",
+      "reference_rationale": "Synthetic title-only ablation; input does not describe capabilities.",
+      "evidence": [
+        {
+          "url": "https://github.com/OpenEuroLLM/JudgeArena/blob/HEAD/README.md",
+          "revision": "011dd6a1a55c19fb4d1a115dd9b06455c53e7f40",
+          "text": "# JudgeArena",
+          "id": "e1",
+          "excerpt_kind": "synthetic_title_only"
+        },
+        {
+          "url": "https://github.com/huggingface/datasets/blob/HEAD/README.md",
+          "revision": "e34b32d3c95f8b07195a601d0c06e82509216872",
+          "text": "# Datasets",
+          "id": "e2",
+          "excerpt_kind": "synthetic_title_only"
+        }
+      ]
+    },
+    {
+      "id": "evaluate-lighteval-title-only",
+      "question": "Is a documented relationship established by the supplied evidence?",
+      "expected_verdict": "insufficient_evidence",
+      "reference_rationale": "Synthetic title-only ablation; outside knowledge is excluded.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/evaluate/blob/HEAD/README.md",
+          "revision": "1de1656775bbebe6bf4353dabaf73a64a8d443eb",
+          "text": "# Evaluate",
+          "id": "e1",
+          "excerpt_kind": "synthetic_title_only"
+        },
+        {
+          "url": "https://github.com/huggingface/lighteval/blob/HEAD/README.md",
+          "revision": "d4a0dcb1894a0ae8a070ef524dc986d041087b99",
+          "text": "# LightEval",
+          "id": "e2",
+          "excerpt_kind": "synthetic_title_only"
+        }
+      ]
+    },
+    {
+      "id": "tgi-vllm-title-only",
+      "question": "Do these excerpts establish an explicit downstream engine relationship?",
+      "expected_verdict": "insufficient_evidence",
+      "reference_rationale": "Synthetic title-only ablation; names alone cannot establish the relationship.",
+      "evidence": [
+        {
+          "url": "https://github.com/huggingface/text-generation-inference/blob/HEAD/README.md",
+          "revision": "0c79c9b26d254b213d2dabbb036a3772684c536b",
+          "text": "# Text Generation Inference",
+          "id": "e1",
+          "excerpt_kind": "synthetic_title_only"
+        },
+        {
+          "url": "https://github.com/vllm-project/vllm/blob/HEAD/README.md",
+          "revision": "d01261427d0535d9e8f2494f1fc6704e6488bbf4",
+          "text": "# vLLM",
+          "id": "e2",
+          "excerpt_kind": "synthetic_title_only"
         }
       ]
     }
