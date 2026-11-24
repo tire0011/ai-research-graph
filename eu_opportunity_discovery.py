@@ -265,9 +265,18 @@ def main(argv=None):
     parser.add_argument("--output", default="results/european_ai")
     parser.add_argument("--review-ledger", default=None,
                         help="Optional source-pinned manual actionability review JSON")
+    parser.add_argument("--discover-sources", action="store_true")
+    parser.add_argument("--previous-candidates", default=None)
     args = parser.parse_args(argv)
     try:
         config = json.loads(Path(args.sources).read_text(encoding="utf-8"))
+        source_errors = []
+        if args.discover_sources:
+            from eu_source_discovery import discover, write_report
+            previous = json.loads(Path(args.previous_candidates).read_text(encoding="utf-8")) if args.previous_candidates and Path(args.previous_candidates).exists() else None
+            expansion = discover(config, previous=previous)
+            write_report(expansion, args.output)
+            source_errors = expansion["errors"]
         result = build(config)
         out = Path(args.output)
         out.mkdir(parents=True, exist_ok=True)
@@ -283,7 +292,7 @@ def main(argv=None):
             (out / "QUALITY_REVIEW.md").write_text(quality_markdown(reviewed), encoding="utf-8")
         print(f"EU AI: {result['sampled_issues']} sampled, {result['candidate_count']} "
               f"triaged, {len(result['new_top5'])} new, {len(result['errors'])} errors")
-        return 0 if not result["errors"] else 2
+        return 0 if not result["errors"] and not source_errors else 2
     except (ValueError, OSError, KeyError, TypeError, json.JSONDecodeError) as exc:
         print(f"EU discovery failed: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
