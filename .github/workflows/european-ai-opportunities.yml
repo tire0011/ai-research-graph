@@ -12,6 +12,8 @@ on:
       - eu_source_discovery.py
       - arxiv_source_discovery.py
       - publication_organizations.py
+      - publication_openaire.py
+      - tests/test_publication_openaire.py
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
@@ -33,6 +35,8 @@ on:
       - eu_source_discovery.py
       - arxiv_source_discovery.py
       - publication_organizations.py
+      - publication_openaire.py
+      - tests/test_publication_openaire.py
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
@@ -292,6 +296,7 @@ jobs:
           from pathlib import Path
           from arxiv_source_discovery import discover_publications, fetch_atom, parse_atom, API
           from publication_organizations import resolve, ror_json, parse_ror, ROR_API
+          from publication_openaire import enrich as enrich_openaire
           import urllib.parse
           # Transport/parser smoke is deliberately separate from generic discovery recall.
           total, _, rows = parse_atom(fetch_atom(API + "?id_list=2611.15250"))
@@ -309,6 +314,11 @@ jobs:
           if match:
               orgs = resolve([match], dt.datetime.now(dt.timezone.utc))
               report["organization_discovery"] = orgs
+              oa = enrich_openaire([match], dt.datetime.now(dt.timezone.utc))
+              report["openaire_discovery"] = oa
+              observation = oa["papers"][match["id"]]
+              print("OpenAIRE target status:", observation["last_attempt_status"])
+              print("OpenAIRE target diagnostics:", oa["errors"])
               raw = orgs["papers"][match["id"]]["raw_affiliations"]
               print("Explicit affiliation observations:", raw)
               print("Registry organization candidates:", list(orgs["organizations"]))
@@ -322,6 +332,12 @@ jobs:
           # Independent service/schema smoke, not evidence about the target paper.
           probe = parse_ror(ror_json(ROR_API + "?" + urllib.parse.urlencode({"affiliation": "University of Helsinki, Finland"})))
           assert probe["status"] == "registry_match_candidate" and "FI" in probe["countries"], probe
+          # Known indexed control from existing research graph audit.
+          control = enrich_openaire([{"id": "2609.24797", "version_id": "2609.24797v1"}], dt.datetime.now(dt.timezone.utc))
+          (out / "openaire_control.json").write_text(json.dumps(control, indent=2), encoding="utf-8")
+          print("OpenAIRE control status:", control["papers"]["2609.24797"]["last_attempt_status"])
+          assert not control["errors"], control["errors"]
+          assert control["papers"]["2609.24797"]["status"] == "matched"
           PY
       - uses: actions/upload-artifact@v4
         if: always()
