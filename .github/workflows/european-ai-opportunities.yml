@@ -10,6 +10,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - arxiv_source_discovery.py
+      - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
@@ -27,6 +29,8 @@ on:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
       - eu_source_discovery.py
+      - arxiv_source_discovery.py
+      - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
@@ -262,3 +266,47 @@ jobs:
           name: live-discovered-source-triage
           path: results/discovered-triage/
           if-no-files-found: warn
+
+  live-publication-smoke:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real arXiv metadata and record generic search coverage
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import time
+          from pathlib import Path
+          from arxiv_source_discovery import discover_publications, fetch_atom, parse_atom, API
+          # Transport/parser smoke is deliberately separate from generic discovery recall.
+          total, _, rows = parse_atom(fetch_atom(API + "?id_list=2611.15250"))
+          assert total and any(row["id"] == "2611.15250" for row in rows), rows
+          time.sleep(3.1)
+          # Freeze the retrospective time window; no company name or paper ID in query.
+          result, _ = discover_publications(dt.datetime(2026, 11, 24, 18, tzinfo=dt.timezone.utc))
+          out = Path("results/publication-smoke")
+          out.mkdir(parents=True, exist_ok=True)
+          match = next((p for p in result["papers"] if p["id"] == "2611.15250"), None)
+          report = {"direct_id_transport": True, "generic_query_found_paper": match is not None,
+                    "generic_query_affiliation_status": match["affiliation_status"] if match else "not_found",
+                    "european_affiliation_verified": False, "result": result}
+          (out / "publication_smoke.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+          print("Generic query paper found:", match is not None)
+          print("Coverage:", result["coverage"], "Errors:", result["errors"])
+          assert not result["errors"], result["errors"]
+          assert result["papers"], "No papers returned by generic discovery"
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: arxiv-publication-smoke
+          path: results/publication-smoke/
