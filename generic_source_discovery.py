@@ -222,13 +222,15 @@ def ranked_links(links, base, platform_key):
                 score += 1
             if not score:
                 continue
-        candidates[url] = max(score, candidates.get(url, 0))
-    return sorted(candidates, key=lambda x: (-candidates[x], x))[:MAX_LINKS]
+        if url not in candidates or score > candidates[url][0]:
+            candidates[url] = (score, raw)
+    return [(url, candidates[url][1]) for url in
+            sorted(candidates, key=lambda x: (-candidates[x][0], x))[:MAX_LINKS]]
 
 
 def metadata_links(text, source_entity, platform_key):
     """Discover additional web entry points from platform metadata."""
-    return [url for url in ranked_links([(m.group().rstrip(".,;"), "metadata reference", 1)
+    return [(url, raw) for url, raw in ranked_links([(m.group().rstrip(".,;"), "metadata reference", 1)
              for m in URL_PATTERN.finditer(text)], source_entity, platform_key) if not platform_key(url)]
 
 
@@ -308,7 +310,7 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
                 target = public_url(location, url)
                 item.update(status="read", format="redirect")
                 item.pop("body_sha256", None)
-                links = [(target, "HTTP redirect", 3)] if target else []
+                links = [(location, "HTTP redirect", 3)] if target else []
                 kind = "redirect"
             elif status in (401, 403, 404, 410):
                 item.update(status="unavailable", http_status=status)
@@ -322,9 +324,9 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
                 if kind in ("openapi", "unsupported", "xml_requires_review"):
                     item["status"] = "adapter_review"
             item.pop("error", None)
-            for target in ranked_links(links, url, platform_key):
+            for target, raw in ranked_links(links, url, platform_key):
                 proof = {"source_url": url, "source_entity": url, "retrieved_at": stamp,
-                         "type": "public_" + kind + "_reference", "excerpt": target,
+                         "type": "public_" + kind + "_reference", "excerpt": raw, "resolved_url": target,
                          "body_sha256": item.get("body_sha256")}
                 queue(target, proof)
         except PermissionError as exc:
