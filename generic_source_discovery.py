@@ -115,11 +115,11 @@ class PublicFetcher:
     def __call__(self, url):
         host = up.urlsplit(url).hostname
         if host not in self.robots:
-            status, _, body, _ = self._get("https://" + host + "/robots.txt")
+            status, mime, body, _ = self._get("https://" + host + "/robots.txt")
             if status in (404, 410):
                 body = b"User-agent: *\nDisallow:\n"
-            elif status != 200:
-                raise PermissionError("robots policy unavailable")
+            elif status != 200 or mime != "text/plain":
+                raise OSError("robots policy unavailable")
             policy = urllib.robotparser.RobotFileParser()
             policy.parse(body.decode("utf-8", errors="replace").splitlines())
             self.robots[host] = policy
@@ -212,6 +212,8 @@ def ranked_links(links, base, platform_key):
             continue
         if platform_key(url):
             score = 5
+        elif p.hostname in ("github.com", "huggingface.co"):
+            continue  # Platform adapters own these namespaces.
         else:
             if SKIP.search(p.path):
                 continue
@@ -253,7 +255,7 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
             return
         if platform_key(url):
             if evidence:
-                platform_refs[url] = evidence
+                platform_refs[(evidence["source_entity"], url)] = evidence
             return
         if url not in sources:
             if len(sources) >= MAX_SOURCES:
@@ -286,8 +288,10 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
 
     deferred = []
     checked = 0
+    scanned = 0
     # New links discovered within a run can become the next frontier.
-    while pending and checked < max_pages:
+    while pending and checked < max_pages and scanned < MAX_SOURCES:
+        scanned += 1
         url = pending.pop(0)
         queued.discard(url)
         item = sources[url]
@@ -303,6 +307,7 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
             if status in (301, 302, 303, 307, 308):
                 target = public_url(location, url)
                 item.update(status="read", format="redirect")
+                item.pop("body_sha256", None)
                 links = [(target, "HTTP redirect", 3)] if target else []
                 kind = "redirect"
             elif status in (401, 403, 404, 410):
@@ -329,12 +334,13 @@ def discover_web(seeds, *, previous=None, referrals=(), platform_key, fetch=None
             item.update(status="retry", error=type(exc).__name__)
             errors.append({"url": url, "error": type(exc).__name__})
             deferred.append(url)
-    pending = list(dict.fromkeys(deferred + pending))
+    pending = list(dict.fromkeys(pending + deferred))  # Do not starve the next sources on transient failure.
     return {"schema": 1, "core_seeds": sorted(core), "sources": sources,
             "references": sorted(edges.values(), key=lambda x: (x["source"], x["target"])),
-            "pending": pending, "platform_refs": platform_refs, "errors": errors,
+            "pending": pending, "platform_refs": [{"target": key[1], "evidence": proof}
+                for key, proof in sorted(platform_refs.items())], "errors": errors,
             "new_sources": len(set(sources) - prior_sources), "new_references": len(set(edges) - prior_edges),
-            "checked": checked, "dropped_by_budget": dropped, "complete": not errors and not pending and not dropped,
+            "checked": checked, "dropped_by_budget": dropped, "queue_drained": not errors and not pending and not dropped,
             "adapter_proposals": [{"url": x["url"], "format": x["format"],
                  "action": "Review schema and read-only adapter requirements; no code generated or executed"}
                  for x in sources.values() if x["status"] == "adapter_review"]}
