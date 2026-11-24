@@ -49,22 +49,21 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
     # organizations cannot permanently crowd out previously unknown owners.
     previous = previous or {}
     history = dict(previous.get("last_attempt", {}))
-    groups = defaultdict(list)
-    for url in urls:
-        owner = source_owner(canonical(url)[1])
-        groups[owner].append(url)
-    def order(url):
-        return (history.get(url, ""), url)
-    for group in groups.values():
-        group.sort(key=order)
+    cohorts = defaultdict(lambda: defaultdict(list))
+    for url in sorted(urls):
+        cohorts[history.get(url, "")][source_owner(canonical(url)[1])].append(url)
     selected = []
-    while groups and len(selected) < MAX_METADATA:
-        for owner in sorted(groups, key=lambda x: order(groups[x][0])):
-            selected.append(groups[owner].pop(0))
-            if not groups[owner]:
-                del groups[owner]
-            if len(selected) == MAX_METADATA:
-                break
+    for age in sorted(cohorts):
+        groups = cohorts[age]
+        while groups and len(selected) < MAX_METADATA:
+            for owner in sorted(groups):
+                selected.append(groups[owner].pop(0))
+                if not groups[owner]:
+                    del groups[owner]
+                if len(selected) == MAX_METADATA:
+                    break
+        if len(selected) == MAX_METADATA:
+            break
     metadata, errors = [], []
     for url in selected:
         history[url] = stamp
