@@ -1,14 +1,14 @@
 # Two-hop research evidence: graph versus source-following
 
-Snapshot: `2026-11-24T14:45:22.795723+00:00`. Checked: **20/20** case sources; original GitHub task bodies verified: **40**. Status: `completed`.
+Snapshot: `2026-11-24T15:44:14.918707+00:00`. Checked: **20/20** case sources; original GitHub task bodies verified: **40**. Status: `completed`.
 
 ## Exact evidence paths
 
 | Cohort | Cases | Explicit 2-hop paths | Graph correct | Follow-source correct | Graph ms | Follow-source ms |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| all | 20 | 16 | 20/20 | 20/20 | 0.0258 | 13.545 |
-| positive | 9 | 16 | 9/9 | 9/9 | 0.0262 | 37.0484 |
-| negative | 11 | 0 | 11/11 | 11/11 | 0.025 | 4.805 |
+| all | 20 | 16 | 20/20 | 20/20 | 0.028 | 15.6745 |
+| positive | 9 | 16 | 9/9 | 9/9 | 0.0287 | 35.6805 |
+| negative | 11 | 0 | 11/11 | 11/11 | 0.0279 | 5.2097 |
 
 Lookup times are in-memory medians after snapshot collection and graph construction. They exclude original source fetches, index construction, parsing at ingestion, human research and review time; do **not** treat them as an end-to-end speedup.
 
