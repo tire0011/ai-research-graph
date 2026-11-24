@@ -1,0 +1,655 @@
+{
+  "schema": 1,
+  "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+  "snapshot_retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+  "pool_size": 159,
+  "selected": [
+    "https://github.com/helsinki-nlp/building-nlp-apps-notebooks",
+    "https://github.com/hplt-project/bitextor-mt-models",
+    "https://github.com/kyutai-labs/arc-encoder",
+    "https://github.com/laion-ai/acting-edge-cases",
+    "https://github.com/readthedocs/sphinx_rtd_theme",
+    "https://github.com/helsinki-nlp/carbonfootprint",
+    "https://github.com/hplt-project/cc-download",
+    "https://github.com/kyutai-labs/aura",
+    "https://github.com/laion-ai/aesthetic-predictor",
+    "https://github.com/helsinki-nlp/contributed-mt-leaderboard",
+    "https://github.com/hplt-project/data-analytics-tool",
+    "https://github.com/kyutai-labs/cadre-autoencoders-and-world-models"
+  ],
+  "last_attempt": {
+    "https://github.com/helsinki-nlp/building-nlp-apps-notebooks": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/hplt-project/bitextor-mt-models": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/kyutai-labs/arc-encoder": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/laion-ai/acting-edge-cases": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/readthedocs/sphinx_rtd_theme": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/helsinki-nlp/carbonfootprint": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/hplt-project/cc-download": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/kyutai-labs/aura": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/laion-ai/aesthetic-predictor": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/helsinki-nlp/contributed-mt-leaderboard": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/hplt-project/data-analytics-tool": "2026-11-24T14:47:12.523613+00:00",
+    "https://github.com/kyutai-labs/cadre-autoencoders-and-world-models": "2026-11-24T14:47:12.523613+00:00"
+  },
+  "metadata": [
+    {
+      "url": "https://github.com/helsinki-nlp/building-nlp-apps-notebooks",
+      "repo": "Helsinki-NLP/building-nlp-apps-notebooks",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/helsinki-nlp/building-nlp-apps-notebooks",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "Python notebook demos for the Building NLP Applications course",
+      "topics": [],
+      "metadata_sha256": "61555de728118293fdcf9f1076a6ad46bdffeb28a6d443d07143c5c0a8fdfc65",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/Helsinki-NLP/OpusFilter",
+          "region": "Finland"
+        },
+        {
+          "source": "https://github.com/Helsinki-NLP/Tatoeba-Challenge",
+          "region": "Finland"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
+          "source_entity": "https://github.com/helsinki-nlp/building-nlp-apps-notebooks",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/hplt-project/bitextor-mt-models",
+      "repo": "hplt-project/bitextor-mt-models",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/hplt-project/bitextor-mt-models",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "a24350e7bc2ded4725fa2fe7b1134af2f21bd198159d34d5b4942ff1d2ac9c77",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/hplt-project/OpusCleaner",
+          "region": "EU research consortium"
+        },
+        {
+          "source": "https://github.com/hplt-project/HPLT-textpipes",
+          "region": "EU research consortium"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/hplt-project/bitextor-mt-models",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/kyutai-labs/arc-encoder",
+      "repo": "kyutai-labs/ARC-Encoder",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/kyutai-labs/arc-encoder",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "061f044430286ebfda76a58b1309033010220e11c2a9c587d4e8ba5e6bdda172",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "Apache-2.0",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/kyutai-labs/moshi",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/pocket-tts",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/hibiki",
+          "region": "France"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/kyutai-labs/arc-encoder",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/laion-ai/acting-edge-cases",
+      "repo": "LAION-AI/acting-edge-cases",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/laion-ai/acting-edge-cases",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "266 voice-acting edge cases: coaching notes, acoustic signatures and detector tokens for expressive-speech generation and annotation",
+      "topics": [],
+      "metadata_sha256": "54bc1d28fb6537b0fbd79f56720f827a7389fc66267645da3d500efc32ee4587",
+      "technical_signals": {
+        "speech": [
+          "speech"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": "NOASSERTION",
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/LAION-AI/CLIP_benchmark",
+          "region": "Germany"
+        },
+        {
+          "source": "https://github.com/LAION-AI/CLAP",
+          "region": "Germany"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=2",
+          "source_entity": "https://github.com/laion-ai/acting-edge-cases",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/readthedocs/sphinx_rtd_theme",
+      "repo": "readthedocs/sphinx_rtd_theme",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/readthedocs/sphinx_rtd_theme",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "Sphinx theme from Read the Docs",
+      "topics": [
+        "sphinx-doc",
+        "sphinx-theme"
+      ],
+      "metadata_sha256": "d8c1fe5a1fee7ee7ac46d83a3b6b9cb14d3e067fd3a0ac03578068e2d8dd57aa",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://helsinki-nlp.github.io/mammoth/",
+          "source_entity": "https://helsinki-nlp.github.io/mammoth/",
+          "retrieved_at": "2026-11-24T09:31:57.942785+00:00",
+          "type": "public_html_reference",
+          "excerpt": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "resolved_url": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "body_sha256": "e6d8385280005796e7947f1b6bf664d3f02a722324433ccffb775a917421fa8f"
+        },
+        {
+          "source_url": "https://api.github.com/repos/readthedocs/sphinx_rtd_theme",
+          "source_entity": "https://github.com/readthedocs/sphinx_rtd_theme",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "detail_lookup"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/helsinki-nlp/carbonfootprint",
+      "repo": "Helsinki-NLP/CarbonFootprint",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/helsinki-nlp/carbonfootprint",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "Repository for the EMNLP 2026 paper:  Is Knowledge Distillation Actually Greener? A Case Study in Machine Translation",
+      "topics": [],
+      "metadata_sha256": "e864fcda836a2c21bca6c913c5c9e2d57cdaa0cc3e01bb8c279903619e3e26d8",
+      "technical_signals": {
+        "multilingual": [
+          "machine translation"
+        ],
+        "model-training": [
+          "distillation"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/Helsinki-NLP/OpusFilter",
+          "region": "Finland"
+        },
+        {
+          "source": "https://github.com/Helsinki-NLP/Tatoeba-Challenge",
+          "region": "Finland"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
+          "source_entity": "https://github.com/helsinki-nlp/carbonfootprint",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/hplt-project/cc-download",
+      "repo": "hplt-project/cc-download",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/hplt-project/cc-download",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "652dd0ef315b01ad2091754d37e9e9c7824285e6b7ede676c6b3792b5cdb1637",
+      "technical_signals": {},
+      "recent_push": false,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/hplt-project/OpusCleaner",
+          "region": "EU research consortium"
+        },
+        {
+          "source": "https://github.com/hplt-project/HPLT-textpipes",
+          "region": "EU research consortium"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/hplt-project/cc-download",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/kyutai-labs/aura",
+      "repo": "kyutai-labs/aura",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/kyutai-labs/aura",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "AURA is a 1.3B speech-to-video generative model that runs in real time on a single H100 GPU at 576px resolution.",
+      "topics": [
+        "real-time",
+        "talking-avatar",
+        "talking-head",
+        "video-generation",
+        "voice-assistant"
+      ],
+      "metadata_sha256": "05b63d57f756d78c7b4afb45ad888e9f569e6b20d7508efe2bb361416c1b901a",
+      "technical_signals": {
+        "speech": [
+          "speech"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": "NOASSERTION",
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/kyutai-labs/moshi",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/pocket-tts",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/hibiki",
+          "region": "France"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/kyutai-labs/aura",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/laion-ai/aesthetic-predictor",
+      "repo": "LAION-AI/aesthetic-predictor",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/laion-ai/aesthetic-predictor",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "A linear estimator on top of clip to predict the aesthetic quality of pictures",
+      "topics": [],
+      "metadata_sha256": "749562e6e20c40da79d4211b6a83ae9c852dc6cf2424d9fbc42adb685021a2f9",
+      "technical_signals": {},
+      "recent_push": false,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/LAION-AI/CLIP_benchmark",
+          "region": "Germany"
+        },
+        {
+          "source": "https://github.com/LAION-AI/CLAP",
+          "region": "Germany"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/LAION-AI/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/laion-ai/aesthetic-predictor",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/helsinki-nlp/contributed-mt-leaderboard",
+      "repo": "Helsinki-NLP/Contributed-MT-leaderboard",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/helsinki-nlp/contributed-mt-leaderboard",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "Leaderboard of contributed MT results",
+      "topics": [],
+      "metadata_sha256": "fcf60f53ee90cca1f12528bd11c69cac9aa83d80ed55b2a39cb7bb0468163cb1",
+      "technical_signals": {
+        "evaluation": [
+          "leaderboard"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": "CC-BY-SA-4.0",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/Helsinki-NLP/OpusFilter",
+          "region": "Finland"
+        },
+        {
+          "source": "https://github.com/Helsinki-NLP/Tatoeba-Challenge",
+          "region": "Finland"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
+          "source_entity": "https://github.com/helsinki-nlp/contributed-mt-leaderboard",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/hplt-project/data-analytics-tool",
+      "repo": "hplt-project/data-analytics-tool",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/hplt-project/data-analytics-tool",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "HPLT Analytics",
+      "topics": [],
+      "metadata_sha256": "f51f49eba97de65a1ce050489adb101a0d9298e6af6dfdbf386adaa6f95ed33f",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "GPL-3.0",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/hplt-project/OpusCleaner",
+          "region": "EU research consortium"
+        },
+        {
+          "source": "https://github.com/hplt-project/HPLT-textpipes",
+          "region": "EU research consortium"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/hplt-project/data-analytics-tool",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/kyutai-labs/cadre-autoencoders-and-world-models",
+      "repo": "kyutai-labs/cadre-autoencoders-and-world-models",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/kyutai-labs/cadre-autoencoders-and-world-models",
+      "retrieved_at": "2026-11-24T14:47:12.523613+00:00",
+      "description": "CADRE: causal video autoencoders and real-time interactive world models. Code for \"Rethinking Video Autoencoders for Interactive World Models\".",
+      "topics": [],
+      "metadata_sha256": "3def67c2489eb3ff7a4effff2ae27de08fd936bcea10bcf57ae981f4c03891bf",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "curated_owner_context_only",
+      "affiliation_context": [
+        {
+          "source": "https://github.com/kyutai-labs/moshi",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/pocket-tts",
+          "region": "France"
+        },
+        {
+          "source": "https://github.com/kyutai-labs/hibiki",
+          "region": "France"
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "source_url": "https://api.github.com/orgs/kyutai-labs/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/kyutai-labs/cadre-autoencoders-and-world-models",
+          "retrieved_at": "2026-11-24T14:45:30.577360+00:00",
+          "type": "owner_listing"
+        }
+      ]
+    }
+  ],
+  "filter_counts": {
+    "metadata_review_only": 12,
+    "technical_signals": 4,
+    "active_with_issues": 4,
+    "selected_for_issue_review": 4,
+    "unknown_license_among_topical": 3
+  },
+  "issue_repositories": [
+    "Helsinki-NLP/CarbonFootprint",
+    "kyutai-labs/aura",
+    "LAION-AI/acting-edge-cases",
+    "Helsinki-NLP/Contributed-MT-leaderboard"
+  ],
+  "issue_review": {
+    "schema": 1,
+    "created_at_utc": "2026-11-24T14:47:18.928654+00:00",
+    "actor": "tire0011",
+    "sources": 4,
+    "sampled_issues": 1,
+    "fully_checked": 1,
+    "candidate_count": 1,
+    "state_counts": {
+      "new": 1
+    },
+    "new_top5": [
+      {
+        "repository": "kyutai-labs/aura",
+        "area": "speech",
+        "issue_number": 1,
+        "issue_url": "https://github.com/kyutai-labs/aura/issues/1",
+        "title": "AURA 1.3B: 576p in the text vs 480p in Tables 1–2; 30,000 × 4.8 s = 40.0 h vs 38.7 h",
+        "updated_at": "2026-11-22T17:48:05Z",
+        "comment_count": 0,
+        "score": 1,
+        "score_meaning": "rule_based_triage_not_impact",
+        "labels": [],
+        "assignees": [],
+        "state": {
+          "status": "new",
+          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
+          "evidence_urls": [
+            "https://github.com/kyutai-labs/aura/issues/1"
+          ]
+        },
+        "related_prs": [],
+        "review_only": true
+      }
+    ],
+    "same_source_title_baseline_urls": [
+      "https://github.com/kyutai-labs/aura/issues/1"
+    ],
+    "all_reviewed": [
+      {
+        "repository": "kyutai-labs/aura",
+        "area": "speech",
+        "issue_number": 1,
+        "issue_url": "https://github.com/kyutai-labs/aura/issues/1",
+        "title": "AURA 1.3B: 576p in the text vs 480p in Tables 1–2; 30,000 × 4.8 s = 40.0 h vs 38.7 h",
+        "updated_at": "2026-11-22T17:48:05Z",
+        "comment_count": 0,
+        "score": 1,
+        "score_meaning": "rule_based_triage_not_impact",
+        "labels": [],
+        "assignees": [],
+        "state": {
+          "status": "new",
+          "reason": "open_unassigned_no_observed_actor_or_pr_activity",
+          "evidence_urls": [
+            "https://github.com/kyutai-labs/aura/issues/1"
+          ]
+        },
+        "related_prs": [],
+        "review_only": true
+      }
+    ],
+    "errors": [],
+    "limitations": [
+      "Curated, latest-updated issue sampling, not an exhaustive EU AI index.",
+      "Scores are lexical heuristics, not demonstrated impact or graph advantage.",
+      "Both rankings use exactly the same collected issue pool and state checks.",
+      "A cross-referenced PR or assignment does not prove work is complete.",
+      "Support questions and issues unchanged for over a year require maintainer reconfirmation.",
+      "No maintainer approval, duplicate-work prevention, time saved, or outreach is claimed."
+    ]
+  },
+  "tasks": [
+    {
+      "repository": "kyutai-labs/aura",
+      "area": "speech",
+      "issue_number": 1,
+      "issue_url": "https://github.com/kyutai-labs/aura/issues/1",
+      "title": "AURA 1.3B: 576p in the text vs 480p in Tables 1–2; 30,000 × 4.8 s = 40.0 h vs 38.7 h",
+      "updated_at": "2026-11-22T17:48:05Z",
+      "comment_count": 0,
+      "score": 1,
+      "score_meaning": "rule_based_triage_not_impact",
+      "labels": [],
+      "assignees": [],
+      "state": {
+        "status": "new",
+        "reason": "open_unassigned_no_observed_actor_or_pr_activity",
+        "evidence_urls": [
+          "https://github.com/kyutai-labs/aura/issues/1"
+        ]
+      },
+      "related_prs": [],
+      "review_only": true,
+      "affiliation_status": "curated_owner_context_only",
+      "repository_evidence_url": "https://api.github.com/repos/kyutai-labs/aura",
+      "invitation_labels": [],
+      "invitation_status": "unknown",
+      "license_spdx": "NOASSERTION",
+      "reuse_status": "license_review_required",
+      "action": "Inspect current code and ask whether the task is wanted; do not claim automatically."
+    }
+  ],
+  "topic_hypotheses": [
+    {
+      "left": "https://github.com/laion-ai/acting-edge-cases",
+      "right": "https://github.com/kyutai-labs/aura",
+      "shared_areas": [
+        "speech"
+      ],
+      "status": "unverified_topic_overlap",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/laion-ai/acting-edge-cases",
+          "description": "266 voice-acting edge cases: coaching notes, acoustic signatures and detector tokens for expressive-speech generation and annotation",
+          "topics": [],
+          "signals": {
+            "speech": [
+              "speech"
+            ]
+          },
+          "license_spdx": "NOASSERTION",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T14:47:12.523613+00:00"
+        },
+        {
+          "url": "https://api.github.com/repos/kyutai-labs/aura",
+          "description": "AURA is a 1.3B speech-to-video generative model that runs in real time on a single H100 GPU at 576px resolution.",
+          "topics": [
+            "real-time",
+            "talking-avatar",
+            "talking-head",
+            "video-generation",
+            "voice-assistant"
+          ],
+          "signals": {
+            "speech": [
+              "speech"
+            ]
+          },
+          "license_spdx": "NOASSERTION",
+          "recent_push": true,
+          "retrieved_at": "2026-11-24T14:47:12.523613+00:00"
+        }
+      ],
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
+    }
+  ],
+  "adapter_review": [],
+  "errors": [],
+  "limitations": [
+    "Repository descriptions and topics are lexical signals, not scientific assessment.",
+    "Curated owner context does not independently verify European affiliation.",
+    "SPDX metadata is only a license hint; actual license compatibility is not assessed.",
+    "An issue label is not proof of maintainer response or acceptance.",
+    "No claim of novel cooperation or superiority over search; independent review is pending.",
+    "Only the bounded repository sample receives semantic triage; web and HF relevance remain open."
+  ]
+}
