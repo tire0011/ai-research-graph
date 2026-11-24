@@ -9,6 +9,10 @@ on:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - eu_source_discovery.py
+      - generic_source_discovery.py
+      - tests/test_generic_source_discovery.py
+      - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
@@ -20,6 +24,10 @@ on:
     paths:
       - eu_opportunity_sources.json
       - eu_opportunity_discovery.py
+      - eu_source_discovery.py
+      - generic_source_discovery.py
+      - tests/test_generic_source_discovery.py
+      - tests/test_eu_source_discovery.py
       - opportunity_quality_review.py
       - studies/eu_opportunity_quality_20261121/reviews.json
       - opportunity_state.py
@@ -46,6 +54,11 @@ jobs:
   discovery:
     if: github.event_name != 'pull_request'
     needs: tests
+    permissions:
+      contents: write
+    concurrency:
+      group: eu-discovery-state
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -53,14 +66,136 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Restore cumulative discovery state
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .discovery-state
+          set +e
+          git ls-remote --exit-code --heads origin refs/heads/eu-discovery-state > .discovery-state/remote
+          status=$?
+          set -e
+          case "$status" in
+            0)
+              git fetch --no-tags origin refs/heads/eu-discovery-state
+              git rev-parse FETCH_HEAD > .discovery-state/parent
+              git show FETCH_HEAD:source_candidates.json > .discovery-state/source_candidates.json
+              ;;
+            2) echo "No prior state branch; starting a new registry" ;;
+            *) exit "$status" ;;
+          esac
       - name: Read-only EU open AI issue review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json
+        run: python eu_opportunity_discovery.py --sources eu_opportunity_sources.json --output results/european_ai --review-ledger studies/eu_opportunity_quality_20261121/reviews.json --discover-sources --previous-candidates .discovery-state/source_candidates.json
+      - name: Publish successful cumulative state to dedicated branch
+        if: success() && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          blob=$(git hash-object -w results/european_ai/source_candidates.json)
+          tree=$(printf '100644 blob %s\tsource_candidates.json\n' "$blob" | git mktree)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          args=()
+          if [ -f .discovery-state/parent ]; then
+            args=(-p "$(cat .discovery-state/parent)")
+          fi
+          commit=$(git commit-tree "$tree" "${args[@]}" -m "Update cumulative discovery state")
+          git push origin "$commit:refs/heads/eu-discovery-state"
       - name: Preserve evidence and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: european-open-ai-opportunities
           path: results/european_ai/
+          if-no-files-found: warn
+
+  live-source-smoke:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real public GitHub and Hugging Face sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          from eu_source_discovery import discover, write_report, canonical, detail_url, hf_json
+          from http_util import get_json
+          result = discover({"repositories": [{"repo": "openeurollm/oellm-eval"}]},
+                            max_owners=1, max_follow=3)
+          write_report(result, "results/source-smoke")
+          print("Listings:", result["listings"])
+          print("Details:", result["detail_checks"])
+          print("Errors:", result["errors"])
+          assert not result["errors"], result["errors"]
+          assert {x["adapter"] for x in result["listings"] if x["count"]} == {"github", "huggingface"}
+          repo = get_json(detail_url(("repository", "openeurollm/oellm-eval")),
+                          user_agent="eu-discovery-smoke", timeout=15, attempts=2)[0]
+          assert repo["full_name"].lower() == "openeurollm/oellm-eval"
+          models = [x for x in result["candidates"] if x["kind"] == "model"
+                    and x.get("identity_status") == "confirmed_public_metadata"]
+          assert models, "No public model returned by the scoped listing"
+          key = canonical(models[0]["url"])
+          assert hf_json(detail_url(key))["id"] == key[1]
+          print("Live source identity checks passed.")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eu-source-live-smoke
+          path: results/source-smoke/
+          if-no-files-found: warn
+
+  live-generic-source-smoke:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Discover from the single public RAISE seed
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from generic_source_discovery import discover_web
+          from eu_source_discovery import canonical
+          seed = "https://raise4science.eu/"
+          result = discover_web([seed], platform_key=canonical, max_pages=2)
+          out = Path("results/generic-source-smoke")
+          out.mkdir(parents=True, exist_ok=True)
+          (out / "source_candidates.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+          print("Core:", result["sources"][seed])
+          print("New public sources:", len(result["sources"]) - 1)
+          print("Evidence:", result["references"][:10])
+          print("Platform references:", result["platform_refs"])
+          print("Errors:", result["errors"])
+          assert result["sources"][seed]["status"] == "read", result["sources"][seed]
+          assert len(result["sources"]) > 1, "No source discovered from the single core seed"
+          assert result["references"], "No original link evidence"
+          print("Single-seed discovery passed.")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: generic-source-live-smoke
+          path: results/generic-source-smoke/
           if-no-files-found: warn
