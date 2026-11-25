@@ -14,6 +14,7 @@ from arxiv_source_discovery import discover_publications
 from publication_organizations import resolve as resolve_organizations
 from publication_openaire import enrich as enrich_openaire
 from organization_source_expansion import expand as expand_organizations
+from checkpaper_evidence import collect as collect_checkpaper
 from generic_source_discovery import discover_web, metadata_links, public_url
 
 GH = "https://api.github.com"
@@ -326,7 +327,12 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                            "first_seen": edges.get(pair, {}).get("first_seen", stamp),
                            "last_seen": stamp, "evidence": proof}
             enqueue(target)
+    audit_state = copy.deepcopy(previous.get("checkpaper_evidence"))
+    if config.get("checkpaper_evidence", False):
+        audit_state = collect_checkpaper(instant, read, previous=audit_state)
+        errors.extend(audit_state["errors"])
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
+            "checkpaper_evidence": audit_state,
             "web_discovery": web_state,
             "publication_discovery": publication_state,
             "organization_discovery": organization_state,
@@ -404,6 +410,13 @@ def write_report(result, output):
             if research:
                 lines += [f"  - OpenAIRE topical products: {len(research['products'])} of {research['total']}"]
         lines += ["- " + x for x in expansion["limitations"]]
+    audits = result.get("checkpaper_evidence")
+    if audits:
+        lines += ["", "## External paper audit evidence (not scientific verdicts)",
+                  f"Imported {len(audits['records'])} records; coverage: {audits['coverage']}"]
+        for item in audits["records"].values():
+            if item["status"] == "versioned_audit_reference":
+                lines += [f"- {item['paper_version']} — {item['source_url']}"]
     reviews = result.get("connection_reviews", [])
     if reviews:
         lines += ["", "## Previously handled connections (human feedback; evidence unchanged)"]
