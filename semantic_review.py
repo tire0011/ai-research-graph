@@ -131,7 +131,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-def completion(packet, *, provider, model, local_url=None):
+def completion(packet, *, provider, model, local_url=None, system=SYSTEM):
     if provider == "mistral":
         endpoint = "https://api.mistral.ai/v1/chat/completions"
         key = os.environ.get("MISTRAL_API_KEY")
@@ -145,7 +145,7 @@ def completion(packet, *, provider, model, local_url=None):
         key = None
     else:
         raise ValueError("unsupported provider")
-    payload = {"model": model, "messages": [{"role": "system", "content": SYSTEM},
+    payload = {"model": model, "messages": [{"role": "system", "content": system},
                {"role": "user", "content": json.dumps(packet, ensure_ascii=False)}],
                "temperature": 0, "max_tokens": MAX_OUTPUT, "response_format": {"type": "json_object"}}
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
