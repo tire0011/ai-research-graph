@@ -136,13 +136,22 @@
   ],
   "connection_reviews": [
     {
+      "id": "laion-kyutai",
+      "status": "contacted",
+      "reported_by": "tire0011",
+      "reported_on": "2026-11-25",
+      "evidence_status": "user_reported_not_independently_verified",
+      "note": "User confirmed LAION–Kyutai has been informed; exact date, channel and response are not documented here. Do not send duplicate outreach.",
+      "scientific_evidence_unchanged": true
+    },
+    {
       "id": "arxiv:2611.15250:multiverse-research-network",
       "source_url": "https://arxiv.org/abs/2611.15250",
-      "status": "already_handled",
+      "status": "not_contacted",
       "reported_by": "tire0011",
-      "reported_on": "2026-11-24",
+      "reported_on": "2026-11-25",
       "evidence_status": "user_reported_not_independently_verified",
-      "note": "User reported the connection already dealt with (German: abgeschrieben); whether contact was sent or opportunity dismissed is not documented. Do not treat as new outreach or claim a response.",
+      "note": "User clarified that Multiverse was not contacted. Supersedes the incorrect already_handled entry.",
       "scientific_evidence_unchanged": true
     }
   ]
