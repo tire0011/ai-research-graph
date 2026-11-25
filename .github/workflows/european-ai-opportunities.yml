@@ -19,6 +19,9 @@ on:
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
+      - discovered_collaboration_review.py
+      - checkpaper_evidence.py
+      - tests/test_evidence_collaboration_bridge.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
       - tests/test_generic_source_discovery.py
@@ -44,6 +47,9 @@ on:
       - tests/test_publication_organizations.py
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
+      - discovered_collaboration_review.py
+      - checkpaper_evidence.py
+      - tests/test_evidence_collaboration_bridge.py
       - tests/test_discovered_source_triage.py
       - generic_source_discovery.py
       - tests/test_generic_source_discovery.py
@@ -278,6 +284,50 @@ jobs:
           name: live-discovered-source-triage
           path: results/discovered-triage/
           if-no-files-found: warn
+
+  live-checkpaper-evidence:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read public audit index and versioned AURA control
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          from checkpaper_evidence import collect, read_blob, parse_audit
+          from http_util import get_json
+          def fetch(url):
+              return get_json(url, user_agent="research-graph-audit-smoke", timeout=15, attempts=2)[0]
+          now = dt.datetime.now(dt.timezone.utc)
+          result = collect(now, fetch)
+          path = "2026/2611.26540-aura/README.md"
+          body, sha = read_blob(path, fetch)
+          control = parse_audit(path, body, sha, now.isoformat())
+          out = Path("results/checkpaper-smoke")
+          out.mkdir(parents=True, exist_ok=True)
+          (out / "audit_evidence.json").write_text(json.dumps({"generic":result,"control":control},indent=2))
+          print("CheckPaper index entries:", result.get("indexed_paths"))
+          print("Audit statuses:", [x["status"] for x in result["records"].values()])
+          print("Audit diagnostics:", result["errors"])
+          assert result.get("indexed_paths") and result["records"], result["errors"]
+          assert control["paper_version"] == "2611.26540v1", control
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: checkpaper-evidence-smoke
+          path: results/checkpaper-smoke/
 
   live-publication-smoke:
     if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
