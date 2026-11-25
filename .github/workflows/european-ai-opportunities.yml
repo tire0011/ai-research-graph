@@ -20,6 +20,7 @@ on:
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - discovered_collaboration_review.py
+      - collaboration_evaluation_freeze.py
       - checkpaper_evidence.py
       - tests/test_evidence_collaboration_bridge.py
       - tests/test_discovered_source_triage.py
@@ -48,6 +49,7 @@ on:
       - tests/test_arxiv_source_discovery.py
       - discovered_source_triage.py
       - discovered_collaboration_review.py
+      - collaboration_evaluation_freeze.py
       - checkpaper_evidence.py
       - tests/test_evidence_collaboration_bridge.py
       - tests/test_discovered_source_triage.py
@@ -284,6 +286,28 @@ jobs:
           name: live-discovered-source-triage
           path: results/discovered-triage/
           if-no-files-found: warn
+
+  live-collaboration-evaluation:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze real issue comparison cohort
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python collaboration_evaluation_freeze.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: collaboration-evaluation-cohort
+          path: results/collaboration-evaluation/
 
   live-checkpaper-evidence:
     if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
