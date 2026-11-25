@@ -7,6 +7,7 @@ import re
 import time
 from pathlib import Path
 from urllib.parse import urlencode
+from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
 
 import arxiv_source_discovery as arxiv
@@ -33,6 +34,27 @@ def select(snapshot, limit=20):
             "excluded_ids":sorted(EXCLUDED),"eligible_count":len(ranked),
             "selected":[{"id":candidates[k]["id"],"version_id":k} for k in ranked[:limit]],
             "known_control_ids":list(CONTROL)}
+
+def fetch_batch(versions, fetch=arxiv.fetch_atom):
+    if not 1 <= len(versions) <= 20 or len(set(versions)) != len(versions) or any(not ID.fullmatch(v) for v in versions):
+        raise ValueError("invalid version batch")
+    url=arxiv.API+"?"+urlencode({"id_list":",".join(versions),"max_results":len(versions)})
+    raw=fetch(url)
+    total,start,rows=arxiv.parse_atom(raw)
+    if start != 0 or total != len(rows) or len(rows)>len(versions):
+        raise ValueError("unexpected batch response")
+    root=ET.fromstring(raw)
+    packets={}
+    for row,entry in zip(rows,root.findall(arxiv.ATOM+"entry")):
+        version=row["version_id"]
+        if version not in versions or version in packets:
+            raise ValueError("unexpected or duplicate version")
+        summary=entry.findtext(arxiv.ATOM+"summary")
+        if not summary or not summary.strip() or len(summary)>sr.MAX_TEXT:
+            continue
+        packets[version]=sr.case_payload({"id":version,"question":"Extract source-grounded research mechanisms.",
+            "evidence":[{"id":"e1","url":row["url"],"revision":version,"text":summary}]})
+    return packets
 
 def fetch_packet(version, fetch=arxiv.fetch_atom):
     if not ID.fullmatch(version):
@@ -98,10 +120,16 @@ def main():
     p.add_argument("--previous")
     p.add_argument("--packets", help="Reuse frozen packets instead of network retrieval")
     p.add_argument("--limit",type=int,default=20)
+    p.add_argument("--selection", help="Pinned selection manifest from first acquisition")
     a=p.parse_args()
     if bool(a.provider)!=bool(a.model):
         p.error("provider and model required together")
     selection=select(json.loads(Path(a.snapshot).read_text(encoding="utf-8")),a.limit)
+    if a.selection:
+        selection=json.loads(Path(a.selection).read_text(encoding="utf-8"))
+        ids=[r["version_id"] for r in selection["selected"]]
+        if not 1<=len(ids)<=a.limit or len(set(ids))!=len(ids) or any(not ID.fullmatch(v) or v.split("v")[0] in EXCLUDED for v in ids):
+            raise ValueError("invalid pinned cohort")
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     (out/"selection.json").write_text(json.dumps(selection,indent=2),encoding="utf-8")
     packets=[];errors=[]
@@ -111,10 +139,15 @@ def main():
         allowed={r["version_id"] for r in selection["selected"]}
         if len(packets)>a.limit or any(p["id"] not in allowed for p in packets):
             raise ValueError("packets outside frozen selection")
-    for i,row in enumerate(selection["selected"] if not a.packets else []):
-        if i:time.sleep(3.1)
-        try:packets.append(fetch_packet(row["version_id"]))
-        except (ValueError,TypeError,KeyError,OSError,ET.ParseError) as exc:errors.append({"id":row["version_id"],"error":type(exc).__name__})
+    if not a.packets:
+        versions=[r["version_id"] for r in selection["selected"]]
+        try:
+            received=fetch_batch(versions)
+            packets=[received[v] for v in versions if v in received]
+            errors=[{"id":v,"error":"missing_or_invalid_version"} for v in versions if v not in received]
+        except (ValueError,TypeError,KeyError,OSError,ET.ParseError) as exc:
+            errors=[{"id":v,"error":type(exc).__name__,**({"http_status":exc.code} if isinstance(exc,HTTPError) else {})} for v in versions]
+        print("Acquisition diagnostics:",json.dumps(errors))
     (out/"packets.json").write_text(json.dumps({"packets":packets,"errors":errors},indent=2,ensure_ascii=False),encoding="utf-8")
     print(f"Research sample: {len(selection['selected'])} selected, {len(packets)} versioned abstracts, {len(errors)} errors.")
     if a.provider:
