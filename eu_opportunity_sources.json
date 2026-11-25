@@ -172,5 +172,6 @@
       ]
     }
   ],
-  "checkpaper_evidence": true
+  "checkpaper_evidence": true,
+  "discovered_collaboration_review": true
 }
