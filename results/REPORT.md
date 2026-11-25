@@ -1,6 +1,6 @@
 # OpenEuroLLM research graph – exploratory snapshot
 
-Collected: `2026-11-24T19:01:52.582197+00:00` (UTC). Source: public APIs, read-only.
+Collected: `2026-11-25T06:57:22.246038+00:00` (UTC). Source: public APIs, read-only.
 
 ## Coverage
 
@@ -248,10 +248,11 @@ Comments are collected only for the ten preselected change-impact issues, not al
 | [Agent-Ark/Toucan-1.5M](https://huggingface.co/datasets/Agent-Ark/Toucan-1.5M) | [TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments](https://arxiv.org/abs/2510.01179) | `arxiv:2510.01179` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Where Did This Sentence Come From? Tracing Provenance in LLM Reasoning Distillation](https://arxiv.org/abs/2512.20908) | `arxiv:2512.20908` |
 | [Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b](https://huggingface.co/datasets/Alibaba-Apsara/Superior-Reasoning-SFT-gpt-oss-120b) | [Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) | `arxiv:2601.09088` |
-| [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
-| [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
 | [common-pile/stackv2](https://huggingface.co/datasets/common-pile/stackv2) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
+| [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [StarCoder 2 and The Stack v2: The Next Generation](https://arxiv.org/abs/2402.19173) | `arxiv:2402.19173` |
+| [common-pile/stackv2_edu_filtered](https://huggingface.co/datasets/common-pile/stackv2_edu_filtered) | [The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text](https://arxiv.org/abs/2506.05209) | `arxiv:2506.05209` |
+| [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [Challenges in Detoxifying Language Models](https://arxiv.org/abs/2109.07445) | `arxiv:2109.07445` |
 | [HuggingFaceFW/finepdfs](https://huggingface.co/datasets/HuggingFaceFW/finepdfs) | [TReB: A Comprehensive Benchmark for Evaluating Table Reasoning Capabilities of Large Language Models](https://arxiv.org/abs/2506.18421) | `arxiv:2506.18421` |
 | [HPLT/HPLT2.0_cleaned](https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned) | [An Expanded Massive Multilingual Dataset for High-Performance Language Technologies (HPLT)](https://arxiv.org/abs/2503.10267) | `arxiv:2503.10267` |
@@ -263,7 +264,6 @@ Comments are collected only for the ten preselected change-impact issues, not al
 | [nvidia/Nemotron-Math-Proofs-v1](https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1) | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | `arxiv:2508.03613` |
 | [nvidia/Nemotron-Math-v2](https://huggingface.co/datasets/nvidia/Nemotron-Math-v2) | [Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision](https://arxiv.org/abs/2512.15489) | `arxiv:2512.15489` |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2) | [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/abs/2508.14444) | `arxiv:2508.14444` |
-| [allenai/dolma3_dolmino_mix-100B-1125](https://huggingface.co/datasets/allenai/dolma3_dolmino_mix-100B-1125) | [Olmo 3](https://arxiv.org/abs/2512.13961) | `arxiv:2512.13961` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595) | `arxiv:2412.02595` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Rewriting Pre-Training Data Boosts LLM Performance in Math and Code](https://arxiv.org/abs/2505.02881) | `arxiv:2505.02881` |
 | [nvidia/Nemotron-Pretraining-Specialized-v1](https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1) | [Nemotron-CC-Math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset](https://arxiv.org/abs/2508.15096) | `arxiv:2508.15096` |
