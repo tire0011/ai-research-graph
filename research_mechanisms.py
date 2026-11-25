@@ -151,6 +151,10 @@ def main():
     (out/"packets.json").write_text(json.dumps({"packets":packets,"errors":errors},indent=2,ensure_ascii=False),encoding="utf-8")
     print(f"Research sample: {len(selection['selected'])} selected, {len(packets)} versioned abstracts, {len(errors)} errors.")
     if a.provider:
+        expected={x["version_id"] for x in selection["selected"]}
+        if errors or len(packets)!=len(expected) or {p["id"] for p in packets}!=expected:
+            print("Incomplete or duplicate frozen cohort; refusing model calls.")
+            return 2
         previous=json.loads(Path(a.previous).read_text(encoding="utf-8")) if a.previous else None
         result=extract(packets,lambda x:sr.completion(x,provider=a.provider,model=a.model,local_url=a.local_url,system=SYSTEM),provider=a.provider,model=a.model,previous=previous)
         (out/"extractions.json").write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding="utf-8")
