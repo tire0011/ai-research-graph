@@ -40,7 +40,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Capture — hplt-capture
 
-- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/README.md) — pinned_git_file
+- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/1ddeb978c8a43aab46df4b3c600547e7480d01ef/README.md) — pinned_git_file
 - Matched source phrase: robotstxt.warc.gz
 - Exact excerpt: original WARC file corresponding to HTTP responses containing PDF files - robotstxt.warc.gz: the subset of records from the original WARC file with URIs ending by rob
 - SHA256: 67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013
@@ -85,7 +85,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Stage 3 consumption — hplt-stage3-filter
 
-- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage3/stage3local_v2.sh) — pinned_git_file
+- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/1ddeb978c8a43aab46df4b3c600547e7480d01ef/src/hplt_textpipes/stage3/stage3local_v2.sh) — pinned_git_file
 - Matched source phrase: rclone lsf "${INPUT_DIR}/allowed.zst"
 - Exact excerpt: e the empty string that will collapse when given as an additional argument rclone lsf "${INPUT_DIR}/allowed.zst" &>/dev/null && ALLOWED_PIPE="$TMP_DIR/pipe_allowed" // ALLOWED_PIPE="" st
 - SHA256: 80b6f17f1d52d1c4e709ea11bd2f3a3f0d2260214070c333e18f160612c0cf98
@@ -94,7 +94,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Documented Stage 3 contract — hplt-stage3-docs
 
-- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/4bbfb80ed0c4b83c47860872904b75cfffacbd2f/src/hplt_textpipes/stage3/README.md) — pinned_git_file
+- [Original pinned source](https://github.com/hplt-project/HPLT-textpipes/blob/1ddeb978c8a43aab46df4b3c600547e7480d01ef/src/hplt_textpipes/stage3/README.md) — pinned_git_file
 - Matched source phrase: If present, this file will be used
 - Exact excerpt: a binary mask describning compatability of each document with robots.txt. If present, this file will be used when running stage3 to remove incompatible documents. </details> ## Prep
 - SHA256: 3f7940face813f1601c5de15b99b8bb2283cca6773ad5a6d86950b379991c3ef
@@ -103,7 +103,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Record-local opt-outs — oe-page-level
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/src/robotsreservation.cc) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/59b37827e38fa4712aee24fc9c4ca50fa20a3dd5/src/robotsreservation.cc) — pinned_git_file
 - Matched source phrase: x-robots-tag
 - Exact excerpt: Header(const Record& record) const { if (!record.HTTPheaderExists("x-robots-tag")) return true; std::string directives = util::toLower
 - SHA256: c72e432657e6dd3770abd0327c0deaf6e5f712894c5a24aaff22b472617aaea0
@@ -112,7 +112,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### WARC capture extraction — oe-robot-captures
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/src/warcpreprocessor.cc) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/59b37827e38fa4712aee24fc9c4ca50fa20a3dd5/src/warcpreprocessor.cc) — pinned_git_file
 - Matched source phrase: robots_warc_writer.writeRecord(content)
 - Exact excerpt: if (!options.robots_process && ::isRobotsTxt(record)) { robots_warc_writer.writeRecord(content); // no-op if robots_warc_writer is not opened. continue;
 - SHA256: b61be43857b7bd0131a6046a2757ed79cac6d586c921a76f86f0dc65a9a6dd3b
@@ -121,7 +121,7 @@ OpenEuroLLM warc2text already processes record-local X-Robots-Tag and HTML robot
 
 ### Policy explanation — oe-opt-out-doc
 
-- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/148aa1369b567b0bfccb4e390b7583ed90946b5a/OPTOUT.md) — pinned_git_file
+- [Original pinned source](https://github.com/OpenEuroLLM/warc2text/blob/59b37827e38fa4712aee24fc9c4ca50fa20a3dd5/OPTOUT.md) — pinned_git_file
 - Matched source phrase: X-Robots-Tag
 - Exact excerpt: atching tag has a value other than `0`. ## Robots reservation Both the `X-Robots-Tag` HTTP header and the `<meta name="robots" ...>` meta tag hold a comma-sepa
 - SHA256: 51826c1b487ad5847d6b4553cd70c91616f2e0650b1827c031b46d9121cbe28f
