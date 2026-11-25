@@ -1,5 +1,5 @@
 import unittest
-from research_mechanisms import select, validate, extract, key, CONTROL, FIELDS
+from research_mechanisms import select, validate, extract, key, CONTROL, FIELDS, fetch_batch
 from research_hypotheses import compare,cases
 from semantic_review import case_payload
 
@@ -41,3 +41,20 @@ class ResearchMechanismTests(unittest.TestCase):
         self.assertEqual(result["extracted_paper_count"],2)
         self.assertEqual(len(result["structured"]),1)
         self.assertEqual(len(cases(ps,result)),1)
+
+    def test_batch_checks_versions_and_order(self):
+        def entry(v):
+            return f"<entry><id>https://arxiv.org/abs/{v}</id><title>Title</title><published>2026-11-01T00:00:00Z</published><updated>2026-11-01T00:00:00Z</updated><summary>Research question.</summary></entry>"
+        def feed(ids):
+            return ('<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/"><os:totalResults>'+str(len(ids))+'</os:totalResults><os:startIndex>0</os:startIndex>'+''.join(entry(v) for v in ids)+'</feed>').encode()
+        ids=["2611.00001v1","2611.00002v1"]
+        calls=[]
+        def fetch(url):
+            calls.append(url)
+            return feed(ids[::-1])
+        result=fetch_batch(ids,fetch)
+        self.assertEqual(set(result),set(ids))
+        self.assertEqual(len(calls),1)
+        self.assertEqual(result[ids[0]]["evidence"][0]["revision"],ids[0])
+        with self.assertRaises(ValueError):
+            fetch_batch(ids,lambda _:feed(["2611.00001v2"]))
