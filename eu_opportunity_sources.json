@@ -170,6 +170,22 @@
         "checkpaper",
         "tire0011"
       ]
+    },
+    {
+      "id": "atmosregime-rulecraft",
+      "status": "contacted",
+      "reported_on": "2026-11-25",
+      "github_owners": [
+        "acodercat",
+        "gaojianxin05"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2611.28669",
+        "https://arxiv.org/abs/2611.28745"
+      ],
+      "evidence_status": "mail_submission_confirmed_sent_copy_filed",
+      "note": "Both teams were informed separately about a possible comparison of context recognition, rule retrieval and rule execution. No Research Graph promotion. No direct public coordination found in inspected paper texts and GitHub issue search; private coordination unknown. Do not repeat outreach; response pending.",
+      "scientific_evidence_unchanged": true
     }
   ],
   "checkpaper_evidence": true,
