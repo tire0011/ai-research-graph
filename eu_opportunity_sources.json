@@ -142,7 +142,11 @@
       "reported_on": "2026-11-25",
       "evidence_status": "user_reported_not_independently_verified",
       "note": "User confirmed LAION–Kyutai has been informed; exact date, channel and response are not documented here. Do not send duplicate outreach.",
-      "scientific_evidence_unchanged": true
+      "scientific_evidence_unchanged": true,
+      "github_owners": [
+        "laion-ai",
+        "kyutai-labs"
+      ]
     },
     {
       "id": "arxiv:2611.15250:multiverse-research-network",
@@ -161,7 +165,12 @@
       "source_url": "https://github.com/checkpaper/audits",
       "evidence_status": "sent_folder_confirmed",
       "note": "One email sent on 2026-11-25 before the user clarified no outreach is wanted. Do not initiate further contact; use public audits independently.",
-      "scientific_evidence_unchanged": true
+      "scientific_evidence_unchanged": true,
+      "github_owners": [
+        "checkpaper",
+        "tire0011"
+      ]
     }
-  ]
+  ],
+  "checkpaper_evidence": true
 }
