@@ -14,7 +14,10 @@ import arxiv_source_discovery as arxiv
 import publication_organizations as org
 from publication_openaire import API, ID
 from research_graph import fetch_json, openaire_node
-from research_mechanisms import EXCLUDED, fetch_batch
+from research_mechanisms import EXCLUDED as KNOWN, fetch_batch
+
+# Exclude previously reviewed papers from the new prospective cohort.
+EXCLUDED=KNOWN | {"2611.15241","2611.27486","2611.28660","2611.31015","2611.30627","2611.28706"}
 
 TOPICS=("large language model","AI agent","quantum machine learning","model compression")
 MAX_PAGE=20
@@ -127,6 +130,7 @@ def run(snapshot,now,*,previous=None):
     prior=previous.get("organization_state") or snapshot.get("organization_discovery",{})
     orgstate=org.resolve(list(pool.values()),now,previous=prior,max_papers=12,max_ror=32)
     cohort=select(list(pool.values()),orgstate,snapshot["publication_discovery"]["papers"])
+    cohort["snapshot_retrieved_at"]=snapshot["retrieved_at"]
     return {"schema":1,"retrieved_at":now.isoformat(),"discovery":discovery,"versioned_papers":pool,
             "organization_state":orgstate,"cohort":cohort,"errors":errors+orgstate["errors"]}
 
@@ -138,6 +142,7 @@ def main():
     result=run(snap,dt.datetime.now(dt.timezone.utc),previous=prev)
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     (out/"eu_first.json").write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding="utf-8")
+    (out/"selection.json").write_text(json.dumps(result["cohort"],indent=2,ensure_ascii=False),encoding="utf-8")
     c=result["cohort"]
     print("EU-first coverage:",json.dumps({"discovered":len(result["discovery"]["candidates"]),"versioned":len(result["versioned_papers"]),
         "eu_candidates":c["eu_candidates"],"independently_verified_eu":0,"global_comparators":c["global_comparators"],"errors":len(result["errors"]),"diagnostics":result["errors"]}))
