@@ -14,7 +14,8 @@ from arxiv_source_discovery import discover_publications
 from publication_organizations import resolve as resolve_organizations
 from publication_openaire import enrich as enrich_openaire
 from organization_source_expansion import expand as expand_organizations
-from generic_source_discovery import discover_web, metadata_links
+from checkpaper_evidence import collect as collect_checkpaper
+from generic_source_discovery import discover_web, metadata_links, public_url
 
 GH = "https://api.github.com"
 HF = "https://huggingface.co"
@@ -191,6 +192,29 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                 "first_seen": first_seen, "last_seen": stamp, "evidence": proof}
             enqueue(target)
 
+    # Human-reviewed referrals are explicit inputs, not automatic discoveries.
+    for referral in config.get("review_referrals", []):
+        source = referral["source_url"]
+        if not referral.get("review_only") or not public_url(source):
+            raise ValueError("invalid review referral")
+        for raw in referral["urls"]:
+            target_url = public_url(raw)
+            if not target_url:
+                raise ValueError("invalid review referral target")
+            key = canonical(target_url)
+            proof = {"source_url": source, "source_entity": source, "retrieved_at": stamp,
+                     "type": "human_reviewed_reference", "excerpt": raw, "resolved_url": target_url}
+            if key:
+                add(key, proof, referral["scope"])
+                enqueue(key)
+                pair = (source, url_for(key))
+                edges[pair] = {"source": pair[0], "target": pair[1], "relationship": "references",
+                               "verification_status": "human_reviewed",
+                               "first_seen": edges.get(pair, {}).get("first_seen", stamp),
+                               "last_seen": stamp, "evidence": proof}
+            # Do not automatically crawl external review services or execute their audit scripts.
+    connection_reviews = copy.deepcopy(config.get("connection_reviews", []))
+
     for owner in owners:
         for adapter in (GitHub(), HuggingFace()):
             try:
@@ -303,12 +327,19 @@ def discover(config, *, fetch=None, previous=None, now=None, max_owners=4, max_f
                            "first_seen": edges.get(pair, {}).get("first_seen", stamp),
                            "last_seen": stamp, "evidence": proof}
             enqueue(target)
+    audit_state = copy.deepcopy(previous.get("checkpaper_evidence"))
+    if config.get("checkpaper_evidence", False):
+        audit_state = collect_checkpaper(instant, read, previous=audit_state)
+        errors.extend(audit_state["errors"])
     return {"schema": 2, "retrieved_at": stamp, "owners": owners, "requests": len(attempted),
+            "checkpaper_evidence": audit_state,
             "web_discovery": web_state,
             "publication_discovery": publication_state,
             "organization_discovery": organization_state,
             "openaire_discovery": openaire_state,
             "organization_expansion": expansion_state,
+            "connection_reviews": connection_reviews,
+            "review_referrals": copy.deepcopy(config.get("review_referrals", [])),
             "listings": listings, "detail_checks": checks, "pending": pending, "expanded": expanded,
             "new_reference_count": len(set(edges) - prior_edges),
             "candidates": sorted(candidates.values(), key=lambda x: x["url"]),
@@ -329,7 +360,7 @@ def write_report(result, output):
               f"New references: {result['new_reference_count']}",
               f"Pending detail lookups: {len(result['pending'])}",
               "", "## Historical verified metadata references"]
-    lines += ["- " + x["source"] + " references " + x["target"] for x in result["verified_references"]]
+    lines += ["- " + x["source"] + " references " + x["target"] for x in result["verified_references"] if x.get("verification_status") == "verified"]
     lines += ["", "## Collaboration hypotheses", "Not evaluated in this iteration.",
               "", "## Engineering tasks", "See existing OPPORTUNITIES.md; new sources require review.",
               "", "## Errors and limitations"]
@@ -379,6 +410,24 @@ def write_report(result, output):
             if research:
                 lines += [f"  - OpenAIRE topical products: {len(research['products'])} of {research['total']}"]
         lines += ["- " + x for x in expansion["limitations"]]
+    audits = result.get("checkpaper_evidence")
+    if audits:
+        lines += ["", "## External paper audit evidence (not scientific verdicts)",
+                  f"Imported {len(audits['records'])} records; coverage: {audits['coverage']}"]
+        for item in audits["records"].values():
+            if item["status"] == "versioned_audit_reference":
+                lines += [f"- {item['paper_version']} — {item['source_url']}"]
+    reviews = result.get("connection_reviews", [])
+    if reviews:
+        lines += ["", "## Previously handled connections (human feedback; evidence unchanged)"]
+        lines += [f"- {x['id']} — {x['status']}; {x['note']}" for x in reviews]
+    referrals = result.get("review_referrals", [])
+    if referrals:
+        lines += ["", "## Human-reviewed external evidence sources"]
+        for referral in referrals:
+            lines += [f"- {referral['id']} — {referral['scope']}",
+                      f"  - Original source: {referral['source_url']}"]
+            lines += ["  - " + url for url in referral["urls"]]
     web = result.get("web_discovery")
     if web:
         (out / "web_source_candidates.json").write_text(json.dumps(web, indent=2) + "\n", encoding="utf-8")

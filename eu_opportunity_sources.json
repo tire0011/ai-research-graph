@@ -4,7 +4,9 @@
   "organization_discovery": true,
   "openaire_discovery": true,
   "organization_expansion": true,
-  "web_seeds": ["https://raise4science.eu/"],
+  "web_seeds": [
+    "https://raise4science.eu/"
+  ],
   "scope": "Curated EU-based open AI research and enabling infrastructure; verified source registry expanded 2026-11-21. This is not a census; historical pilot cohorts must remain separately identified.",
   "selection": "Each source must have a directly inspected public GitHub repository. Expand via reviewed PRs; do not imply these are all EU AI initiatives.",
   "max_issues_per_repo": 15,
@@ -119,5 +121,73 @@
       "source_checked_at": "2026-11-21",
       "repository_url": "https://github.com/OpenEuroLLM/oellm-autoexp"
     }
-  ]
+  ],
+  "review_referrals": [
+    {
+      "id": "checkpaper-audits",
+      "source_url": "https://github.com/kyutai-labs/aura/issues/1",
+      "urls": [
+        "https://github.com/checkpaper/audits/tree/main/2026/2611.26540-aura",
+        "https://checkpaper.app/r/vbdpgj68wa"
+      ],
+      "scope": "External evidence-quality tooling; EU affiliation unverified; not an EU initiative.",
+      "review_only": true
+    }
+  ],
+  "connection_reviews": [
+    {
+      "id": "laion-kyutai",
+      "status": "contacted",
+      "reported_by": "tire0011",
+      "reported_on": "2026-11-25",
+      "evidence_status": "user_reported_not_independently_verified",
+      "note": "User confirmed LAION–Kyutai has been informed; exact date, channel and response are not documented here. Do not send duplicate outreach.",
+      "scientific_evidence_unchanged": true,
+      "github_owners": [
+        "laion-ai",
+        "kyutai-labs"
+      ]
+    },
+    {
+      "id": "arxiv:2611.15250:multiverse-research-network",
+      "source_url": "https://arxiv.org/abs/2611.15250",
+      "status": "not_contacted",
+      "reported_by": "tire0011",
+      "reported_on": "2026-11-25",
+      "evidence_status": "user_reported_not_independently_verified",
+      "note": "User clarified that Multiverse was not contacted. Supersedes the incorrect already_handled entry.",
+      "scientific_evidence_unchanged": true
+    },
+    {
+      "id": "checkpaper-research-graph",
+      "status": "contacted_no_followup",
+      "reported_on": "2026-11-25",
+      "source_url": "https://github.com/checkpaper/audits",
+      "evidence_status": "sent_folder_confirmed",
+      "note": "One email sent on 2026-11-25 before the user clarified no outreach is wanted. Do not initiate further contact; use public audits independently.",
+      "scientific_evidence_unchanged": true,
+      "github_owners": [
+        "checkpaper",
+        "tire0011"
+      ]
+    },
+    {
+      "id": "atmosregime-rulecraft",
+      "status": "contacted",
+      "reported_on": "2026-11-25",
+      "github_owners": [
+        "acodercat",
+        "gaojianxin05"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2611.28669",
+        "https://arxiv.org/abs/2611.28745"
+      ],
+      "evidence_status": "mail_submission_confirmed_sent_copy_filed",
+      "note": "Both teams were informed separately about a possible comparison of context recognition, rule retrieval and rule execution. No Research Graph promotion. No direct public coordination found in inspected paper texts and GitHub issue search; private coordination unknown. Do not repeat outreach; response pending.",
+      "scientific_evidence_unchanged": true
+    }
+  ],
+  "checkpaper_evidence": true,
+  "discovered_collaboration_review": true
 }

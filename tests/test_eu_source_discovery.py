@@ -111,3 +111,23 @@ class SourceDiscoveryTests(unittest.TestCase):
         self.assertIsNone(canonical("https://huggingface.co/spaces/example"))
         self.assertEqual(canonical("https://huggingface.co/example/model.git"),
                          ("model", "example/model.git"))
+
+    def test_human_referral_and_connection_review_remain_distinct(self):
+        source = "https://github.com/example/seed/issues/1"
+        config = {**self.config, "review_referrals": [
+            {"id": "audit", "source_url": source,
+             "urls": ["https://github.com/auditor/audits/tree/main/paper", "https://review.example.org/report"],
+             "scope": "external quality tool; EU affiliation unverified", "review_only": True}],
+            "connection_reviews": [{"id": "paper:example", "status": "already_handled", "note": "User reported"}]}
+        result = discover(config, fetch=lambda _: [], now=self.now, max_follow=0)
+        self.assertEqual(result["connection_reviews"], config["connection_reviews"])
+        self.assertEqual(result["review_referrals"], config["review_referrals"])
+        self.assertEqual(result["pending"], ["https://github.com/auditor/audits"])
+        edge = result["verified_references"][0]
+        self.assertEqual(edge["verification_status"], "human_reviewed")
+        self.assertEqual(edge["source"], source)
+        self.assertTrue(result["candidates"][0]["review_only"])
+        self.assertIsNone(result["web_discovery"])
+        again = discover(config, fetch=lambda _: [], now=self.now, previous=result, max_follow=0)
+        self.assertEqual(again["new_reference_count"], 0)
+        self.assertFalse(again["candidates"][0]["new"])
