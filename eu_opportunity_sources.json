@@ -153,6 +153,15 @@
       "evidence_status": "user_reported_not_independently_verified",
       "note": "User clarified that Multiverse was not contacted. Supersedes the incorrect already_handled entry.",
       "scientific_evidence_unchanged": true
+    },
+    {
+      "id": "checkpaper-research-graph",
+      "status": "contacted_no_followup",
+      "reported_on": "2026-11-25",
+      "source_url": "https://github.com/checkpaper/audits",
+      "evidence_status": "sent_folder_confirmed",
+      "note": "One email sent on 2026-11-25 before the user clarified no outreach is wanted. Do not initiate further contact; use public audits independently.",
+      "scientific_evidence_unchanged": true
     }
   ]
 }
