@@ -9,6 +9,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from eu_source_discovery import canonical, detail_url, url_for
+from discovered_collaboration_review import contact_review, prepare_discovered
 from eu_opportunity_discovery import build, get_json, is_stale, VOLUNTEER_LABELS
 
 # Specific technical signals, deliberately not a geography or collaboration classifier.
@@ -159,6 +160,18 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                                         "retrieved_at": stamp} for r in (left, right)],
                           "next_check": "Compare open requirements, existing code, licenses and maintainer interest."})
     pairs.sort(key=lambda x: (-len(x["shared_areas"]), x["left"], x["right"]))
+    # Keep handled scientific hypotheses inspectable; exclude them only from fresh outreach review.
+    suppressed_pairs = []
+    for pair in pairs:
+        pair["contact_review"] = contact_review(config, source_owner(canonical(pair["left"])[1]),
+                                               source_owner(canonical(pair["right"])[1]))
+        if pair["contact_review"]["suppress_outreach"]:
+            suppressed_pairs.append(pair)
+    pairs = [x for x in pairs if not x["contact_review"]["suppress_outreach"]]
+    collaboration = None
+    if config.get("discovered_collaboration_review", False):
+        collaboration = prepare_discovered(config, metadata, fetch, now=now)
+        errors.extend({"stage": "collaboration", **x} for x in collaboration["errors"])
     web = snapshot.get("web_discovery") or {}
     return {"schema": 1, "retrieved_at": stamp, "snapshot_retrieved_at": snapshot.get("retrieved_at"),
             "pool_size": len(urls), "selected": selected, "last_attempt": history,
@@ -167,6 +180,7 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                 "selected_for_issue_review": len(issue_sources),
                 "unknown_license_among_topical": sum(not r["license_hint"] for r in topical)}, "issue_repositories": [r["repo"] for r in issue_sources],
             "issue_review": issue_result, "tasks": tasks, "topic_hypotheses": pairs[:5],
+            "suppressed_contact_hypotheses": suppressed_pairs, "collaboration_review": collaboration,
             "adapter_review": web.get("adapter_proposals", []), "errors": errors,
             "limitations": ["Repository descriptions and topics are lexical signals, not scientific assessment.",
                             "Curated owner context does not independently verify European affiliation.",
@@ -194,6 +208,17 @@ def markdown(result):
     for pair in result["topic_hypotheses"]:
         lines += [f"- {pair['left']} ↔ {pair['right']}: {', '.join(pair['shared_areas'])}",
                   f"  - {pair['next_check']}"]
+    lines += ["", "## Previously handled contact pairs"]
+    for pair in result.get("suppressed_contact_hypotheses", []):
+        lines.append(f"- {pair['left']} ↔ {pair['right']} — {pair['contact_review']['status']}")
+    review = result.get("collaboration_review")
+    if review:
+        lines += ["", "## Source-verified technical review packets",
+                  f"Sampled {review['items_indexed']} issue/PR records; prepared {len(review['packets'])} packets; suppressed {len(review['suppressed_contact_candidates'])} contacted pairs.",
+                  "Not confirmed handoffs; independent assessment required."]
+        for item in review["packets"]:
+            card = item["candidate"]
+            lines.append(f"- {card['source']['url']} ↔ {card['target']['url']}")
     lines += ["", "## Adapter review queue (no execution)"]
     lines += [f"- {x['url']} — {x['format']}" for x in result["adapter_review"]]
     lines += ["", "## Diagnostics"] + ["- " + json.dumps(x) for x in result["errors"]]
