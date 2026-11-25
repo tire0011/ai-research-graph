@@ -96,6 +96,7 @@ def main():
     p.add_argument("--model")
     p.add_argument("--local-url",default="http://127.0.0.1:8080/v1")
     p.add_argument("--previous")
+    p.add_argument("--packets", help="Reuse frozen packets instead of network retrieval")
     p.add_argument("--limit",type=int,default=20)
     a=p.parse_args()
     if bool(a.provider)!=bool(a.model):
@@ -104,7 +105,13 @@ def main():
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     (out/"selection.json").write_text(json.dumps(selection,indent=2),encoding="utf-8")
     packets=[];errors=[]
-    for i,row in enumerate(selection["selected"]):
+    if a.packets:
+        frozen=json.loads(Path(a.packets).read_text(encoding="utf-8"))
+        packets=frozen["packets"];errors=frozen["errors"]
+        allowed={r["version_id"] for r in selection["selected"]}
+        if len(packets)>a.limit or any(p["id"] not in allowed for p in packets):
+            raise ValueError("packets outside frozen selection")
+    for i,row in enumerate(selection["selected"] if not a.packets else []):
         if i:time.sleep(3.1)
         try:packets.append(fetch_packet(row["version_id"]))
         except (ValueError,TypeError,KeyError,OSError,ET.ParseError) as exc:errors.append({"id":row["version_id"],"error":type(exc).__name__})
@@ -115,6 +122,11 @@ def main():
         result=extract(packets,lambda x:sr.completion(x,provider=a.provider,model=a.model,local_url=a.local_url,system=SYSTEM),provider=a.provider,model=a.model,previous=previous)
         (out/"extractions.json").write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding="utf-8")
         print("Validated extraction formats:",sum(x["status"]=="validated_format" for x in result["records"]))
+        from research_hypotheses import compare, cases
+        comparison=compare(packets,result)
+        (out/"comparison.json").write_text(json.dumps(comparison,indent=2),encoding="utf-8")
+        (out/"hypothesis_cases.json").write_text(json.dumps({"cases":cases(packets,comparison)},indent=2,ensure_ascii=False),encoding="utf-8")
+        if any(x["status"]!="validated_format" for x in result["records"]):return 2
     return 2 if errors or not packets else 0
 if __name__=="__main__":
     raise SystemExit(main())
