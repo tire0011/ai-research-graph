@@ -6,6 +6,9 @@ on:
       - semantic_review.py
       - research_mechanisms.py
       - research_hypotheses.py
+      - eu_first_research.py
+      - tests/test_eu_first_research.py
+      - studies/eu_first/**
       - tests/test_research_mechanisms.py
       - studies/research_mechanisms/**
       - tests/test_semantic_review.py
@@ -45,6 +48,7 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p 'test_semantic_review.py' -v
       - run: python -m unittest discover -s tests -p 'test_research_mechanisms.py' -v
+      - run: python -m unittest discover -s tests -p 'test_eu_first_research.py' -v
 
   freeze-research-cohort:
     if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
@@ -165,4 +169,29 @@ jobs:
         with:
           name: research-model-test
           path: results/research-model-test/
+          if-no-files-found: warn
+
+  eu-first-cohort:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'experiment/eu-first-research'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Discover EU candidates and resolve versioned affiliation evidence
+        run: |
+          git fetch --no-tags origin refs/heads/eu-discovery-state
+          mkdir -p results/eu-first
+          git show FETCH_HEAD:source_candidates.json > results/eu-first/source_snapshot.json
+          python eu_first_research.py --snapshot results/eu-first/source_snapshot.json --output results/eu-first
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eu-first-cohort
+          path: results/eu-first/
           if-no-files-found: warn
