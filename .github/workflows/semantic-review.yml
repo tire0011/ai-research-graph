@@ -58,7 +58,7 @@ jobs:
           git fetch --no-tags origin refs/heads/eu-discovery-state
           mkdir -p results/research-mechanisms
           git show FETCH_HEAD:source_candidates.json > results/research-mechanisms/source_snapshot.json
-          python research_mechanisms.py --snapshot results/research-mechanisms/source_snapshot.json --output results/research-mechanisms
+          python research_mechanisms.py --snapshot results/research-mechanisms/source_snapshot.json --selection studies/research_mechanisms/selection.json --output results/research-mechanisms
       - uses: actions/upload-artifact@v4
         if: always()
         with:
