@@ -48,19 +48,26 @@ def rank(config, snapshot, *, limit=10):
                 or evidence.get("source_entity") != source):
             continue
         observations += 1
-        groups[dst][src] = {"source": src, "owner": owner(src),
+        kind = evidence.get("type", "historical_reference")
+        key = (src, evidence_url, kind)
+        groups[dst][key] = {"source": src, "owner": owner(src),
                             "source_url": evidence_url, "excerpt": excerpt,
                             "last_seen": edge.get("last_seen"),
-                            "status": "historical_reference_not_verified_use"}
+                            "evidence_type": kind, "context": evidence.get("context"),
+                            "sha256": evidence.get("sha256"),
+                            "status": ("declared_vcs_dependency_not_runtime_verified" if kind == "manifest_vcs_declaration"
+                                       else "reference_not_verified_use")}
     candidates = []
     for target, refs in groups.items():
         owners = {r["owner"] for r in refs.values()}
         if len(owners) < 2:
             continue
         known = owners & curated
+        dependency_owners = {r["owner"] for r in refs.values() if r["evidence_type"] == "manifest_vcs_declaration"}
         candidates.append({"component": target, "distinct_source_owners": len(owners),
                            "curated_owner_context_count": len(known),
                            "unknown_owner_context_count": len(owners - known),
+                           "declared_dependency_owner_count": len(dependency_owners),
                            "references": sorted(refs.values(), key=lambda r: r["source"]),
                            "status": "shared_reference_review_only",
                            "next_check": "Inspect actual imports, data or evaluation use, licence and open tasks."})
@@ -69,7 +76,7 @@ def rank(config, snapshot, *, limit=10):
     return {"schema": 1, "observations": observations, "candidate_count": len(candidates),
             "candidates": candidates[:limit], "review_only": True,
             "known_cases": config.get("technical_leverage_cases", []),
-            "limitations": ["Historical explicit references are not verified technical dependencies.",
+            "limitations": ["Explicit references are not verified technical dependencies; VCS declarations are not runtime verification.",
                             "Distinct owner namespaces are not necessarily distinct organizations.",
                             "Curated owner context is not verified European affiliation.",
                             "Known cases are editorial evidence, not automatic discoveries or holdout successes.",
@@ -78,13 +85,13 @@ def rank(config, snapshot, *, limit=10):
 
 def markdown(result):
     lines = ["", "## Technical leverage candidates (review only)",
-             f"Eligible historical reference observations: {result['observations']}; "
+             f"Eligible reference observations: {result['observations']}; "
              f"shared components: {result['candidate_count']}."]
     for row in result["candidates"]:
         lines.append(f"- {row['component']} — {row['distinct_source_owners']} source owners "
-                     f"({row['curated_owner_context_count']} with curated context)")
+                     f"({row['curated_owner_context_count']} with curated context; {row['declared_dependency_owner_count']} declared VCS dependency owners)")
         for ref in row["references"]:
-            lines.append(f"  - {ref['source']} — {ref['source_url']}")
+            lines.append(f"  - {ref['source']} — {ref['source_url']} ({ref['evidence_type']})")
         lines.append("  - " + row["next_check"])
     if not result["candidates"]:
         lines.append("No shared component surfaced in the available evidence; not proof of absence.")
