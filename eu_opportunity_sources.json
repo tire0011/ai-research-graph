@@ -189,5 +189,35 @@
     }
   ],
   "checkpaper_evidence": true,
-  "discovered_collaboration_review": true
+  "discovered_collaboration_review": true,
+  "technical_leverage_cases": [
+    {
+      "component": "https://github.com/ltgoslo/llm-dashboard",
+      "finding": "Shared evaluation dashboard for HPLT NorOLMo and OpenEuroLLM Prelude/NorPrelude; structural validation contribution submitted, acceptance and impact unknown.",
+      "projects": [
+        "HPLT",
+        "OpenEuroLLM"
+      ],
+      "source_urls": [
+        "https://github.com/ltgoslo/llm-dashboard/blob/7bd2e0017aa64da5da16d714137751374028386f/README.md",
+        "https://github.com/hplt-project/HPLT-WP4/issues/9#issuecomment-4744508155",
+        "https://github.com/ltgoslo/llm-dashboard/pull/4"
+      ],
+      "status": "editorial_source_reviewed"
+    },
+    {
+      "component": "https://github.com/OpenEuroLLM/training-data-catalogue",
+      "finding": "HPLT documents using shared HPLT data from the OpenEuroLLM catalogue and explicitly refers to MADLAD cleanup.",
+      "projects": [
+        "HPLT",
+        "OpenEuroLLM"
+      ],
+      "source_urls": [
+        "https://github.com/hplt-project/HPLT-WP4",
+        "https://github.com/hplt-project/HPLT-WP4/issues/9#issuecomment-3475892493",
+        "https://github.com/OpenEuroLLM/training-data-catalogue/issues/21"
+      ],
+      "status": "editorial_source_reviewed"
+    }
+  ]
 }

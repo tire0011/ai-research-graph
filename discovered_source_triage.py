@@ -10,6 +10,7 @@ from pathlib import Path
 
 from eu_source_discovery import canonical, detail_url, url_for
 from discovered_collaboration_review import contact_review, prepare_discovered
+from technical_leverage import rank as rank_leverage, markdown as leverage_markdown
 from eu_opportunity_discovery import build, get_json, is_stale, VOLUNTEER_LABELS
 
 # Specific technical signals, deliberately not a geography or collaboration classifier.
@@ -181,6 +182,7 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                 "unknown_license_among_topical": sum(not r["license_hint"] for r in topical)}, "issue_repositories": [r["repo"] for r in issue_sources],
             "issue_review": issue_result, "tasks": tasks, "topic_hypotheses": pairs[:5],
             "suppressed_contact_hypotheses": suppressed_pairs, "collaboration_review": collaboration,
+            "technical_leverage": rank_leverage(config, snapshot),
             "adapter_review": web.get("adapter_proposals", []), "errors": errors,
             "limitations": ["Repository descriptions and topics are lexical signals, not scientific assessment.",
                             "Curated owner context does not independently verify European affiliation.",
@@ -219,6 +221,8 @@ def markdown(result):
         for item in review["packets"]:
             card = item["candidate"]
             lines.append(f"- {card['source']['url']} ↔ {card['target']['url']}")
+    if result.get("technical_leverage"):
+        lines += leverage_markdown(result["technical_leverage"])
     lines += ["", "## Adapter review queue (no execution)"]
     lines += [f"- {x['url']} — {x['format']}" for x in result["adapter_review"]]
     lines += ["", "## Diagnostics"] + ["- " + json.dumps(x) for x in result["errors"]]
