@@ -28,6 +28,7 @@ def rank(config, snapshot, *, limit=10):
                for x in config["repositories"]}
     groups = defaultdict(dict)
     observations = 0
+    seen = set()
     for edge in snapshot.get("verified_references", []):
         if (edge.get("relationship") != "references"
                 or edge.get("verification_status") != "verified"):
@@ -47,12 +48,18 @@ def rank(config, snapshot, *, limit=10):
                 or component_key(excerpt) != dst
                 or evidence.get("source_entity") != source):
             continue
-        observations += 1
         kind = evidence.get("type", "historical_reference")
         key = (src, evidence_url, kind)
+        identity = (dst, key)
+        if identity not in seen:
+            observations += 1
+            seen.add(identity)
+        existing = groups[dst].get(key)
+        if existing and (existing.get("last_seen") or "") > (edge.get("last_seen") or ""):
+            continue
         groups[dst][key] = {"source": src, "owner": owner(src),
                             "source_url": evidence_url, "excerpt": excerpt,
-                            "last_seen": edge.get("last_seen"),
+                            "last_seen": edge.get("last_seen"), "first_seen": edge.get("first_seen"),
                             "evidence_type": kind, "context": evidence.get("context"),
                             "sha256": evidence.get("sha256"),
                             "status": ("declared_vcs_dependency_not_runtime_verified" if kind == "manifest_vcs_declaration"
@@ -76,7 +83,8 @@ def rank(config, snapshot, *, limit=10):
     return {"schema": 1, "observations": observations, "candidate_count": len(candidates),
             "candidates": candidates[:limit], "review_only": True,
             "known_cases": config.get("technical_leverage_cases", []),
-            "limitations": ["Explicit references are not verified technical dependencies; VCS declarations are not runtime verification.",
+            "limitations": ["Cumulative observations are historical; links may have changed or disappeared.",
+                            "Explicit references are not verified technical dependencies; VCS declarations are not runtime verification.",
                             "Distinct owner namespaces are not necessarily distinct organizations.",
                             "Curated owner context is not verified European affiliation.",
                             "Known cases are editorial evidence, not automatic discoveries or holdout successes.",

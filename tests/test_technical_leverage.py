@@ -49,3 +49,9 @@ class LeverageTests(unittest.TestCase):
         result = rank(self.config, {"verified_references": rows}, limit=1)
         self.assertEqual(result["candidate_count"], 2)
         self.assertTrue(result["candidates"][0]["component"].endswith("/b"))
+
+    def test_duplicate_observation_not_counted_twice(self):
+        target = "https://github.com/tools/eval"
+        row = self.edge("https://github.com/EU/a", target)
+        result = rank(self.config, {"verified_references": [row, row]})
+        self.assertEqual(result["observations"], 1)

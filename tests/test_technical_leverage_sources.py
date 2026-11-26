@@ -1,5 +1,5 @@
 import unittest
-from technical_leverage_sources import references, manifest_dependencies, select_repos, collect
+from technical_leverage_sources import references, manifest_dependencies, select_repos, collect, archive_edges
 
 STAMP = "2026-11-26T14:00:00+00:00"
 
@@ -68,3 +68,38 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(result["coverage"][0]["comments"], 1)
         self.assertEqual(result["errors"], [])
         self.assertEqual(result["edges"][1]["evidence"]["source_url"],issue+"#issuecomment-123")
+
+    def test_curated_priority_and_exploration(self):
+        cfg = {"repositories": [{"repo": f"eu{i}/a"} for i in range(10)]}
+        meta = [{"repo": f"aaa{i}/b", "status": "review_only", "recent_push": True,
+                 "technical_signals": {"evaluation": ["benchmark"]}} for i in range(10)]
+        chosen = select_repos(cfg, meta, None)
+        self.assertEqual(len(chosen), 8)
+        self.assertEqual(sum(r.startswith("eu") for r in chosen), 6)
+        second = select_repos(cfg, meta, {"last_attempt": {x.lower(): STAMP for x in chosen}})
+        self.assertIn("eu9/a", second)
+        self.assertIn("aaa2/b", second)
+
+    def test_archive_across_rotation_and_dedup(self):
+        target = "https://github.com/tools/eval"
+        a = references("eu/a", target, "https://github.com/eu/a#readme", "readme_reference", STAMP)[0]
+        later = "2026-11-27T14:00:00+00:00"
+        b = references("other/b", target, "https://github.com/other/b#readme", "readme_reference", later)[0]
+        updated = {**a, "last_seen": later}
+        archive, dropped = archive_edges({"edges": [a]}, [updated, b])
+        self.assertEqual(len(archive), 2)
+        self.assertEqual(dropped, 0)
+        self.assertEqual(next(x for x in archive if x["source"] == a["source"])["first_seen"], STAMP)
+        from technical_leverage import rank
+        self.assertEqual(rank({"repositories": [{"repo":"eu/a"}]},
+                              {"verified_references": archive})["candidate_count"], 1)
+        self.assertEqual(archive_edges({"archive_edges": archive}, [])[0], archive)
+
+    def test_archive_cap(self):
+        from unittest.mock import patch
+        a = references("eu/a", "https://github.com/tools/x", "https://github.com/eu/a#readme", "readme_reference", STAMP)[0]
+        b = references("eu/b", "https://github.com/tools/y", "https://github.com/eu/b#readme", "readme_reference", "2026-11-27T14:00:00+00:00")[0]
+        with patch("technical_leverage_sources.MAX_ARCHIVE_EDGES", 1):
+            archive, dropped = archive_edges({"edges": [a]}, [b])
+        self.assertEqual(dropped, 1)
+        self.assertEqual(archive[0]["source"], b["source"])

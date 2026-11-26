@@ -180,7 +180,7 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                                       previous=previous.get("leverage_collection"))
         errors.extend({"stage": "leverage_collection", **x} for x in collection["errors"])
     leverage_input = {**snapshot, "verified_references": snapshot.get("verified_references", []) +
-                      (collection["edges"] if collection else [])}
+                      (collection["archive_edges"] if collection else [])}
     web = snapshot.get("web_discovery") or {}
     return {"schema": 1, "retrieved_at": stamp, "snapshot_retrieved_at": snapshot.get("retrieved_at"),
             "pool_size": len(urls), "selected": selected, "last_attempt": history,
@@ -233,7 +233,10 @@ def markdown(result):
     if result.get("leverage_collection"):
         collection = result["leverage_collection"]
         lines += ["", "## Bounded technical source collection",
-                  f"Repositories: {len(collection['selected'])}; evidence edges: {len(collection['edges'])}; errors: {len(collection['errors'])}."]
+                  f"Repositories: {len(collection['selected'])}; curated context: {collection['curated_selected']}; "
+                  f"new observations this run: {len(collection['edges'])}; "
+                  f"cumulative historical evidence: {len(collection['archive_edges'])}; "
+                  f"evicted by cap: {collection['archive_dropped']}; errors: {len(collection['errors'])}."]
         for row in collection["coverage"]:
             lines.append(f"- {row['repo']}: {row['readme']} README, {row['issues']} issues, {row['comments']} comments, {row['manifests']} manifests; partial: {row['truncated']}")
     if result.get("technical_leverage"):

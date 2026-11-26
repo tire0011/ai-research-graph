@@ -276,7 +276,10 @@ jobs:
           git rev-parse FETCH_HEAD
           mkdir -p .discovery-state
           git show FETCH_HEAD:source_candidates.json > .discovery-state/source_candidates.json
-          python discovered_source_triage.py --snapshot .discovery-state/source_candidates.json --output results/discovered-triage
+          if git cat-file -e FETCH_HEAD:source_triage.json 2>/dev/null; then
+            git show FETCH_HEAD:source_triage.json > .discovery-state/source_triage.json
+          fi
+          python discovered_source_triage.py --snapshot .discovery-state/source_candidates.json --previous .discovery-state/source_triage.json --output results/discovered-triage
           cat results/discovered-triage/SOURCE_TRIAGE.md
           python - <<'PY'
           import json
@@ -286,6 +289,10 @@ jobs:
           assert any(x.get("status") == "review_only" for x in result["metadata"])
           assert len(result["tasks"]) <= 5 and len(result["topic_hypotheses"]) <= 5
           assert all(x["status"] == "unverified_topic_overlap" for x in result["topic_hypotheses"])
+          collection = result["leverage_collection"]
+          assert len(collection["selected"]) <= 8
+          assert len(collection["archive_edges"]) <= collection["limits"]["archive_edges"]
+          assert collection["coverage"] and any(x["readme"] for x in collection["coverage"])
           print("Live discovery review generated; inspect diagnostics and evidence, not just exit status.")
           PY
       - uses: actions/upload-artifact@v4

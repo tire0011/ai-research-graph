@@ -80,22 +80,61 @@ def manifest_dependencies(repo, path, text, url, stamp):
     return output[:MAX_LINKS]
 
 
+MAX_ARCHIVE_EDGES = 12000
+EU_PRIORITY_SLOTS = 6
+
+
 def select_repos(config, metadata, previous):
-    """Rotate across curated and discovered public repos; at most one per owner."""
-    choices = {x["repo"].lower(): x["repo"] for x in config["repositories"]}
+    """Reserve six slots for curated EU context; rotate within both cohorts.
+
+    The registry supplies context, not independently verified affiliation.
+    Unused slots spill over, and distinct owners are preferred within a run.
+    """
+    curated = {x["repo"].lower(): x["repo"] for x in config["repositories"]}
+    choices = dict(curated)
     choices.update({x["repo"].lower(): x["repo"] for x in metadata
                     if x.get("status") == "review_only" and x.get("recent_push")
                     and x.get("technical_signals")})
     history = (previous or {}).get("last_attempt", {})
+    ordered = sorted(choices, key=lambda k: (history.get(k, ""), k))
     selected, owners = [], set()
-    for key in sorted(choices, key=lambda k: (history.get(k, ""), k)):
-        owner = key.split("/")[0]
-        if owner not in owners:
-            owners.add(owner)
-            selected.append(choices[key])
-        if len(selected) == MAX_REPOS:
-            break
+
+    def take(keys, until):
+        for key in keys:
+            if len(selected) >= until:
+                break
+            owner = key.split("/")[0]
+            if owner not in owners:
+                owners.add(owner)
+                selected.append(choices[key])
+
+    take([k for k in ordered if k in curated], EU_PRIORITY_SLOTS)
+    take([k for k in ordered if k not in curated], MAX_REPOS)
+    take(ordered, MAX_REPOS)
     return selected
+
+
+def archive_edges(previous, current):
+    """Keep distinct source observations across rotations, bounded by recency.
+
+    Retention is historical, not a claim that a link still exists. Do not
+    delete earlier evidence on failed or partial reads. A changed document
+    hash replaces the old observation for that same source/target/type.
+    """
+    old = (previous or {}).get("archive_edges", (previous or {}).get("edges", []))
+    merged = {}
+    for edge in [*old, *current]:
+        proof = edge["evidence"]
+        key = (edge["source"], edge["target"], proof["source_url"], proof["type"])
+        last = edge.get("last_seen") or ""
+        if key not in merged or last >= (merged[key].get("last_seen") or ""):
+            merged[key] = {**edge, "first_seen": min(
+                edge.get("first_seen") or last,
+                merged.get(key, {}).get("first_seen") or last)}
+    ordered = sorted(merged.values(), key=lambda e: (
+        e.get("last_seen") or "", e["source"], e["target"],
+        e["evidence"]["source_url"], e["evidence"]["type"]), reverse=True)
+    return ordered[:MAX_ARCHIVE_EDGES], max(0, len(ordered) - MAX_ARCHIVE_EDGES)
 
 
 def collect(config, metadata, fetch, *, stamp, previous=None):
@@ -189,8 +228,13 @@ def collect(config, metadata, fetch, *, stamp, previous=None):
                     continue
                 counts["comments"] += 1
                 edges.extend(references(repo, body, url, "public_issue_comment_reference", stamp))
+    archive, dropped = archive_edges(previous, edges)
+    curated = {x["repo"].lower() for x in config["repositories"]}
     return {"selected": selected, "last_attempt": history, "coverage": coverage,
-            "edges": edges, "errors": errors,
+            "edges": edges, "archive_edges": archive, "archive_dropped": dropped,
+            "curated_selected": sum(r.lower() in curated for r in selected),
+            "errors": errors,
             "limits": {"repositories": MAX_REPOS, "issues_per_repo": MAX_ISSUES,
-                       "comments_per_issue": MAX_COMMENTS, "links_per_document": MAX_LINKS},
+                       "comments_per_issue": MAX_COMMENTS, "links_per_document": MAX_LINKS,
+                       "archive_edges": MAX_ARCHIVE_EDGES, "curated_priority_slots": EU_PRIORITY_SLOTS},
             "review_only": True}
