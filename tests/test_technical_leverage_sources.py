@@ -103,3 +103,11 @@ class SourceTests(unittest.TestCase):
             archive, dropped = archive_edges({"edges": [a]}, [b])
         self.assertEqual(dropped, 1)
         self.assertEqual(archive[0]["source"], b["source"])
+
+    def test_attachment_links_are_excluded_but_repositories_retained(self):
+        body = ("https://github.com/user-attachments/assets/abcdef "
+                "https://github.com/USER-ATTACHMENTS/files/123/file.txt "
+                "https://github.com/tools/eval/issues/3")
+        rows = references("eu/a", body, "https://github.com/eu/a#readme",
+                          "readme_reference", STAMP)
+        self.assertEqual([x["target"] for x in rows], ["https://github.com/tools/eval"])

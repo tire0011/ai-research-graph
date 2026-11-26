@@ -37,7 +37,7 @@ def canonical(url):
         kind, parts = "dataset", parts[1:]
     if p.scheme != "https" or p.netloc not in ("github.com", "huggingface.co") or len(parts) < 2:
         return None
-    if parts[0].lower() in ({"topics", "orgs", "users", "search", "marketplace", "features", "collections", "settings"} if kind == "repository" else {"spaces", "collections", "organizations", "docs", "blog", "models", "datasets"}):
+    if parts[0].lower() in ({"topics", "orgs", "users", "search", "marketplace", "features", "collections", "settings", "user-attachments", "attachments", "assets", "login", "signup", "account", "notifications", "sponsors", "about", "security", "site", "enterprise", "pricing", "customer-stories", "readme"} if kind == "repository" else {"spaces", "collections", "organizations", "docs", "blog", "models", "datasets"}):
         return None
     name = "/".join(parts[:2])
     if kind == "repository":

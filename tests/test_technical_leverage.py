@@ -55,3 +55,11 @@ class LeverageTests(unittest.TestCase):
         row = self.edge("https://github.com/EU/a", target)
         result = rank(self.config, {"verified_references": [row, row]})
         self.assertEqual(result["observations"], 1)
+
+    def test_attachment_links_are_not_components(self):
+        target = "https://github.com/user-attachments/assets"
+        result = rank(self.config, {"verified_references": [
+            self.edge("https://github.com/EU/a", target),
+            self.edge("https://github.com/other/b", target)]})
+        self.assertEqual(result["candidate_count"], 0)
+        self.assertEqual(result["observations"], 0)
