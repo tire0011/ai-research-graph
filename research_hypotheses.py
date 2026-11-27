@@ -6,7 +6,7 @@ from collections import Counter
 from collaboration_matcher import tokens
 from research_mechanisms import key, validate
 
-def compare(packets, extraction, limit=10):
+def compare(packets, extraction, limit=10, *, geography=None):
     if not 1 <= limit <= 20:
         raise ValueError("invalid pair budget")
     docs={p["id"]:p for p in packets}
@@ -24,8 +24,14 @@ def compare(packets, extraction, limit=10):
     idf={t:1+math.log((len(raw)+1)/(n+1)) for t,n in df.items()}
     baseline=[]; structured=[]
     for a,b in itertools.combinations(sorted(docs),2):
+        scope={}
+        if geography is not None:
+            from eu_first_research import classify_pair
+            category=classify_pair(geography.get(a,"unknown"),geography.get(b,"unknown"))
+            if category=="background_only":continue
+            scope={"geography":category}
         shared=raw[a]&raw[b]
-        if shared:baseline.append({"pair":[a,b],"score":sum(idf[t] for t in sorted(shared))})
+        if shared:baseline.append({"pair":[a,b],"score":sum(idf[t] for t in sorted(shared)),**scope})
         if a not in semantic or b not in semantic:continue
         sa,sb=semantic[a],semantic[b]
         # A question/measurement bridge plus an explicitly supported mechanism or intervention.
@@ -35,10 +41,12 @@ def compare(packets, extraction, limit=10):
         mb=sb.get("mechanism",set())|sb.get("intervention",set())
         if not (common or measures) or not ma or not mb:continue
         score=len(common)+len(measures)+len(ma&mb)
-        structured.append({"pair":[a,b],"score":score,"question_terms":sorted(common),"measurement_terms":sorted(measures),"mechanism_terms":sorted(ma&mb)})
-    rank=lambda x:sorted(x,key=lambda y:(-y["score"],y["pair"]))[:limit]
+        structured.append({"pair":[a,b],"score":score,**scope,"question_terms":sorted(common),"measurement_terms":sorted(measures),"mechanism_terms":sorted(ma&mb)})
+    priority={"eu_eu_candidate":0,"eu_global_candidate":1,"eu_unknown":2}
+    rank=lambda x:sorted(x,key=lambda y:(priority.get(y.get("geography"),0),-y["score"],y["pair"]))[:limit]
     return {"schema":1,"paper_count":len(docs),"extracted_paper_count":len(semantic),
             "baseline":rank(baseline),"structured":rank(structured),"review_only":True,
+            "geography_policy":"same EU-first eligibility and priority in both arms" if geography is not None else "unrestricted",
             "limitations":["Structured ranker is a heuristic over model-extracted text, not semantic proof.",
                            "Same source corpus, but extraction may abstain; measure missingness.",
                            "Pair hypotheses need separate model/human assessment and a falsifiable experiment."]}
