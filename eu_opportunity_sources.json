@@ -186,6 +186,30 @@
       "evidence_status": "mail_submission_confirmed_sent_copy_filed",
       "note": "Both teams were informed separately about a possible comparison of context recognition, rule retrieval and rule execution. No Research Graph promotion. No direct public coordination found in inspected paper texts and GitHub issue search; private coordination unknown. Do not repeat outreach; response pending.",
       "scientific_evidence_unchanged": true
+    },
+    {
+      "id": "kqml-liver-quantum-concentration",
+      "status": "contacted",
+      "reported_on": "2026-11-25",
+      "source_urls": [
+        "https://arxiv.org/abs/2611.15241",
+        "https://arxiv.org/abs/2611.27486"
+      ],
+      "evidence_status": "mail_submission_confirmed_sent_copy_filed",
+      "note": "Joint email sent after explicit user approval to authors of both papers. Proposed testing observable concentration, circuit scaling and classification performance in KAN–quantum architecture. Do not repeat outreach; response pending. Collaboration and causal mechanism not confirmed.",
+      "scientific_evidence_unchanged": true
+    },
+    {
+      "id": "multi-agent-security-latent-reasoning",
+      "status": "contacted",
+      "reported_on": "2026-11-25",
+      "source_urls": [
+        "https://arxiv.org/abs/2611.28660",
+        "https://arxiv.org/abs/2611.31015"
+      ],
+      "evidence_status": "mail_submission_confirmed_sent_copy_filed",
+      "note": "User-approved joint email about defensive evaluation of multi-agent systems through communication monitoring, independent outcome verification and internal-state monitoring where available. No repeat outreach; response pending; collaboration unconfirmed.",
+      "scientific_evidence_unchanged": true
     }
   ],
   "checkpaper_evidence": true,
