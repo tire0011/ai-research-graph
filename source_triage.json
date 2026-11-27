@@ -1,21 +1,21 @@
 {
   "schema": 1,
-  "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-  "snapshot_retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-  "pool_size": 179,
+  "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+  "snapshot_retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+  "pool_size": 205,
   "selected": [
-    "https://github.com/aarnav-kembhavi/mednsq-circuits",
-    "https://github.com/acodercat/atmosregime",
-    "https://github.com/ahmed-mahran/misqal",
-    "https://github.com/bowen1911/symbolic_graph_env",
-    "https://github.com/caidish/klayoutclaw",
-    "https://github.com/civiltime-bench/civiltime-bench",
-    "https://github.com/colinzhaoust/read-tea-leaves",
-    "https://github.com/disha1001/discernbench",
-    "https://github.com/gaojianxin05/rulecraft",
-    "https://github.com/helsinki-nlp/external-mt-leaderboard",
-    "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
-    "https://github.com/hplt-project/hplt-wp4"
+    "https://github.com/alpha7en/qcml_emerging_market",
+    "https://github.com/andoree/cyphermas",
+    "https://github.com/chanseul01/asterism",
+    "https://github.com/checkpaper/audits",
+    "https://github.com/fuji1655/pdc-bench",
+    "https://github.com/guoweiguan666/c3h",
+    "https://github.com/haochen-luo/prove",
+    "https://github.com/helsinki-nlp/flam",
+    "https://github.com/hoonki2002/any-rate",
+    "https://github.com/horshohei/jhealthbench-l",
+    "https://github.com/hplt-project/ia-download",
+    "https://github.com/jackysiupuichung/forecast-or-know"
   ],
   "last_attempt": {
     "https://github.com/helsinki-nlp/building-nlp-apps-notebooks": "2026-11-24T14:47:12.523613+00:00",
@@ -53,247 +53,133 @@
     "https://github.com/gaojianxin05/rulecraft": "2026-11-24T19:05:25.833321+00:00",
     "https://github.com/helsinki-nlp/external-mt-leaderboard": "2026-11-24T19:05:25.833321+00:00",
     "https://github.com/heyavijitroy/multilingual-trustworthiness-study": "2026-11-24T19:05:25.833321+00:00",
-    "https://github.com/hplt-project/hplt-wp4": "2026-11-24T19:05:25.833321+00:00"
+    "https://github.com/hplt-project/hplt-wp4": "2026-11-24T19:05:25.833321+00:00",
+    "https://github.com/alpha7en/qcml_emerging_market": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/andoree/cyphermas": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/chanseul01/asterism": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/checkpaper/audits": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/fuji1655/pdc-bench": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/guoweiguan666/c3h": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/haochen-luo/prove": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/helsinki-nlp/flam": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/hoonki2002/any-rate": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/horshohei/jhealthbench-l": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/hplt-project/ia-download": "2026-11-27T20:46:01.777665+00:00",
+    "https://github.com/jackysiupuichung/forecast-or-know": "2026-11-27T20:46:01.777665+00:00"
   },
   "metadata": [
     {
-      "url": "https://github.com/aarnav-kembhavi/mednsq-circuits",
-      "repo": "aarnav-kembhavi/MEDNSQ-CIRCUITS",
+      "url": "https://github.com/alpha7en/qcml_emerging_market",
+      "repo": "alpha7en/QCML_Emerging_Market",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/aarnav-kembhavi/mednsq-circuits",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "",
-      "topics": [],
-      "metadata_sha256": "759914c1b2f79a9bd44baab0408001219d6286e5943eca619e0e3d8ffccb583e",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": null,
-      "license_hint": false,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.30675v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/aarnav-kembhavi/MEDNSQ-CIRCUITS"
-        },
-        {
-          "source_url": "https://api.github.com/repos/aarnav-kembhavi/mednsq-circuits",
-          "source_entity": "https://github.com/aarnav-kembhavi/mednsq-circuits",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "detail_lookup"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/acodercat/atmosregime",
-      "repo": "acodercat/AtmosRegime",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/acodercat/atmosregime",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Why language models misapply atmospheric formulas beyond their regime, and which training repairs it.",
-      "topics": [],
-      "metadata_sha256": "eacb7626b11d9251277e18cff7d019a37d52e19cb4cae4067547ac4f6aed0ae6",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "MIT",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.28669v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/acodercat/AtmosRegime"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/ahmed-mahran/misqal",
-      "repo": "ahmed-mahran/misqal",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/ahmed-mahran/misqal",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
+      "source_url": "https://api.github.com/repos/alpha7en/qcml_emerging_market",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Code and benchmark data for \"Empirical De-Quantization and Norm-Controlled Spectral Audit of Quantum Cognition Machine Learning in an Emerging Equity Market\": matrix-form QCML, operator swaps, 3-qubit VQCs, and GUE spectral controls.",
       "topics": [
-        "benchmark",
-        "bird-bench",
-        "data-profiling",
-        "database",
-        "fan-out",
-        "functional-dependencies",
-        "llm",
-        "llm-agents",
-        "sql",
-        "text-to-sql"
+        "de-quantization",
+        "econophysics",
+        "financial-time-series",
+        "moscow-exchange",
+        "qcml",
+        "quantum-machine-learning",
+        "random-matrix-theory",
+        "reproducible-research"
       ],
-      "metadata_sha256": "2fbf4a8b204a605d93f715876d3e1235fa0b278d27e1c842a848438c8cefd9c2",
-      "technical_signals": {
-        "evaluation": [
-          "benchmark",
-          "benchmarks"
-        ]
-      },
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.29009v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/ahmed-mahran/misqal"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/bowen1911/symbolic_graph_env",
-      "repo": "Bowen1911/Symbolic_graph_env",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/bowen1911/symbolic_graph_env",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "",
-      "topics": [],
-      "metadata_sha256": "596b9473b1f5b454e75bd101207706a4b1995dbb49700c8fe6e4256d52a6756b",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": null,
-      "license_hint": false,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.30281v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/Bowen1911/Symbolic_graph_env"
-        },
-        {
-          "source_url": "https://api.github.com/repos/bowen1911/symbolic_graph_env",
-          "source_entity": "https://github.com/bowen1911/symbolic_graph_env",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "detail_lookup"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/caidish/klayoutclaw",
-      "repo": "caidish/KlayoutClaw",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/caidish/klayoutclaw",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "",
-      "topics": [],
-      "metadata_sha256": "7e9e9fff2159882540ef99eab98d8f0c5f429d31fbb47569551fb3151489ae7b",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "MIT",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Aquant-ph+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28ti%3Aquantum+OR+abs%3A%22quantum+neural+network%22%29+AND+%28abs%3A%22language+model%22+OR+abs%3Atransformer+OR+abs%3A%22machine+learning%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.30043v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/caidish/KlayoutClaw"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/civiltime-bench/civiltime-bench",
-      "repo": "CivilTime-Bench/CivilTime-Bench",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/civiltime-bench/civiltime-bench",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "",
-      "topics": [],
-      "metadata_sha256": "17e6fa204f67e35f6b060dc27b7576d7073bf307e54d36d23c76b1e28770a510",
-      "technical_signals": {},
-      "recent_push": true,
-      "license_spdx": "Apache-2.0",
-      "license_hint": true,
-      "has_issues": true,
-      "affiliation_status": "unknown",
-      "affiliation_context": [],
-      "discovery_evidence": [
-        {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.29972v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/CivilTime-Bench/CivilTime-Bench"
-        },
-        {
-          "source_url": "https://api.github.com/repos/civiltime-bench/civiltime-bench",
-          "source_entity": "https://github.com/civiltime-bench/civiltime-bench",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "detail_lookup"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/colinzhaoust/read-tea-leaves",
-      "repo": "colinzhaoust/read-tea-leaves",
-      "status": "review_only",
-      "source_url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
-      "topics": [],
-      "metadata_sha256": "0a45fa740e3f5208cc90d01da2df339f1ddc6aa9aae2cd165723767f7c1f2da2",
+      "metadata_sha256": "41a4815e6b0c26ad5b2c989aee3aca28d042c8b0e6ec6a5f834888c393072381",
       "technical_signals": {
         "evaluation": [
           "benchmark"
         ],
-        "model-training": [
-          "model training"
+        "inference": [
+          "quantization"
         ]
       },
       "recent_push": true,
-      "license_spdx": "MIT",
+      "license_spdx": "NOASSERTION",
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Aquant-ph+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28ti%3Aquantum+OR+abs%3A%22quantum+neural+network%22%29+AND+%28abs%3A%22language+model%22+OR+abs%3Atransformer+OR+abs%3A%22machine+learning%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.33942v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/alpha7en/QCML_Emerging_Market"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/andoree/cyphermas",
+      "repo": "Andoree/CypherMAS",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/andoree/cyphermas",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "fc1c5b5a1edba2b1f6f69bf61de13d738a38ed32e2b677e14305b96deb27ad3f",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.33242v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/Andoree/CypherMAS"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/chanseul01/asterism",
+      "repo": "chanseul01/ASTERISM",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/chanseul01/asterism",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "ASTERISM: Do Multimodal LLMs Actually Look at All the Images?",
+      "topics": [],
+      "metadata_sha256": "ed4aaa4c4a45cbafe0b143ac1268bc7126c55de9044cb3649cf1d64c5c4724b4",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "Apache-2.0",
       "license_hint": true,
       "has_issues": true,
       "affiliation_status": "unknown",
       "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.30141v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.32316v2",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
           "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/colinzhaoust/read-tea-leaves"
-        },
-        {
-          "source_url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
-          "source_entity": "https://github.com/colinzhaoust/read-tea-leaves",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "detail_lookup"
+          "excerpt": "https://github.com/chanseul01/ASTERISM"
         }
       ]
     },
     {
-      "url": "https://github.com/gaojianxin05/rulecraft",
-      "repo": "GaoJianXin05/RuleCraft",
+      "url": "https://github.com/checkpaper/audits",
+      "repo": "checkpaper/audits",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/gaojianxin05/rulecraft",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
-      "topics": [],
-      "metadata_sha256": "0ef582a6839b487c9cb04e1a04327870b89550ef3fbb53dd570b16f0c26522a4",
+      "source_url": "https://api.github.com/repos/checkpaper/audits",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Reproducible consistency checks of influential research papers, with scripts that recompute each finding from the original PDF.",
+      "topics": [
+        "arxiv",
+        "benchmark",
+        "llm",
+        "machine-learning",
+        "peer-review",
+        "reproducibility",
+        "research-integrity",
+        "scientific-papers"
+      ],
+      "metadata_sha256": "5f2d135f7f457551abaef32482ef40c2d60b422d93f0e21f10bc22cb12edca32",
       "technical_signals": {
         "evaluation": [
           "benchmark"
@@ -307,27 +193,117 @@
       "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.28745v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/GaoJianXin05/RuleCraft"
+          "source_url": "https://github.com/kyutai-labs/aura/issues/1",
+          "source_entity": "https://github.com/kyutai-labs/aura/issues/1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "human_reviewed_reference",
+          "excerpt": "https://github.com/checkpaper/audits/tree/main/2026/2611.26540-aura",
+          "resolved_url": "https://github.com/checkpaper/audits/tree/main/2026/2611.26540-aura"
+        },
+        {
+          "source_url": "https://api.github.com/repos/checkpaper/audits",
+          "source_entity": "https://github.com/checkpaper/audits",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "detail_lookup"
         }
       ]
     },
     {
-      "url": "https://github.com/helsinki-nlp/external-mt-leaderboard",
-      "repo": "Helsinki-NLP/External-MT-leaderboard",
+      "url": "https://github.com/fuji1655/pdc-bench",
+      "repo": "fuji1655/PDC-Bench",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/helsinki-nlp/external-mt-leaderboard",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Leaderboards for external MT models",
+      "source_url": "https://api.github.com/repos/fuji1655/pdc-bench",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "PDC-Bench: a benchmark for evaluating whether LLMs keep privacy constraints on the granularity of in-context personal-attribute disclosure (Findings of EACL 2027).",
       "topics": [],
-      "metadata_sha256": "07ab83e04caafd1024c0926aea16e7bf8b419f83e5d76904826d1763bc33f5b0",
+      "metadata_sha256": "fa06ef40b089fcd140b3b8fa33c1eb0d3f7ad99d2f07835c83622d4b4fcd2585",
+      "technical_signals": {
+        "evaluation": [
+          "benchmark",
+          "evaluating"
+        ]
+      },
+      "recent_push": true,
+      "license_spdx": "NOASSERTION",
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.32610v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/fuji1655/PDC-Bench"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/guoweiguan666/c3h",
+      "repo": "GuoweiGuan666/C3H",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/guoweiguan666/c3h",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Official repository for C3H (NeurIPS 2026): Compression-to-Consensus Criteria Hijacking in Multimodal LLM Recommender Systems.",
+      "topics": [],
+      "metadata_sha256": "90f09d84260d664fcbd808b2cf0bad9f90e46318a124505c85375f8b93e8ab06",
       "technical_signals": {},
       "recent_push": true,
-      "license_spdx": "CC-BY-SA-4.0",
+      "license_spdx": null,
+      "license_hint": false,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.32780v2",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/GuoweiGuan666/C3H"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/haochen-luo/prove",
+      "repo": "Haochen-Luo/PROVE",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/haochen-luo/prove",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Code for \"PROVE: Mitigating Long-Horizon LLM Collusion with Reinforcement Learning from Verified Evidence\"",
+      "topics": [],
+      "metadata_sha256": "534ffde5364bd26c1e602868e3e888f8df924c4df055fd34d48a8cc867f17d66",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "MIT",
       "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.34215v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/Haochen-Luo/PROVE"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/helsinki-nlp/flam",
+      "repo": "Helsinki-NLP/flam",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/helsinki-nlp/flam",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "e9c3759571f20d9149ec2042ac82bf15258d64224c273c4d4e8a31c7d7c591cf",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": null,
+      "license_hint": false,
       "has_issues": true,
       "affiliation_status": "curated_owner_context_only",
       "affiliation_context": [
@@ -342,57 +318,83 @@
       ],
       "discovery_evidence": [
         {
-          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=2",
-          "source_entity": "https://github.com/helsinki-nlp/external-mt-leaderboard",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "source_url": "https://api.github.com/orgs/Helsinki-NLP/repos?type=public&sort=updated&per_page=30&page=1",
+          "source_entity": "https://github.com/helsinki-nlp/flam",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
           "type": "owner_listing"
         }
       ]
     },
     {
-      "url": "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
-      "repo": "HeyAvijitRoy/multilingual-trustworthiness-study",
+      "url": "https://github.com/hoonki2002/any-rate",
+      "repo": "hoonki2002/Any-Rate",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/heyavijitroy/multilingual-trustworthiness-study",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "",
+      "source_url": "https://api.github.com/repos/hoonki2002/any-rate",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Official code for Any-Rate (AR)",
       "topics": [],
-      "metadata_sha256": "4bcf1b6ae7a3fa29ee7c34c3645740fe0ffe9a7e3fd9527be33286a7ef2583e4",
+      "metadata_sha256": "eadb41f6a25e229bf01cfc38df2de8306b9128d692d1e4c889cab6c327768139",
       "technical_signals": {},
       "recent_push": true,
-      "license_spdx": null,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.34402v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/hoonki2002/Any-Rate"
+        },
+        {
+          "source_url": "https://api.github.com/repos/hoonki2002/any-rate",
+          "source_entity": "https://github.com/hoonki2002/any-rate",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "detail_lookup"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/horshohei/jhealthbench-l",
+      "repo": "horshohei/JHealthBench-L",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/horshohei/jhealthbench-l",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "cf02b31dfdbcc40d36655bac5d466d632ec660b0fdca1ec24253578f75fa0931",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "NOASSERTION",
       "license_hint": false,
       "has_issues": true,
       "affiliation_status": "unknown",
       "affiliation_context": [],
       "discovery_evidence": [
         {
-          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611031902+TO+202611241902%5D&sortBy=submittedDate&sortOrder=descending&start=50&max_results=50",
-          "source_entity": "https://arxiv.org/abs/2611.29299v1",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.34024v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
           "type": "explicit_metadata_reference",
-          "excerpt": "https://github.com/HeyAvijitRoy/multilingual-trustworthiness-study"
-        },
-        {
-          "source_url": "https://api.github.com/repos/heyavijitroy/multilingual-trustworthiness-study",
-          "source_entity": "https://github.com/heyavijitroy/multilingual-trustworthiness-study",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
-          "type": "detail_lookup"
+          "excerpt": "https://github.com/horshohei/JHealthBench-L"
         }
       ]
     },
     {
-      "url": "https://github.com/hplt-project/hplt-wp4",
-      "repo": "hplt-project/HPLT-WP4",
+      "url": "https://github.com/hplt-project/ia-download",
+      "repo": "hplt-project/ia-download",
       "status": "review_only",
-      "source_url": "https://api.github.com/repos/hplt-project/hplt-wp4",
-      "retrieved_at": "2026-11-24T19:05:25.833321+00:00",
-      "description": "Information and pipelines on WP4: language models training",
+      "source_url": "https://api.github.com/repos/hplt-project/ia-download",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "Internet archive downloader",
       "topics": [],
-      "metadata_sha256": "5dd27eec655be7cd22becc9adf9c070d872cc9abedbe6bf13ebd5add98ecdf15",
+      "metadata_sha256": "45b95699d3534279bebfe43f432ba6a516cc7b588c791e80e61a1550a0995ac5",
       "technical_signals": {},
       "recent_push": true,
-      "license_spdx": "CC0-1.0",
+      "license_spdx": "MIT",
       "license_hint": true,
       "has_issues": true,
       "affiliation_status": "curated_owner_context_only",
@@ -409,28 +411,54 @@
       "discovery_evidence": [
         {
           "source_url": "https://api.github.com/orgs/hplt-project/repos?type=public&sort=updated&per_page=30&page=1",
-          "source_entity": "https://github.com/hplt-project/hplt-wp4",
-          "retrieved_at": "2026-11-24T19:02:00.843487+00:00",
+          "source_entity": "https://github.com/hplt-project/ia-download",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
           "type": "owner_listing"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/jackysiupuichung/forecast-or-know",
+      "repo": "jackysiupuichung/forecast-or-know",
+      "status": "review_only",
+      "source_url": "https://api.github.com/repos/jackysiupuichung/forecast-or-know",
+      "retrieved_at": "2026-11-27T20:46:01.777665+00:00",
+      "description": "",
+      "topics": [],
+      "metadata_sha256": "a49506110f3bd01f3921aad13715696f908cf6be8f60dd392232905c181fda9a",
+      "technical_signals": {},
+      "recent_push": true,
+      "license_spdx": "MIT",
+      "license_hint": true,
+      "has_issues": true,
+      "affiliation_status": "unknown",
+      "affiliation_context": [],
+      "discovery_evidence": [
+        {
+          "source_url": "https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG+OR+cat%3Acs.CL%29+AND+%28ti%3A%22large+language+model%22+OR+ti%3ALLM+OR+ti%3A%22model+compression%22%29%29+AND+submittedDate%3A%5B202611062043+TO+202611272043%5D&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50",
+          "source_entity": "https://arxiv.org/abs/2611.34247v1",
+          "retrieved_at": "2026-11-27T20:43:56.776982+00:00",
+          "type": "explicit_metadata_reference",
+          "excerpt": "https://github.com/jackysiupuichung/forecast-or-know"
         }
       ]
     }
   ],
   "filter_counts": {
-    "metadata_review_only": 11,
+    "metadata_review_only": 12,
     "technical_signals": 3,
     "active_with_issues": 3,
     "selected_for_issue_review": 3,
-    "unknown_license_among_topical": 0
+    "unknown_license_among_topical": 2
   },
   "issue_repositories": [
-    "colinzhaoust/read-tea-leaves",
-    "ahmed-mahran/misqal",
-    "GaoJianXin05/RuleCraft"
+    "alpha7en/QCML_Emerging_Market",
+    "checkpaper/audits",
+    "fuji1655/PDC-Bench"
   ],
   "issue_review": {
     "schema": 1,
-    "created_at_utc": "2026-11-24T19:05:32.309860+00:00",
+    "created_at_utc": "2026-11-27T20:46:05.353128+00:00",
     "actor": "tire0011",
     "sources": 3,
     "sampled_issues": 0,
@@ -453,94 +481,51 @@
   "tasks": [],
   "topic_hypotheses": [
     {
-      "left": "https://github.com/ahmed-mahran/misqal",
-      "right": "https://github.com/colinzhaoust/read-tea-leaves",
+      "left": "https://github.com/alpha7en/qcml_emerging_market",
+      "right": "https://github.com/checkpaper/audits",
       "shared_areas": [
         "evaluation"
       ],
       "status": "unverified_topic_overlap",
       "evidence": [
         {
-          "url": "https://api.github.com/repos/ahmed-mahran/misqal",
-          "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
+          "url": "https://api.github.com/repos/alpha7en/qcml_emerging_market",
+          "description": "Code and benchmark data for \"Empirical De-Quantization and Norm-Controlled Spectral Audit of Quantum Cognition Machine Learning in an Emerging Equity Market\": matrix-form QCML, operator swaps, 3-qubit VQCs, and GUE spectral controls.",
           "topics": [
-            "benchmark",
-            "bird-bench",
-            "data-profiling",
-            "database",
-            "fan-out",
-            "functional-dependencies",
-            "llm",
-            "llm-agents",
-            "sql",
-            "text-to-sql"
+            "de-quantization",
+            "econophysics",
+            "financial-time-series",
+            "moscow-exchange",
+            "qcml",
+            "quantum-machine-learning",
+            "random-matrix-theory",
+            "reproducible-research"
           ],
-          "signals": {
-            "evaluation": [
-              "benchmark",
-              "benchmarks"
-            ]
-          },
-          "license_spdx": "Apache-2.0",
-          "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
-        },
-        {
-          "url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
-          "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
-          "topics": [],
           "signals": {
             "evaluation": [
               "benchmark"
             ],
-            "model-training": [
-              "model training"
+            "inference": [
+              "quantization"
             ]
           },
-          "license_spdx": "MIT",
+          "license_spdx": "NOASSERTION",
           "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
-        }
-      ],
-      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
-    },
-    {
-      "left": "https://github.com/ahmed-mahran/misqal",
-      "right": "https://github.com/gaojianxin05/rulecraft",
-      "shared_areas": [
-        "evaluation"
-      ],
-      "status": "unverified_topic_overlap",
-      "evidence": [
-        {
-          "url": "https://api.github.com/repos/ahmed-mahran/misqal",
-          "description": "Every total at its grain, once. Fan-out audit and grain-aware evidence for LLM text-to-SQL, with the BIRD-FanOut and GrainTraps benchmarks.",
-          "topics": [
-            "benchmark",
-            "bird-bench",
-            "data-profiling",
-            "database",
-            "fan-out",
-            "functional-dependencies",
-            "llm",
-            "llm-agents",
-            "sql",
-            "text-to-sql"
-          ],
-          "signals": {
-            "evaluation": [
-              "benchmark",
-              "benchmarks"
-            ]
-          },
-          "license_spdx": "Apache-2.0",
-          "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
         },
         {
-          "url": "https://api.github.com/repos/gaojianxin05/rulecraft",
-          "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
-          "topics": [],
+          "url": "https://api.github.com/repos/checkpaper/audits",
+          "description": "Reproducible consistency checks of influential research papers, with scripts that recompute each finding from the original PDF.",
+          "topics": [
+            "arxiv",
+            "benchmark",
+            "llm",
+            "machine-learning",
+            "peer-review",
+            "reproducibility",
+            "research-integrity",
+            "scientific-papers"
+          ],
           "signals": {
             "evaluation": [
               "benchmark"
@@ -548,39 +533,90 @@
           },
           "license_spdx": "MIT",
           "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
         }
       ],
-      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest.",
+      "contact_review": {
+        "status": "unknown",
+        "suppress_outreach": false
+      }
     },
     {
-      "left": "https://github.com/colinzhaoust/read-tea-leaves",
-      "right": "https://github.com/gaojianxin05/rulecraft",
+      "left": "https://github.com/alpha7en/qcml_emerging_market",
+      "right": "https://github.com/fuji1655/pdc-bench",
       "shared_areas": [
         "evaluation"
       ],
       "status": "unverified_topic_overlap",
       "evidence": [
         {
-          "url": "https://api.github.com/repos/colinzhaoust/read-tea-leaves",
-          "description": "Reading the Tea Leaves, Again: can large language models predict language model training runs? Benchmark code and scorer.",
-          "topics": [],
+          "url": "https://api.github.com/repos/alpha7en/qcml_emerging_market",
+          "description": "Code and benchmark data for \"Empirical De-Quantization and Norm-Controlled Spectral Audit of Quantum Cognition Machine Learning in an Emerging Equity Market\": matrix-form QCML, operator swaps, 3-qubit VQCs, and GUE spectral controls.",
+          "topics": [
+            "de-quantization",
+            "econophysics",
+            "financial-time-series",
+            "moscow-exchange",
+            "qcml",
+            "quantum-machine-learning",
+            "random-matrix-theory",
+            "reproducible-research"
+          ],
           "signals": {
             "evaluation": [
               "benchmark"
             ],
-            "model-training": [
-              "model training"
+            "inference": [
+              "quantization"
             ]
           },
-          "license_spdx": "MIT",
+          "license_spdx": "NOASSERTION",
           "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
         },
         {
-          "url": "https://api.github.com/repos/gaojianxin05/rulecraft",
-          "description": "Code for the paper \"Multimodal LLMs Know the Game but Assume the Real World\" (RuleCraft benchmark)",
+          "url": "https://api.github.com/repos/fuji1655/pdc-bench",
+          "description": "PDC-Bench: a benchmark for evaluating whether LLMs keep privacy constraints on the granularity of in-context personal-attribute disclosure (Findings of EACL 2027).",
           "topics": [],
+          "signals": {
+            "evaluation": [
+              "benchmark",
+              "evaluating"
+            ]
+          },
+          "license_spdx": "NOASSERTION",
+          "recent_push": true,
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
+        }
+      ],
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest.",
+      "contact_review": {
+        "status": "unknown",
+        "suppress_outreach": false
+      }
+    },
+    {
+      "left": "https://github.com/checkpaper/audits",
+      "right": "https://github.com/fuji1655/pdc-bench",
+      "shared_areas": [
+        "evaluation"
+      ],
+      "status": "unverified_topic_overlap",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/checkpaper/audits",
+          "description": "Reproducible consistency checks of influential research papers, with scripts that recompute each finding from the original PDF.",
+          "topics": [
+            "arxiv",
+            "benchmark",
+            "llm",
+            "machine-learning",
+            "peer-review",
+            "reproducibility",
+            "research-integrity",
+            "scientific-papers"
+          ],
           "signals": {
             "evaluation": [
               "benchmark"
@@ -588,12 +624,1570 @@
           },
           "license_spdx": "MIT",
           "recent_push": true,
-          "retrieved_at": "2026-11-24T19:05:25.833321+00:00"
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
+        },
+        {
+          "url": "https://api.github.com/repos/fuji1655/pdc-bench",
+          "description": "PDC-Bench: a benchmark for evaluating whether LLMs keep privacy constraints on the granularity of in-context personal-attribute disclosure (Findings of EACL 2027).",
+          "topics": [],
+          "signals": {
+            "evaluation": [
+              "benchmark",
+              "evaluating"
+            ]
+          },
+          "license_spdx": "NOASSERTION",
+          "recent_push": true,
+          "retrieved_at": "2026-11-27T20:46:01.777665+00:00"
         }
       ],
-      "next_check": "Compare open requirements, existing code, licenses and maintainer interest."
+      "next_check": "Compare open requirements, existing code, licenses and maintainer interest.",
+      "contact_review": {
+        "status": "unknown",
+        "suppress_outreach": false
+      }
     }
   ],
+  "suppressed_contact_hypotheses": [],
+  "collaboration_review": {
+    "schema": 1,
+    "repositories": [
+      "alpha7en/QCML_Emerging_Market",
+      "checkpaper/audits",
+      "fuji1655/PDC-Bench"
+    ],
+    "inventories": {
+      "alpha7en/QCML_Emerging_Market": {
+        "source_url": "https://api.github.com/repos/alpha7en/QCML_Emerging_Market/issues?state=all&per_page=30&sort=updated&direction=desc",
+        "count": 0,
+        "possibly_truncated": false
+      },
+      "checkpaper/audits": {
+        "source_url": "https://api.github.com/repos/checkpaper/audits/issues?state=all&per_page=30&sort=updated&direction=desc",
+        "count": 0,
+        "possibly_truncated": false
+      },
+      "fuji1655/PDC-Bench": {
+        "source_url": "https://api.github.com/repos/fuji1655/PDC-Bench/issues?state=all&per_page=30&sort=updated&direction=desc",
+        "count": 0,
+        "possibly_truncated": false
+      }
+    },
+    "items_indexed": 0,
+    "candidate_count": 0,
+    "packets": [],
+    "suppressed_contact_candidates": [],
+    "baseline": {
+      "active_open_issues_or_prs": 0,
+      "fulltext_baseline_top1_per_active_issue": 0,
+      "body_char_limit": 6000,
+      "baseline": "unweighted IDF overlap on the exact same title+body snapshot; not a restricted title-only or one-hop control"
+    },
+    "errors": [],
+    "review_only": true,
+    "limitations": [
+      "Recent single-page issue sample, not exhaustive.",
+      "Reuses existing lexical retrieval, not proof of technical fit.",
+      "Original issue and coordination packet only; human/LLM review must specify handoff and license.",
+      "At most ten candidate cards; evaluation still requires independent labels and same-input baseline."
+    ]
+  },
+  "technical_leverage": {
+    "schema": 1,
+    "observations": 31,
+    "candidate_count": 0,
+    "candidates": [],
+    "review_only": true,
+    "known_cases": [
+      {
+        "component": "https://github.com/ltgoslo/llm-dashboard",
+        "finding": "Shared evaluation dashboard for HPLT NorOLMo and OpenEuroLLM Prelude/NorPrelude; structural validation contribution submitted, acceptance and impact unknown.",
+        "projects": [
+          "HPLT",
+          "OpenEuroLLM"
+        ],
+        "source_urls": [
+          "https://github.com/ltgoslo/llm-dashboard/blob/7bd2e0017aa64da5da16d714137751374028386f/README.md",
+          "https://github.com/hplt-project/HPLT-WP4/issues/9#issuecomment-4744508155",
+          "https://github.com/ltgoslo/llm-dashboard/pull/4"
+        ],
+        "status": "editorial_source_reviewed"
+      },
+      {
+        "component": "https://github.com/OpenEuroLLM/training-data-catalogue",
+        "finding": "HPLT documents using shared HPLT data from the OpenEuroLLM catalogue and explicitly refers to MADLAD cleanup.",
+        "projects": [
+          "HPLT",
+          "OpenEuroLLM"
+        ],
+        "source_urls": [
+          "https://github.com/hplt-project/HPLT-WP4",
+          "https://github.com/hplt-project/HPLT-WP4/issues/9#issuecomment-3475892493",
+          "https://github.com/OpenEuroLLM/training-data-catalogue/issues/21"
+        ],
+        "status": "editorial_source_reviewed"
+      }
+    ],
+    "limitations": [
+      "Cumulative observations are historical; links may have changed or disappeared.",
+      "Explicit references are not verified technical dependencies; VCS declarations are not runtime verification.",
+      "Distinct owner namespaces are not necessarily distinct organizations.",
+      "Curated owner context is not verified European affiliation.",
+      "Known cases are editorial evidence, not automatic discoveries or holdout successes.",
+      "No measured impact, automatic outreach or automatic graph promotion."
+    ]
+  },
+  "leverage_collection": {
+    "selected": [
+      "Helsinki-NLP/OpusFilter",
+      "hplt-project/HPLT-textpipes",
+      "kyutai-labs/hibiki",
+      "LAION-AI/CLAP",
+      "openaire/guidelines-literature-repositories",
+      "OpenEuroLLM/JudgeArena",
+      "alpha7en/QCML_Emerging_Market",
+      "checkpaper/audits"
+    ],
+    "last_attempt": {
+      "helsinki-nlp/opusfilter": "2026-11-27T20:46:01.777665+00:00",
+      "hplt-project/hplt-textpipes": "2026-11-27T20:46:01.777665+00:00",
+      "kyutai-labs/hibiki": "2026-11-27T20:46:01.777665+00:00",
+      "laion-ai/clap": "2026-11-27T20:46:01.777665+00:00",
+      "openaire/guidelines-literature-repositories": "2026-11-27T20:46:01.777665+00:00",
+      "openeurollm/judgearena": "2026-11-27T20:46:01.777665+00:00",
+      "alpha7en/qcml_emerging_market": "2026-11-27T20:46:01.777665+00:00",
+      "checkpaper/audits": "2026-11-27T20:46:01.777665+00:00"
+    },
+    "coverage": [
+      {
+        "repo": "Helsinki-NLP/OpusFilter",
+        "readme": 1,
+        "issues": 0,
+        "comments": 0,
+        "manifests": 2,
+        "truncated": [
+          "issues"
+        ]
+      },
+      {
+        "repo": "hplt-project/HPLT-textpipes",
+        "readme": 1,
+        "issues": 2,
+        "comments": 23,
+        "manifests": 1,
+        "truncated": [
+          "issues",
+          "comments:31"
+        ]
+      },
+      {
+        "repo": "kyutai-labs/hibiki",
+        "readme": 1,
+        "issues": 2,
+        "comments": 20,
+        "manifests": 1,
+        "truncated": [
+          "issues",
+          "comments:13"
+        ]
+      },
+      {
+        "repo": "LAION-AI/CLAP",
+        "readme": 1,
+        "issues": 3,
+        "comments": 0,
+        "manifests": 2,
+        "truncated": [
+          "issues"
+        ]
+      },
+      {
+        "repo": "openaire/guidelines-literature-repositories",
+        "readme": 1,
+        "issues": 1,
+        "comments": 1,
+        "manifests": 1,
+        "truncated": [
+          "issues"
+        ]
+      },
+      {
+        "repo": "OpenEuroLLM/JudgeArena",
+        "readme": 1,
+        "issues": 0,
+        "comments": 0,
+        "manifests": 1,
+        "truncated": [
+          "issues"
+        ]
+      },
+      {
+        "repo": "alpha7en/QCML_Emerging_Market",
+        "readme": 1,
+        "issues": 0,
+        "comments": 0,
+        "manifests": 1,
+        "truncated": []
+      },
+      {
+        "repo": "checkpaper/audits",
+        "readme": 1,
+        "issues": 0,
+        "comments": 0,
+        "manifests": 1,
+        "truncated": []
+      }
+    ],
+    "edges": [
+      {
+        "source": "https://github.com/helsinki-nlp/opusfilter",
+        "target": "https://github.com/helsinki-nlp/opustools",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/helsinki-nlp/opusfilter",
+          "source_url": "https://github.com/Helsinki-NLP/OpusFilter/blob/develop/README.md",
+          "excerpt": "https://github.com/Helsinki-NLP/OpusTools",
+          "type": "readme_reference",
+          "sha256": "e811bea95326ba85e2a7ed529d111ec033c8eef87797f5dacdbb37351964a793",
+          "context": "nloading of parallel corpora from [OPUS](http://opus.nlpl.eu/) with [OpusTools](https://github.com/Helsinki-NLP/OpusTools) * Implementations for many common text file operations on parallel files * Mem"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/ia-download",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/ia-download",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "is available in the corresponding repositories: - [Internet Archive downloader](https://github.com/hplt-project/ia-download) - [Helper scripts for CommonCrawl downloading](https://github.com/hplt-project"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/cc-download",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/cc-download",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "ub.com/hplt-project/ia-download) - [Helper scripts for CommonCrawl downloading](https://github.com/hplt-project/cc-download) - [LUMI-specific scripts for CommonCrawl downloading directly to LUMIO](downlo"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/warc2text-runner",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/warc2text-runner/tree/main/two",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "d description of text extraction done for the older HPLT versions: - [HPLT v2](https://github.com/hplt-project/warc2text-runner/tree/main/two) - [HPLT v3](https://github.com/hplt-project/warc2text-runner/tree/main/three)"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/martinellimarco/t2sz",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/martinellimarco/t2sz",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "els All the outputs .zst files are multiframe .zst archives prepared by [t2sz](https://github.com/martinellimarco/t2sz) to enable partial download and random access. [Instructions for running](sr"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/monotextor-slurm",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/monotextor-slurm",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "n. Code and description are available in a separate repository: - [Monotextor](https://github.com/hplt-project/monotextor-slurm) # Acknowledgements This project has received funding from the European Uni"
+        }
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/monotextor-slurm",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/issues/32",
+          "excerpt": "https://github.com/hplt-project/monotextor-slurm/",
+          "type": "issue_reference",
+          "sha256": "439e85e11f931b284a30888c23dd320683934098d57f3c9c686af6989977bb12",
+          "context": "much more than finish de-duplication, but let's try. - [Monotextor repository](https://github.com/hplt-project/monotextor-slurm/) - [Jaume's instructions](https://ms.neural.mt/hplt/pl/pm4z4nqitff6xqx1mq87ba6"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/google/madlad400-3b-mt",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/google/madlad400-3b-mt",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "al alignment* weakly-supervised method that leverages an off-the-shelf [MADLAD](https://huggingface.co/google/madlad400-3b-mt) machine translation system. The derived alignment rule (a word should only app"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://github.com/kyutai-labs/moshi",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "very close to that of Moshi, and the actual code is in the [kyutai-labs/moshi](https://github.com/kyutai-labs/moshi) repository. ### PyTorch In order to translate an audio file using Hibiki/PyT"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-swift",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://github.com/kyutai-labs/moshi-swift",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "epo kyutai/hibiki-1b-mlx-bf16 ``` ### MLX-Swift The [kyutai-labs/moshi-swift](https://github.com/kyutai-labs/moshi-swift) repo contains a MLX-Swift implementation that can run on an iPhone. This was t"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "list of models: - Hibiki 2B for PyTorch (bf16): [kyutai/hibiki-2b-pytorch-bf16](https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16) - Hibiki 1B for PyTorch (bf16): [kyutai/hibiki-1b-pytorch-bf16](https://huggin"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "b-pytorch-bf16) - Hibiki 1B for PyTorch (bf16): [kyutai/hibiki-1b-pytorch-bf16](https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16) - Hibiki 2B for MLX (bf16): [kyutai/hibiki-2b-mlx-bf16](https://huggingface.co"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-2b-mlx-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-2b-mlx-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "hibiki-1b-pytorch-bf16) - Hibiki 2B for MLX (bf16): [kyutai/hibiki-2b-mlx-bf16](https://huggingface.co/kyutai/hibiki-2b-mlx-bf16) - Hibiki 1B for MLX (bf16): [kyutai/hibiki-1b-mlx-bf16](https://huggingface.co"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-1b-mlx-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-1b-mlx-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "tai/hibiki-2b-mlx-bf16) - Hibiki 1B for MLX (bf16): [kyutai/hibiki-1b-mlx-bf16](https://huggingface.co/kyutai/hibiki-1b-mlx-bf16) All models are released under the CC-BY 4.0 license. ## License The presen"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2772078535",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "a4699a51170e87cff09129b8f075bade78102da235367a035e386ff821cc83ea",
+          "context": "Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune This should allow you to train Hibiki as well, since it's Moshi-based. However"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2785227263",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "5187de4e19b4987221d93e88cdd943f2770dad4fabff46caa6eeb957156a2e3b",
+          "context": "> Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune > > This should allow you to train Hibiki as well, since it's Moshi-based. How"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2794711955",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "1dbddc4efccd1a4ba62f888ffe87c294a6e354ce252911241f15b63cc508f9dd",
+          "context": "> Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune > > This should allow you to train Hibiki as well, since it's Moshi-based. How"
+        }
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2863656509",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-prepare-dataset",
+          "type": "public_issue_comment_reference",
+          "sha256": "0d5a2d21eac115e27858cb946b746653cd100c72d0d3056230708bc333e783ca",
+          "context": "issues/13#issuecomment-2808599129): Regarding dataset, it is said in the repo [https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-prepare-dataset](https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-pr"
+        }
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/laion-ai/audio-dataset",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/LAION-AI/audio-dataset",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "rained on music and speech data collecstions from [our dataset collection repo](https://github.com/LAION-AI/audio-dataset).</b> <b>2. CLAP model is incorporated and supported by [HuggingFace Transform"
+        }
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/mlfoundations/open_clip",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/mlfoundations/open_clip",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "udio data. This is an opensource project. We adopt the codebase of [open_clip](https://github.com/mlfoundations/open_clip) for this project. many thanks to <a href=\"https://github.com/cfoster0/CLAP\">"
+        }
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/cfoster0/clap",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/cfoster0/CLAP",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "github.com/mlfoundations/open_clip) for this project. many thanks to <a href=\"https://github.com/cfoster0/CLAP\">@cfoster0</a> for allowing us to use his repo name. ## Architecture Contrasti"
+        }
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://huggingface.co/lukewys/laion_clap",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://huggingface.co/lukewys/laion_clap/tree/main",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "e) ``` ## Pretrained Models The pretrained checkpoints can be found in [here](https://huggingface.co/lukewys/laion_clap/tree/main). Please refer to the previous section for how to load and run the checkpoints."
+        }
+      },
+      {
+        "source": "https://github.com/openaire/guidelines-literature-repositories",
+        "target": "https://github.com/memoemg/openaire4",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/openaire/guidelines-literature-repositories",
+          "source_url": "https://github.com/openaire/guidelines-literature-repositories/blob/master/README.rst",
+          "excerpt": "https://github.com/memoemg/openAIRE4",
+          "type": "readme_reference",
+          "sha256": "e090513d83c00e1ee8f5daf6c0d65d431f6d6b575191cd1e875f1b68f8fa0ed4",
+          "context": "?badge=latest :alt: Documentation Status Translation ~~~~~~~~~~~ Spanish: https://github.com/memoemg/openAIRE4"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2609.19969",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2609.19969",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "dge claim versus Table 1; 5% to 10% claim versus Figure 6 | [Asked the authors](https://huggingface.co/papers/2609.19969) | | [LimiX-2](2026/2609.17488-limix-2/) (arXiv:2609.17488) | Table 7 PATHFINDE"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/limix-ldm-ai/limix",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/limix-ldm-ai/LimiX/issues/66",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "imply 137 to 189 edges; the cited network has 195 | [Explained by the authors](https://github.com/limix-ldm-ai/LimiX/issues/66): constant variable F72 and its 7 edges removed, 188 edges | | [MDMA-assisted t"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/bytedance/axion1_0",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/bytedance/axion1_0/issues/5",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "not fit the 17-question grid of every other score | [Confirmed by the authors](https://github.com/bytedance/axion1_0/issues/5); 17-question set, corrected in the updated paper | | [Harness-S](2026/2611.042"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/deepexperience/harness-s",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/DeepExperience/Harness-S/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ree-run means, but 149 of 150 cells are single-run values | [Asked the authors](https://github.com/DeepExperience/Harness-S/issues/1) | | [CoworkOS](2026/2611.03178-coworkos/) (arXiv:2611.03178) | Several OfficeQ"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2611.03178",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2611.03178",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "eQA Pro scores are not k/133 for the stated 133 questions | [Asked the authors](https://huggingface.co/papers/2611.03178) | | [WikiTrace](2026/2611.14320-wikitrace/) (arXiv:2611.14320) | Released resu"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/yukyeongleee/wikitrace",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/yukyeongleee/wikitrace/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ng from Table 1 that beats WikiTrace on two suites | [Explained by the authors](https://github.com/yukyeongleee/wikitrace/issues/2): ACE excluded for its much higher memory-build cost; fixture rows not meant fo"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/archeone-ai/roboscript",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/ArcheOne-AI/RoboScript/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ot occur with 11 tasks and 10 episodes per setting | [Confirmed by the authors](https://github.com/ArcheOne-AI/RoboScript/issues/1); fix in next arXiv version | | [P^2-MOPD](2026/2611.03953-p2-mopd/) (arXiv:261"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/sinuowang/p2-mopd",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/SinuoWang/P2-MOPD/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "he medical teacher; Table 12 shows it did in 2 of 3 seeds | [Asked the authors](https://github.com/SinuoWang/P2-MOPD/issues/1) | | [Sage-Taiyi](2026/2611.12762-sage-taiyi/) (arXiv:2611.12762) | Metamateria"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/alpha-innovator/sage-taiyi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Alpha-Innovator/Sage-Taiyi/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "versus 0.852 from Eq. (4) and the reported transmissions | [Asked the authors](https://github.com/Alpha-Innovator/Sage-Taiyi/issues/1) | | [EvoMemState](2026/2611.03743-evomemstate/) (arXiv:2611.03743) | One MemTr"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/xmudeeplit/evomemstate",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/XMUDeepLIT/EvoMemState/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "le 1 (78.7) is not the mean of its four scenarios (81.75) | [Asked the authors](https://github.com/XMUDeepLIT/EvoMemState/issues/2) | | [RoboColosseum](2026/2611.02497-robocolosseum/) (arXiv:2611.02497) | Text"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/robocolosseum/robocolosseum-client",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/RoboColosseum/robocolosseum-client/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "uccess ceiling; Figure 5 shows 58–70% and cells up to 25% | [Asked the authors](https://github.com/RoboColosseum/robocolosseum-client/issues/1) | | [NorthCUA](2026/2611.02102-northcua/) (arXiv:2611.02102) | Pro OSWorld 2.0"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2611.02102",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2611.02102",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "er SFT is not k/108; all other NorthCUA binary scores are | [Asked the authors](https://huggingface.co/papers/2611.02102) | | [ToolSpace](2026/2611.05036-toolspace/) (arXiv:2611.05036) | Headline 38.2"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/dongguanting/toolspace",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/dongguanting/ToolSpace/issues/4",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "om a DeepSeek -1017 row that is not in Figure 1(d) | [Explained by the authors](https://github.com/dongguanting/ToolSpace/issues/4); -1017 is a DeepSeek-V4.1-Flash checkpoint | | [uni-robot-agent](2026/2611.015"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/open-rua/uni-robot-agent",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Open-RUA/uni-robot-agent/issues/39",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "rom 42 episodes; Table 1 (252 episodes) gives 91.4% | [Answered by the authors](https://github.com/Open-RUA/uni-robot-agent/issues/39); 42-episode run explained | | [Switch-SWE](2026/2611.02017-switch-swe/) (arXiv"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/miraclecsc/switch-swe",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Miraclecsc/Switch-SWE/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "atch a commented-out earlier Table 2, not the printed one | [Asked the authors](https://github.com/Miraclecsc/Switch-SWE/issues/2) | | [Hybrid Computer Use](2026/2610.41432-hybrid-computer-use/) (arXiv:2610.41"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/microsoft/hybrid-computer-use",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/microsoft/Hybrid-Computer-Use/issues/3",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "2.52/$5.65 in Table 2 and $0.504/$0.983 in Table 4 | [Confirmed by the authors](https://github.com/microsoft/Hybrid-Computer-Use/issues/3): Table 2 ignored cached-input pricing; saving 48%, not 55%, corrected in the n"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/tokenrhythm/infrarsi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/TokenRhythm/InfraRSI/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "Table 5 conditions give 1.22–1.24× and 1.70–1.82× | [Confirmed by the authors](https://github.com/TokenRhythm/InfraRSI/issues/1): 1.55× is a typo for 1.23×; fix in v2 | | [Video-Coder](2026/2611.09894-video-"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/cywang735/video-coder",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/CYWang735/Video-Coder/issues/4",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "points; two identical Table 1 rows; 6k/2k vs 10k/4k data | [Asked the authors](https://github.com/CYWang735/Video-Coder/issues/4) | | [SWAM](2026/2611.12870-swam/) (arXiv:2611.12870) | Table 4 54.76 is not k/"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/shaaaaron/swam",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/shaaaaron/SWAM/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "6 is not k/1250; the other 115 ablation values are | [Confirmed by the authors](https://github.com/shaaaaron/SWAM/issues/2); should be 54.96, corrected for the next revision | | [Drex](2026/2611.07854-d"
+        }
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/nace-ai/drex-decision-models",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/nace-ai/drex-decision-models/issues/18",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "6 flip rates in Table 7 (14.1, 17.8, 13.0%) are not k/173 | [Asked the authors](https://github.com/nace-ai/drex-decision-models/issues/18) | | [CEPO](2026/2610.34722-cepo/) (arXiv:2610.34722) | Text says CEPO mitigate"
+        }
+      }
+    ],
+    "archive_edges": [
+      {
+        "source": "https://github.com/openaire/guidelines-literature-repositories",
+        "target": "https://github.com/memoemg/openaire4",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/openaire/guidelines-literature-repositories",
+          "source_url": "https://github.com/openaire/guidelines-literature-repositories/blob/master/README.rst",
+          "excerpt": "https://github.com/memoemg/openAIRE4",
+          "type": "readme_reference",
+          "sha256": "e090513d83c00e1ee8f5daf6c0d65d431f6d6b575191cd1e875f1b68f8fa0ed4",
+          "context": "?badge=latest :alt: Documentation Status Translation ~~~~~~~~~~~ Spanish: https://github.com/memoemg/openAIRE4"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://huggingface.co/lukewys/laion_clap",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://huggingface.co/lukewys/laion_clap/tree/main",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "e) ``` ## Pretrained Models The pretrained checkpoints can be found in [here](https://huggingface.co/lukewys/laion_clap/tree/main). Please refer to the previous section for how to load and run the checkpoints."
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/mlfoundations/open_clip",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/mlfoundations/open_clip",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "udio data. This is an opensource project. We adopt the codebase of [open_clip](https://github.com/mlfoundations/open_clip) for this project. many thanks to <a href=\"https://github.com/cfoster0/CLAP\">"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/laion-ai/audio-dataset",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/LAION-AI/audio-dataset",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "rained on music and speech data collecstions from [our dataset collection repo](https://github.com/LAION-AI/audio-dataset).</b> <b>2. CLAP model is incorporated and supported by [HuggingFace Transform"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/laion-ai/clap",
+        "target": "https://github.com/cfoster0/clap",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/laion-ai/clap",
+          "source_url": "https://github.com/LAION-AI/CLAP/blob/main/README.md",
+          "excerpt": "https://github.com/cfoster0/CLAP",
+          "type": "readme_reference",
+          "sha256": "5e168ab0512160e5e9e461c17a74988b6d32b14f2a54f6dcbf61268166b70ad9",
+          "context": "github.com/mlfoundations/open_clip) for this project. many thanks to <a href=\"https://github.com/cfoster0/CLAP\">@cfoster0</a> for allowing us to use his repo name. ## Architecture Contrasti"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "list of models: - Hibiki 2B for PyTorch (bf16): [kyutai/hibiki-2b-pytorch-bf16](https://huggingface.co/kyutai/hibiki-2b-pytorch-bf16) - Hibiki 1B for PyTorch (bf16): [kyutai/hibiki-1b-pytorch-bf16](https://huggin"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-2b-mlx-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-2b-mlx-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "hibiki-1b-pytorch-bf16) - Hibiki 2B for MLX (bf16): [kyutai/hibiki-2b-mlx-bf16](https://huggingface.co/kyutai/hibiki-2b-mlx-bf16) - Hibiki 1B for MLX (bf16): [kyutai/hibiki-1b-mlx-bf16](https://huggingface.co"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "b-pytorch-bf16) - Hibiki 1B for PyTorch (bf16): [kyutai/hibiki-1b-pytorch-bf16](https://huggingface.co/kyutai/hibiki-1b-pytorch-bf16) - Hibiki 2B for MLX (bf16): [kyutai/hibiki-2b-mlx-bf16](https://huggingface.co"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/kyutai/hibiki-1b-mlx-bf16",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/kyutai/hibiki-1b-mlx-bf16",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "tai/hibiki-2b-mlx-bf16) - Hibiki 1B for MLX (bf16): [kyutai/hibiki-1b-mlx-bf16](https://huggingface.co/kyutai/hibiki-1b-mlx-bf16) All models are released under the CC-BY 4.0 license. ## License The presen"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://huggingface.co/google/madlad400-3b-mt",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://huggingface.co/google/madlad400-3b-mt",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "al alignment* weakly-supervised method that leverages an off-the-shelf [MADLAD](https://huggingface.co/google/madlad400-3b-mt) machine translation system. The derived alignment rule (a word should only app"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-swift",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://github.com/kyutai-labs/moshi-swift",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "epo kyutai/hibiki-1b-mlx-bf16 ``` ### MLX-Swift The [kyutai-labs/moshi-swift](https://github.com/kyutai-labs/moshi-swift) repo contains a MLX-Swift implementation that can run on an iPhone. This was t"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2863656509",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-prepare-dataset",
+          "type": "public_issue_comment_reference",
+          "sha256": "0d5a2d21eac115e27858cb946b746653cd100c72d0d3056230708bc333e783ca",
+          "context": "issues/13#issuecomment-2808599129): Regarding dataset, it is said in the repo [https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-prepare-dataset](https://github.com/kyutai-labs/moshi-finetune/tree/main?tab=readme-ov-file#-pr"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2794711955",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "1dbddc4efccd1a4ba62f888ffe87c294a6e354ce252911241f15b63cc508f9dd",
+          "context": "> Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune > > This should allow you to train Hibiki as well, since it's Moshi-based. How"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2785227263",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "5187de4e19b4987221d93e88cdd943f2770dad4fabff46caa6eeb957156a2e3b",
+          "context": "> Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune > > This should allow you to train Hibiki as well, since it's Moshi-based. How"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi-finetune",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/issues/13#issuecomment-2772078535",
+          "excerpt": "https://github.com/kyutai-labs/moshi-finetune",
+          "type": "public_issue_comment_reference",
+          "sha256": "a4699a51170e87cff09129b8f075bade78102da235367a035e386ff821cc83ea",
+          "context": "Hi! Sorry for the late response. We've just released Moshi fine-tuning code: https://github.com/kyutai-labs/moshi-finetune This should allow you to train Hibiki as well, since it's Moshi-based. However"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/kyutai-labs/hibiki",
+        "target": "https://github.com/kyutai-labs/moshi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/kyutai-labs/hibiki",
+          "source_url": "https://github.com/kyutai-labs/hibiki/blob/main/README.md",
+          "excerpt": "https://github.com/kyutai-labs/moshi",
+          "type": "readme_reference",
+          "sha256": "29bb4d95254d7e4ec31c409487cffabd3b596f56456b40346768333a6a121244",
+          "context": "very close to that of Moshi, and the actual code is in the [kyutai-labs/moshi](https://github.com/kyutai-labs/moshi) repository. ### PyTorch In order to translate an audio file using Hibiki/PyT"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/martinellimarco/t2sz",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/martinellimarco/t2sz",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "els All the outputs .zst files are multiframe .zst archives prepared by [t2sz](https://github.com/martinellimarco/t2sz) to enable partial download and random access. [Instructions for running](sr"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/warc2text-runner",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/warc2text-runner/tree/main/two",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "d description of text extraction done for the older HPLT versions: - [HPLT v2](https://github.com/hplt-project/warc2text-runner/tree/main/two) - [HPLT v3](https://github.com/hplt-project/warc2text-runner/tree/main/three)"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/monotextor-slurm",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/issues/32",
+          "excerpt": "https://github.com/hplt-project/monotextor-slurm/",
+          "type": "issue_reference",
+          "sha256": "439e85e11f931b284a30888c23dd320683934098d57f3c9c686af6989977bb12",
+          "context": "much more than finish de-duplication, but let's try. - [Monotextor repository](https://github.com/hplt-project/monotextor-slurm/) - [Jaume's instructions](https://ms.neural.mt/hplt/pl/pm4z4nqitff6xqx1mq87ba6"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/monotextor-slurm",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/monotextor-slurm",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "n. Code and description are available in a separate repository: - [Monotextor](https://github.com/hplt-project/monotextor-slurm) # Acknowledgements This project has received funding from the European Uni"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/ia-download",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/ia-download",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "is available in the corresponding repositories: - [Internet Archive downloader](https://github.com/hplt-project/ia-download) - [Helper scripts for CommonCrawl downloading](https://github.com/hplt-project"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/hplt-project/hplt-textpipes",
+        "target": "https://github.com/hplt-project/cc-download",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/hplt-project/hplt-textpipes",
+          "source_url": "https://github.com/hplt-project/HPLT-textpipes/blob/main/README.md",
+          "excerpt": "https://github.com/hplt-project/cc-download",
+          "type": "readme_reference",
+          "sha256": "67f2d993cc43fb88b5986642691cc6bb34bd3d652e09ac32052917924229d013",
+          "context": "ub.com/hplt-project/ia-download) - [Helper scripts for CommonCrawl downloading](https://github.com/hplt-project/cc-download) - [LUMI-specific scripts for CommonCrawl downloading directly to LUMIO](downlo"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/helsinki-nlp/opusfilter",
+        "target": "https://github.com/helsinki-nlp/opustools",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/helsinki-nlp/opusfilter",
+          "source_url": "https://github.com/Helsinki-NLP/OpusFilter/blob/develop/README.md",
+          "excerpt": "https://github.com/Helsinki-NLP/OpusTools",
+          "type": "readme_reference",
+          "sha256": "e811bea95326ba85e2a7ed529d111ec033c8eef87797f5dacdbb37351964a793",
+          "context": "nloading of parallel corpora from [OPUS](http://opus.nlpl.eu/) with [OpusTools](https://github.com/Helsinki-NLP/OpusTools) * Implementations for many common text file operations on parallel files * Mem"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2611.03178",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2611.03178",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "eQA Pro scores are not k/133 for the stated 133 questions | [Asked the authors](https://huggingface.co/papers/2611.03178) | | [WikiTrace](2026/2611.14320-wikitrace/) (arXiv:2611.14320) | Released resu"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2611.02102",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2611.02102",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "er SFT is not k/108; all other NorthCUA binary scores are | [Asked the authors](https://huggingface.co/papers/2611.02102) | | [ToolSpace](2026/2611.05036-toolspace/) (arXiv:2611.05036) | Headline 38.2"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://huggingface.co/papers/2609.19969",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://huggingface.co/papers/2609.19969",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "dge claim versus Table 1; 5% to 10% claim versus Figure 6 | [Asked the authors](https://huggingface.co/papers/2609.19969) | | [LimiX-2](2026/2609.17488-limix-2/) (arXiv:2609.17488) | Table 7 PATHFINDE"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/yukyeongleee/wikitrace",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/yukyeongleee/wikitrace/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ng from Table 1 that beats WikiTrace on two suites | [Explained by the authors](https://github.com/yukyeongleee/wikitrace/issues/2): ACE excluded for its much higher memory-build cost; fixture rows not meant fo"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/xmudeeplit/evomemstate",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/XMUDeepLIT/EvoMemState/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "le 1 (78.7) is not the mean of its four scenarios (81.75) | [Asked the authors](https://github.com/XMUDeepLIT/EvoMemState/issues/2) | | [RoboColosseum](2026/2611.02497-robocolosseum/) (arXiv:2611.02497) | Text"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/tokenrhythm/infrarsi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/TokenRhythm/InfraRSI/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "Table 5 conditions give 1.22–1.24× and 1.70–1.82× | [Confirmed by the authors](https://github.com/TokenRhythm/InfraRSI/issues/1): 1.55× is a typo for 1.23×; fix in v2 | | [Video-Coder](2026/2611.09894-video-"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/sinuowang/p2-mopd",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/SinuoWang/P2-MOPD/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "he medical teacher; Table 12 shows it did in 2 of 3 seeds | [Asked the authors](https://github.com/SinuoWang/P2-MOPD/issues/1) | | [Sage-Taiyi](2026/2611.12762-sage-taiyi/) (arXiv:2611.12762) | Metamateria"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/shaaaaron/swam",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/shaaaaron/SWAM/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "6 is not k/1250; the other 115 ablation values are | [Confirmed by the authors](https://github.com/shaaaaron/SWAM/issues/2); should be 54.96, corrected for the next revision | | [Drex](2026/2611.07854-d"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/robocolosseum/robocolosseum-client",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/RoboColosseum/robocolosseum-client/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "uccess ceiling; Figure 5 shows 58–70% and cells up to 25% | [Asked the authors](https://github.com/RoboColosseum/robocolosseum-client/issues/1) | | [NorthCUA](2026/2611.02102-northcua/) (arXiv:2611.02102) | Pro OSWorld 2.0"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/open-rua/uni-robot-agent",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Open-RUA/uni-robot-agent/issues/39",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "rom 42 episodes; Table 1 (252 episodes) gives 91.4% | [Answered by the authors](https://github.com/Open-RUA/uni-robot-agent/issues/39); 42-episode run explained | | [Switch-SWE](2026/2611.02017-switch-swe/) (arXiv"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/nace-ai/drex-decision-models",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/nace-ai/drex-decision-models/issues/18",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "6 flip rates in Table 7 (14.1, 17.8, 13.0%) are not k/173 | [Asked the authors](https://github.com/nace-ai/drex-decision-models/issues/18) | | [CEPO](2026/2610.34722-cepo/) (arXiv:2610.34722) | Text says CEPO mitigate"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/miraclecsc/switch-swe",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Miraclecsc/Switch-SWE/issues/2",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "atch a commented-out earlier Table 2, not the printed one | [Asked the authors](https://github.com/Miraclecsc/Switch-SWE/issues/2) | | [Hybrid Computer Use](2026/2610.41432-hybrid-computer-use/) (arXiv:2610.41"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/microsoft/hybrid-computer-use",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/microsoft/Hybrid-Computer-Use/issues/3",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "2.52/$5.65 in Table 2 and $0.504/$0.983 in Table 4 | [Confirmed by the authors](https://github.com/microsoft/Hybrid-Computer-Use/issues/3): Table 2 ignored cached-input pricing; saving 48%, not 55%, corrected in the n"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/limix-ldm-ai/limix",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/limix-ldm-ai/LimiX/issues/66",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "imply 137 to 189 edges; the cited network has 195 | [Explained by the authors](https://github.com/limix-ldm-ai/LimiX/issues/66): constant variable F72 and its 7 edges removed, 188 edges | | [MDMA-assisted t"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/dongguanting/toolspace",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/dongguanting/ToolSpace/issues/4",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "om a DeepSeek -1017 row that is not in Figure 1(d) | [Explained by the authors](https://github.com/dongguanting/ToolSpace/issues/4); -1017 is a DeepSeek-V4.1-Flash checkpoint | | [uni-robot-agent](2026/2611.015"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/deepexperience/harness-s",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/DeepExperience/Harness-S/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ree-run means, but 149 of 150 cells are single-run values | [Asked the authors](https://github.com/DeepExperience/Harness-S/issues/1) | | [CoworkOS](2026/2611.03178-coworkos/) (arXiv:2611.03178) | Several OfficeQ"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/cywang735/video-coder",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/CYWang735/Video-Coder/issues/4",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "points; two identical Table 1 rows; 6k/2k vs 10k/4k data | [Asked the authors](https://github.com/CYWang735/Video-Coder/issues/4) | | [SWAM](2026/2611.12870-swam/) (arXiv:2611.12870) | Table 4 54.76 is not k/"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/bytedance/axion1_0",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/bytedance/axion1_0/issues/5",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "not fit the 17-question grid of every other score | [Confirmed by the authors](https://github.com/bytedance/axion1_0/issues/5); 17-question set, corrected in the updated paper | | [Harness-S](2026/2611.042"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/archeone-ai/roboscript",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/ArcheOne-AI/RoboScript/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "ot occur with 11 tasks and 10 episodes per setting | [Confirmed by the authors](https://github.com/ArcheOne-AI/RoboScript/issues/1); fix in next arXiv version | | [P^2-MOPD](2026/2611.03953-p2-mopd/) (arXiv:261"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      },
+      {
+        "source": "https://github.com/checkpaper/audits",
+        "target": "https://github.com/alpha-innovator/sage-taiyi",
+        "relationship": "references",
+        "verification_status": "verified",
+        "last_seen": "2026-11-27T20:46:01.777665+00:00",
+        "evidence": {
+          "source_entity": "https://github.com/checkpaper/audits",
+          "source_url": "https://github.com/checkpaper/audits/blob/main/README.md",
+          "excerpt": "https://github.com/Alpha-Innovator/Sage-Taiyi/issues/1",
+          "type": "readme_reference",
+          "sha256": "534f416c6bf3456ba4964ed8e2d71dec4bc653177214135e122bd30752758c90",
+          "context": "versus 0.852 from Eq. (4) and the reported transmissions | [Asked the authors](https://github.com/Alpha-Innovator/Sage-Taiyi/issues/1) | | [EvoMemState](2026/2611.03743-evomemstate/) (arXiv:2611.03743) | One MemTr"
+        },
+        "first_seen": "2026-11-27T20:46:01.777665+00:00"
+      }
+    ],
+    "archive_dropped": 0,
+    "curated_selected": 6,
+    "errors": [],
+    "limits": {
+      "repositories": 8,
+      "issues_per_repo": 3,
+      "comments_per_issue": 20,
+      "links_per_document": 20,
+      "archive_edges": 12000,
+      "curated_priority_slots": 6
+    },
+    "review_only": true
+  },
   "adapter_review": [
     {
       "url": "https://roar.laion.ai/llms.txt",
@@ -601,13 +2195,7 @@
       "action": "Review schema and read-only adapter requirements; no code generated or executed"
     }
   ],
-  "errors": [
-    {
-      "url": "https://github.com/disha1001/discernbench",
-      "stage": "metadata",
-      "error": "HTTPError"
-    }
-  ],
+  "errors": [],
   "limitations": [
     "Repository descriptions and topics are lexical signals, not scientific assessment.",
     "Curated owner context does not independently verify European affiliation.",
