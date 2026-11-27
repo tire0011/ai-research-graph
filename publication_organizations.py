@@ -106,6 +106,16 @@ def parse_ror(payload):
             "score": match.get("score"), "matching_type": match.get("matching_type"),
             "matched_substring": match.get("substring")}
 
+def source_error(url, exc):
+    diagnostic = {"source": url, "error": type(exc).__name__}
+    if isinstance(exc, urllib.error.HTTPError):
+        diagnostic["http_status"] = exc.code
+        diagnostic["retryable"] = exc.code == 429 or 500 <= exc.code <= 599
+        if exc.headers and exc.headers.get("Retry-After"):
+            diagnostic["retry_after"] = exc.headers["Retry-After"]
+    return diagnostic
+
+
 def resolve(papers, now, *, previous=None, html_fetch=None, ror_fetch=None,
             max_papers=6, max_ror=16):
     if not (0 <= max_papers <= 12 and 0 <= max_ror <= 32):
@@ -134,6 +144,7 @@ def resolve(papers, now, *, previous=None, html_fetch=None, ror_fetch=None,
         old = records.get(pid, {})
         sources = {a: source for a in raw}
         html_status = "not_needed"
+        html_http_status = None
         if not raw:
             source = "https://arxiv.org/html/" + version
             if old.get("version_id") == version and old.get("html_status") == "read":
@@ -146,9 +157,17 @@ def resolve(papers, now, *, previous=None, html_fetch=None, ror_fetch=None,
                 try:
                     raw = (html_fetch or html_affiliations)(source)
                     html_status = "read"
+                except urllib.error.HTTPError as exc:
+                    html_http_status = exc.code
+                    if exc.code in (404, 410):
+                        # Optional HTML rendition missing, not negative affiliation evidence.
+                        html_status = "not_found"
+                    else:
+                        html_status = "unavailable"
+                        errors.append(source_error(source, exc))
                 except (OSError, ValueError, TypeError) as exc:
                     html_status = "unavailable"
-                    errors.append({"source": source, "error": type(exc).__name__})
+                    errors.append(source_error(source, exc))
             sources = {a: source for a in raw}
         matches = []
         for affiliation in raw[:30]:
@@ -169,11 +188,12 @@ def resolve(papers, now, *, previous=None, html_fetch=None, ror_fetch=None,
                     cache[key] = result
                 except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
                     result = {"status": "source_error"}
-                    errors.append({"source": url, "error": type(exc).__name__})
+                    errors.append(source_error(url, exc))
             matches.append({"raw_affiliation": affiliation, "publication_source_url": sources[affiliation],
                             **result})
         records[pid] = {"paper_id": pid, "version_id": version, "attempted_at": stamp,
-                        "html_status": html_status, "raw_affiliations": raw,
+                        "html_status": html_status, "html_http_status": html_http_status,
+                        "raw_affiliations": raw,
                         "affiliations": matches, "affiliations_truncated": len(raw) > 30,
                         "review_only": True, "european_affiliation_verified": False}
     organizations = {}

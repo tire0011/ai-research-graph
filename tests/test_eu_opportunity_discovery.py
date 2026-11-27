@@ -235,5 +235,24 @@ class CrossProjectTests(unittest.TestCase):
         self.assertTrue(all(u.startswith("https://api.github.com/repos/") for u in gh.calls))
 
 
+class PartialDiscoveryTests(unittest.TestCase):
+    def test_partial_source_failure_with_successful_listing(self):
+        self.assertTrue(d.source_discovery_usable({
+            "listings": [{"count": 0}], "detail_checks": [],
+            "errors": [{"error": "HTTP 503"}]}))
+
+    def test_partial_source_failure_with_successful_detail(self):
+        self.assertTrue(d.source_discovery_usable({
+            "listings": [], "detail_checks": [
+                {"status": "confirmed_public_metadata"}],
+            "errors": [{"error": "HTTP 503"}]}))
+
+    def test_total_failure_with_retained_candidates_is_not_success(self):
+        self.assertFalse(d.source_discovery_usable({
+            "listings": [], "detail_checks": [{"status": "not_found"}],
+            "candidates": [{"url": "historical"}],
+            "errors": [{"error": "HTTP 503"}]}))
+
+
 if __name__ == "__main__":
     unittest.main()
