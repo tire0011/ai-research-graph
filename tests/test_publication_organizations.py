@@ -1,5 +1,6 @@
 import datetime as dt
 import unittest
+from urllib.error import HTTPError
 from publication_organizations import parse_affiliations, parse_ror, resolve
 from eu_source_discovery import discover
 from test_arxiv_source_discovery import feed, entry
@@ -60,6 +61,42 @@ class OrganizationTests(unittest.TestCase):
         self.assertFalse(result["organizations"])
         result = resolve([paper(affiliations=["Example Lab"])], NOW, max_ror=0)
         self.assertEqual(result["papers"]["2611.12345"]["affiliations"][0]["status"], "deferred_budget")
+
+    def test_optional_html_missing_is_not_a_source_failure(self):
+        for code in (404, 410):
+            with self.subTest(code=code):
+                def fail(url):
+                    raise HTTPError(url, code, "missing", {}, None)
+                result = resolve([paper()], NOW, html_fetch=fail)
+                record = result["papers"]["2611.12345"]
+                self.assertEqual(record["html_status"], "not_found")
+                self.assertEqual(record["html_http_status"], code)
+                self.assertFalse(record["european_affiliation_verified"])
+                self.assertEqual(result["errors"], [])
+                self.assertEqual(result["ror_requests"], 0)
+
+    def test_http_failure_diagnostics_and_next_attempt(self):
+        for code in (403, 429, 500, 503):
+            with self.subTest(code=code):
+                def fail(url):
+                    raise HTTPError(url, code, "unavailable", {"Retry-After": "60"}, None)
+                result = resolve([paper()], NOW, html_fetch=fail)
+                self.assertEqual(result["papers"]["2611.12345"]["html_status"], "unavailable")
+                diagnostic = result["errors"][0]
+                self.assertEqual(diagnostic["http_status"], code)
+                self.assertEqual(diagnostic["retryable"], code != 403)
+                self.assertEqual(diagnostic["retry_after"], "60")
+                recovered = resolve([paper()], NOW + dt.timedelta(days=1), previous=result,
+                                    html_fetch=lambda _: ["Example Lab"], ror_fetch=lambda _: ror())
+                self.assertEqual(recovered["errors"], [])
+                self.assertTrue(recovered["organizations"])
+
+    def test_ror_http_error_remains_a_source_failure(self):
+        def fail(url):
+            raise HTTPError(url, 404, "missing", {}, None)
+        result = resolve([paper(affiliations=["Example Lab"])], NOW, ror_fetch=fail)
+        self.assertEqual(result["errors"][0]["http_status"], 404)
+        self.assertEqual(result["papers"]["2611.12345"]["affiliations"][0]["status"], "source_error")
 
     def test_integration(self):
         result = discover({"repositories": [{"repo": "Example/seed"}],
