@@ -10,6 +10,8 @@ from pathlib import Path
 
 from eu_source_discovery import canonical, detail_url, url_for
 from discovered_collaboration_review import contact_review, prepare_discovered
+from technical_leverage import rank as rank_leverage, markdown as leverage_markdown
+from technical_leverage_sources import collect as collect_leverage
 from eu_opportunity_discovery import build, get_json, is_stale, VOLUNTEER_LABELS
 
 # Specific technical signals, deliberately not a geography or collaboration classifier.
@@ -172,6 +174,13 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
     if config.get("discovered_collaboration_review", False):
         collaboration = prepare_discovered(config, metadata, fetch, now=now)
         errors.extend({"stage": "collaboration", **x} for x in collaboration["errors"])
+    collection = None
+    if config.get("technical_leverage_collection", False):
+        collection = collect_leverage(config, metadata, fetch, stamp=stamp,
+                                      previous=previous.get("leverage_collection"))
+        errors.extend({"stage": "leverage_collection", **x} for x in collection["errors"])
+    leverage_input = {**snapshot, "verified_references": snapshot.get("verified_references", []) +
+                      (collection["archive_edges"] if collection else [])}
     web = snapshot.get("web_discovery") or {}
     return {"schema": 1, "retrieved_at": stamp, "snapshot_retrieved_at": snapshot.get("retrieved_at"),
             "pool_size": len(urls), "selected": selected, "last_attempt": history,
@@ -181,6 +190,8 @@ def analyze(config, snapshot, fetch=get_json, *, previous=None, now=None):
                 "unknown_license_among_topical": sum(not r["license_hint"] for r in topical)}, "issue_repositories": [r["repo"] for r in issue_sources],
             "issue_review": issue_result, "tasks": tasks, "topic_hypotheses": pairs[:5],
             "suppressed_contact_hypotheses": suppressed_pairs, "collaboration_review": collaboration,
+            "technical_leverage": rank_leverage(config, leverage_input),
+            "leverage_collection": collection,
             "adapter_review": web.get("adapter_proposals", []), "errors": errors,
             "limitations": ["Repository descriptions and topics are lexical signals, not scientific assessment.",
                             "Curated owner context does not independently verify European affiliation.",
@@ -219,6 +230,17 @@ def markdown(result):
         for item in review["packets"]:
             card = item["candidate"]
             lines.append(f"- {card['source']['url']} ↔ {card['target']['url']}")
+    if result.get("leverage_collection"):
+        collection = result["leverage_collection"]
+        lines += ["", "## Bounded technical source collection",
+                  f"Repositories: {len(collection['selected'])}; curated context: {collection['curated_selected']}; "
+                  f"new observations this run: {len(collection['edges'])}; "
+                  f"cumulative historical evidence: {len(collection['archive_edges'])}; "
+                  f"evicted by cap: {collection['archive_dropped']}; errors: {len(collection['errors'])}."]
+        for row in collection["coverage"]:
+            lines.append(f"- {row['repo']}: {row['readme']} README, {row['issues']} issues, {row['comments']} comments, {row['manifests']} manifests; partial: {row['truncated']}")
+    if result.get("technical_leverage"):
+        lines += leverage_markdown(result["technical_leverage"])
     lines += ["", "## Adapter review queue (no execution)"]
     lines += [f"- {x['url']} — {x['format']}" for x in result["adapter_review"]]
     lines += ["", "## Diagnostics"] + ["- " + json.dumps(x) for x in result["errors"]]
